@@ -1,0 +1,47 @@
+<footer>
+
+	<nav class="navbar navbar-expand-lg mt-3 mb-2">
+            <a class="navbar-brand mr-5 mx-2 my-3" href="/"><img src="/svg/logo-foot.svg" width="71" height="17" style="margin-top: -6px;" alt=""></a>
+            <div class="collapse navbar-collapse col col-md-auto" id="navbarSupportedContent">
+                {{ if .Site.Menus.main }}
+                <ul class="navbar-nav" style="font-weight: 500;">
+                {{ range sort .Site.Menus.main }}
+                    <li class="nav-item mx-3 my-3">
+                    <a href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+			<div class="navbar-text col col-md-auto mr-5 d-flex align-content-end">
+                <a href="mailto:hello@rausr.com">
+                	<span class="foot-text">hello@rausr.com</span>
+                </a>
+                <!--googleoff: all-->
+                	<span class="foot-text ml-4">+421 910 160 251</span>
+                <!--googleon: all-->
+			</div>
+			<div class="collapse navbar-collapse col col-lg-1 justify-content-end" id="navbarSupportedContent">
+                {{ if .Site.Menus.icon }}
+                <ul class="navbar-nav my-lg-0">
+                {{ range sort .Site.Menus.icon }}
+                    <li class="nav-icon ml-4 mr-0 my-2" style="font-size: 125%"><a href="{{ .URL }}" target="_blank"><i class="fab {{ .Name }}"></i></a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+	</nav>
+
+	<nav class="navbar navbar-expand-lg mt-1 d-flex flex-row-reverse">
+		<div class="copyright col col-md-auto">
+			<span>© 2020 rausr.com</span>
+		</div>
+	</nav>
+</div>
+
+
+</footer>
+       
+</body>
+
+</html>

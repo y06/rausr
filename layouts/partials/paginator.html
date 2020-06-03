@@ -1,0 +1,24 @@
+{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+
+<div class="pages d-flex justify-content-center">
+
+    {{ if .Paginator.HasPrev }}
+    <a class="icon pages-icon" href="{{ .Paginator.Prev.URL }}" rel="prev">
+        <div class="pages-button justify-content-center">
+        	<img src="/svg/arrow-icon-left.svg" width="50px" height="50px">
+        	<span class="pages-icon-text">previous</span>
+        </div>
+    </a>
+    {{ end }} {{ if .Paginator.HasNext }}
+    <a class="icon pages-icon" href="{{ .Paginator.Next.URL }}" rel="next">
+			<div class="pages-button justify-content-center">
+        	<img src="/svg/arrow-icon-right.svg" width="50px" height="50px">
+        	<span class="pages-icon-text">next</span>
+        </div>
+    </a>
+    {{ end }}
+
+
+</div>
+
+{{ end }}

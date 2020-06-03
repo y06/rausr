@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        {{ partial "head-open" . }}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ .Title }} | rausr</title>
+        
+        {{ partial "favicon" . }}
+        
+        
+        {{ partial "css" . }} {{ partial "js" . }} {{ hugo.Generator }}
+        {{ with .OutputFormats.Get "RSS" }}
+        <link href="{{ .RelPermalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+        <link href="{{ .RelPermalink }}" rel="feed" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+        {{ end }}
+
+        {{ if .Site.GoogleAnalytics }}
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', '{{ .Site.GoogleAnalytics }}');
+        </script>
+        {{ end }}
+    </head>
+
+    <body>
+        {{ partial "body-open" . }}
+
+    <div class="container-fluid" style="padding: 0 !important;">
+
+        <nav class="navbar navbar-expand-lg mt-3 mb-5">
+            <a class="navbar-brand mr-5 ml-2 my-3" href="/"><img src="/svg/logo-solo.svg" width="80px" height="23px" style="margin-top: -6px;" alt=""></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="/svg/ham.svg" width="20px" height="17px">
+            </button>
+            
+            <div class="navbar-text ml-2 mr-3" data-toggle="collapse" data-target="#search" id="search-display">
+                <span style="color: #9693A3; font-weight: 400;">random user oriented graphic design</span>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {{ if .Site.Menus.main }}
+                <ul class="navbar-nav mx-auto" style="font-weight: 500;">
+                {{ range sort .Site.Menus.main }}
+                    <li class="nav-item mx-4 my-3">
+                    <a href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+
+                {{ if .Site.Menus.icon }}
+                <ul class="navbar-nav my-lg-0">
+                {{ range sort .Site.Menus.icon }}
+                    <li class="nav-icon ml-4 mr-2 my-3"><a href="{{ .URL }}" target="_blank"><i class="fab {{ .Name }}"></i></a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}                
+            </div>
+        </nav>
+
+        <div class="mobile-headline col col-md-auto d-flex align-content-end">
+                <h1>random user oriented graphic design</h1>
+        </div>

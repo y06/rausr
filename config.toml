@@ -1,0 +1,55 @@
+baseURL = "https://rausr.com/"
+languageCode = "en-us"
+title = "random user oriented graphic design"
+googleAnalytics = "???"
+
+[params]
+    author = "y.06"
+    description = ""
+    accent = "#43414C"
+    showBorder = false
+    font = "Source Code Pro"
+
+[[menu.main]]
+    url = "/"
+    name = "works"
+    weight = 2
+
+[[menu.main]]
+    url = "/about/"
+    name = "about"
+    weight = 3
+
+[[menu.main]]
+    url = "/contact/"
+    name = "contact"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://instagram.com/rausr_com"
+    name = "fa fa-instagram"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://facebook.com/rausrdotcom"
+    name = "fa fa-facebook"
+    weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false

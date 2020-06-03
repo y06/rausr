@@ -1,0 +1,23 @@
+{{ partial "header" . }}
+
+<main>
+
+
+<div class="container-heading mb-5">
+	<div class="head-icon my-1">
+		<img src="/svg/head-icon.svg" width="48px" height="15px">
+	</div>
+    <h2>{{ .Title }}</h2>
+    <div class="head-arrow my-1">
+		<img src="/svg/arrow-icon.svg" width="12px" height="25px">
+	</div>
+</div>
+
+
+    <div class="text-justify">{{ .Content }}</div>
+
+
+</main>
+
+{{ partial "footer" . }}
+

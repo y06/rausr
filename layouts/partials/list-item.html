@@ -1,0 +1,30 @@
+
+
+    {{ $.Scratch.Set "link" .RelPermalink }}
+    {{ with .Params.link }} {{ $.Scratch.Set "link" . }} {{ end }}
+
+    {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2020") | $.Scratch.Set "subtitle" }}
+    {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
+
+
+
+            
+            <div class="col-adapt col">
+                
+                <a href="{{ .Scratch.Get "link" }}" class="">{{ with .Params.preview_image }}<img src="{{ . }}">{{ end }}
+
+                
+                <div class="col-overlay">
+                    <div class="col-text">
+                        <h4>{{ .Title }}</h4>
+                        <div class="col-adapt-item">
+                            {{ range .Params.tags }}
+                            <kbd class="item-tag">{{ . }}</kbd>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+
