@@ -10,7 +10,7 @@ type: "singles"
 <div style="margin: auto; padding: 1rem; flex: 1 0 auto;">
 
 <ul class="col col-md-auto" style="text-align: center; margin-bottom: 5rem !important;">
-<li class="contact-info"><strong>E-mail: </strong><a href="mailto:hello@anomalia.sk">hello@rausr.com</a></li>
+<li class="contact-info"><strong>E-mail: </strong><a href="mailto:hello@rausr.com">hello@rausr.com</a></li>
 <!--googleoff: all-->
 <li class="contact-info">
 <strong>Phone: </strong>+421 910 160 251
