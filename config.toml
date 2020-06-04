@@ -1,7 +1,7 @@
 baseURL = "https://rausr.com/"
 languageCode = "en-us"
 title = "random user oriented graphic design"
-googleAnalytics = "???"
+googleAnalytics = "UA-168547988-1"
 
 [params]
     author = "y.06"
