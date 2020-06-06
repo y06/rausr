@@ -48,6 +48,12 @@ type: "singles"
 
 <div class="card text-center">
   <div class="card-body">
+    <h5 class="card-title">Editorial Design</h5>
+  </div>
+</div>
+
+<div class="card text-center">
+  <div class="card-body">
     <h5 class="card-title">DTP</h5>
   </div>
 </div>
@@ -60,7 +66,7 @@ type: "singles"
 
 <div class="card text-center">
   <div class="card-body">
-    <h5 class="card-title">3D visualisation</h5>
+    <h5 class="card-title">3D Visualisation</h5>
   </div>
 </div>
 
