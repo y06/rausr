@@ -45,15 +45,3 @@ Konica Minolta - Technology show visual. Exhibition interpreted every business s
 </div>
 
 
-
-
-<div class="pages d-flex justify-content-center">
-
-<a class="icon pages-icon" href="/" rel="prev">
-<div class="pages-button justify-content-center">
-<img src="/svg/arrow-icon-left.svg" width="50px" height="50px">
-<span class="pages-icon-text">back</span>
-</div>
-</a>
-
-</div>
