@@ -13,10 +13,10 @@ preview_image: /images/preview/preview-12.mp4
 
 <div class="row-adapt-double row" style="margin: 0 !important;">
 <div class="col mr-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/print-1.jpg">
+<img class="my-2" src = "/images/various-illustrations/content-various-illustrations-1.png">
 </div>
 <div class="col ml-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/print-2.jpg">
+<img class="my-2" src = "/images/various-illustrations/content-various-illustrations-2.png">
 </div>
 </div>
 
@@ -34,9 +34,9 @@ preview_image: /images/preview/preview-12.mp4
 **Description:**
 <br>
 
-**1.** random 1<br>
-**2.** random 2<br>
-**3.** ranodm 3<br>
+**1.** Forhand - some dynamic ilustration<br>
+**2.** rausr - random users<br>
+**3.** <br>
 
 </div>
 
