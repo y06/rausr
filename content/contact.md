@@ -1,6 +1,6 @@
 ---
 title: "contact us"
-description: "Contact informations and contact form"
+description: "Contact informations and contact form. We are waiting for your request."
 repo: "#" # delete this line if you want blog-like posts for projects
 weight: 0
 draft: false

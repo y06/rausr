@@ -2,6 +2,7 @@
 title: "about us"
 draft: false
 type: "singles"
+description: "Random User oriented Graphic Design - rausr creates Illustrations, UX & UI designs, Motion Graphics, Print Designs, Editorial Designs and more."
 ---
 
 <div style="margin: auto; padding: 1rem; flex: 1 0 auto;">
@@ -11,7 +12,7 @@ type: "singles"
 </div>
 
 <div class="row justify-content-md-center mb-5" style="margin-left: 0.35rem !important; margin-right: 0.35rem !important;">
-<h3><strong>rausr</strong> creating high speed highway between information and random user</h3>
+<h3><strong>rausr</strong> creates a high-speed highway between information and random user</h3>
 </div>
 
 <div class="row justify-content-md-center" style="margin-bottom: 8rem !important;margin-left: 0.35rem !important; margin-right: 0.35rem !important;">

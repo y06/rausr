@@ -1,6 +1,7 @@
 ---
 title: "various illustrations"
 date: 2020-06-01
+description: "A collection of various illustrations in different styles and techniques."
 tags: ["illustration", "3D visualisation"]
 draft: false
 preview_image: /images/preview/preview-12.mp4
@@ -20,6 +21,15 @@ preview_image: /images/preview/preview-12.mp4
 </div>
 </div>
 
+<div class="row-adapt-double row" style="margin: 0 !important;">
+<div class="col mr-2" style="padding: 0 !important;">
+<img class="my-2" src = "/images/various-illustrations/content-various-illustrations-3.jpg">
+</div>
+<div class="col ml-2" style="padding: 0 !important;">
+<img class="my-2" src = "/images/various-illustrations/content-various-illustrations-4.png">
+</div>
+</div>
+
 
 </div>
 
@@ -36,7 +46,7 @@ preview_image: /images/preview/preview-12.mp4
 
 **1.** Forhand - some dynamic ilustration<br>
 **2.** rausr - random users<br>
-**3.** <br>
+**3.** New Year Jump [2018 to 2019 Yeah!] - PF illustration<br>
 
 </div>
 
