@@ -152,7 +152,7 @@ h5 {
 @media (max-width: 1200px) {
     .col-adapt {
     min-width: 25% !important;
-    max-width: 50% !important;
+    max-width: 25% !important;
     }
 
 }
@@ -160,7 +160,8 @@ h5 {
 @media (max-width: 992px) {
     .col-adapt {
     min-width: 33% !important;
-    max-width: 100% !important;
+    max-width: 33% !important;
+    margin: 0 !important;
     }
 
 }
@@ -168,7 +169,7 @@ h5 {
 @media (max-width: 768px) {
     .col-adapt {
     min-width: 50% !important;
-    max-width: 100% !important;
+    max-width: 50% !important;
     }
 }
 
