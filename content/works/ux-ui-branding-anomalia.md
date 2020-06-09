@@ -16,7 +16,7 @@ preview_image: /images/preview/preview-3.mp4
 <img class="my-2" src = "/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-1.jpg">
 </div>
 <div class="col ml-2" style="padding: 0 !important;">
-<video autoplay loop class="my-2" src="/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-2.mp4"></video>
+<video loop autoplay class="my-2" src="/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-2.mp4"></video>
 </div>
 </div>
 
@@ -25,7 +25,7 @@ preview_image: /images/preview/preview-3.mp4
 <img class="my-2" src = "/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-3.jpg">
 </div>
 <div class="col ml-2" style="padding: 0 !important;">
-<video autoplay loop class="my-2" src="/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-4.mp4"></video>
+<video loop autoplay class="my-2" src="/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-4.mp4"></video>
 </div>
 </div>
 
