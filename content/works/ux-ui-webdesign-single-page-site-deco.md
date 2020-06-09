@@ -3,7 +3,7 @@ title: "T3deco system microsite"
 date: 2020-05-31
 tags: ["UX & UI", "photo editing"]
 draft: false
-preview_image: /images/preview/preview-9.jpg
+preview_image: /images/preview/preview-9.mp4
 ---
 
 
