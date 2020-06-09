@@ -7,17 +7,12 @@
     {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
 
 
-<script type="text/javascript">
-const observer = lozad();
-observer.observe();
-</script>
-
             
             <div class="col-adapt col">
                 
                 <a href="{{ .Scratch.Get "link" }}" class="">{{ with .Params.preview_image }}
 
-                <video loop autoplay playsinline poster="{{ . }}" class="lozad">
+                <video loop autoplay playsinline poster="{{ . }}">
                 <source src="{{ . }}" type="video/mp4">
                 <source src="{{ . }}" type="video/ogg">
                 </video>
