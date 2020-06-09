@@ -4,7 +4,7 @@ date: 2020-05-31
 description: "Wix single page microsite which introduce modular interior system by T3deco company."
 tags: ["UX & UI", "photo editing"]
 draft: false
-preview_image: /images/preview/preview-9.mp4
+preview_image: /images/preview/preview-9.jpg
 ---
 
 
