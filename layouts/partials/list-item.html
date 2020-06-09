@@ -7,12 +7,16 @@
     {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
 
 
-
             
             <div class="col-adapt col">
                 
-                <a href="{{ .Scratch.Get "link" }}" class="">{{ with .Params.preview_image }}<img src="{{ . }}">{{ end }}
+                <a href="{{ .Scratch.Get "link" }}" class="">{{ with .Params.preview_image }}
 
+                <video loop autoplay poster="{{ . }}">
+                <source src="{{ . }}" type="video/mp4">
+                <source src="{{ . }}" type="video/ogg">
+                </video>
+                {{ end }}
                 
                 <div class="col-overlay">
                     <div class="col-text">
@@ -26,5 +30,4 @@
                 </div>
                 </a>
             </div>
-
 

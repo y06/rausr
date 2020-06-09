@@ -39,8 +39,16 @@ nav {
     }
 }
 
-img {
-    max-width: 100%;
+img, video {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+video {
+    padding: 0 !important;
+    margin: auto !important;
+    border: none !important;
+    display: block !important;
 }
 
 ul {
