@@ -14,19 +14,19 @@ preview_image: /images/preview/preview-12.mp4
 
 <div class="row-adapt-double row" style="margin: 0 !important;">
 <div class="col mr-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/various-illustrations/content-various-illustrations-1.png">
+<img class="my-2 lozad" src="/images/various-illustrations/content-various-illustrations-1.png">
 </div>
 <div class="col ml-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/various-illustrations/content-various-illustrations-2.png">
+<img class="my-2 lozad" src="/images/various-illustrations/content-various-illustrations-2.png">
 </div>
 </div>
 
 <div class="row-adapt-double row" style="margin: 0 !important;">
 <div class="col mr-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/various-illustrations/content-various-illustrations-3.jpg">
+<img class="my-2 lozad" src="/images/various-illustrations/content-various-illustrations-3.jpg">
 </div>
 <div class="col ml-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/various-illustrations/content-various-illustrations-4.png">
+<img class="my-2 lozad" src="/images/various-illustrations/content-various-illustrations-4.png">
 </div>
 </div>
 
