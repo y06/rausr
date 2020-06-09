@@ -4,7 +4,7 @@ date: 2020-05-22
 description: "Brand name, Logotype, UX & UI design for the small graphic studio ANOMALIA."
 tags: ["branding", "UX & UI"]
 draft: false
-preview_image: /images/preview/preview-3.mp4
+preview_image: /images/preview/preview-3.jpg
 ---
 
 
