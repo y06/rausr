@@ -17,7 +17,7 @@ preview_image: /images/preview/preview-9.jpg
 <img class="my-2" src = "/images/ux-ui-webdesign-single-page-site-deco/ux-ui-webdesign-single-page-site-deco-1.jpg">
 </div>
 <div class="col ml-2" style="padding: 0 !important;">
-<video loop autoplay playsinline class="my-2" src="/images/ux-ui-webdesign-single-page-site-deco/ux-ui-webdesign-single-page-site-deco-2.mp4"></video>
+<video loop autoplay playsinline preload="none" class="my-2" src="/images/ux-ui-webdesign-single-page-site-deco/ux-ui-webdesign-single-page-site-deco-2.mp4"></video>
 </div>
 </div>
 
