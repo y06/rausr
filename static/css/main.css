@@ -512,6 +512,9 @@ footer .nav-item {
 }
 
 .contactform input, .contactform textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     display: block !important;
     width: 325px !important;
     background: transparent !important;

@@ -12,9 +12,8 @@
                 
                 <a href="{{ .Scratch.Get "link" }}" class="">{{ with .Params.preview_image }}
 
-                <video loop autoplay playsinline poster="{{ . }}">
+                <video loop autoplay playsinline poster="{{ . }}" preload="none">
                 <source src="{{ . }}" type="video/mp4">
-                <source src="{{ . }}" type="video/ogg">
                 </video>
                 {{ end }}
                 
