@@ -11,8 +11,6 @@ preview_image: /images/preview/preview-14.jpg
 
 <div class="col-adapt-single col">
 
-<img class="my-2" src="/images/print-design-branding-madness-t3-events-2020/content-print-design-branding-madness-t3-events-01.jpg">
-
 <div class="row-adapt-double row" style="margin: 0 !important;">
 <div class="col mr-2" style="padding: 0 !important;">
 <img class="my-2" src="/images/print-design-branding-madness-t3-events-2020/content-print-design-branding-madness-t3-events-02.jpg">
