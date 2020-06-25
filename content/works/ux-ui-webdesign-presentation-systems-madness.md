@@ -4,7 +4,7 @@ date: 2020-06-25
 description: "Webdesign, ecommerce UX & UI design for presentation system distributor."
 tags: ["UX & UI", "webdesign"]
 draft: false
-preview_image: /images/preview/preview-15.jpg
+preview_image: /images/preview/preview-14.jpg
 ---
 
 
