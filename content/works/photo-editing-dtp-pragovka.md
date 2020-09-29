@@ -1,6 +1,6 @@
 ---
 title: "Pragovka art district"
-date: 2020-05-23
+date: 2020-05-30
 tags: ["print design", "photo editing"]
 draft: false
 preview_image: /images/preview/preview-4.jpg
