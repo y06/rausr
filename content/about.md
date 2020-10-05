@@ -67,6 +67,12 @@ description: "Random User oriented Graphic Design - rausr creates Illustrations,
 
 <div class="card text-center">
   <div class="card-body">
+    <h5 class="card-title">Naming</h5>
+  </div>
+</div>
+
+<div class="card text-center">
+  <div class="card-body">
     <h5 class="card-title">3D Visualisation</h5>
   </div>
 </div>
