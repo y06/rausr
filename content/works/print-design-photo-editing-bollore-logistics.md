@@ -1,6 +1,6 @@
 ---
 title: "Bollore Logistics - Wall"
-date: 2020-05-29
+date: 2020-05-30
 tags: ["print design", "photo editing"]
 draft: false
 preview_image: /images/preview/preview-6.jpg

@@ -1,6 +1,6 @@
 ---
 title: "Work Liberty exhibition"
-date: 2020-05-29
+date: 2018-10-22
 tags: ["print design", "photo editing"]
 draft: false
 preview_image: /images/preview/preview-5.jpg

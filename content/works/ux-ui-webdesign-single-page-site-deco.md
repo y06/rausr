@@ -1,6 +1,6 @@
 ---
 title: "T3deco system microsite"
-date: 2020-05-31
+date: 2020-05-29
 description: "Wix single page microsite which introduce modular interior system by T3deco company."
 tags: ["UX & UI", "photo editing"]
 draft: false

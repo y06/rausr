@@ -1,6 +1,6 @@
 ---
 title: "Konica Minolta exhibition"
-date: 2020-06-01
+date: 2020-02-01
 tags: ["print design", "DTP"]
 draft: false
 preview_image: /images/preview/preview-10.jpg
