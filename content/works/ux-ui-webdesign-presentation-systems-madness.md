@@ -1,6 +1,6 @@
 ---
 title: "Advertising systems eshop"
-date: 2020-09-25
+date: 2020-06-03
 description: "Webdesign, ecommerce UX & UI design for presentation system distributor."
 tags: ["UX & UI", "webdesign"]
 draft: false

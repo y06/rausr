@@ -1,6 +1,6 @@
 ---
 title: "The Sun Also Rising"
-date: 2020-06-03
+date: 2020-09-25
 tags: ["editorial design", "illustration"]
 draft: false
 preview_image: /images/preview/preview-16.jpg
