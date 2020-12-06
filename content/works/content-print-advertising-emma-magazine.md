@@ -1,6 +1,6 @@
 ---
 title: "EMMA Magazine Advert"
-date: 2019-10-23
+date: 2020-02-01
 tags: ["print design", "photo editing"]
 draft: false
 preview_image: /images/preview/preview-2.jpg

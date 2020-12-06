@@ -1,6 +1,6 @@
 ---
 title: "CMCO exhibition wall"
-date: 2020-05-23
+date: 2019-10-23
 tags: ["print design", "3D visualisation"]
 draft: false
 preview_image: /images/preview/preview-8.jpg
