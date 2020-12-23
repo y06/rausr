@@ -40,6 +40,16 @@ preview_image: /images/preview/preview-20.png
 </div>
 
 
+<div class="row-adapt-double row" style="margin: 0 !important;">
+<div class="col mr-2" style="padding: 0 !important;">
+<img class="my-2" src="/images/logo-collection/content-logo-collection-paradox.png">
+</div>
+<div class="col ml-2" style="padding: 0 !important;">
+<img class="my-2" src="/images/logo-collection/content-logo-collection-bkis.png">
+</div>
+</div>
+
+
 </div>
 
 
@@ -59,6 +69,8 @@ preview_image: /images/preview/preview-20.png
 **4.** Anomalia - Branding, naming and logotype<br>
 **5.** Sunder - Branding, naming and logotype for natural fruit juices producer [concept]<br>
 **6.** Turnmark - Branding, naming and logotype for traffic signs manufacturer<br>
+**7.** Paradox - Branding, naming and logotype for clothing manufacturer<br>
+**8.** BKIS - Logo and basic visual identity for Bratislava Culture and Information Center [contest]<br>
 
 
 </div>
