@@ -30,6 +30,15 @@ preview_image: /images/preview/preview-12.mp4
 </div>
 </div>
 
+<div class="row-adapt-double row" style="margin: 0 !important;">
+<div class="col mr-2" style="padding: 0 !important;">
+<img class="my-2" src="/images/various-illustrations/content-various-illustrations-5.png">
+</div>
+<div class="col ml-2" style="padding: 0 !important;">
+<img class="my-2" src="/images/various-illustrations/content-various-illustrations-6.png">
+</div>
+</div>
+
 
 </div>
 
@@ -48,6 +57,8 @@ preview_image: /images/preview/preview-12.mp4
 **2.** rausr - random users<br>
 **3.** New Year Jump [2018 to 2019 Yeah!] - PF illustration<br>
 **4.** Guitar Riffs - explicit random illustration<br>
+**5.** Histamaniac illustration - Histamine alergic reaction is very nice experience<br>
+**6.** Spotlight - using typography for creating complex images<br>
 
 </div>
 
