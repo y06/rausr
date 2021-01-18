@@ -3,6 +3,7 @@ title: "Nourivit Pets Tonikum"
 date: 2020-10-07
 tags: ["package design", "print design"]
 draft: false
+noindex: true
 preview_image: /images/preview/preview-18.jpg
 ---
 

@@ -28,6 +28,11 @@
           gtag('config', '{{ .Site.GoogleAnalytics }}');
         </script>
         {{ end }}
+
+        {{ if .Params.noindex }}
+        <meta name="robots" content="noindex" /> 
+        {{ end }}
+
     </head>
 
     <body>
