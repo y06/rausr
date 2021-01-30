@@ -1,7 +1,7 @@
 ---
 title: "Light Wall visual"
 date: 2021-01-30
-description: "A collection of various illustrations in different styles and techniques."
+description: "Backlite wall with high-contrast visual."
 tags: ["print design", "branding"]
 draft: false
 preview_image: /images/preview/preview-21.jpg

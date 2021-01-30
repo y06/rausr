@@ -1,7 +1,7 @@
 ---
 title: "T3 events visual 2020"
 date: 2020-06-02
-description: "A collection of various illustrations in different styles and techniques."
+description: "Modular & compact exhibition system branding."
 tags: ["print design", "branding"]
 draft: false
 preview_image: /images/preview/preview-14.jpg
