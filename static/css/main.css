@@ -51,6 +51,10 @@ video {
     display: block !important;
 }
 
+video::-webkit-media-controls {
+    display: none;
+}
+
 ul {
     list-style: none !important;
 }
