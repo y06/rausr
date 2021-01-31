@@ -52,7 +52,7 @@ video {
 }
 
 video::-webkit-media-controls {
-    display: none;
+    display: none !important;
 }
 
 ul {
