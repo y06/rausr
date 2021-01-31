@@ -4,7 +4,7 @@ date: 2020-09-29
 description: "A collection of various illustrations in different styles and techniques."
 tags: ["illustration", "3D visualisation"]
 draft: false
-preview_image: /images/preview/preview-12.mp4
+preview_image: /images/preview/preview-12.png
 ---
 
 

@@ -12,9 +12,9 @@
                 
                 <a href="{{ .Scratch.Get "link" }}" class="">{{ with .Params.preview_image }}
 
-                <video loop autoplay playsinline poster="{{ . }}">
-                <source src="{{ . }}" type="video/mp4">
-                </video>
+                <picture>
+                <source src="{{ . }}"><img src="{{ . }}">
+                </picture>
                 {{ end }}
                 
                 <div class="col-overlay">
