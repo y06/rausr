@@ -50,6 +50,16 @@ preview_image: /images/preview/preview-20.png
 </div>
 
 
+<div class="row-adapt-double row" style="margin: 0 !important;">
+<div class="col mr-2" style="padding: 0 !important;">
+<img class="my-2" src="/images/logo-collection/content-logo-collection-rskd21.png">
+</div>
+<div class="col ml-2" style="padding: 0 !important;">
+<img class="my-2" src="/images/logo-collection/content-logo-collection-luminus.png">
+</div>
+</div>
+
+
 </div>
 
 
@@ -71,6 +81,8 @@ preview_image: /images/preview/preview-20.png
 **6.** Turnmark - Branding, naming and logotype for traffic signs manufacturer<br>
 **7.** Paradox - Branding, naming and logotype for clothing manufacturer<br>
 **8.** BKIS - Logo and basic visual identity for Bratislava Culture and Information Center [contest]<br>
+**9.** YSKD 2021 - Year of Slovak Design 2021 logo [contest]<br>
+**10.** Light-house and accessories company logo [contest]<br>
 
 
 </div>
