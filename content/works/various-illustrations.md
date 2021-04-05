@@ -1,6 +1,6 @@
 ---
 title: "various illustrations"
-date: 2020-09-29
+date: 2020-09-24
 description: "A collection of various illustrations in different styles and techniques."
 tags: ["illustration", "3D visualisation"]
 draft: false
