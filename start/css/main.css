@@ -1,0 +1,594 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    letter-spacing: 1px !important;
+    text-align: center;
+    flex-direction: column;
+    font-size: 14px !important;
+    color: #595769 !important;
+    margin: auto !important;
+}
+
+main {
+    margin: auto;
+    padding: 2rem 0 1rem 0;
+    flex: 1 0 auto;
+}
+
+
+@media (max-width: 992px) {
+    
+    .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    }
+}
+
+nav {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+}
+
+@media (max-width: 576px) {
+    nav {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+img, video {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+video {
+    padding: 0 !important;
+    margin: auto !important;
+    border: none !important;
+    display: block !important;
+}
+
+ul {
+    list-style: none !important;
+}
+
+p {
+    color: #9693A3;
+    letter-spacing: 0 !important;
+    text-align: left !important;
+}
+
+strong {
+    font-weight: 500 !important;
+}
+
+
+/* heading */
+
+h1, h2, h3, h5 {
+    font-size: 14px !important;
+    text-transform: uppercase;
+    font-weight: 400 !important;
+    color: #595769;
+}
+
+h1 {
+    text-transform: none !important;
+    text-align: left !important;
+}
+
+h3 {
+    text-transform: none !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+}
+
+@media (max-width: 800px) {
+    h1, h3, .col-adapt-single p {
+        font-size: 12px !important;
+    }
+
+}
+
+h4 {
+    font-size: 12px !important;
+    text-align: right;
+    line-height: 1 !important;
+    margin: 0 !important;
+}
+
+h5 {
+    text-transform: none !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.container-heading {
+    margin: auto;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    }
+}
+
+
+/* work entries, list item for posts/projectss */
+
+
+.col-adapt {
+    min-width: 20% !important;
+    max-width: 20% !important;
+    padding: 0 !important;
+    margin: auto;
+}
+
+.row-adapt-double {
+    margin: margin: 0 !important;
+}
+
+.col-adapt-single {
+    max-width: 1200px !important;
+    margin: 0 auto 3rem auto;
+    padding: 0 !important;
+}
+
+.col-adapt-single p {
+    max-width: 80% !important;
+    margin: auto !important;
+}
+
+@media (max-width: 1200px) {
+    .col-adapt {
+    min-width: 25% !important;
+    max-width: 25% !important;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .col-adapt {
+    min-width: 33% !important;
+    max-width: 33% !important;
+    margin: 0 !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .col-adapt {
+    min-width: 50% !important;
+    max-width: 50% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-adapt {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    }
+
+    .row-adapt-double {
+    display: block !important;
+    }
+
+    .row-adapt-double .col {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    }
+}
+
+.col-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #43414C;
+}
+
+.col-adapt:hover .col-overlay {
+  opacity: 1;
+}
+
+.col-text {
+    width: 90% !important;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.col-text h4 {
+    text-align: center !important;
+    margin: auto !important;
+    padding-bottom: 1rem !important;
+    line-height: 1.25 !important;
+    margin-block-start: 0.1rem !important;
+    margin-block-end: 0.1rem !important;
+}
+
+kbd {
+    color: #fff !important;
+    background: transparent !important;
+    font-family: Source Code Pro !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    display: block;
+}
+
+
+/* Page content */
+
+.content {
+    padding-top: 20px;
+}
+
+
+/* Colored links */
+
+a:link, a:visited {
+    color: var(--accent);
+}
+
+a.icon:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent) !important;
+}
+
+/* Copyright message */
+
+.copyright {
+    margin-left: 0  !important;
+    margin-bottom: 6rem !important;
+    float: right !important;
+    color: #9693A3;
+    text-align: right !important;
+}
+
+.foot-text {
+    color: #595769;
+    font-weight: 400;
+    display: inline-block;
+}
+
+
+@media (max-width: 511px) {
+    .foot-text {
+        margin-top: 0.25rem !important;
+    }
+
+    footer .navbar-text, footer .copyright {
+        margin-left: 0  !important;
+        margin-top: 1rem;
+        padding: 0 !important;
+    }
+
+    footer .navbar-brand {
+        padding: 0 !important;
+        margin-right: 1rem !important;
+        margin-left: 0 !important;
+    }
+
+}
+
+@media (max-width: 1006px) {
+    .copyright {
+        font-size: 12px !important;
+    }
+
+    footer .navbar-text {
+        margin-right: 0 !important;
+        float: right !important;
+        text-align: right !important;
+    }
+}
+
+
+/* Paginator */
+
+.pages {
+    display: block;
+    padding: 15px;
+    margin: 1rem 0.5rem 6rem 0.5rem;
+}
+
+.pages-icon {
+    margin: 0 1rem;
+}
+
+.pages-icon-text {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.pages-button {
+    display: block;
+}
+
+.pages-icon img {
+    margin: 0 1rem 0.5rem 1rem;
+}
+
+/* Navigation */
+
+.nav-icon {
+    font-size: 160%;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.mobile-headline h1 {
+    display: none !important;
+}
+
+@media (max-width: 992px)
+
+{
+    .navbar-text {
+        display: none !important;
+    }
+
+    .navbar-brand {
+        transform: scale(0.9);
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .mobile-headline h1 {
+        display: block !important;
+        letter-spacing: 0 !important;
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #9693A3 !important;
+        margin: -1rem auto 2rem auto !important;
+    }
+
+    li.nav-icon {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* Colored borders at top/bottom of page */
+
+.navbar.navbar-default {
+    border-top: var(--border-width) solid var(--accent);
+}
+
+footer {
+    border-top: 1px solid #DBD9E5;
+}
+
+footer .nav-item {
+    font-weight: 400;
+    color: #9693A3;
+}
+
+@media (max-width: 992px) {
+    footer .navbar-text {
+        display: block !important;
+        font-size: 12px !important;
+    }
+}
+
+
+/* about us, clients */
+
+.card {
+    border-radius: 0 !important;
+    margin: 0.5rem;
+}
+
+.card-body {
+    padding: 0.75rem 1.45rem 0.75rem 1.45rem !important;
+}
+
+.col-auto {
+    padding: 1.5rem !important;
+}
+
+@media (max-width: 1140px) {
+
+    .client-img {
+    transform: scale(0.9);
+    }
+
+    .col-auto {
+    padding: 1.2rem !important;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .client-img {
+    transform: scale(0.9);
+    }
+
+    .col-auto {
+    padding: 1rem !important;
+    }
+}
+
+@media (max-width: 540px) {
+
+
+    .card-title {
+        font-size: 12px !important;
+    }
+
+    .client-img {
+    transform: scale(0.8);
+    }
+
+    .col-auto {
+    padding: 0.9rem !important;
+    }
+}
+
+
+/* thanks */
+
+.btn {
+    padding: 9px 25px !important;
+    border-radius: 4px !important;
+    min-width: 100px;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: 1px solid #9693A3 !important;
+}
+
+.btn-primary {
+    background-color: #9693A3 !important;
+}
+
+.btn-primary:hover {
+    background-color: #32313C !important;
+}
+
+.btn-outline-primary {
+    color: #32313C !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #DBD9E5 !important;
+}
+
+
+/* contact */
+
+
+.contact-info {
+    padding: 0.3rem 0 0.3rem 0;
+}
+
+
+
+/* contact form */
+
+.contactform {
+    font-weight: 400 !important;
+}
+
+.contactform .row {
+    margin-bottom: 6rem !important;
+}
+
+.contactform ::placeholder {
+    color: #9693A3 !important;
+}
+
+.contactform input, .contactform textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block !important;
+    width: 325px !important;
+    background: transparent !important;
+    border: 1px solid #DBD9E5 !important;
+    color: #43414C;
+    font-family: Source Code Pro !important;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 1rem auto !important;
+    padding: 9px 18px;
+}
+
+.contactform textarea {
+    min-height: 155px !important;
+    font-family: Source Code Pro !important;
+}
+
+
+.contactform button {
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    border-radius: 4px;
+    float: right !important;
+    margin: 1rem auto 1rem auto;
+    padding: 9px 18px;
+    border: 1px solid #595769;
+    letter-spacing: 1px;
+    min-width: 100px;
+}
+
+.contactform button:hover {
+    background: #DBD9E5 !important;
+    color: #43414C !important;
+}
+
+.button-right {
+    float: right !important;
+    display: block !important;
+}
+
+.contact-required-info {
+    font-size: 12px;
+    color: #9693A3;
+    padding-left: 18px; 
+}
+
+
+@media (max-width: 1006px) {
+
+    .contactform .col {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .contactform input, .contactform textarea {
+        max-width: 290px !important;
+    }
+
+    .contactform .col {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+}
+
+@media (max-width: 321px) {
+   
+    .contactform input, .contactform textarea {
+        max-width: 264px !important;
+    }
+}
+
