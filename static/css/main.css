@@ -124,7 +124,7 @@ h5 {
 }
 
 
-/* work entries, list item for posts/projectss */
+/* work entries, list item for posts/projects */
 
 
 .col-adapt {
@@ -135,7 +135,7 @@ h5 {
 }
 
 .row-adapt-double {
-    margin: margin: 0 !important;
+    margin: margin 0 !important;
 }
 
 .col-adapt-single {
@@ -147,6 +147,13 @@ h5 {
 .col-adapt-single p {
     max-width: 80% !important;
     margin: auto !important;
+}
+
+
+.row-adapt-double p {
+    color: #9693A3;
+    margin-top: 10px !important;
+    margin-bottom: 60px !important;
 }
 
 @media (max-width: 1200px) {
