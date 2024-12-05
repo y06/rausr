@@ -150,11 +150,12 @@ h5 {
 }
 
 
-.row-adapt-double p {
+.row-adapt-double p, .col-adapt-single .imgdescript {
     color: #9693A3;
     margin-top: 10px !important;
     margin-bottom: 60px !important;
 }
+
 
 @media (max-width: 1200px) {
     .col-adapt {
