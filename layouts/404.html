@@ -2,41 +2,26 @@
 
 <main>
 
-
-    <div class="row justify-content-md-center mb-4">
-
-        <h1>¯\_(ツ)_/¯</h1>
-
-    </div>
-
-    <div class="row justify-content-md-center mb-4">
-        
-        <h2>Page not found</h2>
-
-    </div>
-
-
-<div class="pages d-flex justify-content-center">
-
-
-<a class="icon pages-icon" href="/" rel="home">
-<div class="pages-button justify-content-center">
-<img src="/svg/home-icon.svg" width="50px" height="50px">
-<span class="pages-icon-text">home</span>
-</div>
-</a>
-
-<a class="icon pages-icon" href="/contact/" rel="contact">
-<div class="pages-button justify-content-center">
-<img src="/svg/contact-icon.svg" width="50px" height="50px">
-<span class="pages-icon-text">contact</span>
-</div>
-</a>
-
-
-</div>
-
+  <!-- Toast Section -->
+  <section class="cta-section cta-section-home">
+    
+        <h1>
+            Oops<br /> burnt toast! 🍞
+        </h1>
+      <p>
+        The page you’re looking for got overcooked or doesn’t exist. Let’s go back to the kitchen and start fresh.
+      </p>
+      <div class="home-cta-buttons">
+        <a class="home-button primary" href="/">Back to Kitchen ←</a>
+        <a class="home-button secondary" href="/contact">Talk to the Chef →</a>
+      </div>
+    
+  </section>
 
 </main>
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
 
 {{ partial "footer" . }}

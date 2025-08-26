@@ -1,0 +1,116 @@
+{{ partial "header" . }}
+
+<main>
+
+    <section class="header header-work" id="page-blur">
+        <div class="header-content header-contact header-work">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <button class="header-cta-button header-cta-button-contact header-cta-button-work" onclick="document.querySelector('.content-sections')?.scrollIntoView({ behavior: 'smooth' });">Let’s take a look ↓</button>
+        </div>
+        <div class="header-illustration header-image">
+            {{ with .Params.header_image }}
+            <img src="{{ . }}" alt="{{ $.Title }} header image" />
+            {{ end }}
+        </div>
+    </section>
+
+
+    <div class="container-tag-list">
+        <button class="tag-scroll left">←</button>
+        <div class="tag-list-wrapper">
+            <ul class="tag-list">
+                <li><a href="/works/" class="tag-link">← Works</a></li>
+                {{ with index .Params.tags 0 }}
+                    <li><a href="/tags/{{ urlize . }}" class="tag-link">← {{ partial "tag-label.html" . }}</a></li>
+                {{ end }}
+                <li><span class="tag-link active">{{ .Title }}</span></li>
+            </ul>
+        </div>
+        <button class="tag-scroll right">→</button>
+    </div>
+
+</main>
+
+
+<section class="content-sections">
+  {{ with .Params.sections }}
+  <section class="content-section-column">
+    {{ range . }}
+    <div class="content-section-row">
+      <div class="content-section-image">
+        {{ if .image }}
+          <a href="{{ .image }}" class="glightbox" data-gallery="main-sections">
+            <img src="{{ .image }}" alt="{{ .title }}">
+          </a>
+        {{ else if .video }}
+          <a href="{{ .video }}" class="glightbox" data-gallery="main-sections" data-type="video">
+            <video autoplay muted loop playsinline>
+              <source src="{{ .video }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+        {{ end }}
+      </div>
+      {{ with .label }}
+        <p class="image-label">{{ . }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
+  </section>
+  {{ end }}
+
+  <section class="content-section-column content-section-column-right">
+      {{ with .Params.seotags }}
+      <div class="section-tags">
+        {{ range . }}
+          <span class="tag">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ .Content }}
+  </section>
+</section>
+
+<section class="content-sections section-subimages">
+  {{ with .Params.sections }}
+    {{ range . }}
+      {{ with .subimages }}
+      <div class="subimages-row">
+        {{ range . }}
+        <div class="subimage-column">
+        <div class="subimage">
+          {{ if .image }}
+            <a href="{{ .image }}" class="glightbox" data-gallery="subimages">
+              <img src="{{ .image }}" alt="{{ .label }}">
+            </a>
+          {{ else if .video }}
+            <a href="{{ .video }}" class="glightbox" data-gallery="subimages" data-type="video">
+              <video autoplay muted loop playsinline>
+                <source src="{{ .video }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </a>
+          {{ end }}
+        </div>
+            {{ with .label }}<p class="image-label">{{ . }}</p>{{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</section>
+
+
+{{ partial "more-works.html" . }}
+
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
+{{ partial "footer" . }}
+

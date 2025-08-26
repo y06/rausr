@@ -1,0 +1,18 @@
+{{ $title := .Title | default .Site.Title }}
+{{ $desc := .Description | default .Params.description | default .Site.Params.description }}
+{{ $image := .Params.header_image | default .Site.Params.defaultImage }}
+{{ $url := .Permalink }}
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ $url }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:image" content="{{ $image }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $image }}">

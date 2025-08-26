@@ -1,0 +1,136 @@
+{{ partial "header" . }}
+
+<main>
+
+    {{/* Prepare paginator data early for use in title and lists */}}
+    {{ $allBlogPages := where .Site.RegularPages "Section" "blog" }}
+    {{ $sortedPages := sort $allBlogPages "Params.date" "desc" }}
+    {{ if .Params.tag }}
+      {{ $sortedPages = where $sortedPages "Params.tags" "intersect" (slice .Params.tag) }}
+    {{ end }}
+    {{ $paginator := .Paginate $sortedPages 8 }}
+
+    <section class="header header-blog">
+      <div class="header-content">  
+        <div class="h1container">
+            {{ $pageNum := $paginator.PageNumber }}
+            {{ $totalPages := $paginator.TotalPages }}
+            <h1>List of Articles</h1>
+            {{/* Showing range and total articles counters */}}
+            {{ $perPage := 8 }}
+            {{ $startIndex := add 1 (mul (sub $paginator.PageNumber 1) $perPage) }}
+            {{ $proposedEnd := add $startIndex (sub $perPage 1) }}
+            {{ $totalArticles := $paginator.TotalNumberOfElements }}
+            {{ $endIndex := cond (gt $proposedEnd $totalArticles) $totalArticles $proposedEnd }}
+          <div class="counter">
+              <span class="word showinglist">showing</span>
+              <div class="number total showinglist" aria-label="Showing articles {{ $startIndex }} to {{ $endIndex }}">{{ $startIndex }}–{{ $endIndex }}</div>
+          </div>
+          <div class="counter">
+              <span class="word">total</span>
+              <div class="number total" aria-label="{{ $totalArticles }} articles">{{ $totalArticles }}</div>
+          </div>
+        </div>
+            <p>Stories, quick reports, tutorials, and a bit of overthinking about graphic design and other random things.</p>
+            <button class="header-cta-button" onclick="document.querySelector('.blog-featured')?.scrollIntoView({ behavior: 'smooth' });">Show me something ↓</button>
+        </div>
+        <div class="header-illustration">
+            <img src="{{ "svg/header/header-blog.svg" | relURL }}" alt="Blog Illustration">
+        </div>
+    </section>
+
+<div class="container-tag-list">
+  <button class="tag-scroll left">←</button>
+  <div class="tag-list-wrapper">
+    <ul class="tag-list">
+      {{/* Build case-insensitive unique list of tags, but pull out 'series' to render first */}}
+      {{ $seen := dict }}
+      {{ $series := slice }}
+      {{ $others := slice }}
+
+      {{ range where .Site.RegularPages "Section" "blog" }}
+        {{ range .Params.tags }}
+          {{ $t := . }}
+          {{ $key := lower $t }}
+          {{ if eq $key "series" }}
+            {{ if not (isset $seen "series") }}
+              {{ $seen = merge $seen (dict "series" true) }}
+              {{ $series = $series | append $t }}
+            {{ end }}
+          {{ else }}
+            {{ if not (isset $seen $key) }}
+              {{ $seen = merge $seen (dict $key true) }}
+              {{ $others = $others | append $t }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      {{ $others = sort $others (slice) }}
+
+      {{/* Render 'series' first with special class */}}
+      {{ range $series }}
+        {{ $label := partial "tag-label.html" . }}
+        <li><a href="{{ "/topics/" | relURL }}{{ . | urlize }}" class="tag-link tag-link-series">{{ $label }}</a></li>
+      {{ end }}
+
+      {{/* Then render the rest alphabetically */}}
+      {{ range $others }}
+        {{ $label := partial "tag-label.html" . }}
+        <li><a href="{{ "/topics/" | relURL }}{{ . | urlize }}" class="tag-link">{{ $label }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+  <button class="tag-scroll right">→</button>
+</div>
+
+<section class="blog-featured">
+    <div class="card30-row">
+    {{ $allPages := $paginator.Pages }}
+    {{ $first := index $allPages 0 }}
+    {{ $nextThree := first 3 (after 1 $allPages) }}
+    {{ $older := after 4 $allPages }}
+
+    <!-- Featured (first article) -->
+    {{ if $first }}
+        {{ partial "list-item-blog.html" (dict "ctx" $first "IsHome" true "index" 0) }}
+    {{ end }}
+    </div>
+    <!-- Next 3 blog cards -->
+    <div class="card20-row">
+        {{ range $i, $item := $nextThree }}
+        {{ partial "list-item-blog.html" (dict "ctx" $item "IsHome" false "index" (add $i 1)) }}
+        {{ end }}
+    </div>
+    
+</section>
+
+<!-- Older blog posts -->
+<section class="blog-older">
+    <div class="card20-column">
+      {{ range $index, $item := $older }}
+        {{ if modBool $index 2 }}
+          {{ partial "list-item-blog.html" (dict "ctx" $item "IsHome" false "index" (add $index 4)) }}
+        {{ end }}
+      {{ end }}
+    </div>
+    <div class="card20-column">
+      {{ range $index, $item := $older }}
+        {{ if modBool $index 2 }}
+        {{ else }}
+          {{ partial "list-item-blog.html" (dict "ctx" $item "IsHome" false "index" (add $index 4)) }}
+        {{ end }}
+      {{ end }}
+    </div>
+</section>
+
+
+</main>
+
+{{ partial "paginator" . }}
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
+{{ partial "footer" . }}

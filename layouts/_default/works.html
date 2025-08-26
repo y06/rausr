@@ -1,0 +1,90 @@
+{{ partial "header" . }}
+
+<main>
+
+    <section class="header">
+        <div class="header-content">
+
+          <div class="h1container">
+            <h1>
+              
+              {{ $title := "Works" }}
+
+              {{ $allWorks := where .Site.RegularPages "Section" "works" }}
+              {{ $allWorks = where $allWorks "Type" "ne" "singles" }}
+              {{ $worksTotal := len $allWorks }}
+
+              {{ $title }}
+              {{ if gt $worksTotal 0 }}
+            </h1>
+            {{ with .Paginator }}
+              {{ $pageSize := 8 }}
+              {{ $startIndex := add 1 (mul (sub .PageNumber 1) $pageSize) }}
+              {{ $proposedEnd := add $startIndex (sub $pageSize 1) }}
+              {{ $endIndex := cond (gt $proposedEnd $worksTotal) $worksTotal $proposedEnd }}
+              <div class="counter">
+                <span class="word showinglist">showing</span>
+                <div class="number total showinglist" aria-label="Showing works {{ $startIndex }} to {{ $endIndex }}">{{ $startIndex }}-{{ $endIndex }}</div>
+              </div>
+            {{ end }}
+            <div class="counter">
+              <span class="word">total</span>
+              <div class="number total" aria-label="{{ $worksTotal }} works">{{ $worksTotal }}</div>
+            </div>
+            {{ end }}
+          </div>
+
+            <p>Modern design goes beyond just aesthetics—it blends user experience, good vibes, and an indescribable spark.</p>
+            <button class="header-cta-button" onclick="document.querySelector('.card-container')?.scrollIntoView({ behavior: 'smooth' });">Show me something ↓</button>
+        </div>
+        <div class="header-illustration">
+            <img src="{{ "svg/header/header-works.svg" | relURL }}" alt="Works Illustration">
+        </div>
+    </section>
+
+    <div class="container-tag-list">
+        <button class="tag-scroll left">←</button>
+        <div class="tag-list-wrapper">
+            <ul class="tag-list">
+
+                {{ $tags := slice }}
+                {{ range where .Site.RegularPages "Section" "works" }}
+                    {{ range .Params.tags }}
+                        {{ $tags = $tags | append . }}
+                    {{ end }}
+                {{ end }}
+                {{ $tags = $tags | uniq | sort }}
+                {{ range $tags }}
+                    {{ $label := partial "tag-label.html" . }}
+                    <li><a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag-link">{{ $label }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+        <button class="tag-scroll right">→</button>
+    </div>
+
+<section class="card-container">
+
+{{ $filteredPages := where .Site.RegularPages "Section" "works" }}
+{{ $paginator := .Paginate $filteredPages 8 }}
+{{ $currentPage := $paginator.PageNumber }}
+{{ $start := mul (sub $currentPage 1) 8 }}
+{{ $pageItems := first 8 (after $start $filteredPages) }}
+{{ range $pageItems }}
+  {{ if ne .Type "singles" }}
+    {{ partial "list-item-works" . }}
+  {{ end }}
+{{ end }}
+
+</section>
+
+
+</main>
+
+{{ partial "paginator" . }}
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
+{{ partial "footer" . }}

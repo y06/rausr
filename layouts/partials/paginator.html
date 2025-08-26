@@ -1,24 +1,66 @@
-{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+{{ if .Paginator }}
+    <nav class="pagination d-flex justify-content-center">
+        <ul class="pagination-list d-flex align-items-center">
+            <!-- Previous Page -->
+            {{ if .Paginator.HasPrev }}
+                <li class="pagination-item">
+                    <a href="{{ .Paginator.Prev.URL }}" class="pagination-link">←</a>
+                </li>
+            {{ else }}
+                <li class="pagination-item disabled">
+                    <span class="pagination-link">←</span>
+                </li>
+            {{ end }}
 
-<div class="pages d-flex justify-content-center">
+            <!-- First Page -->
+            {{ if gt .Paginator.TotalPages 1 }}
+                <li class="pagination-item">
+                    <a href="{{ .Paginator.First.URL }}" class="pagination-link {{ if eq .Paginator.PageNumber 1 }}active{{ end }}">1</a>
+                </li>
+            {{ end }}
 
-    {{ if .Paginator.HasPrev }}
-    <a class="icon pages-icon" href="{{ .Paginator.Prev.URL }}" rel="prev">
-        <div class="pages-button justify-content-center">
-        	<img src="/svg/arrow-icon-left.svg" width="50px" height="50px">
-        	<span class="pages-icon-text">previous</span>
-        </div>
-    </a>
-    {{ end }} {{ if .Paginator.HasNext }}
-    <a class="icon pages-icon" href="{{ .Paginator.Next.URL }}" rel="next">
-			<div class="pages-button justify-content-center">
-        	<img src="/svg/arrow-icon-right.svg" width="50px" height="50px">
-        	<span class="pages-icon-text">next</span>
-        </div>
-    </a>
-    {{ end }}
+            <!-- Ellipsis Before Current Pages -->
+            {{ if gt (sub .Paginator.PageNumber 3) 1 }}
+                <li class="pagination-item disabled"><span class="pagination-link">...</span></li>
+            {{ end }}
 
+            <!-- Middle Pages -->
+            {{ range .Paginator.Pagers }}
+                {{ $pageNum := .PageNumber }}
+                {{ $current := $.Paginator.PageNumber }}
+                {{ $totalPages := $.Paginator.TotalPages }}
 
-</div>
+                {{ if and (gt $pageNum 1) (lt $pageNum $totalPages) }}
+                    {{ if or (eq $pageNum $current) (eq $pageNum (sub $current 1)) (eq $pageNum (add $current 1)) }}
+                        <li class="pagination-item">
+                            <a href="{{ .URL }}" class="pagination-link {{ if eq $pageNum $current }}active{{ end }}">{{ $pageNum }}</a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
 
+            <!-- Ellipsis After Current Pages -->
+            {{ if lt (add .Paginator.PageNumber 3) .Paginator.TotalPages }}
+                <li class="pagination-item disabled"><span class="pagination-link">...</span></li>
+            {{ end }}
+
+            <!-- Last Page -->
+            {{ if gt .Paginator.TotalPages 1 }}
+                <li class="pagination-item">
+                    <a href="{{ .Paginator.Last.URL }}" class="pagination-link {{ if eq .Paginator.PageNumber .Paginator.TotalPages }}active{{ end }}">{{ .Paginator.TotalPages }}</a>
+                </li>
+            {{ end }}
+
+            <!-- Next Page -->
+            {{ if .Paginator.HasNext }}
+                <li class="pagination-item">
+                    <a href="{{ .Paginator.Next.URL }}" class="pagination-link">→</a>
+                </li>
+            {{ else }}
+                <li class="pagination-item disabled">
+                    <span class="pagination-link">→</span>
+                </li>
+            {{ end }}
+        </ul>
+    </nav>
 {{ end }}

@@ -2,32 +2,92 @@
 
 <main>
 
-<div class="container-heading mb-5">
-	<div class="head-icon my-1">
-		<img src="/svg/head-icon.svg" width="48px" height="15px">
-	</div>
-    <h2>works</h2>
-    <div class="head-arrow my-1">
-		<img src="/svg/arrow-icon.svg" width="12px" height="25px">
-	</div>
-</div>
+  <!-- Hero Section -->
+  <section class="cta-section cta-section-home">
+    
+      <h1>
+        We <span class="highlight-strike">design</span> cook<br />
+        <span class="highlight-purple">ra</span>ndom <span class="highlight-purple">us</span>er <span class="highlight-purple">r</span>ecipes
+      </h1>
+      <p>
+        Graphic design <span class="highlight-strike">studio</span> kitchen with a lot of empathy. That’s what helps us create results even your grumpy neighbor Helena 👵 can appreciate.
+      </p>
+      <div class="home-cta-buttons">
+        <a class="home-button primary" onclick="document.querySelector('.cta-section-works')?.scrollIntoView({ behavior: 'smooth' });">Explore Recipes ↓</a>
+        <a class="home-button secondary" href="/contact">Talk to the Chef →</a>
+      </div>
+    
+  </section>
 
-<div class="row" style="margin-top: 4rem !important; margin-bottom: 4rem !important; margin-left: 0 !important; margin-right: 0 !important; padding: 0 !important;">
+  <!-- Featured Works Section -->
+  <section class="cta-section cta-section-works">
+    <h2>Featured Works</h2>
+    <p>Selected recipes from our design kitchen. Each project cooked up with care, curiosity, and a dash of boldness. Personally picked by the chef. 👨‍🍳</p>
+    
+    <section class="card-container">
 
-    {{ range (.Paginator 15).Pages }}
-
-    {{ if ne .Type "singles" }}
-
-    {{ partial "list-item" . }}
-
-    {{end}}
-
+    {{ $allWorks := where .Site.RegularPages "Type" "works" }}
+    {{ $filteredWorks := where $allWorks "Permalink" "ne" .Permalink }}
+    {{ $sortedWorks := sort $filteredWorks "Date" "desc" }}
+    {{ range first 3 (shuffle (first 12 $sortedWorks)) }}
+      {{ .Scratch.Set "link" .RelPermalink }}
+      {{ partial "list-item-works" . }}
     {{ end }}
 
-</div>
+        <div class="card1 card100">
+        <a href="/works" class="">
+            <div class="card1-top card100-top"><span>List All <br>Works 🥑</span></div>
+        </a>
+        <a href="/works">
+            <div class="card100-bottom">
+                <span>→</span>
+        </a>
+        </div>
+    </section>
+  </section>
+
+<!-- Newest Blogs Section -->
+<section class="cta-section cta-section-blog">
+
+    <h2>Thoughts on Graphic Design</h2>
+    <p>Reports, tool reviews, graphic design articles, a few philosophical thoughts, and stories straight from the kitchen. 🥕</p>
+
+    {{ $blogPages := where .Site.RegularPages "Section" "blog" }}
+    {{ if lt (len $blogPages) 1 }}{{ $blogPages = where .Site.RegularPages "Type" "articles" }}{{ end }}
+    {{ $older := first 3 (sort $blogPages "Date" "desc") }}
+
+    {{ $left  := first 2 $older }}
+    {{ $right := after 2 $older }}
+
+    <section class="blog-older">
+      <div class="card20-column">
+        {{ range $left }}
+          {{ partial "list-item-blog.html" (dict "ctx" . "IsHome" false) }}
+        {{ end }}
+      </div>
+      <div class="card20-column">
+        {{ range $right }}
+          {{ partial "list-item-blog.html" (dict "ctx" . "IsHome" false) }}
+        {{ end }}
+
+            <div class="card20 card100 card200">
+              <a href="/blog">
+                <div class="card20-top card200-top">
+                  <span>List All Articles 🥑</span>
+                </div>
+              </a>
+                <div class="card20-text card200-text">
+                  <a href="/blog">→</a>
+                </div>
+            </div>
+
+      </div>
+    </section>
+
+</section>
 
 </main>
 
-{{ partial "paginator" . }}
+{{ partial "cta-contact" . }}
 
 {{ partial "footer" . }}

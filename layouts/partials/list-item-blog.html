@@ -1,0 +1,84 @@
+{{ $isFeatured := .IsHome }}
+{{ $page := .ctx }}
+
+{{ $lowerTags := apply $page.Params.tags "lower" "." }}
+{{ $hasSeries := gt (len (intersect $lowerTags (slice "series"))) 0 }}
+
+{{/* Compute a stable index that continues across pages */}}
+{{ $index := .index | default 0 }}
+{{ $p := .paginator | default nil }}
+{{ if $p }}
+  {{ $index = add (mul (sub $p.PageNumber 1) $p.PageSize) $index }}
+{{ else }}
+  {{/* Fallback: compute global index by sorting all blog posts desc and finding this page */}}
+  {{ $allBlog := sort (where $page.Site.RegularPages "Section" "blog") "Date" "desc" }}
+  {{ $found := -1 }}
+  {{ range $i, $pg := $allBlog }}
+    {{ if eq $pg.RelPermalink $page.RelPermalink }}
+      {{ $found = $i }}
+    {{ end }}
+  {{ end }}
+  {{ if ge $found 0 }}
+    {{ $index = $found }}
+  {{ end }}
+{{ end }}
+
+{{ $page.Scratch.Set "link" $page.RelPermalink }}
+{{ with $page.Params.link }} {{ $page.Scratch.Set "link" . }} {{ end }}
+
+{{ $page.Date.Format ($page.Site.Params.dateFormat | default "January 2, 2016") | $page.Scratch.Set "subtitle" }}
+{{ with $page.Description }} {{ $page.Scratch.Set "subtitle" . }} {{ end }}
+
+{{ $link := $page.Scratch.Get "link" }}
+
+{{ if $isFeatured }}
+
+  <div class="card30">
+    <div class="card-badges">
+      <span class="card-number">{{ add $index 1 }}</span>
+      {{ if $hasSeries }}<span class="card-number card-badge-series" title="Series">✨</span>{{ end }}
+    </div>
+      <a href="{{ $link }}" class="">
+          {{ with $page.Params.preview_image }}
+          <div class="card30-top-wrap">
+              <div class="card30-top">
+                  <img src="{{ . }}" alt="">
+              </div>
+          </div>
+          {{ end }}
+      </a>
+      <div class="card20-text">
+          {{ with index $page.Params.tags 0 }}
+          <span class="card20-category">
+              <a href="{{ "/topics/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+          </span>
+          {{ end }}
+          <h3><a href="{{ $link }}">{{ $page.Title }}</a></h3>
+          <div class="card20-meta">BY {{ $page.Params.Author }} {{ $page.Date.Format "02.01.2006" }}</div>
+      </div>
+  </div>
+
+{{ else }}
+<div class="card20">
+  <div class="card-badges">
+    <span class="card-number">{{ add $index 1 }}</span>
+    {{ if $hasSeries }}<span class="card-number card-badge-series" title="Series">✨</span>{{ end }}
+  </div>
+  <a href="{{ $link }}" class="">
+      {{ with $page.Params.preview_image }}
+      <div class="card20-top">
+          <img src="{{ . }}" alt="">
+      </div>
+      {{ end }}
+  </a>
+  <div class="card20-text">
+      {{ with index $page.Params.tags 0 }}
+      <span class="card20-category">
+          <a href="{{ "/topics/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+      </span>
+      {{ end }}
+      <h3><a href="{{ $link }}">{{ $page.Title }}</a></h3>
+      <div class="card20-meta">BY {{ $page.Params.Author }} {{ $page.Date.Format "02.01.2006" }}</div>
+  </div>
+</div>
+{{ end }}

@@ -1,36 +1,27 @@
 ---
-title: "CMCO exhibition wall"
+title: "8-Meter-Long Textile Exhibition Wall for Crane Supplier CMCO"
 date: 2019-10-23
-tags: ["print design", "3D visualisation"]
+description: "Large-format modular wall design and visual production for a logistics equipment company."
+tags: ["print design", "3d-visualisation"]
 draft: false
-preview_image: /images/preview/preview-8.jpg
+preview_image: "/images/preview/preview-8.jpg"
+header_image: "/images/preview/preview-8.jpg"
+seotags: ["2019", "CMCO", "Textile Wall", "Exhibition"]
+sections:
+  - image: "/images/print-design-3d-visualisation-cmco-wall/contentprint-design-3d-visualisation-cmco-wall-1.jpg"
+    label: "2D Graphic view"
+  - image: "/images/print-design-3d-visualisation-cmco-wall/contentprint-design-3d-visualisation-cmco-wall-2.jpg"
+    label: "Quick 3D render shot"
 ---
 
+### Project Overview
 
+A rush project for CMCO, a supplier of lifting and motion control products. The goal was to deliver a strong visual presence for an internal event using [modular textile wall system](https://t3works.sk).
 
-<div class="col-adapt-single col">
+### Visual Production
 
-<img class="my-2" src = "/images/print-design-3d-visualisation-cmco-wall/contentprint-design-3d-visualisation-cmco-wall-1.jpg">
+The visual layout was designed to span an 8-meter-wide surface, printed on tensioned textile and assembled from modular frame segments. The 3D visualizations helped the client approve the concept rapidly before going into production.
 
-<img class="my-2" src = "/images/print-design-3d-visualisation-cmco-wall/contentprint-design-3d-visualisation-cmco-wall-2.jpg">
+### The Result
 
-</div>
-
-
-<div class="col-adapt-single col" style="margin-bottom: 5rem !important;">
-
-	
-**Project: Exhibition modular wall | Client: CMCO - COLUMBUS McKINNON | Year: 2019**
-
-<br>
-
-**Description:**
-<br>
-Unexpected "Hurry up" task for women's beauty days event at client's clinic.
-
-
-
-
-</div>
-
-
+Even on a tight timeline, the final output maintained high fidelity and professional presence. The visual covered the full span cleanly and matched the brand’s engineering precision and scale.

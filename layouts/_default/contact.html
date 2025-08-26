@@ -1,0 +1,74 @@
+{{ partial "header" . }}
+
+<main>
+
+    <section class="header header-contact">
+        <div class="header-content header-contact">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <button class="header-cta-button header-cta-button-contact" onclick="document.querySelector('.contact-card-container')?.scrollIntoView({ behavior: 'smooth' });">Let’s connect ↓</button>
+        </div>
+        <div class="header-illustration">
+            {{ with .Params.header_image }}
+            <img src="{{ . }}" alt="{{ $.Title }} header image" />
+            {{ end }}
+        </div>
+    </section>
+
+
+    {{ partial "tag-list-home" . }}
+
+
+    <section class="contact-card-container">
+    <div class="contact-card-grid">
+      <div class="contact-card-info">
+        <img src="/svg/contact-storm.svg" alt="Contact Storm" />
+      </div>
+      <div class="contact-card-info">
+        <div class="contact-card-info-segment">
+             <div class="contact-row">
+                 <div class="contact-label">E-MAIL</div>
+            </div>
+            <div class="contact-row">
+                <a href="mailto:hello@rausr.com?subject=Request%20from%20contact%20page%20%7C%20rausr.com" class="contact-value">hello@rausr.com</a>
+                <div class="contact-arrow">→</div>
+            </div>
+        </div>
+            <div class="contact-card-info-segment">
+                <div class="contact-row">
+                    <div class="contact-label">WHATSAPP</div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-value">+421 910 160 251</div>
+                    <a href="tel:+421910160251" class="contact-arrow">→</a>
+                </div>
+            </div>
+        <div class="contact-card-info-segment">
+            <div class="contact-row contact-social">
+                <div class="contact-label">SOCIALS</div>
+            </div>
+            {{ if .Site.Menus.icon }}
+            <div class="contact-row contact-social-buttons">
+            {{ range sort .Site.Menus.icon }}
+                <a href="{{ .URL }}" target="_blank" class="social-button">
+                    <span class="icon"><i class="fab {{ .Name }}"></i></span> {{ .Title }} <span class="arrow">→</span>
+                </a>
+            {{ end }}
+            </div>
+            {{ end }}
+        </div>
+      </div>
+    </div>
+    </section>
+
+</main>
+
+{{ partial "contact-form" . }}
+
+
+{{ partial "featured-content.html" . }}
+
+
+{{ partial "footer" . }}

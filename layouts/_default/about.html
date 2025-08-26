@@ -1,0 +1,48 @@
+{{ partial "header" . }}
+
+<main>
+
+    <section class="header header-about">
+        <div class="header-content header-about">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <button class="header-cta-button header-cta-button-about" onclick="document.querySelector('.container-tag-list')?.scrollIntoView({ behavior: 'smooth' });">It Starts Here ↓</button>
+        </div>
+        <div class="header-illustration">
+            {{ with .Params.header_image }}
+            <img src="{{ . }}" alt="{{ $.Title }} header image" />
+            {{ end }}
+        </div>
+    </section>
+
+
+    {{ partial "tag-list-home" . }}
+
+
+    <section class="about-tags-button-list">
+      <h2>{{ .Params.TitleAboutDeliver }}</h2>
+      <ul class="tag-list">
+        {{ $allTags := slice }}
+        {{ range where .Site.RegularPages "Section" "works" }}
+          {{ range .Params.tags }}
+            {{ $allTags = $allTags | append . }}
+          {{ end }}
+        {{ end }}
+        {{ range $index, $tag := ($allTags | uniq | sort) }}
+          {{ $label := partial "tag-label.html" $tag }}
+          <li><a href="/tags/{{ urlize $tag }}" class="tag-link">{{ $label }}</a></li>
+        {{ end }}
+      </ul>
+    </section>
+
+</main>
+
+{{ partial "contact-form" . }}
+
+
+{{ partial "featured-content.html" . }}
+
+
+{{ partial "footer" . }}

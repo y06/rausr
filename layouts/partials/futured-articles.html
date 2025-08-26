@@ -1,0 +1,36 @@
+<section class="more-works more-articles">
+    <h2>Futured Articles</h2>
+        <div class="more-works-front">
+                <div class="featured-grid more-works-grid">
+                    {{ $blogs := where .Site.RegularPages "Type" "blog" }}
+                    {{ $filteredBlogs := where $blogs "Permalink" "ne" .Permalink }}
+                    {{ range first 4 (shuffle $filteredBlogs) }}
+                        {{ .Scratch.Set "link" .RelPermalink }}
+                        <div class="card1 card4">
+                            <a href="{{ .Scratch.Get "link" }}" class="">
+                                {{ with .Params.preview_image }}
+                                <div class="card1-top">
+                                    <img src="{{ . }}" alt="">
+                                </div>
+                                {{ end }}
+                            </a>
+                            
+                            <div class="card2-bottom card3-bottom">
+                                {{ with index .Params.tags 0 }}
+                                <span class="card1-category">
+                                    <a href="{{ "/topic/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                </span>
+                                {{ end }}
+
+                                {{ $link := .Scratch.Get "link" }}
+                                <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
+                                {{ with index .Params.tags 0 }}
+                                <a href="{{ $link }}" class="card2-cta card3-cta">read article →</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            <div class="more-works-back"></div>
+        </div>
+</section>

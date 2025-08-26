@@ -1,0 +1,37 @@
+<section class="more-works">
+    <h2>More Works</h2>
+        <div class="more-works-front">
+                <div class="featured-grid more-works-grid">
+                    {{ $allWorks := where .Site.RegularPages "Type" "works" }}
+                    {{ $filteredWorks := where $allWorks "Permalink" "ne" .Permalink }}
+                    {{ $sortedWorks := sort $filteredWorks "Date" "desc" }}
+                    {{ range first 4 (shuffle (first 12 $sortedWorks)) }}
+                        {{ .Scratch.Set "link" .RelPermalink }}
+                        <div class="card1 card3">
+                            <a href="{{ .Scratch.Get "link" }}" class="">
+                                {{ with .Params.preview_image }}
+                                <div class="card1-top">
+                                    <img src="{{ . }}" alt="">
+                                </div>
+                                {{ end }}
+                            </a>
+                            
+                            <div class="card2-bottom card3-bottom">
+                                {{ with index .Params.tags 0 }}
+                                <span class="card1-category">
+                                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                </span>
+                                {{ end }}
+
+                                {{ $link := .Scratch.Get "link" }}
+                                <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
+                                {{ with index .Params.tags 0 }}
+                                <a href="{{ $link }}" class="card2-cta card3-cta">SHOW WORK →</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            <div class="more-works-back"></div>
+        </div>
+</section>

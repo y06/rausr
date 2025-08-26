@@ -1,0 +1,30 @@
+
+            
+    <div class="card1">
+        <a href="{{ .Scratch.Get "link" }}" class="">
+            {{ with .Params.preview_image }}
+            <div class="card1-top">
+
+                    <img src="{{ . }}" alt="">
+
+            </div>
+
+        </a>
+            {{ end }}
+        
+            <div class="card1-bottom">
+                {{ with index .Params.tags 0 }}
+                <span class="card1-category">
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                </span>
+                {{ end }}
+
+                {{ $link := $.Scratch.Get "link" }}
+                <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
+
+                {{ with index .Params.tags 0 }}
+                <a href="{{ $link }}" class="card1-cta">SHOW WORK →</a>
+            </div>
+                {{ end }}
+            
+    </div>

@@ -1,39 +1,31 @@
 ---
-title: "Green Hills of Africa"
+title: "Green Hills of Africa – Book Cover Exhibition"
 date: 2020-06-01
-tags: ["editorial design", "illustration"]
+description: "A contemporary redesign of Ernest Hemingway’s non-fiction work for an editorial design exhibition."
+tags: ["editorial design", "illustration", "package design"]
 draft: false
-preview_image: /images/preview/preview-19.jpg
+preview_image: "/images/preview/preview-19.jpg"
+header_image: "/images/preview/preview-19.jpg"
+seotags: ["2020", "Book Cover", "Hemingway", "Editorial Design"]
+sections:
+  - image: "/images/editorial-design-book-cover-ernest-hemingway-ghoa/content-editorial-design-eh-ghoa-1.jpg"
+    label: "Front Cover – Green Hills Concept"
+  - image: "/images/editorial-design-book-cover-ernest-hemingway-ghoa/content-editorial-design-eh-ghoa-2.jpg"
+    label: "Back Cover & Spine"
 ---
 
+### Project Overview
 
+Ernest Hemingway’s “Green Hills of Africa” is a reflective work of non-fiction blending travel writing, memoir, and poetic description. The book invites readers into East Africa’s landscapes and Hemingway’s mind—his love for hunting, literature, and the struggle of self-worth. This project reimagines its visual identity for a contemporary audience, with a tone that respects its introspective and rugged character.
 
-<div class="col-adapt-single col">
+### Design Intent
 
+The cover features a muted color palette and blocky silhouette forms, reminiscent of the East African terrain. The green tones evoke vitality and wilderness without leaning into clichés. A low sun crests over hills, emphasizing Hemingway’s meditative pacing and stillness. The typography is modern and deliberately sparse, allowing the composition to breathe while grounding the design in seriousness.
 
-<div class="row-adapt-double row" style="margin: 0 !important;">
-<div class="col mr-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/editorial-design-book-cover-ernest-hemingway-ghoa/content-editorial-design-eh-ghoa-1.jpg">
-</div>
-<div class="col ml-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/editorial-design-book-cover-ernest-hemingway-ghoa/content-editorial-design-eh-ghoa-2.jpg">
-</div>
-</div>
+{{< quote >}}
+I had never felt the same about anything that I had written. – Hemingway writes within the book, and this sentiment helped guide a cover that feels deeply personal and rooted in place.
+{{< /quote >}}
 
+### The Result
 
-</div>
-
-
-<div class="col-adapt-single col" style="margin-bottom: 5rem !important;">
-
-	
-**Project: Ernest Hemingway - Green Hills of Africa book cover | Client: rausr.com | Year: 2020**
-
-<br>
-
-**Description:**
-<br>
-My actual edition of this great Hemingway's book is dressed in some senile cover. That's why I decided to create a fresh modern cover that reflects every important part of whole piece.
-</div>
-
-
+This redesign interprets the narrative not just as travelogue, but as a study of solitude, masculinity, and the search for beauty. It bridges classic literature with minimalist modernism, offering a tactile, elegant presentation suitable for bookshop shelves or gallery walls.

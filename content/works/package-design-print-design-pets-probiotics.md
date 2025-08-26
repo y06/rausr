@@ -1,37 +1,36 @@
 ---
-title: "Ibelfaren Pets"
+title: "Ibelfaren Pets – Design for Small Bottle and Box Packaging"
+description: "Compact and trustworthy packaging design for pet probiotics, combining minimal graphics with emotional clarity."
 date: 2020-10-07
 tags: ["package design", "print design"]
 draft: false
-noindex: false
-preview_image: /images/preview/preview-18.jpg
+preview_image: "/images/package-design-print-design-ibelfaren-pets-probiotics/content-package-design-print-design-ibelfaren-pets-probiotics-preview.jpg"
+header_image: "/images/package-design-print-design-ibelfaren-pets-probiotics/content-package-design-print-design-ibelfaren-pets-probiotics-preview.jpg"
+seotags: ["2020", "Pets", "Probiotics", "Packaging"]
+sections:
+  - image: "/images/package-design-print-design-ibelfaren-pets-probiotics/content-package-design-print-design-ibelfaren-pets-probiotics-1.jpg"
+    label: "Packaging – Bottle"
+  - image: "/images/package-design-print-design-ibelfaren-pets-probiotics/content-package-design-print-design-ibelfaren-pets-probiotics-2.jpg"
+    label: "Packaging – Box"
+    subimages:
+          - image: "/images/package-design-print-design-ibelfaren-pets-probiotics/content-package-design-print-design-ibelfaren-pets-probiotics-3.jpg"
+            label: "2D graphic"
+          - image: "/images/package-design-print-design-ibelfaren-pets-probiotics/content-package-design-print-design-ibelfaren-pets-probiotics-4.jpg"
+            label: "2D graphic"
 ---
 
+### Project Overview
 
+Packaging design for a new line of pet food supplements under a Belgian sub-brand of plant-based health solutions. The goal was to create compact, attractive packaging that communicates trust and care for pets' well-being.
 
-<div class="col-adapt-single col">
+### Client Brief
 
+Design a badge-based label with minimal graphics that clearly reflects the product’s function. The label includes a simple pictogram, the sub-brand name, a short descriptor, and key benefits such as health, digestion, and vitality—highlighted with a heart symbol that anchors the whole composition.
 
-<img class="my-2" src = "/images/package-design-print-design-ibelfaren-pets-probiotics/content-package-design-print-design-ibelfaren-pets-probiotics-1.jpg">
+### The Result
 
-<img class="my-2" src = "/images/package-design-print-design-ibelfaren-pets-probiotics/content-package-design-print-design-ibelfaren-pets-probiotics-2.jpg">
+{{< quote >}}
+This compact packaging combines a clean, pharmaceutical look with emotional warmth.
+{{< /quote >}}
 
-
-
-</div>
-
-
-<div class="col-adapt-single col" style="margin-bottom: 5rem !important;">
-
-	
-**Project: New pet food supplements brand - Packaging samples | Client: Ibelfaren Pets | Year: 2020**
-
-<br>
-
-**Description:**
-<br>
-Packaging samples for sub brand of Belgium healthy plant growth solutions. Ibelfaren pets and their probiotic tonikum increase the quality of your pets life. We created a badge from simple illustration (pictogram), sub brand name and short description of probiotic product. Few health targeted words above the badge with heart in the middle - which is a significant point of the whole supplement legacy.
-
-</div>
-
-
+Clean and minimal, this label features a circular badge with pet icons and the brand name, evoking care and trust. Keywords like STRONG, LOVE, HEALTH, and NATURAL clearly convey product benefits, supported by a heart symbol for emotional appeal. The yellow cap adds freshness, while “Made in Belgium” reinforces authenticity.

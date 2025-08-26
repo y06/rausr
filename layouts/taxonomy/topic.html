@@ -1,0 +1,81 @@
+{{ partial "header" . }}
+
+<main>
+
+    {{ $tag := lower (or .Params.tag .Title) }}
+    {{ $filteredPages := where .Site.RegularPages "Section" "blog" }}
+    {{ $filteredPages = where $filteredPages "Params.tags" "intersect" (slice $tag) }}
+    {{ $paginator := .Paginate $filteredPages 8 }}
+
+    <section class="header" style="background-color: {{ .Params.header_color }}">
+        <div class="header-content header-contact header-topic">
+            <div class="h1container">
+            {{ $pageNum := $paginator.PageNumber }}
+            {{ $totalPages := $paginator.TotalPages }}
+            <h1>{{ .Title }}</h1>
+            {{/* Showing range and total articles counters */}}
+            {{ $perPage := 8 }}
+            {{ $startIndex := add 1 (mul (sub $paginator.PageNumber 1) $perPage) }}
+            {{ $proposedEnd := add $startIndex (sub $perPage 1) }}
+            {{ $totalArticles := $paginator.TotalNumberOfElements }}
+            {{ $endIndex := cond (gt $proposedEnd $totalArticles) $totalArticles $proposedEnd }}
+          <div class="counter">
+              <span class="word showinglist showinglisttag">showing</span>
+              <div class="number total showinglisttag" aria-label="Showing articles {{ $startIndex }} to {{ $endIndex }}">{{ $startIndex }}–{{ $endIndex }}</div>
+          </div>
+          <div class="counter">
+              <span class="word showinglisttag">total</span>
+              <div class="number total showinglisttag" aria-label="{{ $totalArticles }} articles">{{ $totalArticles }}</div>
+          </div>
+        </div>
+            {{ with .Params.description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <button class="header-cta-button header-cta-button-contact" onclick="document.querySelector('.card-container')?.scrollIntoView({ behavior: 'smooth' });">Show me something ↓</button>
+        </div>
+        <div class="header-illustration">
+            {{ with .Params.header_image }}
+            <img src="{{ . }}" alt="{{ $.Title }} header image" />
+            {{ end }}
+        </div>
+    </section>
+
+    <div class="container-tag-list">
+        <button class="tag-scroll left">←</button>
+        <div class="tag-list-wrapper">
+            <ul class="tag-list">
+                <li><a href="/" class="tag-link">← Home</a></li>
+                <li><a href="/blog/" class="tag-link">← Articles</a></li>
+                <li><span class="tag-link active">{{ .Title }}</span></li>
+            </ul>
+        </div>
+        <button class="tag-scroll right">→</button>
+    </div>
+
+
+    <section class="blog-older">
+      <div class="card20-column">
+        {{ range $index, $item := $paginator.Pages }}
+          {{ if or (eq (mod $index 2) 0) }}
+            {{ partial "list-item-blog.html" (dict "ctx" $item "IsHome" false "index" $index "paginator" $paginator) }}
+          {{ end }}
+        {{ end }}
+      </div>
+      <div class="card20-column">
+        {{ range $index, $item := $paginator.Pages }}
+          {{ if eq (mod $index 2) 1 }}
+            {{ partial "list-item-blog.html" (dict "ctx" $item "IsHome" false "index" $index "paginator" $paginator) }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </section>
+
+</main>
+
+{{ partial "paginator" . }}
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
+{{ partial "footer" . }}

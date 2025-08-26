@@ -1,80 +1,51 @@
 ---
-title: "MA Company Visual 2021"
+title: "Madad Advert Company Visual 2021"
 date: 2021-12-25
-description: "simple easy-to-edit design based on typography and colorful geometric shapes and patterns."
-tags: ["branding", "illustration"]
+description: "Simple easy-to-edit design based on typography and colorful geometric shapes and patterns."
+tags: ["branding", "illustration", "exhibition stands design"]
 draft: false
-preview_image: /images/preview/preview-23.jpg
+preview_image: "/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-preview.jpg"
+header_image: "/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-preview.jpg"
+seotags: ["2021", "Company Visual", "Exhibition Design"]
+sections:
+  - image: "/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-preview.jpg"
+    label: "2D - Complete view"
+  - image: "/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-6.jpg"
+    label: "Print - Business card"
+    subimages:
+        - image: "/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-3.jpg"
+          label: "Render - Quick shot"
+        - image: "/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-4.jpg"
+          label: "Digital - Banner example"
+        - image: "/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-5.jpg"
+          label: "Digital - Banner example"
+        - image: "/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-2.jpg"
+          label: "Photo - LED Wall"
+        - image: "/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-7.jpg"
+          label: "Photo - Exhibition"
+        - image: "/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-8.jpg"
+          label: "Photo - Showroom"
 ---
 
+### Project Overview
+
+Almost each year brings a new wave of product launches, exhibitions, and public-facing events—making it essential to update the visual identity with a fresh, relevant direction.
 
 
-<div class="col-adapt-single col">
+This year’s concept builds on the foundation of the existing design system, maintaining a sense of continuity while introducing refined elements and visual clarity. The updated approach needed to strike a balance between familiarity and innovation, working seamlessly across formats and scales.
 
-<img class="my-2" src="/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-1.jpg">
+The result is a cohesive visual language tailored for both offline and online communication, from print materials and exhibition graphics to digital platforms and social media.
 
-</div>
+### Client Brief
 
+The client requested a visual identity that was simple, flexible, and easy to maintain internally. Typography was to play a leading role, complemented by a vibrant system of geometric shapes and patterns to bring energy and character to the brand.
 
-<div class="col-adapt-single col">
+The solution needed to be adaptable for a wide variety of applications.
 
-<img class="my-2" src="/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-2.jpg">
+### The Result
 
-</div>
+The final visual identity delivers a refreshed yet familiar look—one that respects the brand’s existing design while introducing a more vibrant and contemporary voice. Centered around clean typography and playful geometric compositions, the system is flexible enough to support a broad range of content across print and digital media.
 
-
-<div class="col-adapt-single col">
-
-<img class="my-2" src="/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-3.jpg">
-
-</div>
-
-<div class="col-adapt-single col">
-
-<img class="my-2" src="/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-4.jpg">
-
-</div>
-
-<div class="col-adapt-single col">
-
-<img class="my-2" src="/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-5.jpg">
-
-</div>
-
-
-<div class="col-adapt-single col">
-
-<img class="my-2" src="/images/mad-advert-company-visual-2021/mad-advert-company-visual-2021-6.jpg">
-
-</div>
-
-
-
-
-<div class="col-adapt-single col" style="margin-bottom: 5rem !important;">
-
-	
-**Project: MA Company Visual for the year 2021 | Client: Mad. Advert. Company | Year: 2021-2022**
-
-<br>
-
-**Description:**
-<br>
-
-New product collection, few exhibitions and events needs some fresh design from year to year. New visual must be coresponding with oldone, but not so much - it must be well balanced. Design was prepared for offline and online comunication, also.<br><br>
-Main request was a simple easy-to-edit design based on typography and colorful geometric shapes and patterns.
-
-<br><br><br>
-
-**Labels:**
-<br>
-
-**1.** Print visuals - Big LED Wall, LED Counter & Mini Backlite Counter<br>
-**2.** Photos from the exhibition & showroom<br>
-**3.** Quick render shot for better imagination<br>
-**4.** Digital - Website homepage banner example 1<br>
-**5.** Digital - Website homepage banner example 2<br>
-
-
-</div>
-
+{{< quote >}}
+It allows for consistency without rigidity, giving the client the tools to maintain and evolve the identity in-house with ease.
+{{< /quote >}}

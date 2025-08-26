@@ -1,0 +1,112 @@
+{{ partial "header" . }}
+
+<main>
+
+    <section class="header header-article">
+        <div class="header-content header-article">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <button class="header-cta-button header-cta-button-contact header-cta-button-about" onclick="document.querySelector('.article-container')?.scrollIntoView({ behavior: 'smooth' });">Let’s read ↓</button>
+        </div>
+        <div class="header-illustration header-image">
+            {{ with .Params.header_image }}
+            <img src="{{ . }}" alt="{{ $.Title }} header image" />
+            {{ end }}
+        </div>
+    </section>
+
+
+    <div class="container-tag-list">
+        <button class="tag-scroll left">←</button>
+        <div class="tag-list-wrapper">
+            <ul class="tag-list">
+                <li><a href="/blog/" class="tag-link">← Articles</a></li>
+                {{ with index .Params.tags 0 }}
+                    <li><a href="/topics/{{ urlize . }}" class="tag-link">← {{ partial "tag-label.html" . }}</a></li>
+                {{ end }}
+                <li><span class="tag-link active">{{ .Title }}</span></li>
+            </ul>
+        </div>
+        <button class="tag-scroll right">→</button>
+    </div>
+
+</main>
+
+
+<section class="article-container">
+  <div class="article-left-column">
+    <div class="article-left-column-top">
+      {{ $re := `(?m)^## (.+)` }}
+      {{ $matches := findRE $re .RawContent }}
+      {{ if gt (len $matches) 0 }}
+      <h2>{{ replaceRE `(?m)^## ` "" (index $matches 0) }}</h2>
+      {{ end }}
+      <div class="card20-meta">
+      BY {{ .Params.author }} {{ .Date.Format "02.01.2006" }}
+      </div>
+    </div>
+      <div class="content-section-column content-section-column-right">
+      {{ $re := `(?m)^### (.+)` }}
+      {{ $matches := findRE $re .RawContent }}
+      {{ if gt (len $matches) 0 }}
+        <div class="section-tags section-tags-article">
+          {{ range $matches }}
+            {{ $clean := replaceRE `(?m)^### ` "" . }}
+            {{ $anchor := anchorize $clean }}
+            <a class="tag" href="#{{ $anchor }}">{{ $clean }} ↓</a>
+          {{ end }}
+        </div>
+      {{ end }}
+      {{ $re := `(?m)^## (.+)` }}
+      {{ $matches := findRE $re .RawContent }}
+      {{ if gt (len $matches) 0 }}
+        {{ $firstH2 := index $matches 0 | replaceRE `(?m)^## ` "" }}
+        {{ $h2anchor := printf "<h2 id=\"%s\">%s</h2>" (anchorize $firstH2) $firstH2 }}
+        {{ $clean := replace .Content $h2anchor "" }}
+        {{ $clean | safeHTML }}
+      {{ else }}
+        {{ .Content | safeHTML }}
+      {{ end }}
+      </div>
+
+      <div class="content-section-column content-section-column-right">
+        
+      {{ with .Params.source }}
+      <div class="section-tags"><div class="card20-meta card20-thanks">Sources:</div>
+        {{ range . }}
+          {{ $u := urls.Parse . }}
+          <a class="tag sources" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ replace (replace $u.Host "www." "" ) ":" "" }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+        <div class="card20-meta card20-thanks">
+          {{ site.Params.blogThanksText }}
+        </div>
+  </div>
+
+  <div class="article-right-column">
+    <div class="article-right-cta-bottom">
+          {{ partial "cta-articles.html" . }}
+      <span>→</span>
+    </div>
+    <div class="article-right-featured">
+      {{ partial "futured-articles.html" . }}
+    </div>
+  </div>
+
+</section>
+
+
+{{ partial "nextandprevious.html" . }}
+
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
+{{ partial "footer" . }}
+

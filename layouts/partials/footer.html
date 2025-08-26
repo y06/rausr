@@ -1,47 +1,154 @@
 <footer>
 
-	<nav class="navbar navbar-expand-lg mt-3 mb-2">
-            <a class="navbar-brand mr-5 mx-2 my-3" href="/"><img src="/svg/logo-foot.svg" width="71" height="17" style="margin-top: -6px;" alt=""></a>
-            <div class="collapse navbar-collapse col col-md-auto" id="navbarSupportedContent">
+	<nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand navbar-brand-footer" href="/"><img src="/svg/logo-foot.svg" width="71" height="17" alt=""></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 {{ if .Site.Menus.main }}
-                <ul class="navbar-nav" style="font-weight: 500;">
+                <ul class="navbar-nav">
                 {{ range sort .Site.Menus.main }}
-                    <li class="nav-item mx-3 my-3">
+                    <li class="nav-item">
                     <a href="{{ .URL }}">{{ .Name }}</a>
                     </li>
                     {{ end }}
                 </ul>
                 {{ end }}
             </div>
-			<div class="navbar-text col col-md-auto mr-5 d-flex align-content-end">
+			<div class="navbar-text">
                 <a href="mailto:hello@rausr.com">
                 	<span class="foot-text">hello@rausr.com</span>
                 </a>
                 <!--googleoff: all-->
-                	<span class="foot-text ml-4">+421 910 160 251</span>
+                	<a href="tel:+421910160251" class="foot-text">+421 910 160 251</a>
                 <!--googleon: all-->
+                <a href="/privacy-policy" class="foot-text">Privacy Policy</a>
 			</div>
-			<div class="collapse navbar-collapse col col-lg-1 justify-content-end" id="navbarSupportedContent">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
                 {{ if .Site.Menus.icon }}
-                <ul class="navbar-nav my-lg-0">
+                <ul class="nav-socials">
                 {{ range sort .Site.Menus.icon }}
-                    <li class="nav-icon ml-4 mr-0 my-2" style="font-size: 125%"><a href="{{ .URL }}" target="_blank"><i class="fab {{ .Name }}"></i></a></li>
+                    <li class="nav-icon"><a href="{{ .URL }}" target="_blank"><i class="fab {{ .Name }}"></i></a></li>
                     {{ end }}
                 </ul>
                 {{ end }}
             </div>
 	</nav>
 
-	<nav class="navbar navbar-expand-lg mt-1 d-flex flex-row-reverse">
-		<div class="copyright col col-md-auto">
-			<span>© 2024 rausr.com</span>
-		</div>
-	</nav>
+
+<div class="footer-logo">
+    <a href="#" class="scroll-top"><img src="/svg/rugdgroup-1c.svg" width="54px" alt=""></a>
 </div>
 
+<div class="copyright">
+    <span>© {{ now.Year }} rausr.com</span>
+</div>
+
+</div>
 
 </footer>
-       
+
+<!-- Add script.js - smooth navigations transitions and so on -->
+<script src="{{ "js/script.js" | relURL }}"></script>
+
+<!-- GLighrbox script activating -->
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+
+<!-- Hamburger menu toggle -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("menuToggle");
+  const icon = document.getElementById("menuIcon");
+  const menu = document.getElementById("navbarSupportedContent");
+  const pageBlur = document.getElementById("page-blur");
+
+  // Toggle icon and menu when clicking the hamburger
+  toggle.addEventListener("click", function () {
+    const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+    icon.src = isExpanded ? "/svg/hamb.svg" : "/svg/hamb-open.svg";
+
+    if (menu.classList.contains("show")) {
+      pageBlur.classList.remove("blur-active");
+    } else {
+      pageBlur.classList.add("blur-active");
+    }
+  });
+
+  // Observe class changes on the menu
+  const observer = new MutationObserver(() => {
+    const isVisible = menu.classList.contains('show');
+    icon.src = isVisible ? "/svg/hamb-open.svg" : "/svg/hamb.svg";
+
+    if (isVisible) {
+      pageBlur.classList.add("blur-active");
+    } else {
+      pageBlur.classList.remove("blur-active");
+    }
+  });
+
+  observer.observe(menu, { attributes: true, attributeFilter: ['class'] });
+});
+</script>
+
+<!-- Cookie Consent script load -->
+<script src="https://cdn.jsdelivr.net/npm/orestbida/cookieconsent@3/dist/cookieconsent.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  CookieConsent.run({
+    guiOptions: {
+      consentModal: {
+        layout: "bar",          // box/cloud/bar
+        position: "bottom center",
+        flipButtons: false
+      }
+    },
+    categories: {
+      necessary: {
+        enabled: true,          // always enabled
+        readOnly: true
+      },
+      analytics: {},
+      marketing: {}
+    },
+    language: {
+      default: "en",
+      translations: {
+        en: {
+          consentModal: {
+            title: "We use cookies 🍪",
+            description: "We use necessary cookies to make our site work. Analytics and marketing cookies help us improve your experience.",
+            acceptAllBtn: "Accept all",
+            acceptNecessaryBtn: "Only necessary",
+            showPreferencesBtn: "Manage preferences"
+          },
+          preferencesModal: {
+            title: "Cookie preferences",
+            savePreferencesBtn: "Save preferences",
+            sections: [
+              {
+                title: "Necessary cookies",
+                description: "Always enabled for the site to function."
+              },
+              {
+                title: "Analytics cookies",
+                description: "Help us understand how you use our site."
+              },
+              {
+                title: "Marketing cookies",
+                description: "Used for personalized advertising."
+              }
+            ]
+          }
+        }
+      }
+    }
+  });
+});
+</script>
+
 </body>
 
 </html>

@@ -1,0 +1,56 @@
+{{ partial "header" . }}
+
+<main>
+
+    <section class="header" style="background-color: {{ .Params.header_color }}">
+        <div class="header-content">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <button class="header-cta-button" onclick="document.querySelector('.card-container')?.scrollIntoView({ behavior: 'smooth' });">Show me something ↓</button>
+        </div>
+        <div class="header-illustration">
+            {{ with .Params.header_image }}
+            <img src="{{ . }}" alt="{{ $.Title }} header image" />
+            {{ end }}
+        </div>
+    </section>
+
+    <div class="container-tag-list">
+        <button class="tag-scroll left">←</button>
+        <div class="tag-list-wrapper">
+            <ul class="tag-list">
+                <li><a href="/" class="tag-link">← Home</a></li>
+                <li><a href="/works/" class="tag-link">← Works</a></li>
+                <li><span class="tag-link active">{{ .Title }}</span></li>
+            </ul>
+        </div>
+        <button class="tag-scroll right">→</button>
+    </div>
+
+    {{ $tag := lower (or .Params.tag .Title) }}
+    {{ $filteredPages := where .Site.RegularPages "Section" "works" }}
+    {{ $filteredPages = where $filteredPages "Params.tags" "intersect" (slice $tag) }}
+
+    <!-- Note: For consistency, all tags used in front matter must be lowercase or you must lowercase them manually in content files to ensure correct filtering. -->
+
+    {{ $paginator := .Paginate $filteredPages 8 }}
+
+    <section class="card-container"> 
+        {{ range $paginator.Pages }}
+            {{ if ne .Type "singles" }}
+                {{ partial "list-item-works" . }}
+            {{ end }}
+        {{ end }}
+    </section>
+
+</main>
+
+{{ partial "paginator" . }}
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
+{{ partial "footer" . }}

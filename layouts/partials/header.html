@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
     <head>
-        {{ partial "head-open" . }}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
         <title>{{ .Title }} | rausr</title>
+
+        {{ partial "opengraph.html" . }}
         
         {{ partial "favicon" . }}
         
@@ -15,6 +16,14 @@
         <link href="{{ .RelPermalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
         <link href="{{ .RelPermalink }}" rel="feed" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
         {{ end }}
+
+        <!-- Cookie Consent orestbida load -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/orestbida/cookieconsent@3/dist/cookieconsent.css">
+
+        <!-- GLightbox load -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+        
 
         {{ if .Site.Config.Services.GoogleAnalytics.ID }}
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -38,40 +47,71 @@
     <body>
         {{ partial "body-open" . }}
 
-    <div class="container-fluid" style="padding: 0 !important;">
+    <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg mt-3 mb-5">
-            <a class="navbar-brand mr-5 ml-2 my-3" href="/"><img src="/svg/logo-solo.svg" width="80px" height="23px" style="margin-top: -6px;" alt=""></a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="/svg/ham.svg" width="20px" height="17px">
-            </button>
+        <nav class="navbar navbar-expand-lg">
             
-            <div class="navbar-text ml-2 mr-3" data-toggle="collapse" data-target="#search" id="search-display">
-                <span style="color: #9693A3; font-weight: 400;">random user oriented graphic design</span>
+            <a class="navbar-brand" href="/"><img src="/svg/logo-solo.svg" width="80px" height="23px" alt=""></a>
+
+            <div class="navbar-people" data-toggle="collapse">
+                <a href="/"><img src="/svg/rugdgroup.svg" height="20px" alt=""></a>
             </div>
 
+            <button class="navbar-toggler" type="button" id="menuToggle" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img id="menuIcon" src="/svg/hamb.svg" alt="menu icon">
+            </button>
+            
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 {{ if .Site.Menus.main }}
-                <ul class="navbar-nav mx-auto" style="font-weight: 500;">
-                {{ range sort .Site.Menus.main }}
-                    <li class="nav-item mx-4 my-3">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
+                {{/* Compute cutoff for "this week" = last 7 days */}}
+                {{ $weekCutoff := sub (now.Unix) (mul 7 86400) }}
+
+                {{/* Articles this week: prefer Section "blog", fallback to Type "articles" */}}
+                {{ $articlesPages := where $.Site.RegularPages "Section" "blog" }}
+                {{ if eq (len $articlesPages) 0 }}
+                  {{ $articlesPages = where $.Site.RegularPages "Type" "articles" }}
+                {{ end }}
+                {{ $articlesRecent := where $articlesPages "Date.Unix" "ge" $weekCutoff }}
+                {{ $articlesCount := len $articlesRecent }}
+
+                {{/* Works this week: prefer Section "works", fallback to Type "works" */}}
+                {{ $worksPages := where $.Site.RegularPages "Section" "works" }}
+                {{ if eq (len $worksPages) 0 }}
+                  {{ $worksPages = where $.Site.RegularPages "Type" "works" }}
+                {{ end }}
+                {{ $worksRecent := where $worksPages "Date.Unix" "ge" $weekCutoff }}
+                {{ $worksCount := len $worksRecent }}
+
+                <ul class="navbar-nav">
+                  {{ range sort .Site.Menus.main }}
+                    {{ $id := lower .Identifier }}
+                    {{ $name := lower .Name }}
+                    {{ $isArticles := or (eq $id "articles") (eq $name "articles") (in .URL "/blog") }}
+                    {{ $isWorks := or (eq $id "works") (eq $name "works") (in .URL "/works") }}
+                    <li class="nav-item{{ if $isArticles }} nav-item--articles{{ end }}{{ if $isWorks }} nav-item--works{{ end }}">
+                      <a href="{{ .URL }}">{{ .Name }}
+                        {{ if and $isArticles (gt $articlesCount 0) }}
+                          <span class="menu-badge menu-badge" aria-label="{{ $articlesCount }} articles this week">{{ $articlesCount }}</span>
+                        {{ end }}
+                        {{ if and $isWorks (gt $worksCount 0) }}
+                          <span class="menu-badge menu-badge-works" aria-label="{{ $worksCount }} works this week">{{ $worksCount }}</span>
+                        {{ end }}
+                      </a>
                     </li>
-                    {{ end }}
+                  {{ end }}
                 </ul>
                 {{ end }}
 
                 {{ if .Site.Menus.icon }}
-                <ul class="navbar-nav my-lg-0">
+                <ul class="nav-socials">
                 {{ range sort .Site.Menus.icon }}
-                    <li class="nav-icon ml-4 mr-2 my-3"><a href="{{ .URL }}" target="_blank"><i class="fab {{ .Name }}"></i></a></li>
+                    <li class="nav-icon"><a href="{{ .URL }}" target="_blank"><i class="fab {{ .Name }}"></i></a></li>
                     {{ end }}
                 </ul>
                 {{ end }}                
             </div>
         </nav>
 
-        <div class="mobile-headline col col-md-auto d-flex align-content-end">
-                <h1>random user oriented graphic design</h1>
-        </div>
+    </div>
+
+<div id="page-blur">

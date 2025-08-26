@@ -2,29 +2,23 @@
 
 <main>
 
-<div class="container-heading mb-5">
-	<div class="head-icon my-1">
-		<img src="/svg/head-icon.svg" width="48px" height="15px">
-	</div>
-    <h2>{{ .Title }}</h2>
-    <div class="head-arrow my-1">
-		<img src="/svg/arrow-icon.svg" width="12px" height="25px">
-	</div>
-</div>
+   
 
-<div class="row" style="margin-top: 4rem !important; margin-bottom: 6rem !important; margin-left: 0 !important; margin-right: 0 !important; padding: 0 !important;">
 
-    {{ range (.Paginator 15).Pages }}
+    {{ range (.Paginator 8).Pages }}
 
     {{ if ne .Type "singles" }}
 
-    {{ partial "list-item" . }}
-
-    {{end}}
+    {{ range $index, $el := .Pages }}
+    {{ $isFeatured := eq $index 0 }}
+    {{ partial "list-item-blog.html" (dict "ctx" $el "IsHome" $isFeatured) }}
+    {{ end }}
 
     {{ end }}
 
-</div>
+    {{ end }}
+
+
 
 </main>
 

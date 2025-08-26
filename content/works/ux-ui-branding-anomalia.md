@@ -1,51 +1,36 @@
 ---
-title: "ANOMALIA studio"
+title: "Anomalia Studio – Web Design with Experimental SVG Animations"
 date: 2020-05-22
-description: "Brand name, Logotype, UX & UI design for the small graphic studio ANOMALIA."
-tags: ["branding", "UX & UI"]
+description: "Brand name, logotype, UX & UI design for the small graphic studio ANOMALIA."
+tags: ["branding", "ux-ui"]
 draft: false
-preview_image: /images/preview/preview-3.jpg
+preview_image: "/images/preview/preview-3.jpg"
+header_image: "/images/preview/preview-3.jpg"
+seotags: ["2019", "Anomalia", "Branding", "UX"]
+sections:
+  - image: "/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-1.png"
+    label: "Logo - White version"
+  - video: "/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-2.mp4"
+    label: "Logo animation"
+    subimages:
+    - image: "/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-3.jpg"
+      label: "Subpage Layout"
+    - video: "/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-4.mp4"
+      label: "UI in Motion – Scroll Transition"
 ---
 
+### Project Overview
 
-<div class="col-adapt-single col">
+ANOMALIA was a small, independent design studio focused on experimental and creative visuals. We developed their entire brand identity—from name and logotype to web experience and interaction design.
 
+### UX & UI Approach
 
+The microsite was built as a bold visual playground that combined SVG animation, unorthodox layout, and clean typography. Motion was used not for decoration, but as a functional storytelling layer. A custom logo animation adapted dynamically depending on user scroll and device.
 
-<div class="row-adapt-double row" style="margin: 0 !important;">
-<div class="col mr-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-1.jpg">
-</div>
-<div class="col ml-2" style="padding: 0 !important;">
-<video loop autoplay playsinline class="my-2" src="/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-2.mp4"></video>
-</div>
-</div>
+### The Result
 
-<div class="row-adapt-double row" style="margin: 0 !important;">
-<div class="col mr-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-3.jpg">
-</div>
-<div class="col ml-2" style="padding: 0 !important;">
-<video loop autoplay playsinline class="my-2" src="/images/content-ux-ui-branding-anomalia/content-ux-ui-branding-anomalia-4.mp4"></video>
-</div>
-</div>
+Though the studio had a short lifespan, the identity and web presence remain a compact example of energetic, boundary-pushing design. It was a fast sprint with a sharp creative peak—and a fun ride all the way.
 
-
-</div>
-
-<div class="col-adapt-single col" style="margin-bottom: 5rem !important;">
-
-	
-**Project: ANOMALIA studio | Client: ANOMALIA | Year: 2019**
-
-<br>
-
-**Description:**
-<br>
-Brand name, Logotype, UX & UI design for the small graphic studio ANOMALIA. Sad thing about this is short project lifetime - nice quick start and even quicker end :D
-
-
-
-
-</div>
-
+{{< quote >}}
+*“Even the shortest projects can leave the clearest mark.”*
+{{< /quote >}}

@@ -1,39 +1,54 @@
 baseURL = "https://rausr.com/"
 languageCode = "en-us"
-title = "random user oriented graphic design"
+title = "Random User Recipes"
 googleAnalytics = "UA-168547988-1"
 
 [params]
-    author = "y.06"
-    description = "Rausr is bottomless repository of magnificent ideas. Rausr creates a high-speed highway between information and random user."
+    author = "rausr"
+    description = "Graphic design kitchen and creative blog – trends, techniques, and marketing insights."
     accent = "#43414C"
     showBorder = false
-    font = "Source Code Pro"
+    fonts = ["Satoshi", "Inter"]
+    paginate = 6
+    featuredContent = ["print-design-branding-madness-t3-events-2020", "genz-tiktok-design-trends", "package-design-print-design-pets-probiotics", "various-illustrations"]
+    blogThanksText = "Thanks for reading ✌️"
+    defaultImage = "/images/default-og.png"
+
+[taxonomies]
+  tag = "tags"
+  topic = "topics"
 
 [[menu.main]]
-    url = "/"
-    name = "works"
+    url = "/works/"
+    name = "Works"
     weight = 2
 
 [[menu.main]]
-    url = "/about/"
-    name = "about"
+    url = "/blog/"
+    name = "Articles"
     weight = 3
 
 [[menu.main]]
-    url = "/contact/"
-    name = "contact"
+    url = "/about/"
+    name = "About"
     weight = 4
+
+[[menu.main]]
+    url = "/contact/"
+    name = "Contact"
+    weight = 5
 
 [[menu.icon]]
     url = "https://instagram.com/rausr_com"
     name = "fa fa-instagram"
-    weight = 2
+    title = "Instagram"
+    weight = 1
 
 [[menu.icon]]
     url = "https://facebook.com/rausrdotcom"
     name = "fa fa-facebook"
-    weight = 1
+    title = "Facebook"
+    weight = 2
 
 [markup]
   [markup.goldmark]
@@ -53,3 +68,30 @@ googleAnalytics = "UA-168547988-1"
       hardWraps = false
       unsafe = true
       xhtml = false
+
+      [markup.goldmark.renderer.linkAttributes]
+        rel = "noopener"
+        target = "_blank"
+
+# Use Git commit timestamps for lastmod when available
+enableGitInfo = true
+
+[frontmatter]
+  # preferred order for lastmod
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
+
+[sitemap]
+  filename = "sitemap.xml"
+  changefreq = "weekly"   # default fallback
+  priority = 0.5          # default fallback
+
+[outputs]
+  home = ["HTML", "JSON"]   # home will output /index.json
+
+[mediaTypes."application/json"]
+  suffixes = ["json"]
+
+[outputFormats.JSON]
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = true

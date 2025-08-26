@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Respect per-page noindex if you use it
+{{- if .Site.Params.robots_extra -}}
+{{ .Site.Params.robots_extra }}
+{{- end -}}
+
+Sitemap: {{ .Site.BaseURL }}sitemap.xml

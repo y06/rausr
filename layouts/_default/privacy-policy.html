@@ -1,0 +1,56 @@
+{{ partial "header" . }}
+
+  <main>
+    
+      <section class="header header-contact header-privacy">
+        <div class="header-content header-contact header-privacy">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <button class="header-cta-button header-cta-button-contact" onclick="document.querySelector('.contact-card-container')?.scrollIntoView({ behavior: 'smooth' });">Show me more ↓</button>
+        </div>
+        <div class="header-illustration">
+            {{ with .Params.header_image }}
+            <img src="{{ . }}" alt="{{ $.Title }} header image" />
+            {{ end }}
+        </div>
+    </section>
+
+    {{ partial "tag-list-home" . }}
+
+  </main>
+
+<section class="article-container">
+  <section class="content-sections content-sections-privacy">
+      <section class="content-section-column-left">
+
+        {{/* --- TOC from all H2 headings --- */}}
+        {{ $re := `(?m)^## (.+)` }}
+        {{ $matches := findRE $re .RawContent }}
+        {{ if gt (len $matches) 0 }}
+          <nav class="section-tags section-tags-article section-toc">
+            {{ range $matches }}
+              {{ $clean := replaceRE `(?m)^## ` "" . }}
+              {{ $anchor := anchorize $clean }}
+              <a class="tag" href="#{{ $anchor }}">{{ $clean }} ↓</a>
+            {{ end }}
+          </nav>
+        {{ end }}
+      </section>
+
+    <section class="article-left-column content-section-column-right privacy-policy">
+
+      {{ .Content }}
+
+    </section>
+  </section>
+</section>
+
+
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
+{{ partial "footer" . }}

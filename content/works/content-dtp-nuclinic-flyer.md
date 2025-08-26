@@ -1,45 +1,27 @@
 ---
-title: "Nu'Clinic Promo Flyer"
-date: 2018-10-21
+title: "Nu’Clinic Plastic Surgery Clinic Promotional Flyer"
+date: 2019-10-21
+description: "Quick-turnaround flyer design for a women's beauty event at a plastic surgery clinic."
 tags: ["dtp", "photo editing"]
 draft: false
-preview_image: /images/preview/preview-1.jpg
+preview_image: "/images/preview/preview-1.jpg"
+header_image: "/images/preview/preview-1.jpg"
+seotags: ["2018", "Nu'Clinic", "Flyer Design", "Beauty Event"]
+sections:
+  - image: "/images/content-dtp-nuclinic-flyer/content-dtp-nuclinic-flyer-1.jpg"
+    label: "Front and Back cover"
+  - image: "/images/content-dtp-nuclinic-flyer/content-dtp-nuclinic-flyer-3.jpg"
+    label: "Let’s take a look inside"
 ---
 
+### Project Overview
 
+A quick-turnaround flyer created for Nu’Clinic to support a women’s beauty awareness event. The design needed to be clean, calming, and clearly highlight the clinic’s services and promotional offers.
 
-<div class="col-adapt-single col">
+### Design and Production
 
-<img class="my-2" src = "/images/content-dtp-nuclinic-flyer/content-dtp-nuclinic-flyer-1.jpg">
+Due to time constraints, the visual concept had to be simple yet professional. Soft gradients and balanced whitespace were used to keep the layout approachable and aesthetic. Photo editing focused on softening skin tones and enhancing clarity for print.
 
+### The Result
 
-<div class="row-adapt-double row" style="margin: 0 !important;">
-<div class="col mr-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/content-dtp-nuclinic-flyer/content-dtp-nuclinic-flyer-2.jpg">
-</div>
-<div class="col ml-2" style="padding: 0 !important;">
-<img class="my-2" src = "/images/content-dtp-nuclinic-flyer/content-dtp-nuclinic-flyer-3.jpg">
-</div>
-</div>
-
-
-</div>
-
-
-<div class="col-adapt-single col" style="margin-bottom: 5rem !important;">
-
-	
-**Project: Nu'Clinic Promo Flyer | Client: Nu'Clinic | Year: 2018**
-
-<br>
-
-**Description:**
-<br>
-Unexpected "Hurry up" task for women's beauty days event at client's clinic.
-
-
-
-
-</div>
-
-
+The flyer was delivered on time and printed in high resolution, successfully serving its role during the clinic’s in-house event. Despite the rush, the result was clean and aligned with the brand’s visual identity.

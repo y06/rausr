@@ -1,0 +1,13 @@
+<div class="article-navigation">
+  {{ if .NextInSection }}
+    <a class="article-nav-button" href="{{ .NextInSection.RelPermalink }}">← Newer article</a>
+  {{ else }}
+    <span class="article-nav-button disabled">👆 Newest article</span>
+  {{ end }}
+
+  {{ if .PrevInSection }}
+    <a class="article-nav-button" href="{{ .PrevInSection.RelPermalink }}">Older article →</a>
+  {{ else }}
+    <span class="article-nav-button disabled">Oldest article 👆</span>
+  {{ end }}
+</div>

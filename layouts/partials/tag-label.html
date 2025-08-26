@@ -1,0 +1,7 @@
+{{- $tag := . -}}
+{{- $label := $tag -}}
+{{- if eq (lower $tag) "dtp" }}{{ $label = "DTP" }}{{ end }}
+{{- if eq (lower $tag) "ux-ui" }}{{ $label = "UX & UI" }}{{ end }}
+{{- if eq (lower $tag) "3d-visualisation" }}{{ $label = "3D Visualisation" }}{{ end }}
+{{- if eq (lower $tag) "series" }}{{ $label = "Series ✨" }}{{ end }}
+{{- return $label -}}

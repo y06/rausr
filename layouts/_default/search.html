@@ -1,0 +1,125 @@
+{{ partial "header" . }}
+<main>
+  <section class="search-section container">
+    <h1>Search</h1>
+
+    <div class="search-controls">
+      <input id="search-input" type="search" placeholder="Search works & articles…" autocomplete="off" />
+      <div class="search-filters">
+        <label><input type="radio" name="section" value="all" checked> All</label>
+        <label><input type="radio" name="section" value="works"> Works</label>
+        <label><input type="radio" name="section" value="blog"> Articles</label>
+      </div>
+    </div>
+
+    <div id="search-stats" class="search-stats" aria-live="polite"></div>
+    <ul id="search-results" class="search-results" aria-label="Search results"></ul>
+  </section>
+</main>
+{{ partial "footer" . }}
+
+<!-- Fuse.js (lightweight fuzzy search) -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+(function() {
+  const input = document.getElementById('search-input');
+  const resultsEl = document.getElementById('search-results');
+  const statsEl = document.getElementById('search-stats');
+  const filterRadios = document.querySelectorAll('input[name="section"]');
+
+  let fuse, data = [], sectionFilter = 'all';
+
+  function render(results) {
+    resultsEl.innerHTML = '';
+    if (!results.length) {
+      statsEl.textContent = 'No results';
+      return;
+    }
+    statsEl.textContent = results.length + ' result' + (results.length===1?'':'s');
+    const frag = document.createDocumentFragment();
+    results.forEach(r => {
+      const item = r.item || r; // Fuse returns {item, score}; fallback if not searched yet
+      const li = document.createElement('li');
+      li.className = 'search-card';
+      li.innerHTML = `
+        <a href="${item.url}" class="search-card-link">
+          ${item.image ? `<img class="search-thumb" src="${item.image}" alt="">` : ''}
+          <div class="search-meta">
+            <span class="badge badge-${item.section}">${item.section === 'blog' ? 'Article' : 'Work'}</span>
+            <h3 class="search-title">${item.title}</h3>
+            <p class="search-desc">${item.description || ''}</p>
+            ${Array.isArray(item.tags) && item.tags.length ? `<div class="search-tags">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>` : ''}
+          </div>
+        </a>
+      `;
+      frag.appendChild(li);
+    });
+    resultsEl.appendChild(frag);
+  }
+
+  function applyFilter(items) {
+    if (sectionFilter === 'all') return items;
+    return items.filter(x => (x.item ? x.item.section : x.section) === sectionFilter);
+  }
+
+  function onSearch() {
+    const q = input.value.trim();
+    if (!q) {
+      render(applyFilter(data));
+      return;
+    }
+    const found = fuse.search(q, { limit: 50 });
+    render(applyFilter(found));
+  }
+
+  // Init
+  fetch('{{ "/" | relURL }}index.json', { cache: 'no-store' })
+    .then(r => r.json())
+    .then(json => {
+      data = json;
+      fuse = new Fuse(json, {
+        keys: [
+          { name: 'title', weight: 0.6 },
+          { name: 'description', weight: 0.25 },
+          { name: 'tags', weight: 0.15 }
+        ],
+        threshold: 0.35,
+        ignoreLocation: true,
+      });
+      render(data); // initial list
+    });
+
+  input.addEventListener('input', onSearch);
+  filterRadios.forEach(r => r.addEventListener('change', (e) => {
+    sectionFilter = e.target.value;
+    onSearch();
+  }));
+})();
+</script>
+
+<style>
+.search-controls { display: grid; gap: 0.75rem; margin-bottom: 1rem; }
+#search-input { padding: .75rem 1rem; border-radius: 12px; width: 100%; border: 1px solid #E5E4EC; }
+.search-filters { display: flex; gap: 1rem; align-items: center; }
+.search-stats { margin:.25rem 0 1rem; font-size:.9rem; opacity:.7; }
+
+.search-results { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+.search-card { border: 1px solid #E5E4EC; border-radius: 16px; overflow: hidden; background: #fff; }
+.search-card-link { display: grid; grid-template-columns: 160px 1fr; gap: 1rem; text-decoration: none; color: inherit; align-items: stretch; }
+.search-thumb { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/9; }
+
+.search-meta { padding: 1rem; }
+.search-title { margin: 0 0 .25rem; line-height: 1.2; }
+.search-desc { margin: 0 0 .5rem; opacity:.85; }
+.search-tags { display:flex; flex-wrap:wrap; gap:.35rem; }
+.tag { font-size:.75rem; padding:.2rem .5rem; border-radius:999px; background:#F5F5FA; border:1px solid #EBEAF3; }
+
+.badge { font-size:.7rem; padding:.2rem .5rem; border-radius: 6px; background:#F1F1F6; border:1px solid #E7E7F0; margin-bottom:.5rem; display:inline-block; text-transform: uppercase; letter-spacing:.02em; }
+.badge-blog { background:#F0F7FF; border-color:#DCEBFF; }
+.badge-works { background:#F6FFF3; border-color:#E6FFE0; }
+
+@media (max-width: 575px) {
+  .search-card-link { grid-template-columns: 1fr; }
+  .search-thumb { aspect-ratio: 3/2; }
+}
+</style>
