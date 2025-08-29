@@ -7,7 +7,7 @@ tags: ["reports", "trends"]
 source: ["https://www.winamp.com", "https://plexamp.com", "https://skins.webamp.org", "https://spotify.design", "https://uxdesign.cc"]
 draft: false
 preview_image: "/images/articles/winamp-and-friends-a-history-of-listening/winamp-and-friends-a-history-of-listening-1.jpg"
-header_image: "/images/articles/winamp-and-friends-a-history-of-listening/winamp-and-friends-a-history-of-listening-header.jpg"
+header_image: "/images/articles/winamp-and-friends-a-history-of-listening/winamp-and-friends-a-history-of-listening-1.jpg"
 ---
 
 ## Introduction
