@@ -1,27 +1,19 @@
-{{- $base := .Site.BaseURL -}}
-{{- $now := now -}}
-<?xml version="1.0" encoding="UTF-8"?>
+{{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" -}}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {{- range .Site.RegularPages -}}
-    {{- if not .Draft -}}
-      {{- $section := .Section | lower -}}
-      {{- $priority := cond (eq $section "blog") 0.80 (cond (eq $section "works") 0.70 0.50) -}}
-      {{- $changefreq := cond (eq $section "blog") "daily" (cond (eq $section "works") "weekly" "monthly") -}}
-      {{- $last := .Lastmod | default .Date | default $now -}}
-      {{- if not (.Params.robots_noindex | default false) -}}
+    {{- if and (not .Draft) (not (.Params.robots_noindex | default false)) -}}
+      {{- $last := .Lastmod | default .Date | default now -}}
       <url>
         <loc>{{ .Permalink }}</loc>
         <lastmod>{{ $last.UTC.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
-        <changefreq>{{ $changefreq }}</changefreq>
-        <priority>{{ printf "%.2f" $priority }}</priority>
+        <changefreq>weekly</changefreq>
+        <priority>0.50</priority>
       </url>
-      {{- end -}}
     {{- end -}}
   {{- end -}}
-  {{/* Include home page explicitly */}}
   <url>
-    <loc>{{ $base }}</loc>
-    <lastmod>{{ (site.LastChange | default $now).UTC.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
+    <loc>{{ .Site.BaseURL }}</loc>
+    <lastmod>{{ (.Site.Lastmod | default now).UTC.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
