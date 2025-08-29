@@ -1,8 +1,10 @@
-    <section class="contact-form">
+<section class="contact-form">
       <h2>{{ .Params.contactformtitle }}</h2>
 
       <div class="form-container">
-        <form action="/contact" method="post">
+        <form name="contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
           <div class="form-group">
             <label for="name">Name <span class="required">*</span></label>
             <input type="text" id="name" name="name" required />

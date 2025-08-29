@@ -1,0 +1,36 @@
+{{ partial "header" . }}
+
+  <main>
+    
+      <section class="header header-contact header-privacy">
+        <div class="header-content header-contact header-privacy">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <button class="header-cta-button header-cta-button-contact" onclick="document.querySelector('.article-container')?.scrollIntoView({ behavior: 'smooth' });">Show me more ↓</button>
+        </div>
+        <div class="header-illustration">
+            {{ with .Params.header_image }}
+            <img src="{{ . }}" alt="{{ $.Title }} header image" />
+            {{ end }}
+        </div>
+    </section>
+
+    {{ partial "tag-list-home" . }}
+
+  </main>
+
+<section class="content-sections">
+
+      {{ .Content }}
+
+</section>
+
+
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
+{{ partial "footer" . }}
