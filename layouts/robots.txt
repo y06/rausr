@@ -1,9 +1,4 @@
 User-agent: *
-Allow: /
+Disallow:
 
-# Respect per-page noindex if you use it
-{{- if .Site.Params.robots_extra -}}
-{{ .Site.Params.robots_extra }}
-{{- end -}}
-
-Sitemap: {{ .Site.BaseURL }}sitemap.xml
+Sitemap: https://rausr.com/sitemap.xml
