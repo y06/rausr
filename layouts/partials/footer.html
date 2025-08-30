@@ -92,68 +92,93 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<!-- Cookie Consent stylesheet -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/orestbida/cookieconsent@3/dist/cookieconsent.css">
-
-<!-- Cookie Consent script load -->
-<script src="https://cdn.jsdelivr.net/npm/orestbida/cookieconsent@3/dist/cookieconsent.js"></script>
-
+<!-- Cookie Consent (dynamic loader + init) -->
 <script>
-window.addEventListener("load", function () {
-  if (typeof CookieConsent === "undefined") {
-    console.error("CookieConsent library not loaded");
-    return;
+(function () {
+  const CDN_CSS = "https://cdn.jsdelivr.net/npm/orestbida/cookieconsent@3/dist/cookieconsent.css";
+  const CDN_JS  = "https://cdn.jsdelivr.net/npm/orestbida/cookieconsent@3/dist/cookieconsent.js";
+
+  function ensureCss() {
+    if ([...document.styleSheets].some(s => s.href && s.href.includes("cookieconsent"))) return;
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = CDN_CSS;
+    document.head.appendChild(link);
   }
-  CookieConsent.run({
-    guiOptions: {
-      consentModal: {
-        layout: "bar",          // box/cloud/bar
-        position: "bottom center",
-        flipButtons: false
+
+  function initConsent() {
+    if (typeof CookieConsent === "undefined") {
+      console.error("CookieConsent library not loaded");
+      return;
+    }
+
+    // Optional: reset via URL param ?consent=reset  (useful for testing in prod)
+    try {
+      const qs = new URLSearchParams(location.search);
+      if (qs.get("consent") === "reset") {
+        CookieConsent.reset(true);
       }
-    },
-    categories: {
-      necessary: {
-        enabled: true,          // always enabled
-        readOnly: true
+    } catch (e) {}
+
+    CookieConsent.run({
+      revision: 2, // bump to re-ask users after config change
+      guiOptions: {
+        consentModal: {
+          layout: "bar",
+          position: "bottom center",
+          flipButtons: false
+        }
       },
-      analytics: {},
-      marketing: {}
-    },
-    language: {
-      default: "en",
-      translations: {
-        en: {
-          consentModal: {
-            title: "We use cookies 🍪",
-            description: "We use necessary cookies to make our site work. Analytics and marketing cookies help us improve your experience.",
-            acceptAllBtn: "Accept all",
-            acceptNecessaryBtn: "Only necessary",
-            showPreferencesBtn: "Manage preferences"
-          },
-          preferencesModal: {
-            title: "Cookie preferences",
-            savePreferencesBtn: "Save preferences",
-            sections: [
-              {
-                title: "Necessary cookies",
-                description: "Always enabled for the site to function."
-              },
-              {
-                title: "Analytics cookies",
-                description: "Help us understand how you use our site."
-              },
-              {
-                title: "Marketing cookies",
-                description: "Used for personalized advertising."
-              }
-            ]
+      categories: {
+        necessary: { enabled: true, readOnly: true },
+        analytics: {},
+        marketing: {}
+      },
+      language: {
+        default: "en",
+        translations: {
+          en: {
+            consentModal: {
+              title: "We use cookies 🍪",
+              description: "We use necessary cookies to make our site work. Analytics and marketing cookies help us improve your experience.",
+              acceptAllBtn: "Accept all",
+              acceptNecessaryBtn: "Only necessary",
+              showPreferencesBtn: "Manage preferences"
+            },
+            preferencesModal: {
+              title: "Cookie preferences",
+              savePreferencesBtn: "Save preferences",
+              sections: [
+                { title: "Necessary cookies", description: "Always enabled for the site to function." },
+                { title: "Analytics cookies", description: "Help us understand how you use our site." },
+                { title: "Marketing cookies", description: "Used for personalized advertising." }
+              ]
+            }
           }
         }
       }
+    });
+  }
+
+  function ensureJsAndInit() {
+    if (typeof CookieConsent !== "undefined") {
+      initConsent();
+      return;
     }
+    const script = document.createElement("script");
+    script.src = CDN_JS;
+    script.onload = initConsent;
+    script.onerror = function () {
+      console.error("Failed to load CookieConsent JS from CDN");
+    };
+    document.head.appendChild(script);
+  }
+
+  window.addEventListener("load", function () {
+    ensureCss();
+    ensureJsAndInit();
   });
-});
+})();
 </script>
 
 </body>
