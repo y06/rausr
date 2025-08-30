@@ -1,6 +1,10 @@
 {{ $title := .Title | default .Site.Title }}
 {{ $desc := .Description | default .Params.description | default .Site.Params.description }}
-{{ $image := .Params.header_image | default .Site.Params.defaultImage }}
+{{ $header := .Params.header_image }}
+{{ $imgLower := lower (printf "%s" $header) }}
+{{ $svgMatch := findRE "\\.svg($|\\?)" $imgLower }}
+{{ $useDefault := or (not $header) (gt (len $svgMatch) 0) }}
+{{ $image := cond $useDefault .Site.Params.defaultImage $header }}
 {{ $url := .Permalink }}
 
 <!-- Open Graph -->

@@ -19,14 +19,14 @@
             {{ $proposedEnd := add $startIndex (sub $perPage 1) }}
             {{ $totalArticles := $paginator.TotalNumberOfElements }}
             {{ $endIndex := cond (gt $proposedEnd $totalArticles) $totalArticles $proposedEnd }}
-          <div class="counter">
-              <span class="word showinglist showinglisttag">showing</span>
-              <div class="number total showinglisttag" aria-label="Showing articles {{ $startIndex }} to {{ $endIndex }}">{{ $startIndex }}–{{ $endIndex }}</div>
-          </div>
-          <div class="counter">
-              <span class="word showinglisttag">total</span>
-              <div class="number total showinglisttag" aria-label="{{ $totalArticles }} articles">{{ $totalArticles }}</div>
-          </div>
+            <div class="counter">
+                <span class="word showinglist showinglisttag">showing</span>
+                <div class="number total showinglisttag" aria-label="Showing articles {{ $startIndex }} to {{ $endIndex }}">{{ $startIndex }}–{{ $endIndex }}</div>
+            </div>
+            <div class="counter">
+                <span class="word showinglisttag">total</span>
+                <div class="number total showinglisttag" aria-label="{{ $totalArticles }} articles">{{ $totalArticles }}</div>
+            </div>
         </div>
             {{ with .Params.description }}
             <p>{{ . }}</p>
