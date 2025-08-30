@@ -46,7 +46,7 @@ googleAnalytics = "UA-168547988-1"
     weight = 1
 
 [[menu.icon]]
-    url = "https://facebook.com/rausrdotcom"
+    url = "https://www.facebook.com/rausrdotcom/"
     name = "fa fa-facebook"
     title = "Facebook"
     weight = 2

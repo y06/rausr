@@ -92,11 +92,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<!-- Cookie Consent stylesheet -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/orestbida/cookieconsent@3/dist/cookieconsent.css">
+
 <!-- Cookie Consent script load -->
 <script src="https://cdn.jsdelivr.net/npm/orestbida/cookieconsent@3/dist/cookieconsent.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
+  if (typeof CookieConsent === "undefined") {
+    console.error("CookieConsent library not loaded");
+    return;
+  }
   CookieConsent.run({
     guiOptions: {
       consentModal: {
