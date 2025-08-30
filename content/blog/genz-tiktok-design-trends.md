@@ -3,7 +3,7 @@ title: "What Were Gen Z’s TikTok‑Driven Design Aesthetic Choices?"
 author: "rausr"
 date: 2025-05-19
 description: "Here’s a deeper dive into Gen Z’s TikTok‑driven design aesthetics, particularly the vibrant Frutiger Aero and its quirky cousins"
-tags: ["reports", "trends"]
+tags: ["reports", "trends", "typography"]
 source: ["https://www.wikipedia.org", "https://openai.com", "https://aesthetics.fandom.com/", "https://www.lemonde.fr/", "https://www.tiktok.com", "https://www.theguardian.com/", "https://www.creativebloq.com/"]
 draft: false
 preview_image: "/images/articles/genz-tiktok-design-trends/genz-tiktok-design-trends-header-1.jpg"

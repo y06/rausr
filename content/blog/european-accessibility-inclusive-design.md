@@ -3,7 +3,7 @@ title: "The European Accessibility Act: Why Inclusive Design Is No Longer Option
 author: "rausr"
 date: 2025-06-29
 description: "From websites to software to e-commerce, the EU is making digital accessibility a legal baseline."
-tags: ["ux-ui", "reports"]
+tags: ["ux-ui", "reports", "typography"]
 source: ["https://ec.europa.eu/", "https://www.w3.org/"]
 draft: false
 preview_image: "/images/articles/european-accessibility-inclusive-design/eaa-section-preview.jpg"

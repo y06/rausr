@@ -3,7 +3,7 @@ title: "TikTok Typography Trends: The Rise of Ugly Fonts, Serif Comebacks & Liqu
 author: "rausr"
 date: 2025-05-20
 description: "Discover how Gen Z is reshaping typography on TikTok with bold fonts, warped text, and nostalgic styles. A deep dive into 2024–2025’s most viral type trends."
-tags: ["reports", "trends"]
+tags: ["reports", "trends", "typography"]
 source: ["https://www.theverge.com", "https://openai.com", "https://www.dazeddigital.com", "https://www.nytimes.com", "https://www.tiktok.com", "https://www.typewolf.com", "https://www.creativeboom.com", "https://www.fontsinuse.com"]
 draft: false
 preview_image: "/images/articles/tiktok-typography-trends-the-comebacks/tiktok-typography-trends-the-comebacks-preview.jpg"
