@@ -200,6 +200,10 @@ h5 {
     background-color: color(display-p3 0.8078 0.8078 0.8078);
 }
 
+.header-thanks {
+    background-color: color(display-p3 0.3059 0.9020 0.6745);
+}
+
 .header-about {
     background-color: color(display-p3 0.4078 0.2824 1);
     color: color(display-p3 0.831 1.000 0.807);
@@ -1736,6 +1740,10 @@ footer .nav-item {
 .cta-section-home {
     padding: 4rem 2rem 5rem 2rem;
     gap: 2.375rem;
+}
+
+.cta-section-thanks {
+    padding: 0rem 2rem 4rem 2rem;
 }
 
 .cta-section-home h1 {
