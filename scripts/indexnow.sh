@@ -30,7 +30,7 @@ fi
 URL_LIST_JSON=$(printf '"%s",' "${URLS[@]}")
 URL_LIST_JSON="[${URL_LIST_JSON%,}]"
 
-read -r -d '' PAYLOAD <<JSON
+PAYLOAD=$(cat <<JSON
 {
   "host": "${SITE_HOST}",
   "key": "${INDEXNOW_KEY}",
@@ -38,6 +38,7 @@ read -r -d '' PAYLOAD <<JSON
   "urlList": ${URL_LIST_JSON}
 }
 JSON
+)
 
 echo "→ Submitting ${#URLS[@]} URLs to IndexNow..."
 HTTP_CODE=$(curl -sS -o /tmp/indexnow_resp.txt -w "%{http_code}" \
