@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify && curl -s https://www.bing.com/ping?sitemap=https://rausr.com/sitemap.xml"
+command = "hugo --gc --minify --cleanDestinationDir && curl -s https://www.bing.com/ping?sitemap=https://rausr.com/sitemap.xml"
 
 [context.production.environment]
 HUGO_VERSION = "0.133.1"
