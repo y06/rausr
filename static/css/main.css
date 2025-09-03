@@ -1704,12 +1704,12 @@ footer .nav-item {
     font-style: italic;
 }
 
-.article-container p a, .content-sections p a {
+.article-container p a, .content-sections p a, .article-container li a, .content-sections li a {
     text-decoration: underline !important;
     color: color(display-p3 0.408 0.282 1.000) !important;
 }
 
-.article-container p a:hover, .content-sections p a:hover {
+.article-container p a:hover, .content-sections p a:hover, .article-container li a:hover, .content-sections li a:hover {
     
     color: color(display-p3 0.306 0.902 0.886) !important;
 }
