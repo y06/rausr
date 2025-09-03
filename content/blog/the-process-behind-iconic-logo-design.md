@@ -97,6 +97,10 @@ Depending on scope:
 - **$20,000 – $100,000+** for branding agencies
 - **$500,000+** for global identity redesigns (e.g. banks, airlines)
 
+{{< quote >}}
+If you want some [help with your logo design](/works/logo-collection), let us know.
+{{< /quote >}}
+
 Timeframe? Anywhere from **2 weeks to 6+ months** depending on brand size, revisions, and alignment.
 
 {{< fullimg src="/images/articles/logo-design-process/logo-design-process-7.jpg" alt="The process behind iconic logo - Logo Pricing" >}}
