@@ -14,10 +14,15 @@
               {{ $allWorks = where $allWorks "Type" "ne" "singles" }}
               {{ $worksTotal := len $allWorks }}
 
+              {{ $filteredPages := where .Site.RegularPages "Section" "works" }}
+              {{ $filteredPages = where $filteredPages "Type" "ne" "singles" }}
+              {{ $sorted := sort $filteredPages "Date" "desc" }}
+              {{ $paginator := .Paginate $sorted 8 }}
+
               {{ $title }}
               {{ if gt $worksTotal 0 }}
             </h1>
-            {{ with .Paginator }}
+            {{ with $paginator }}
               {{ $pageSize := 8 }}
               {{ $startIndex := add 1 (mul (sub .PageNumber 1) $pageSize) }}
               {{ $proposedEnd := add $startIndex (sub $pageSize 1) }}
@@ -65,15 +70,8 @@
 
 <section class="card-container">
 
-{{ $filteredPages := where .Site.RegularPages "Section" "works" }}
-{{ $paginator := .Paginate $filteredPages 8 }}
-{{ $currentPage := $paginator.PageNumber }}
-{{ $start := mul (sub $currentPage 1) 8 }}
-{{ $pageItems := first 8 (after $start $filteredPages) }}
-{{ range $pageItems }}
-  {{ if ne .Type "singles" }}
-    {{ partial "list-item-works" . }}
-  {{ end }}
+{{ range $paginator.Pages }}
+  {{ partial "list-item-works" . }}
 {{ end }}
 
 </section>
