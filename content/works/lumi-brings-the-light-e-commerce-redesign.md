@@ -10,16 +10,16 @@ seotags: ["2021", "E-Commerce", "Redesign", "Unrealized"]
 
 sections:
   - image: "/images/lumi-brings-the-light-e-commerce-redesign/lumi-brings-the-light-e-commerce-redesign-1.jpg"
-    label: "Lumi lights - The under Header"
+    label: "Lumi - Search and The Header"
   - image: "/images/lumi-brings-the-light-e-commerce-redesign/lumi-brings-the-light-e-commerce-redesign-3.jpg"
-    label: "Lumi lights - Give me the next page"
+    label: "Lumi - New Article part"
   - image: "/images/lumi-brings-the-light-e-commerce-redesign/lumi-brings-the-light-e-commerce-redesign-4.jpg"
-    label: "2D Graphic - Floor View"
+    label: "Lumi - Blog part"
     subimages:
       - image: "/images/lumi-brings-the-light-e-commerce-redesign/lumi-brings-the-light-e-commerce-redesign-5.jpg"
-        label: "Real Photo - Stand"
+        label: "Lumi - Key strengths of the store"
       - image: "/images/lumi-brings-the-light-e-commerce-redesign/lumi-brings-the-light-e-commerce-redesign-6.jpg"
-        label: "2D Graphic - Stand"
+        label: "Lumi - Footer"
 ---
 
 ### Project Brief
