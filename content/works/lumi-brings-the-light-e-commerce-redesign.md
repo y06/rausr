@@ -3,7 +3,7 @@ title: "Lumi - Darkness is just space without light"
 date: 2021-11-25
 description: "Redesign of a 90's style e-commerce site into a modern shop with focus on UX and UI"
 tags: ["ux-ui"]
-draft: true
+draft: false
 preview_image: "/images/lumi-brings-the-light-e-commerce-redesign/lumi-brings-the-light-e-commerce-redesign-7.jpg"
 header_image: "/images/lumi-brings-the-light-e-commerce-redesign/lumi-brings-the-light-e-commerce-redesign-1.jpg"
 seotags: ["2021", "E-Commerce", "Redesign", "Unrealized"]
