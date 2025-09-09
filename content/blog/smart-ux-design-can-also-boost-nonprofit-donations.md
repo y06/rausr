@@ -4,7 +4,7 @@ description: "Even small UX changes can drive big results. Better mobile design 
 date: 2025-09-09
 tags: ["ux-ui", "reports"]
 author: "rausr"
-draft: true
+draft: false
 preview_image: /images/articles/ux-nonprofit-donations/ux-nonprofit-donations-7.jpg
 header_image: /images/articles/ux-nonprofit-donations/ux-nonprofit-donations-2.jpg
 source: [
