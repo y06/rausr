@@ -851,6 +851,12 @@ a:hover {
     font-family: Satoshi, sans-serif !important;
 }
 
+.navbar-nav-footer {
+    flex-wrap: wrap;
+    gap: 1rem 4rem;
+    flex-direction: row;
+}
+
 .navbar-nav .nav-item {
     position: relative;
 }
@@ -883,17 +889,16 @@ a:hover {
     margin: 0 3rem;
 }
 
-.navbar-text {
+.navbar-text, .navbar-text a {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 0;
     flex-direction: row;
-}
-
-.navbar-text a, .navbar-text {
     font-weight: 500 !important;
     color: #43414C !important;
-    margin: 0 auto;
     padding: 0 2rem;
 }
+
 
 .navbar-overlay {
     width: 100%;
@@ -2131,13 +2136,15 @@ footer .nav-item {
     }
 
     .navbar-text {
+        margin-top: 1rem;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 1rem;
+        justify-content: center;
     }
 
     .navbar-text a, .navbar-text {
-    padding: 0 1rem;
+    padding: 0 2rem;
     }
 
     .navbar-toggler img {
