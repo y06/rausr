@@ -95,16 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- Cookie Consent (dynamic loader + init) -->
 <script>
 (function () {
-  const CDN_CSS = "https://cdn.jsdelivr.net/npm/orestbida/cookieconsent@3/dist/cookieconsent.css";
-  const CDN_JS  = "https://cdn.jsdelivr.net/npm/orestbida/cookieconsent@3/dist/cookieconsent.js";
+  const CDN_JS  = "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js";
 
-  function ensureCss() {
-    if ([...document.styleSheets].some(s => s.href && s.href.includes("cookieconsent"))) return;
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = CDN_CSS;
-    document.head.appendChild(link);
-  }
 
   function initConsent() {
     if (typeof CookieConsent === "undefined") {
@@ -121,18 +113,26 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (e) {}
 
     CookieConsent.run({
-      revision: 2, // bump to re-ask users after config change
+      revision: 2,
+      cookie: {
+        name: "rausr_cc",          // site-specific cookie name
+        domain: "rausr.com",       // your domain
+        path: "/",
+        sameSite: "Lax",
+        secure: true,
+        expiresAfterDays: 180
+      },
       guiOptions: {
         consentModal: {
-          layout: "bar",
-          position: "bottom center",
+          layout: "box inline",
+          position: "bottom left",
           flipButtons: false
         }
       },
       categories: {
         necessary: { enabled: true, readOnly: true },
-        analytics: {},
-        marketing: {}
+        analytics: { autoClear: true },
+        marketing: { autoClear: true }
       },
       language: {
         default: "en",
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
           en: {
             consentModal: {
               title: "We use cookies 🍪",
-              description: "We use necessary cookies to make our site work. Analytics and marketing cookies help us improve your experience.",
+              description: "We use necessary cookies to make our site work. Analytics and marketing cookies help us improve your experience. See our <a href=\"/privacy-policy\">Privacy Policy</a>.",
               acceptAllBtn: "Accept all",
               acceptNecessaryBtn: "Only necessary",
               showPreferencesBtn: "Manage preferences"
@@ -149,9 +149,20 @@ document.addEventListener("DOMContentLoaded", function () {
               title: "Cookie preferences",
               savePreferencesBtn: "Save preferences",
               sections: [
-                { title: "Necessary cookies", description: "Always enabled for the site to function." },
-                { title: "Analytics cookies", description: "Help us understand how you use our site." },
-                { title: "Marketing cookies", description: "Used for personalized advertising." }
+                {
+                  title: "Necessary cookies",
+                  description: "Always enabled for the site to function.",
+                  linkedCategory: "necessary"
+                },
+                {
+                  title: "Analytics cookies",
+                  description: "Help us understand how you use our site.",
+                  linkedCategory: "analytics"
+                },
+                {
+                  title: "More information",
+                  description: "For any query in relation to my policy on cookies and your choices, please <a href=\"/contact\">contact me</a>."
+                }
               ]
             }
           }
@@ -183,12 +194,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("load", function () {
-    ensureCss();
     ensureJsAndInit();
   });
 })();
 </script>
 
+
+<script type="text/plain" data-cookiecategory="analytics" src="https://www.googletagmanager.com/gtag/js?id=GTM-T3HLMXL" defer></script>
+<script type="text/plain" data-cookiecategory="analytics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+  gtag('config', 'GTM-T3HLMXL', { 'anonymize_ip': true });
+</script>
+
+
+<!-- Example: Google Ads (blocked until 'marketing' consent) -->
+<!-- Replace AW-YYYYYYY with your ID -->
+<!--
+<script type="text/plain" data-cookiecategory="marketing" src="https://www.googletagmanager.com/gtag/js?id=AW-YYYYYYY" defer></script>
+<script type="text/plain" data-cookiecategory="marketing">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+  gtag('config', 'AW-YYYYYYY');
+</script>
+-->
 </body>
 
 </html>
