@@ -67,14 +67,14 @@ There was no going back three versions to “see which one was better.” The pr
 {{< fullimg src="/images/articles/history-graphic-design/history-graphic-design-4.jpg" alt="days or weeks" >}}
 
 
-## 👨‍🎨 Was It a Full-Time Job?
+### 👨‍🎨 Was It a Full-Time Job?
 
 Absolutely. Design studios, advertising agencies, and even printing shops employed full-time layout artists, illustrators, and typographers.
 
 In larger cities, designers were respected professionals — often dressing sharply and presenting their work like architects or ad executives. Their work shaped newspapers, posters, packaging, and branding in ways that were culturally influential, even political.
 
 
-## Behind the Scenes: What Most People Don’t Know
+### Behind the Scenes: What Most People Don’t Know
 
 - **Typographers worked in dim red-light rooms** when prepping phototypesetting film.
 - Some designers trained in **calligraphy and drafting**, not visual arts.
@@ -86,7 +86,7 @@ Many of these designers weren’t credited publicly. Their work passed anonymous
 
 {{< fullimg src="/images/articles/history-graphic-design/history-graphic-design-5.jpg" alt="designers worked overnight shifts to meet press deadlines" >}}
 
-## Summary
+### Summary
 
 Design before computers was physical, deliberate, and slow — but no less brilliant. It demanded skill, patience, and incredible attention to detail.
 
