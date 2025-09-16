@@ -64,31 +64,83 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.getElementById("navbarSupportedContent");
   const pageBlur = document.getElementById("page-blur");
 
-  // Toggle icon and menu when clicking the hamburger
-  toggle.addEventListener("click", function () {
-    const isExpanded = toggle.getAttribute("aria-expanded") === "true";
-    icon.src = isExpanded ? "/svg/hamb.svg" : "/svg/hamb-open.svg";
+  if (!toggle || !icon || !menu || !pageBlur) {
+    return;
+  }
 
-    if (menu.classList.contains("show")) {
-      pageBlur.classList.remove("blur-active");
+  const closedIcon = "/svg/hamb.svg";
+  const openIcon = "/svg/hamb-open.svg";
+
+  [closedIcon, openIcon].forEach((src) => {
+    const preload = new Image();
+    preload.src = src;
+  });
+
+  const setUiState = (isOpen) => {
+    icon.src = isOpen ? openIcon : closedIcon;
+    pageBlur.classList.toggle("blur-active", isOpen);
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  };
+
+  const syncState = () => setUiState(menu.classList.contains("show"));
+
+  const $ = window.jQuery;
+  if ($ && $.fn && $.fn.collapse) {
+    const $menu = $(menu);
+    $menu.on("show.bs.collapse", () => setUiState(true));
+    $menu.on("shown.bs.collapse", () => setUiState(true));
+    $menu.on("hide.bs.collapse", () => setUiState(false));
+    $menu.on("hidden.bs.collapse", () => setUiState(false));
+  }
+
+  const observer = new MutationObserver(syncState);
+  observer.observe(menu, { attributes: true, attributeFilter: ["class"] });
+
+  toggle.addEventListener("click", () => {
+    window.requestAnimationFrame(syncState);
+  });
+
+  const collapseHide = () => {
+    if (!menu.classList.contains("show")) {
+      return;
+    }
+    if ($ && $.fn && $.fn.collapse) {
+      $(menu).collapse("hide");
     } else {
-      pageBlur.classList.add("blur-active");
+      menu.classList.remove("show");
+      menu.classList.remove("collapsing");
+      menu.style.height = "";
+      syncState();
+    }
+  };
+
+  document.addEventListener("click", (event) => {
+    if (!menu.classList.contains("show")) {
+      return;
+    }
+    if (menu.contains(event.target) || toggle.contains(event.target)) {
+      return;
+    }
+    collapseHide();
+  });
+
+  document.addEventListener("keyup", (event) => {
+    if (event.key === "Escape") {
+      collapseHide();
     }
   });
 
-  // Observe class changes on the menu
-  const observer = new MutationObserver(() => {
-    const isVisible = menu.classList.contains('show');
-    icon.src = isVisible ? "/svg/hamb-open.svg" : "/svg/hamb.svg";
-
-    if (isVisible) {
-      pageBlur.classList.add("blur-active");
-    } else {
-      pageBlur.classList.remove("blur-active");
+  menu.addEventListener("click", (event) => {
+    const link = event.target.closest("a");
+    if (!link) {
+      return;
+    }
+    if (link.getAttribute("href")) {
+      collapseHide();
     }
   });
 
-  observer.observe(menu, { attributes: true, attributeFilter: ['class'] });
+  syncState();
 });
 </script>
 

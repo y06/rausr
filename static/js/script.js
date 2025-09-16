@@ -1,40 +1,82 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const tagListWrapper = document.querySelector(".tag-list-wrapper");
-    const tagList = document.querySelector(".tag-list");
-    const leftButton = document.querySelector(".tag-scroll.left");
-    const rightButton = document.querySelector(".tag-scroll.right");
+    const containers = document.querySelectorAll(".container-tag-list");
 
-    const tagItems = tagList.children; // Get all tag buttons
-    const visibleCount = 4; // Number of visible tags
-    let currentIndex = 0; // Track first visible tag
+    containers.forEach((container) => {
+        const tagListWrapper = container.querySelector(".tag-list-wrapper");
+        const leftButton = container.querySelector(".tag-scroll.left");
+        const rightButton = container.querySelector(".tag-scroll.right");
 
-    function updateButtons() {
-        leftButton.style.visibility = currentIndex > 0 ? "visible" : "hidden";
-        rightButton.style.visibility = (currentIndex + visibleCount >= tagItems.length) ? "hidden" : "visible";
-    }
+        if (!tagListWrapper || !leftButton || !rightButton) {
+            return;
+        }
 
-    function scrollTags(direction) {
-        if (direction === "right" && currentIndex + visibleCount < tagItems.length) {
-            currentIndex += visibleCount;
-        } else if (direction === "left" && currentIndex > 0) {
-            currentIndex -= visibleCount;
-        }
-        
-        if (currentIndex >= tagItems.length - visibleCount) {
-            currentIndex = tagItems.length - visibleCount;
-        }
-        if (currentIndex < 0) {
-            currentIndex = 0;
-        }
-        
-        const scrollToElement = tagItems[currentIndex];
-        tagListWrapper.scrollTo({ left: scrollToElement.offsetLeft - tagListWrapper.offsetLeft, behavior: "smooth" });
+        const getScrollStep = () => Math.max(tagListWrapper.clientWidth * 0.8, 200);
+
+        const updateButtons = () => {
+            const maxScrollLeft = tagListWrapper.scrollWidth - tagListWrapper.clientWidth;
+
+            if (maxScrollLeft <= 0) {
+                leftButton.style.visibility = "hidden";
+                rightButton.style.visibility = "hidden";
+                return;
+            }
+
+            leftButton.style.visibility = tagListWrapper.scrollLeft > 0 ? "visible" : "hidden";
+            rightButton.style.visibility = tagListWrapper.scrollLeft >= maxScrollLeft - 1 ? "hidden" : "visible";
+        };
+
+        let animationFrameId = null;
+
+        const smoothScrollTo = (target) => {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+
+            const start = tagListWrapper.scrollLeft;
+            const change = target - start;
+            if (change === 0) {
+                updateButtons();
+                return;
+            }
+
+            const duration = 350;
+            const startTime = performance.now();
+
+            const easeInOut = (t) => t < 0.5
+                ? 4 * t * t * t
+                : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+            const step = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easedProgress = easeInOut(progress);
+
+                tagListWrapper.scrollLeft = start + change * easedProgress;
+                updateButtons();
+
+                if (progress < 1) {
+                    animationFrameId = requestAnimationFrame(step);
+                } else {
+                    animationFrameId = null;
+                }
+            };
+
+            animationFrameId = requestAnimationFrame(step);
+        };
+
+        const scrollByAmount = (direction) => {
+            const amount = getScrollStep() * (direction === "right" ? 1 : -1);
+            const maxScrollLeft = tagListWrapper.scrollWidth - tagListWrapper.clientWidth;
+            const target = Math.max(0, Math.min(tagListWrapper.scrollLeft + amount, maxScrollLeft));
+            smoothScrollTo(target);
+        };
+
+        leftButton.addEventListener("click", () => scrollByAmount("left"));
+        rightButton.addEventListener("click", () => scrollByAmount("right"));
+
+        tagListWrapper.addEventListener("scroll", () => window.requestAnimationFrame(updateButtons));
+        window.addEventListener("resize", updateButtons);
 
         updateButtons();
-    }
-
-    leftButton.addEventListener("click", () => scrollTags("left"));
-    rightButton.addEventListener("click", () => scrollTags("right"));
-
-    updateButtons(); // Initial button state
+    });
 });
