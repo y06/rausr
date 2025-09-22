@@ -1,0 +1,104 @@
+{{ partial "header" . }}
+
+<main>
+  {{ $terms := .Data.Terms }}
+  {{ $sortedTerms := $terms.Alphabetical }}
+  {{ $totalTerms := len $sortedTerms }}
+  {{ $taxonomy := lower .Data.Plural }}
+  {{ $singular := .Data.Singular | default "item" }}
+  {{ $plural := .Data.Plural | default "items" }}
+  {{ $secondURL := "/blog/" }}
+  {{ $secondLabel := "Articles" }}
+  {{ if eq $taxonomy "tags" }}
+    {{ $secondURL = "/works/" }}
+    {{ $secondLabel = "Works" }}
+  {{ end }}
+
+  <section class="header header-contact header-topic">
+    <div class="header-content header-contact header-topic">
+      <div class="h1container">
+        <h1>{{ .Title }}</h1>
+        <div class="counter">
+          <span class="word showinglist showinglisttag">total</span>
+          <div class="number total showinglisttag" aria-label="{{ $totalTerms }} {{ $plural }}">{{ $totalTerms }}</div>
+        </div>
+      </div>
+      {{ if .Content }}
+        {{ .Content }}
+      {{ else }}
+        <p>Browse all {{ $plural }} available on rausr.com.</p>
+      {{ end }}
+    </div>
+    {{ with .Params.header_image }}
+    <div class="header-illustration">
+      <img src="{{ . }}" alt="{{ $.Title }} header image" />
+    </div>
+    {{ end }}
+  </section>
+
+  <div class="container-tag-list">
+    <button class="tag-scroll left">←</button>
+    <div class="tag-list-wrapper">
+      <ul class="tag-list">
+        <li><a href="/" class="tag-link">← Home</a></li>
+        <li><a href="{{ $secondURL }}" class="tag-link">← {{ $secondLabel }}</a></li>
+        <li><span class="tag-link active">{{ .Title }}</span></li>
+      </ul>
+    </div>
+    <button class="tag-scroll right">→</button>
+  </div>
+
+  <section class="card-container taxonomy-card-container">
+    {{ range $sortedTerms }}
+      {{ $termPage := .Page }}
+      {{ $link := "" }}
+      {{ $description := "" }}
+      {{ $headerColor := "" }}
+      {{ $headerImage := "" }}
+      {{ if $termPage }}
+        {{ $link = $termPage.RelPermalink }}
+        {{ $description = $termPage.Params.description | default "" }}
+        {{ $headerColor = $termPage.Params.header_color | default "" }}
+        {{ $headerImage = $termPage.Params.header_image | default "" }}
+      {{ end }}
+      {{ $label := partial "tag-label.html" .Name }}
+      {{ $pages := .Pages }}
+      {{ $itemSingular := "entry" }}
+      {{ $itemPlural := "entries" }}
+      {{ if gt (len $pages) 0 }}
+        {{ $section := (index $pages 0).Section | default "" }}
+        {{ if eq $section "blog" }}
+          {{ $itemSingular = "article" }}
+          {{ $itemPlural = "articles" }}
+        {{ else if eq $section "works" }}
+          {{ $itemSingular = "project" }}
+          {{ $itemPlural = "projects" }}
+        {{ end }}
+      {{ end }}
+      {{ $itemLabel := cond (eq .Count 1) $itemSingular $itemPlural }}
+
+      <div class="card20 taxonomy-card" {{ if $headerColor }}style="border-top: 6px solid {{ $headerColor }};"{{ end }}>
+        {{ if $headerImage }}
+          <a href="{{ $link }}">
+            <div class="card20-top">
+              <img src="{{ $headerImage }}" alt="{{ $label }} cover" />
+            </div>
+          </a>
+        {{ end }}
+        <div class="card20-text">
+          <span class="card20-category">{{ $itemLabel }}</span>
+          <h3><a href="{{ $link }}">{{ $label }}</a></h3>
+          {{ with $description }}<p>{{ . }}</p>{{ end }}
+          <div class="card20-meta">{{ .Count }} {{ $itemLabel }}</div>
+        </div>
+      </div>
+    {{ end }}
+  </section>
+
+</main>
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
+{{ partial "footer" . }}
