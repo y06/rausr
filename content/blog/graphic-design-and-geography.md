@@ -7,6 +7,19 @@ author: "rausr"
 draft: false
 preview_image: /images/articles/geolocation-and-graphic-design/geolocation-and-graphic-design-15.jpg
 header_image: /images/articles/geolocation-and-graphic-design/geolocation-and-graphic-design-1.jpg
+source: [
+  "Book: How Brands Grow by Byron Sharp",
+  "Book: The Brand Gap by Marty Neumeier",
+  "Book: Designing Brand Identity by Alina Wheeler",
+  "https://www.nngroup.com/articles/ten-usability-heuristics/",
+  "https://www.tobiasvan.com/blog/",
+  "https://www.juliezhuo.com/",
+  "https://www.ehrenberg-bass.com/",
+  "https://www.collins.design/work",
+  "https://stripe.com/blog/brand-refresh",
+  "https://intercom.com/blog/announcing-our-new-brand/",
+  "https://designstripe.com/blog/why-simple-branding-matters"
+]
 ---
 
 ## Introduction

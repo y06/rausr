@@ -76,8 +76,18 @@
       {{ with .Params.source }}
       <div class="section-tags"><div class="card20-meta card20-thanks">Sources:</div>
         {{ range . }}
-          {{ $u := urls.Parse . }}
-          <a class="tag sources" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ replace (replace $u.Host "www." "" ) ":" "" }}</a>
+          {{ $item := . }}
+          {{ if hasPrefix (lower $item) "book:" }}
+            {{ $title := replaceRE `(?i)^book:\s*` "" $item }}
+            <span class="tag sources sources-book">📚 {{ $title }}</span>
+          {{ else }}
+            {{ $parsed := urls.Parse $item }}
+            {{ $host := $item }}
+            {{ if $parsed }}
+              {{ $host = replace (replace $parsed.Host "www." "" ) ":" "" }}
+            {{ end }}
+            <a class="tag sources" href="{{ $item }}" target="_blank" rel="noopener noreferrer">{{ $host }}</a>
+          {{ end }}
         {{ end }}
       </div>
       {{ end }}
@@ -109,4 +119,3 @@
 {{ partial "cta-contact" . }}
 
 {{ partial "footer" . }}
-

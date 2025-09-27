@@ -11,7 +11,7 @@ googleAnalytics = "UA-168547988-1"
     showBorder = false
     fonts = ["Satoshi", "Inter"]
     paginate = 6
-    featuredContent = ["print-design-branding-madness-t3-events-2020", "genz-tiktok-design-trends", "package-design-print-design-pets-probiotics", "various-illustrations"]
+    featuredContent = ["print-design-branding-madness-t3-events-2020", "graphic-design-and-geography", "package-design-print-design-pets-probiotics", "various-illustrations"]
     blogThanksText = "Thanks for reading ✌️"
     defaultImage = "/images/default-og.png"
 
