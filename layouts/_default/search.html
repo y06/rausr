@@ -13,9 +13,14 @@
     </div>
 
     <div id="search-stats" class="search-stats" aria-live="polite"></div>
-    <ul id="search-results" class="search-results" aria-label="Search results"></ul>
+    <div id="search-results" class="search-results featured-grid" role="list" aria-label="Search results"></div>
   </section>
 </main>
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
 {{ partial "footer" . }}
 
 <!-- Fuse.js (lightweight fuzzy search) -->
@@ -29,6 +34,13 @@
 
   let fuse, data = [], sectionFilter = 'all';
 
+  const htmlEscape = (value) => String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
   function render(results) {
     resultsEl.innerHTML = '';
     if (!results.length) {
@@ -39,20 +51,54 @@
     const frag = document.createDocumentFragment();
     results.forEach(r => {
       const item = r.item || r; // Fuse returns {item, score}; fallback if not searched yet
-      const li = document.createElement('li');
-      li.className = 'search-card';
-      li.innerHTML = `
-        <a href="${item.url}" class="search-card-link">
-          ${item.image ? `<img class="search-thumb" src="${item.image}" alt="">` : ''}
-          <div class="search-meta">
-            <span class="badge badge-${item.section}">${item.section === 'blog' ? 'Article' : 'Work'}</span>
-            <h3 class="search-title">${item.title}</h3>
-            <p class="search-desc">${item.description || ''}</p>
-            ${Array.isArray(item.tags) && item.tags.length ? `<div class="search-tags">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>` : ''}
+      const isWork = item.section === 'works';
+      const sectionLabel = isWork ? 'Work' : 'Article';
+      const cardType = isWork ? 'works' : 'blog';
+      const card = document.createElement('div');
+      card.className = `card1 card1--search card1--search-${cardType}`;
+      card.setAttribute('role', 'listitem');
+
+      const rawTags = Array.isArray(item.tags) ? item.tags : [];
+      const primaryTag = rawTags.length ? rawTags[0] : '';
+      const tagSlug = primaryTag
+        ? primaryTag
+            .trim()
+            .toLowerCase()
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-')
+            .replace(/^-|-$/g, '')
+        : '';
+      const hasImage = Boolean(item.image);
+      const titleHtml = htmlEscape(item.title);
+      const descriptionHtml = item.description ? htmlEscape(item.description) : '';
+      const url = htmlEscape(item.url);
+      const imageSrc = hasImage ? htmlEscape(item.image) : '';
+      const safePrimaryTag = htmlEscape(primaryTag);
+
+      const allTagsMarkup = rawTags.length
+        ? `<div class="card-search-tags">${rawTags.map(t => `<span class="card-search-tag">${htmlEscape(t)}</span>`).join('')}</div>`
+        : '';
+
+      card.innerHTML = `
+        <a href="${url}" class="card-search-link" aria-label="${titleHtml}">
+          <div class="card1-top${hasImage ? '' : ' card1-top--empty'}">
+            ${hasImage ? `<img src="${imageSrc}" alt="">` : `<span>${sectionLabel}</span>`}
           </div>
         </a>
+        <div class="card1-bottom card-search-bottom card-search-bottom--${cardType}">
+          <div class="card-search-eyebrow">
+            <span class="card-search-section">${sectionLabel}</span>
+            ${primaryTag ? `<span class="card1-category">${tagSlug ? `<a href="/tags/${tagSlug}/">${safePrimaryTag}</a>` : safePrimaryTag}</span>` : ''}
+          </div>
+          <h3><a href="${url}">${titleHtml}</a></h3>
+          ${descriptionHtml ? `<p class="card-search-desc">${descriptionHtml}</p>` : ''}
+          ${allTagsMarkup}
+        </div>
+        <a href="${url}" class="card2-cta card2-cta--${cardType}">${isWork ? 'show work →' : 'read article →'}</a>
       `;
-      frag.appendChild(li);
+
+      frag.appendChild(card);
     });
     resultsEl.appendChild(frag);
   }
@@ -106,27 +152,42 @@
 
 <style>
 .search-controls { display: grid; gap: 0.75rem; margin-bottom: 1rem; }
-#search-input { padding: .75rem 1rem; border-radius: 12px; width: 100%; border: 1px solid #E5E4EC; }
-.search-filters { display: flex; gap: 1rem; align-items: center; }
-.search-stats { margin:.25rem 0 1rem; font-size:.9rem; opacity:.7; }
+#search-input { padding: .75rem 1rem; border-radius: 12px; width: 100%; border: 1px solid #E5E4EC; background: #fff; color: inherit; }
+.search-filters { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.search-filters input { accent-color: color(display-p3 0.305 0.901 0.886); }
+.search-stats { margin:.25rem 0 1.5rem; font-size:.9rem; opacity:.7; }
 
-.search-results { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
-.search-card { border: 1px solid #E5E4EC; border-radius: 16px; overflow: hidden; background: #fff; }
-.search-card-link { display: grid; grid-template-columns: 160px 1fr; gap: 1rem; text-decoration: none; color: inherit; align-items: stretch; }
-.search-thumb { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/9; }
+.search-results { width: 100%; margin: 0 auto 3rem; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start; }
+.card1--search { display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; background: #fff; width: clamp(260px, 45vw, 320px) !important; flex: 1 1 clamp(260px, 45vw, 320px); }
+.card1--search .card1-top { background: #F5F4FA; }
+.card1-top--empty { display: flex; align-items: center; justify-content: center; color: #9A96B5; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; }
+.card1-top--empty span { padding: 0.35rem 0.9rem; border-radius: 999px; border: 1px dashed #CFCDE0; }
+.card-search-link { display: block; text-decoration: none; color: inherit; }
 
-.search-meta { padding: 1rem; }
-.search-title { margin: 0 0 .25rem; line-height: 1.2; }
-.search-desc { margin: 0 0 .5rem; opacity:.85; }
-.search-tags { display:flex; flex-wrap:wrap; gap:.35rem; }
-.tag { font-size:.75rem; padding:.2rem .5rem; border-radius:999px; background:#F5F5FA; border:1px solid #EBEAF3; }
+.card-search-bottom { display: flex; flex-direction: column; gap: 0.75rem; text-align: left; }
+.card-search-eyebrow { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.card-search-section { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255, 255, 255, 0.72); }
+.card1--search .card1-bottom h3 a { color: inherit; text-decoration: none; }
+.card-search-desc { margin: 0; font-size: 0.9rem; line-height: 1.45; color: rgba(255, 255, 255, 0.9); }
+.card-search-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.card-search-tag { font-size: 0.7rem; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.28); color: rgba(255, 255, 255, 0.85); }
 
-.badge { font-size:.7rem; padding:.2rem .5rem; border-radius: 6px; background:#F1F1F6; border:1px solid #E7E7F0; margin-bottom:.5rem; display:inline-block; text-transform: uppercase; letter-spacing:.02em; }
-.badge-blog { background:#F0F7FF; border-color:#DCEBFF; }
-.badge-works { background:#F6FFF3; border-color:#E6FFE0; }
+.card1--search-works .card1-bottom { background: color(display-p3 0.129 0.561 1.000); }
+.card1--search-blog .card1-bottom { background: color(display-p3 0.055 0.604 0.447); }
+
+.card2-cta--works { color: color(display-p3 0.129 0.561 1.000) !important; }
+.card2-cta--blog { color: color(display-p3 0.055 0.604 0.447) !important; }
+
+@media (max-width: 1024px) {
+  .card1--search { flex: 1 1 clamp(280px, 50vw, 320px); }
+}
+
+@media (max-width: 768px) {
+  .search-results { justify-content: center; }
+  .card1--search { flex: 1 1 calc(50% - 20px); width: calc(50% - 20px) !important; max-width: 360px; }
+}
 
 @media (max-width: 575px) {
-  .search-card-link { grid-template-columns: 1fr; }
-  .search-thumb { aspect-ratio: 3/2; }
+  .card1--search { flex: 1 1 100%; width: 100% !important; max-width: 100%; }
 }
 </style>
