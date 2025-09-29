@@ -4,7 +4,6 @@
     <h1>Search</h1>
 
     <div class="search-controls">
-      <input id="search-input" type="search" placeholder="Search works & articles…" autocomplete="off" />
       <div class="search-filters">
         <label><input type="radio" name="section" value="all" checked> All</label>
         <label><input type="radio" name="section" value="works"> Works</label>
@@ -27,12 +26,11 @@
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 <script>
 (function() {
-  const input = document.getElementById('search-input');
   const resultsEl = document.getElementById('search-results');
   const statsEl = document.getElementById('search-stats');
   const filterRadios = document.querySelectorAll('input[name="section"]');
 
-  let fuse, data = [], sectionFilter = 'all';
+  let fuse, data = [], sectionFilter = 'all', currentQuery = '';
 
   const htmlEscape = (value) => String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -44,10 +42,10 @@
   function render(results) {
     resultsEl.innerHTML = '';
     if (!results.length) {
-      statsEl.textContent = 'No results';
+      statsEl.textContent = currentQuery ? `No results for "${currentQuery}"` : 'No results';
       return;
     }
-    statsEl.textContent = results.length + ' result' + (results.length===1?'':'s');
+    statsEl.textContent = `${results.length} result${results.length===1?'':'s'}${currentQuery ? ` for "${currentQuery}"` : ''}`;
     const frag = document.createDocumentFragment();
     results.forEach(r => {
       const item = r.item || r; // Fuse returns {item, score}; fallback if not searched yet
@@ -69,11 +67,11 @@
             .replace(/-+/g, '-')
             .replace(/^-|-$/g, '')
         : '';
-      const hasImage = Boolean(item.image);
+      const previewSource = item.preview_image || item.image || '';
+      const hasImage = Boolean(previewSource);
       const titleHtml = htmlEscape(item.title);
-      const descriptionHtml = item.description ? htmlEscape(item.description) : '';
       const url = htmlEscape(item.url);
-      const imageSrc = hasImage ? htmlEscape(item.image) : '';
+      const imageSrc = hasImage ? htmlEscape(previewSource) : '';
       const safePrimaryTag = htmlEscape(primaryTag);
 
       const allTagsMarkup = rawTags.length
@@ -83,7 +81,7 @@
       card.innerHTML = `
         <a href="${url}" class="card-search-link" aria-label="${titleHtml}">
           <div class="card1-top${hasImage ? '' : ' card1-top--empty'}">
-            ${hasImage ? `<img src="${imageSrc}" alt="">` : `<span>${sectionLabel}</span>`}
+            ${hasImage ? `<img src="${imageSrc}" alt="${titleHtml}">` : `<span>${sectionLabel}</span>`}
           </div>
         </a>
         <div class="card1-bottom card-search-bottom card-search-bottom--${cardType}">
@@ -92,7 +90,6 @@
             ${primaryTag ? `<span class="card1-category">${tagSlug ? `<a href="/tags/${tagSlug}/">${safePrimaryTag}</a>` : safePrimaryTag}</span>` : ''}
           </div>
           <h3><a href="${url}">${titleHtml}</a></h3>
-          ${descriptionHtml ? `<p class="card-search-desc">${descriptionHtml}</p>` : ''}
           ${allTagsMarkup}
         </div>
         <a href="${url}" class="card2-cta card2-cta--${cardType}">${isWork ? 'show work →' : 'read article →'}</a>
@@ -109,12 +106,15 @@
   }
 
   function onSearch() {
-    const q = input.value.trim();
-    if (!q) {
+    const params = new URLSearchParams(window.location.search);
+    currentQuery = (params.get('q') || '').trim();
+
+    if (!currentQuery) {
       render(applyFilter(data));
       return;
     }
-    const found = fuse.search(q, { limit: 50 });
+
+    const found = fuse.search(currentQuery, { limit: 50 });
     render(applyFilter(found));
   }
 
@@ -132,17 +132,9 @@
         threshold: 0.35,
         ignoreLocation: true,
       });
-      const params = new URLSearchParams(window.location.search);
-      const presetQuery = params.get('q');
-      if (presetQuery) {
-        input.value = presetQuery;
-        onSearch();
-      } else {
-        render(data); // initial list
-      }
+      onSearch();
     });
 
-  input.addEventListener('input', onSearch);
   filterRadios.forEach(r => r.addEventListener('change', (e) => {
     sectionFilter = e.target.value;
     onSearch();
@@ -151,27 +143,26 @@
 </script>
 
 <style>
-.search-controls { display: grid; gap: 0.75rem; margin-bottom: 1rem; }
-#search-input { padding: .75rem 1rem; border-radius: 12px; width: 100%; border: 1px solid #E5E4EC; background: #fff; color: inherit; }
+.search-controls { display: flex; justify-content: flex-start; margin-bottom: 1rem; }
 .search-filters { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 .search-filters input { accent-color: color(display-p3 0.305 0.901 0.886); }
 .search-stats { margin:.25rem 0 1.5rem; font-size:.9rem; opacity:.7; }
 
 .search-results { width: 100%; margin: 0 auto 3rem; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start; }
-.card1--search { display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; background: #fff; width: clamp(260px, 45vw, 320px) !important; flex: 1 1 clamp(260px, 45vw, 320px); }
-.card1--search .card1-top { background: #F5F4FA; }
+.card1--search { display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; background: #fff; width: clamp(260px, 45vw, 320px) !important; flex: 1 1 clamp(260px, 45vw, 320px); height: 100%; }
+.card1--search .card1-top { background: #F5F4FA; border-radius: 12px 12px 0 0; }
 .card1-top--empty { display: flex; align-items: center; justify-content: center; color: #9A96B5; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; }
 .card1-top--empty span { padding: 0.35rem 0.9rem; border-radius: 999px; border: 1px dashed #CFCDE0; }
 .card-search-link { display: block; text-decoration: none; color: inherit; }
 
-.card-search-bottom { display: flex; flex-direction: column; gap: 0.75rem; text-align: left; }
+.card-search-bottom { display: flex; flex-direction: column; gap: 0.75rem; text-align: left; flex: 1 1 auto; }
 .card-search-eyebrow { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
 .card-search-section { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255, 255, 255, 0.72); }
 .card1--search .card1-bottom h3 a { color: inherit; text-decoration: none; }
-.card-search-desc { margin: 0; font-size: 0.9rem; line-height: 1.45; color: rgba(255, 255, 255, 0.9); }
 .card-search-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.card-search-tag { font-size: 0.7rem; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.28); color: rgba(255, 255, 255, 0.85); }
+.card-search-tag { font-size: 0.7rem; padding: 0.25rem 0.6rem; border-radius: 6px; background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.28); color: rgba(255, 255, 255, 0.85); }
 
+.card1--search .card1-bottom { border-radius: 0 0 12px 12px; }
 .card1--search-works .card1-bottom { background: color(display-p3 0.129 0.561 1.000); }
 .card1--search-blog .card1-bottom { background: color(display-p3 0.055 0.604 0.447); }
 

@@ -139,7 +139,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     const icon = document.createElement("span");
                     const sectionClass = item.section === "works" ? "works" : "blog";
                     icon.className = "navbar-search__icon navbar-search__icon--" + sectionClass;
-                    icon.textContent = item.section === "works" ? "W" : "A";
+
+                    const iconImg = document.createElement("img");
+                    iconImg.className = "navbar-search__icon-img";
+                    iconImg.src = item.section === "works"
+                        ? "/svg/avocado-purple.svg"
+                        : "/svg/avocado-green.svg";
+                    iconImg.alt = item.section === "works" ? "Works" : "Articles";
+
+                    icon.appendChild(iconImg);
 
                     const meta = document.createElement("span");
                     meta.className = "navbar-search__meta";
