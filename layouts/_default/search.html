@@ -86,7 +86,14 @@
         threshold: 0.35,
         ignoreLocation: true,
       });
-      render(data); // initial list
+      const params = new URLSearchParams(window.location.search);
+      const presetQuery = params.get('q');
+      if (presetQuery) {
+        input.value = presetQuery;
+        onSearch();
+      } else {
+        render(data); // initial list
+      }
     });
 
   input.addEventListener('input', onSearch);

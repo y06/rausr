@@ -87,7 +87,7 @@ enableGitInfo = true
   priority = 0.5
 
 [outputs]
-  home = ["HTML", "RSS", "SITEMAP"]
+  home = ["HTML", "RSS", "SITEMAP", "JSON"]
 
 [mediaTypes."application/json"]
   suffixes = ["json"]

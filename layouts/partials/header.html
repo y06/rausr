@@ -53,8 +53,32 @@
             
             <a class="navbar-brand" href="/"><img src="/svg/logo-solo.svg" width="80px" height="23px" alt=""></a>
 
-            <div class="navbar-people" data-toggle="collapse">
-                <a href="/"><img src="/svg/rugdgroup.svg" height="20px" alt=""></a>
+            <div class="navbar-search" role="search">
+                <form class="navbar-search__form" action="{{ "/search/" | relURL }}" method="get">
+                    <label class="navbar-search__label" for="navbar-search-input">Search</label>
+                    <input
+                        id="navbar-search-input"
+                        class="navbar-search__input"
+                        type="search"
+                        name="q"
+                        placeholder="Search something"
+                        autocomplete="off"
+                        aria-autocomplete="list"
+                        aria-controls="navbar-search-results"
+                        aria-expanded="false"
+                        data-index-path="{{ "/" | relURL }}index.json"
+                    >
+                    <button class="navbar-search__submit" type="submit" aria-label="Submit search">🔍</button>
+                </form>
+                <div class="navbar-search__dropdown" id="navbar-search-dropdown" hidden>
+                    <ul class="navbar-search__results" id="navbar-search-results" role="listbox"></ul>
+                    <a
+                        id="navbar-search-see-all"
+                        class="navbar-search__all"
+                        href="{{ "/search/" | relURL }}"
+                        data-search-base="{{ "/search/" | relURL }}"
+                    >See all search results &rarr;</a>
+                </div>
             </div>
 
             <button class="navbar-toggler" type="button" id="menuToggle" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

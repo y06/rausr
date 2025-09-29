@@ -928,6 +928,218 @@ a:hover {
     align-items: center;
 }
 
+.navbar-search {
+    position: relative;
+    flex: 1 1 320px;
+    max-width: 460px;
+    margin: 0 2rem 0 1rem;
+}
+
+.navbar-search,
+.navbar-search * {
+    font-family: "Inter", sans-serif;
+}
+
+.navbar-search__submit,
+.navbar-search__arrow,
+.navbar-search__all {
+    font-family: "Satoshi", sans-serif;
+}
+
+.navbar-search__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.navbar-search__form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border-radius: 6px;
+    background: linear-gradient(120deg, #7b61ff, #00dbde, #c751ff);
+}
+
+.navbar-search__input {
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background: #f8f7ff;
+    padding: 0.65rem 2.75rem 0.65rem 1rem;
+    font-size: .95rem;
+    color: #43414c;
+}
+
+.navbar-search__input::placeholder {
+    color: #43414C;
+    font-size: 1rem;
+}
+
+.navbar-search__input:focus {
+    outline: none;
+    background: #ffffff;
+}
+
+.navbar-search__submit {
+    position: absolute;
+    right: .65rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.15rem;
+}
+
+.navbar-search__form:focus-within {
+    background: color(display-p3 0.451 0.333 1.000);
+}
+
+.navbar-search__dropdown {
+    position: absolute;
+    top: calc(100% + .75rem);
+    left: 0;
+    right: 0;
+    padding: 1rem 1rem .5rem;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 2px solid #7b61ff;
+    box-shadow: 0 12px 40px rgba(43, 34, 83, 0.16);
+    z-index: 1000;
+}
+
+.navbar-search__dropdown[hidden] {
+    display: none;
+}
+
+.navbar-search__results {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.navbar-search__item {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.navbar-search__icon {
+    inline-size: 32px;
+    block-size: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.navbar-search__icon--works {
+    background: linear-gradient(140deg, #00a1ff, #0072ff);
+}
+
+.navbar-search__icon--blog {
+    background: linear-gradient(140deg, #ff84c5, #7b61ff);
+}
+
+.navbar-search__link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-search__meta {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.navbar-search__title {
+    font-weight: 600;
+    font-size: .95rem;
+    color: #6a4bff;
+    margin: 0;
+}
+
+.navbar-search__category {
+    font-size: .8rem;
+    color: rgba(67, 65, 76, 0.65);
+}
+
+.navbar-search__category--works {
+    color: #0084ff;
+}
+
+.navbar-search__category--blog {
+    color: #ff5f9e;
+}
+
+.navbar-search__arrow {
+    margin-left: auto;
+    font-size: 1.1rem;
+    color: #7b61ff;
+}
+
+.navbar-search__link:hover .navbar-search__title {
+    text-decoration: underline;
+}
+
+.navbar-search__all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .65rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #6a4bff;
+}
+
+.navbar-search__all:hover {
+    text-decoration: underline;
+}
+
+.navbar-search__item:last-child .navbar-search__link {
+    border-bottom: none;
+}
+
+.navbar-search__results-empty {
+    font-size: .9rem;
+    color: rgba(67, 65, 76, 0.65);
+    text-align: center;
+    padding: .5rem 0;
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar-search {
+        order: 5;
+        flex: 1 1 100%;
+        max-width: none;
+        margin: 1.5rem 0 0;
+    }
+
+    .navbar-search__dropdown {
+        border-radius: 6px;
+    }
+}
+
 .navbar-people {
     margin: auto 10%;
 }
