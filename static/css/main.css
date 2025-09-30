@@ -28,8 +28,8 @@ nav {
 
 
 img, video {
-    max-width: 100%;
-    height: auto;
+    max-width: 100% !important;
+    height: auto !important;
 }
 
 video {
@@ -1108,6 +1108,13 @@ a:hover {
     text-decoration: none;
     font-weight: 600;
     color: #6a4bff;
+}
+
+.navbar-search__all.is-disabled {
+    pointer-events: none;
+    opacity: 0.4;
+    text-decoration: none;
+    cursor: default;
 }
 
 .navbar-search__all:hover {

@@ -82,6 +82,88 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const navSearchInput = document.getElementById("navbar-search-input");
     if (navSearchInput) {
+        const placeholderPhrases = [
+            "Print design",
+            "Package design",
+            "Branding",
+            "Editorial design",
+            "Creativity",
+            "Exhibition stands design",
+            "Illustrator",
+        ];
+        const TYPE_SPEED = 40;
+        const HOLD_DURATION = 5000;
+        let placeholderPhraseIndex = 0;
+        let placeholderCharIndex = 0;
+        let placeholderTypingTimeout = null;
+        let placeholderHoldTimeout = null;
+        let placeholderAnimating = false;
+
+        const setPlaceholder = (value) => navSearchInput.setAttribute("placeholder", value);
+
+        const stopPlaceholderAnimation = () => {
+            placeholderAnimating = false;
+            window.clearTimeout(placeholderTypingTimeout);
+            window.clearTimeout(placeholderHoldTimeout);
+            placeholderTypingTimeout = null;
+            placeholderHoldTimeout = null;
+        };
+
+        const queuePlaceholderTyping = () => {
+            placeholderTypingTimeout = window.setTimeout(typePlaceholderChar, TYPE_SPEED);
+        };
+
+        const typePlaceholderChar = () => {
+            if (!placeholderAnimating) {
+                return;
+            }
+            const currentPhrase = placeholderPhrases[placeholderPhraseIndex];
+            if (placeholderCharIndex <= currentPhrase.length) {
+                setPlaceholder(currentPhrase.slice(0, placeholderCharIndex));
+                placeholderCharIndex += 1;
+                queuePlaceholderTyping();
+            } else {
+                placeholderHoldTimeout = window.setTimeout(() => {
+                    if (!placeholderAnimating) {
+                        return;
+                    }
+                    placeholderPhraseIndex = (placeholderPhraseIndex + 1) % placeholderPhrases.length;
+                    placeholderCharIndex = 0;
+                    setPlaceholder("");
+                    queuePlaceholderTyping();
+                }, HOLD_DURATION);
+            }
+        };
+
+        const startPlaceholderAnimation = () => {
+            if (placeholderAnimating) {
+                return;
+            }
+            if (document.activeElement === navSearchInput || navSearchInput.value.trim()) {
+                setPlaceholder("");
+                return;
+            }
+            placeholderAnimating = true;
+            placeholderCharIndex = 0;
+            setPlaceholder("");
+            queuePlaceholderTyping();
+        };
+
+        navSearchInput.addEventListener("focus", () => {
+            stopPlaceholderAnimation();
+            setPlaceholder("");
+        });
+
+        navSearchInput.addEventListener("blur", () => {
+            if (!navSearchInput.value.trim()) {
+                startPlaceholderAnimation();
+            } else {
+                setPlaceholder("");
+            }
+        });
+
+        startPlaceholderAnimation();
+
         const dropdown = document.getElementById("navbar-search-dropdown");
         const resultsList = document.getElementById("navbar-search-results");
         const seeAllLink = document.getElementById("navbar-search-see-all");
@@ -177,8 +259,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (seeAllLink) {
-                const suffix = query ? (baseHasQuery ? "&q=" : "?q=") + encodeURIComponent(query) : "";
-                seeAllLink.href = searchBase + suffix;
+                const hasQuery = Boolean(query);
+                if (hasQuery) {
+                    const suffix = (baseHasQuery ? "&q=" : "?q=") + encodeURIComponent(query);
+                    seeAllLink.href = searchBase + suffix;
+                    seeAllLink.classList.remove("is-disabled");
+                    seeAllLink.removeAttribute("aria-disabled");
+                    seeAllLink.removeAttribute("tabindex");
+                } else {
+                    seeAllLink.href = searchBase;
+                    seeAllLink.classList.add("is-disabled");
+                    seeAllLink.setAttribute("aria-disabled", "true");
+                    seeAllLink.setAttribute("tabindex", "-1");
+                }
             }
         };
 
