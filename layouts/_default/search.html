@@ -9,6 +9,7 @@
           <div class="number total" id="search-total">0</div>
         </div>
       </div>
+      <p class="search-lead">Select from the search results and filter by the type of content you want.</p>
       <div class="search-controls">
         <div class="search-filters">
           <label><input type="radio" name="section" value="all" checked> All</label>
@@ -34,6 +35,12 @@
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 <script>
 (function() {
+  const paramsInit = new URLSearchParams(window.location.search);
+  if (!paramsInit.get('q')) {
+    window.location.replace('/');
+    return;
+  }
+
   const resultsEl = document.getElementById('search-results');
   const filterRadios = document.querySelectorAll('input[name="section"]');
   const titleEl = document.getElementById('search-title');
@@ -66,7 +73,7 @@
       showMessage('Start your search from the navigation bar to see results here.');
       return;
     }
-    if (titleEl) titleEl.textContent = currentQuery;
+    if (titleEl) titleEl.textContent = `Search results for: ${currentQuery}`;
     if (totalEl) {
       totalEl.textContent = String(results.length);
       totalEl.setAttribute('aria-label', `${results.length} result${results.length===1?'':'s'} shown`);
@@ -81,7 +88,8 @@
       const isWork = item.section === 'works';
       const sectionLabel = isWork ? 'Work' : 'Article';
       const card = document.createElement('div');
-      card.className = 'card1';
+      const cardVariant = isWork ? 'card1--works' : 'card1--blog';
+      card.className = `card1 ${cardVariant}`;
       card.setAttribute('role', 'listitem');
 
       const rawTags = Array.isArray(item.tags) ? item.tags : [];
@@ -187,13 +195,20 @@
   align-items: center;
 }
 
+.search-lead {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.5;
+}
+
 .search-controls {
   display: inline-flex;
   gap: 1rem;
   align-items: center;
   flex-wrap: wrap;
   padding: 0.75rem 1rem;
-  border-radius: 12px;
+  border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(12, 7, 35, 0.35);
   backdrop-filter: blur(8px);
@@ -256,6 +271,24 @@
   font-size: 0.95rem;
   color: rgba(15, 9, 51, 0.55);
   padding: 3rem 1rem;
+}
+
+.card1--works .card1-bottom {
+  background: color(display-p3 0.129 0.561 1.000);
+}
+
+.card1--blog .card1-bottom {
+  background: color(display-p3 0.055 0.604 0.447);
+}
+
+.card1--works .card1-cta,
+.card1--blog .card1-cta {
+  color: color(display-p3 0.964 1.000 0.247) !important;
+}
+
+.card1--blog .card1-cta:hover,
+.card1--works .card1-cta:hover {
+  color: #fff !important;
 }
 
 @media (max-width: 1100px) {

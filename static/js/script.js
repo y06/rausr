@@ -218,18 +218,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     link.className = "navbar-search__link";
                     link.href = item.url;
 
-                    const icon = document.createElement("span");
                     const sectionClass = item.section === "works" ? "works" : "blog";
-                    icon.className = "navbar-search__icon navbar-search__icon--" + sectionClass;
+                    const thumb = document.createElement("span");
+                    thumb.className = "navbar-search__thumb";
 
-                    const iconImg = document.createElement("img");
-                    iconImg.className = "navbar-search__icon-img";
-                    iconImg.src = item.section === "works"
-                        ? "/svg/avocado-purple.svg"
-                        : "/svg/avocado-green.svg";
-                    iconImg.alt = item.section === "works" ? "Works" : "Articles";
-
-                    icon.appendChild(iconImg);
+                    if (item.image) {
+                        const thumbImg = document.createElement("img");
+                        thumbImg.className = "navbar-search__thumb-img";
+                        thumbImg.src = item.image;
+                        thumbImg.alt = item.title || "";
+                        thumb.appendChild(thumbImg);
+                    } else {
+                        thumb.classList.add("navbar-search__thumb--placeholder", "navbar-search__thumb--" + sectionClass);
+                        thumb.textContent = sectionClass === "works" ? "W" : "A";
+                    }
 
                     const meta = document.createElement("span");
                     meta.className = "navbar-search__meta";
@@ -238,9 +240,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     title.className = "navbar-search__title";
                     title.textContent = item.title;
 
-                    const category = document.createElement("span");
+                    const category = document.createElement("a");
                     category.className = "navbar-search__category navbar-search__category--" + sectionClass;
                     category.textContent = "in " + (item.section === "blog" ? "Articles" : "Works");
+                    category.href = item.section === "blog" ? "/blog/" : "/works/";
+                    category.setAttribute("role", "link");
 
                     const arrow = document.createElement("span");
                     arrow.className = "navbar-search__arrow";
@@ -249,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     meta.appendChild(title);
                     meta.appendChild(category);
 
-                    link.appendChild(icon);
+                    link.appendChild(thumb);
                     link.appendChild(meta);
                     link.appendChild(arrow);
 
