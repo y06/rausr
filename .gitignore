@@ -3,3 +3,5 @@
 github.com
 github.com.pub
 *~
+static/.DS_Store
+static/images/.DS_Store
