@@ -240,11 +240,23 @@ document.addEventListener("DOMContentLoaded", function () {
                     title.className = "navbar-search__title";
                     title.textContent = item.title;
 
-                    const category = document.createElement("a");
+                    const category = document.createElement("span");
                     category.className = "navbar-search__category navbar-search__category--" + sectionClass;
                     category.textContent = "in " + (item.section === "blog" ? "Articles" : "Works");
-                    category.href = item.section === "blog" ? "/blog/" : "/works/";
+                    const categoryHref = item.section === "blog" ? "/blog/" : "/works/";
+                    category.tabIndex = 0;
                     category.setAttribute("role", "link");
+                    const navigateToCategory = (event) => {
+                        event.stopPropagation();
+                        event.preventDefault();
+                        window.location.href = categoryHref;
+                    };
+                    category.addEventListener("click", navigateToCategory);
+                    category.addEventListener("keydown", (event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                            navigateToCategory(event);
+                        }
+                    });
 
                     const arrow = document.createElement("span");
                     arrow.className = "navbar-search__arrow";

@@ -18,6 +18,9 @@
         </div>
       </div>
     </div>
+    <div class="header-illustration">
+      <img src="{{ "svg/header/search.svg" | relURL }}" alt="Search Illustration">
+    </div>
   </section>
 
   <section class="card-container">
@@ -73,7 +76,10 @@
       showMessage('Start your search from the navigation bar to see results here.');
       return;
     }
-    if (titleEl) titleEl.textContent = `Search results for: ${currentQuery}`;
+    if (titleEl) {
+      const queryHtml = htmlEscape(currentQuery);
+      titleEl.innerHTML = `Search results for: <span class="search-query">${queryHtml}</span>`;
+    }
     if (totalEl) {
       totalEl.textContent = String(results.length);
       totalEl.setAttribute('aria-label', `${results.length} result${results.length===1?'':'s'} shown`);
@@ -177,15 +183,15 @@
 
 <style>
 .header-search {
-  background: color(display-p3 0.0706 0.0471 0.1608);
-  color: #fff;
+  background-color: color(display-p3 0.4078 0.2824 1);
+  color: color(display-p3 0.831 1.000 0.807);
   margin: 0 32px 3.5rem 32px;
   border-radius: 12px;
   padding: 48px 60px;
 }
 
 .header-search .header-content {
-  max-width: 680px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -198,7 +204,7 @@
 .search-lead {
   margin: 0;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.78);
+  color: color(display-p3 0.831 1.000 0.807);
   line-height: 1.5;
 }
 
@@ -212,6 +218,10 @@
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(12, 7, 35, 0.35);
   backdrop-filter: blur(8px);
+}
+
+.search-query {
+  color: #ffffff;
 }
 
 .search-filters {
@@ -295,6 +305,9 @@
   .header-search {
     margin: 0 24px 3rem 24px;
     padding: 40px 48px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .search-results-section {
@@ -306,6 +319,7 @@
   .header-search {
     margin: 0 20px 2.5rem 20px;
     padding: 36px;
+    align-items: center;
   }
 
   .search-controls {
@@ -322,6 +336,7 @@
   .header-search {
     margin: 0 16px 2.5rem 16px;
     padding: 32px 28px;
+    align-items: center;
   }
 
   .search-results-section {
