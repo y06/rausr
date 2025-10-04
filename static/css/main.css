@@ -1190,6 +1190,72 @@ a:hover {
     .navbar-search__dropdown {
         border-radius: 6px;
     }
+
+    .navbar-brand,
+    .navbar-toggler,
+    .nav-socials,
+    .navbar-collapse {
+        transition: opacity 200ms ease, transform 220ms ease, max-width 200ms ease, max-height 200ms ease, margin 200ms ease;
+        will-change: opacity, transform;
+    }
+
+    .navbar-brand {
+        overflow: hidden;
+    }
+
+    .navbar--search-only {
+        margin: 0.75rem auto 1.5rem;
+    }
+
+    .navbar--search-only .navbar-brand,
+    .navbar--search-only .navbar-toggler {
+        opacity: 0;
+        transform: translateY(-12px);
+        pointer-events: none;
+        position: absolute;
+    }
+
+    .navbar--search-only .navbar-brand {
+        margin: 0 !important;
+        max-width: 0;
+    }
+
+    .navbar--search-only .navbar-brand img {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 200ms ease, transform 220ms ease;
+    }
+
+    .navbar--search-only .navbar-toggler {
+        margin: 0;
+        max-width: 0;
+    }
+
+    .navbar--search-only .nav-socials,
+    .navbar--search-only .navbar-collapse {
+        opacity: 0;
+        transform: translateY(-16px);
+        pointer-events: none;
+    }
+
+    .navbar--search-only .nav-socials {
+        margin: 0;
+        max-height: 0;
+    }
+
+    .navbar--search-only .navbar-search {
+        order: 1;
+        flex: 1 1 auto;
+        margin: 0;
+    }
+
+    .container-fluid--search-only {
+        box-shadow: 0 10px 30px rgba(67, 65, 76, 0.08);
+    }
+
+    .container-fluid--search-only .navbar {
+        margin: 0.75rem auto 1.5rem;
+    }
 }
 
 .navbar-people {
@@ -2352,12 +2418,14 @@ footer .nav-item {
         width: 100%;
         height: auto;
         background: white;
+        transition: box-shadow 160ms ease;
     }
 
     .navbar {
     margin: 1.5rem auto 2rem;
     z-index: 1000;
     background-color: white;
+    transition: margin 160ms ease;
     }
 
     .navbar-nav {
@@ -2386,6 +2454,7 @@ footer .nav-item {
     }
 
     .navbar-brand-footer {
+    margin: auto !important;
     margin-bottom: 1rem !important;
     }
 

@@ -349,4 +349,168 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    const navbar = document.querySelector(".navbar");
+    const navbarContainer = navbar ? navbar.closest(".container-fluid") : null;
+    const navbarCollapse = document.getElementById("navbarSupportedContent");
+    const navbarToggle = document.getElementById("menuToggle");
+    const navbarSearchDropdown = document.getElementById("navbar-search-dropdown");
+
+    if (navbar && navbarContainer && navbarCollapse && navbarToggle) {
+        const mobileQuery = window.matchMedia("(max-width: 991px)");
+        const SCROLL_DELTA = 32;
+        const ACTIVATE_OFFSET = 72;
+        let lastScrollY = window.scrollY;
+        let directionAnchorY = window.scrollY;
+        let lastDirection = 0;
+        let rafId = null;
+        let compactActive = false;
+        let layoutSyncPending = false;
+        let searchLockActive = false;
+
+        const syncAnchorsNow = (value = window.scrollY) => {
+            lastScrollY = value;
+            directionAnchorY = value;
+            lastDirection = 0;
+        };
+
+        const isSearchEngaged = () => {
+            if (!navSearchInput) {
+                return false;
+            }
+            if (document.activeElement === navSearchInput) {
+                return true;
+            }
+            if (navbarSearchDropdown && !navbarSearchDropdown.hasAttribute("hidden")) {
+                return true;
+            }
+            return false;
+        };
+
+        const setCompactState = (shouldActivate) => {
+            if (compactActive === shouldActivate) {
+                syncAnchorsNow();
+                return;
+            }
+            compactActive = shouldActivate;
+            navbar.classList.toggle("navbar--search-only", shouldActivate);
+            navbarContainer.classList.toggle("container-fluid--search-only", shouldActivate);
+            layoutSyncPending = true;
+            window.requestAnimationFrame(() => {
+                syncAnchorsNow();
+                layoutSyncPending = false;
+            });
+        };
+
+        const resetState = (currentY) => {
+            if (compactActive) {
+                setCompactState(false);
+            } else {
+                syncAnchorsNow(currentY);
+            }
+        };
+
+        const evaluateNavbarState = (forceDefault = false) => {
+            const currentY = window.scrollY;
+
+            if (layoutSyncPending) {
+                lastScrollY = currentY;
+                return;
+            }
+
+            if (forceDefault || !mobileQuery.matches) {
+                resetState(currentY);
+                return;
+            }
+
+            if (navbarCollapse.classList.contains("show")) {
+                resetState(currentY);
+                return;
+            }
+
+            if (searchLockActive || isSearchEngaged()) {
+                syncAnchorsNow(currentY);
+                return;
+            }
+
+            if (currentY <= ACTIVATE_OFFSET) {
+                resetState(currentY);
+                return;
+            }
+
+            const delta = currentY - lastScrollY;
+            const direction = delta > 0 ? 1 : delta < 0 ? -1 : 0;
+
+            if (direction === 0) {
+                lastScrollY = currentY;
+                return;
+            }
+
+            if (direction !== lastDirection) {
+                directionAnchorY = lastScrollY;
+                lastDirection = direction;
+            }
+
+            if (direction > 0 && !compactActive && currentY - directionAnchorY > SCROLL_DELTA) {
+                setCompactState(true);
+                lastScrollY = currentY;
+                return;
+            }
+
+            if (direction < 0 && compactActive && directionAnchorY - currentY > SCROLL_DELTA) {
+                setCompactState(false);
+                lastScrollY = currentY;
+                return;
+            }
+
+            lastScrollY = currentY;
+        };
+
+        const requestEvaluation = (forceDefault = false) => {
+            if (forceDefault) {
+                if (rafId) {
+                    cancelAnimationFrame(rafId);
+                    rafId = null;
+                }
+                evaluateNavbarState(true);
+                return;
+            }
+
+            if (rafId) {
+                return;
+            }
+
+            rafId = window.requestAnimationFrame(() => {
+                evaluateNavbarState(false);
+                rafId = null;
+            });
+        };
+
+        window.addEventListener("scroll", () => requestEvaluation(false), { passive: true });
+        window.addEventListener("resize", () => requestEvaluation(true));
+
+        if (typeof mobileQuery.addEventListener === "function") {
+            mobileQuery.addEventListener("change", () => requestEvaluation(true));
+        } else if (typeof mobileQuery.addListener === "function") {
+            mobileQuery.addListener(() => requestEvaluation(true));
+        }
+
+        const collapseObserver = new MutationObserver(() => requestEvaluation(true));
+        collapseObserver.observe(navbarCollapse, { attributes: true, attributeFilter: ["class"] });
+
+        if (navSearchInput) {
+            navSearchInput.addEventListener("focus", () => {
+                searchLockActive = true;
+                setCompactState(false);
+            });
+            navSearchInput.addEventListener("blur", () => {
+                searchLockActive = false;
+                requestEvaluation(true);
+            });
+        }
+
+        navbarToggle.addEventListener("click", () => window.requestAnimationFrame(() => evaluateNavbarState(true)));
+
+        evaluateNavbarState(true);
+    }
 });
