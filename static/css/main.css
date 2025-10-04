@@ -302,6 +302,10 @@ h5 {
     padding: 20px;
 }
 
+.container-tag-list .tag-filter__indicator {
+    all: unset;
+}
+
 .tag-list-wrapper {
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -930,9 +934,9 @@ a:hover {
 
 .navbar-search {
     position: relative;
-    flex: 1 1 320px;
-    max-width: 460px;
-    margin: 0 2rem 0 1rem;
+    flex: 2 1 520px;
+    max-width: 720px;
+    margin: 0 2.5rem 0 1.5rem;
 }
 
 .navbar-search,
@@ -1180,7 +1184,7 @@ a:hover {
         order: 5;
         flex: 1 1 100%;
         max-width: none;
-        margin: 1.5rem 0 0;
+        margin: 1.0rem 0 0;
     }
 
     .navbar-search__dropdown {
@@ -2376,8 +2380,8 @@ footer .nav-item {
     }
 
     .navbar-brand {
-    justify-content: center !important;
-    margin: auto !important;
+    margin: 0 2rem !important;
+    justify-content: flex-start !important;
     align-items: center !important;
     }
 

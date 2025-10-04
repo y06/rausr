@@ -18,37 +18,39 @@
   </section>
 
   <div class="container-tag-list search-filter-tags">
-    <div class="tag-list-wrapper">
-      <ul class="tag-list">
-        <li>
-          <label class="tag-filter tag-filter--all">
-            <input type="radio" name="section" value="all" checked>
-            <span class="tag-filter__body">
-              <span class="tag-filter__indicator"></span>
-              <span class="tag-filter__text">All</span>
-            </span>
-          </label>
-        </li>
-        <li>
-          <label class="tag-filter tag-filter--works">
-            <input type="radio" name="section" value="works">
-            <span class="tag-filter__body">
-              <span class="tag-filter__indicator"></span>
-              <span class="tag-filter__text">Works</span>
-            </span>
-          </label>
-        </li>
-        <li>
-          <label class="tag-filter tag-filter--blog">
-            <input type="radio" name="section" value="blog">
-            <span class="tag-filter__body">
-              <span class="tag-filter__indicator"></span>
-              <span class="tag-filter__text">Articles</span>
-            </span>
-          </label>
-        </li>
-      </ul>
-    </div>
+    <button class="tag-scroll left">←</button>
+      <div class="tag-list-wrapper">
+        <ul class="tag-list">
+          <li>
+            <label class="tag-filter tag-filter--all">
+              <input type="radio" name="section" value="all" checked>
+              <span class="tag-filter__body">
+                <div class="tag-filter__text">
+                  <span class="tag-filter__indicator"></span>All
+                </div>
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="tag-filter tag-filter--works">
+              <input type="radio" name="section" value="works">
+              <span class="tag-filter__body">
+                <div class="tag-filter__text"><span class="tag-filter__indicator"></span>Works
+                </div>
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="tag-filter tag-filter--blog">
+              <input type="radio" name="section" value="blog">
+              <span class="tag-filter__body">
+                <div class="tag-filter__text">Articles</div>
+              </span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    <button class="tag-scroll right">→</button>
   </div>
 
   <section class="card-container">
@@ -256,10 +258,6 @@
   --filter-bg-active: rgba(230, 228, 245, 0.55);
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.55rem 1.25rem;
-  border-radius: 10px;
-  border: 1.5px solid var(--filter-border);
   background: var(--filter-bg);
   color: var(--filter-color);
   transition: all 0.2s ease;
@@ -268,10 +266,6 @@
 
 
 .tag-filter__indicator {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 2px solid currentColor;
   background: radial-gradient(circle, transparent 45%, transparent 48%, currentColor 48%, currentColor 100%);
   transition: all 0.2s ease;
 }
@@ -313,14 +307,6 @@
   --filter-bg-active: rgba(230, 228, 245, 0.55);
 }
 
-.tag-filter__indicator {
-  pointer-events: none;
-}
-
-.tag-filter input:focus-visible + .tag-filter__body {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
-}
 
 .search-card-container {
   width: 100%;
