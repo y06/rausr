@@ -56,6 +56,10 @@
   <section class="card-container">
     <div id="search-results" class="card-container search-card-container" role="list" aria-label="Search results"></div>
   </section>
+
+  <nav class="pagination" id="search-pagination" hidden>
+    <ul class="pagination-list" id="search-pagination-list"></ul>
+  </nav>
 </main>
 
 {{ partial "featured-content.html" . }}
@@ -78,8 +82,16 @@
   const filterRadios = document.querySelectorAll('input[name="section"]');
   const titleEl = document.getElementById('search-title');
   const totalEl = document.getElementById('search-total');
+  const paginationEl = document.getElementById('search-pagination');
+  const paginationListEl = document.getElementById('search-pagination-list');
+  const PAGE_SIZE = 16;
 
-  let fuse, data = [], sectionFilter = 'all', currentQuery = '';
+  let fuse,
+      data = [],
+      sectionFilter = 'all',
+      currentQuery = '',
+      currentResults = [],
+      currentPage = 1;
 
   const htmlEscape = (value) => String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -88,39 +100,81 @@
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 
-  function render(results) {
+  const hidePagination = () => {
+    if (paginationEl) {
+      paginationEl.setAttribute('hidden', 'hidden');
+    }
+    if (paginationListEl) {
+      paginationListEl.innerHTML = '';
+    }
+  };
+
+  const showPagination = () => {
+    if (paginationEl) {
+      paginationEl.removeAttribute('hidden');
+    }
+  };
+
+  const renderEmpty = (message) => {
     resultsEl.innerHTML = '';
-    const showMessage = (message) => {
-      const empty = document.createElement('div');
-      empty.className = 'search-empty';
-      empty.setAttribute('role', 'status');
-      empty.textContent = message;
-      resultsEl.appendChild(empty);
-    };
+    hidePagination();
+    const empty = document.createElement('div');
+    empty.className = 'search-empty';
+    empty.setAttribute('role', 'status');
+    empty.textContent = message;
+    resultsEl.appendChild(empty);
+  };
+
+  function render(results) {
+    currentResults = results;
+    currentPage = 1;
+
     if (!currentQuery) {
       if (titleEl) titleEl.textContent = 'Search';
       if (totalEl) {
         totalEl.textContent = '0';
         totalEl.setAttribute('aria-label', '0 results shown');
       }
-      showMessage('Start your search from the navigation bar to see results here.');
+      renderEmpty('Start your search from the navigation bar to see results here.');
       return;
     }
+
     if (titleEl) {
       const queryHtml = htmlEscape(currentQuery);
       titleEl.innerHTML = `Search results for: <span class="search-query">${queryHtml}</span>`;
     }
+
     if (totalEl) {
       totalEl.textContent = String(results.length);
-      totalEl.setAttribute('aria-label', `${results.length} result${results.length===1?'':'s'} shown`);
+      totalEl.setAttribute('aria-label', `${results.length} result${results.length === 1 ? '' : 's'} shown`);
     }
+
     if (!results.length) {
-      showMessage(`No results for "${currentQuery}"`);
+      renderEmpty(`No results for "${currentQuery}"`);
       return;
     }
+
+    renderPage(1);
+  }
+
+  function renderPage(pageNumber) {
+    const total = currentResults.length;
+    if (!total) {
+      renderEmpty(`No results for "${currentQuery}"`);
+      return;
+    }
+
+    const totalPages = Math.ceil(total / PAGE_SIZE);
+    const safeTotalPages = Math.max(totalPages, 1);
+    const targetPage = Math.min(Math.max(pageNumber, 1), safeTotalPages);
+    currentPage = targetPage;
+
+    const startIndex = (targetPage - 1) * PAGE_SIZE;
+    const pageSlice = currentResults.slice(startIndex, startIndex + PAGE_SIZE);
+
     const frag = document.createDocumentFragment();
-    results.forEach(r => {
-      const item = r.item || r; // Fuse returns {item, score}; fallback if not searched yet
+    pageSlice.forEach((entry) => {
+      const item = entry.item || entry; // Fuse returns {item, score}; fallback if not searched yet
       const isWork = item.section === 'works';
       const sectionLabel = isWork ? 'Work' : 'Article';
       const card = document.createElement('div');
@@ -166,7 +220,108 @@
 
       frag.appendChild(card);
     });
+
+    resultsEl.innerHTML = '';
     resultsEl.appendChild(frag);
+
+    updatePaginationControls(safeTotalPages);
+  }
+
+  function updatePaginationControls(totalPages) {
+    if (!paginationEl || !paginationListEl) {
+      return;
+    }
+
+    if (!totalPages || totalPages <= 1) {
+      hidePagination();
+      return;
+    }
+
+    paginationListEl.innerHTML = '';
+    showPagination();
+
+    const scrollToResultsTop = () => {
+      resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    const addButton = (label, targetPage, { disabled = false, active = false, ariaLabel = '' } = {}) => {
+      const item = document.createElement('li');
+      item.className = 'pagination-item';
+      if (disabled) {
+        item.classList.add('disabled');
+      }
+
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'pagination-link';
+      button.textContent = label;
+      if (ariaLabel) {
+        button.setAttribute('aria-label', ariaLabel);
+      }
+
+      if (disabled) {
+        button.disabled = true;
+      } else {
+        button.addEventListener('click', () => {
+          if (targetPage === currentPage) {
+            return;
+          }
+          renderPage(targetPage);
+          scrollToResultsTop();
+        });
+      }
+
+      if (active) {
+        button.classList.add('active');
+        button.setAttribute('aria-current', 'page');
+      }
+
+      item.appendChild(button);
+      paginationListEl.appendChild(item);
+    };
+
+    const addEllipsis = () => {
+      const item = document.createElement('li');
+      item.className = 'pagination-item disabled';
+      const span = document.createElement('span');
+      span.className = 'pagination-link';
+      span.textContent = '...';
+      span.setAttribute('aria-hidden', 'true');
+      item.appendChild(span);
+      paginationListEl.appendChild(item);
+    };
+
+    addButton('←', currentPage - 1, {
+      disabled: currentPage === 1,
+      ariaLabel: 'Previous page',
+    });
+
+    const pagesToShow = new Set([1, totalPages]);
+    for (let i = currentPage - 1; i <= currentPage + 1; i += 1) {
+      if (i > 1 && i < totalPages) {
+        pagesToShow.add(i);
+      }
+    }
+
+    const orderedPages = Array.from(pagesToShow).sort((a, b) => a - b);
+    let lastPageRendered = 0;
+    orderedPages.forEach((page) => {
+      if (page - lastPageRendered > 1) {
+        addEllipsis();
+      }
+
+      addButton(String(page), page, {
+        active: page === currentPage,
+        ariaLabel: `Page ${page}`,
+      });
+
+      lastPageRendered = page;
+    });
+
+    addButton('→', currentPage + 1, {
+      disabled: currentPage === totalPages,
+      ariaLabel: 'Next page',
+    });
   }
 
   function applyFilter(items) {
@@ -183,7 +338,7 @@
       return;
     }
 
-    const found = fuse.search(currentQuery, { limit: 50 });
+    const found = fuse.search(currentQuery);
     render(applyFilter(found));
   }
 
