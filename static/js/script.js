@@ -358,7 +358,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (navbar && navbarContainer && navbarCollapse && navbarToggle) {
         const mobileQuery = window.matchMedia("(max-width: 991px)");
-        const SCROLL_DELTA = 32;
+        const DOWN_SCROLL_HIDE_DISTANCE = 120; // require more downward travel before hiding
+        const UP_SCROLL_REVEAL_DISTANCE = 180; // and a longer upward travel before restoring the navbar
         const ACTIVATE_OFFSET = 72;
         let lastScrollY = window.scrollY;
         let directionAnchorY = window.scrollY;
@@ -451,13 +452,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 lastDirection = direction;
             }
 
-            if (direction > 0 && !compactActive && currentY - directionAnchorY > SCROLL_DELTA) {
+            if (direction > 0 && !compactActive && currentY - directionAnchorY > DOWN_SCROLL_HIDE_DISTANCE) {
                 setCompactState(true);
                 lastScrollY = currentY;
                 return;
             }
 
-            if (direction < 0 && compactActive && directionAnchorY - currentY > SCROLL_DELTA) {
+            if (direction < 0 && compactActive && directionAnchorY - currentY > UP_SCROLL_REVEAL_DISTANCE) {
                 setCompactState(false);
                 lastScrollY = currentY;
                 return;
@@ -487,12 +488,12 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         window.addEventListener("scroll", () => requestEvaluation(false), { passive: true });
-        window.addEventListener("resize", () => requestEvaluation(true));
+        window.addEventListener("resize", () => requestEvaluation(false));
 
         if (typeof mobileQuery.addEventListener === "function") {
-            mobileQuery.addEventListener("change", () => requestEvaluation(true));
+            mobileQuery.addEventListener("change", () => requestEvaluation(false));
         } else if (typeof mobileQuery.addListener === "function") {
-            mobileQuery.addListener(() => requestEvaluation(true));
+            mobileQuery.addListener(() => requestEvaluation(false));
         }
 
         const collapseObserver = new MutationObserver(() => requestEvaluation(true));
