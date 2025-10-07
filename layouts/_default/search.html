@@ -5,6 +5,10 @@
       <div class="h1container">
         <h1 id="search-title">Search</h1>
         <div class="counter">
+          <span class="word showinglist">showing</span>
+          <div class="number total showinglist" id="search-showing" aria-label="Showing results 0 to 0">0-0</div>
+        </div>
+        <div class="counter">
           <span class="word">total</span>
           <div class="number total" id="search-total">0</div>
         </div>
@@ -54,7 +58,7 @@
   </div>
 
   <section class="card-container">
-    <div id="search-results" class="card-container search-card-container" role="list" aria-label="Search results"></div>
+    <div id="search-results" class="search-card-container" role="list" aria-label="Search results"></div>
   </section>
 
   <nav class="pagination" id="search-pagination" hidden>
@@ -82,9 +86,10 @@
   const filterRadios = document.querySelectorAll('input[name="section"]');
   const titleEl = document.getElementById('search-title');
   const totalEl = document.getElementById('search-total');
+  const showingEl = document.getElementById('search-showing');
   const paginationEl = document.getElementById('search-pagination');
   const paginationListEl = document.getElementById('search-pagination-list');
-  const PAGE_SIZE = 16;
+  const PAGE_SIZE = 12;
 
   let fuse,
       data = [],
@@ -115,9 +120,25 @@
     }
   };
 
+  const updateShowingRange = (start, end, total) => {
+    if (!showingEl) {
+      return;
+    }
+
+    if (!total || start <= 0 || end <= 0) {
+      showingEl.textContent = '0-0';
+      showingEl.setAttribute('aria-label', 'Showing results 0 to 0');
+      return;
+    }
+
+    showingEl.textContent = `${start}-${end}`;
+    showingEl.setAttribute('aria-label', `Showing results ${start} to ${end}`);
+  };
+
   const renderEmpty = (message) => {
     resultsEl.innerHTML = '';
     hidePagination();
+    updateShowingRange(0, 0, 0);
     const empty = document.createElement('div');
     empty.className = 'search-empty';
     empty.setAttribute('role', 'status');
@@ -135,6 +156,7 @@
         totalEl.textContent = '0';
         totalEl.setAttribute('aria-label', '0 results shown');
       }
+      updateShowingRange(0, 0, 0);
       renderEmpty('Start your search from the navigation bar to see results here.');
       return;
     }
@@ -171,6 +193,8 @@
 
     const startIndex = (targetPage - 1) * PAGE_SIZE;
     const pageSlice = currentResults.slice(startIndex, startIndex + PAGE_SIZE);
+    const pageStart = pageSlice.length ? startIndex + 1 : 0;
+    const pageEnd = pageSlice.length ? startIndex + pageSlice.length : 0;
 
     const frag = document.createDocumentFragment();
     pageSlice.forEach((entry) => {
@@ -224,6 +248,7 @@
     resultsEl.innerHTML = '';
     resultsEl.appendChild(frag);
 
+    updateShowingRange(pageStart, pageEnd, total);
     updatePaginationControls(safeTotalPages);
   }
 
@@ -251,18 +276,19 @@
         item.classList.add('disabled');
       }
 
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'pagination-link';
-      button.textContent = label;
+      const element = document.createElement(disabled ? 'span' : 'a');
+      element.className = 'pagination-link';
+      element.textContent = label;
       if (ariaLabel) {
-        button.setAttribute('aria-label', ariaLabel);
+        element.setAttribute('aria-label', ariaLabel);
       }
 
       if (disabled) {
-        button.disabled = true;
+        element.setAttribute('aria-disabled', 'true');
       } else {
-        button.addEventListener('click', () => {
+        element.href = '#search-results';
+        element.addEventListener('click', (event) => {
+          event.preventDefault();
           if (targetPage === currentPage) {
             return;
           }
@@ -272,23 +298,16 @@
       }
 
       if (active) {
-        button.classList.add('active');
-        button.setAttribute('aria-current', 'page');
+        element.classList.add('active');
+        element.setAttribute('aria-current', 'page');
       }
 
-      item.appendChild(button);
+      item.appendChild(element);
       paginationListEl.appendChild(item);
     };
 
     const addEllipsis = () => {
-      const item = document.createElement('li');
-      item.className = 'pagination-item disabled';
-      const span = document.createElement('span');
-      span.className = 'pagination-link';
-      span.textContent = '...';
-      span.setAttribute('aria-hidden', 'true');
-      item.appendChild(span);
-      paginationListEl.appendChild(item);
+      addButton('...', currentPage, { disabled: true });
     };
 
     addButton('←', currentPage - 1, {
@@ -464,6 +483,8 @@
 
 
 .search-card-container {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   gap: 60px 20px;
@@ -517,7 +538,8 @@
 @media (max-width: 1100px) {
 
   .search-filter-tags {
-    margin: 0 24px 2.75rem 24px;
+    margin: 1rem auto 2rem auto;
+    padding: 1rem;
   }
 
 @media (max-width: 820px) {
@@ -530,7 +552,12 @@
 @media (max-width: 575px) {
 
   .search-filter-tags {
-    margin: 0 16px 2.2rem 16px;
+    margin: 1rem auto 2rem auto;
+    padding: 1rem;
+  }
+
+  .search-card-container {
+    gap: 3rem 0.75rem;
   }
 
 }
