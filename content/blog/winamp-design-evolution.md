@@ -3,7 +3,7 @@ title: "Winamp and the Evolution of Media Player Design"
 author: "rausr"
 date: 2025-07-24
 description: "From pixelated skins to minimalist streams. How music players reflect our changing digital habits."
-tags: ["reports", "trends"]
+tags: ["reports", "trends", "history"]
 source: ["https://www.winamp.com", "https://plexamp.com", "https://skins.webamp.org", "https://spotify.design", "https://uxdesign.cc"]
 draft: false
 preview_image: "/images/articles/winamp-and-friends-a-history-of-listening/winamp-and-friends-a-history-of-listening-1.jpg"

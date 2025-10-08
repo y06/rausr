@@ -2,7 +2,7 @@
 title: "From CRT to OLED: Choosing the Right Display for Graphic Design"
 description: "Is IPS still the king? A look into monitor technology for designers—from CRT nostalgia to modern-day panels and their impact on your work and your eyes."
 date: 2025-09-17
-tags: ["hardware", "graphic design"]
+tags: ["hardware", "graphic design", "history"]
 author: "rausr"
 draft: false
 preview_image: /images/articles/display-evolution/display-evolution-8.jpg

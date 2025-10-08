@@ -2,7 +2,7 @@
 title: "UX&UI in the Early Days: Web Design in the 80s and 90s"
 description: "Before Figma, Sketch, or even CSS — how did designers approach UX and interface design on early websites? Tools, processes, and pioneers who shaped the web’s visual beginnings."
 date: 2025-10-01
-tags: ["ux-ui", "software"]
+tags: ["ux-ui", "software", "history"]
 author: "rausr"
 draft: false
 preview_image: /images/articles/ux-and-webdesign-in-early-days/ux-and-webdesign-in-early-days-10.jpg
