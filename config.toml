@@ -1,12 +1,12 @@
 baseURL = "https://rausr.com/"
 enableRobotsTXT = true
 languageCode = "en-us"
-title = "Random User Recipes"
+title = "We Design/Cook Random User Recipes, Yummy!"
 googleAnalytics = "UA-168547988-1"
 
 [params]
     author = "rausr"
-    description = "Graphic design kitchen and creative blog – trends, techniques, and marketing insights."
+    description = "A graphic design studio and creative blog exploring trends, techniques, case studies, and marketing insights."
     accent = "#43414C"
     showBorder = false
     fonts = ["Satoshi", "Inter"]

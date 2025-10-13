@@ -83,10 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const navSearchInput = document.getElementById("navbar-search-input");
     if (navSearchInput) {
         const placeholderPhrases = [
-            "Print design",
-            "Package design",
-            "Branding",
-            "Editorial design",
+            "Print design, yummy",
+            "Package design, yum yum!",
+            "Branding, mmm, delicious!",
+            "Editorial design, so fresh!",
             "Creativity",
             "Exhibition stands design",
             "Illustrator",
