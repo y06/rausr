@@ -2,7 +2,7 @@
 title: "NP Toiletries Reseller Company Exhibition Stand 2023"
 date: 2024-12-25
 description: "Exhibition stand design for a toiletries reseller company"
-tags: ["print design", "dtp", "exhibition stands design", "3d-visualisation"]
+tags: ["print design", "dtp", "exhibition stands design", "3d-modeling"]
 draft: false
 preview_image: "/images/np-toiletries-reseller-exhibition-stand-design-visual-and-production-2023/NP-exhibition-stand-design-preview.jpg"
 header_image: "/images/np-toiletries-reseller-exhibition-stand-design-visual-and-production-2023/NP-exhibition-stand-design-preview.jpg"

@@ -2,7 +2,7 @@
 title: "Collection of Various Illustrations"
 date: 2020-09-24
 description: "A collection of various illustrations in different styles and techniques."
-tags: ["illustration", "3d-visualisation"]
+tags: ["illustration", "3d-modeling"]
 draft: false
 preview_image: "/images/preview/preview-12.png"
 header_image: "/images/preview/preview-12.png"

@@ -2,7 +2,7 @@
 title: "Takeda Exhibition Stand Design for Smaller Pharma Events"
 date: 2018-10-22
 description: "Modular exhibition stand design for Takeda with nature-inspired imagery and clean DTP layout."
-tags: ["print design", "dtp", "3d-visualisation", "exhibition stands design"]
+tags: ["print design", "dtp", "3d-modeling", "exhibition stands design"]
 draft: false
 preview_image: "/images/preview/preview-11.jpg"
 header_image: "/images/preview/preview-11.jpg"

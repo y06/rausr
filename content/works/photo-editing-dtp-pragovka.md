@@ -2,7 +2,7 @@
 title: "Pragovka Art District and Their Company Exhibition Stand"
 date: 2020-05-31
 description: "Photo editing and print DTP work for a cultural institution’s event presence."
-tags: ["print design", "photo editing", "3d-visualisation", "exhibition stands design"]
+tags: ["print design", "photo editing", "3d-modeling", "exhibition stands design"]
 draft: false
 preview_image: "/images/content-photo-editing-dtp-pragovka/content-photo-editing-dtp-pragovka-preview.jpg"
 header_image: "/images/content-photo-editing-dtp-pragovka/content-photo-editing-dtp-pragovka-preview.jpg"

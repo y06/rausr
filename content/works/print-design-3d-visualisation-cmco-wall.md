@@ -2,7 +2,7 @@
 title: "8-Meter-Long Textile Exhibition Wall for Crane Supplier CMCO"
 date: 2019-10-23
 description: "Large-format modular wall design and visual production for a logistics equipment company."
-tags: ["print design", "3d-visualisation"]
+tags: ["print design", "3d-modeling"]
 draft: false
 preview_image: "/images/preview/preview-8.jpg"
 header_image: "/images/preview/preview-8.jpg"

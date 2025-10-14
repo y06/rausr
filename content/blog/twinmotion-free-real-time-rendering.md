@@ -3,7 +3,7 @@ title: "Twinmotion: Real-Time Rendering for Designers Who Need a Powerful Tool f
 author: "rausr"
 date: 2025-05-21
 description: "How Epic Games’ free 3D tool is reshaping everyday architectural and product visualization."
-tags: ["software", "3d-visualisation"]
+tags: ["software", "3d-modeling"]
 source: ["https://www.twinmotion.com", "https://docs.unrealengine.com/", "https://forums.cgarchitect.com", "https://aecmag.com/"]
 draft: false
 preview_image: "/images/articles/twinmotion-free-real-time-rendering/twinmotion-free-real-time-rendering-preview.jpg"
@@ -116,7 +116,6 @@ If you’re working in design, architecture, or education and haven’t tried it
 {{< quote >}}
 Twinmotion doesn’t replace high-end tools—it replaces waiting.
 {{< /quote >}}
-
 
 
 

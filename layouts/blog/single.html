@@ -80,6 +80,9 @@
           {{ if hasPrefix (lower $item) "book:" }}
             {{ $title := replaceRE `(?i)^book:\s*` "" $item }}
             <span class="tag sources sources-book">📚 {{ $title }}</span>
+          {{ else if hasPrefix (lower $item) "interview:" }}
+            {{ $title := replaceRE `(?i)^interview:\s*` "" $item }}
+            <span class="tag sources sources-interview">🎙️ {{ $title }}</span>
           {{ else }}
             {{ $parsed := urls.Parse $item }}
             {{ $host := $item }}
