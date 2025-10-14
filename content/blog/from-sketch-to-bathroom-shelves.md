@@ -73,7 +73,7 @@ Packaging design is usually **10–15% of the product launch budget**, but its v
 
 A single misstep — like **poor ergonomics** or **unreadable typography in the shower** — can cost millions in lost customer trust.
 
----
+
 
 ### 🌿 Materials & Sustainability
 
@@ -89,7 +89,9 @@ Brands like **Lush**, **The Ordinary**, and **Fenty Beauty** are pushing new mat
 
 Unknown fact: Many high-end brands use **double-wall bottles** — not for function, but to make the product *look more expensive* while holding less actual formula.
 
----
+
+{{< fullimg src="/images/articles/from-sketch-to-bathroom-shelves/from-sketch-to-bathroom-shelves-4.jpg" alt="modern cosmetic packaging materials and sustainability" >}}
+
 
 ### 🧪 Testing & Regulations
 
@@ -101,7 +103,10 @@ Before any product reaches the shelf, the **packaging itself is tested**:
 
 A 2022 study found that **40% of consumer complaints** in cosmetics are linked not to formula, but to **packaging usability** — from pumps clogging to caps breaking.
 
----
+{{< halves >}}
+{{< halfimg src="/images/articles/from-sketch-to-bathroom-shelves/from-sketch-to-bathroom-shelves-5.jpg" alt="cosmetic product testing and regulations" >}}
+{{< /halves >}}
+
 
 ### Design Legends in Cosmetics
 
@@ -112,7 +117,10 @@ A 2022 study found that **40% of consumer complaints** in cosmetics are linked n
 
 Hidden gem: In the 1980s, Estée Lauder used **real gold dust** in some limited-edition perfume bottles — later discontinued due to cost and ethical concerns.
 
----
+
+{{< fullimg src="/images/articles/from-sketch-to-bathroom-shelves/from-sketch-to-bathroom-shelves-6.jpg" alt="Design Legends in Cosmetics" >}}
+
+
 
 ### Famous Fails
 
@@ -120,7 +128,9 @@ Hidden gem: In the 1980s, Estée Lauder used **real gold dust** in some limited-
 - **Clinique’s 1990s Airless Pumps**: Beautiful concept, but clogged constantly due to formula incompatibility.
 - **L’Oréal Kids Shampoo (1998)**: Famous for the “no tears” frog bottle — but its bright color and cartoon-like shape caused some toddlers to drink it. The design had to be changed for safety reasons.
 
----
+
+{{< fullimg src="/images/articles/from-sketch-to-bathroom-shelves/from-sketch-to-bathroom-shelves-7.jpg" alt="Famous Fails in Cosmetics" >}}
+
 
 ### 🚀 The Indie Revolution
 
@@ -130,7 +140,9 @@ Micro-batch lines like **By Humankind** and **Wild Refill** use **modular refill
 
 A new niche is emerging — **"slow packaging"**, where brands update visuals every few years instead of chasing trends. Think of it as the “capsule wardrobe” of cosmetic design.
 
----
+{{< halves >}}
+{{< halfimg src="/images/articles/from-sketch-to-bathroom-shelves/from-sketch-to-bathroom-shelves-8.jpg" alt="The Indie Revolution in Cosmetics" >}}
+{{< /halves >}}
 
 ### The Hidden Truth
 
@@ -139,7 +151,7 @@ That’s why some brands secretly redesign bottles mid-cycle — same look, slig
 
 In many agencies, **the packaging designer is one of the first and last people** to touch a cosmetic product before launch — bridging marketing, engineering, and emotion.
 
----
+{{< fullimg src="/images/articles/from-sketch-to-bathroom-shelves/from-sketch-to-bathroom-shelves-9.jpg" alt="The Hidden Truth about Cosmetics" >}}
 
 ### Conclusion
 
