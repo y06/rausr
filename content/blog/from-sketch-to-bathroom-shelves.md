@@ -3,7 +3,7 @@ title: "From Sketch to Bathroom Shelves: The Hidden Art of Cosmetic Product Desi
 description: "A deep look behind the creative and technical process of how cosmetic products are designed — from concept sketches to the final bottle on your bathroom shelf."
 author: "rausr"
 date: 2025-10-13
-tags: ["branding", "packaging design", "product design", "series", "3d-modeling"]
+tags: ["packaging design", "product design", "branding", "series", "3d-modeling"]
 draft: false
 preview_image: "/images/articles/from-sketch-to-bathroom-shelves/from-sketch-to-bathroom-shelves-10.jpg"
 header_image: "/images/articles/from-sketch-to-bathroom-shelves/from-sketch-to-bathroom-shelves-1.jpg"
