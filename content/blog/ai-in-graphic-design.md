@@ -4,7 +4,7 @@ description: "Exploring the balance between automation and artistry — does AI 
 date: 2025-10-15
 tags: ["ai", "graphic design", "creativity", "report"]
 author: "rausr"
-draft: true
+draft: false
 preview_image: /images/articles/ai-in-graphic-design/ai-in-graphic-design-9.jpg
 header_image: /images/articles/ai-in-graphic-design/ai-in-graphic-design-1.jpg
 source: [
