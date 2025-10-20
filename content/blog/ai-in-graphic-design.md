@@ -2,7 +2,7 @@
 title: "AI in Graphic Design: Revolution or Repetition?"
 description: "Exploring the balance between automation and artistry — does AI really save time, or just change how we spend it?"
 date: 2025-10-15
-tags: ["ai", "graphic design", "creativity", "report"]
+tags: ["ai", "graphic design", "creativity", "reports"]
 author: "rausr"
 draft: false
 preview_image: /images/articles/ai-in-graphic-design/ai-in-graphic-design-9.jpg
