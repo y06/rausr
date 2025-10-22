@@ -1,9 +1,10 @@
 {{ partial "header" . }}
 <main>
   <section class="header header-about header-search">
+    {{ $intro := default "Type a keyword to explore works and articles, then refine the results with filters." .Params.intro }}
     <div class="header-content">
       <div class="h1container">
-        <h1 id="search-title">Search</h1>
+        <h1 id="search-title">Show Search</h1>
         <div class="counter">
           <span class="word showinglist">showing</span>
           <div class="number total showinglist" id="search-showing" aria-label="Showing results 0 to 0">0-0</div>
@@ -13,7 +14,7 @@
           <div class="number total" id="search-total">0</div>
         </div>
       </div>
-      <p>Select from the search results and filter by the type of content you want.</p>
+      <p id="search-description" class="search-lead">{{ $intro }}</p>
       <button class="header-cta-button header-cta-button-contact header-cta-button-about" onclick="document.querySelector('.card-container')?.scrollIntoView({ behavior: 'smooth' });">See What We Found ↓</button>
     </div>
     <div class="header-illustration">
@@ -85,10 +86,21 @@
   const resultsEl = document.getElementById('search-results');
   const filterRadios = document.querySelectorAll('input[name="section"]');
   const titleEl = document.getElementById('search-title');
+  const descriptionEl = document.getElementById('search-description');
   const totalEl = document.getElementById('search-total');
   const showingEl = document.getElementById('search-showing');
   const paginationEl = document.getElementById('search-pagination');
   const paginationListEl = document.getElementById('search-pagination-list');
+  const defaultDescription = descriptionEl ? descriptionEl.textContent.trim() : '';
+  const defaultTitle = titleEl ? titleEl.textContent.trim() : 'Show Search';
+  const defaultDocumentTitle = document.title;
+  const siteTitleSuffix = defaultDocumentTitle.includes('|')
+    ? defaultDocumentTitle.slice(defaultDocumentTitle.indexOf('|'))
+    : '';
+  const descriptionMetaEl = document.querySelector('meta[name="description"]');
+  const defaultMetaDescription = descriptionMetaEl
+    ? descriptionMetaEl.getAttribute('content') || ''
+    : '';
   const PAGE_SIZE = 12;
 
   let fuse,
@@ -104,6 +116,25 @@
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
+
+  const setDescription = (html) => {
+    if (!descriptionEl) {
+      return;
+    }
+    if (html === null || html === undefined || html === '') {
+      descriptionEl.textContent = defaultDescription;
+    } else {
+      descriptionEl.innerHTML = html;
+    }
+  };
+
+  const setMetaDescription = (text) => {
+    if (!descriptionMetaEl) {
+      return;
+    }
+    const content = text && text.trim() ? text : defaultMetaDescription;
+    descriptionMetaEl.setAttribute('content', content);
+  };
 
   const hidePagination = () => {
     if (paginationEl) {
@@ -151,7 +182,12 @@
     currentPage = 1;
 
     if (!currentQuery) {
-      if (titleEl) titleEl.textContent = 'Search';
+      if (titleEl) {
+        titleEl.textContent = defaultTitle;
+      }
+      setDescription(null);
+      document.title = defaultDocumentTitle;
+      setMetaDescription('');
       if (totalEl) {
         totalEl.textContent = '0';
         totalEl.setAttribute('aria-label', '0 results shown');
@@ -161,10 +197,12 @@
       return;
     }
 
+    const queryHtml = htmlEscape(currentQuery);
+
     if (titleEl) {
-      const queryHtml = htmlEscape(currentQuery);
-      titleEl.innerHTML = `Search results for: <span class="search-query">${queryHtml}</span>`;
+      titleEl.innerHTML = `Show Search <span class="search-query">"${queryHtml}"</span>`;
     }
+    document.title = `Show Search "${currentQuery}"${siteTitleSuffix}`;
 
     if (totalEl) {
       totalEl.textContent = String(results.length);
@@ -172,10 +210,14 @@
     }
 
     if (!results.length) {
+      setDescription(`We couldn't find any matches for <span class="search-query">"${queryHtml}"</span>. Try a different keyword or adjust the filters.`);
+      setMetaDescription(`No matches for "${currentQuery}" on Rausr. Try another keyword or adjust the filters.`);
       renderEmpty(`No results for "${currentQuery}"`);
       return;
     }
 
+    setDescription(`Exploring <span class="search-query">"${queryHtml}"</span> across works and articles. Use the filters to focus on what you need.`);
+    setMetaDescription(`Viewing ${results.length} result${results.length === 1 ? '' : 's'} for "${currentQuery}" across Rausr.`);
     renderPage(1);
   }
 
