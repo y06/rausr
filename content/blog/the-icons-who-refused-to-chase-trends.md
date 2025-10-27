@@ -4,6 +4,14 @@ description: "A brief research look into the history of designers who built unsh
 author: "rausr"
 date: 2025-10-11
 draft: false
+seotags:
+  - Paula Scher
+  - Milton Glaser
+  - Massimo Vignelli
+  - Stefan Sagmeister
+  - April Greiman
+  - David Carson
+  - Neville Brody
 preview_image: /images/articles/the-icons-who-refused-to-chase-trends/the-icons-who-refused-to-chase-trends-24.jpg
 header_image: /images/articles/the-icons-who-refused-to-chase-trends/the-icons-who-refused-to-chase-trends-17.jpg
 tags: ["graphic design", "trends", "reports", "history"]

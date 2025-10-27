@@ -5,6 +5,8 @@ date: 2025-09-02
 tags: ["branding", "series", "graphic design"]
 author: "rausr"
 draft: false
+seotags:
+  - Paul Rand
 preview_image: /images/articles/logo-design-process/logo-design-process-10.jpg
 header_image: /images/articles/logo-design-process/logo-design-process-1.jpg
 source: [

@@ -110,6 +110,18 @@
       currentResults = [],
       currentPage = 1;
 
+  const mergeTags = (primary, secondary) => {
+    const merged = Array.isArray(primary) ? [...primary] : [];
+    if (Array.isArray(secondary)) {
+      secondary.forEach((tag) => {
+        if (typeof tag === 'string' && !merged.includes(tag)) {
+          merged.push(tag);
+        }
+      });
+    }
+    return merged;
+  };
+
   const htmlEscape = (value) => String(value ?? '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -248,7 +260,7 @@
       card.className = `card1 ${cardVariant}`;
       card.setAttribute('role', 'listitem');
 
-      const rawTags = Array.isArray(item.tags) ? item.tags : [];
+      const rawTags = mergeTags(item.tags, item.seotags);
       const primaryTag = rawTags.length ? rawTags[0] : '';
       const tagSlug = primaryTag
         ? primaryTag
@@ -412,7 +424,8 @@
         keys: [
           { name: 'title', weight: 0.6 },
           { name: 'description', weight: 0.25 },
-          { name: 'tags', weight: 0.15 }
+          { name: 'tags', weight: 0.15 },
+          { name: 'seotags', weight: 0.1 }
         ],
         threshold: 0.35,
         ignoreLocation: true,

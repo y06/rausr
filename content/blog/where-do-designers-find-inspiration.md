@@ -5,6 +5,9 @@ date: 2025-10-24
 tags: ["creativity", "graphic design", "reports", "philosophy"]
 author: "rausr"
 draft: false
+seotags:
+  - Paula Scher
+  - Milton Glaser
 preview_image: /images/articles/where-do-designers-find-inspiration/where-do-designers-find-inspiration-10.jpg
 header_image: /images/articles/where-do-designers-find-inspiration/where-do-designers-find-inspiration-3.jpg
 source: [
@@ -52,7 +55,7 @@ That connection often happens when the brain relaxes from active problem-solving
 Different designers have different rituals, but they often share a common goal — to **see the world differently**.
 
 #### 1. Museums, Galleries, and Streets
-Designers like **Paula Scher** and **Milton Glaser** found as much inspiration in typography carved on buildings as in books.  
+Designers like **[Paula Scher](/search/?q=Paula+Scher)** and **[Milton Glaser](/search/?q=Milton+Glaser)** found as much inspiration in typography carved on buildings as in books.  
 Urban details — graffiti, signage, textures — become silent teachers in composition and storytelling.
 
 #### 2. Books, Not Screens

@@ -99,6 +99,18 @@ document.addEventListener("DOMContentLoaded", function () {
         let placeholderHoldTimeout = null;
         let placeholderAnimating = false;
 
+        const mergeTags = (primary, secondary) => {
+            const merged = Array.isArray(primary) ? [...primary] : [];
+            if (Array.isArray(secondary)) {
+                secondary.forEach((tag) => {
+                    if (typeof tag === "string" && !merged.includes(tag)) {
+                        merged.push(tag);
+                    }
+                });
+            }
+            return merged;
+        };
+
         const setPlaceholder = (value) => navSearchInput.setAttribute("placeholder", value);
 
         const stopPlaceholderAnimation = () => {
@@ -181,7 +193,12 @@ document.addEventListener("DOMContentLoaded", function () {
             searchPromise = fetch(indexPath, { cache: "no-store" })
                 .then((resp) => (resp.ok ? resp.json() : []))
                 .then((json) => {
-                    searchData = Array.isArray(json) ? json : [];
+                    searchData = Array.isArray(json)
+                        ? json.map((item) => {
+                            const mergedTags = mergeTags(item.tags, item.seotags);
+                            return Object.assign({}, item, { tags: mergedTags });
+                        })
+                        : [];
                     return searchData;
                 })
                 .catch((err) => {
@@ -306,7 +323,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     const haystack = [
                         item.title || "",
                         item.description || "",
-                        Array.isArray(item.tags) ? item.tags.join(" ") : ""
+                        Array.isArray(item.tags) ? item.tags.join(" ") : "",
+                        Array.isArray(item.seotags) ? item.seotags.join(" ") : ""
                     ].join(" ").toLowerCase();
                     return haystack.includes(needle);
                 })

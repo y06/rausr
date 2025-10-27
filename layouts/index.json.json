@@ -5,8 +5,19 @@
   {{- $title := .Title | jsonify -}}
   {{- $desc  := (or .Description .Summary) | plainify | truncate 220 | jsonify -}}
   {{- $img   := (or .Params.preview_image .Params.header_image .Site.Params.defaultImage) | jsonify -}}
-  {{- $tags  := .Params.tags | default (slice) | jsonify -}}
-  {{- printf "%s{\"title\":%s,\"url\":%q,\"section\":%q,\"date\":%q,\"description\":%s,\"tags\":%s,\"image\":%s}" $comma $title .RelPermalink .Section (.Date.Format "2006-01-02") $desc $tags $img -}}
+  {{- $seoTags := .Params.seotags | default (slice) -}}
+  {{- $scratch := newScratch -}}
+  {{- $scratch.Set "tags" (slice) -}}
+  {{- with .Params.tags -}}
+    {{- $scratch.Add "tags" . -}}
+  {{- end -}}
+  {{- with $seoTags -}}
+    {{- $scratch.Add "tags" . -}}
+  {{- end -}}
+  {{- $allTags := $scratch.Get "tags" | uniq -}}
+  {{- $tags := $allTags | jsonify -}}
+  {{- $seoTagsJSON := $seoTags | jsonify -}}
+  {{- printf "%s{\"title\":%s,\"url\":%q,\"section\":%q,\"date\":%q,\"description\":%s,\"tags\":%s,\"seotags\":%s,\"image\":%s}" $comma $title .RelPermalink .Section (.Date.Format "2006-01-02") $desc $tags $seoTagsJSON $img -}}
   {{- $comma = ",\n" -}}
 {{- end -}}
 ]

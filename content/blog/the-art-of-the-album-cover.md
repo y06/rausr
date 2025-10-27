@@ -5,6 +5,15 @@ author: "rausr"
 date: 2025-07-26
 tags: ["reports", "graphic design", "history"]
 draft: false
+seotags:
+  - Paula Scher
+  - Anton Corbijn
+  - Peter Saville
+  - Vaughan Oliver & v23
+  - Stefan Sagmeister
+  - Storm Thorgerson
+  - Barbara Kruger
+  - Mark Farrow
 preview_image: /images/articles/the-art-of-the-album-cover/the-art-of-the-album-cover-1.jpg
 header_image: /images/articles/the-art-of-the-album-cover/the-art-of-the-album-cover-header.jpg
 source: ["https://designmuseum.org", "https://www.taschen.com", "https://uniteditions.com", "https://albumartarchive.org", "https://www.theguardian.com/music"]
