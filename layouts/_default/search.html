@@ -272,11 +272,42 @@
             .replace(/^-|-$/g, '')
         : '';
       const previewSource = item.preview_image || item.image || '';
-      const hasImage = Boolean(previewSource);
+      const thumbSource = item.image_thumb || '';
+      const thumbSource2x = item.image_thumb_2x || '';
+      const thumbWebpSource = item.image_thumb_webp || '';
+      const thumbWebpSource2x = item.image_thumb_webp_2x || '';
+      const hasImage = Boolean(thumbSource || thumbWebpSource || previewSource);
       const titleHtml = htmlEscape(item.title);
       const url = htmlEscape(item.url);
-      const imageSrc = hasImage ? htmlEscape(previewSource) : '';
       const safePrimaryTag = htmlEscape(primaryTag);
+      const sizesAttr = '(max-width: 991px) 50vw, 360px';
+
+      let imageMarkup = `<div class="card1-top card1-top--empty"><span>${sectionLabel}</span></div>`;
+      if (hasImage) {
+        const fallbackRaw = thumbSource || previewSource;
+        const fallback2xRaw = thumbSource2x || '';
+        const webpRaw = thumbWebpSource || '';
+        const webp2xRaw = thumbWebpSource2x || '';
+
+        const fallback = htmlEscape(fallbackRaw);
+        const fallback2x = fallback2xRaw ? htmlEscape(fallback2xRaw) : '';
+        const webp = webpRaw ? htmlEscape(webpRaw) : '';
+        const webp2x = webp2xRaw ? htmlEscape(webp2xRaw) : '';
+
+        const fallbackSrcset = fallback2x ? `${fallback} 1x, ${fallback2x} 2x` : `${fallback} 1x`;
+        const webpSrcset = webp ? (webp2x ? `${webp} 1x, ${webp2x} 2x` : `${webp} 1x`) : '';
+        const fallbackType = fallback.toLowerCase().endsWith('.png') ? 'image/png' : 'image/jpeg';
+
+        imageMarkup = `
+          <div class="card1-top">
+            <picture>
+              ${webp ? `<source type="image/webp" srcset="${webpSrcset}" sizes="${sizesAttr}">` : ''}
+              ${fallback ? `<source type="${fallbackType}" srcset="${fallbackSrcset}" sizes="${sizesAttr}">` : ''}
+              <img src="${fallback}"${fallbackSrcset ? ` srcset="${fallbackSrcset}"` : ''} sizes="${sizesAttr}" alt="${titleHtml}" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        `;
+      }
 
       const primaryTagMarkup = primaryTag
         ? `<span class="card1-category">${tagSlug ? `<a href="/tags/${tagSlug}/">${safePrimaryTag}</a>` : safePrimaryTag}</span>`
@@ -285,9 +316,7 @@
 
       card.innerHTML = `
         <a href="${url}" aria-label="${titleHtml}">
-          ${hasImage
-            ? `<div class="card1-top"><img src="${imageSrc}" alt="${titleHtml}"></div>`
-            : `<div class="card1-top card1-top--empty"><span>${sectionLabel}</span></div>`}
+          ${imageMarkup}
         </a>
         <div class="card1-bottom">
           ${primaryTagMarkup}

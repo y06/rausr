@@ -10,7 +10,12 @@
                             <a href="{{ .Scratch.Get "link" }}" class="">
                                 {{ with .Params.preview_image }}
                                 <div class="card1-top">
-                                    <img src="{{ . }}" alt="">
+                                    {{ partial "components/responsive-image.html" (dict
+                                        "src" .
+                                        "alt" $.Title
+                                        "width" 360
+                                        "sizes" "(max-width: 991px) 50vw, 360px"
+                                    ) }}
                                 </div>
                                 {{ end }}
                             </a>

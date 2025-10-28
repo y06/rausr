@@ -4,7 +4,33 @@
 {{- range $pages -}}
   {{- $title := .Title | jsonify -}}
   {{- $desc  := (or .Description .Summary) | plainify | truncate 220 | jsonify -}}
-  {{- $img   := (or .Params.preview_image .Params.header_image .Site.Params.defaultImage) | jsonify -}}
+  {{- $imgSrc := or .Params.preview_image .Params.header_image .Site.Params.defaultImage -}}
+  {{- $img   := $imgSrc | jsonify -}}
+  {{- $thumb := "" -}}
+  {{- $thumb2 := "" -}}
+  {{- $thumbWebp := "" -}}
+  {{- $thumbWebp2 := "" -}}
+  {{- with $imgSrc -}}
+    {{- $trimmed := strings.TrimPrefix "/" . -}}
+    {{- with resources.Get $trimmed -}}
+      {{- with .Resize "420x q85" -}}
+        {{- $thumb = .RelPermalink -}}
+      {{- end -}}
+      {{- with .Resize "840x q85" -}}
+        {{- $thumb2 = .RelPermalink -}}
+      {{- end -}}
+      {{- with .Resize "420x webp q85" -}}
+        {{- $thumbWebp = .RelPermalink -}}
+      {{- end -}}
+      {{- with .Resize "840x webp q85" -}}
+        {{- $thumbWebp2 = .RelPermalink -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $thumbJSON := $thumb | jsonify -}}
+  {{- $thumb2JSON := $thumb2 | jsonify -}}
+  {{- $thumbWebpJSON := $thumbWebp | jsonify -}}
+  {{- $thumbWebp2JSON := $thumbWebp2 | jsonify -}}
   {{- $seoTags := .Params.seotags | default (slice) -}}
   {{- $scratch := newScratch -}}
   {{- $scratch.Set "tags" (slice) -}}
@@ -17,7 +43,7 @@
   {{- $allTags := $scratch.Get "tags" | uniq -}}
   {{- $tags := $allTags | jsonify -}}
   {{- $seoTagsJSON := $seoTags | jsonify -}}
-  {{- printf "%s{\"title\":%s,\"url\":%q,\"section\":%q,\"date\":%q,\"description\":%s,\"tags\":%s,\"seotags\":%s,\"image\":%s}" $comma $title .RelPermalink .Section (.Date.Format "2006-01-02") $desc $tags $seoTagsJSON $img -}}
+  {{- printf "%s{\"title\":%s,\"url\":%q,\"section\":%q,\"date\":%q,\"description\":%s,\"tags\":%s,\"seotags\":%s,\"image\":%s,\"image_thumb\":%s,\"image_thumb_2x\":%s,\"image_thumb_webp\":%s,\"image_thumb_webp_2x\":%s}" $comma $title .RelPermalink .Section (.Date.Format "2006-01-02") $desc $tags $seoTagsJSON $img $thumbJSON $thumb2JSON $thumbWebpJSON $thumbWebp2JSON -}}
   {{- $comma = ",\n" -}}
 {{- end -}}
 ]

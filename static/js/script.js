@@ -239,12 +239,39 @@ document.addEventListener("DOMContentLoaded", function () {
                     const thumb = document.createElement("span");
                     thumb.className = "navbar-search__thumb";
 
-                    if (item.image) {
-                        const thumbImg = document.createElement("img");
-                        thumbImg.className = "navbar-search__thumb-img";
-                        thumbImg.src = item.image;
-                        thumbImg.alt = item.title || "";
-                        thumb.appendChild(thumbImg);
+                    const thumbFallbackRaw = item.image_thumb || item.image || item.preview_image || "";
+                    const thumbFallback2xRaw = item.image_thumb_2x || "";
+                    const thumbWebpRaw = item.image_thumb_webp || "";
+                    const thumbWebp2xRaw = item.image_thumb_webp_2x || "";
+                    const thumbSizes = "36px";
+
+                    if (thumbFallbackRaw || thumbWebpRaw) {
+                        const picture = document.createElement("picture");
+                        if (thumbWebpRaw) {
+                            const sourceWebp = document.createElement("source");
+                            const webpSet = thumbWebp2xRaw
+                                ? `${thumbWebpRaw} 1x, ${thumbWebp2xRaw} 2x`
+                                : `${thumbWebpRaw} 1x`;
+                            sourceWebp.type = "image/webp";
+                            sourceWebp.srcset = webpSet;
+                            sourceWebp.sizes = thumbSizes;
+                            picture.appendChild(sourceWebp);
+                        }
+
+                        const img = document.createElement("img");
+                        img.className = "navbar-search__thumb-img";
+                        img.src = thumbFallbackRaw;
+                        img.alt = item.title || "";
+                        img.loading = "lazy";
+                        img.decoding = "async";
+                        img.sizes = thumbSizes;
+                        img.width = 36;
+                        img.height = 36;
+                        if (thumbFallback2xRaw) {
+                            img.srcset = `${thumbFallbackRaw} 1x, ${thumbFallback2xRaw} 2x`;
+                        }
+                        picture.appendChild(img);
+                        thumb.appendChild(picture);
                     } else {
                         thumb.classList.add("navbar-search__thumb--placeholder", "navbar-search__thumb--" + sectionClass);
                         thumb.textContent = sectionClass === "works" ? "W" : "A";

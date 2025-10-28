@@ -6,3 +6,4 @@ github.com.pub
 .DS_Store
 static/.DS_Store
 static/images/.DS_Store
+resources/_gen/

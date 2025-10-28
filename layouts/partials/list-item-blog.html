@@ -42,7 +42,12 @@
           {{ with $page.Params.preview_image }}
           <div class="card30-top-wrap">
               <div class="card30-top">
-                  <img src="{{ . }}" alt="">
+                  {{ partial "components/responsive-image.html" (dict
+                    "src" .
+                    "alt" $page.Title
+                    "width" 760
+                    "sizes" "(max-width: 991px) 100vw, 760px"
+                  ) }}
               </div>
           </div>
           {{ end }}
@@ -67,7 +72,12 @@
   <a href="{{ $link }}" class="">
       {{ with $page.Params.preview_image }}
       <div class="card20-top">
-          <img src="{{ . }}" alt="">
+          {{ partial "components/responsive-image.html" (dict
+            "src" .
+            "alt" $page.Title
+            "width" 170
+            "sizes" "(max-width: 991px) 45vw, 170px"
+          ) }}
       </div>
       {{ end }}
   </a>

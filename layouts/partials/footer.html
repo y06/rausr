@@ -84,35 +84,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const syncState = () => setUiState(menu.classList.contains("show"));
 
-  const $ = window.jQuery;
-  if ($ && $.fn && $.fn.collapse) {
-    const $menu = $(menu);
-    $menu.on("show.bs.collapse", () => setUiState(true));
-    $menu.on("shown.bs.collapse", () => setUiState(true));
-    $menu.on("hide.bs.collapse", () => setUiState(false));
-    $menu.on("hidden.bs.collapse", () => setUiState(false));
-  }
-
   const observer = new MutationObserver(syncState);
   observer.observe(menu, { attributes: true, attributeFilter: ["class"] });
 
-  toggle.addEventListener("click", () => {
-    window.requestAnimationFrame(syncState);
-  });
-
-  const collapseHide = () => {
-    if (!menu.classList.contains("show")) {
+  const openMenu = () => {
+    if (menu.classList.contains("show")) {
+      syncState();
       return;
     }
-    if ($ && $.fn && $.fn.collapse) {
-      $(menu).collapse("hide");
-    } else {
-      menu.classList.remove("show");
-      menu.classList.remove("collapsing");
-      menu.style.height = "";
+    menu.classList.add("show");
+    menu.classList.remove("collapsing");
+    menu.style.height = "";
+    syncState();
+  };
+
+  const closeMenu = () => {
+    if (!menu.classList.contains("show")) {
       syncState();
+      return;
+    }
+    menu.classList.remove("show");
+    menu.classList.remove("collapsing");
+    menu.style.height = "";
+    syncState();
+  };
+
+  const toggleMenu = () => {
+    if (menu.classList.contains("show")) {
+      closeMenu();
+    } else {
+      openMenu();
     }
   };
+
+  toggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.requestAnimationFrame(() => {
+      toggleMenu();
+    });
+  });
 
   document.addEventListener("click", (event) => {
     if (!menu.classList.contains("show")) {
@@ -121,12 +131,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (menu.contains(event.target) || toggle.contains(event.target)) {
       return;
     }
-    collapseHide();
+    closeMenu();
   });
 
   document.addEventListener("keyup", (event) => {
     if (event.key === "Escape") {
-      collapseHide();
+      closeMenu();
     }
   });
 
@@ -136,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
     if (link.getAttribute("href")) {
-      collapseHide();
+      closeMenu();
     }
   });
 
