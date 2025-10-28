@@ -2,7 +2,6 @@ baseURL = "https://rausr.com/"
 enableRobotsTXT = true
 languageCode = "en-us"
 title = "We Design/Cook Random User Recipes, Yummy!"
-googleAnalytics = "UA-168547988-1"
 
 [params]
     author = "rausr"
@@ -14,6 +13,7 @@ googleAnalytics = "UA-168547988-1"
     featuredContent = ["print-design-branding-madness-t3-events-2020", "graphic-design-and-geography", "package-design-print-design-pets-probiotics", "various-illustrations"]
     blogThanksText = "Thanks for reading ✌️"
     defaultImage = "/images/default-og.png"
+    gtmID = "GTM-T3HLMXL"
 
 [taxonomies]
   tag = "tags"

@@ -1,3 +1,4 @@
- <!-- Intentionally left empty. Override this partial in your website to insert code just after the
-      opening <body> tag. For example, to install Google Analytics. -->
-
+{{ $gtmID := or .Site.Params.gtmID .Site.Params.gtmId .Site.Params.googleTagManagerID }}
+{{ if $gtmID }}
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ $gtmID }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+{{ end }}
