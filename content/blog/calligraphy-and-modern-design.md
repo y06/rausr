@@ -2,7 +2,7 @@
 title: "Calligraphy and Design: Is It Still Important for Modern Creatives?"
 description: "Exploring how calligraphy influences modern typographers, visual designers, and creative workflows — from ancient scripts to digital pens."
 date: 2025-10-21
-tags: ["graphic design", "trends", "history", "creativity"]
+tags: ["graphic design", "trends", "history", "creativity", "typography"]
 author: "rausr"
 draft: false
 preview_image: /images/articles/calligraphy-and-modern-design/calligraphy-and-modern-design-10.jpg

@@ -34,52 +34,50 @@
 {{- $doubleWidth := mul $widthTarget 2 -}}
 
 {{- $trimmed := strings.TrimPrefix "/" $src -}}
-{{- $resource := resources.Get $trimmed -}}
+{{- with resources.Get $trimmed -}}
+  {{- $resource := . -}}
+  {{- $format := lower (strings.TrimPrefix "." (path.Ext $resource.Name)) -}}
+  {{- $width1 := printf "%dx" $widthTarget -}}
+  {{- $width2 := printf "%dx" $doubleWidth -}}
 
-{{- if not $resource }}
+  {{- $resize1 := printf "%dx q%d" $widthTarget $quality -}}
+  {{- $resize2 := printf "%dx q%d" $doubleWidth $quality -}}
+  {{- $resizeWebp1 := printf "%dx webp q%d" $widthTarget $quality -}}
+  {{- $resizeWebp2 := printf "%dx webp q%d" $doubleWidth $quality -}}
+
+  {{- $webp1 := $resource.Resize $resizeWebp1 -}}
+  {{- $webp2 := $resource.Resize $resizeWebp2 -}}
+
+  {{- $fallback1 := $resource.Resize $resize1 -}}
+  {{- $fallback2 := $resource.Resize $resize2 -}}
+  {{- if not $fallback1 }}
+    {{- $fallback1 = $resource -}}
+  {{- end -}}
+  {{- if not $fallback2 }}
+    {{- $fallback2 = $resource -}}
+  {{- end -}}
+
+  {{- $widthAttr := $fallback1.Width | default $widthTarget -}}
+  {{- $heightAttr := $fallback1.Height | default 0 -}}
+
+  <picture{{ if $pictureClass }} class="{{ $pictureClass }}"{{ end }}>
+    {{- if and $webp1 $webp2 -}}
+      <source type="image/webp" srcset="{{ $webp1.RelPermalink }} 1x, {{ $webp2.RelPermalink }} 2x" sizes="{{ $sizes }}">
+    {{- end -}}
+    {{- $fallbackType := "" -}}
+    {{- if in (slice "jpg" "jpeg") $format -}}
+      {{- $fallbackType = "image/jpeg" -}}
+    {{- else if eq $format "png" -}}
+      {{- $fallbackType = "image/png" -}}
+    {{- else if eq $format "gif" -}}
+      {{- $fallbackType = "image/gif" -}}
+    {{- end -}}
+    {{- if and $fallbackType $fallback1 $fallback2 -}}
+      <source type="{{ $fallbackType }}" srcset="{{ $fallback1.RelPermalink }} 1x, {{ $fallback2.RelPermalink }} 2x" sizes="{{ $sizes }}">
+    {{- end -}}
+    <img{{ if $imgClass }} class="{{ $imgClass }}"{{ end }} src="{{ $fallback1.RelPermalink }}" srcset="{{ $fallback1.RelPermalink }} 1x, {{ $fallback2.RelPermalink }} 2x" sizes="{{ $sizes }}" width="{{ $widthAttr }}"{{ if gt $heightAttr 0 }} height="{{ $heightAttr }}"{{ end }} alt="{{ $alt }}" loading="{{ $loading }}" decoding="{{ $decoding }}"{{ if $fetchpriority }} fetchpriority="{{ $fetchpriority }}"{{ end }}>
+  </picture>
+{{- else -}}
   {{- /* Fallback: direct render without processing */ -}}
   <img src="{{ $src }}" alt="{{ $alt }}"{{ if $imgClass }} class="{{ $imgClass }}"{{ end }} loading="{{ $loading }}" decoding="{{ $decoding }}"{{ if $fetchpriority }} fetchpriority="{{ $fetchpriority }}"{{ end }}>
-  {{- return -}}
 {{- end -}}
-
-{{- $format := lower (strings.TrimPrefix "." (path.Ext $resource.Name)) -}}
-{{- $width1 := printf "%dx" $widthTarget -}}
-{{- $width2 := printf "%dx" $doubleWidth -}}
-
-{{- $resize1 := printf "%dx q%d" $widthTarget $quality -}}
-{{- $resize2 := printf "%dx q%d" $doubleWidth $quality -}}
-{{- $resizeWebp1 := printf "%dx webp q%d" $widthTarget $quality -}}
-{{- $resizeWebp2 := printf "%dx webp q%d" $doubleWidth $quality -}}
-
-{{- $webp1 := $resource.Resize $resizeWebp1 -}}
-{{- $webp2 := $resource.Resize $resizeWebp2 -}}
-
-{{- $fallback1 := $resource.Resize $resize1 -}}
-{{- $fallback2 := $resource.Resize $resize2 -}}
-{{- if not $fallback1 }}
-  {{- $fallback1 = $resource -}}
-{{- end -}}
-{{- if not $fallback2 }}
-  {{- $fallback2 = $resource -}}
-{{- end -}}
-
-{{- $widthAttr := $fallback1.Width | default $widthTarget -}}
-{{- $heightAttr := $fallback1.Height | default 0 -}}
-
-<picture{{ if $pictureClass }} class="{{ $pictureClass }}"{{ end }}>
-  {{- if and $webp1 $webp2 -}}
-    <source type="image/webp" srcset="{{ $webp1.RelPermalink }} 1x, {{ $webp2.RelPermalink }} 2x" sizes="{{ $sizes }}">
-  {{- end -}}
-  {{- $fallbackType := "" -}}
-  {{- if in (slice "jpg" "jpeg") $format -}}
-    {{- $fallbackType = "image/jpeg" -}}
-  {{- else if eq $format "png" -}}
-    {{- $fallbackType = "image/png" -}}
-  {{- else if eq $format "gif" -}}
-    {{- $fallbackType = "image/gif" -}}
-  {{- end -}}
-  {{- if and $fallbackType $fallback1 $fallback2 -}}
-    <source type="{{ $fallbackType }}" srcset="{{ $fallback1.RelPermalink }} 1x, {{ $fallback2.RelPermalink }} 2x" sizes="{{ $sizes }}">
-  {{- end -}}
-  <img{{ if $imgClass }} class="{{ $imgClass }}"{{ end }} src="{{ $fallback1.RelPermalink }}" srcset="{{ $fallback1.RelPermalink }} 1x, {{ $fallback2.RelPermalink }} 2x" sizes="{{ $sizes }}" width="{{ $widthAttr }}"{{ if gt $heightAttr 0 }} height="{{ $heightAttr }}"{{ end }} alt="{{ $alt }}" loading="{{ $loading }}" decoding="{{ $decoding }}"{{ if $fetchpriority }} fetchpriority="{{ $fetchpriority }}"{{ end }}>
-</picture>

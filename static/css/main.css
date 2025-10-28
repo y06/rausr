@@ -698,7 +698,7 @@ h5 {
   text-transform: uppercase;
   font-size: 0.875rem;
   letter-spacing: 2px;
-  color: color(display-p3 0.305 0.901 0.886); /* #4EE6E2 */
+  color: color(display-p3 0.4078 0.2824 1);
   font-family: 'Satoshi', sans-serif;
   font-weight: 400;
 }
@@ -1455,7 +1455,7 @@ footer .nav-item {
 }
 
 .contact-label {
-    color: #00CFC8;
+    color: color(display-p3 0.4078 0.2824 1);
     font-family: 'Satoshi', sans-serif;
     font-size: 0.75rem;
     font-weight: 500;
@@ -2134,10 +2134,9 @@ footer .nav-item {
 }
 
 .cta-section-blog {
-    background:
-        radial-gradient(circle, color(display-p3 0.701 0.611 0.604) 1px, transparent 1px),
-        linear-gradient(90deg, color(display-p3 0.408 0.282 1.000), color(display-p3 0.945 0.827 0.706));
-    background-size: 22px 22px, cover; /* 2px dot + 20px spacing = 22px */
+    background-color: color(display-p3 0.659 0.663 0.835);
+    background-image: radial-gradient(circle, color(display-p3 0.585 0.551 0.771) 1px, transparent 1px);
+    background-size: 22px 22px; /* 2px dot + 20px spacing = 22px */
     background-repeat: repeat;
     color: color(display-p3 0.831 1 0.808);
     padding: 2rem 2rem 0rem 2rem;
