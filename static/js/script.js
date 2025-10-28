@@ -395,10 +395,120 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const navbar = document.querySelector(".navbar");
-    const navbarContainer = navbar ? navbar.closest(".container-fluid") : null;
     const navbarCollapse = document.getElementById("navbarSupportedContent");
     const navbarToggle = document.getElementById("menuToggle");
+    const navbarIcon = document.getElementById("menuIcon");
+    const pageBlur = document.getElementById("page-blur");
+
+    if (navbarCollapse && navbarToggle && navbarIcon && pageBlur) {
+        const closedIcon = "/svg/hamb.svg";
+        const openIcon = "/svg/hamb-open.svg";
+
+        [closedIcon, openIcon].forEach((src) => {
+            const preload = new Image();
+            preload.src = src;
+        });
+
+        const setUiState = (isOpen) => {
+            navbarIcon.src = isOpen ? openIcon : closedIcon;
+            pageBlur.classList.toggle("blur-active", isOpen);
+            navbarToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        };
+
+        const syncState = () => setUiState(navbarCollapse.classList.contains("show"));
+
+        const observer = new MutationObserver(syncState);
+        observer.observe(navbarCollapse, { attributes: true, attributeFilter: ["class"] });
+
+        const openMenu = () => {
+            if (navbarCollapse.classList.contains("show")) {
+                syncState();
+                return;
+            }
+            navbarCollapse.classList.add("show");
+            navbarCollapse.classList.remove("collapsing");
+            navbarCollapse.style.height = "";
+            syncState();
+        };
+
+        const closeMenu = () => {
+            if (!navbarCollapse.classList.contains("show")) {
+                syncState();
+                return;
+            }
+            navbarCollapse.classList.remove("show");
+            navbarCollapse.classList.remove("collapsing");
+            navbarCollapse.style.height = "";
+            syncState();
+        };
+
+        const toggleMenu = () => {
+            if (navbarCollapse.classList.contains("show")) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        };
+
+        navbarToggle.addEventListener("click", (event) => {
+            event.preventDefault();
+            window.requestAnimationFrame(toggleMenu);
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!navbarCollapse.classList.contains("show")) {
+                return;
+            }
+            if (navbarCollapse.contains(event.target) || navbarToggle.contains(event.target)) {
+                return;
+            }
+            closeMenu();
+        });
+
+        document.addEventListener("keyup", (event) => {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+
+        navbarCollapse.addEventListener("click", (event) => {
+            const link = event.target.closest("a");
+            if (!link) {
+                return;
+            }
+            if (link.getAttribute("href")) {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 992) {
+                closeMenu();
+            }
+        });
+
+        syncState();
+    }
+
+    let lightboxInstance = null;
+
+    const initLightbox = () => {
+        if (typeof window.GLightbox !== "function") {
+            return;
+        }
+        if (lightboxInstance) {
+            return;
+        }
+        lightboxInstance = window.GLightbox({
+            selector: ".glightbox"
+        });
+    };
+
+    initLightbox();
+    window.addEventListener("load", initLightbox);
+
+    const navbar = document.querySelector(".navbar");
+    const navbarContainer = navbar ? navbar.closest(".container-fluid") : null;
     const navbarSearchDropdown = document.getElementById("navbar-search-dropdown");
 
     if (navbar && navbarContainer && navbarCollapse && navbarToggle) {

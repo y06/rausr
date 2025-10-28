@@ -10,6 +10,10 @@
 <!-- main -->
 <link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
 
+<!-- critical fonts -->
+<link rel="preload" href="{{ "fonts/Satoshi-Variable.ttf" | absURL }}" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="{{ "fonts/Satoshi-VariableItalic.ttf" | absURL }}" as="font" type="font/ttf" crossorigin>
+
 <!-- custom -->
 {{ range .Site.Params.css }}
 <link rel="preload" href="{{ . | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
