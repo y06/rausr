@@ -22,24 +22,12 @@
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></noscript>
         <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
         {{ $gtmID := or .Site.Params.gtmID .Site.Params.gtmId .Site.Params.googleTagManagerID }}
-        {{ $cookiehubID := or .Site.Params.cookiehubID .Site.Params.cookiehubId "dfd49bcc" }}
-        {{ if $cookiehubID }}
-        <!-- CookieHub loader -->
-        <script src="https://cdn.cookiehub.eu/c2/{{ $cookiehubID }}.js"></script>
-        <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var cpm = {};
-            if (window.cookiehub && typeof window.cookiehub.load === "function") {
-                window.cookiehub.load(cpm);
-            }
-        });
-        </script>
-        {{ end }}
         {{ if $gtmID }}
-        <!-- Google Tag Manager (CookieHub consent gated) -->
-        <script type="text/plain" data-cookieconsent="statistics">
+        <!-- Google Tag Manager -->
+        <script>
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ $gtmID }}');
         </script>
+        <!-- End Google Tag Manager -->
         {{ end }}
 
         {{ if .Params.noindex }}
