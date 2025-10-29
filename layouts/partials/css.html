@@ -8,7 +8,16 @@
 </style>
 
 <!-- main -->
-<link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
+{{ $mainCssPath := "css/main.css" }}
+{{ if .IsHome }}
+    {{ with readFile (printf "static/%s" $mainCssPath) }}
+        <style id="inline-main-css">{{ . | safeCSS }}</style>
+    {{ end }}
+{{ else }}
+    {{ $mainCss := $mainCssPath | absURL }}
+    <link rel="preload" href="{{ $mainCss }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ $mainCss }}"></noscript>
+{{ end }}
 
 <!-- critical fonts -->
 <link rel="preload" href="{{ "fonts/Satoshi-Variable.ttf" | absURL }}" as="font" type="font/ttf" crossorigin>

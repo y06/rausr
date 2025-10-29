@@ -18,9 +18,11 @@
         {{ end }}
 
         <!-- GLightbox load -->
-        <link rel="preload" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></noscript>
-        <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+        {{ $glightboxCss := "vendor/glightbox/glightbox.min.css" | absURL }}
+        {{ $glightboxJs := "vendor/glightbox/glightbox.min.js" | absURL }}
+        <link rel="preload" href="{{ $glightboxCss }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ $glightboxCss }}"></noscript>
+        <script defer src="{{ $glightboxJs }}"></script>
         {{ $gtmID := or .Site.Params.gtmID .Site.Params.gtmId .Site.Params.googleTagManagerID }}
         {{ if $gtmID }}
         <!-- Google Tag Manager -->

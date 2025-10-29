@@ -524,7 +524,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let layoutSyncPending = false;
         let searchLockActive = false;
 
-        const syncAnchorsNow = (value = window.scrollY) => {
+        const syncAnchorsNow = (value) => {
             lastScrollY = value;
             directionAnchorY = value;
             lastDirection = 0;
@@ -543,9 +543,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return false;
         };
 
-        const setCompactState = (shouldActivate) => {
+        const applyCompactState = (shouldActivate) => {
             if (compactActive === shouldActivate) {
-                syncAnchorsNow();
                 return;
             }
             compactActive = shouldActivate;
@@ -553,16 +552,14 @@ document.addEventListener("DOMContentLoaded", function () {
             navbarContainer.classList.toggle("container-fluid--search-only", shouldActivate);
             layoutSyncPending = true;
             window.requestAnimationFrame(() => {
-                syncAnchorsNow();
                 layoutSyncPending = false;
             });
         };
 
         const resetState = (currentY) => {
+            syncAnchorsNow(currentY);
             if (compactActive) {
-                setCompactState(false);
-            } else {
-                syncAnchorsNow(currentY);
+                applyCompactState(false);
             }
         };
 
@@ -608,14 +605,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (direction > 0 && !compactActive && currentY - directionAnchorY > DOWN_SCROLL_HIDE_DISTANCE) {
-                setCompactState(true);
-                lastScrollY = currentY;
+                syncAnchorsNow(currentY);
+                applyCompactState(true);
                 return;
             }
 
             if (direction < 0 && compactActive && directionAnchorY - currentY > UP_SCROLL_REVEAL_DISTANCE) {
-                setCompactState(false);
-                lastScrollY = currentY;
+                syncAnchorsNow(currentY);
+                applyCompactState(false);
                 return;
             }
 
@@ -657,7 +654,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (navSearchInput) {
             navSearchInput.addEventListener("focus", () => {
                 searchLockActive = true;
-                setCompactState(false);
+                const currentScroll = window.scrollY;
+                syncAnchorsNow(currentScroll);
+                applyCompactState(false);
             });
             navSearchInput.addEventListener("blur", () => {
                 searchLockActive = false;
