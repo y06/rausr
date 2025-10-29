@@ -22,6 +22,12 @@
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></noscript>
         <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
         {{ $gtmID := or .Site.Params.gtmID .Site.Params.gtmId .Site.Params.googleTagManagerID }}
+        {{ $cookiehubID := or .Site.Params.cookiehubID .Site.Params.cookiehubId }}
+        {{ $cookiehubCulture := or .Site.Params.cookiehubCulture "EN" }}
+        {{ if $cookiehubID }}
+        <!-- CookieHub loader -->
+        <script id="CookieHubScript" data-cookiehub="{{ $cookiehubID }}" data-culture="{{ $cookiehubCulture }}" src="https://cookiehub.net/c2/{{ $cookiehubID }}.js"></script>
+        {{ end }}
         {{ if $gtmID }}
         <!-- Google Tag Manager (CookieHub consent gated) -->
         <script type="text/plain" data-cookieconsent="statistics">
