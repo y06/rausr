@@ -23,8 +23,8 @@
         <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
         {{ $gtmID := or .Site.Params.gtmID .Site.Params.gtmId .Site.Params.googleTagManagerID }}
         {{ if $gtmID }}
-        <!-- Google Tag Manager (analytics consent gated) -->
-        <script type="text/plain" data-cookiecategory="analytics">
+        <!-- Google Tag Manager (CookieHub consent gated) -->
+        <script type="text/plain" data-cookieconsent="statistics">
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ $gtmID }}');
         </script>
         {{ end }}
