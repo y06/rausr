@@ -96,7 +96,9 @@ Designers often find their spark in **non-design activities**:
 - **Traveling:** Shifts perspective and challenges assumptions about culture and color.  
 - **Conversations:** Talking with people outside the creative field often yields fresh analogies and metaphors.
 
+{{< interest >}}
 **Unknown insight:** In Japan, some design agencies encourage staff to take **“slow mornings”** — time to read, walk, or visit markets before arriving at work. Their productivity *increased* after adopting the ritual.
+{{< /interest >}}
 
 {{< halves >}}
 {{< halfimg src="/images/articles/where-do-designers-find-inspiration/where-do-designers-find-inspiration-7.jpg" alt="everyday inspiration sources" >}}

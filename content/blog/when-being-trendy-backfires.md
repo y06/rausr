@@ -93,8 +93,10 @@ And in performance marketing? **That’s expensive**.
 - Focus on creating memorable brand assets that can evolve but remain rooted in your core identity.
 - Test your designs for distinctiveness and recall before full rollout.
 
+{{< interest >}}
 The goal isn’t to look “cool.”  
 The goal is to be **recognizable**, **trusted**, and **unique**.
+{{< /interest >}}
 
 {{< fullimg src="/images/articles/trendy-branding-risk/trendy-branding-risk-7.jpg" alt="instead of trendy, try to be unique" >}}
 

@@ -79,8 +79,10 @@ Good mobile design isn’t just “shrinking” a desktop layout. It’s **rethi
 | Accessibility | Depends on HTML semantics | Deep OS-level integration |
 | Branding | Consistent across devices | Customized per ecosystem |
 
+{{< interest >}}
 **Unknown insight:**  
 Even though users expect design consistency, A/B testing shows that **Android users respond 25% better to bolder color contrasts**, while **iOS users prefer cleaner, muted palettes** — small but impactful behavioral difference.
+{{< /interest >}}
 
 {{< halves >}}
 {{< halfimg src="/images/articles/mobile-web-vs-native-app/mobile-web-vs-native-app-10.jpg" alt="web app or native app" >}}
@@ -95,8 +97,11 @@ These solutions:
 - Enable **offline caching**
 - Allow **single-code deployment** across iOS, Android, and web
 
+{{< interest >}}
 **Case study:**  
 **Starbucks’ PWA** cut load times by 99% and doubled daily active users in low-connectivity regions — proving that great UX doesn’t always require a native app.
+{{< /interest >}}
+
 
 {{< halves >}}
 {{< halfimg src="/images/articles/mobile-web-vs-native-app/mobile-web-vs-native-app-6.jpg" alt="hybrid and pwa are the something like the middle ground" >}}

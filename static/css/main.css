@@ -2041,6 +2041,11 @@ footer .nav-item {
     font-style: italic;
 }
 
+.interest-container {
+    background: linear-gradient(to right,color(display-p3 0.937 0.980 0.965),color(display-p3 1 1 1));
+    border-left-color: color(display-p3 0.055 0.604 0.447);
+}
+
 .article-container p a, .content-sections p a, .article-container li a, .content-sections li a {
     text-decoration: underline !important;
     color: color(display-p3 0.408 0.282 1.000) !important;

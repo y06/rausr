@@ -75,7 +75,9 @@ The budget typically includes:
 - Licensing fees
 - Sound design (when part of the intro)
 
+{{< interest >}}
 Some studios sign **NDA-bound retainers** with major production companies, making costs and processes tightly guarded.
+{{< /interest >}}
 
 {{< fullimg src="/images/articles/hollywood-typography-design/hollywood-typography-design-6.jpg" alt="Movie typography - Pricing" >}}
 
