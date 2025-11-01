@@ -32,7 +32,7 @@ Each font carries its own personality, rhythm, and emotion. Behind every typefac
 
 ### A Brief History: From Metal to Pixels
 
-Typography began with **Johannes Gutenberg’s movable type** in the 15th century, a revolution that democratized reading.  
+Typography began with **Johannes Gutenberg’s movable type** in the 15th century, a revolution that democratized reading.
 For centuries, typefaces were cast in metal — physically carved by punchcutters, then pressed into inked pages.
 
 The 20th century brought giants like **Bauhaus**, **Jan Tschichold**, and **Adrian Frutiger**, who defined the modernist era with fonts like **Univers** and **Helvetica** — balancing geometry and legibility.
@@ -47,13 +47,13 @@ The original Helvetica was called *Neue Haas Grotesk* and was renamed for market
 
 ### How Fonts Are Designed Today
 
-Creating a typeface starts not in Illustrator, but with **research and sketching**. Designers study letter proportions, weight distribution, and optical balance.  
+Creating a typeface starts not in Illustrator, but with **research and sketching**. Designers study letter proportions, weight distribution, and optical balance.
 
 #### The Process:
-- **Concept** – Define purpose and tone: corporate, editorial, playful, or tech-driven.  
+- **Concept** – Define purpose and tone: corporate, editorial, playful, or tech-driven.
 - **Drawing** – Hand-sketching or using digital tools like **Glyphs**, **FontLab**, or **RoboFont**.  
-- **Spacing & Kerning** – Adjusting letter pairs (like *AV* or *To*) to read naturally.  
-- **Testing** – Rendering across weights, sizes, and devices.  
+- **Spacing & Kerning** – Adjusting letter pairs (like *AV* or *To*) to read naturally.
+- **Testing** – Rendering across weights, sizes, and devices.
 - **Export & Hinting** – Optimizing font files for digital readability and print precision.
 
 A single professional font family (with multiple weights and italics) can take **6 months to 2 years** to complete.
@@ -90,8 +90,8 @@ The home of *Akkurat* and *Circular*, defining the minimalist aesthetic of globa
 
 ### The Human Side: Stories That Didn’t End Well
 
-- **Matthew Carter**, creator of *Verdana* and *Georgia*, once saw his early digital fonts pirated and distributed globally — he earned nothing from years of work.  
-- **Erik Spiekermann**, designer of *FF Meta*, famously lost the original drawings for one of his typefaces when his Berlin studio caught fire in the 1990s.  
+- **Matthew Carter**, creator of *Verdana* and *Georgia*, once saw his early digital fonts pirated and distributed globally — he earned nothing from years of work.
+- **Erik Spiekermann**, designer of *FF Meta*, famously lost the original drawings for one of his typefaces when his Berlin studio caught fire in the 1990s.
 - The **Adobe–Linotype conflict (1980s)** nearly froze digital typography’s progress when licensing disputes delayed the first PostScript fonts.
 
 {{< quote >}}
@@ -103,7 +103,7 @@ Typography’s beauty has always carried fragility — a reminder that fonts are
 
 ### The Future of Type: Adaptive, Responsive, Intelligent
 
-The rise of **variable fonts** — single files that adapt seamlessly between weights and widths — marks a new era.  
+The rise of **variable fonts** — single files that adapt seamlessly between weights and widths — marks a new era.
 Instead of loading 20 files, one font can now morph from light to bold, condensed to expanded — optimizing both web speed and creative flexibility.
 
 AI is now stepping into typography:
@@ -123,10 +123,10 @@ In 2023, researchers at MIT trained an AI to recognize emotional tone in typefac
 
 ### How to Start with Typography
 
-- **Study classics** – Helvetica, Garamond, Futura, Baskerville.  
-- **Learn spacing & hierarchy** – Good typography isn’t about the font, it’s about *how* you use it.  
-- **Sketch letters by hand** – Even digital designers learn proportion faster through drawing.  
-- **Collect inspiration** – Observe signage, posters, books, and historical archives.  
+- **Study classics** – Helvetica, Garamond, Futura, Baskerville.
+- **Learn spacing & hierarchy** – Good typography isn’t about the font, it’s about *how* you use it.
+- **Sketch letters by hand** – Even digital designers learn proportion faster through drawing.
+- **Collect inspiration** – Observe signage, posters, books, and historical archives.
 - **Experiment** – Mix type, break rules, and find your voice.
 
 {{< interest >}}
@@ -139,7 +139,7 @@ Follow foundries on Instagram (like @klimtypefoundry or @typotheque) — they of
 
 ### Conclusion
 
-Typography is the most invisible art in design.  
+Typography is the most invisible art in design.
 When done well, it doesn’t shout — it speaks with quiet authority, guiding the reader’s eye and emotion.  
 Whether you draw letters by hand, tweak kerning in Figma, or explore variable font files, the essence remains: **form follows meaning**.
 
