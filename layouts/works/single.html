@@ -46,7 +46,11 @@
             <img src="{{ .image }}" alt="{{ .title }}">
           </a>
         {{ else if .video }}
-          <a href="{{ .video }}" class="glightbox" data-gallery="main-sections" data-type="video">
+          {{ $width := "" }}
+          {{ $height := "" }}
+          {{ with .width }}{{ $width = . }}{{ end }}
+          {{ with .height }}{{ $height = . }}{{ end }}
+          <a href="{{ .video }}" class="glightbox" data-gallery="main-sections" data-type="video"{{ if and $width $height }} data-width="{{ $width }}" data-height="{{ $height }}"{{ end }}>
             <video autoplay muted loop playsinline>
               <source src="{{ .video }}" type="video/mp4">
               Your browser does not support the video tag.
@@ -87,7 +91,11 @@
               <img src="{{ .image }}" alt="{{ .label }}">
             </a>
           {{ else if .video }}
-            <a href="{{ .video }}" class="glightbox" data-gallery="subimages" data-type="video">
+            {{ $width := "" }}
+            {{ $height := "" }}
+            {{ with .width }}{{ $width = . }}{{ end }}
+            {{ with .height }}{{ $height = . }}{{ end }}
+            <a href="{{ .video }}" class="glightbox" data-gallery="subimages" data-type="video"{{ if and $width $height }} data-width="{{ $width }}" data-height="{{ $height }}"{{ end }}>
               <video autoplay muted loop playsinline>
                 <source src="{{ .video }}" type="video/mp4">
                 Your browser does not support the video tag.
@@ -113,4 +121,3 @@
 {{ partial "cta-contact" . }}
 
 {{ partial "footer" . }}
-

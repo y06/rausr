@@ -1733,6 +1733,15 @@ footer .nav-item {
   display: block;
 }
 
+.subimage video,
+.content-section-image video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 .image-label {
   margin: 0.8rem;
   font-size: 0.8125rem;
@@ -2058,13 +2067,53 @@ footer .nav-item {
 
 
 .glightbox-container .gvideo video {
-  width: auto !important;
+  width: 100% !important;
   height: auto !important;
   max-width: 90vw !important;
-  max-height: 80vh !important;
+  max-height: 90vh !important;
   object-fit: contain !important;
   display: block;
   margin: 0 auto;
+}
+
+.glightbox-container .plyr {
+  --plyr-aspect-ratio: auto;
+}
+
+.glightbox-container .gslide-video,
+.glightbox-container .gslide-video .gvideo-wrapper {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.glightbox-container .gslide-video .gvideo-wrapper {
+  width: 100%;
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: 0 auto;
+}
+
+.glightbox-container .gslide-video .plyr__video-wrapper {
+  width: auto !important;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 0 !important;
+  height: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible !important;
+  aspect-ratio: auto !important;
+}
+
+.glightbox-container .gslide-video video {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  max-height: 90vh !important;
+  max-width: 90vw !important;
+  object-fit: contain !important;
 }
 
 
