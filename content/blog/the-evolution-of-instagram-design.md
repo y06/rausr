@@ -5,8 +5,8 @@ date: 2025-11-06
 tags: ["ux-ui", "trends", "series", "history"]
 author: "rausr"
 draft: false
-preview_image: /images/articles/the-evolution-of-instagram-design/the-evolution-of-instagram-design-1.jpg
-header_image: /images/articles/the-evolution-of-instagram-design/the-evolution-of-instagram-design-9.jpg
+preview_image: /images/articles/the-evolution-of-instagram-design/the-evolution-of-instagram-design-9.jpg
+header_image: /images/articles/the-evolution-of-instagram-design/the-evolution-of-instagram-design-1.jpg
 seotags: ["instagram design evolution", "instagram UI history", "Ian Spalter", "Luke Woods", "skeuomorphic to flat design", "instagram branding", "app rebranding", "product design culture", "ux challenges instagram", "design agencies instagram"]
 sources:
   - https://uxdesign.cc/the-evolution-of-instagram-design-2020-7e5c7e2b1c1b
