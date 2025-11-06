@@ -66,7 +66,7 @@ Biophilic design — plants, natural textures, and daylight tones — connects t
 Augmented reality (AR) product demos, motion-reactive screens, and NFC-triggered info panels are replacing printed brochures.  
 Even small brands now use **QR-driven storytelling** and virtual assistants to engage visitors personally.
 
-**Top tools in 2025:**  
+##### Top tools in 2025:  
 - [Unreal Engine](/blog/twinmotion-free-real-time-rendering/) for immersive demos  
 - LED floor projection systems  
 - Touchless motion sensors  
