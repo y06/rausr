@@ -2151,7 +2151,7 @@ footer .nav-item {
 
 .highlight-strike {
     text-decoration: line-through;
-    color: color(display-p3 0.945 0.827 0.706);
+    color: color(display-p3 0.3059 0.9020 0.8863);
 }
 
 .highlight-purple {
@@ -2188,8 +2188,8 @@ footer .nav-item {
 }
 
 .cta-section-blog {
-    background-color: color(display-p3 0.659 0.663 0.835);
-    background-image: radial-gradient(circle, color(display-p3 0.585 0.551 0.771) 1px, transparent 1px);
+    background-color: color(display-p3 0.7686 0.6588 0.8353);
+    background-image: radial-gradient(circle, color(display-p3 0.6941 0.5020 0.8157) 1px, transparent 1px);
     background-size: 22px 22px; /* 2px dot + 20px spacing = 22px */
     background-repeat: repeat;
     color: color(display-p3 0.831 1 0.808);
