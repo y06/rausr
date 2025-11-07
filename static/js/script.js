@@ -80,6 +80,42 @@ document.addEventListener("DOMContentLoaded", function () {
         updateButtons();
     });
 
+    const findFirstMatchingElement = (selectors) => {
+        for (const selector of selectors) {
+            if (!selector) {
+                continue;
+            }
+            const element = document.querySelector(selector);
+            if (element) {
+                return element;
+            }
+        }
+        return null;
+    };
+
+    const scrollButtons = document.querySelectorAll("[data-scroll-target]");
+    scrollButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const fallbackList = button.dataset.scrollFallback
+                ? button.dataset.scrollFallback.split(",").map((item) => item.trim()).filter(Boolean)
+                : [];
+            const selectorPreference = [
+                button.dataset.scrollTarget,
+                ...fallbackList,
+                ".container-tag-list",
+                ".card-container",
+                ".cta-section",
+            ];
+            const targetElement = findFirstMatchingElement(selectorPreference);
+            if (!targetElement) {
+                return;
+            }
+            event.preventDefault();
+            const block = button.dataset.scrollBlock || "start";
+            targetElement.scrollIntoView({ behavior: "smooth", block });
+        });
+    });
+
     const navSearchInput = document.getElementById("navbar-search-input");
     if (navSearchInput) {
         const placeholderPhrases = [

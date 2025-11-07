@@ -15,7 +15,7 @@
         </div>
       </div>
       <p id="search-description" class="search-lead">{{ $intro }}</p>
-      <button class="header-cta-button header-cta-button-contact header-cta-button-about" onclick="document.querySelector('.card-container')?.scrollIntoView({ behavior: 'smooth' });">See What We Found ↓</button>
+      <button class="header-cta-button header-cta-button-contact header-cta-button-about" data-scroll-target=".container-tag-list">See What We Found ↓</button>
     </div>
     <div class="header-illustration">
       <img src="{{ "svg/header/search.svg" | relURL }}" alt="Search Illustration">

@@ -13,9 +13,13 @@
     {{ with readFile (printf "static/%s" $mainCssPath) }}
         <style id="inline-main-css">{{ . | safeCSS }}</style>
     {{ end }}
+    {{ $mainCss := $mainCssPath | absURL }}
+    <link rel="preload" href="{{ $mainCss }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ $mainCss }}"></noscript>
 {{ else }}
     {{ $mainCss := $mainCssPath | absURL }}
-    <link rel="stylesheet" href="{{ $mainCss }}">
+    <link rel="preload" href="{{ $mainCss }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ $mainCss }}"></noscript>
 {{ end }}
 
 <!-- critical fonts -->
@@ -24,13 +28,23 @@
 
 <!-- custom -->
 {{ range .Site.Params.css }}
-<link rel="stylesheet" href="{{ . | absURL }}">
+    {{ $customCss := . | absURL }}
+    <link rel="preload" href="{{ $customCss }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ $customCss }}"></noscript>
 {{ end }}
 
 <!-- google fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
-<!-- bootstrap -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+{{ $asyncStyles := slice
+    (dict "href" "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap")
+    (dict "href" "https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" "crossorigin" "anonymous" "integrity" "sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC")
+    (dict "href" "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" "crossorigin" "anonymous" "integrity" "sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN")
+}}
+{{ range $style := $asyncStyles }}
+    {{ $href := index $style "href" }}
+    {{ $crossorigin := index $style "crossorigin" }}
+    {{ $integrity := index $style "integrity" }}
+    <link rel="preload" href="{{ $href }}" as="style" {{ if $integrity }}integrity="{{ $integrity }}"{{ end }} {{ if $crossorigin }}crossorigin="{{ $crossorigin }}"{{ end }} onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ $href }}" {{ if $integrity }}integrity="{{ $integrity }}"{{ end }} {{ if $crossorigin }}crossorigin="{{ $crossorigin }}"{{ end }}></noscript>
+{{ end }}

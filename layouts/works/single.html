@@ -8,7 +8,7 @@
             {{ with .Params.description }}
             <p>{{ . }}</p>
             {{ end }}
-            <button class="header-cta-button header-cta-button-contact header-cta-button-work" onclick="document.querySelector('.content-sections')?.scrollIntoView({ behavior: 'smooth' });">Let’s take a look ↓</button>
+            <button class="header-cta-button header-cta-button-contact header-cta-button-work" data-scroll-target=".container-tag-list">Let’s take a look ↓</button>
         </div>
         <div class="header-illustration header-image">
             {{ with .Params.header_image }}

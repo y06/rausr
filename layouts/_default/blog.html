@@ -32,7 +32,7 @@
           </div>
         </div>
             <p>Stories, quick reports, tutorials, and a bit of overthinking about graphic design and other random things.</p>
-            <button class="header-cta-button" onclick="document.querySelector('.blog-featured')?.scrollIntoView({ behavior: 'smooth' });">Show me something ↓</button>
+            <button class="header-cta-button" data-scroll-target=".container-tag-list">Show me something ↓</button>
         </div>
         <div class="header-illustration">
             <img src="{{ "svg/header/header-blog.svg" | relURL }}" alt="Blog Illustration">

@@ -302,6 +302,7 @@ h5 {
     position: relative;
     margin: 1.4rem auto 4rem auto;
     padding: 20px;
+    scroll-margin-top: 140px;
 }
 
 .container-tag-list .tag-filter__indicator {
@@ -2385,6 +2386,7 @@ footer .nav-item {
         margin: 1rem auto 2rem auto;
         padding: 1rem;
         gap: 1rem;
+        scroll-margin-top: 96px;
     }
 
     .tag-list-wrapper {
