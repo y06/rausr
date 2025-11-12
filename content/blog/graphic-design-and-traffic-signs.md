@@ -3,7 +3,7 @@ title: "Graphic Design and Traffic Signs: Perfected System or Missed Opportunity
 description: "An in-depth look at the evolution, psychology, and potential for innovation in the world of traffic sign design — from universal systems to local missteps."
 date: 2025-10-07
 tags: ["graphic design", "ux-ui", "history"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: "/images/articles/graphic-design-and-traffic-signs/graphic-design-and-traffic-signs-9.jpg"
 header_image: "/images/articles/graphic-design-and-traffic-signs/graphic-design-and-traffic-signs-1.jpg"

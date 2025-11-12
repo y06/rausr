@@ -8,7 +8,19 @@
             {{ with .Params.description }}
             <p>{{ . }}</p>
             {{ end }}
-            <button class="header-cta-button header-cta-button-contact header-cta-button-about" data-scroll-target=".container-tag-list">Let’s read ↓</button>
+            {{ $authorName := default "rausr" .Params.author }}
+            {{ $authorPhoto := default "/images/authors-pic-jakub.jpg" .Params.author_image }}
+            <div class="header-meta">
+              <button class="header-cta-button header-cta-button-contact header-cta-button-about header-meta__cta" data-scroll-target=".container-tag-list">Let’s read ↓</button>
+              <div class="card20-meta card20-meta--author header-meta__author">
+                <span class="card20-meta__date">{{ .Date.Format "02.01.2006" }}</span>
+                <span class="card20-meta__author">BY {{ $authorName }}</span>
+                {{ with $authorPhoto }}
+                  <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+                {{ end }}
+                
+              </div>
+            </div>
         </div>
         <div class="header-illustration header-image">
             {{ with .Params.header_image }}
@@ -43,9 +55,6 @@
       {{ if gt (len $matches) 0 }}
       <h2>{{ replaceRE `(?m)^## ` "" (index $matches 0) }}</h2>
       {{ end }}
-      <div class="card20-meta">
-      BY {{ .Params.author }} {{ .Date.Format "02.01.2006" }}
-      </div>
     </div>
       <div class="content-section-column content-section-column-right">
       {{ $re := `(?m)^### (.+)` }}

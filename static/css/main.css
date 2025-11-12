@@ -723,12 +723,91 @@ h5 {
 }
 
 .card20-meta {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: color(display-p3 0.588 0.576 0.639); /* #9693A3 */
+  letter-spacing: 0.5px;
+  color: #9693A3;
   font-family: 'Satoshi', sans-serif;
-  margin-top: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  justify-content: space-between;
+}
+
+.header-meta__cta {
+  order: 1;
+}
+
+.header-meta__author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  order: 2;
+}
+
+
+.card20-meta--author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card20-meta__photo {
+  inline-size: 22px;
+  block-size: 22px;
+  border-radius: 50% !important;
+  border: none !important;
+  object-fit: cover;
+}
+
+.header-meta .card20-meta {
+  color: #ffffff;
+}
+
+.header-meta .card20-meta__author {
+  color: color(display-p3 0.831 1.000 0.808);
+}
+
+.header-meta .card20-meta__photo {
+  inline-size: 32px;
+  block-size: 32px;
+}
+
+.card20-meta__author,
+.card20-meta__date {
+  display: inline-flex;
+  align-items: center;
+}
+
+.card20-meta__date {
+    color: inherit;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .card20-meta--author {
+      gap: 0.5rem;
+  }
+
+  .header-meta {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .header-meta__author {
+      order: 0;
+  }
+
+  .header-meta__cta {
+      order: 1;
+  }
 }
 
 .card-badges {
@@ -2371,8 +2450,13 @@ footer .nav-item {
     .header-content p {
       font-size: 1rem;
       line-height: 1.6;
+      margin: 20px auto 10px auto;
     }
 
+
+    .header-cta-button {
+        width: 100% !important;
+    }
 
 
 
@@ -2718,6 +2802,13 @@ footer .nav-item {
 
     .card20-row, .card20-column {
         gap: 2.5rem;
+    }
+
+    .card20-meta {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     .card20-text h3 {

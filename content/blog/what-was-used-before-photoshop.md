@@ -3,7 +3,7 @@ title: "What Was Used Before Photoshop: Graphic Design in the 20th Century"
 description: "Long before digital tools and Ctrl+Z, graphic design was a tactile, manual, and often underappreciated craft. Here's what it really took to be a designer in the last century."
 date: 2025-09-10
 tags: ["graphic design", "reports", "series", "history"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/history-graphic-design/history-graphic-design-6.jpg
 header_image: /images/articles/history-graphic-design/history-graphic-design-1.jpg

@@ -2,7 +2,7 @@
 title: "Exhibition Stand Design in 2025: Compact, Conscious, and Connected"
 description: "Evolving landscape of exhibition stand design — from shrinking budgets and sustainable materials to digital interactivity and modular innovation."
 date: 2025-11-02
-author: "rausr"
+author: "Jakub"
 tags: [3d-modeling, exhibition stands design, trends]
 seotags: [exhibition design, trade fairs, sustainable stands, modular systems, booth trends, event marketing, 3D rendering, AR in exhibitions, VR demos, LED lightboxes, portable displays, beMatrix, T3works, Octanorm, EuroExpo Studio, eco design, branding spaces, marketing strategy, exhibition architecture, future of trade shows]
 preview_image: "/images/articles/exhibition-stand-design-in-2025/exhibition-stand-design-in-2025-8.jpg"

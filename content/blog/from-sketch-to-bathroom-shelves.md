@@ -1,7 +1,7 @@
 ---
 title: "From Sketch to Bathroom Shelves: The Hidden Art of Cosmetic Product Design"
 description: "A deep look behind the creative and technical process of how cosmetic products are designed — from concept sketches to the final bottle on your bathroom shelf."
-author: "rausr"
+author: "Jakub"
 date: 2025-10-13
 tags: ["packaging design", "product design", "branding", "series", "3d-modeling"]
 draft: false

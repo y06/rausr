@@ -3,7 +3,7 @@ title: "Where Do Designers Find Inspiration?"
 description: "A short report on the rituals, environments, and mental spaces where designers find inspiration — beyond screens, tools, and deadlines."
 date: 2025-10-24
 tags: ["creativity", "graphic design", "reports", "philosophy"]
-author: "rausr"
+author: "Jakub"
 draft: false
 seotags:
   - Paula Scher

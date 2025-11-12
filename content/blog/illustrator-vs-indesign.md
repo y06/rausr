@@ -3,7 +3,7 @@ title: "Illustrator vs InDesign: The Print Design Showdown"
 description: "One of the most classic Adobe debates. Where does Illustrator shine in print work — and when is InDesign the real king? This article uncovers the strengths, quirks, and lesser-known secrets of both."
 date: 2025-09-28
 tags: ["software", "illustrator", "graphic design"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/illustrator-vs-indesign/illustrator-vs-indesign-10.jpg
 header_image: /images/articles/illustrator-vs-indesign/illustrator-vs-indesign-1.jpg

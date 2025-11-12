@@ -3,7 +3,7 @@ title: "Cursor Control: The Evolution of Design Hardware"
 description: "Discovering the tools behind precision — from the first computer mouse to modern pen tablets and touch interfaces. How designers choose between speed, accuracy, and comfort."
 date: 2025-10-22
 tags: ["hardware", "history"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/cursor-control-in-graphic-design/cursor-control-in-graphic-design-9.jpg
 header_image: /images/articles/cursor-control-in-graphic-design/cursor-control-in-graphic-design-1.jpg

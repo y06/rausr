@@ -3,7 +3,7 @@ title: "How Mobile-Responsive Design and Smart UX Boost Nonprofit Donations"
 description: "Even small UX changes can drive big results. Better mobile design helped nonprofits increase donations and improve user trust."
 date: 2025-09-09
 tags: ["ux-ui", "reports"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/ux-nonprofit-donations/ux-nonprofit-donations-7.jpg
 header_image: /images/articles/ux-nonprofit-donations/ux-nonprofit-donations-2.jpg

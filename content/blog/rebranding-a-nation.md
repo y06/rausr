@@ -3,7 +3,7 @@ title: "Rebranding a Nation: Ambitious but risky design challenges"
 description: "What about the challenge of national rebranding — where heritage, emotion, and politics collide with strategy and design. What does it take to change the face of a country?"
 date: 2025-11-09
 tags: ["branding", "history", "graphic design", "philosophy"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/rebranding-a-nation/rebranding-a-nation-7.jpg
 header_image: /images/articles/rebranding-a-nation/rebranding-a-nation-1.jpg

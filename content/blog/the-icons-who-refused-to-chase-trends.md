@@ -1,7 +1,7 @@
 ---
 title: "Timeless Designers: The Icons Who Refused to Chase Trends"
 description: "A brief research look into the history of designers who built unshakable styles that transcended decades of changing graphic trends."
-author: "rausr"
+author: "Jakub"
 date: 2025-10-11
 draft: false
 seotags:

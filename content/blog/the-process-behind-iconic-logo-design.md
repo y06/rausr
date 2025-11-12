@@ -3,7 +3,7 @@ title: "From Sketch to Symbol: The Process Behind Iconic Logo Design"
 description: "What it really takes to create a logo that becomes a billion-dollar brand mark — from idea to global visibility."
 date: 2025-09-02
 tags: ["branding", "series", "graphic design"]
-author: "rausr"
+author: "Jakub"
 draft: false
 seotags:
   - Paul Rand

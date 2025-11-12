@@ -1,7 +1,7 @@
 ---
 title: "From Sketch to Sole: What Shoe Designers Use"
 description: "A technical dive into the creative and technical tools behind modern footwear design — from concept sketches to final prototypes."
-author: "rausr"
+author: "Jakub"
 date: 2025-08-10
 tags: ["product design", "reports", "software", "3d-modeling", "series"]
 draft: false

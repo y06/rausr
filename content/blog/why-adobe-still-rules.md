@@ -3,7 +3,7 @@ title: "A Story about: Why Adobe Still Rules the Creative World"
 description: "Adobe dominates the design software world—but how did it get here, why is it still on top, and is there space for new players?"
 date: 2025-09-15
 tags: ["software", "creativity"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/adobe-monopoly/adobe-monopoly-9.jpg
 header_image: /images/articles/adobe-monopoly/adobe-monopoly-1.jpg

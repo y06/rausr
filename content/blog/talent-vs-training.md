@@ -1,7 +1,7 @@
 ---
 title: "Talent vs. Training: Can Visual Creativity Be Taught?"
 description: "Is creative vision a matter of genetic predisposition, or can it be developed through practice and discipline? A look at the balance between talent and drill in visual design."
-author: "rausr"
+author: "Jakub"
 date: 2025-08-18
 tags: ["philosophy", "creativity", "reports"]
 draft: false

@@ -3,7 +3,7 @@ title: "Is Figma the UX/UI Industry Standard? And What About Adobe XD?"
 description: "Figma seems to rule the design world, but why? Is Adobe XD really out of the game? And what’s next for interface design in the AI era?"
 date: 2025-09-21
 tags: ["software", "ux-ui", "ai"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/figma-vs-xd/figma-vs-xd-9.jpg
 header_image: /images/articles/figma-vs-xd/figma-vs-xd-1.jpg

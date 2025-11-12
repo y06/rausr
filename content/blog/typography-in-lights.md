@@ -3,7 +3,7 @@ title: "Typography in Lights: The Design Behind Hollywood's Opening Credits"
 description: "Behind the bold letters and cinematic fades: the process, people, and tools that bring movie typography to life."
 date: 2025-08-30
 tags: ["typography", "graphic design", "software"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/hollywood-typography-design/hollywood-typography-design-8.jpg
 header_image: /images/articles/hollywood-typography-design/hollywood-typography-design-1.jpg

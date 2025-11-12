@@ -3,7 +3,7 @@ title: "The Evolution of Facebook’s Design: From Blue Boxes to Minimal White S
 description: "Facebook has been redesigned many times — but each shift tells us something about design, strategy, and even society. Here’s how it all happened."
 date: 2025-09-23
 tags: ["ux-ui", "trends", "series", "history"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/facebook-design-evolution/facebook-design-evolution-12.jpg
 header_image: /images/articles/facebook-design-evolution/facebook-design-evolution-2.jpg

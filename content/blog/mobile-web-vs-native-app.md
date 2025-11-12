@@ -3,7 +3,7 @@ title: "Mobile Web vs. Native App: What’s Better for Modern Companies?"
 description: "An interesting question – should businesses invest in a powerful mobile web experience or go all-in with native Android and iOS applications — exploring pros, cons, and real design insights."
 date: 2025-10-17
 tags: ["ux-ui", "trends", "reports"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/mobile-web-vs-native-app/mobile-web-vs-native-app-17.jpg
 header_image: /images/articles/mobile-web-vs-native-app/mobile-web-vs-native-app-18.jpg

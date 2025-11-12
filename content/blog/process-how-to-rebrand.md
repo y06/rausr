@@ -3,7 +3,7 @@ title: "How to Rebrand: A Complete Breakdown of the Process (and Pitfalls)"
 description: "What really goes into a successful rebrand? This guide walks through every step — from strategy to execution — with examples, expert tips, and common mistakes to avoid."
 date: 2025-10-09
 tags: ["branding", "marketing"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/process-how-to-rebrand/process-how-to-rebrand-16.jpg
 header_image: /images/articles/process-how-to-rebrand/process-how-to-rebrand-1.jpg

@@ -3,7 +3,7 @@ title: "When Being Trendy Backfires: The Hidden Risk of Over-Styled Branding"
 description: "Why following design trends too closely can dilute your brand identity and waste your marketing budget."
 date: 2025-09-11
 tags: ["marketing", "branding", "trends"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/trendy-branding-risk/trendy-branding-risk-10.jpg
 header_image: /images/articles/trendy-branding-risk/trendy-branding-risk-3.jpg

@@ -3,7 +3,7 @@ title: "Is Copywriting a Talent or a Skill? (And Can You Train for It?)"
 description: "Brand naming, copywriting, and other 'creative' writing jobs often seem like magic. But is it really talent—or something you can build?"
 date: 2025-09-13
 tags: ["creativity", "marketing"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/copywriting-talent/copywriting-talent-2.jpg
 header_image: /images/articles/copywriting-talent/copywriting-talent-1.jpg

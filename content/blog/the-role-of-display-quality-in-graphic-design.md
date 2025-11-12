@@ -1,7 +1,7 @@
 ---
 title: "Pixel-Perfect or Overrated? The Role of Display Quality in Graphic Design"
 description: "Do you really need a top-tier display to create exceptional design work? A deep dive into color accuracy, resolution, and the real-world practices of designers."
-author: "rausr"
+author: "Jakub"
 date: 2025-08-11
 tags: ["hardware", "reports", "graphic design"]
 draft: false

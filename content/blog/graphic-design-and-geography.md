@@ -3,7 +3,7 @@ title: "Does Geography Shape Graphic Design? From Scandinavia to the Sahara"
 description: "Can a country’s location influence how it designs? How climate, culture, and context shape graphic aesthetics — with surprising examples."
 date: 2025-09-24
 tags: ["graphic design", "marketing", "trends"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/geolocation-and-graphic-design/geolocation-and-graphic-design-15.jpg
 header_image: /images/articles/geolocation-and-graphic-design/geolocation-and-graphic-design-1.jpg

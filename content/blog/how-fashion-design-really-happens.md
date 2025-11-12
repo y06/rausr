@@ -3,7 +3,7 @@ title: "From sketch to runway: How Fashion Design Really Happens"
 description: "Behind the Seams — a look at the creative, technical, and marketing layers that power modern fashion design."
 date: 2025-08-30
 tags: ["product design", "series", "marketing"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/fashion-design-process/fashion-design-process-8.jpg
 header_image: /images/articles/fashion-design-process/fashion-design-process-1.jpg

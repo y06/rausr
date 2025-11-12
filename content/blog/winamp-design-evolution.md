@@ -1,6 +1,6 @@
 ---
 title: "Winamp and the Evolution of Media Player Design"
-author: "rausr"
+author: "Jakub"
 date: 2025-07-24
 description: "From pixelated skins to minimalist streams. How music players reflect our changing digital habits."
 tags: ["reports", "trends", "history"]

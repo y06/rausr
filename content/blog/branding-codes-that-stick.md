@@ -3,7 +3,7 @@ title: "Branding Codes That Stick: Usability Beats Perfection"
 description: "Why successful brand codes go beyond color and typography manuals—and how to make yours truly memorable and practical."
 date: 2025-09-26
 tags: ["branding", "graphic design", "marketing", "creativity"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/branding-codes-that-stick/branding-codes-that-stick-6.jpg
 header_image: /images/articles/branding-codes-that-stick/branding-codes-that-stick-1.jpg

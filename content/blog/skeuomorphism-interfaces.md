@@ -3,7 +3,7 @@ title: "Skeuomorphism: When Interfaces Felt Like Home"
 description: "A nostalgic look into the textured, cozy era of skeuomorphic design — where buttons looked real, shadows were deep, and your screen resembled a designer’s living room."
 date: 2025-10-06
 tags: ["ux-ui", "graphic design", "trends", "history"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/skeuomorphism-interfaces/skeuomorphism-interfaces-10.jpg
 header_image: /images/articles/skeuomorphism-interfaces/skeuomorphism-interfaces-2.jpg

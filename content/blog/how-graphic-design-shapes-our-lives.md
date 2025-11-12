@@ -3,7 +3,7 @@ title: "How Graphic Design Shapes Our Lives (And We Barely Notice)"
 description: "Graphic design isn’t just for ads and logos. It influences the way we think, behave, and even remember. From cave paintings to crypto wallets, let’s explore the hidden power of visual design."
 date: 2025-10-04
 tags: ["graphic design", "philosophy"]
-author: "rausr"
+author: "Jakub"
 draft: false
 preview_image: /images/articles/how-graphic-design-shapes-our-lives/how-graphic-design-shapes-our-lives-13.jpg
 header_image: /images/articles/how-graphic-design-shapes-our-lives/how-graphic-design-shapes-our-lives-2.jpg

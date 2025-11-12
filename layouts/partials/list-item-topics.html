@@ -1,3 +1,5 @@
+{{ $authorName := default "rausr" (or .Params.author .Params.Author) }}
+{{ $authorPhoto := default "/images/authors-pic-jakub.jpg" (or .Params.author_image .Params.authorImage) }}
 
     <div class="card20">
         <a href="{{ .Scratch.Get "link" }}" class="">
@@ -23,6 +25,12 @@
                 {{ $link := $.Scratch.Get "link" }}
                 <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
 
-                <div class="card20-meta">BY {{ .Params.Author }} {{ .Date.Format "02.01.2006" }}</div>
+                <div class="card20-meta card20-meta--author">
+                    <span class="card20-meta__date">{{ .Date.Format "02.01.2006" }}</span>
+                    <span class="card20-meta__author">BY {{ $authorName }}</span>
+                    {{ with $authorPhoto }}
+                        <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+                    {{ end }}
+                </div>
         </div>    
     </div>
