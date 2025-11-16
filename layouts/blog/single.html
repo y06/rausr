@@ -92,6 +92,9 @@
           {{ else if hasPrefix (lower $item) "interview:" }}
             {{ $title := replaceRE `(?i)^interview:\s*` "" $item }}
             <span class="tag sources sources-interview">🎙️ {{ $title }}</span>
+          {{ else if hasPrefix (lower $item) "text:" }}
+            {{ $title := replaceRE `(?i)^text:\s*` "" $item }}
+            <span class="tag sources sources-text">📓 {{ $title }}</span>
           {{ else }}
             {{ $parsed := urls.Parse $item }}
             {{ $host := $item }}

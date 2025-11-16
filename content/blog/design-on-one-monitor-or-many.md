@@ -7,12 +7,12 @@ author: "Jakub"
 draft: false
 preview_image: /images/articles/design-on-one-monitor-or-many/design-on-one-monitor-or-many-10.jpg
 header_image: /images/articles/design-on-one-monitor-or-many/design-on-one-monitor-or-many-1.jpg
-sources:
-  - "Stanford Ergonomics Report 2019"
-  - "University of Utah Multi‑Monitor Productivity Study"
-  - "Apple HIG internal usability notes (publicly summarized)"
-  - "Journal of Cognitive Neuroscience – Eye Movement & Focus Cycles"
-  - "DesignWeek – Designer Workspace Trends 2023"
+source:
+  - "text: Stanford Ergonomics Report 2019"
+  - "text: University of Utah Multi‑Monitor Productivity Study"
+  - "text: Apple HIG internal usability notes (publicly summarized)"
+  - "text: Journal of Cognitive Neuroscience – Eye Movement & Focus Cycles"
+  - "text: DesignWeek – Designer Workspace Trends 2023"
 seotags: ["single monitor workflow", "multi monitor setup", "graphic design hardware", "ergonomic design", "designer productivity", "virtual desktops", "ultrawide monitor", "focus and attention", "neck strain design", "creative ergonomics", "workspace design", "pro designer setup", "monitor research", "digital workstation", "deep work design"]
 ---
 

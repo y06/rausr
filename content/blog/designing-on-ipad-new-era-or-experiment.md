@@ -9,8 +9,7 @@ tags:
 draft: false
 preview_image: /images/articles/designing-on-ipad-new-era-or-experiment/designing-on-ipad-new-era-or-experiment-8.jpg
 header_image: /images/articles/designing-on-ipad-new-era-or-experiment/designing-on-ipad-new-era-or-experiment-1.jpg
-seotags:
-  - ipad
+seotags: ["ipad", "figma", "affinity", "Procreate"]
 source:
   - "https://www.creativebloq.com/features/ipad-design"
   - "https://www.adobe.com/creativecloud.html"
