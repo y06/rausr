@@ -1,7 +1,8 @@
 ---
 title: "AI vs. Old School: Finding the Perfect Image for Your Design Project"
 description: "A comparison between AI-generated visuals and traditional image sourcing — which method saves more time, and which delivers the better creative control?"
-author: "Jakub"
+author: "Deborah"
+author_image: "/images/authors-pic-deborah.jpg"
 date: 2025-10-28
 tags: ["ai", "graphic design", "trends"]
 preview_image: /images/articles/ai-finding-the-perfect-project-image/ai-finding-the-perfect-project-image-7.jpg
