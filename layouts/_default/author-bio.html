@@ -2,12 +2,6 @@
 
 <main class="author-bio">
   <div class="author-bio__container">
-    <nav class="author-bio__breadcrumbs" aria-label="Breadcrumb">
-      <a class="author-bio__crumb" href="/"><span aria-hidden="true">←</span> Home</a>
-      <a class="author-bio__crumb" href="/about/">About Us</a>
-      <span class="author-bio__crumb author-bio__crumb--current">{{ .Params.name | default .Title }}</span>
-    </nav>
-
     <section class="author-bio__hero">
       <div class="author-bio__identity">
         <div class="author-bio__photo">
@@ -41,6 +35,8 @@
         {{ end }}
       </div>
     </section>
+    
+    {{ partial "tag-list-home" . }}
 
     <div class="author-bio__grid">
       <article class="author-bio__content">

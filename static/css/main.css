@@ -1501,29 +1501,6 @@ footer .nav-item {
     margin: 0 auto;
 }
 
-.author-bio__breadcrumbs {
-    display: flex;
-    gap: 0.65rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
-    color: rgba(67, 65, 76, 0.7);
-}
-
-.author-bio__crumb {
-    padding: 0.35rem 0.9rem;
-    border-radius: 999px;
-    background: color(display-p3 0.965 0.949 1.000);
-    color: rgba(67, 65, 76, 0.9);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.author-bio__crumb--current {
-    background: color(display-p3 0.420 0.270 1.000);
-    color: #fff;
-}
-
 .author-bio__hero {
     display: flex;
     flex-wrap: wrap;
