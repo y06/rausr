@@ -1,0 +1,112 @@
+{{ partial "header" . }}
+
+<main class="author-bio">
+  <div class="author-bio__container">
+    <nav class="author-bio__breadcrumbs" aria-label="Breadcrumb">
+      <a class="author-bio__crumb" href="/"><span aria-hidden="true">←</span> Home</a>
+      <a class="author-bio__crumb" href="/about/">About Us</a>
+      <span class="author-bio__crumb author-bio__crumb--current">{{ .Params.name | default .Title }}</span>
+    </nav>
+
+    <section class="author-bio__hero">
+      <div class="author-bio__identity">
+        <div class="author-bio__photo">
+          {{ $photo := .Params.photo | default "/images/authors-pic-jakub.jpg" }}
+          <img src="{{ $photo }}" width="120" height="120" alt="Portrait of {{ .Params.name | default .Title }}">
+        </div>
+        <div class="author-bio__intro">
+          <h1>{{ .Params.name | default .Title }}</h1>
+          {{ with .Params.role }}
+            <p class="author-bio__role">{{ . }}</p>
+          {{ end }}
+          {{ with .Params.social_links }}
+          <ul class="author-bio__socials">
+            {{ range . }}
+              <li>
+                <a href="{{ .url }}" class="author-bio__social-link" target="_blank" rel="noopener" aria-label="{{ .label }}">
+                  {{ if .icon }}<i class="{{ .icon }}" aria-hidden="true"></i>{{ end }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </div>
+      </div>
+      <div class="author-bio__claim">
+        {{ with .Params.claim }}
+          <p class="author-bio__claim-text">{{ . }}</p>
+        {{ end }}
+        {{ with .Params.claim_description }}
+          <p class="author-bio__claim-note">{{ . }}</p>
+        {{ end }}
+      </div>
+    </section>
+
+    <div class="author-bio__grid">
+      <article class="author-bio__content">
+        {{ with .Params.intro_title }}
+          <h2>{{ . }}</h2>
+        {{ end }}
+        {{ range .Params.intro_body }}
+          <p>{{ . }}</p>
+        {{ end }}
+
+        {{ with .Params.expertise }}
+        <section class="author-bio__section">
+          <h2>Expertise</h2>
+          <ul class="author-bio__list">
+            {{ range . }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </section>
+        {{ end }}
+
+        {{ with .Params.achievements }}
+        <section class="author-bio__section">
+          <h2>Achievements</h2>
+          <ul class="author-bio__list">
+            {{ range . }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </section>
+        {{ end }}
+      </article>
+
+      <aside class="author-bio__sidebar">
+        <div class="author-bio__badge-panel">
+          {{ with .Params.professional_badges }}
+            <section class="author-bio__badge-section">
+              <h2>Professional Badges</h2>
+              <div class="author-bio__badge-grid">
+                {{ range . }}
+                  <div class="author-bio__badge" title="{{ .label }}">
+                    <img src="{{ .icon }}" alt="{{ .label }}">
+                  </div>
+                {{ end }}
+              </div>
+            </section>
+          {{ end }}
+
+          {{ with .Params.personal_badges }}
+            <section class="author-bio__badge-section">
+              <h2>Personal or Hobby Badges</h2>
+              <div class="author-bio__badge-grid">
+                {{ range . }}
+                  <div class="author-bio__badge" title="{{ .label }}">
+                    <img src="{{ .icon }}" alt="{{ .label }}">
+                  </div>
+                {{ end }}
+              </div>
+            </section>
+          {{ end }}
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+{{ partial "featured-content.html" . }}
+{{ partial "cta-contact" . }}
+{{ partial "footer" . }}
