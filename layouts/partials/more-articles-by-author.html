@@ -1,0 +1,40 @@
+{{- $authorNames := slice -}}
+{{- with .Params.author }}{{ $authorNames = $authorNames | append . }}{{ end -}}
+{{- with .Params.name }}{{ $authorNames = $authorNames | append . }}{{ end -}}
+{{- if eq (len $authorNames) 0 -}}
+  {{- $authorNames = $authorNames | append "This Author" -}}
+{{- end -}}
+{{- $displayName := index $authorNames 0 -}}
+{{- $blogPages := where .Site.RegularPages "Section" "blog" -}}
+{{- if lt (len $blogPages) 1 }}{{ $blogPages = where .Site.RegularPages "Type" "articles" }}{{ end -}}
+{{- $authorPages := where $blogPages "Params.author" "in" $authorNames -}}
+{{- if gt (len $authorPages) 0 -}}
+  <section class="more-articles-by-author">
+    <h2>More Articles by {{ $displayName }}</h2>
+    {{ $older := first 3 (sort $authorPages "Date" "desc") }}
+    {{ if gt (len $older) 0 }}
+      <section class="blog-older">
+        <div class="card20-column">
+          {{ range first 2 $older }}
+            {{ partial "list-item-blog.html" (dict "ctx" . "IsHome" false) }}
+          {{ end }}
+        </div>
+        <div class="card20-column">
+          {{ range after 2 $older }}
+            {{ partial "list-item-blog.html" (dict "ctx" . "IsHome" false) }}
+          {{ end }}
+          <div class="card20 card100 card200">
+            <a href="/blog/">
+              <div class="card20-top card200-top card300-top">
+                <span>More from {{ $displayName }} 🥑</span>
+              </div>
+            </a>
+            <div class="card20-text card200-text">
+              <a href="/blog/">→</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  </section>
+{{- end -}}

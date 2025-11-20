@@ -305,6 +305,10 @@ h5 {
     scroll-margin-top: 140px;
 }
 
+.container-tag-list-author-bio {
+    margin: 1.4rem auto 0rem auto !important;
+}
+
 .container-tag-list .tag-filter__indicator {
     all: unset;
 }
@@ -665,6 +669,10 @@ h5 {
 
 .card200-top:hover {
     transform: translateX(+0.625rem);
+}
+
+.card300-top {
+    padding: 0 3rem;
 }
 
 .card20-top img {
@@ -1503,8 +1511,8 @@ footer .nav-item {
 
 .author-bio__hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-    gap: 2.5rem;
+    grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+    gap: 2.75rem 8.125rem;
     align-items: flex-start;
     background: #fff;
 }
@@ -1591,7 +1599,7 @@ footer .nav-item {
 .author-bio__hero-right {
     max-width: 460px;
     text-align: left;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem 0 0;
 }
 
 .author-bio__claim-text {
@@ -1971,11 +1979,16 @@ footer .nav-item {
     color: color(display-p3 0.408 0.282 1.000); /* #6848FF */
 }
 
+.author-bio__article {
+    margin: 1rem auto !important;
+}
+
 .author-bio__article .content-sections.author-bio__grid {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
     gap: 2.75rem 8.125rem;
 }
+
 
 .author-bio__article .content-section-column-left,
 .author-bio__article .content-section-column-right {
@@ -3333,3 +3346,13 @@ footer .nav-item {
       }
     }
     
+.more-articles-by-author {
+    padding: 2rem 0 2rem;
+}
+
+.more-articles-by-author h2 {
+    font-size: 2.5rem;
+    color: #43414C;
+    margin-bottom: 4rem;
+    text-align: center;
+}
