@@ -119,8 +119,11 @@
       </aside>
     </section>
   </section>
-  {{ partial "more-articles-by-author" . }}
 </section>
+
+{{ partial "more-articles-by-author" . }}
+{{ partial "subscribe.html" . }}
+{{ partial "more-works.html" . }}
 
 {{ partial "featured-content.html" . }}
 {{ partial "cta-contact" . }}

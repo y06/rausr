@@ -3347,12 +3347,77 @@ footer .nav-item {
     }
     
 .more-articles-by-author {
-    padding: 2rem 0 2rem;
+    padding: 1rem 0 1rem 0;
 }
 
 .more-articles-by-author h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #43414C;
     margin-bottom: 4rem;
     text-align: center;
+}
+
+/* Subscribe partial */
+
+.subscribe-container {
+    margin: 2rem;
+    border-radius: 16px;
+    background:
+        linear-gradient(45deg, color(display-p3 0.043 0.224 0.220), color(display-p3 0.051 0.051 0.059));
+    background-repeat: repeat;
+}
+
+.subscribe-content {
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subscribe-copy h2 {
+    font-size: 2rem;
+    color: color(display-p3 0.831 1 0.808);
+    margin: 0 0 1rem;
+}
+
+.subscribe-copy p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.cta-subscribe {
+    margin-top: none;
+    margin: auto;
+}
+
+
+
+
+.cta-button {
+  background-color: color(display-p3 0.831 1 0.808);
+  color: color(display-p3 0.408 0.282 1.000) !important;
+  padding: 1.65rem 3rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.cta-icon {
+  background-color: color(display-p3 0.255 0.443 0.459);
+  padding: 1.65rem 2.35rem 1.65rem 2.75rem;
+  margin-left: -1rem;
+  border-radius: 12px;
+  color: color(display-p3 0.305 0.901 0.886) !important;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.cta-button:hover {
+  transform: translateX(5px);
+  color: color(display-p3 0.408 0.282 1.000) !important;
 }
