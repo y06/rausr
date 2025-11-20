@@ -17,9 +17,14 @@
             {{ with .Params.social_links }}
             <ul class="author-bio__socials">
               {{ range . }}
+                {{ $label := .label | default "Social link" }}
                 <li>
-                  <a href="{{ .url }}" class="author-bio__social-link" target="_blank" rel="noopener" aria-label="{{ .label }}">
-                    {{ if .icon }}<i class="{{ .icon }}" aria-hidden="true"></i>{{ end }}
+                  <a href="{{ .url }}" class="author-bio__social-link" target="_blank" rel="noopener" aria-label="{{ $label }}">
+                    {{ if .icon_svg }}
+                      <img src="{{ .icon_svg }}" alt="{{ $label }} icon" width="20" height="20" loading="lazy" decoding="async">
+                    {{ else if .icon }}
+                      <i class="{{ .icon }}" aria-hidden="true"></i>
+                    {{ end }}
                   </a>
                 </li>
               {{ end }}
@@ -38,7 +43,9 @@
       </div>
     </div>
   </section>
-  {{ partial "tag-list-home" (dict "Title" "Jakub Čapliar" "Params" .Params) }}
+  <div class="author-bio__tag-spacer">
+    {{ partial "tag-list-home" (dict "Title" "Jakub Čapliar" "Params" .Params) }}
+  </div>
 </main>
 
 <section class="article-container author-bio__article">

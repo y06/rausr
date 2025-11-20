@@ -1493,7 +1493,7 @@ footer .nav-item {
 
 .author-bio-header {
     background: #fff;
-    padding: 4rem 1.5rem 5rem 1.5rem;
+    padding: 4rem 1.5rem 2rem 1.5rem;
 }
 
 .author-bio-header .author-bio__container {
@@ -1506,7 +1506,11 @@ footer .nav-item {
     grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
     gap: 2.5rem;
     align-items: flex-start;
-    background: color(display-p3 0.965 0.949 1.000);
+    background: #fff;
+}
+
+.author-bio__hero p {
+    color: rgba(67, 65, 76, 0.95);
 }
 
 .author-bio__hero-left {
@@ -1523,9 +1527,10 @@ footer .nav-item {
 .author-bio__photo {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 100%;
     overflow: hidden;
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .author-bio__photo img {
@@ -1538,7 +1543,8 @@ footer .nav-item {
 .author-bio__intro h1 {
     font-size: 2.375rem;
     margin: 0;
-    color: rgba(15, 9, 51, 0.95);
+    color: #43414C;
+    font-weight: 500;
     text-align: left;
 }
 
@@ -1549,7 +1555,7 @@ footer .nav-item {
 .author-bio__role {
     margin: 0.5rem 0 1rem;
     font-size: 1.125rem;
-    color: rgba(67, 65, 76, 0.9);
+    color: rgba(67, 65, 76, 0.95);
     text-align: left;
 }
 
@@ -1561,22 +1567,25 @@ footer .nav-item {
     gap: 0.75rem;
 }
 
-.author-bio__social-link {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: #fff;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 6px 16px rgba(67, 65, 76, 0.15);
-    color: color(display-p3 0.420 0.270 1.000);
-    font-size: 1.1rem;
+.author-bio__social-link img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    filter: grayscale(1) saturate(0);
+    transition: filter 0.3s ease;
 }
 
 .author-bio__social-link:hover {
     color: #fff;
     background: color(display-p3 0.305 0.901 0.886);
+}
+
+.author-bio__social-link:hover img {
+    filter: none;
+}
+
+.author-bio__tag-spacer .container-tag-list {
+    margin-bottom: 1rem;
 }
 
 .author-bio__hero-right {
@@ -1587,15 +1596,14 @@ footer .nav-item {
 
 .author-bio__claim-text {
     font-size: 2.375rem;
-    color: color(display-p3 0.420 0.270 1.000);
-    font-weight: 600;
+    color: color(display-p3 0.420 0.270 1.000) !important;
+    font-weight: 500;
     margin: 0 0 0.75rem 0;
 }
 
 .author-bio__claim-note {
     margin: 0;
     font-size: 1.125rem;
-    color: rgba(67, 65, 76, 0.9);
 }
 
 .author-bio__grid {
@@ -2736,7 +2744,7 @@ footer .nav-item {
 
 
     /* Tag-List (Mobile-first optimized) */
-    .container-tag-list {
+    .container-tag-list, container-tag-list.about-author {
         display: flex;
         flex-direction: column;
         align-items: center;
