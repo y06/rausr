@@ -5,8 +5,8 @@ date: 2025-11-20
 tags: ["creativity", "philosophy"]
 author: "Jakub"
 draft: false
-preview_image: /images/articles/where-creativity-is-born/where-creativity-is-born-1.jpg
-header_image: /images/articles/where-creativity-is-born/where-creativity-is-born-2.jpg
+preview_image: /images/articles/where-creativity-is-born/where-creativity-is-born-9.jpg
+header_image: /images/articles/where-creativity-is-born/where-creativity-is-born-1.jpg
 sources:
   - "Text: Journal of Creative Behavior"
   - "Text: Harvard Study of the Default Mode Network"
@@ -31,7 +31,7 @@ Is it biological, psychological, philosophical… or a mix of all three?
 This article explores the **origin of creativity** through the lenses of neuroscience, memory, personality, and lived experience.
 
 {{< halves >}}
-{{< halfimg src="/images/articles/where-creativity-is-born/where-creativity-is-born-1.jpg" alt="Where Creativity Is Born" >}}
+{{< halfimg src="/images/articles/where-creativity-is-born/where-creativity-is-born-2.jpg" alt="Where Creativity Is Born" >}}
 {{< /halves >}}
 
 
@@ -61,9 +61,9 @@ Identifies which idea matters emotionally.
 Creativity is not a place — it is a dynamic **relationship** between networks.
 {{< /quote >}}
 
-{{< halves >}}
-{{< halfimg src="/images/articles/where-creativity-is-born/where-creativity-is-born-1.jpg" alt="" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/where-creativity-is-born/where-creativity-is-born-3.jpg" alt="creativity emerges from interaction between several major networks" >}}
+
 
 
 ### Are Creative Ideas Born in Neuron Connections?
@@ -81,9 +81,7 @@ During creative work, the brain shows **increased global connectivity**, meaning
 
 Creativity is the brain breaking its usual rules.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/where-creativity-is-born/where-creativity-is-born-1.jpg" alt="" >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/where-creativity-is-born/where-creativity-is-born-4.jpg" alt="Creative thoughts arise when the brain recombines neural patterns" >}}
 
 
 ### Are Creative People Using Life Experiences to Create?
@@ -116,7 +114,10 @@ Their brain blends these elements into new combinations.
 Creativity = memory × personality × emotional significance.
 {{< /quote >}}
 
----
+{{< halves >}}
+{{< halfimg src="/images/articles/where-creativity-is-born/where-creativity-is-born-5.jpg" alt="Creative People Using Life Experiences to Create" >}}
+{{< /halves >}}
+
 
 ### Do All People Have Predisposition to Creativity?
 
@@ -134,7 +135,8 @@ But expression varies due to:
 Creativity is a universal human function, but **talent distribution is uneven**.
 {{< /interest >}}
 
----
+{{< fullimg src="/images/articles/where-creativity-is-born/where-creativity-is-born-6.jpg" alt="Creativity is a universal human function" >}}
+
 
 ### Why Are Some People More Creative Than Others?
 
@@ -162,7 +164,6 @@ Constant drive to explore and observe details.
 Highly creative individuals show **slightly irregular neural firing**, creating internal controlled chaos.
 {{< /interest >}}
 
----
 
 ### Creativity vs Analytical Thinking: Two Different Minds?
 
@@ -183,7 +184,8 @@ The best innovators combine:
 
 This rare dual activation is observed in highly creative professionals.
 
----
+{{< fullimg src="/images/articles/where-creativity-is-born/where-creativity-is-born-7.jpg" alt="Creativity vs Analytical Thinking" >}}
+
 
 ### Where Creativity Is Truly Born
 
@@ -204,12 +206,16 @@ Then becomes valuable through:
 - structure
 - intention
 
+{{< interest >}}
 Creativity is the bridge between the inner unknown and outer reality.
+{{< /interest >}}
 
 #### Philosophical Definition
 Creativity is **the human ability to reorganize reality into new meaning**.
 
----
+
+{{< fullimg src="/images/articles/where-creativity-is-born/where-creativity-is-born-8.jpg" alt="Creativity is the human ability to reorganize reality" >}}
+
 
 ### Conclusion
 
