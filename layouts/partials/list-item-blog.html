@@ -2,6 +2,10 @@
 {{ $page := .ctx }}
 {{ $authorName := default "rausr" (or $page.Params.author $page.Params.Author) }}
 {{ $authorPhoto := default "/images/authors-pic-jakub.jpg" (or $page.Params.author_image $page.Params.authorImage) }}
+{{ $bioLink := "" }}
+{{ if eq (lower $authorName) "jakub" }}
+  {{ $bioLink = "/about/jakub-capliar/" }}
+{{ end }}
 
 {{ $lowerTags := apply $page.Params.tags "lower" "." }}
 {{ $hasSeries := gt (len (intersect $lowerTags (slice "series"))) 0 }}
@@ -63,9 +67,21 @@
           <h3><a href="{{ $link }}">{{ $page.Title }}</a></h3>
           <div class="card20-meta card20-meta--author">
             <span class="card20-meta__date">{{ $page.Date.Format "02.01.2006" }}</span>
-            <span class="card20-meta__author">BY {{ $authorName }}</span>
+            {{ if $bioLink }}
+              <a class="card20-meta__author-link" href="{{ $bioLink }}" aria-label="About {{ $authorName }}">
+                <span class="card20-meta__author">BY {{ $authorName }}</span>
+              </a>
+            {{ else }}
+              <span class="card20-meta__author">BY {{ $authorName }}</span>
+            {{ end }}
             {{ with $authorPhoto }}
-              <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+              {{ if $bioLink }}
+                <a class="card20-meta__photo-link" href="{{ $bioLink }}" aria-label="About {{ $authorName }}">
+                  <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+                </a>
+              {{ else }}
+                <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+              {{ end }}
             {{ end }}
           </div>
       </div>
@@ -98,9 +114,21 @@
       <h3><a href="{{ $link }}">{{ $page.Title }}</a></h3>
       <div class="card20-meta card20-meta--author">
         <span class="card20-meta__date">{{ $page.Date.Format "02.01.2006" }}</span>
-        <span class="card20-meta__author">BY {{ $authorName }}</span>
+        {{ if $bioLink }}
+          <a class="card20-meta__author-link" href="{{ $bioLink }}" aria-label="About {{ $authorName }}">
+            <span class="card20-meta__author">BY {{ $authorName }}</span>
+          </a>
+        {{ else }}
+          <span class="card20-meta__author">BY {{ $authorName }}</span>
+        {{ end }}
         {{ with $authorPhoto }}
-          <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+          {{ if $bioLink }}
+            <a class="card20-meta__photo-link" href="{{ $bioLink }}" aria-label="About {{ $authorName }}">
+              <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+            </a>
+          {{ else }}
+            <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+          {{ end }}
         {{ end }}
       </div>
   </div>

@@ -56,6 +56,15 @@
         </ul>
       </div>
     <button class="tag-scroll right">→</button>
+    <div class="search-author-filter" id="search-author-filter" hidden>
+      <label for="search-author-select">Authors</label>
+      <div class="search-author-filter__control">
+        <select id="search-author-select" disabled>
+          <option value="all">All authors</option>
+        </select>
+        <span class="search-author-filter__chevron" aria-hidden="true">⌄</span>
+      </div>
+    </div>
   </div>
 
   <section class="card-container">
@@ -91,6 +100,8 @@
   const showingEl = document.getElementById('search-showing');
   const paginationEl = document.getElementById('search-pagination');
   const paginationListEl = document.getElementById('search-pagination-list');
+  const authorFilterWrapper = document.getElementById('search-author-filter');
+  const authorFilterSelect = document.getElementById('search-author-select');
   const defaultDescription = descriptionEl ? descriptionEl.textContent.trim() : '';
   const defaultTitle = titleEl ? titleEl.textContent.trim() : 'Show Search';
   const defaultDocumentTitle = document.title;
@@ -106,19 +117,37 @@
   let fuse,
       data = [],
       sectionFilter = 'all',
+      authorFilter = 'all',
+      authorOptions = [],
       currentQuery = '',
       currentResults = [],
       currentPage = 1;
 
-  const mergeTags = (primary, secondary) => {
-    const merged = Array.isArray(primary) ? [...primary] : [];
-    if (Array.isArray(secondary)) {
-      secondary.forEach((tag) => {
-        if (typeof tag === 'string' && !merged.includes(tag)) {
-          merged.push(tag);
-        }
-      });
+  const updateAuthorFilterState = () => {
+    if (!authorFilterSelect || !authorFilterWrapper) {
+      return;
     }
+    const shouldEnable = sectionFilter === 'blog' && authorOptions.length > 0;
+    authorFilterSelect.disabled = !shouldEnable;
+    if (!shouldEnable) {
+      authorFilter = 'all';
+      authorFilterSelect.value = 'all';
+    }
+  };
+
+  const mergeTags = (...collections) => {
+    const merged = [];
+    collections.forEach((collection) => {
+      if (Array.isArray(collection)) {
+        collection.forEach((tag) => {
+          if (typeof tag === 'string' && !merged.includes(tag)) {
+            merged.push(tag);
+          }
+        });
+      } else if (typeof collection === 'string' && collection && !merged.includes(collection)) {
+        merged.push(collection);
+      }
+    });
     return merged;
   };
 
@@ -260,7 +289,7 @@
       card.className = `card1 ${cardVariant}`;
       card.setAttribute('role', 'listitem');
 
-      const rawTags = mergeTags(item.tags, item.seotags);
+      const rawTags = mergeTags(item.tags, item.seotags, item.author);
       const primaryTag = rawTags.length ? rawTags[0] : '';
       const tagSlug = primaryTag
         ? primaryTag
@@ -276,6 +305,10 @@
       const thumbSource2x = item.image_thumb_2x || '';
       const thumbWebpSource = item.image_thumb_webp || '';
       const thumbWebpSource2x = item.image_thumb_webp_2x || '';
+      const authorRaw = !isWork ? (item.author || '') : '';
+      const authorName = authorRaw ? htmlEscape(authorRaw) : '';
+      const authorPhotoRaw = !isWork ? (item.author_image || '') : '';
+      const authorPhoto = authorPhotoRaw ? htmlEscape(authorPhotoRaw) : '';
       const hasImage = Boolean(thumbSource || thumbWebpSource || previewSource);
       const titleHtml = htmlEscape(item.title);
       const url = htmlEscape(item.url);
@@ -313,6 +346,9 @@
         ? `<span class="card1-category">${tagSlug ? `<a href="/tags/${tagSlug}/">${safePrimaryTag}</a>` : safePrimaryTag}</span>`
         : '';
       const ctaText = isWork ? 'SHOW WORK →' : 'READ ARTICLE →';
+      const authorPhotoMarkup = authorPhoto
+        ? `<span class="card1-author-photo"><img class="card20-meta__photo" src="${authorPhoto}" alt="Portrait of ${authorName || 'Author'}" loading="lazy" decoding="async"></span>`
+        : '';
 
       card.innerHTML = `
         <a href="${url}" aria-label="${titleHtml}">
@@ -321,7 +357,10 @@
         <div class="card1-bottom">
           ${primaryTagMarkup}
           <h3><a href="${url}">${titleHtml}</a></h3>
-          <a href="${url}" class="card1-cta">${ctaText}</a>
+          <div class="card1-row">
+            <a href="${url}" class="card1-cta">${ctaText}</a>
+            ${authorPhotoMarkup}
+          </div>
         </div>
       `;
 
@@ -427,8 +466,17 @@
   }
 
   function applyFilter(items) {
-    if (sectionFilter === 'all') return items;
-    return items.filter(x => (x.item ? x.item.section : x.section) === sectionFilter);
+    let filtered = items;
+    if (sectionFilter !== 'all') {
+      filtered = filtered.filter(x => (x.item ? x.item.section : x.section) === sectionFilter);
+    }
+    if (authorFilter !== 'all') {
+      filtered = filtered.filter((entry) => {
+        const item = entry.item || entry;
+        return item.section === 'blog' && (item.author || '').toLowerCase() === authorFilter;
+      });
+    }
+    return filtered;
   }
 
   function onSearch() {
@@ -449,12 +497,34 @@
     .then(r => r.json())
     .then(json => {
       data = json;
+      if (authorFilterWrapper && authorFilterSelect) {
+        const authorSet = new Set();
+        json.forEach((item) => {
+          if (item.section === 'blog' && item.author) {
+            authorSet.add(item.author);
+          }
+        });
+        authorOptions = Array.from(authorSet).sort();
+        if (authorOptions.length && authorFilterSelect.length === 1) {
+          authorFilterWrapper.removeAttribute('hidden');
+          const fragment = document.createDocumentFragment();
+          authorOptions.forEach((name) => {
+            const option = document.createElement('option');
+            option.value = name.toLowerCase();
+            option.textContent = name;
+            fragment.appendChild(option);
+          });
+          authorFilterSelect.appendChild(fragment);
+        }
+        updateAuthorFilterState();
+      }
       fuse = new Fuse(json, {
         keys: [
           { name: 'title', weight: 0.6 },
           { name: 'description', weight: 0.25 },
           { name: 'tags', weight: 0.15 },
-          { name: 'seotags', weight: 0.1 }
+          { name: 'seotags', weight: 0.1 },
+          { name: 'author', weight: 0.2 }
         ],
         threshold: 0.35,
         ignoreLocation: true,
@@ -464,8 +534,24 @@
 
   filterRadios.forEach(r => r.addEventListener('change', (e) => {
     sectionFilter = e.target.value;
+    updateAuthorFilterState();
     onSearch();
   }));
+  if (authorFilterSelect) {
+    authorFilterSelect.addEventListener('change', (event) => {
+      authorFilter = event.target.value;
+      if (authorFilter !== 'all' && sectionFilter === 'works') {
+        const articlesRadio = Array.from(filterRadios).find(r => r.value === 'blog');
+        if (articlesRadio) {
+          articlesRadio.checked = true;
+        }
+        sectionFilter = 'blog';
+        updateAuthorFilterState();
+      }
+      onSearch();
+      updateAuthorFilterState();
+    });
+  }
 })();
 </script>
 
@@ -572,6 +658,74 @@
   width: 100%;
   justify-content: center;
   gap: 60px 20px;
+}
+
+.search-filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.search-author-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0;
+  flex: 0 1 240px;
+}
+
+.search-author-filter[hidden] {
+  display: none;
+}
+
+.search-author-filter label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: rgba(67, 65, 76, 0.8);
+  white-space: nowrap;
+}
+
+.search-author-filter__control {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.search-author-filter select {
+  width: 100%;
+  padding: 0.55rem 2.2rem 0.55rem 0.95rem;
+  border-radius: 6px;
+  border: 1px solid rgba(180, 176, 202, 0.75);
+  font-size: 0.95rem;
+  background: #ffffff;
+  color: rgba(67, 65, 76, 0.9);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  appearance: none;
+  transition: all 0.2s ease;
+}
+
+.search-author-filter select:focus {
+  outline: none;
+  border-color: rgba(111, 106, 134, 0.95);
+  background: rgba(230, 228, 245, 0.55);
+  color: rgba(67, 65, 76, 0.95);
+}
+
+.search-author-filter select:disabled {
+  color: rgba(111, 106, 134, 0.65);
+  border-color: rgba(180, 176, 202, 0.5);
+  background: #f6f5fa;
+  cursor: not-allowed;
+}
+
+.search-author-filter__chevron {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: rgba(111, 106, 134, 0.9);
+  font-size: 0.85rem;
 }
 
 .card1-top--empty {

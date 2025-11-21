@@ -540,6 +540,17 @@ h5 {
     margin: 1.25rem 1.25rem 0 1.25rem;
 }
 
+.card1-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card1-author-photo {
+    display: inline-flex;
+}
+
 
 /* Blog entries */
 
@@ -770,8 +781,21 @@ h5 {
   inline-size: 22px;
   block-size: 22px;
   border-radius: 50% !important;
-  border: none !important;
+  border: 1px solid transparent !important;
   object-fit: cover;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card20-meta__photo-link {
+  display: inline-flex;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card20-meta__photo-link:hover .card20-meta__photo,
+.card20-meta__photo-link:focus-visible .card20-meta__photo {
+  border-color: color(display-p3 0.420 0.270 1.000);
+  transform: rotate(+10deg) scale(1.00);
 }
 
 .header-meta .card20-meta {
@@ -791,6 +815,16 @@ h5 {
 .card20-meta__date {
   display: inline-flex;
   align-items: center;
+}
+
+.card20-meta__author-link {
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.card20-meta__author-link:hover .card20-meta__author,
+.card20-meta__author-link:focus-visible .card20-meta__author {
+  text-decoration: underline;
 }
 
 .card20-meta__date {

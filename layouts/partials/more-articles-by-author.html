@@ -10,7 +10,7 @@
 {{- $authorPages := where $blogPages "Params.author" "in" $authorNames -}}
 {{- if gt (len $authorPages) 0 -}}
   <section class="more-articles-by-author">
-    <h2>More Articles by {{ $displayName }}</h2>
+    <h2>Articles by {{ $displayName }}</h2>
     {{ $older := first 3 (sort $authorPages "Date" "desc") }}
     {{ if gt (len $older) 0 }}
       <section class="blog-older">

@@ -32,6 +32,10 @@
   {{- $thumbWebpJSON := $thumbWebp | jsonify -}}
   {{- $thumbWebp2JSON := $thumbWebp2 | jsonify -}}
   {{- $seoTags := .Params.seotags | default (slice) -}}
+  {{- $author := default "" (or .Params.author .Params.Author) -}}
+  {{- $authorJSON := $author | jsonify -}}
+  {{- $authorPhoto := default "/images/authors-pic-jakub.jpg" (or .Params.author_image .Params.authorImage) -}}
+  {{- $authorPhotoJSON := $authorPhoto | jsonify -}}
   {{- $scratch := newScratch -}}
   {{- $scratch.Set "tags" (slice) -}}
   {{- with .Params.tags -}}
@@ -43,7 +47,7 @@
   {{- $allTags := $scratch.Get "tags" | uniq -}}
   {{- $tags := $allTags | jsonify -}}
   {{- $seoTagsJSON := $seoTags | jsonify -}}
-  {{- printf "%s{\"title\":%s,\"url\":%q,\"section\":%q,\"date\":%q,\"description\":%s,\"tags\":%s,\"seotags\":%s,\"image\":%s,\"image_thumb\":%s,\"image_thumb_2x\":%s,\"image_thumb_webp\":%s,\"image_thumb_webp_2x\":%s}" $comma $title .RelPermalink .Section (.Date.Format "2006-01-02") $desc $tags $seoTagsJSON $img $thumbJSON $thumb2JSON $thumbWebpJSON $thumbWebp2JSON -}}
+  {{- printf "%s{\"title\":%s,\"url\":%q,\"section\":%q,\"date\":%q,\"description\":%s,\"tags\":%s,\"seotags\":%s,\"author\":%s,\"author_image\":%s,\"image\":%s,\"image_thumb\":%s,\"image_thumb_2x\":%s,\"image_thumb_webp\":%s,\"image_thumb_webp_2x\":%s}" $comma $title .RelPermalink .Section (.Date.Format "2006-01-02") $desc $tags $seoTagsJSON $authorJSON $authorPhotoJSON $img $thumbJSON $thumb2JSON $thumbWebpJSON $thumbWebp2JSON -}}
   {{- $comma = ",\n" -}}
 {{- end -}}
 ]

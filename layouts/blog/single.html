@@ -10,13 +10,29 @@
             {{ end }}
             {{ $authorName := default "rausr" .Params.author }}
             {{ $authorPhoto := default "/images/authors-pic-jakub.jpg" .Params.author_image }}
+            {{ $bioLink := "" }}
+            {{ if eq (lower $authorName) "jakub" }}
+              {{ $bioLink = "/about/jakub-capliar/" }}
+            {{ end }}
             <div class="header-meta">
               <button class="header-cta-button header-cta-button-contact header-cta-button-about header-meta__cta" data-scroll-target=".container-tag-list">Let’s read ↓</button>
               <div class="card20-meta card20-meta--author header-meta__author">
                 <span class="card20-meta__date">{{ .Date.Format "02.01.2006" }}</span>
-                <span class="card20-meta__author">BY {{ $authorName }}</span>
+                {{ if $bioLink }}
+                  <a class="card20-meta__author-link" href="{{ $bioLink }}" aria-label="About {{ $authorName }}">
+                    <span class="card20-meta__author">BY {{ $authorName }}</span>
+                  </a>
+                {{ else }}
+                  <span class="card20-meta__author">BY {{ $authorName }}</span>
+                {{ end }}
                 {{ with $authorPhoto }}
-                  <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+                  {{ if $bioLink }}
+                    <a class="card20-meta__photo-link" href="{{ $bioLink }}" aria-label="About {{ $authorName }}">
+                      <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+                    </a>
+                  {{ else }}
+                    <img class="card20-meta__photo" src="{{ . }}" alt="Portrait of {{ $authorName }}" loading="lazy" decoding="async">
+                  {{ end }}
                 {{ end }}
                 
               </div>
