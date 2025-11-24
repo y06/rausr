@@ -1,6 +1,6 @@
 ---
 title: "TikTok Typography Trends: The Rise of Ugly Fonts, Serif Comebacks & Liquid Type"
-author: "Deborah"
+author: "Emily"
 author_image: "/images/authors-pic-deborah.jpg"
 date: 2025-05-20
 description: "Discover how Gen Z is reshaping typography on TikTok with bold fonts, warped text, and nostalgic styles. A deep dive into 2024–2025’s most viral type trends."

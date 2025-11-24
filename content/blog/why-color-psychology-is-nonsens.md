@@ -3,7 +3,7 @@ title: "Why Color Psychology Is Nonsens (and Dangerous for Branding)"
 description: "Blindly following color psychology in branding can lead to bad decisions, missed opportunities, and indistinguishable visual identities."
 date: 2025-09-10
 tags: ["branding", "marketing", "graphic design"]
-author: "Deborah"
+author: "Emily"
 author_image: "/images/authors-pic-deborah.jpg"
 draft: false
 preview_image: /images/articles/color-psychology-myth/color-psychology-myth-6.jpg

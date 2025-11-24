@@ -1,7 +1,7 @@
 ---
 title: "The Art of the Album Cover: Iconic CD Designs & the Creators Behind Them"
 description: "How CD cover design shaped the visual identity of music, from surreal artwork to bold branding."
-author: "Deborah"
+author: "Emily"
 author_image: "/images/authors-pic-deborah.jpg"
 date: 2025-07-26
 tags: ["reports", "graphic design", "history"]

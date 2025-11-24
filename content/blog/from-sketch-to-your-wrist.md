@@ -3,7 +3,7 @@ title: "From Sketch to Your Wrist: The Journey of Watch Design"
 description: "How luxury watches come to life — from the first sketch to the final product on your wrist. Featuring insights on design, tools, testing, and timeless craftsmanship."
 date: 2025-10-31
 draft: false
-author: "Deborah"
+author: "Emily"
 author_image: "/images/authors-pic-deborah.jpg"
 tags: ["product design", "3d-modeling", "history", "series"]
 preview_image: "/images/articles/from-sketch-to-your-wrist/from-sketch-to-your-wrist-11.jpg"

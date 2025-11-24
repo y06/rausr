@@ -1,7 +1,7 @@
 ---
 title: "Pixel Perfect Decisions: The Design Process Inside Big Tech"
 description: "Exploring the high-stakes world of product design in massive tech companies — where data-driven design meets creative intuition."
-author: "Deborah"
+author: "Emily"
 author_image: "/images/authors-pic-deborah.jpg"
 date: 2025-08-21
 tags: ["ux-ui", "reports", "creativity"]

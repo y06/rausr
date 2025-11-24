@@ -1,7 +1,7 @@
 ---
 title: "From Sketch to Showroom: How Car Designs Are Made"
 description: "A deep dive into the creative and technical process of automotive design — from hand sketches to 3D modeling and prototypes."
-author: "Deborah"
+author: "Emily"
 author_image: "/images/authors-pic-deborah.jpg"
 date: 2025-08-20
 tags: ["product design", "reports", "3d-modeling", "series"]

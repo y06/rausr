@@ -23,14 +23,15 @@
           {{ range after 2 $older }}
             {{ partial "list-item-blog.html" (dict "ctx" . "IsHome" false) }}
           {{ end }}
+          {{ $searchUrl := (printf "/search/?q=%s" (urlquery $displayName)) | relURL }}
           <div class="card20 card100 card200">
-            <a href="/blog/">
+            <a href="{{ $searchUrl }}">
               <div class="card20-top card200-top card300-top">
                 <span>More from {{ $displayName }} 🥑</span>
               </div>
             </a>
             <div class="card20-text card200-text">
-              <a href="/blog/">→</a>
+              <a href="{{ $searchUrl }}">→</a>
             </div>
           </div>
         </div>

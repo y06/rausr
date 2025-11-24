@@ -3,7 +3,7 @@ title: "How to Start With Exhibition Design: A Complete Guide"
 description: "A practical guide to starting with exhibition design — tools, workflows, materials, budgets, processes, and insights."
 date: 2025-11-15
 tags: ["exhibition stands design", "3d-modeling", "branding", "product design", "software"]
-author: "Deborah"
+author: "Emily"
 author_image: "/images/authors-pic-deborah.jpg"
 draft: false
 preview_image: /images/articles/how-to-start-with-exhibition-design/how-to-start-with-exhibition-design-10.jpg
