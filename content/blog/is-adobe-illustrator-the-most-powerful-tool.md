@@ -1,7 +1,8 @@
 ---
 title: "Is Adobe Illustrator the Most Powerful Tool in the Suite?"
 description: "An in-depth look at Adobe Illustrator’s power, value, and income potential compared to other Creative Cloud tools."
-author: "Jakub"
+author: "Emily"
+author_image: "/images/authors-pic-deborah.jpg"
 date: 2025-07-27
 tags: ["reports", "software", "illustrator"]
 draft: false

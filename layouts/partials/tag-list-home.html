@@ -1,13 +1,26 @@
-    <div class="container-tag-list">
+    <div class="container-tag-list container-tag-list-author-bio">
         <button class="tag-scroll left">←</button>
         <div class="tag-list-wrapper">
             <ul class="tag-list">
                 <li><a href="/" class="tag-link">← Home</a></li>
-                {{/* Safely get first tag if any; avoid indexing nil */}}
-                {{ $tags := .Params.tags | default (slice) }}
-                {{ if gt (len $tags) 0 }}
-                    {{ $first := index $tags 0 }}
-                    <li><a href="/topics/{{ urlize $first }}" class="tag-link">← {{ partial "tag-label.html" $first }}</a></li>
+                {{ $custom := .Params.breadcrumbs | default (slice) }}
+                {{ if gt (len $custom) 0 }}
+                    {{ range $custom }}
+                        <li>
+                            {{ if .url }}
+                                <a href="{{ .url }}" class="tag-link">← {{ .label }}</a>
+                            {{ else }}
+                                <span class="tag-link">← {{ .label }}</span>
+                            {{ end }}
+                        </li>
+                    {{ end }}
+                {{ else }}
+                    {{/* Safely get first tag if any; avoid indexing nil */}}
+                    {{ $tags := .Params.tags | default (slice) }}
+                    {{ if gt (len $tags) 0 }}
+                        {{ $first := index $tags 0 }}
+                        <li><a href="/topics/{{ urlize $first }}" class="tag-link">← {{ partial "tag-label.html" $first }}</a></li>
+                    {{ end }}
                 {{ end }}
                 <li><span class="tag-link active">{{ .Title }}</span></li>
             </ul>

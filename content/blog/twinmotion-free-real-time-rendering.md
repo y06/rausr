@@ -1,6 +1,7 @@
 ---
 title: "Twinmotion: Real-Time Rendering for Designers Who Need a Powerful Tool for Free"
-author: "Jakub"
+author: "Emily"
+author_image: "/images/authors-pic-deborah.jpg"
 date: 2025-05-21
 description: "How Epic Games’ free 3D tool is reshaping everyday architectural and product visualization."
 tags: ["software", "3d-modeling"]
