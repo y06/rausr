@@ -5,8 +5,8 @@ date: 2025-11-25
 tags: ["ai", "report", "typography"]
 author: "Jakub"
 draft: false
-preview_image: /images/articles/can-machines-design-beautiful-font/can-machines-design-beautiful-font-1.jpg
-header_image: /images/articles/can-machines-design-beautiful-font/can-machines-design-beautiful-font-12.jpg
+preview_image: /images/articles/can-machines-design-beautiful-font/can-machines-design-beautiful-font-12.jpg
+header_image: /images/articles/can-machines-design-beautiful-font/can-machines-design-beautiful-font-1.jpg
 source:
     - "text: MIT Neural Typography Study 2024"
     - "text: Google Fonts Machine Learning Experiments"
