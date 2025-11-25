@@ -2,7 +2,7 @@
 title: "Can Machines Design Beautiful Typography? AI and the Future of Font Creation"
 description: "Whether artificial intelligence can design unique, functional, high-quality font families — and what limitations and opportunities exist today."
 date: 2025-11-25
-tags: ["ai", "report", "typography"]
+tags: ["ai", "reports", "typography"]
 author: "Jakub"
 draft: false
 preview_image: /images/articles/can-machines-design-beautiful-font/can-machines-design-beautiful-font-12.jpg
