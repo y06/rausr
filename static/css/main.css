@@ -506,6 +506,11 @@ h5 {
     font-size: 11px;
     letter-spacing: 2px;
     color: color(display-p3 0.305 0.901 0.886); /* #4EE6E2 */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .card1 h3 {
@@ -549,6 +554,10 @@ h5 {
 
 .card1-author-photo {
     display: inline-flex;
+}
+
+.card1-author-photo .card20-meta__photo {
+    margin-top: 9px;
 }
 
 
