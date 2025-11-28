@@ -75,7 +75,7 @@ There were:
 - 500+ shades of blue in use
 - dozens of icon styles
 - inconsistent spacing systems
-- no central UX philosophy
+- no central [UX philosophy](/tags/ux-ui/)
 
 #### Jon Wiley’s Influence
 One of Google’s early UX leads, **Jon Wiley**, pushed for clarity in Search results and established early UX 
@@ -187,7 +187,7 @@ Material You’s color algorithms were tested in **over 2,000 real homes** to en
 The most widely adopted design system in the world.
 
 #### ✔ Chrome
-Lightweight, clean, invisible UI.
+Lightweight, clean, [invisible UI](/tags/ux-ui/).
 
 #### ✔ Google Search
 Incremental improvements that never disrupt users.
@@ -230,7 +230,7 @@ Ahead of its time, but socially awkward and visually unusual.
 Architect of Material Design.
 
 #### Jon Wiley
-Transformed Google Search through UX clarity.
+Transformed Google Search through [UX clarity](/tags/ux-ui/).
 
 #### Ivy Ross
 Humanized Google hardware aesthetics.
