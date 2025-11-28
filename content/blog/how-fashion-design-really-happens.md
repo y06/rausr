@@ -4,7 +4,7 @@ description: "Behind the Seams — a look at the creative, technical, and market
 date: 2025-08-30
 tags: ["product design", "series", "marketing"]
 author: "Emily"
-author_image: "/images/authors-pic-deborah.jpg"
+author_image: "/images/authors-pic-emily.jpg"
 draft: false
 preview_image: /images/articles/fashion-design-process/fashion-design-process-8.jpg
 header_image: /images/articles/fashion-design-process/fashion-design-process-1.jpg

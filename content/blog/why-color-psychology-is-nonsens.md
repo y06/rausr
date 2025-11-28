@@ -4,7 +4,7 @@ description: "Blindly following color psychology in branding can lead to bad dec
 date: 2025-09-10
 tags: ["branding", "marketing", "graphic design"]
 author: "Emily"
-author_image: "/images/authors-pic-deborah.jpg"
+author_image: "/images/authors-pic-emily.jpg"
 draft: false
 preview_image: /images/articles/color-psychology-myth/color-psychology-myth-6.jpg
 header_image: /images/articles/color-psychology-myth/color-psychology-myth-1.jpg

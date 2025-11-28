@@ -4,7 +4,7 @@ description: "A deep dive into the visual and UX transformation of Instagram, fr
 date: 2025-11-06
 tags: ["ux-ui", "trends", "series", "history"]
 author: "Emily"
-author_image: "/images/authors-pic-deborah.jpg"
+author_image: "/images/authors-pic-emily.jpg"
 draft: false
 preview_image: /images/articles/the-evolution-of-instagram-design/the-evolution-of-instagram-design-9.jpg
 header_image: /images/articles/the-evolution-of-instagram-design/the-evolution-of-instagram-design-1.jpg

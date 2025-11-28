@@ -4,7 +4,7 @@ description: "Long before digital tools and Ctrl+Z, graphic design was a tactile
 date: 2025-09-10
 tags: ["graphic design", "reports", "series", "history"]
 author: "Emily"
-author_image: "/images/authors-pic-deborah.jpg"
+author_image: "/images/authors-pic-emily.jpg"
 draft: false
 preview_image: /images/articles/history-graphic-design/history-graphic-design-6.jpg
 header_image: /images/articles/history-graphic-design/history-graphic-design-1.jpg

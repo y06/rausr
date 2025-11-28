@@ -2,7 +2,7 @@
 title: "Designing on iPad: A New Era or Just a Portable Experiment?"
 description: "Exploring how creating graphic design on iPads changes workflow, creativity, and quality — from speed and comfort to print output and the role of AI-driven tools."
 author: "Emily"
-author_image: "/images/authors-pic-deborah.jpg"
+author_image: "/images/authors-pic-emily.jpg"
 date: "2025-10-26"
 tags:
   - hardware

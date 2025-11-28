@@ -4,7 +4,7 @@ description: "Why successful brand codes go beyond color and typography manualsâ
 date: 2025-09-26
 tags: ["branding", "graphic design", "marketing", "creativity"]
 author: "Emily"
-author_image: "/images/authors-pic-deborah.jpg"
+author_image: "/images/authors-pic-emily.jpg"
 draft: false
 preview_image: /images/articles/branding-codes-that-stick/branding-codes-that-stick-6.jpg
 header_image: /images/articles/branding-codes-that-stick/branding-codes-that-stick-1.jpg

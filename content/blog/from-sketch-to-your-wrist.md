@@ -4,7 +4,7 @@ description: "How luxury watches come to life — from the first sketch to the f
 date: 2025-10-31
 draft: false
 author: "Emily"
-author_image: "/images/authors-pic-deborah.jpg"
+author_image: "/images/authors-pic-emily.jpg"
 tags: ["product design", "3d-modeling", "history", "series"]
 preview_image: "/images/articles/from-sketch-to-your-wrist/from-sketch-to-your-wrist-11.jpg"
 header_image: "/images/articles/from-sketch-to-your-wrist/from-sketch-to-your-wrist-1.jpg"

@@ -4,7 +4,7 @@ description: "A nostalgic look into the textured, cozy era of skeuomorphic desig
 date: 2025-10-06
 tags: ["ux-ui", "graphic design", "trends", "history"]
 author: "Emily"
-author_image: "/images/authors-pic-deborah.jpg"
+author_image: "/images/authors-pic-emily.jpg"
 draft: false
 preview_image: /images/articles/skeuomorphism-interfaces/skeuomorphism-interfaces-10.jpg
 header_image: /images/articles/skeuomorphism-interfaces/skeuomorphism-interfaces-2.jpg

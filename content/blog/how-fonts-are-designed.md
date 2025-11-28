@@ -2,7 +2,7 @@
 title: "Typography: The Art, Science, and Soul Behind Every Letter"
 description: "From metal type to variable fonts — exploring how typography shapes our visual language, the studios defining its future, and the untold stories behind the letters we see every day."
 author: "Emily"
-author_image: "/images/authors-pic-deborah.jpg"
+author_image: "/images/authors-pic-emily.jpg"
 date: 2025-10-30
 tags: ["typography", "graphic design", "history"]
 preview_image: "/images/articles/how-fonts-are-designed/how-fonts-are-designed-9.jpg"

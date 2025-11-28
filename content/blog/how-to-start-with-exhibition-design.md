@@ -4,7 +4,7 @@ description: "A practical guide to starting with exhibition design — tools, wo
 date: 2025-11-15
 tags: ["exhibition stands design", "3d-modeling", "branding", "product design", "software"]
 author: "Emily"
-author_image: "/images/authors-pic-deborah.jpg"
+author_image: "/images/authors-pic-emily.jpg"
 draft: false
 preview_image: /images/articles/how-to-start-with-exhibition-design/how-to-start-with-exhibition-design-10.jpg
 header_image: /images/articles/how-to-start-with-exhibition-design/how-to-start-with-exhibition-design-1.jpg

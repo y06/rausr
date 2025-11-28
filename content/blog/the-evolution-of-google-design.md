@@ -4,6 +4,7 @@ description: "How Google transformed from an engineer‑driven, visually chaotic
 date: 2025-11-27
 tags: ["series", "history", "ux-ui", "branding"]
 author: "Emily"
+author_image: "/images/authors-pic-emily.jpg"
 draft: false
 preview_image: /images/articles/the-evolution-of-google-design/the-evolution-of-google-design-12.jpg
 header_image: /images/articles/the-evolution-of-google-design/the-evolution-of-google-design-1.jpg
