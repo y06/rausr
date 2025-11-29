@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /thanks/
 
 Sitemap: https://rausr.com/sitemap.xml

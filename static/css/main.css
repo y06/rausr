@@ -2995,6 +2995,13 @@ footer .nav-item {
             background-color: color(display-p3 0.733 0.733 0.733); /* #bbb */
     }
 
+    .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
     /* Mobile version - Featured grid */
 
     footer {
@@ -3533,11 +3540,14 @@ footer .nav-item {
 /* Subscribe partial */
 
 .subscribe-container {
-    margin: 2rem;
+    margin: 2rem 2rem 5rem 2rem;
     border-radius: 16px;
-    background:
-        linear-gradient(45deg, color(display-p3 0.043 0.224 0.220), color(display-p3 0.051 0.051 0.059));
-    background-repeat: repeat;
+    background: linear-gradient(
+        to right,
+        #57789a 0%,
+        #0e9a72 75%,
+        #0e9a72 100%
+    );
 }
 
 .subscribe-content {
@@ -3599,7 +3609,7 @@ footer .nav-item {
 
 @media (max-width: 768px) {
   .subscribe-container {
-    margin: 1.25rem;
+    margin: 1.25rem 1.25rem 3rem 1.25rem;
   }
 
   .subscribe-content {
