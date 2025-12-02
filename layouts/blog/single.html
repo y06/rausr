@@ -102,7 +102,13 @@
       <div class="section-tags"><div class="card20-meta card20-thanks">Sources:</div>
         {{ range . }}
           {{ $item := . }}
-          {{ if hasPrefix (lower $item) "book:" }}
+          {{ if hasPrefix (lower $item) "study" }}
+            {{ $title := $item }}
+            <span class="tag sources sources-study">🎓 {{ $title }}</span>
+          {{ else if hasPrefix (lower $item) "case" }}
+            {{ $title := $item }}
+            <span class="tag sources sources-case">🧪 {{ $title }}</span>
+          {{ else if hasPrefix (lower $item) "book:" }}
             {{ $title := replaceRE `(?i)^book:\s*` "" $item }}
             <span class="tag sources sources-book">📚 {{ $title }}</span>
           {{ else if hasPrefix (lower $item) "interview:" }}
