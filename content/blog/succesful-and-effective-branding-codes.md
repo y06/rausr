@@ -2,7 +2,7 @@
 title: "Successful Branding Codes: Target First, Aesthetics Second"
 description: "Why effective branding codes start with who you target — and how packaging, environments, and social context make your brand feel \"right\" in the real world."
 date: 2025-12-02
-tags: ["branding", "marketing", "packaging design", "research"]
+tags: ["branding", "marketing", "product design"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
 draft: false
@@ -48,15 +48,16 @@ Let’s unpack how this works — and where brands nail it or miss it completely
 
 ### Target First, Then Codes
 
-#### A. Start With a Scene, Not a Logo
+#### Start With a Scene, Not a Logo
 
 A useful exercise when defining branding codes:
 
-1. **Describe three scenes where your brand will appear.**
+**Describe three scenes where your brand will appear.**  
  - A morning commute with coffee and your snack bar
  - An unboxing video from an influencer’s kitchen
  - A conference coffee break with branded cups
-2. **Write what you want people to feel in each scene.**
+
+**Write what you want people to feel in each scene.**  
  - “Smart and light, not guilty”
  - “Playful, slightly rebellious”
  - “Competent, trustworthy, not boring”
@@ -81,15 +82,17 @@ That’s a sign your codes are aligning with the **target context**, not just th
 RXBAR’s famous packaging is a masterclass in target-based coding:
 
 - **Target world:** CrossFit gyms, Whole Foods shelves, fitness Instagram.
-- **Code:** Ingredients listed as a bold, centered stack of words:
-**3 Egg Whites. 6 Almonds. 4 Cashews. 2 Dates. No B.S.**
-- **Why it works:**
+- **Code:** Ingredients listed as a bold, centered stack of words
+**(3 Egg Whites. 6 Almonds. 4 Cashews. 2 Dates. No B.S.)**  
+
+{{< interest >}}
+**Why it works:**
 - On shelves, it reads like a **nutrition label turned front cover**.
 - In someone’s hand, the bar becomes a **mini manifesto** in photos.
 - The “No B.S.” line became a meme and a talking point — free word-of-mouth.
+{{< /interest >}}
 
 Behind the scenes, researchers noticed that people remembered RXBAR *not* as “the blue bar,” but as “the one with the ingredient list on the front.” That’s a distinctive code built directly from how and where the bar is used.
-
 
 
 #### Example 2: Oatly – Packaging As a Protest Poster
@@ -144,13 +147,10 @@ The target customer didn’t live in a Behance mockup — they lived in:
 This is a common failure pattern: the brand belongs to Dribbble, not to the world it’s supposed to sell in.
 
 
-
 #### Example 2: Tropicana’s 2009 Redesign – When Codes Break Familiarity
 
-Tropicana’s infamous 2009 packaging redesign is often told as “people hate change.”
-But the more interesting angle is:
-
-##### They removed the **codes people used to recognize the pack in 1 second.
+Tropicana’s infamous 2009 packaging redesign is often told as “people hate change.”  
+But the more interesting angle is – **They removed the ** codes people used to recognize the pack in 1 second.**
 
 What changed?
 - The iconic orange with a straw was replaced by a generic glass of juice.
@@ -198,15 +198,15 @@ Those repeated patterns are **branding codes in the wild**.
 
 If you’re working on your own brand, try this practical checklist:
 
-1. **Write three “in the wild” scenarios.**
+**Write three “in the wild” scenarios.**
  - Where exactly is someone using or showing your product?
-2. **Decide what has to be readable from 1–2 meters away.**
+**Decide what has to be readable from 1–2 meters away.**
  - Logo? Product benefit? Ingredient? Price?
-3. **Design for the hand and the camera.**
+**Design for the hand and the camera.**
  - Does it look good when held, not just when laid flat?
-4. **Test in ugly environments.**
+**Test in ugly environments.**
  - Supermarket lighting, messy desks, low-quality phone photos.
-5. **Protect 2–3 codes ruthlessly.**
+**Protect 2–3 codes ruthlessly.**
  - A layout frame, a color block, a tone of voice. Those are your assets.
 
 
