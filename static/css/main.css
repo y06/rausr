@@ -2418,6 +2418,12 @@ footer .nav-item {
     font-family: 'Inter', sans-serif !important;
 }
 
+/* Tighter spacing when a list directly follows a paragraph */
+.article-container p:has(+ ul),
+.article-container p:has(+ ol) {
+    margin-bottom: 0rem;
+}
+
 
 .article-left-column h3 {
     color: color(display-p3 0.408 0.282 1.000); /* #6848FF */;

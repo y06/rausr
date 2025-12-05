@@ -98,7 +98,7 @@ Developers often report spending time:
 
 Interestingly, internal surveys in small studios show a pattern:
 
-Illustrator is great for crafting the original icon, but teams often pass it through **SVGO**, Figma, or custom scripts before it lands in a design system.
+- Illustrator is great for crafting the original icon, but teams often pass it through **SVGO**, Figma, or custom scripts before it lands in a design system.
 
 {{< interest >}}
 So Illustrator still plays a key role — just not as the final word in the pipeline.
@@ -147,7 +147,7 @@ In contrast, tools like Figma or Sketch are deliberately optimized for **interfa
 
 A quiet pattern emerges in studios:
 
-Illustrator remains the **illustration & asset creation tool**, while other tools become the **layout, system, and prototype space**.
+- Illustrator remains the **illustration & asset creation tool**, while other tools become the **layout, system, and prototype space**.
 
 {{< fullimg src="/images/articles/adobe-illustrator-beyond-print/adobe-illustrator-beyond-print-6.jpg" alt="Large Illustrator document with many artboards and repeated UI elements illustrating performance issues at scale." >}}
 
