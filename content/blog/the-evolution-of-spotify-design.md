@@ -18,7 +18,7 @@ seotags: [
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
 draft: false
-preview_image: "/images/articles/spotify-design-evolution/spotify-design-evolution-1.jpg"
+preview_image: "/images/articles/spotify-design-evolution/spotify-design-evolution-10.jpg"
 header_image: "/images/articles/spotify-design-evolution/spotify-design-evolution-1.jpg"
 source: [
   "https://en.wikipedia.org/wiki/Spotify",
@@ -45,11 +45,12 @@ This article looks at:
 - which platforms Spotify truly owns vs. just distributes to  
 - the **less talked about trade-offs** and missteps along the way  
 
+{{< halves >}}
+{{< halfimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-2.jpg" alt="Early Spotify desktop interface with dense navigation and playlist columns focused on fast access to music." >}}
+{{< /halves >}}
 
-{{< fullimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-2.jpg" alt="Early Spotify desktop interface with dense navigation and playlist columns focused on fast access to music." >}}
 
-
-### Where Spotify Began (and Why It Had to Feel Faster Than Piracy)
+### Where Spotify Began
 
 Spotify began in **Stockholm, Sweden**, in the mid‑2000s. Founders **Daniel Ek** and **Martin Lorentzon** were surrounded by:
 - exploding broadband adoption  
@@ -70,9 +71,8 @@ The core design brief, although rarely phrased like this publicly, was simple:
 Even the now-familiar **Spotify green** started as a slightly harsh, neon accent — partly to stand out against the dark, desaturated UI of other media players at the time.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-3.jpg" alt="Screenshot-style illustration of early Spotify desktop UI inspired by traditional media players like iTunes and Winamp." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-3.jpg" alt="Screenshot-style illustration of early Spotify desktop UI inspired by traditional media players like iTunes and Winamp." >}}
+
 
 
 ### V1: A Desktop-First Power User Tool (2008–2011)
@@ -98,7 +98,9 @@ Key UX decisions:
 At this stage, Spotify’s design target was **heavy computer users in Europe**, not yet a “global mainstream phone app”.
 
 
-{{< fullimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-4.jpg" alt="Early Spotify desktop app with dark UI, sidebar playlists, and dense track lists focused on quick access." >}}
+{{< halves >}}
+{{< halfimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-4.jpg" alt="Early Spotify desktop app with dark UI, sidebar playlists, and dense track lists focused on quick access." >}}
+{{< /halves >}}
 
 
 ### The Mobile Shift: From Player to Companion (2011–2015)
@@ -123,9 +125,7 @@ Under the hood, this was a strategic design pivot:
 Spotify’s value shifted from being **your library** to being **your DJ**.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-5.jpg" alt="Spotify mobile app screens showing dark themed interface with large album covers and simplified navigation." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-5.jpg" alt="Spotify mobile app screens showing dark themed interface with large album covers and simplified navigation." >}}
 
 
 
@@ -165,9 +165,8 @@ Spotify doesn’t own most of this hardware — but its **design language travel
 In contrast to old-school physical players, there’s **no flagship Spotify device**.  
 The short-lived **Car Thing** accessory was an experiment, not a platform shift — and it was eventually discontinued.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-6.jpg" alt="Mockups of Spotify interface across TV, console, car, and smart speaker screens showing a consistent dark theme." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-6.jpg" alt="Mockups of Spotify interface across TV, console, car, and smart speaker screens showing a consistent dark theme." >}}
+
 
 
 ### From Lists to Journeys: Personalization as Interface (2015–2023)
@@ -184,7 +183,9 @@ Design-wise, this meant:
 - The distinction between “library” and “feed” blurred — your experience became **a recommendation engine with a UI on top**.  
 - Tiles, cards, and rows replaced simple, neutral lists of albums.
 
-{{< fullimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-7.jpg" alt="Spotify home screen with personalized rows like Discover Weekly, Daily Mixes, and mood-based playlists." >}}
+{{< halves >}}
+{{< halfimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-7.jpg" alt="Spotify home screen with personalized rows like Discover Weekly, Daily Mixes, and mood-based playlists." >}}
+{{< /halves >}}
 
 
 ### The Not-So-Great Parts of Spotify’s Design Story
@@ -255,10 +256,6 @@ In its current state, Spotify isn’t just a “music player”:
   - from albums to playlists  
   - from local libraries to algorithmic feeds  
   - from owning music to **renting access**  
-
-{{< halves >}}
-{{< halfimg src="/images/articles/spotify-design-evolution/spotify-design-evolution-8.jpg" alt="Collage of Spotify running across multiple devices, emphasizing the idea of a continuous listening layer." >}}
-{{< /halves >}}
 
 
 ### Summary: What Spotify’s Design Evolution Teaches Us
