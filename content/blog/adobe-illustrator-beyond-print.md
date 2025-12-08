@@ -3,6 +3,18 @@ title: "Adobe Illustrator Beyond Print: Where It Shines (and Where It Really Doe
 description: "A research-driven look at how designers actually use Illustrator outside traditional print workflows — from UI experiments to icon systems — and where technical limits quietly push them to other tools."
 date: 2025-12-04
 tags: ["illustrator", "software", "ux-ui", "reports"]
+seotags: [
+  "adobe illustrator beyond print",
+  "illustrator for web design",
+  "illustrator svg export",
+  "illustrator ui workflow",
+  "illustrator vs figma",
+  "illustrator icon system",
+  "illustrator color management",
+  "illustrator performance issues",
+  "svg cleanup workflow",
+  "design tools comparison"
+]
 author: "Emily"
 author_image: "/images/authors-pic-emily.jpg"
 draft: false
