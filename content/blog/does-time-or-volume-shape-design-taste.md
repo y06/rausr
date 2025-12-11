@@ -1,5 +1,5 @@
 ---
-title: "Does Time or Volume Shape Design Taste? How Years and Reps Rewire a Graphic Designer’s Eye"
+title: "Does Time or Volume Shape Design Taste? How Years and Reps Rewire a Designer’s Eye"
 description: "Do senior designers’ style and taste evolve more from time, output, or cultural shifts — and what remains constant after thousands of projects?"
 date: 2025-12-09
 tags: ["philosophy", "graphic design", "creativity", "reports"]
@@ -14,8 +14,8 @@ source: [
   "Book: Michael Bierut – Now You See It and Other Essays on Design (Princeton Architectural Press)",
   "Study: AIGA Design Census 2024 – Career longevity vs. practice patterns",
   "Study: Adobe / Pfeiffer Report 2023 – Creative workflows and tool proficiency over time",
-  "Journal: Design Studies – Expertise and Taste Formation in Visual Professions (2022)",
-  "Journal: International Journal of Design – Creative Expertise Development (2021)"
+  "Text: Design Studies – Expertise and Taste Formation in Visual Professions (2022)",
+  "Text: International Journal of Design – Creative Expertise Development (2021)"
 ]
 seotags: [
   "design taste evolution",
@@ -60,12 +60,12 @@ This piece looks at how **time, repetition, and social change reshape design tas
 ### Time vs. Volume: Which One Shapes Taste More?
 
 - **Years without output ≠ taste growth.** Designers who stay in narrow production loops often plateau; high-volume shippers refine faster because they see more failure patterns.  
-- **Volume without reflection ≠ improvement.** Michael Bierut has noted that sheer output matters only when paired with critique and editing; otherwise, you just get faster at your current level.  
+- **Volume without reflection ≠ improvement.** Michael Bierut has noted that sheer output matters only when paired with critique and editing. In short, you just get faster at your current level.  
 - **Balanced cycles win.** Kyna Leski’s work frames creativity as storm and structure — bursts of quantity plus periods of analysis create the biggest taste leaps.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/design-style-evolution/design-style-evolution-4.jpg" alt="Timeline comparing years of experience with number of shipped projects and critique moments." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/design-style-evolution/design-style-evolution-4.jpg" alt="Timeline comparing years of experience with number of shipped projects and critique moments." >}}
+
 
 
 ### How Style Evolves with Reps
@@ -83,11 +83,11 @@ This piece looks at how **time, repetition, and social change reshape design tas
 
 - **Composition fundamentals** (contrast, rhythm, balance) remain anchors. Exposure refines them, but they rarely invert.  
 - **Audience empathy** grows but stays central — Ellen Lupton’s research emphasizes narrative and reader-first logic as the throughline in long careers.  
-- **Personal biases** endure. Color comfort zones and typography leanings shift slowly; awareness lets designers push beyond them but rarely erase them.
+- **Personal biases** endure. Color comfort zones and typography leanings shift slowly. Awareness lets designers push beyond them but rarely erase them.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/design-style-evolution/design-style-evolution-6.jpg" alt="Grid sketches and layout studies highlighting enduring composition fundamentals." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/design-style-evolution/design-style-evolution-6.jpg" alt="Grid sketches and layout studies highlighting enduring composition fundamentals." >}}
+
 
 
 ### External Forces That Bend Taste
@@ -104,13 +104,13 @@ This piece looks at how **time, repetition, and social change reshape design tas
 
 ### Can Designers Hold One Style for Decades?
 
-- **Yes — but rarely by accident.** Designers like Massimo Vignelli embraced strict modernism and intentionally kept to narrow palettes.  
+- **Yes — but rarely by accident.** Designers like [Massimo Vignelli](/search?q=Massimo+Vignelli) embraced strict modernism and intentionally kept to narrow palettes.  
 - **Most evolve or risk irrelevance.** AIGA Census data suggests designers who report “no change” in style over 10+ years tend to leave brand-led roles for production or operations.  
 - **Hybrid approach works best.** Keeping a core signature (type discipline, grid logic) while adapting surfaces (color, motion, interaction patterns) balances recognizability with relevance.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/design-style-evolution/design-style-evolution-8.jpg" alt="Moodboard combining consistent grid systems with evolving color and motion treatments over time." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/design-style-evolution/design-style-evolution-8.jpg" alt="Moodboard combining consistent grid systems with evolving color and motion treatments over time." >}}
+
 
 
 ### Under-the-Radar Insights That Affect Style
@@ -134,9 +134,7 @@ If your own taste shifted dramatically, ask:
 
 Chances are the answer is “all three,” but one axis usually dominates.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/design-style-evolution/design-style-evolution-10.jpg" alt="Designer journaling career milestones and mapping them to shifts in visual style." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/design-style-evolution/design-style-evolution-10.jpg" alt="Designer journaling career milestones and mapping them to shifts in visual style." >}}
 
 
 ### How to Evolve Deliberately — Without Losing Yourself
