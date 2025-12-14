@@ -2395,7 +2395,7 @@ footer .nav-item {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-between;
     gap: 3rem;
     margin: 2rem auto;
@@ -2444,7 +2444,17 @@ footer .nav-item {
 .article-right-column {
     display: flex;
     flex: 0 0 calc(32% - 2rem);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 5.625rem;
+    align-self: stretch;
+}
+
+.article-right-nav {
+    flex: 1 1 auto;
+    min-height: 0;
+    align-self: stretch;
+    display: flex;
     flex-direction: column;
     gap: 5.625rem;
 }
@@ -2465,9 +2475,10 @@ footer .nav-item {
     flex-direction: column;
     gap: 1rem;
     padding: 1.75rem 1.5rem;
-    border: 1px solid color(display-p3 0.866 0.851 0.894);
     border-radius: 16px;
-    background: #ffffff;
+    background:
+        linear-gradient(90deg, rgba(244, 240, 255, 0.95) 0%, rgba(244, 240, 255, 0.0) 70%),
+        #fff;
     max-height: calc(100vh - 3rem);
     overflow: auto;
     z-index: 3;
@@ -3391,6 +3402,12 @@ footer .nav-item {
         width: auto !important;
         gap: 0rem !important;
         border-radius: 0;
+    }
+
+    .article-right-nav {
+        position: static;
+        top: auto;
+        gap: 0rem;
     }
 
     .article-right-toc {

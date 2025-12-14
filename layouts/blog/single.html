@@ -62,32 +62,30 @@
 
 </main>
 
+{{ $h2re := `(?m)^## (.+)` }}
+{{ $h2matches := findRE $h2re .RawContent }}
+{{ $h3re := `(?m)^### (.+)` }}
+{{ $h3matches := findRE $h3re .RawContent }}
 
 <section class="article-container">
   <div class="article-left-column">
     <div class="article-left-column-top">
-      {{ $re := `(?m)^## (.+)` }}
-      {{ $matches := findRE $re .RawContent }}
-      {{ if gt (len $matches) 0 }}
-      <h2>{{ replaceRE `(?m)^## ` "" (index $matches 0) }}</h2>
+      {{ if gt (len $h2matches) 0 }}
+      <h2>{{ replaceRE `(?m)^## ` "" (index $h2matches 0) }}</h2>
       {{ end }}
     </div>
       <div class="content-section-column content-section-column-right">
-      {{ $re := `(?m)^### (.+)` }}
-      {{ $matches := findRE $re .RawContent }}
-      {{ if gt (len $matches) 0 }}
+      {{ if gt (len $h3matches) 0 }}
         <div class="section-tags section-tags-article">
-          {{ range $matches }}
+          {{ range $h3matches }}
             {{ $clean := replaceRE `(?m)^### ` "" . }}
             {{ $anchor := anchorize $clean }}
             <a class="tag" href="#{{ $anchor }}">{{ $clean }} ↓</a>
           {{ end }}
         </div>
       {{ end }}
-      {{ $re := `(?m)^## (.+)` }}
-      {{ $matches := findRE $re .RawContent }}
-      {{ if gt (len $matches) 0 }}
-        {{ $firstH2 := index $matches 0 | replaceRE `(?m)^## ` "" }}
+      {{ if gt (len $h2matches) 0 }}
+        {{ $firstH2 := index $h2matches 0 | replaceRE `(?m)^## ` "" }}
         {{ $h2anchor := printf "<h2 id=\"%s\">%s</h2>" (anchorize $firstH2) $firstH2 }}
         {{ $clean := replace .Content $h2anchor "" }}
         {{ $clean | safeHTML }}
@@ -140,8 +138,22 @@
           {{ partial "cta-articles.html" . }}
       <span>→</span>
     </div>
-    <div class="article-right-featured">
-      {{ partial "futured-articles.html" . }}
+    <div class="article-right-nav">
+      <div class="article-right-featured">
+        {{ partial "futured-articles.html" . }}
+      </div>
+      {{ if gt (len $h3matches) 0 }}
+      <div class="article-right-toc">
+        <div class="article-right-toc__title">Sections in this article</div>
+        <div class="section-tags section-tags-article section-toc">
+          {{ range $h3matches }}
+            {{ $clean := replaceRE `(?m)^### ` "" . }}
+            {{ $anchor := anchorize $clean }}
+            <a class="tag" href="#{{ $anchor }}">{{ $clean }}</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
     </div>
   </div>
 

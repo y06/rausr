@@ -57,7 +57,8 @@ This piece looks at how **time, repetition, and social change reshape design tas
 {{< /halves >}}
 
 
-### Time vs. Volume: Which One Shapes Taste More?
+### Time vs. Volume
+#### Which One Shapes Taste More?
 
 - **Years without output ≠ taste growth.** Designers who stay in narrow production loops often plateau; high-volume shippers refine faster because they see more failure patterns.  
 - **Volume without reflection ≠ improvement.** Michael Bierut has noted that sheer output matters only when paired with critique and editing. In short, you just get faster at your current level.  
@@ -79,8 +80,8 @@ This piece looks at how **time, repetition, and social change reshape design tas
 {{< /halves >}}
 
 
-### What Stays Constant (Even After Thousands of Projects)
-
+### What Stays Constant
+#### Even After Thousands of Projects
 - **Composition fundamentals** (contrast, rhythm, balance) remain anchors. Exposure refines them, but they rarely invert.  
 - **Audience empathy** grows but stays central — Ellen Lupton’s research emphasizes narrative and reader-first logic as the throughline in long careers.  
 - **Personal biases** endure. Color comfort zones and typography leanings shift slowly. Awareness lets designers push beyond them but rarely erase them.
@@ -137,7 +138,8 @@ Chances are the answer is “all three,” but one axis usually dominates.
 {{< fullimg src="/images/articles/design-style-evolution/design-style-evolution-10.jpg" alt="Designer journaling career milestones and mapping them to shifts in visual style." >}}
 
 
-### How to Evolve Deliberately — Without Losing Yourself
+### How to Evolve Deliberately
+#### Without Losing Yourself
 
 - **Run season-based experiments.** Every 3–4 months, choose a constraint to stretch (one serif family only, monochrome palettes, no shadows).  
 - **Pair volume with critique.** Ship more, but invite structured reviews; taste grows in the edit.  
