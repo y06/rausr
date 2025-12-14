@@ -2458,6 +2458,33 @@ footer .nav-item {
     background-repeat: repeat;
 }
 
+.article-right-toc {
+    position: sticky;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.75rem 1.5rem;
+    border: 1px solid color(display-p3 0.866 0.851 0.894);
+    border-radius: 16px;
+    background: #ffffff;
+    max-height: calc(100vh - 3rem);
+    overflow: auto;
+    z-index: 3;
+}
+
+.article-right-toc__title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: color(display-p3 0.588 0.576 0.639);
+}
+
+.article-right-toc .section-tags-article {
+    margin-bottom: 0;
+}
+
 .article-right-cta-bottom {
     display: flex;
     flex-direction: column;
@@ -3364,6 +3391,10 @@ footer .nav-item {
         width: auto !important;
         gap: 0rem !important;
         border-radius: 0;
+    }
+
+    .article-right-toc {
+        display: none;
     }
 
     .article-right-cta-bottom {
