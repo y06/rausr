@@ -162,6 +162,8 @@ Good wayfinding doesn’t just tell you what to do — it calmly confirms you’
 | Consistent typography + pictograms | Reduces cognitive load and multilingual friction |
 
 
+{{< fullimg src="/images/articles/metro-orientation-design/metro-orientation-design-6.jpg" alt="Large metro system map with clear arrows and simple icon cues for fast route decisions" >}}
+
 ### Very Successful Examples
 #### (And Why They Work)
 
@@ -176,6 +178,11 @@ What London got right:
 {{< interest >}}
 **Less-known detail:** Beck’s map was initially not embraced as “accurate,” but its usability quickly proved itself — because metro users don’t need geographic truth, they need decision truth.
 {{< /interest >}}
+
+{{< halves >}}
+{{< halfimg src="/images/articles/metro-orientation-design/metro-orientation-design-11.jpg" alt="London-style schematic tube map that prioritizes line structure and transfer nodes over geography" >}}
+{{< /halves >}}
+
 
 #### Paris (FR): typographic discipline and station reality
 **Author to know:** *Jean François Porchez*, designer of the **Parisine** typeface family created for RATP to unify signage and printed information.
@@ -202,6 +209,10 @@ Tokyo is complex because it is many networks in one city. But one highly effecti
 
 This is a key insight: in high-density systems, *codes reduce language dependency* and improve error recovery (“I’m at G-09, next is G-10”).
 
+{{< halves >}}
+{{< halfimg src="/images/articles/metro-orientation-design/metro-orientation-design-10.jpg" alt="Station and line code system (letters and numbers) to make metro navigation easier for visitors" >}}
+{{< /halves >}}
+
 
 #### Mexico City (MX): icons as cognitive shortcuts
 **Author to know:** *Lance Wyman* (with local collaborators), who helped develop a pictogram-based station identity system.
@@ -216,7 +227,9 @@ Why it works:
 {{< /interest >}}
 
 
-{{< fullimg src="/images/articles/metro-orientation-design/metro-orientation-design-6.jpg" alt="Station pictograms can work as memory shortcuts, not decoration" >}}
+{{< halves >}}
+{{< halfimg src="/images/articles/metro-orientation-design/metro-orientation-design-12.jpg" alt="Metro station pictograms used as memorable symbols for quick recognition and wayfinding" >}}
+{{< /halves >}}
 
 
 
@@ -234,11 +247,21 @@ Why it works:
 - Poor integration between metro exits and street-level orientation.
 - Result: navigation breaks down exactly where tourists need it most.
 
+{{< halves >}}
+{{< halfimg src="/images/articles/metro-orientation-design/metro-orientation-design-13.jpg" alt="Example of confusing metro wayfinding where sign hierarchy and rules are inconsistent" >}}
+{{< /halves >}}
+
+
 #### Los Angeles Metro (US)
 - Stations are often architecturally open but informationally sparse.
 - Directional signage can be distant from actual decision points.
 - Heavy reliance on digital tools rather than physical wayfinding.
 - Result: orientation works only if you already know where you’re going.
+
+{{< halves >}}
+{{< halfimg src="/images/articles/metro-orientation-design/metro-orientation-design-14.jpg" alt="Example of sparse metro wayfinding with limited signage near key decision points" >}}
+{{< /halves >}}
+
 
 #### Many Legacy Eastern European Systems
 - Beautiful architecture, weak contemporary overlays.

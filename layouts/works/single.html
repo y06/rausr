@@ -42,8 +42,13 @@
     <div class="content-section-row">
       <div class="content-section-image">
         {{ if .image }}
+          {{ $alt := "" }}
+          {{ with .alt }}{{ $alt = . }}{{ end }}
+          {{ if not $alt }}{{ with .title }}{{ $alt = . }}{{ end }}{{ end }}
+          {{ if not $alt }}{{ with .label }}{{ $alt = . }}{{ end }}{{ end }}
+          {{ if not $alt }}{{ $alt = printf "%s image" $.Title }}{{ end }}
           <a href="{{ .image }}" class="glightbox" data-gallery="main-sections">
-            <img src="{{ .image }}" alt="{{ .title }}">
+            <img src="{{ .image }}" alt="{{ $alt }}">
           </a>
         {{ else if .video }}
           {{ $width := "" }}
