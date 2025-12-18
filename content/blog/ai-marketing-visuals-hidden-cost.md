@@ -12,7 +12,7 @@ seotags:
 author: "Jakub"
 draft: false
 header_image: /images/articles/ai-marketing-visuals/ai-marketing-visuals-1.jpg
-preview_image: /images/articles/ai-marketing-visuals/ai-marketing-visuals-2.jpg
+preview_image: /images/articles/ai-marketing-visuals/ai-marketing-visuals-8.jpg
 source:
   - "https://www.nngroup.com/articles/ai-and-design-productivity-report/"
   - "https://c2pa.org/"
@@ -31,6 +31,10 @@ But there’s a growing quiet suspicion inside teams: the promise of time saving
 
 This article looks at what we know so far, where the time actually goes, and why the current boom might be a partial blind alley — not because AI is useless, but because agencies are over-indexing on generation while underestimating everything around it.
 
+{{< halves >}}
+{{< halfimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-2.jpg" alt="" >}}
+{{< /halves >}}
+
 
 ### Why agencies shifted so fast
 
@@ -45,7 +49,7 @@ What AI genuinely improves:
 Where the hype starts: teams confuse *rapid ideation* with *rapid production*.
 
 {{< halves >}}
-{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-3.jpg" alt="AI accelerates ideation and variation, but production still requires control, consistency, and approvals." >}}
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-3.jpg" alt="" >}}
 {{< /halves >}}
 
 
@@ -107,6 +111,10 @@ Even when the image “looks finished”, the job isn’t:
 In many agencies the real shift isn’t “designer → prompter”. It’s “designer → QA lead”: checking, fixing, aligning, and making outputs usable at scale.
 {{< /interest >}}
 
+{{< halves >}}
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-4.jpg" alt="" >}}
+{{< /halves >}}
+
 
 ### Images are one thing
 #### Video is the real stress test
@@ -121,7 +129,9 @@ In practice, teams often end up doing “AI for mood + live/3D for truth”:
 - AI clips for exploration and direction
 - real footage, 3D, or controlled motion tools for final delivery
 
-{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-4.jpg" alt="Video workflows expose the hardest problems: continuity, consistency, and repeatability." >}}
+{{< halves >}}
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-5.jpg" alt="" >}}
+{{< /halves >}}
 
 
 ### What we know so far (2024–2025)
@@ -134,6 +144,10 @@ A few patterns are becoming clearer across the industry:
 - **Provenance is becoming a requirement**: clients and platforms increasingly care about how assets were made, what rights exist, and how to label them.
 
 Content authenticity initiatives (like C2PA) and platform policies are pushing the ecosystem toward traceability. This doesn’t kill AI visuals — it adds process.
+
+{{< halves >}}
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-6.jpg" alt="" >}}
+{{< /halves >}}
 
 
 ### Less-discussed (but very real) frictions
@@ -161,6 +175,10 @@ Even when a tool offers “commercially safe” outputs, teams still worry about
 
 This adds a layer of review that traditional photography already solved with releases, production control, and clear provenance.
 
+{{< halves >}}
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-7.jpg" alt="" >}}
+{{< /halves >}}
+
 
 ### Prognosis: where this likely goes next
 
@@ -186,6 +204,10 @@ Success won’t be “we generated 500 images”. It will be:
 - how many fit the brand system
 - how many can be repeated across formats without breaking
 
+
+{{< halves >}}
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-8.jpg" alt="" >}}
+{{< /halves >}}
 
 ### Conclusion
 #### AI isn’t the enemy — the fantasy is
