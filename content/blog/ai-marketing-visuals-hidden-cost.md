@@ -32,7 +32,7 @@ But there’s a growing quiet suspicion inside teams: the promise of time saving
 This article looks at what we know so far, where the time actually goes, and why the current boom might be a partial blind alley — not because AI is useless, but because agencies are over-indexing on generation while underestimating everything around it.
 
 {{< halves >}}
-{{< halfimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-2.jpg" alt="" >}}
+{{< halfimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-2.jpg" alt="Team reviewing AI workflow steps and a content provenance checklist on multiple screens." >}}
 {{< /halves >}}
 
 
@@ -48,13 +48,12 @@ What AI genuinely improves:
 
 Where the hype starts: teams confuse *rapid ideation* with *rapid production*.
 
-{{< halves >}}
-{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-3.jpg" alt="" >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-3.jpg" alt="Designers comparing many AI-generated campaign image variations across large monitors." >}}
+
 
 
 ### The time-savings myth
-#### where the hours really go
+#### Where the hours really go
 
 When a client wants something generic (“a happy team in a modern office”), AI often does save time. But marketing rarely stays generic. The moment specificity enters — product accuracy, brand tone, legal requirements, campaign consistency — the hidden workload appears.
 
@@ -111,9 +110,9 @@ Even when the image “looks finished”, the job isn’t:
 In many agencies the real shift isn’t “designer → prompter”. It’s “designer → QA lead”: checking, fixing, aligning, and making outputs usable at scale.
 {{< /interest >}}
 
-{{< halves >}}
-{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-4.jpg" alt="" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-4.jpg" alt="Close-up review of an AI-generated image in an editing interface, with issues marked for revision." >}}
+
 
 
 ### Images are one thing
@@ -129,9 +128,9 @@ In practice, teams often end up doing “AI for mood + live/3D for truth”:
 - AI clips for exploration and direction
 - real footage, 3D, or controlled motion tools for final delivery
 
-{{< halves >}}
-{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-5.jpg" alt="" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-5.jpg" alt="AI generation error and risk-review checklist shown during a creative team review meeting." >}}
+
 
 
 ### What we know so far (2024–2025)
@@ -145,9 +144,9 @@ A few patterns are becoming clearer across the industry:
 
 Content authenticity initiatives (like C2PA) and platform policies are pushing the ecosystem toward traceability. This doesn’t kill AI visuals — it adds process.
 
-{{< halves >}}
-{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-6.jpg" alt="" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-6.jpg" alt="Team selecting from multiple AI-generated product-style visuals inside a media management interface." >}}
+
 
 
 ### Less-discussed (but very real) frictions
@@ -175,39 +174,39 @@ Even when a tool offers “commercially safe” outputs, teams still worry about
 
 This adds a layer of review that traditional photography already solved with releases, production control, and clear provenance.
 
-{{< halves >}}
-{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-7.jpg" alt="" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-7.jpg" alt="Grid of AI-generated image options and edits being reviewed for consistency and brand fit." >}}
+
 
 
 ### Prognosis: where this likely goes next
 
-1) **Agencies split into two lanes**
+#### **Agencies split into two lanes**
 - “Fast content factories” optimized for volume and performance testing.
 - “High-control studios” optimized for craft, consistency, and brand truth.
 
-2) **Hybrid pipelines win**
+**Hybrid pipelines win**
 The most effective teams will combine [AI](/search/?q=ai/) with controlled sources:
 - real photography where authenticity matters
 - 3D where repeatability matters
 - AI where exploration and variation matter
 
-3) **Provenance and contracts become competitive advantages**
+**Provenance and contracts become competitive advantages**
 Clients will increasingly pay for:
 - documented workflows
 - rights clarity
 - asset lineage and approvals
 
-4) **The KPI changes from ‘output’ to ‘usable output’**
+**The KPI changes from ‘output’ to ‘usable output’**
 Success won’t be “we generated 500 images”. It will be:
 - how many made it through review
 - how many fit the brand system
 - how many can be repeated across formats without breaking
 
 
-{{< halves >}}
-{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-8.jpg" alt="" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/ai-marketing-visuals/ai-marketing-visuals-8.jpg" alt="Creative team discussing AI-generated visuals while reviewing selections across multiple screens." >}}
+
 
 ### Conclusion
 #### AI isn’t the enemy — the fantasy is
