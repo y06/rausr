@@ -11,9 +11,9 @@ seotags:
   - burnout prevention for creatives
 author: "Jakub"
 draft: false
-header_image: "/images/articles/designers-and-nature-is-the-outdoors-a-quiet-institution-of-creativity/designers-and-nature-is-the-outdoors-a-quiet-institution-of-creativity-1.jpg"
+header_image: "/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-1.jpg"
 header_image_alt: ""
-preview_image: "/images/articles/designers-and-nature-is-the-outdoors-a-quiet-institution-of-creativity/designers-and-nature-is-the-outdoors-a-quiet-institution-of-creativity-2.jpg"
+preview_image: "/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-2.jpg"
 preview_image_alt: ""
 source:
   - "Study: Kaplan & Kaplan – Attention Restoration Theory"
@@ -38,7 +38,8 @@ Nature doesn’t give you ideas. It gives you back the cognitive room to have id
 
 If you’re a graphic designer (or any creative discipline) whose work is built on judgment, taste, iteration, and restraint, that room is often the real bottleneck.
 
-## The core claim: nature restores the “control battery”
+### The core claim
+#### Nature restores the “control battery”
 
 A lot of design work is not “creative” in the fireworks sense. It’s sustained executive control:
 - choosing (and rejecting) options
@@ -54,11 +55,11 @@ Attention Restoration Theory (ART) proposes a simple mechanism:
 
 Natural environments are unusually good at producing soft fascination: movement of leaves, water, clouds, bird calls, variation without demand.
 
-## Why nature feels like “peace” from the inside
+### Why nature feels like “peace” from the inside
 
 The subjective experience (“I can breathe again”) often shows up before you can explain it. Two forces stack:
 
-### 1) Stress physiology downshifts
+#### 1) Stress physiology downshifts
 
 Stress Reduction Theory (SRT) suggests natural scenes reduce stress responses more quickly than urban or high-stimulation environments.
 
@@ -69,7 +70,7 @@ In creative work, stress isn’t just unpleasant — it changes cognition:
 
 That’s great for emergencies, not for good typography.
 
-### 2) Rumination loses traction
+#### 2) Rumination loses traction
 
 One under-discussed creativity killer is rumination: repetitive, self-referential loops (“this is bad”, “I’m behind”, “why can’t I solve this”).
 
@@ -79,7 +80,8 @@ Research on nature walks has found reductions in rumination compared with urban 
 Many “creative blocks” are not a lack of ideas. They’re a mind that can’t stop monitoring itself long enough to play.
 {{< /interest >}}
 
-## The “unknown” part: nature changes what your brain counts as “signal”
+### The “unknown” part
+#### Nature changes what your brain counts as “signal”
 
 Here’s a less obvious effect that shows up in practice:
 
@@ -97,7 +99,8 @@ After 20–60 minutes, many people report that subtle differences feel “louder
 
 That’s not mystical. It’s your perceptual system recalibrating away from overstimulation.
 
-## Designers vs. other creative disciplines: who benefits most?
+### Designers vs. other creative disciplines
+#### Who benefits most?
 
 Nature time is not equally useful for everyone, because disciplines run on different cognitive modes.
 
@@ -108,18 +111,19 @@ Nature time is not equally useful for everyone, because disciplines run on diffe
 
 The common thread is not “nature gives ideas”. It’s “nature restores the conditions ideas require”.
 
-## Time-saving and time-losing (the honest accounting)
+
+### Time-saving and time-losing
 
 Nature is not always a net gain — especially if it becomes procrastination cosplay.
 
-### When it saves time
+#### When it saves time
 
 - you return and solve a stuck decision in 5 minutes that would’ve taken 60
 - you stop iterating randomly and can pick a direction
 - you notice obvious mistakes you were blind to (spacing, hierarchy, tone)
 - you write clearer feedback because you’re less reactive
 
-### When it loses time
+#### When it loses time
 
 - you use nature to avoid a hard conversation or a real constraint
 - you don’t capture thoughts, so insights evaporate
@@ -127,7 +131,8 @@ Nature is not always a net gain — especially if it becomes procrastination cos
 
 Practical fix: treat nature breaks like a tool, not a reward.
 
-## A simple protocol that works for busy creatives
+
+### A simple protocol that works for busy creatives
 
 You don’t need a mountain. You need **a predictable reset**.
 
@@ -145,7 +150,8 @@ Bring one capture tool:
 - small notebook (low friction)
 - one photo per “interesting texture/light” you notice
 
-## Why it’s important for inside peace (not just output)
+
+### Why it’s important for inside peace
 
 Designers often live in evaluation: your work is critiqued, compared, and revised. That constant evaluation easily becomes identity pressure.
 
@@ -160,7 +166,8 @@ Inside peace isn’t passive comfort. It’s the baseline state that allows:
 - less reactive iteration
 - less “panic polish” at the end
 
-## Prognosis: the future is “nature as infrastructure”
+### Prognosis
+#### The future is “nature as infrastructure”
 
 1) **More designers will treat nature like a productivity input**  
 Not as lifestyle content — as a scheduled part of a creative system.
@@ -171,7 +178,7 @@ The best creative hubs won’t only have cafés and coworking. They’ll have ac
 3) **Biophilic design will shift from aesthetic to cognitive**  
 Plants and wood textures are not the point. The point is reducing cognitive load and supporting recovery between intense focus blocks.
 
-## Conclusion
+### Conclusion
 
 Nature isn’t a centralized institution of creativity. It’s closer to a maintenance mechanic: boring, reliable, and easy to ignore until you burn out.
 
