@@ -129,7 +129,9 @@ Nature is not always a net gain — especially if it becomes procrastination cos
 - you don’t capture thoughts, so insights evaporate
 - you go at the wrong time (when you needed sleep, food, or boundaries)
 
+{{< interest >}}
 Practical fix: treat nature breaks like a tool, not a reward.
+{{< /interest >}}
 
 
 ### A simple protocol that works for busy creatives
