@@ -1,6 +1,6 @@
 ---
 title: "Designers and Nature: Is the Outdoors a Quiet Institution of Creativity?"
-description: "Nature isn’t a magic muse, but research suggests it reliably restores attention, lowers stress, and reopens the mental bandwidth creative work depends on. Here’s what actually happens—and how to use it."
+description: "Nature isn’t a magic muse, but research suggests it reliably restores attention, lowers stress, and reopens the mental bandwidth creative work depends on."
 date: 2025-12-25
 tags: ["creativity", "philosophy", "graphic design", "reports"]
 seotags:
@@ -13,7 +13,7 @@ author: "Jakub"
 draft: false
 header_image: "/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-1.jpg"
 header_image_alt: ""
-preview_image: "/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-2.jpg"
+preview_image: "/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-9.jpg"
 preview_image_alt: ""
 source:
   - "Study: Kaplan & Kaplan – Attention Restoration Theory"
@@ -38,6 +38,10 @@ Nature doesn’t give you ideas. It gives you back the cognitive room to have id
 
 If you’re a graphic designer (or any creative discipline) whose work is built on judgment, taste, iteration, and restraint, that room is often the real bottleneck.
 
+{{< halves >}}
+{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-2.jpg" alt="" >}}
+{{< /halves >}}
+
 ### The core claim
 #### Nature restores the “control battery”
 
@@ -54,6 +58,7 @@ Attention Restoration Theory (ART) proposes a simple mechanism:
 - **soft fascination** (effortless attention) lets it recover
 
 Natural environments are unusually good at producing soft fascination: movement of leaves, water, clouds, bird calls, variation without demand.
+
 
 ### Why nature feels like “peace” from the inside
 
@@ -80,6 +85,10 @@ Research on nature walks has found reductions in rumination compared with urban 
 Many “creative blocks” are not a lack of ideas. They’re a mind that can’t stop monitoring itself long enough to play.
 {{< /interest >}}
 
+{{< halves >}}
+{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-3.jpg" alt="" >}}
+{{< /halves >}}
+
 ### The “unknown” part
 #### Nature changes what your brain counts as “signal”
 
@@ -99,6 +108,11 @@ After 20–60 minutes, many people report that subtle differences feel “louder
 
 That’s not mystical. It’s your perceptual system recalibrating away from overstimulation.
 
+
+{{< fullimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-4.jpg" alt="" >}}
+
+
+
 ### Designers vs. other creative disciplines
 #### Who benefits most?
 
@@ -110,6 +124,10 @@ Nature time is not equally useful for everyone, because disciplines run on diffe
 - **Product/UI designers** often benefit from reframing: problems feel less “stuck” when your body is moving and your focus is softer.
 
 The common thread is not “nature gives ideas”. It’s “nature restores the conditions ideas require”.
+
+
+{{< fullimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-5.jpg" alt="" >}}
+
 
 
 ### Time-saving and time-losing
@@ -134,6 +152,10 @@ Practical fix: treat nature breaks like a tool, not a reward.
 {{< /interest >}}
 
 
+{{< fullimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-6.jpg" alt="" >}}
+
+
+
 ### A simple protocol that works for busy creatives
 
 You don’t need a mountain. You need **a predictable reset**.
@@ -152,6 +174,10 @@ Bring one capture tool:
 - small notebook (low friction)
 - one photo per “interesting texture/light” you notice
 
+{{< halves >}}
+{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-7.jpg" alt="" >}}
+{{< /halves >}}
+
 
 ### Why it’s important for inside peace
 
@@ -167,6 +193,11 @@ Inside peace isn’t passive comfort. It’s the baseline state that allows:
 - better taste judgments
 - less reactive iteration
 - less “panic polish” at the end
+
+{{< halves >}}
+{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-8.jpg" alt="" >}}
+{{< /halves >}}
+
 
 ### Prognosis
 #### The future is “nature as infrastructure”
@@ -184,4 +215,6 @@ Plants and wood textures are not the point. The point is reducing cognitive load
 
 Nature isn’t a centralized institution of creativity. It’s closer to a maintenance mechanic: boring, reliable, and easy to ignore until you burn out.
 
+{{< interest >}}
 If your work depends on seeing clearly, choosing well, and staying emotionally steady under revision, time in nature is less “inspiration” and more **cognitive hygiene**.
+{{< /interest >}}
