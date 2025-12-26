@@ -12,9 +12,9 @@ seotags:
 author: "Jakub"
 draft: false
 header_image: "/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-1.jpg"
-header_image_alt: ""
+header_image_alt: "Two creatives sketching by a forest river at sunrise."
 preview_image: "/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-9.jpg"
-preview_image_alt: ""
+preview_image_alt: "Designer relaxing by a sunlit river after journaling in nature."
 source:
   - "Study: Kaplan & Kaplan – Attention Restoration Theory"
   - "Study: Ulrich – Stress Reduction Theory"
@@ -39,7 +39,7 @@ Nature doesn’t give you ideas. It gives you back the cognitive room to have id
 If you’re a graphic designer (or any creative discipline) whose work is built on judgment, taste, iteration, and restraint, that room is often the real bottleneck.
 
 {{< halves >}}
-{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-2.jpg" alt="" >}}
+{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-2.jpg" alt="Designer sketching beside a calm river at golden hour." >}}
 {{< /halves >}}
 
 ### The core claim
@@ -86,7 +86,7 @@ Many “creative blocks” are not a lack of ideas. They’re a mind that can’
 {{< /interest >}}
 
 {{< halves >}}
-{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-3.jpg" alt="" >}}
+{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-3.jpg" alt="Artist smiling toward the sun while drawing near the water." >}}
 {{< /halves >}}
 
 ### The “unknown” part
@@ -109,7 +109,7 @@ After 20–60 minutes, many people report that subtle differences feel “louder
 That’s not mystical. It’s your perceptual system recalibrating away from overstimulation.
 
 
-{{< fullimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-4.jpg" alt="" >}}
+{{< fullimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-4.jpg" alt="Color swatches, sketchbook, and camera arranged on a wooden table outdoors." >}}
 
 
 
@@ -126,7 +126,7 @@ Nature time is not equally useful for everyone, because disciplines run on diffe
 The common thread is not “nature gives ideas”. It’s “nature restores the conditions ideas require”.
 
 
-{{< fullimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-5.jpg" alt="" >}}
+{{< fullimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-5.jpg" alt="Creative team collaborating by a forest river with notebooks and cameras." >}}
 
 
 
@@ -152,7 +152,7 @@ Practical fix: treat nature breaks like a tool, not a reward.
 {{< /interest >}}
 
 
-{{< fullimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-6.jpg" alt="" >}}
+{{< fullimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-6.jpg" alt="Designer back at the studio desk reviewing nature-inspired palettes." >}}
 
 
 
@@ -175,7 +175,7 @@ Bring one capture tool:
 - one photo per “interesting texture/light” you notice
 
 {{< halves >}}
-{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-7.jpg" alt="" >}}
+{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-7.jpg" alt="Creative walking a forest trail while taking notes in a journal." >}}
 {{< /halves >}}
 
 
@@ -195,7 +195,7 @@ Inside peace isn’t passive comfort. It’s the baseline state that allows:
 - less “panic polish” at the end
 
 {{< halves >}}
-{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-8.jpg" alt="" >}}
+{{< halfimg src="/images/articles/is-the-outdoors-a-quiet-institution-of-creativity/is-the-outdoors-a-quiet-institution-of-creativity-8.jpg" alt="Designer pausing on a riverside rock, eyes closed, soaking in the quiet." >}}
 {{< /halves >}}
 
 
