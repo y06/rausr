@@ -2306,6 +2306,10 @@ footer .nav-item {
   font-weight: 500;
 }
 
+.section-tags .tag:hover {
+  background: color(display-p3 0.964 1.000 0.247); /* yellow */
+}
+
 .section-tags .sources {
     background-color: transparent;
     border: 1px solid color(display-p3 0.866 0.851 0.894);
