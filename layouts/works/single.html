@@ -75,7 +75,8 @@
       {{ with .Params.seotags }}
       <div class="section-tags">
         {{ range . }}
-          <span class="tag">{{ . }}</span>
+          {{ $searchUrl := (printf "/search/?q=%s" (urlquery .)) | relURL }}
+          <a class="tag" href="{{ $searchUrl }}">{{ . }}</a>
         {{ end }}
       </div>
       {{ end }}
