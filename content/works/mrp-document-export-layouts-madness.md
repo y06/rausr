@@ -6,7 +6,7 @@ tags: ["dtp", "print design", "ux-ui"]
 draft: false
 preview_image: "/images/mrp-document-export-layouts-madness/company-mrp-documents-layout-preview.jpg"
 header_image: "/images/mrp-document-export-layouts-madness/company-mrp-documents-layout-preview.jpg"
-seotags: ["2025", "Madness Advertising", "MRP", "PDF Export", "Invoice", "Order Confirmation", "Price Offer", "Print Preview", "Layout System"]
+seotags: ["2025", "Madness Advertising", "MRP", "PDF Export", "Order Confirmation", "Price Offer", "Print Preview", "Layout System"]
 sections:
   - image: "/images/mrp-document-export-layouts-madness/company-mrp-documents-layout-1-export-ai.png"
     label: "Layout – Header & supplier/customer blocks"

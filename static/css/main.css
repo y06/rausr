@@ -2418,6 +2418,21 @@ footer .nav-item {
     font-family: 'Inter', sans-serif !important;
 }
 
+.article-container ol {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    line-height: 1.9rem;
+    font-family: 'Inter', sans-serif !important;
+    color: color(display-p3 0.263 0.251 0.298); /* match paragraph text */
+    list-style: decimal outside !important;
+    padding-left: 1.5rem;
+}
+
+.article-container ol li {
+    list-style: decimal;
+    color: color(display-p3 0.263 0.251 0.298); /* keep numbers/text consistent */
+}
+
 /* Tighter spacing when a list directly follows a paragraph */
 .article-container p:has(+ ul),
 .article-container p:has(+ ol) {
