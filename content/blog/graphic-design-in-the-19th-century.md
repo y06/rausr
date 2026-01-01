@@ -32,7 +32,6 @@ If the 20th century invented modern design studios, the 19th century invented th
 {{< /halves >}}
 
 
-
 ### What Counted as “Graphic Design” Back Then?
 
 In the 1800s, the job title *graphic designer* didn’t exist (the term becomes common much later). But the work absolutely did:
@@ -50,7 +49,6 @@ The big difference: the “designer” was often a **craft specialist inside the
 
 
 {{< fullimg src="/images/articles/graphic-design-in-the-19th-century/graphic-design-in-the-19th-century-3.jpg" alt="Victorian-era printed ephemera: posters, ads, and ornamental layouts" >}}
-
 
 
 ### The Technologies That Changed Everything
