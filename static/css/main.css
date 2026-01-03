@@ -1402,6 +1402,7 @@ a:hover {
 .navbar-toggler {
     border: none !important;
     margin: 0 1rem;
+    background: transparent;
 }
 
 .mobile-headline h1 {
@@ -3705,5 +3706,126 @@ footer .nav-item {
 
   .subscribe-copy p {
     font-size: 1rem;
+  }
+}
+
+/* Tablet / iPad optimizations */
+@media (min-width: 576px) and (max-width: 768px) and (hover: none) and (pointer: coarse) {
+  .navbar {
+    margin: 2rem auto;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar-nav {
+    gap: 1.8rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    margin: 0 1.5rem !important;
+  }
+
+  .navbar-search {
+    flex: 1 1 420px;
+    max-width: 560px;
+    margin: 0 1.25rem 0 1rem;
+  }
+
+  .navbar-toggler img {
+    width: 74%;
+  }
+
+  .header {
+    padding: 2.5rem 2rem;
+    margin: 0 1.5rem 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .header-content {
+    max-width: 100%;
+  }
+
+  .header-image {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .header-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-socials {
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 3rem 1rem 1rem 1rem;
+  }
+
+  .navbar-collapse {
+    width: 80%;
+  }
+
+  .featured-content-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2.5rem 2rem;
+    margin: 0 1.5rem;
+  }
+
+  .blog-featured,
+  .blog-older {
+    padding: 0 1.5rem;
+    gap: 2.5rem;
+  }
+
+  /* Featured grid two-up on iPad Pro sizes */
+  .featured-grid {
+    justify-content: center;
+    gap: 40px 32px;
+  }
+
+  .featured-card,
+  .card4 {
+    width: calc(50% - 1.5rem) !important;
+    min-width: 0;
+  }
+
+  .card-container {
+    gap: 2.5rem 1.5rem;
+  }
+
+  .card1 {
+    width: calc(50% - 1.5rem);
+  }
+
+  .cta-section h2 {
+    font-size: 2.25rem;
+  }
+
+  .cta-section p {
+    font-size: 1.05rem;
+    padding: 0 1rem;
+  }
+
+  .contact-card-grid {
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-card-info img {
+    width: 360px;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
