@@ -1,5 +1,5 @@
 <section class="more-works more-articles">
-    <h2>Futured Articles</h2>
+    <h2>Featured Articles</h2>
         <div class="more-works-front">
                 <div class="featured-grid more-works-grid">
                     {{ $blogs := where .Site.RegularPages "Type" "blog" }}
@@ -23,7 +23,7 @@
                             <div class="card2-bottom card3-bottom">
                                 {{ with index .Params.tags 0 }}
                                 <span class="card1-category">
-                                    <a href="{{ "/topic/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                    <a href="{{ "/topics/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                                 </span>
                                 {{ end }}
 

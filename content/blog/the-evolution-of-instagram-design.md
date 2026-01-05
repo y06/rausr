@@ -1,6 +1,6 @@
 ---
 title: "The Evolution of Instagram Design: From Filters to Frameworks"
-description: "A deep dive into the visual and UX transformation of Instagram, from its humble beginnings as a photo filter app to a global design powerhouse."
+description: "Visual and UX transformation of Instagram, from its humble beginnings as a photo filter app to a global design powerhouse."
 date: 2025-11-06
 tags: ["ux-ui", "trends", "series", "history"]
 author: "Emily"

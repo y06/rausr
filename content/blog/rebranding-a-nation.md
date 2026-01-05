@@ -88,7 +88,7 @@ Lesson: symbolic success doesn’t guarantee **systemic clarity**.
 Several U.S. states (e.g., Mississippi, Utah) have struggled with redesigning flags to remove Confederate or religious imagery.  
 Public resistance was intense — illustrating how **heritage and emotion can block progress**, even when redesigns seek inclusivity.
 
-#### 🇨🇭 Czech Republic vs Slovakia (1993)
+#### 🇨🇿 Czech Republic vs Slovakia (1993)
 After Czechoslovakia’s split, both nations claimed continuity of visual identity.  
 The Czech Republic kept the old flag — effectively **“rebranding by ownership”** — leaving Slovakia to develop a new but less internationally recognized symbol.
 
