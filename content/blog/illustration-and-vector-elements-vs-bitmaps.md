@@ -173,13 +173,11 @@ Vectors shine for systems. Photos win for reality.
 
 Here’s a practical decision grid:
 
-| Use case | Illustration/vector is strong when… | Photo/bitmap is strong when… |
-|---|---|---|
-| Product marketing | you need a consistent brand world | you need proof, trust, realism |
-| Editorial | you need symbolic storytelling | you need documentary clarity |
-| UI | icons, small visuals, states | complex images, textures, details |
-| People | you want inclusive “generic” representation | you want authenticity and emotion |
-| Performance | you can keep vectors simple | you can compress + lazy-load photos |
+- **Product marketing**: vector/illustration for a consistent brand world; photo/bitmap for proof, trust, realism.
+- **Editorial**: vector/illustration for symbolic storytelling; photo/bitmap for documentary clarity.
+- **UI**: vector/illustration for icons, small visuals, states; photo/bitmap for complex images, textures, details.
+- **People**: vector/illustration for inclusive “generic” representation; photo/bitmap for authenticity and emotion.
+- **Performance**: vector/illustration when you can keep it simple; photo/bitmap when you can compress + lazy-load.
 
 There’s also the “authenticity pendulum”: many brands periodically swing back to photography because it reads as *more human* after years of polished illustration.
 
