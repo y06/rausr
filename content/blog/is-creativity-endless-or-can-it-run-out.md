@@ -45,10 +45,6 @@ This article explores four questions designers quietly wrestle with:
 - can it be recovered after burnout, stress, or years of repetition?
 - do some brains generate ideas more easily while others are “logical” by default?
 
-{{< interest >}}
-If you want the “where ideas come from” side of the story, read: [Where Creativity Is Born](/blog/where-creativity-is-born/).
-{{< /interest >}}
-
 {{< fullimg src="/images/articles/is-creativity-endless-or-can-it-run-out/is-creativity-endless-or-can-it-run-out-2.jpg" alt="Designer thinking of creativity as a battery that can run out" >}}
 
 
