@@ -71,7 +71,7 @@ A great sports logo works in two modes: it looks good on a shoe at 2 cm — and 
 {{< /quote >}}
 
 {{< halves >}}
-{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-3.jpg" alt="" >}}
+{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-3.jpg" alt="Nike Swoosh logo shown on footwear and sportswear as a symbol of speed" >}}
 {{< /halves >}}
 
 
@@ -113,7 +113,7 @@ Puma’s visual strength comes from silhouette: even without color, the “jumpi
 
 
 {{< halves >}}
-{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-5.jpg" alt="" >}}
+{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-5.jpg" alt="Puma jumping cat logo emphasizing motion and athletic energy" >}}
 {{< /halves >}}
 
 
@@ -132,7 +132,7 @@ Why it became iconic:
 
 
 {{< halves >}}
-{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-6.jpg" alt="" >}}
+{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-6.jpg" alt="Under Armour UA logo mark with bold, industrial geometry" >}}
 {{< /halves >}}
 
 
@@ -168,7 +168,7 @@ Why it became iconic:
 - branding: the mark looks *technical* without being complicated
 
 {{< halves >}}
-{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-8.jpg" alt="" >}}
+{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-8.jpg" alt="New Balance NB monogram with speed lines on running shoes" >}}
 {{< /halves >}}
 
 
@@ -189,7 +189,7 @@ Some brands get famous by being loud. ASICS became famous by being present in th
 {{< /interest >}}
 
 {{< halves >}}
-{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-9.jpg" alt="" >}}
+{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-9.jpg" alt="ASICS wordmark and swirl logo associated with running performance" >}}
 {{< /halves >}}
 
 
@@ -207,7 +207,7 @@ Why it became iconic:
 - culture: it moved from sport → lifestyle → fashion
 
 {{< halves >}}
-{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-10.jpg" alt="" >}}
+{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-10.jpg" alt="Lacoste crocodile emblem embroidered on a classic polo shirt" >}}
 {{< /halves >}}
 
 
@@ -225,7 +225,7 @@ Why it became iconic:
 - branding: minimal mark + instantly readable shape language
 
 {{< halves >}}
-{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-11.jpg" alt="" >}}
+{{< halfimg src="/images/articles/ten-most-famous-sports-brands-logos/ten-most-famous-sports-brands-logos-11.jpg" alt="Converse Star Chevron logo used on sneakers and streetwear" >}}
 {{< /halves >}}
 
 
