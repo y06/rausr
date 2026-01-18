@@ -2098,6 +2098,23 @@ footer .nav-item {
   display: none;
 }
 
+.form-footnote {
+  max-width: 780px;
+  margin: 1.5rem auto 0;
+  color: #6e6b7a;
+  text-align: center !important;
+  font-family: 'Satoshi', sans-serif !important;
+}
+
+.form-footnote a {
+  color: color(display-p3 0.420 0.270 1.000); /* #6b45ff */
+}
+
+.form-footnote a:hover {
+  text-decoration: underline;
+  color: color(display-p3 0.305 0.901 0.886) !important;
+}
+
 
 
 .nav-item a {
