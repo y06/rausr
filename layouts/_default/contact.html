@@ -21,51 +21,156 @@
     {{ partial "tag-list-home" . }}
 
 
+    {{ $email := or .Params.email "hello@rausr.com" }}
     <section class="contact-card-container">
-    <div class="contact-card-grid">
-      <div class="contact-card-info">
-        <img src="/svg/contact-storm.svg" alt="Contact Storm" />
-      </div>
-      <div class="contact-card-info">
-        <div class="contact-card-info-segment">
-             <div class="contact-row">
-                 <div class="contact-label">E-MAIL</div>
-            </div>
-            <div class="contact-row">
-                <a href="mailto:hello@rausr.com?subject=Request%20from%20contact%20page%20%7C%20rausr.com" class="contact-value">hello@rausr.com</a>
-                <div class="contact-arrow">→</div>
-            </div>
-        </div>
-            <div class="contact-card-info-segment">
-                <div class="contact-row">
-                    <div class="contact-label">WHATSAPP</div>
-                </div>
-                <div class="contact-row">
-                    <div class="contact-value">+421 910 160 251</div>
-                    <a href="tel:+421910160251" class="contact-arrow">→</a>
+        <div class="contact-card">
+            <div class="contact-email-block">
+                <div class="contact-label">E-MAIL</div>
+                <div class="contact-email-row" data-copy-wrapper>
+                    <a href="mailto:{{ $email }}?subject=Request%20from%20contact%20page%20%7C%20rausr.com" class="contact-email">
+                        {{ $email }}
+                    </a>
+                    <div class="contact-copy-group">
+                        <button class="contact-copy-button" type="button" data-copy-target="{{ $email }}" aria-label="Copy {{ $email }}">
+                            <img src="/images/contact-svg/copy-before.svg" alt="" aria-hidden="true" class="copy-icon" loading="lazy" decoding="async" />
+                        </button>
+                        <div class="contact-copy-feedback" aria-live="polite" hidden>Copied to clipboard</div>
+                    </div>
                 </div>
             </div>
-        <div class="contact-card-info-segment">
-            <div class="contact-row contact-social">
-                <div class="contact-label">SOCIALS</div>
+
+            <div class="contact-social-block">
+                <div class="contact-label">SOCIAL</div>
+                <div class="contact-social-grid">
+                    {{ $iconSources := dict
+                        "instagram" "/images/contact-svg/instagram-mini.svg"
+                        "facebook" "/images/contact-svg/facebook-mini.svg"
+                        "linkedin" "/images/contact-svg/linkedin-mini.svg"
+                        "pinterest" "/images/contact-svg/pinterest-mini.svg"
+                        "whatsapp" "/images/contact-svg/whatsup-mini.svg"
+                    }}
+                    {{ $menuLinks := dict }}
+                    {{ if .Site.Menus.icon }}
+                        {{ range .Site.Menus.icon }}
+                            {{ $titleKey := lower (cond (ne .Title "") .Title .Name) }}
+                            {{ $menuLinks = merge $menuLinks (dict $titleKey .URL) }}
+                        {{ end }}
+                    {{ end }}
+                    {{ $phoneDigits := "421910160251" }}
+                    {{ $whatsAppDisplay := "+421910160251" }}
+                    {{ $socials := slice
+                        (dict "key" "instagram" "label" "Instagram" "url" (or (index $menuLinks "instagram") "https://instagram.com/rausr_com"))
+                        (dict "key" "facebook" "label" "Facebook" "url" (or (index $menuLinks "facebook") "https://www.facebook.com/rausrdotcom/"))
+                        (dict "key" "linkedin" "label" "LinkedIn" "url" "https://www.linkedin.com/company/rausr/")
+                        (dict "key" "pinterest" "label" "Pinterest" "url" "https://www.pinterest.com/rausr_com/")
+                        (dict "key" "whatsapp" "label" "WhatsApp" "url" (printf "https://wa.me/%s" $phoneDigits))
+                    }}
+                    {{ range $socials }}
+                        {{ $iconSrc := index $iconSources .key }}
+                        {{ if $iconSrc }}
+                        <a href="{{ .url }}" class="contact-social-link" data-social="{{ .key }}" target="_blank" rel="noopener"
+                           aria-label="{{ if eq .key "whatsapp" }}WhatsApp {{ $whatsAppDisplay }}{{ else }}{{ .label }}{{ end }}"
+                           {{ if eq .key "whatsapp" }}title="{{ $whatsAppDisplay }}"{{ end }}>
+                            <img src="{{ $iconSrc }}" alt="{{ .label }}" loading="lazy" decoding="async" />
+                        </a>
+                        {{ end }}
+                    {{ end }}
+                </div>
             </div>
-            {{ if .Site.Menus.icon }}
-            <div class="contact-row contact-social-buttons">
-            {{ range sort .Site.Menus.icon }}
-                <a href="{{ .URL }}" target="_blank" class="social-button">
-                    <span class="icon"><i class="fab {{ .Name }}"></i></span> {{ .Title }} <span class="arrow">→</span>
-                </a>
-            {{ end }}
+
+            <div class="contact-or-divider" aria-hidden="true">
+                <span class="contact-or-text">or</span>
             </div>
-            {{ end }}
         </div>
-      </div>
-    </div>
     </section>
 
 </main>
 
 {{ partial "contact-form" . }}
+
+{{ $companyName := or .Params.company_name "rausr s. r. o." }}
+{{ $companyId := or .Params.company_id "57401322" }}
+{{ $taxId := or .Params.tax_id "2122704980" }}
+{{ $vatId := or .Params.vat_id "SK2122704980" }}
+{{ $addressLine1 := or .Params.company_address_line1 "Čiližská street 5," }}
+{{ $addressLine2 := or .Params.company_address_line2 "Bratislava 821 07," }}
+{{ $addressLine3 := or .Params.company_address_line3 "Slovakia" }}
+{{ $phoneDisplay := or .Params.phonenumber "+421 910 160 251" }}
+
+<section class="contact-company">
+    <div class="contact-company-grid">
+        <div class="contact-company-left">
+            <div class="contact-company-row">
+                <div class="contact-company-label">Company:</div>
+                <div class="contact-company-value">{{ $companyName }}</div>
+                <div class="contact-copy-group">
+                    <button class="contact-copy-button contact-copy-button--small" type="button" data-copy-target="{{ $companyName }}" aria-label="Copy {{ $companyName }}">
+                        <img src="/images/contact-svg/copy-before.svg" alt="" aria-hidden="true" class="copy-icon" loading="lazy" decoding="async" />
+                    </button>
+                    <div class="contact-copy-feedback" aria-live="polite" hidden>Copied to clipboard</div>
+                </div>
+            </div>
+
+            <div class="contact-company-row">
+                <div class="contact-company-label">Company ID:</div>
+                <div class="contact-company-value">{{ $companyId }}</div>
+                <div class="contact-copy-group">
+                    <button class="contact-copy-button contact-copy-button--small" type="button" data-copy-target="{{ $companyId }}" aria-label="Copy {{ $companyId }}">
+                        <img src="/images/contact-svg/copy-before.svg" alt="" aria-hidden="true" class="copy-icon" loading="lazy" decoding="async" />
+                    </button>
+                    <div class="contact-copy-feedback" aria-live="polite" hidden>Copied to clipboard</div>
+                </div>
+            </div>
+
+            <div class="contact-company-row">
+                <div class="contact-company-label">Tax ID:</div>
+                <div class="contact-company-value">{{ $taxId }}</div>
+                <div class="contact-copy-group">
+                    <button class="contact-copy-button contact-copy-button--small" type="button" data-copy-target="{{ $taxId }}" aria-label="Copy {{ $taxId }}">
+                        <img src="/images/contact-svg/copy-before.svg" alt="" aria-hidden="true" class="copy-icon" loading="lazy" decoding="async" />
+                    </button>
+                    <div class="contact-copy-feedback" aria-live="polite" hidden>Copied to clipboard</div>
+                </div>
+            </div>
+
+            <div class="contact-company-row contact-company-row--spaced">
+                <div class="contact-company-label">VAT ID:</div>
+                <div class="contact-company-value">{{ $vatId }}</div>
+                <div class="contact-copy-group">
+                    <button class="contact-copy-button contact-copy-button--small" type="button" data-copy-target="{{ $vatId }}" aria-label="Copy {{ $vatId }}">
+                        <img src="/images/contact-svg/copy-before.svg" alt="" aria-hidden="true" class="copy-icon" loading="lazy" decoding="async" />
+                    </button>
+                    <div class="contact-copy-feedback" aria-live="polite" hidden>Copied to clipboard</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-company-right">
+            <div class="contact-company-row">
+                <div class="contact-company-label">Address:</div>
+                <div class="contact-company-value">{{ $addressLine1 }}</div>
+            </div>
+            <div class="contact-company-row">
+                <div class="contact-company-label contact-company-label--empty"></div>
+                <div class="contact-company-value">{{ $addressLine2 }}</div>
+            </div>
+            <div class="contact-company-row">
+                <div class="contact-company-label contact-company-label--empty"></div>
+                <div class="contact-company-value">{{ $addressLine3 }}</div>
+            </div>
+            <div class="contact-company-row contact-company-row--spaced">   
+                <div class="contact-company-label">Phone:</div>
+                <div class="contact-company-value">{{ $phoneDisplay }}</div>
+                <div class="contact-copy-group">
+                    <button class="contact-copy-button contact-copy-button--small" type="button" data-copy-target="{{ $phoneDisplay }}" aria-label="Copy {{ $phoneDisplay }}">
+                        <img src="/images/contact-svg/copy-before.svg" alt="" aria-hidden="true" class="copy-icon" loading="lazy" decoding="async" />
+                    </button>
+                    <div class="contact-copy-feedback" aria-live="polite" hidden>Copied to clipboard</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {{ partial "subscribe.html" . }}
 
