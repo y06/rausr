@@ -704,4 +704,81 @@ document.addEventListener("DOMContentLoaded", function () {
 
         evaluateNavbarState(true);
     }
+
+    const copyButtons = document.querySelectorAll("[data-copy-target]");
+    if (copyButtons.length) {
+        copyButtons.forEach((button) => {
+            const text = button.dataset.copyTarget || "";
+            if (!text) {
+                return;
+            }
+
+            const wrapper = button.closest("[data-copy-wrapper]") || button.closest(".contact-copy-group");
+            const feedback = wrapper ? wrapper.querySelector(".contact-copy-feedback") : null;
+            const valueElement = button.closest(".contact-email-row, .contact-company-row")
+                ? button.closest(".contact-email-row, .contact-company-row").querySelector(".contact-email, .contact-company-value")
+                : null;
+            let resetTimeout = null;
+
+            const setState = (copied) => {
+                button.classList.toggle("is-copied", copied);
+                button.setAttribute("aria-pressed", copied ? "true" : "false");
+                if (feedback) {
+                    feedback.hidden = true;
+                }
+                if (valueElement) {
+                    if (copied) {
+                        if (!valueElement.dataset.copyOriginal) {
+                            valueElement.dataset.copyOriginal = valueElement.textContent;
+                        }
+                        valueElement.textContent = "Copied";
+                        valueElement.classList.add("contact-copy-flash");
+                    } else if (valueElement.dataset.copyOriginal) {
+                        valueElement.textContent = valueElement.dataset.copyOriginal;
+                        delete valueElement.dataset.copyOriginal;
+                        valueElement.classList.remove("contact-copy-flash");
+                    }
+                }
+                if (copied) {
+                    window.clearTimeout(resetTimeout);
+                    resetTimeout = window.setTimeout(() => setState(false), 1800);
+                }
+            };
+
+            const copyText = async () => {
+                try {
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        await navigator.clipboard.writeText(text);
+                        setState(true);
+                        return;
+                    }
+                } catch (err) {
+                    // fall through to legacy path
+                }
+
+                const textarea = document.createElement("textarea");
+                textarea.value = text;
+                textarea.setAttribute("readonly", "");
+                textarea.style.position = "absolute";
+                textarea.style.left = "-9999px";
+                document.body.appendChild(textarea);
+                textarea.select();
+                try {
+                    document.execCommand("copy");
+                    setState(true);
+                } catch (err) {
+                    console.error("Copy failed", err);
+                } finally {
+                    document.body.removeChild(textarea);
+                }
+            };
+
+            setState(false);
+
+            button.addEventListener("click", (event) => {
+                event.preventDefault();
+                copyText();
+            });
+        });
+    }
 });

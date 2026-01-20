@@ -21,8 +21,12 @@ rausr is the data controller responsible for your personal data. If you have any
 
 The data controller responsible for your personal data is:
 
-**rausr**  
-Phone: +421 910 160 251  
+**rausr s. r. o.**  
+Čiližská street 5,  
+Bratislava 821 07,  
+Slovakia  
+Company ID: 57401322  
+Tax ID: 2122704980  
 Email: hello@rausr.com
 
 If you have any questions or concerns regarding your personal data or this Privacy Policy, please contact us using the above details.
@@ -85,6 +89,21 @@ When you submit a contact form on our website, we collect the information you pr
 
 We use third-party services such as Zapier to automate workflows and improve our services. These providers may process your data on our behalf but are contractually obligated to protect your information and use it only for specified purposes.
 
+## Images & Content Ownership
+
+### Articles (AI-Generated Imagery)
+
+- Some images used in the Articles section are generated with the help of AI tools (including ChatGPT-related tooling and/or other generative AI systems).  
+- Where AI is used, we intend these images to be original outputs created for rausr and not to knowingly copy third‑party copyrighted works.  
+- Because generative systems can produce outputs that may be similar to existing works, we do not guarantee that AI‑assisted outputs are entirely free from third‑party rights.  
+- If you believe any image in the Articles section infringes your rights (copyright, trademark, or other), please contact us at `hello@rausr.com` with the relevant URL(s) and supporting information. We will review and, where appropriate, remove or replace the content.
+
+### Works (Portfolio / Case Studies)
+
+- Images and visual materials shown in the Works section may include: (a) rausr-owned work, (b) work created by rausr for clients, and/or (c) client/partner-provided assets used with permission.  
+- Unless explicitly stated otherwise, all copyrights and other intellectual property rights remain with their respective owners (rausr, our clients, or our partners).  
+- Works are displayed for portfolio and informational purposes. If you are a rights holder and believe a material is displayed without appropriate authorization, please contact us at `hello@rausr.com` and we will address the request.
+
 ### Data Sharing & Transfers
 
 We do not sell or rent your personal data to third parties. We may share your data with trusted service providers who assist us in operating our business, subject to confidentiality agreements.
@@ -122,10 +141,10 @@ If you are located in the European Union and believe that we have not addressed 
 
 ## How to Contact Us
 
-If you have any questions or concerns about this Privacy Policy or our data practices, please contact:
+If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
 
-- Phone: +421 910 160 251  
 - Email: hello@rausr.com  
+- Socials: [Instagram](https://instagram.com/rausr_com), [Facebook](https://www.facebook.com/rausrdotcom/), [LinkedIn](https://www.linkedin.com/company/rausr/), [Pinterest](https://www.pinterest.com/rausr_com/), [WhatsApp](https://wa.me/421910160251)  
 
 ### Updates to This Policy
 
