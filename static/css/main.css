@@ -1943,7 +1943,7 @@ footer .nav-item {
 .contact-card-container {
     max-width: 960px;
     margin: 2rem auto 3rem auto;
-    padding: 1rem 1.5rem 0 1.5rem;
+    padding: 2.5rem 2rem 3rem 2rem;
 }
 
 .contact-card {
@@ -1998,6 +1998,10 @@ footer .nav-item {
     color: #1f1c29;
 }
 
+.contact-copy-flash {
+    color: color(display-p3 0.420 0.270 1.000) !important;
+}
+
 .contact-copy-button {
     width: 52px;
     height: 52px;
@@ -2032,10 +2036,21 @@ footer .nav-item {
     transition: filter 150ms ease, transform 150ms ease;
 }
 
-.contact-copy-button:hover .copy-icon,
-.contact-copy-button:focus .copy-icon,
-.contact-copy-button.is-copied .copy-icon {
-    filter: brightness(0) saturate(100%) invert(21%) sepia(91%) saturate(1471%) hue-rotate(224deg) brightness(90%) contrast(91%);
+.copy-icon--copied {
+    display: none;
+}
+
+.contact-copy-button.is-copied .copy-icon--default {
+    display: none;
+}
+
+.contact-copy-button.is-copied .copy-icon--copied {
+    display: block;
+}
+
+.contact-copy-button:hover .copy-icon--default,
+.contact-copy-button:focus .copy-icon--default {
+    filter: brightness(0) saturate(100%) invert(19%) sepia(73%) saturate(2301%) hue-rotate(230deg) brightness(92%) contrast(95%);
 }
 
 .contact-copy-feedback {
@@ -2184,6 +2199,8 @@ footer .nav-item {
 .contact-company-label--empty {
     min-height: 1rem;
 }
+
+
 
 .contact-copy-button--small {
     width: 20px;
@@ -3392,7 +3409,7 @@ footer .nav-item {
     /* Mobile version - Contact */
 
     .contact-form {
-        padding: 3rem 0.75rem 5.6rem 0.75rem;
+        padding: 3rem 0.75rem 3rem 0.75rem;
     }
 
     .form-container {
@@ -3400,11 +3417,12 @@ footer .nav-item {
     }
 
     .contact-card-container {
-        padding: 0 1rem;
+        padding: 2rem 1.25rem 2.5rem 1.25rem;
+        margin-bottom: 2rem;
     }
 
     .contact-card {
-        gap: 3.5rem;
+        gap: 4.5rem;
     }
 
     .contact-email {
@@ -3433,6 +3451,7 @@ footer .nav-item {
 
     .contact-or-divider {
         gap: 1.25rem;
+        width: 100% !important;
     }
 
     .contact-or-text {
@@ -3446,12 +3465,20 @@ footer .nav-item {
 
     .contact-company-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        padding: 0 0.5rem;
+        gap: 4rem;
+        margin-bottom: 4rem;
     }
 
     .contact-company-row {
         grid-template-columns: 130px minmax(0, 1fr) auto;
-        column-gap: 0.75rem;
+        column-gap: 0rem;
+    }
+
+    .contact-copy-button--small {
+        width: 20px;
+        height: 20px;
+        --copy-icon-size: 12px;
     }
 
     .contact-company-label,

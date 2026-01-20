@@ -715,13 +715,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const wrapper = button.closest("[data-copy-wrapper]") || button.closest(".contact-copy-group");
             const feedback = wrapper ? wrapper.querySelector(".contact-copy-feedback") : null;
+            const valueElement = button.closest(".contact-email-row, .contact-company-row")
+                ? button.closest(".contact-email-row, .contact-company-row").querySelector(".contact-email, .contact-company-value")
+                : null;
             let resetTimeout = null;
 
             const setState = (copied) => {
                 button.classList.toggle("is-copied", copied);
                 button.setAttribute("aria-pressed", copied ? "true" : "false");
                 if (feedback) {
-                    feedback.hidden = !copied;
+                    feedback.hidden = true;
+                }
+                if (valueElement) {
+                    if (copied) {
+                        if (!valueElement.dataset.copyOriginal) {
+                            valueElement.dataset.copyOriginal = valueElement.textContent;
+                        }
+                        valueElement.textContent = "Copied";
+                        valueElement.classList.add("contact-copy-flash");
+                    } else if (valueElement.dataset.copyOriginal) {
+                        valueElement.textContent = valueElement.dataset.copyOriginal;
+                        delete valueElement.dataset.copyOriginal;
+                        valueElement.classList.remove("contact-copy-flash");
+                    }
                 }
                 if (copied) {
                     window.clearTimeout(resetTimeout);
