@@ -1796,6 +1796,16 @@ footer .nav-item {
         flex-direction: column;
         text-align: center;
     }
+
+    .contact-or-divider {
+        width: 100% !important;
+        padding: 0 1.25rem;
+    }
+
+    .contact-card-container {
+        margin: 2rem auto 2rem auto !important;
+        padding: 2.5rem 2rem 2rem 2rem !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -3992,7 +4002,6 @@ footer .nav-item {
     padding: 2.5rem 2rem;
     margin: 0 1.5rem 2rem;
     gap: 2rem;
-    flex-wrap: wrap;
   }
 
   .header-content {
@@ -4079,6 +4088,14 @@ footer .nav-item {
     max-width: 100%;
     margin: 0 auto;
   }
+
+  .contact-company-grid {
+    gap: 0;
+  }
+
+  .contact-company-row {
+    grid-template-columns: 110px minmax(0, 0.70fr) auto;
+    column-gap: 0 !important;
 }
 
 /* Tablet only: match iPhone-style collapsed menu */
