@@ -94,6 +94,7 @@ We use third-party services such as Zapier to automate workflows and improve our
 ### Articles (AI-Generated Imagery)
 
 - Some images used in the Articles section are generated with the help of AI tools (including ChatGPT-related tooling and/or other generative AI systems).  
+- These images are created from **original prompts and creative direction authored by us**, based on our own ideas, texts, thinking, and opinions. We claim ownership of the prompts and—**to the fullest extent permitted by applicable law and the relevant AI tool terms**—the resulting images published on rausr.  
 - Where AI is used, we intend these images to be original outputs created for rausr and not to knowingly copy third‑party copyrighted works.  
 - Because generative systems can produce outputs that may be similar to existing works, we do not guarantee that AI‑assisted outputs are entirely free from third‑party rights.  
 - If you believe any image in the Articles section infringes your rights (copyright, trademark, or other), please contact us at `hello@rausr.com` with the relevant URL(s) and supporting information. We will review and, where appropriate, remove or replace the content.
