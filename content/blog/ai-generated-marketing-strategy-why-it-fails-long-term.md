@@ -6,13 +6,13 @@ tags: ["ai", "marketing", "reports", "trends"]
 author: "Jakub"
 draft: false
 header_image: /images/articles/ai-generated-marketing-strategy/ai-generated-marketing-strategy-1.jpg
-preview_image: /images/articles/ai-generated-marketing-strategy/ai-generated-marketing-strategy-8.jpg
+preview_image: /images/articles/ai-generated-marketing-strategy/ai-generated-marketing-strategy-9.jpg
 source:
-  - "Book: Good Strategy / Bad Strategy (Richard Rumelt) — choosing, focus, tradeoffs"
-  - "Book: The Marketing Metrics Audit (various) — measurement sanity checks"
-  - "Book: How Brands Grow (Byron Sharp) — category growth and mental availability"
-  - "Concept: Goodhart’s law — when a measure becomes a target"
-  - "Practice: Research triangulation — mix AI with primary sources and real data"
+  - "Book: Good Strategy / Bad Strategy by Richard Rumelt"
+  - "Book: The Marketing Metrics Audit by various authors"
+  - "Book: How Brands Grow by Byron Sharp"
+  - "Text: Goodhart’s law — when a measure becomes a target"
+  - "Study: Research triangulation — mix AI with primary sources and real data"
 seotags:
   - ai marketing strategy
   - ai generated marketing plan
@@ -44,6 +44,7 @@ This article explains why AI-generated strategies so often contain nonsense (and
 {{< halves >}}
 {{< halfimg src="/images/articles/ai-generated-marketing-strategy/ai-generated-marketing-strategy-2.jpg" alt="Marketing plan draft on screen with highlighted assumptions and risk notes." >}}
 {{< /halves >}}
+
 
 ### Why AI strategy is often “SEO-shaped”
 #### The internet taught it to sound right
@@ -82,9 +83,9 @@ Case studies on the web frequently suffer from:
 
 AI doesn’t “know” which case studies are real experiments and which are marketing theater — it treats them as equally learnable patterns. That’s why AI can confidently recommend the wrong path: it’s repeating narratives, not verifying causal links.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/ai-generated-marketing-strategy/ai-generated-marketing-strategy-4.jpg" alt="Team debating a growth plan while reviewing evidence and customer data." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/ai-generated-marketing-strategy/ai-generated-marketing-strategy-4.jpg" alt="Team debating a growth plan while reviewing evidence and customer data." >}}
+
 
 
 ### The common nonsense patterns to watch for
@@ -151,9 +152,9 @@ Try: “Ask me 25 questions you need answered to build a defensible strategy. Gr
 
 Then answer only what you can back with evidence.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/ai-generated-marketing-strategy/ai-generated-marketing-strategy-6.jpg" alt="" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/ai-generated-marketing-strategy/ai-generated-marketing-strategy-6.jpg" alt="" >}}
+
 
 
 #### Step 5) Turn “strategy” into falsifiable hypotheses
