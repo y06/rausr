@@ -208,6 +208,11 @@ If a strategy can’t explain what it will *not* do — and how it will detect t
 {{< /quote >}}
 
 
+{{< halves >}}
+{{< halfimg src="/images/articles/ai-generated-marketing-strategy/ai-generated-marketing-strategy-8.jpg" alt="" >}}
+{{< /halves >}}
+
+
 ### A quick checklist before you approve any AI strategy
 
 - Does it name constraints, tradeoffs, and exclusions?
