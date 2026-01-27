@@ -13,7 +13,7 @@ sections:
     label: "Identity — logo and freshness detail"
   - image: "/images/natunatu-bio-grown-food-basics-company/natunatu-bio-grown-food-basics-company-2.jpg"
     label: "Color structure — shining green and bio feel"
-  - image: "/images/natunatu-bio-grown-food-basics-company/natunatu-bio-grown-food-basics-company-7.png"
+  - image: "/images/natunatu-bio-grown-food-basics-company/natunatu-bio-grown-food-basics-company-7.jpg"
     label: "Responsive — composition and readability check"
     subimages:
       - image: "/images/natunatu-bio-grown-food-basics-company/natunatu-bio-grown-food-basics-company-3.jpg"
