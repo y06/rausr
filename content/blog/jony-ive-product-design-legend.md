@@ -27,11 +27,13 @@ source:
 ---
 
 ## Introduction
-#### The quiet designer who changed what “a product” feels like
+#### The quiet designer who redefined what “a product” feels like
 
 If you grew up in the last twenty years, chances are you learned what “modern” looks like from one place: Apple hardware.
 
-But Apple’s “modern” wasn’t just a style trend. It was a design culture — and Jony Ive was one of its key architects. What’s interesting is that his influence didn’t begin with a blockbuster product. It started with craft, frustration, and a unique moment in Apple’s history when the company had almost nothing to lose.
+But Apple’s “modern” wasn’t just a style trend. It was a design culture — and Jony Ive was one of its chief architects. What’s fascinating is that his influence didn’t start with a blockbuster product. It began with craft, frustration, and a unique moment in Apple’s history when the company had almost nothing to lose.
+
+If you enjoy Apple design history beyond hardware, you’ll appreciate our deep dive on macOS identity: [Design Ups & Downs of Apple macOS: The Signature That Survived Every Redesign](/blog/design-ups-and-downs-of-apple-macos/).
 
 {{< quote >}}
 Great product design is rarely about new decoration. It’s about new standards.
@@ -46,7 +48,7 @@ Great product design is rarely about new decoration. It’s about new standards.
 ### Early years
 #### Craft first, aesthetics later
 
-Ive’s early story isn’t about some innate genius who always knew his path. It’s more down-to-earth: tools, materials, and a deep respect for making things well.
+Ive’s early story isn’t about innate genius or a predetermined path. It’s more grounded: tools, materials, and a deep respect for making things well.
 
 From profiles and interviews, a few themes stand out early on:
 - a strong pull toward physical craft (how objects are made, not just how they look)
@@ -57,9 +59,9 @@ From profiles and interviews, a few themes stand out early on:
 One often overlooked benefit of industrial design education: it trains you to fail cheaply. Foam models, tape, rough prototypes — fast learning before committing to a “perfect” solution.
 {{< /interest >}}
 
-{{< halves >}}
-{{< halfimg src="/images/articles/jony-ive-product-design-legend/jony-ive-product-design-legend-3.jpg" alt="Early years: hands-on prototyping and material exploration in industrial design" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/jony-ive-product-design-legend/jony-ive-product-design-legend-3.jpg" alt="Early years: hands-on prototyping and material exploration in industrial design" >}}
+
 
 
 ### Before Apple
@@ -72,7 +74,7 @@ Before Apple, Ive worked at a London design consultancy called Tangerine. This e
 
 It’s the opposite of internet-era design: not about vibes or mockups — but hard tradeoffs.
 
-In several accounts, Apple appears in this phase too: the company worked with external designers in the early 1990s, and Ive’s work crossed paths with Apple projects before he officially joined.
+In several accounts, Apple appears in this phase too: the company worked with external designers in the early 1990s, and Ive’s work intersected with Apple projects before he officially joined.
 
 {{< halves >}}
 {{< halfimg src="/images/articles/jony-ive-product-design-legend/jony-ive-product-design-legend-4.jpg" alt="Design teams work through constraints: prototypes, reviews, and tradeoffs" >}}
@@ -82,22 +84,22 @@ In several accounts, Apple appears in this phase too: the company worked with ex
 ### The first Apple years (1992–1997)
 #### He didn’t arrive as a star — he joined at a low point
 
-Ive came to Apple in 1992. The Apple of that time was very different from today: messy product lines, inconsistent choices, and plenty of internal turmoil.
+Ive joined Apple in 1992. The Apple of that time was very different from today: messy product lines, inconsistent choices, and plenty of internal chaos.
 
 One of his early projects is often cited as work on Newton-era hardware — especially the MessagePad 110 generation. The device itself wasn’t a mass-market hit, but the work was crucial: it pushed a young designer to face the hard realities of product design:
 - industrial design isn’t separate from engineering
 - manufacturing is part of the design process
 - “almost right” becomes costly at scale
 
-There’s also a telling detail from this period about his temperament: when he cared, he cared *too much*. He was known for staying close to manufacturing to make sure the object matched the original intent — the kind of dedication that goes beyond treating design as mere “surface”.
+There’s also a telling detail from this period about his temperament: when he cared, he cared *too much*. He was known for staying close to manufacturing to ensure the object matched the original intent — the kind of dedication that goes beyond treating design as mere “surface”.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/jony-ive-product-design-legend/jony-ive-product-design-legend-5.jpg" alt="Early Apple era: the interface and object had to evolve together" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/jony-ive-product-design-legend/jony-ive-product-design-legend-5.jpg" alt="Early Apple era: the interface and object had to evolve together" >}}
+
 
 
 ### Why Jobs chose him
-#### Taste, trust, and a re-set of Apple’s priorities
+#### Taste, trust, and a reset of Apple’s priorities
 
 When Steve Jobs returned to Apple, he needed something very specific: a person who could translate a new Apple into objects people instantly understood.
 
@@ -123,7 +125,7 @@ This quote is often repeated — but the key point is practical: Jobs trusted Iv
 ### The iconic products (and why they’re iconic)
 #### A short timeline of “objects that rewired expectations”
 
-You don’t have to be an Apple fan to admit this list is historically significant:
+You don’t have to be an Apple fan to recognize this list as historically significant:
 - **iMac G3 (1998):** made computers feel friendly, physical, and intentional again.
 - **iPod (2001):** a masterclass in *one job done obsessively well*.
 - **iPhone (2007):** changed the default shape of a phone (and therefore the software world).
@@ -142,9 +144,9 @@ The shared DNA is:
 - an obsession with material honesty (what is this object really made of?)
 - a belief that user experience includes everything around the product, not just the product itself
 
-{{< halves >}}
-{{< halfimg src="/images/articles/jony-ive-product-design-legend/jony-ive-product-design-legend-7.jpg" alt="Minimal forms and materials: the aesthetic outcome of a strict design process" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/jony-ive-product-design-legend/jony-ive-product-design-legend-7.jpg" alt="Minimal forms and materials: the aesthetic outcome of a strict design process" >}}
+
 
 
 ### After Apple: LoveFrom → Airbnb → OpenAI
@@ -154,15 +156,15 @@ In 2019, Ive left Apple to start LoveFrom, with Apple as an early client and the
 
 One notable partnership: Airbnb announced a multi-year relationship with LoveFrom to help design the next generation of its products and services.
 
-More recently, Ive’s “what’s next” has moved toward AI-era hardware: OpenAI acquired Ive’s hardware startup (io) in 2025, with Ive and LoveFrom taking on design responsibilities across OpenAI while remaining independent.
+More recently, Ive’s “what’s next” has shifted toward AI-era hardware: OpenAI acquired Ive’s hardware startup (io) in 2025, with Ive and LoveFrom taking on design responsibilities across OpenAI while remaining independent.
 
 {{< interest >}}
 Whether you’re a fan of AI or not, this is a very “Ive” problem: current computing devices weren’t designed for this kind of interaction. If the interface changes, the object probably needs to change too.
 {{< /interest >}}
 
-{{< halves >}}
-{{< halfimg src="/images/articles/jony-ive-product-design-legend/jony-ive-product-design-legend-8.jpg" alt="A new era: product design shifts toward AI-first interaction models" >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/jony-ive-product-design-legend/jony-ive-product-design-legend-8.jpg" alt="A new era: product design shifts toward AI-first interaction models" >}}
+
 
 
 ### What’s behind the success
