@@ -46,9 +46,9 @@ And sometimes the best move is to stop trying — and go to sleep with “opened
 The most dangerous myth about creativity is that it should be fast.
 {{< /quote >}}
 
-{{< halves >}}
-{{< halfimg src="/images/articles/creativity-is-a-paintless-process/creativity-is-a-paintless-process-2.jpg" alt="Creativity often has no visible output while ideas form." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/creativity-is-a-paintless-process/creativity-is-a-paintless-process-2.jpg" alt="Creativity often has no visible output while ideas form." >}}
+
 
 
 ### Focus is the fuel
@@ -72,9 +72,9 @@ If you want more on where good ideas tend to appear *outside the desk*, see [Whe
 If you want an honest measure of creative productivity, track uninterrupted time blocks, not hours logged.
 {{< /interest >}}
 
-{{< halves >}}
-{{< halfimg src="/images/articles/creativity-is-a-paintless-process/creativity-is-a-paintless-process-3.jpg" alt="Deep focus protects the mental state needed for creative work." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/creativity-is-a-paintless-process/creativity-is-a-paintless-process-3.jpg" alt="Deep focus protects the mental state needed for creative work." >}}
+
 
 
 ### The hidden stages: why creativity rarely starts with “illumination”
@@ -169,9 +169,9 @@ In practice, “go to sleep with opened eyes” means you stop forcing the solut
 
 If what you’re feeling is “I used to be creative, now I’m empty,” this may help: [Is Creativity Endless, or Can Designers Run Out of it?](/blog/is-creativity-endless-or-can-it-run-out/).
 
-{{< halves >}}
-{{< halfimg src="/images/articles/creativity-is-a-paintless-process/creativity-is-a-paintless-process-6.jpg" alt="Incubation and sleep help the brain recombine ideas and reduce fixation." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/creativity-is-a-paintless-process/creativity-is-a-paintless-process-6.jpg" alt="Incubation and sleep help the brain recombine ideas and reduce fixation." >}}
+
 
 
 ### A procedure that makes creativity repeatable
@@ -223,9 +223,9 @@ Verification is not only internal polish — it’s reality-testing:
 - show five people the design for 3 seconds, ask what they remember
 - print it small and look from distance
 
-{{< halves >}}
-{{< halfimg src="/images/articles/creativity-is-a-paintless-process/creativity-is-a-paintless-process-7.jpg" alt="A repeatable creative procedure: constraints, material, drafts, critique, and testing." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/creativity-is-a-paintless-process/creativity-is-a-paintless-process-7.jpg" alt="A repeatable creative procedure: constraints, material, drafts, critique, and testing." >}}
+
 
 
 ### Legendary stories
