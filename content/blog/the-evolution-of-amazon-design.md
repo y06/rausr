@@ -61,7 +61,7 @@ Amazon didn’t win early by looking premium. It won by looking **reliable enoug
 {{< /interest >}}
 
 {{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-3.jpg" alt="" >}}
+{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-3.jpg" alt="Early Amazon naming shift from “Cadabra” to “Amazon,” shown as printed logos on a desk." >}}
 {{< /halves >}}
 
 
@@ -137,7 +137,7 @@ Visually, it still looks plain — but structurally it’s a constantly evolving
 
 
 {{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-5.jpg" alt="" >}}
+{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-5.jpg" alt="Timeline of Amazon’s interface from the late 1990s to the 2020s, from early web pages to the modern mobile app." >}}
 {{< /halves >}}
 
 
@@ -181,7 +181,7 @@ Under-discussed constraint: an interface that serves billions of requests learns
 {{< /interest >}}
 
 {{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-6.jpg" alt="" >}}
+{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-6.jpg" alt="Amazon’s dense, comparison-first shopping UI on desktop with multiple product options and filters." >}}
 {{< /halves >}}
 
 
@@ -211,7 +211,7 @@ There’s a real line between:
 - and **manipulative pressure** (make leaving feel like a mistake)
 
 {{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-7.jpg" alt="" >}}
+{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-7.jpg" alt="Amazon cart shown as a persistent panel and checkout prompt layered over browsing." >}}
 {{< /halves >}}
 
 
@@ -243,7 +243,7 @@ The result is a UI that can feel “assembled.”
 Because it is — from what wins.
 
 {{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-8.jpg" alt="" >}}
+{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-8.jpg" alt="Amazon’s experiment-driven culture, shown as A/B interface variants alongside a PR/FAQ-style internal document." >}}
 {{< /halves >}}
 
 
@@ -336,7 +336,7 @@ Amazon’s next design era won’t be a redesign. It will be a *standardization*
 - The smile logo is one of the rare marks that works equally well as: identity, packaging symbol, and app icon.
 
 {{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-10.jpg" alt="" >}}
+{{< halfimg src="/images/articles/the-evolution-of-amazon-design/the-evolution-of-amazon-design-10.jpg" alt="Amazon’s smile logo across shipping boxes and the mobile app, connecting packaging with the buying experience." >}}
 {{< /halves >}}
 
 
