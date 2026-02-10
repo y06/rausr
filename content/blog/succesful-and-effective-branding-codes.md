@@ -2,7 +2,7 @@
 title: "Successful Branding Codes: Target First, Aesthetics Second"
 description: "Why effective branding codes start with who you target — and how packaging, environments, and social context make your brand feel \"right\" in the real world."
 date: 2025-12-02
-tags: ["branding", "marketing", "product design"]
+tags: ["branding", "marketing", "product design", "packaging design"]
 seotags: [
   "branding codes",
   "distinctive brand assets",
