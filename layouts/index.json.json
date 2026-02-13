@@ -1,4 +1,9 @@
 {{- $pages := where .Site.RegularPages "Section" "in" (slice "blog" "works") -}}
+{{- $blogAsc := sort (where .Site.RegularPages "Section" "blog") "Date" "asc" -}}
+{{- $articleNumberByURL := dict -}}
+{{- range $i, $pg := $blogAsc -}}
+  {{- $articleNumberByURL = merge $articleNumberByURL (dict $pg.RelPermalink (add $i 1)) -}}
+{{- end -}}
 [
 {{- $comma := "" -}}
 {{- range $pages -}}
@@ -31,7 +36,43 @@
   {{- $thumb2JSON := $thumb2 | jsonify -}}
   {{- $thumbWebpJSON := $thumbWebp | jsonify -}}
   {{- $thumbWebp2JSON := $thumbWebp2 | jsonify -}}
+  {{- $articleNumber := 0 -}}
+  {{- if eq .Section "blog" -}}
+    {{- with index $articleNumberByURL .RelPermalink -}}
+      {{- $articleNumber = . -}}
+    {{- end -}}
+  {{- end -}}
+
   {{- $seoTags := .Params.seotags | default (slice) -}}
+  {{- if not (gt (len $seoTags) 0) -}}
+    {{- $seoScratch := newScratch -}}
+    {{- $seoScratch.Set "items" (slice) -}}
+    {{- with .Params.tags -}}
+      {{- range . -}}
+        {{- $clean := . | plainify | lower | replaceRE `\s+` " " | replaceRE `^\s+|\s+$` "" -}}
+        {{- if $clean -}}
+          {{- $seoScratch.Add "items" (slice $clean) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $titleTag := .Title | plainify | lower | replaceRE `\s+` " " | replaceRE `^\s+|\s+$` "" -}}
+    {{- if $titleTag -}}
+      {{- $seoScratch.Add "items" (slice $titleTag) -}}
+    {{- end -}}
+    {{- $descTag := (or .Description .Summary) | plainify | lower | replaceRE `\s+` " " | replaceRE `^\s+|\s+$` "" | truncate 120 -}}
+    {{- if $descTag -}}
+      {{- $seoScratch.Add "items" (slice $descTag) -}}
+    {{- end -}}
+    {{- $seoTags = $seoScratch.Get "items" | uniq -}}
+  {{- end -}}
+  {{- if and (eq .Section "blog") (gt $articleNumber 0) -}}
+    {{- $number := printf "%d" $articleNumber -}}
+    {{- $seoTags = $seoTags | append (printf "article %s" $number) -}}
+    {{- $seoTags = $seoTags | append (printf "article #%s" $number) -}}
+    {{- $seoTags = $seoTags | append (printf "article number %s" $number) -}}
+  {{- end -}}
+  {{- $seoTags = $seoTags | uniq -}}
+
   {{- $author := default "" (or .Params.author .Params.Author) -}}
   {{- $authorJSON := $author | jsonify -}}
   {{- $authorPhoto := default "/images/authors-pic-jakub.jpg" (or .Params.author_image .Params.authorImage) -}}
@@ -44,10 +85,13 @@
   {{- with $seoTags -}}
     {{- $scratch.Add "tags" . -}}
   {{- end -}}
+  {{- if and (eq .Section "blog") (gt $articleNumber 0) -}}
+    {{- $scratch.Add "tags" (slice (printf "article %d" $articleNumber) (printf "#%d" $articleNumber)) -}}
+  {{- end -}}
   {{- $allTags := $scratch.Get "tags" | uniq -}}
   {{- $tags := $allTags | jsonify -}}
   {{- $seoTagsJSON := $seoTags | jsonify -}}
-  {{- printf "%s{\"title\":%s,\"url\":%q,\"section\":%q,\"date\":%q,\"description\":%s,\"tags\":%s,\"seotags\":%s,\"author\":%s,\"author_image\":%s,\"image\":%s,\"image_thumb\":%s,\"image_thumb_2x\":%s,\"image_thumb_webp\":%s,\"image_thumb_webp_2x\":%s}" $comma $title .RelPermalink .Section (.Date.Format "2006-01-02") $desc $tags $seoTagsJSON $authorJSON $authorPhotoJSON $img $thumbJSON $thumb2JSON $thumbWebpJSON $thumbWebp2JSON -}}
+  {{- printf "%s{\"title\":%s,\"url\":%q,\"section\":%q,\"date\":%q,\"article_number\":%d,\"description\":%s,\"tags\":%s,\"seotags\":%s,\"author\":%s,\"author_image\":%s,\"image\":%s,\"image_thumb\":%s,\"image_thumb_2x\":%s,\"image_thumb_webp\":%s,\"image_thumb_webp_2x\":%s}" $comma $title .RelPermalink .Section (.Date.Format "2006-01-02") $articleNumber $desc $tags $seoTagsJSON $authorJSON $authorPhotoJSON $img $thumbJSON $thumb2JSON $thumbWebpJSON $thumbWebp2JSON -}}
   {{- $comma = ",\n" -}}
 {{- end -}}
 ]

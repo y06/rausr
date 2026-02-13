@@ -13,11 +13,14 @@
 {{/* Compute a stable index that continues across pages */}}
 {{ $index := .index | default 0 }}
 {{ $p := .paginator | default nil }}
+{{ $total := 0 }}
 {{ if $p }}
+  {{ $total = $p.TotalNumberOfElements }}
   {{ $index = add (mul (sub $p.PageNumber 1) $p.PageSize) $index }}
 {{ else }}
   {{/* Fallback: compute global index by sorting all blog posts desc and finding this page */}}
   {{ $allBlog := sort (where $page.Site.RegularPages "Section" "blog") "Date" "desc" }}
+  {{ $total = len $allBlog }}
   {{ $found := -1 }}
   {{ range $i, $pg := $allBlog }}
     {{ if eq $pg.RelPermalink $page.RelPermalink }}
@@ -27,6 +30,11 @@
   {{ if ge $found 0 }}
     {{ $index = $found }}
   {{ end }}
+{{ end }}
+{{/* Show oldest article as #1, newest as the highest number */}}
+{{ $displayNumber := add $index 1 }}
+{{ if gt $total 0 }}
+  {{ $displayNumber = sub $total $index }}
 {{ end }}
 
 {{ $page.Scratch.Set "link" $page.RelPermalink }}
@@ -41,7 +49,7 @@
 
   <div class="card30">
     <div class="card-badges">
-      <span class="card-number">{{ add $index 1 }}</span>
+      <span class="card-number">{{ $displayNumber }}</span>
       {{ if $hasSeries }}<span class="card-number card-badge-series" title="Series">✨</span>{{ end }}
     </div>
       <a href="{{ $link }}" class="">
@@ -90,7 +98,7 @@
 {{ else }}
 <div class="card20">
   <div class="card-badges">
-    <span class="card-number">{{ add $index 1 }}</span>
+    <span class="card-number">{{ $displayNumber }}</span>
     {{ if $hasSeries }}<span class="card-number card-badge-series" title="Series">✨</span>{{ end }}
   </div>
   <a href="{{ $link }}" class="">

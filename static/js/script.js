@@ -380,18 +380,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
+            const articleNumberMatch = trimmed.match(/^(?:article\s*#?\s*|#)?(\d+)$/i);
+            const exactArticleNumber = articleNumberMatch ? Number(articleNumberMatch[1]) : null;
             const needle = trimmed.toLowerCase();
-            const matches = searchData
-                .filter((item) => {
-                    const haystack = [
-                        item.title || "",
-                        item.description || "",
-                        Array.isArray(item.tags) ? item.tags.join(" ") : "",
-                        Array.isArray(item.seotags) ? item.seotags.join(" ") : ""
-                    ].join(" ").toLowerCase();
-                    return haystack.includes(needle);
-                })
-                .slice(0, 4);
+            const matches = exactArticleNumber !== null
+                ? searchData
+                    .filter((item) => item.section === "blog" && Number(item.article_number) === exactArticleNumber)
+                    .slice(0, 4)
+                : searchData
+                    .filter((item) => {
+                        const haystack = [
+                            item.title || "",
+                            item.description || "",
+                            Array.isArray(item.tags) ? item.tags.join(" ") : "",
+                            Array.isArray(item.seotags) ? item.seotags.join(" ") : "",
+                            item.article_number || ""
+                        ].join(" ").toLowerCase();
+                        return haystack.includes(needle);
+                    })
+                    .slice(0, 4);
 
             renderResults(matches, trimmed);
             dropdown.removeAttribute("hidden");

@@ -128,6 +128,11 @@
     return merged;
   };
 
+  const parseArticleNumberQuery = (query) => {
+    const match = String(query || '').trim().match(/^(?:article\s*#?\s*|#)?(\d+)$/i);
+    return match ? Number(match[1]) : null;
+  };
+
   const htmlEscape = (value) => String(value ?? '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -468,7 +473,12 @@
       return;
     }
 
-    const found = fuse.search(currentQuery);
+    const numericArticleQuery = parseArticleNumberQuery(currentQuery);
+    const found = numericArticleQuery !== null
+      ? data
+          .filter((item) => item.section === 'blog' && Number(item.article_number) === numericArticleQuery)
+          .map((item) => ({ item, score: 0 }))
+      : fuse.search(currentQuery);
     render(applyFilter(found));
   }
 
@@ -483,7 +493,8 @@
           { name: 'description', weight: 0.25 },
           { name: 'tags', weight: 0.15 },
           { name: 'seotags', weight: 0.1 },
-          { name: 'author', weight: 0.2 }
+          { name: 'author', weight: 0.2 },
+          { name: 'article_number', weight: 0.55 }
         ],
         threshold: 0.35,
         ignoreLocation: true,
