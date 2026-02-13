@@ -116,12 +116,20 @@
             {{ $title := replaceRE `(?i)^text:\s*` "" $item }}
             <span class="tag sources sources-text">📓 {{ $title }}</span>
           {{ else }}
+            {{ if gt (len (findRE `^\[[^\]]+\]\([^)]+\)$` $item)) 0 }}
+              {{ $label := replaceRE `^\[([^\]]+)\]\(([^)]+)\)$` "$1" $item }}
+              {{ $url := replaceRE `^\[([^\]]+)\]\(([^)]+)\)$` "$2" $item }}
+              <a class="tag sources" href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $label }}</a>
+            {{ else if or (hasPrefix (lower (trim $item " ")) "http://") (hasPrefix (lower (trim $item " ")) "https://") }}
             {{ $parsed := urls.Parse $item }}
             {{ $host := $item }}
             {{ if $parsed }}
               {{ $host = replace (replace $parsed.Host "www." "" ) ":" "" }}
             {{ end }}
             <a class="tag sources" href="{{ $item }}" target="_blank" rel="noopener noreferrer">{{ $host }}</a>
+            {{ else }}
+            <span class="tag sources">{{ $item }}</span>
+            {{ end }}
           {{ end }}
         {{ end }}
       </div>

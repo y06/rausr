@@ -2,7 +2,7 @@
 title: "UX&UI in the Early Days: Web Design in the 80s and 90s"
 description: "Before Figma, Sketch, or even CSS — how did designers approach UX and interface design on early websites? Tools, processes, and pioneers who shaped the web’s visual beginnings."
 date: 2025-10-01
-tags: ["ux-ui", "software", "history"]
+tags: ["ux-ui", "software", "history", "series"]
 author: "Jakub"
 draft: false
 preview_image: /images/articles/ux-and-webdesign-in-early-days/ux-and-webdesign-in-early-days-10.jpg
@@ -24,6 +24,10 @@ source: [
 ##### Before Prototypes and Grids
 
 In the early days of the internet, user experience wasn’t a defined discipline — but that didn’t mean it didn’t exist. Designers and developers still had to think about usability, hierarchy, and layout — just without the luxury of modern tools or standards.
+
+{{< interest >}}
+This is Part 1. Continue with Part 2: [UX&UI After the Early Days: Web Design from the Late 90s to 2010](/blog/ux-ui-webdesign-after-the-millennium/).
+{{< /interest >}}
 
 {{< quote >}}
 yes, www in medieval times... 
@@ -107,7 +111,7 @@ Design in the 90s was constrained by hardware and bandwidth. CRT monitors with r
 - **Java applets** were briefly used to deliver interactive content before JavaScript matured, although performance was clunky and they were eventually phased out.
 
 {{< halves >}}
-{{< halfimg src="/images/articles/ux-and-webdesign-in-early-days/ux-and-webdesign-in-early-days-9.jpg" alt="fun unknowns like - broesers couldn't center text" >}}
+{{< halfimg src="/images/articles/ux-and-webdesign-in-early-days/ux-and-webdesign-in-early-days-9.jpg" alt="fun unknowns like - browsers couldn't center text" >}}
 {{< /halves >}}
 
 ### 🌐 Legacy
