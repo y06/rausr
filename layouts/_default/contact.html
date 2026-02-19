@@ -125,20 +125,32 @@
                 </div>
             </div>
 
-            <div class="contact-company-row">
-                <div class="contact-company-label">Tax ID:</div>
-                <div class="contact-company-value">{{ $taxId }}</div>
-                <div class="contact-copy-group">
-                    <button class="contact-copy-button contact-copy-button--small" type="button" data-copy-target="{{ $taxId }}" aria-label="Copy {{ $taxId }}">
-                        <img src="/images/contact-svg/copy-before.svg" alt="" aria-hidden="true" class="copy-icon copy-icon--default" loading="lazy" decoding="async" />
-                        <img src="/images/contact-svg/copied.svg" alt="" aria-hidden="true" class="copy-icon copy-icon--copied" loading="lazy" decoding="async" />
-                    </button>
-                    <div class="contact-copy-feedback" aria-live="polite" hidden>Copied to clipboard</div>
-                </div>
-            </div>
+	            <div class="contact-company-row">
+	                <div class="contact-company-label">Tax ID:</div>
+	                <div class="contact-company-value">{{ $taxId }}</div>
+	                <div class="contact-copy-group">
+	                    <button class="contact-copy-button contact-copy-button--small" type="button" data-copy-target="{{ $taxId }}" aria-label="Copy {{ $taxId }}">
+	                        <img src="/images/contact-svg/copy-before.svg" alt="" aria-hidden="true" class="copy-icon copy-icon--default" loading="lazy" decoding="async" />
+	                        <img src="/images/contact-svg/copied.svg" alt="" aria-hidden="true" class="copy-icon copy-icon--copied" loading="lazy" decoding="async" />
+	                    </button>
+	                    <div class="contact-copy-feedback" aria-live="polite" hidden>Copied to clipboard</div>
+	                </div>
+	            </div>
+
+	            <div class="contact-company-row contact-company-row--spaced">
+	                <div class="contact-company-label">VAT ID:</div>
+	                <div class="contact-company-value">{{ $vatId }}</div>
+	                <div class="contact-copy-group">
+	                    <button class="contact-copy-button contact-copy-button--small" type="button" data-copy-target="{{ $vatId }}" aria-label="Copy {{ $vatId }}">
+	                        <img src="/images/contact-svg/copy-before.svg" alt="" aria-hidden="true" class="copy-icon copy-icon--default" loading="lazy" decoding="async" />
+	                        <img src="/images/contact-svg/copied.svg" alt="" aria-hidden="true" class="copy-icon copy-icon--copied" loading="lazy" decoding="async" />
+	                    </button>
+	                    <div class="contact-copy-feedback" aria-live="polite" hidden>Copied to clipboard</div>
+	                </div>
+	            </div>
 
 
-        </div>
+	        </div>
 
         <div class="contact-company-right">
             <div class="contact-company-row">
