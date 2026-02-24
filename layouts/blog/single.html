@@ -100,7 +100,19 @@
       <div class="section-tags"><div class="card20-meta card20-thanks">Sources:</div>
         {{ range . }}
           {{ $item := . }}
-          {{ if hasPrefix (lower $item) "study" }}
+          {{ $urls := findRE `https?://[^\s]+` $item }}
+          {{ $hasUrl := gt (len $urls) 0 }}
+          {{ $hasAuthorDash := gt (len (findRE `\s—\s` $item)) 0 }}
+          {{ if and $hasUrl $hasAuthorDash }}
+            {{ $url := index $urls 0 }}
+            {{ $parts := split $item " — " }}
+            {{ $author := index $parts 0 }}
+            {{ $after := index $parts 1 }}
+            {{ $titleRaw := replaceRE `\s*:?\s*https?://[^\s]+` "" $after }}
+            {{ $titleClean := replaceRE `\s*\([^)]*\)\s*$` "" $titleRaw }}
+            {{ $shortTitle := $titleClean | truncate 72 }}
+            <a class="tag sources" href="{{ $url }}" target="_blank" rel="noopener noreferrer">🌐 {{ $author }} — {{ $shortTitle }}</a>
+          {{ else if hasPrefix (lower $item) "study" }}
             {{ $title := $item }}
             <span class="tag sources sources-study">🎓 {{ $title }}</span>
           {{ else if hasPrefix (lower $item) "case" }}
