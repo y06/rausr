@@ -2,7 +2,7 @@
 title: "Stay Normal: Why Consistency Beats Trends in Graphic Design"
 description: "Trends can polish your feed, but they rarely build your voice. A research-style look at why staying consistent, drilling technical skill, and studying older print work makes you faster and better."
 author: "Jakub"
-date: 2026-03-10
+date: 2026-03-13
 preview_image: /images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-7.jpg
 header_image: /images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-1.jpg
 tags: ["philosophy", "graphic design", "reports", "trends"]
