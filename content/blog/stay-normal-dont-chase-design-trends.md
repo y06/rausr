@@ -3,7 +3,7 @@ title: "Stay Normal: Why Consistency Beats Trends in Graphic Design"
 description: "Trends can polish your feed, but they rarely build your voice. A research-style look at why staying consistent, drilling technical skill, and studying older print work makes you faster and better."
 author: "Jakub"
 date: 2026-03-10
-preview_image: /images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-6.jpg
+preview_image: /images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-7.jpg
 header_image: /images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-1.jpg
 tags: ["philosophy", "graphic design", "reports", "trends"]
 seotags:
@@ -52,7 +52,7 @@ If your taste is trained by whatever is currently loud, your output becomes depe
 {{< /interest >}}
 
 {{< halves >}}
-{{< halfimg src="/images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-1.jpg" alt="Trend-driven graphic design styles blending together." >}}
+{{< halfimg src="/images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-2.jpg" alt="Trend-driven graphic design styles blending together." >}}
 {{< /halves >}}
 
 
@@ -78,9 +78,9 @@ The same is true of **[Paul Rand](/search/?q=Paul+Rand)**. His logos, posters, a
 
 Even someone like **[Paula Scher](/search/?q=Paula+Scher)**, whose work is more expressive and loud, shows the same deeper pattern. Her typography changes in scale, tone, and context, but it still feels like it comes from one mind. The consistency is not in repeating one exact look. It is in repeating a way of thinking.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-2.jpg" alt="Famous designers with strong, recognizable visual language." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-3.jpg" alt="Famous designers with strong, recognizable visual language." >}}
+
 
 ### Technical Skill Is the Speed Multiplier
 
@@ -100,7 +100,7 @@ Print is especially useful because it exposes everything. If the hierarchy is wr
 That is why studying older work is not nostalgia. It is practical training. You are teaching your eye to notice composition that survives without tricks, typography that carries meaning, and systems that can do more than support a single trendy post.
 
 {{< halves >}}
-{{< halfimg src="/images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-3.jpg" alt="Print studies, grid sketches, and editorial structure." >}}
+{{< halfimg src="/images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-4.jpg" alt="Print studies, grid sketches, and editorial structure." >}}
 {{< /halves >}}
 
 ### When Style Changes Too Fast
@@ -115,9 +115,9 @@ This does not mean experimentation is wrong. It means rapid stylistic change com
 
 <p class="article-prelink">For the branding version of the same problem, read <a href="/blog/when-being-trendy-backfires/">When Being Trendy Backfires: The Hidden Risk of Over-Styled Branding</a>.</p>
 
-{{< halves >}}
-{{< halfimg src="/images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-4.jpg" alt="Experimental design styles that age unevenly over time." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-5.jpg" alt="Experimental design styles that age unevenly over time." >}}
+
 
 ### A Practical Drill
 #### Rebuild, Don’t Just “Get Inspired”
@@ -140,7 +140,7 @@ So the important question is simple: **what are you willing to keep practicing l
 That is where mastery starts.
 
 {{< halves >}}
-{{< halfimg src="/images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-5.jpg" alt="Long-term design growth through focus and repetition." >}}
+{{< halfimg src="/images/articles/stay-normal-dont-chase-design-trends/stay-normal-dont-chase-design-trends-6.jpg" alt="Long-term design growth through focus and repetition." >}}
 {{< /halves >}}
 
 ### Conclusion
