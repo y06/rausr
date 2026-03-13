@@ -18,7 +18,7 @@ seotags:
   - paula scher
   - neville brody
   - david carson
-draft: true
+draft: false
 source:
   - "Book: Josef Müller-Brockmann — Grid Systems in Graphic Design"
   - "Book: Jan Tschichold — The New Typography"
