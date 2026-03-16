@@ -19,6 +19,29 @@
 
     {{ partial "tag-list-home" . }}
 
+    {{ with .Params.what_sets_apart }}
+    <section class="about-apart">
+      <h2>{{ .title }}</h2>
+      <div class="about-apart-grid">
+        {{ range .cards }}
+        <article class="about-apart-card{{ if .highlight }} about-apart-card--highlight{{ end }}">
+          <h3>{{ .title }}</h3>
+          <p>{{ .text }}</p>
+        </article>
+        {{ end }}
+      </div>
+      {{ with .stats }}
+      <div class="about-apart-stats">
+        {{ range . }}
+        <div class="about-apart-stat">
+          <p class="about-apart-stat__value">{{ .value }}</p>
+          <p class="about-apart-stat__text">{{ .text }}</p>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
 
     <section class="about-tags-button-list">
       <h2>{{ .Params.TitleAboutDeliver }}</h2>
