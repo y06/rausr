@@ -1520,68 +1520,56 @@ footer .nav-item {
 .about-apart h2 {
   margin-bottom: 2.5rem;
   text-align: center !important;
-  font-size: clamp(2.125rem, 4vw, 3.375rem);
+  font-size: 2rem;
 }
 
 .about-apart-grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
   max-width: 1440px;
+  gap: 42px;
 }
 
 .about-apart-card {
-  grid-column: span 3;
-  min-height: 230px;
-  border: 1px solid color(display-p3 0.866 0.851 0.894);
+  width: 260px;
+  height: 170px;
+  border: 1px solid #A8A9D5;
   border-radius: 16px;
   background: #fff;
-  padding: 2.5rem 1.75rem;
+  padding: 1rem 0.95rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.about-apart-card:nth-child(n+5) {
-  grid-column: span 4;
+  box-sizing: border-box;
 }
 
 .about-apart-card h3 {
-  margin: 0 0 0.9rem 0;
+  margin: 0 0 0.8rem 0;
   text-align: center !important;
-  font-size: clamp(1.9rem, 2.5vw, 2.8rem);
-  line-height: 1.12 !important;
+  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600;
+  line-height: 1.06 !important;
 }
 
 .about-apart-card p {
   margin: 0;
-  max-width: 17ch;
+  max-width: 22ch;
   text-align: center !important;
-  font-size: clamp(1.125rem, 1.6vw, 2rem);
-  line-height: 1.35;
-  color: rgba(67, 65, 76, 0.95);
-}
-
-.about-apart-card--highlight {
-  background: linear-gradient(135deg, color(display-p3 0.451 0.333 1.000) 0%, color(display-p3 0.4078 0.2824 1.000) 100%);
-  border-color: transparent;
-  box-shadow: 0 12px 32px rgba(65, 41, 140, 0.25);
-}
-
-.about-apart-card--highlight h3 {
-  color: color(display-p3 0.831 1.000 0.808);
-}
-
-.about-apart-card--highlight p {
-  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #43414C;
 }
 
 .about-apart-stats {
-  margin: 4rem auto 0 auto;
-  max-width: 1060px;
-  background: color(display-p3 0.93 0.93 0.94);
+  margin: 6rem auto 0 auto;
+  max-width: 800px;
+  background: #EAEAEA;
   border-radius: 999px;
   padding: 3rem 3.5rem;
   display: grid;
@@ -1596,31 +1584,24 @@ footer .nav-item {
 .about-apart-stat__value {
   margin: 0 0 0.9rem 0;
   text-align: center !important;
-  font-family: 'Satoshi', sans-serif !important;
-  font-size: clamp(2.625rem, 4vw, 4.75rem);
+  font-family: 'Inter', sans-serif !important;
+  font-size: 2.75rem;
   line-height: 1;
   color: color(display-p3 0.4078 0.2824 1.000);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .about-apart-stat__text {
   margin: 0 auto;
   max-width: 14ch;
   text-align: center !important;
-  font-size: clamp(1.1rem, 1.5vw, 1.875rem);
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400;
   line-height: 1.35;
 }
 
 @media (max-width: 1100px) {
-  .about-apart-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .about-apart-card,
-  .about-apart-card:nth-child(n+5) {
-    grid-column: span 1;
-  }
-
   .about-apart-stats {
     border-radius: 40px;
     grid-template-columns: 1fr;
@@ -1641,17 +1622,6 @@ footer .nav-item {
 
   .about-apart h2 {
     margin-bottom: 1.8rem;
-  }
-
-  .about-apart-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .about-apart-card {
-    min-height: 190px;
-    padding: 1.8rem 1.25rem;
-    border-radius: 14px;
   }
 
   .about-apart-stats {

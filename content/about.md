@@ -13,7 +13,7 @@ what_sets_apart:
   title: "What sets us apart?"
   cards:
     - title: "Taste"
-      text: "Taste is our craft."
+      text: "We are chefs. Taste is our craft."
     - title: "Skills"
       text: "A lot of projects landed on our displays."
     - title: "Endurance"
@@ -23,8 +23,7 @@ what_sets_apart:
     - title: "Resilience"
       text: "We don't chase trends. We build what endures."
     - title: "Technicall"
-      text: "Let's deploy our ideas into the real world."
-      highlight: true
+      text: "Let's deploy our ideas <br>into the real world."
     - title: "Creativity"
       text: "Everyone has creativity. Is that enough?"
   stats:
