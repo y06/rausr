@@ -71,9 +71,9 @@ That team included **Tandy Trower** and **Mary Dieli**, and it immediately began
 
 For **Windows 3.0**, Microsoft Design also credits a collaboration with **[Susan Kare](/search/?q=Susan+Kare)** on iconography. That is historically important because it shows Microsoft consciously borrowing not only technical ideas from the GUI era, but also icon legibility from one of the people who helped define GUI icon language at Apple.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-microsoft-windows-design/the-evolution-of-microsoft-windows-design-3.jpg" alt="Windows and Apple design influence in the early GUI era." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-microsoft-windows-design/the-evolution-of-microsoft-windows-design-3.jpg" alt="Windows and Apple design influence in the early GUI era." >}}
+
 
 ### Was Microsoft in Apple’s shadow?
 #### If we try to read from the history, answer is: yes, early on, very much so
@@ -125,9 +125,9 @@ This is also where designers like **Bill Flora** become important. Microsoft Des
 
 In other words, Windows did not mature only by redesigning windows. It matured by learning how content, type, movement, and hierarchy should behave as one system.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-microsoft-windows-design/the-evolution-of-microsoft-windows-design-5.jpg" alt="Metro and Windows 8 as a bold visual break." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-microsoft-windows-design/the-evolution-of-microsoft-windows-design-5.jpg" alt="Metro and Windows 8 as a bold visual break." >}}
+
 
 ### The boldest break
 #### Metro and Windows 8 were the most radical visual redefinition Microsoft ever attempted
@@ -195,9 +195,9 @@ Even if the product rollout stumbled, Metro remains one of the few times a major
 
 Windows 11 was not a revolution in the old Windows 95 sense, but it was a strong emotional correction. Microsoft Design says the team ran **85+ research studies** and **tens of thousands of testing rounds**. The design direction focused on softness, reduced clutter, and a more human feel. That matters because Windows 11 was not trying to look futuristic in a loud way. It was trying to make the operating system feel less stressful.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-microsoft-windows-design/the-evolution-of-microsoft-windows-design-8.jpg" alt="Important designers and agencies in Windows history." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-microsoft-windows-design/the-evolution-of-microsoft-windows-design-8.jpg" alt="Important designers and agencies in Windows history." >}}
+
 
 ### Important designers and agencies in the Windows story
 #### The cast is larger than most people realize
@@ -260,9 +260,9 @@ Windows 11 already shows this. Softer corners, quieter surfaces, more breathing 
 
 That is probably the correct direction. Operating systems are now mature enough that visual confidence comes less from spectacle and more from trust.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-microsoft-windows-design/the-evolution-of-microsoft-windows-design-10.jpg" alt="The conclusion of Microsoft Windows design evolution." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-microsoft-windows-design/the-evolution-of-microsoft-windows-design-10.jpg" alt="The conclusion of Microsoft Windows design evolution." >}}
+
 
 ### Conclusion
 
