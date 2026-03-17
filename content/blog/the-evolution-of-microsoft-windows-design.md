@@ -15,7 +15,7 @@ seotags:
   - microsoft design history
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
-draft: true
+draft: false
 preview_image: /images/articles/the-evolution-of-microsoft-windows-design/the-evolution-of-microsoft-windows-design-11.jpg
 header_image: /images/articles/the-evolution-of-microsoft-windows-design/the-evolution-of-microsoft-windows-design-1.jpg
 source:
