@@ -33,4 +33,15 @@ what_sets_apart:
       text: "Years skilling in the industry"
     - value: "150+"
       text: "Projects & Recipes Served"
+kitchen_prepare:
+  title: "What our kitchen can prepare for you"
+  items:
+    - title: "Event Design"
+      text: "Our chefs can serve and prepare complete graphic designs for events such as exhibitions, congresses, receptions, presentation events, and similar occasions. In short, anywhere that requires top-notch craft, skill and high quality concentrated in every detail, with a strong focus on design logic and performance. From concept to final production, we combine visual clarity with practical experience to ensure that every element works in the real environment — attracting, guiding, and supporting the message."
+      tags:
+        - "3D Visualisation"
+        - "Typography"
+        - "DTP"
+        - "Exhibition Stands Design"
+        - "Print Design"
 ---

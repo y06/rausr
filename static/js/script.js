@@ -712,6 +712,89 @@ document.addEventListener("DOMContentLoaded", function () {
         evaluateNavbarState(true);
     }
 
+    const kitchenCards = document.querySelectorAll("[data-kitchen-card]");
+    if (kitchenCards.length) {
+        const getCollapsedHeight = (card) => {
+            const preview = card.querySelector("[data-kitchen-preview]");
+            if (!preview) {
+                return 72;
+            }
+            const previewStyles = window.getComputedStyle(preview);
+            const lineHeight = Number.parseFloat(previewStyles.lineHeight) || 24;
+            return Math.max(Math.round(lineHeight * 1.6), 60);
+        };
+
+        const setKitchenCardState = (card, expanded, animate = true) => {
+            const roller = card.querySelector("[data-kitchen-roller]");
+            const toggle = card.querySelector("[data-kitchen-toggle]");
+            const icon = card.querySelector("[data-kitchen-icon]");
+            const seeMore = card.querySelector("[data-kitchen-see-more]");
+            const title = (card.querySelector(".about-kitchen-card__head h3")?.textContent || "section").trim();
+            if (!roller) {
+                return;
+            }
+
+            const targetHeight = expanded ? roller.scrollHeight : getCollapsedHeight(card);
+            const applyExpandedState = () => {
+                card.classList.toggle("is-open", expanded);
+                card.classList.toggle("is-collapsed", !expanded);
+                if (toggle) {
+                    toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+                    toggle.setAttribute("aria-label", (expanded ? "Collapse " : "Expand ") + title);
+                }
+                if (icon) {
+                    icon.textContent = expanded ? "−" : "+";
+                }
+                if (seeMore) {
+                    seeMore.hidden = expanded;
+                }
+            };
+
+            if (!animate) {
+                const prevTransition = roller.style.transition;
+                roller.style.transition = "none";
+                applyExpandedState();
+                roller.style.maxHeight = targetHeight + "px";
+                roller.getBoundingClientRect();
+                roller.style.transition = prevTransition;
+                return;
+            }
+
+            roller.style.maxHeight = roller.getBoundingClientRect().height + "px";
+            applyExpandedState();
+            window.requestAnimationFrame(() => {
+                roller.style.maxHeight = targetHeight + "px";
+            });
+        };
+
+        kitchenCards.forEach((card) => {
+            const toggle = card.querySelector("[data-kitchen-toggle]");
+            const seeMore = card.querySelector("[data-kitchen-see-more]");
+
+            setKitchenCardState(card, true, false);
+
+            if (toggle) {
+                toggle.addEventListener("click", () => {
+                    const expanded = card.classList.contains("is-open");
+                    setKitchenCardState(card, !expanded, true);
+                });
+            }
+
+            if (seeMore) {
+                seeMore.addEventListener("click", () => {
+                    setKitchenCardState(card, true, true);
+                });
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            kitchenCards.forEach((card) => {
+                const expanded = card.classList.contains("is-open");
+                setKitchenCardState(card, expanded, false);
+            });
+        });
+    }
+
     const copyButtons = document.querySelectorAll("[data-copy-target]");
     if (copyButtons.length) {
         copyButtons.forEach((button) => {

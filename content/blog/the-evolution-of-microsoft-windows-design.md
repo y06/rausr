@@ -1,6 +1,6 @@
 ---
 title: "The Evolution of Microsoft Windows Design: From Engineer Screens to Calm Fluent Surfaces"
-description: "How Windows design evolved from colorful engineering-led interfaces into one of the world’s most influential operating-system languages: the first known designers, the Apple-shadow question, the biggest leaps forward, the missteps, and where Windows design is heading next."
+description: "How Windows design evolved from colorful engineering-led interfaces into one of the world’s most influential operating-system languages and where Windows design is heading next."
 date: 2026-03-16
 tags: ["series", "history", "ux-ui", "branding"]
 seotags:

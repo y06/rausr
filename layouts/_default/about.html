@@ -45,6 +45,35 @@
     </section>
     {{ end }}
 
+    {{ with .Params.kitchen_prepare }}
+    <section class="about-kitchen">
+      <h2>{{ .title }}</h2>
+      <div class="about-kitchen-list">
+        {{ range .items }}
+        <article class="about-kitchen-card is-open" data-kitchen-card>
+          <div class="about-kitchen-card__head">
+            <h3>{{ .title }}</h3>
+            <button class="about-kitchen-toggle" type="button" data-kitchen-toggle aria-expanded="true" aria-label="Collapse {{ .title }}">
+              <span aria-hidden="true" data-kitchen-icon>−</span>
+            </button>
+          </div>
+          <div class="about-kitchen-card__roller" data-kitchen-roller>
+            <p class="about-kitchen-card__text" data-kitchen-preview>{{ .text }}</p>
+            {{ with .tags }}
+            <ul class="about-kitchen-tags">
+              {{ range . }}
+              <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </div>
+          <button class="about-kitchen-see-more" type="button" data-kitchen-see-more>See more</button>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
     <section class="about-tags-button-list">
       <h2>{{ .Params.TitleAboutDeliver }}</h2>
       <ul class="tag-list">
