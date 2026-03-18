@@ -50,11 +50,15 @@
       <h2>{{ .title }}</h2>
       <div class="about-kitchen-list">
         {{ range .items }}
-        <article class="about-kitchen-card is-open" data-kitchen-card>
+        {{ $isOpen := true }}
+        {{ if isset . "expanded" }}
+          {{ $isOpen = .expanded }}
+        {{ end }}
+        <article class="about-kitchen-card{{ if $isOpen }} is-open{{ else }} is-collapsed{{ end }}" data-kitchen-card>
           <div class="about-kitchen-card__head">
             <h3>{{ .title }}</h3>
-            <button class="about-kitchen-toggle" type="button" data-kitchen-toggle aria-expanded="true" aria-label="Collapse {{ .title }}">
-              <span aria-hidden="true" data-kitchen-icon>−</span>
+            <button class="about-kitchen-toggle" type="button" data-kitchen-toggle aria-expanded="{{ if $isOpen }}true{{ else }}false{{ end }}" aria-label="{{ if $isOpen }}Collapse{{ else }}Expand{{ end }} {{ .title }}">
+              {{ partial "icons/kitchen-plus-minus.svg" . }}
             </button>
           </div>
           <div class="about-kitchen-card__roller" data-kitchen-roller>
@@ -62,33 +66,21 @@
             {{ with .tags }}
             <ul class="about-kitchen-tags">
               {{ range . }}
-              <li>{{ . }}</li>
+              {{ $tagLabel := . }}
+              {{ $tagTarget := . }}
+              {{ if eq (lower $tagLabel) "3d visualisation" }}
+                {{ $tagTarget = "3d-modeling" }}
+              {{ end }}
+              <li><a href="/tags/{{ urlize $tagTarget }}">{{ $tagLabel }}</a></li>
               {{ end }}
             </ul>
             {{ end }}
           </div>
-          <button class="about-kitchen-see-more" type="button" data-kitchen-see-more>See more</button>
         </article>
         {{ end }}
       </div>
     </section>
     {{ end }}
-
-    <section class="about-tags-button-list">
-      <h2>{{ .Params.TitleAboutDeliver }}</h2>
-      <ul class="tag-list">
-        {{ $allTags := slice }}
-        {{ range where .Site.RegularPages "Section" "works" }}
-          {{ range .Params.tags }}
-            {{ $allTags = $allTags | append . }}
-          {{ end }}
-        {{ end }}
-        {{ range $index, $tag := ($allTags | uniq | sort) }}
-          {{ $label := partial "tag-label.html" $tag }}
-          <li><a href="/tags/{{ urlize $tag }}" class="tag-link">{{ $label }}</a></li>
-        {{ end }}
-      </ul>
-    </section>
 
 </main>
 

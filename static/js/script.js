@@ -714,39 +714,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const kitchenCards = document.querySelectorAll("[data-kitchen-card]");
     if (kitchenCards.length) {
-        const getCollapsedHeight = (card) => {
-            const preview = card.querySelector("[data-kitchen-preview]");
-            if (!preview) {
-                return 72;
-            }
-            const previewStyles = window.getComputedStyle(preview);
-            const lineHeight = Number.parseFloat(previewStyles.lineHeight) || 24;
-            return Math.max(Math.round(lineHeight * 1.6), 60);
+        const collapseOtherKitchenCards = (activeCard, animate = true) => {
+            kitchenCards.forEach((candidate) => {
+                if (candidate === activeCard) {
+                    return;
+                }
+                if (candidate.classList.contains("is-open")) {
+                    setKitchenCardState(candidate, false, animate);
+                }
+            });
         };
 
         const setKitchenCardState = (card, expanded, animate = true) => {
             const roller = card.querySelector("[data-kitchen-roller]");
             const toggle = card.querySelector("[data-kitchen-toggle]");
-            const icon = card.querySelector("[data-kitchen-icon]");
-            const seeMore = card.querySelector("[data-kitchen-see-more]");
             const title = (card.querySelector(".about-kitchen-card__head h3")?.textContent || "section").trim();
             if (!roller) {
                 return;
             }
 
-            const targetHeight = expanded ? roller.scrollHeight : getCollapsedHeight(card);
+            const targetHeight = expanded ? roller.scrollHeight : 0;
             const applyExpandedState = () => {
                 card.classList.toggle("is-open", expanded);
                 card.classList.toggle("is-collapsed", !expanded);
                 if (toggle) {
                     toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
                     toggle.setAttribute("aria-label", (expanded ? "Collapse " : "Expand ") + title);
-                }
-                if (icon) {
-                    icon.textContent = expanded ? "−" : "+";
-                }
-                if (seeMore) {
-                    seeMore.hidden = expanded;
                 }
             };
 
@@ -769,23 +762,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
         kitchenCards.forEach((card) => {
             const toggle = card.querySelector("[data-kitchen-toggle]");
-            const seeMore = card.querySelector("[data-kitchen-see-more]");
 
-            setKitchenCardState(card, true, false);
+            const startsExpanded = card.classList.contains("is-open");
+            setKitchenCardState(card, startsExpanded, false);
 
             if (toggle) {
-                toggle.addEventListener("click", () => {
+                toggle.addEventListener("click", (event) => {
+                    event.stopPropagation();
                     const expanded = card.classList.contains("is-open");
-                    setKitchenCardState(card, !expanded, true);
+                    const shouldExpand = !expanded;
+                    if (shouldExpand) {
+                        collapseOtherKitchenCards(card, true);
+                    }
+                    setKitchenCardState(card, shouldExpand, true);
                 });
             }
 
-            if (seeMore) {
-                seeMore.addEventListener("click", () => {
-                    setKitchenCardState(card, true, true);
-                });
-            }
+            card.addEventListener("click", () => {
+                if (!card.classList.contains("is-collapsed")) {
+                    return;
+                }
+                collapseOtherKitchenCards(card, true);
+                setKitchenCardState(card, true, true);
+            });
         });
+
+        const initiallyOpenCards = Array.from(kitchenCards).filter((card) => card.classList.contains("is-open"));
+        if (initiallyOpenCards.length > 1) {
+            initiallyOpenCards.slice(1).forEach((card) => setKitchenCardState(card, false, false));
+        }
 
         window.addEventListener("resize", () => {
             kitchenCards.forEach((card) => {
