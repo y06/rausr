@@ -82,9 +82,89 @@
     </section>
     {{ end }}
 
-</main>
+    {{ with .Params.brands_support }}
+    <section class="about-brands">
+      <h2>{{ .title }}</h2>
+      <div class="about-brands__band">
+        {{ range .logos }}
+        <div class="about-brands__logo" tabindex="0">
+          <img src="{{ .src }}" alt="{{ .alt }}">
+          {{ with .tooltip }}
+          <span class="about-brands__tooltip">{{ . }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ with .subtitle }}
+      <p class="about-brands__subtitle">{{ . }}</p>
+      {{ end }}
+    </section>
+    {{ end }}
 
-{{ partial "contact-form" . }}
+    {{ with .Params.team_section }}
+    <section class="about-team">
+      <h2>{{ .title | safeHTML }}</h2>
+      <div class="about-team__cards">
+        {{ with .primary }}
+        <article class="about-team-card about-team-card--primary">
+          <div class="about-team-card__primary-grid">
+            <div class="about-team-card__primary-left">
+              <div class="about-team-card__person">
+                <img src="{{ .photo }}" alt="{{ .name }}">
+                <div class="about-team-card__person-meta">
+                  <h3>{{ .name }}</h3>
+                  <p>{{ .role }}</p>
+                  {{ with .social_links }}
+                  <ul class="about-team-card__socials">
+                    {{ range . }}
+                    <li>
+                      <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .label }}">
+                        <img src="{{ .icon_svg }}" alt="{{ .label }}">
+                      </a>
+                    </li>
+                    {{ end }}
+                  </ul>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+            <div class="about-team-card__primary-right">
+              <p class="about-team-card__quote">{{ .quote }}</p>
+              <p class="about-team-card__desc">{{ .description }}</p>
+            </div>
+          </div>
+          {{ if and .cta_label .cta_url }}
+          <a href="{{ .cta_url }}" class="about-team-card__cta">{{ .cta_label }}</a>
+          {{ end }}
+        </article>
+        {{ end }}
+
+        {{ with .secondary }}
+        <article class="about-team-card about-team-card--secondary">
+          <div class="about-team-card__secondary-grid">
+            <div class="about-team-card__secondary-left">
+              <img src="{{ .icon_svg }}" alt="{{ .title }}">
+              <div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .role }}</p>
+              </div>
+            </div>
+            <p class="about-team-card__quote about-team-card__quote--secondary">{{ .quote }}</p>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.team_cta }}
+    <section class="about-team-cta">
+      <h2>{{ .title }}</h2>
+      <a class="about-team-cta__button" href="{{ .button_url }}">{{ .button_label }}</a>
+    </section>
+    {{ end }}
+
+</main>
 
 {{ partial "subscribe.html" . }}
 
