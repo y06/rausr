@@ -19,26 +19,152 @@
 
     {{ partial "tag-list-home" . }}
 
-
-    <section class="about-tags-button-list">
-      <h2>{{ .Params.TitleAboutDeliver }}</h2>
-      <ul class="tag-list">
-        {{ $allTags := slice }}
-        {{ range where .Site.RegularPages "Section" "works" }}
-          {{ range .Params.tags }}
-            {{ $allTags = $allTags | append . }}
-          {{ end }}
+    {{ with .Params.what_sets_apart }}
+    <section class="about-apart">
+      <h2>{{ .title }}</h2>
+      <div class="about-apart-grid">
+        {{ range .cards }}
+        <article class="about-apart-card">
+          <h3>{{ .title }}</h3>
+          {{ $cardText := .text }}
+          {{ $cardText = replaceRE `^(.+?[.!?])\s+` `${1}<br>` $cardText }}
+          <p>{{ $cardText | safeHTML }}</p>
+        </article>
         {{ end }}
-        {{ range $index, $tag := ($allTags | uniq | sort) }}
-          {{ $label := partial "tag-label.html" $tag }}
-          <li><a href="/tags/{{ urlize $tag }}" class="tag-link">{{ $label }}</a></li>
+      </div>
+      {{ with .stats }}
+      <div class="about-apart-stats">
+        {{ range . }}
+        <div class="about-apart-stat">
+          <p class="about-apart-stat__value">{{ .value }}</p>
+          <p class="about-apart-stat__text">{{ .text }}</p>
+        </div>
         {{ end }}
-      </ul>
+      </div>
+      {{ end }}
     </section>
+    {{ end }}
+
+    {{ with .Params.kitchen_prepare }}
+    <section class="about-kitchen">
+      <h2>{{ .title }}</h2>
+      <div class="about-kitchen-list">
+        {{ range .items }}
+        {{ $isOpen := true }}
+        {{ if isset . "expanded" }}
+          {{ $isOpen = .expanded }}
+        {{ end }}
+        <article class="about-kitchen-card{{ if $isOpen }} is-open{{ else }} is-collapsed{{ end }}" data-kitchen-card>
+          <div class="about-kitchen-card__head">
+            <h3>{{ .title }}</h3>
+            <button class="about-kitchen-toggle" type="button" data-kitchen-toggle aria-expanded="{{ if $isOpen }}true{{ else }}false{{ end }}" aria-label="{{ if $isOpen }}Collapse{{ else }}Expand{{ end }} {{ .title }}">
+              {{ partial "icons/kitchen-plus-minus.svg" . }}
+            </button>
+          </div>
+          <div class="about-kitchen-card__roller" data-kitchen-roller>
+            <p class="about-kitchen-card__text" data-kitchen-preview>{{ .text }}</p>
+            {{ with .tags }}
+            <ul class="about-kitchen-tags">
+              {{ range . }}
+              {{ $tagLabel := . }}
+              {{ $tagTarget := . }}
+              {{ if eq (lower $tagLabel) "3d visualisation" }}
+                {{ $tagTarget = "3d-modeling" }}
+              {{ end }}
+              <li><a href="/tags/{{ urlize $tagTarget }}">{{ $tagLabel }}</a></li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.brands_support }}
+    <section class="about-brands">
+      <h2>{{ .title }}</h2>
+      <div class="about-brands__band">
+        {{ range .logos }}
+        <div class="about-brands__logo" tabindex="0">
+          <img src="{{ .src }}" alt="{{ .alt }}">
+          {{ with .tooltip }}
+          <span class="about-brands__tooltip">{{ . }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ with .subtitle }}
+      <p class="about-brands__subtitle">{{ . }}</p>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ with .Params.team_section }}
+    <section class="about-team">
+      <h2>{{ .title | safeHTML }}</h2>
+      <div class="about-team__cards">
+        {{ with .primary }}
+        <article class="about-team-card about-team-card--primary">
+          <div class="about-team-card__primary-grid">
+            <div class="about-team-card__primary-left">
+              <div class="about-team-card__person">
+                <img src="{{ .photo }}" alt="{{ .name }}">
+                <div class="about-team-card__person-meta">
+                  <h3>{{ .name }}</h3>
+                  <p>{{ .role }}</p>
+                  {{ with .social_links }}
+                  <ul class="about-team-card__socials">
+                    {{ range . }}
+                    <li>
+                      <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .label }}">
+                        <img src="{{ .icon_svg }}" alt="{{ .label }}">
+                      </a>
+                    </li>
+                    {{ end }}
+                  </ul>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+            <div class="about-team-card__primary-right">
+              <p class="about-team-card__quote">{{ .quote }}</p>
+              <p class="about-team-card__desc">{{ .description }}</p>
+            </div>
+          </div>
+          {{ if and .cta_label .cta_url }}
+          <a href="{{ .cta_url }}" class="about-team-card__cta">{{ .cta_label }}</a>
+          {{ end }}
+        </article>
+        {{ end }}
+
+        {{ with .secondary }}
+        <article class="about-team-card about-team-card--secondary">
+          <div class="about-team-card__secondary-grid">
+            <div class="about-team-card__secondary-left">
+              <img src="{{ .icon_svg }}" alt="{{ .title }}">
+              <div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .role }}</p>
+              </div>
+            </div>
+            <p class="about-team-card__quote about-team-card__quote--secondary">{{ .quote }}</p>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.team_cta }}
+    <section class="about-team-cta">
+      <h2>{{ .title }}</h2>
+      <a class="about-team-cta__button" href="{{ .button_url }}">{{ .button_label }}</a>
+    </section>
+    {{ end }}
 
 </main>
-
-{{ partial "contact-form" . }}
 
 {{ partial "subscribe.html" . }}
 

@@ -712,6 +712,94 @@ document.addEventListener("DOMContentLoaded", function () {
         evaluateNavbarState(true);
     }
 
+    const kitchenCards = document.querySelectorAll("[data-kitchen-card]");
+    if (kitchenCards.length) {
+        const collapseOtherKitchenCards = (activeCard, animate = true) => {
+            kitchenCards.forEach((candidate) => {
+                if (candidate === activeCard) {
+                    return;
+                }
+                if (candidate.classList.contains("is-open")) {
+                    setKitchenCardState(candidate, false, animate);
+                }
+            });
+        };
+
+        const setKitchenCardState = (card, expanded, animate = true) => {
+            const roller = card.querySelector("[data-kitchen-roller]");
+            const toggle = card.querySelector("[data-kitchen-toggle]");
+            const title = (card.querySelector(".about-kitchen-card__head h3")?.textContent || "section").trim();
+            if (!roller) {
+                return;
+            }
+
+            const targetHeight = expanded ? roller.scrollHeight : 0;
+            const applyExpandedState = () => {
+                card.classList.toggle("is-open", expanded);
+                card.classList.toggle("is-collapsed", !expanded);
+                if (toggle) {
+                    toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+                    toggle.setAttribute("aria-label", (expanded ? "Collapse " : "Expand ") + title);
+                }
+            };
+
+            if (!animate) {
+                const prevTransition = roller.style.transition;
+                roller.style.transition = "none";
+                applyExpandedState();
+                roller.style.maxHeight = targetHeight + "px";
+                roller.getBoundingClientRect();
+                roller.style.transition = prevTransition;
+                return;
+            }
+
+            roller.style.maxHeight = roller.getBoundingClientRect().height + "px";
+            applyExpandedState();
+            window.requestAnimationFrame(() => {
+                roller.style.maxHeight = targetHeight + "px";
+            });
+        };
+
+        kitchenCards.forEach((card) => {
+            const toggle = card.querySelector("[data-kitchen-toggle]");
+
+            const startsExpanded = card.classList.contains("is-open");
+            setKitchenCardState(card, startsExpanded, false);
+
+            if (toggle) {
+                toggle.addEventListener("click", (event) => {
+                    event.stopPropagation();
+                    const expanded = card.classList.contains("is-open");
+                    const shouldExpand = !expanded;
+                    if (shouldExpand) {
+                        collapseOtherKitchenCards(card, true);
+                    }
+                    setKitchenCardState(card, shouldExpand, true);
+                });
+            }
+
+            card.addEventListener("click", () => {
+                if (!card.classList.contains("is-collapsed")) {
+                    return;
+                }
+                collapseOtherKitchenCards(card, true);
+                setKitchenCardState(card, true, true);
+            });
+        });
+
+        const initiallyOpenCards = Array.from(kitchenCards).filter((card) => card.classList.contains("is-open"));
+        if (initiallyOpenCards.length > 1) {
+            initiallyOpenCards.slice(1).forEach((card) => setKitchenCardState(card, false, false));
+        }
+
+        window.addEventListener("resize", () => {
+            kitchenCards.forEach((card) => {
+                const expanded = card.classList.contains("is-open");
+                setKitchenCardState(card, expanded, false);
+            });
+        });
+    }
+
     const copyButtons = document.querySelectorAll("[data-copy-target]");
     if (copyButtons.length) {
         copyButtons.forEach((button) => {
