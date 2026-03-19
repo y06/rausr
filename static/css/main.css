@@ -1604,9 +1604,16 @@ footer .nav-item {
 @media (max-width: 1100px) {
   .about-apart-stats {
     border-radius: 40px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 800px;
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-apart-stats {
     grid-template-columns: 1fr;
     max-width: 720px;
-    gap: 1.75rem;
   }
 
   .about-apart-stat__text {
@@ -1627,7 +1634,7 @@ footer .nav-item {
   .about-apart-stats {
     margin-top: 2.25rem;
     padding: 2rem 1.5rem;
-    gap: 1.25rem;
+    gap: 2.75rem;
     border-radius: 28px;
   }
 }
@@ -1648,7 +1655,7 @@ footer .nav-item {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 2.5rem;
 }
 
 .about-kitchen-card {
@@ -1802,6 +1809,31 @@ footer .nav-item {
 }
 
 @media (max-width: 768px) {
+  .about-apart {
+    padding: 0 1rem;
+  }
+
+  .about-apart-grid {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.2rem;
+  }
+
+  .about-apart-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .about-apart-card {
+    flex: 0 0 auto;
+    width: 248px;
+    height: 164px;
+    padding: 0.75rem 0.7rem;
+  }
+
   .about-kitchen {
     padding: 0 1rem;
     margin-bottom: 3.5rem;
@@ -1809,6 +1841,10 @@ footer .nav-item {
 
   .about-kitchen h2 {
     margin-bottom: 1.8rem;
+  }
+
+  .about-kitchen-list {
+    gap: 2rem;
   }
 
   .about-kitchen-card {
@@ -1834,14 +1870,31 @@ footer .nav-item {
     margin-top: 1rem;
   }
 
+  .about-kitchen-card__text {
+    font-size: 1rem;
+  }
+
   .about-kitchen-tags {
     margin-top: 1.35rem;
-    gap: 0.6rem;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.2rem;
+  }
+
+  .about-kitchen-tags::-webkit-scrollbar {
+    display: none;
   }
 
   .about-kitchen-tags li {
-    font-size: 0.95rem;
-    padding: 0.65rem 1rem;
+    flex: 0 0 auto;
+  }
+
+  .about-kitchen-tags li a {
+    white-space: nowrap;
+    padding: 0.65rem 1.1rem;
   }
 }
 
@@ -1866,6 +1919,7 @@ footer .nav-item {
   align-items: center;
   justify-content: space-between;
   gap: 2.25rem;
+  position: relative;
 }
 
 .about-brands__logo {
@@ -1874,6 +1928,7 @@ footer .nav-item {
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 1;
 }
 
 .about-brands__logo img {
@@ -1903,7 +1958,7 @@ footer .nav-item {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
-  z-index: 5;
+  z-index: 30;
 }
 
 .about-brands__tooltip::after {
@@ -1920,9 +1975,16 @@ footer .nav-item {
 }
 
 .about-brands__logo:hover .about-brands__tooltip,
-.about-brands__logo:focus-visible .about-brands__tooltip {
+.about-brands__logo:focus-visible .about-brands__tooltip,
+.about-brands__logo:focus-within .about-brands__tooltip {
   opacity: 1;
   transform: translate(-50%, 2px);
+}
+
+.about-brands__logo:hover,
+.about-brands__logo:focus-visible,
+.about-brands__logo:focus-within {
+  z-index: 40;
 }
 
 .about-brands__logo:focus-visible {
@@ -1949,15 +2011,33 @@ footer .nav-item {
   }
 
   .about-brands__band {
-    border-radius: 24px;
-    padding: 1.4rem 1.2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.4rem 1.2rem;
+    border: none;
+    border-radius: 0;
+    align-items: center;
+    padding: 3.4rem 1.2rem 1.4rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+  }
+
+  .about-brands__band::before,
+  .about-brands__band::after {
+    content: "";
+    flex: 0 0 44vw;
+  }
+
+  .about-brands__band::-webkit-scrollbar {
+    display: none;
   }
 
   .about-brands__logo {
-    flex: 0 1 calc(50% - 0.8rem);
+    flex: 0 0 auto;
+    min-width: 140px;
+    scroll-snap-align: center;
   }
 
   .about-brands__logo img {
@@ -1965,9 +2045,28 @@ footer .nav-item {
   }
 
   .about-brands__tooltip {
-    top: calc(100% + 8px);
+    top: auto;
+    bottom: calc(100% + 8px);
     font-size: 0.75rem;
-    max-width: min(28ch, 88vw);
+    max-width: min(26ch, 82vw);
+    transform: translate(-50%, 6px);
+  }
+
+  .about-brands__tooltip::after {
+    top: 100%;
+    bottom: auto;
+    border-top: 6px solid color(display-p3 0.420 0.270 1.000);
+    border-bottom: 0;
+  }
+
+  .about-brands__logo:hover .about-brands__tooltip,
+  .about-brands__logo:focus-visible .about-brands__tooltip,
+  .about-brands__logo:focus-within .about-brands__tooltip {
+    transform: translate(-50%, -2px);
+  }
+
+  .about-brands__subtitle {
+    font-size: 0.875rem;
   }
 }
 
@@ -1997,7 +2096,7 @@ footer .nav-item {
 
 .about-team-card {
   border-radius: 12px;
-  padding: 2rem 2.3rem;
+  padding: 2.45rem 2.3rem;
 }
 
 .about-team-card--primary {
@@ -2018,8 +2117,8 @@ footer .nav-item {
 }
 
 .about-team-card__person > img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -2090,6 +2189,8 @@ footer .nav-item {
 .about-team-card__primary-right .about-team-card__quote {
   font-size: 1.875rem;
   font-weight: 500;
+  text-align: center !important;
+  width: 100%;
 }
 
 .about-team-card__desc {
@@ -2119,6 +2220,8 @@ footer .nav-item {
 
 .about-team-card--secondary {
   background: #EAEAEA;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
 }
 
 .about-team-card__secondary-grid {
@@ -2135,8 +2238,8 @@ footer .nav-item {
 }
 
 .about-team-card__secondary-left img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -2160,8 +2263,8 @@ footer .nav-item {
   font-size: 1.875rem;
   font-weight: 500;
   line-height: 1.2 !important;
-  text-align: left !important;
-  justify-self: start;
+  text-align: center !important;
+  justify-self: stretch;
   align-self: center;
   margin-top: 0;
 }
@@ -2193,13 +2296,29 @@ footer .nav-item {
   background: color(display-p3 0.964 1.000 0.247);
 }
 
+@media (min-width: 768px) and (max-width: 1100px) {
+  .about-apart-stats {
+    border-radius: 999px;
+  }
+
+  .about-team-card__person,
+  .about-team-card__secondary-left {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 991px) {
   .about-team {
     padding: 0 1rem;
   }
 
   .about-team-card {
-    padding: 1.4rem 1.25rem;
+    padding: 1.8rem 1.25rem;
+  }
+
+  .about-team-card--secondary {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .about-team-card__primary-grid,
@@ -2209,8 +2328,8 @@ footer .nav-item {
 
   .about-team-card__person > img,
   .about-team-card__secondary-left img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   .about-team-card__quote--secondary {
@@ -2219,7 +2338,22 @@ footer .nav-item {
 
   .about-team-cta {
     padding: 0 1rem;
-    margin: 4rem auto 2rem auto;
+    margin: 4rem auto 4rem auto;
+  }
+
+  .about-team-cta__button {
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-team-card__primary-grid,
+  .about-team-card__secondary-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  }
+
+  .about-team-card__quote--secondary {
+    margin-top: 0;
   }
 }
 
