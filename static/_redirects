@@ -1,0 +1,5 @@
+/topic /topics 301
+/topic/* /topics/:splat 301
+/page/1 /blog 301
+/page/1/ /blog/ 301
+/page/* /blog/page/:splat 301
