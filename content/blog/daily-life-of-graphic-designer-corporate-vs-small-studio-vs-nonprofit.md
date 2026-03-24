@@ -1,7 +1,7 @@
 ---
 title: "Corporate, Small Studio, or Nonprofit? The Daily Life of a Graphic Designer Compared"
 description: "A research-style look at how graphic designers work inside corporations, small studios, and nonprofits, and how process, freedom, task mix, and satisfaction really differ."
-date: 2026-03-23
+date: 2026-03-24
 tags: ["graphic design", "reports", "creativity", "marketing"]
 seotags:
   - graphic designer corporate vs small company
