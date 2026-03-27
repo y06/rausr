@@ -15,7 +15,7 @@ author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
 draft: false
 header_image: /images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-1.jpg
-preview_image: /images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-7.jpg
+preview_image: /images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-8.jpg
 source:
   - "Official: UFI — Global exhibitions industry benefits / 2024 industry figures: https://member.ufi.org/MEDIAS/PRESENTATIONS/FILES/1369-END_-L1-1032-L2-1032-24689.pdf"
   - "Official: UFI Education — Trade fair participation / selection criteria and goals: https://member.ufi.org/Medias/education/4/b2.htm"
@@ -49,9 +49,9 @@ Trade shows and exhibitions are not normal visual environments. They are crowded
 At an exhibition, beauty is not the finish line. Attention is. And attention only matters if it turns into understanding.
 {{< /quote >}}
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-2.jpg" alt="Exhibition stand designed to stop visitors in a busy aisle." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-2.jpg" alt="Exhibition stand designed to stop visitors in a busy aisle." >}}
+
 
 ### Why beautiful stands still lose
 #### A gorgeous stand can fail if it never answers the first question
@@ -85,9 +85,9 @@ So the stop decision usually comes from a few things working together:
 
 This is why some stands with modest budgets outperform bigger scenic builds. They reduce uncertainty fast enough to deserve attention.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-3.jpg" alt="Clear exhibition message and focal point beating decorative clutter." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-3.jpg" alt="Clear exhibition message and focal point beating decorative clutter." >}}
+
 
 ### Clarity beats beauty in the first seconds
 #### The stand has to survive the glance test
@@ -130,9 +130,9 @@ A stand works well when it says, in effect:
 
 That is very different from empty teaser language. Good curiosity reduces uncertainty in the right direction. Bad curiosity just withholds meaning.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-4.jpg" alt="Booth staff conversation as part of the stand experience." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-4.jpg" alt="Booth staff conversation as part of the stand experience." >}}
+
 
 ### Staff are part of the stand
 #### Architecture does not close the deal, people do
@@ -216,9 +216,9 @@ And one of the most useful unknown facts is this: trade shows are often less abo
 Sometimes the stand that “wins the hall” in photos is not the one that wins the most useful conversations in real life.
 {{< /interest >}}
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-6.jpg" alt="Behavioral and psychological effects behind stand attention and memory." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-6.jpg" alt="Behavioral and psychological effects behind stand attention and memory." >}}
+
 
 ### Why this works psychologically
 #### Good stands align with how people actually notice, choose, and remember
@@ -243,9 +243,9 @@ So the best stands usually combine three things at once:
 
 This is also why beauty still matters, but as a support system. Beauty can amplify trust, polish, and desirability. It just cannot substitute for relevance.
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-11.jpg" alt="Exhibition stand success measured by stopping power and discussion quality." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-best-exhibition-stand-is-the-one-that-stops-people/the-best-exhibition-stand-is-the-one-that-stops-people-7.jpg" alt="Exhibition stand success measured by stopping power and discussion quality." >}}
+
 
 ### Conclusion
 
