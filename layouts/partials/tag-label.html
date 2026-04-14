@@ -1,4 +1,4 @@
-{{- $tag := . -}}
+{{- $tag := partial "normalize-taxonomy-term.html" . -}}
 {{- $label := $tag -}}
 {{- if eq (lower $tag) "dtp" }}{{ $label = "DTP" }}{{ end }}
 {{- if eq (lower $tag) "ux-ui" }}{{ $label = "UX & UI" }}{{ end }}

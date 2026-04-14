@@ -52,7 +52,8 @@
             <ul class="tag-list">
                 <li><a href="/blog/" class="tag-link">← Articles</a></li>
                 {{ with index .Params.tags 0 }}
-                    <li><a href="/topics/{{ urlize . }}" class="tag-link">← {{ partial "tag-label.html" . }}</a></li>
+                    {{ $topic := partial "normalize-taxonomy-term.html" . }}
+                    <li><a href="/topics/{{ urlize $topic }}" class="tag-link">← {{ partial "tag-label.html" $topic }}</a></li>
                 {{ end }}
                 <li><span class="tag-link active">{{ .Title }}</span></li>
             </ul>

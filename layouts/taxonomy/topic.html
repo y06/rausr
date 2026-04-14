@@ -2,9 +2,19 @@
 
 <main>
 
-    {{ $tag := lower (or .Params.tag .Title) }}
-    {{ $filteredPages := where .Site.RegularPages "Section" "blog" }}
-    {{ $filteredPages = where $filteredPages "Params.tags" "intersect" (slice $tag) }}
+    {{ $tag := partial "normalize-taxonomy-term.html" (or .Params.tag .Title) }}
+    {{ $filteredPages := slice }}
+    {{ range where .Site.RegularPages "Section" "blog" }}
+        {{ $matched := false }}
+        {{ range (.Params.tags | default (slice)) }}
+            {{ if eq (partial "normalize-taxonomy-term.html" .) $tag }}
+                {{ $matched = true }}
+            {{ end }}
+        {{ end }}
+        {{ if $matched }}
+            {{ $filteredPages = $filteredPages | append . }}
+        {{ end }}
+    {{ end }}
     {{ $paginator := .Paginate $filteredPages 8 }}
 
     <section class="header" style="background-color: {{ .Params.header_color }}">

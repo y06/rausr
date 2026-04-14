@@ -1,0 +1,5 @@
+{{- $term := lower (trim . " ") -}}
+{{- if eq $term "graphic-design" -}}graphic design
+{{- else if eq $term "product-design" -}}product design
+{{- else -}}{{ $term }}
+{{- end -}}

@@ -6,7 +6,20 @@
     {{ $allBlogPages := where .Site.RegularPages "Section" "blog" }}
     {{ $sortedPages := sort $allBlogPages "Params.date" "desc" }}
     {{ if .Params.tag }}
-      {{ $sortedPages = where $sortedPages "Params.tags" "intersect" (slice .Params.tag) }}
+      {{ $canonicalTag := partial "normalize-taxonomy-term.html" .Params.tag }}
+      {{ $filteredPages := slice }}
+      {{ range $sortedPages }}
+        {{ $matched := false }}
+        {{ range (.Params.tags | default (slice)) }}
+          {{ if eq (partial "normalize-taxonomy-term.html" .) $canonicalTag }}
+            {{ $matched = true }}
+          {{ end }}
+        {{ end }}
+        {{ if $matched }}
+          {{ $filteredPages = $filteredPages | append . }}
+        {{ end }}
+      {{ end }}
+      {{ $sortedPages = $filteredPages }}
     {{ end }}
     {{ $paginator := .Paginate $sortedPages 8 }}
 
@@ -50,7 +63,7 @@
 
       {{ range where .Site.RegularPages "Section" "blog" }}
         {{ range .Params.tags }}
-          {{ $t := . }}
+          {{ $t := partial "normalize-taxonomy-term.html" . }}
           {{ $key := lower $t }}
           {{ if eq $key "series" }}
             {{ if not (isset $seen "series") }}

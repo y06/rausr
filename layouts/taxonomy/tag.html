@@ -29,11 +29,19 @@
         <button class="tag-scroll right">→</button>
     </div>
 
-    {{ $tag := lower (or .Params.tag .Title) }}
-    {{ $filteredPages := where .Site.RegularPages "Section" "works" }}
-    {{ $filteredPages = where $filteredPages "Params.tags" "intersect" (slice $tag) }}
-
-    <!-- Note: For consistency, all tags used in front matter must be lowercase or you must lowercase them manually in content files to ensure correct filtering. -->
+    {{ $tag := partial "normalize-taxonomy-term.html" (or .Params.tag .Title) }}
+    {{ $filteredPages := slice }}
+    {{ range where .Site.RegularPages "Section" "works" }}
+        {{ $matched := false }}
+        {{ range (.Params.tags | default (slice)) }}
+            {{ if eq (partial "normalize-taxonomy-term.html" .) $tag }}
+                {{ $matched = true }}
+            {{ end }}
+        {{ end }}
+        {{ if $matched }}
+            {{ $filteredPages = $filteredPages | append . }}
+        {{ end }}
+    {{ end }}
 
     {{ $paginator := .Paginate $filteredPages 8 }}
 

@@ -17,8 +17,9 @@
         
             <div class="card1-bottom">
                 {{ with index .Params.tags 0 }}
+                {{ $tag := partial "normalize-taxonomy-term.html" . }}
                 <span class="card1-category">
-                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                    <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ partial "tag-label.html" $tag }}</a>
                 </span>
                 {{ end }}
 

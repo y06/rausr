@@ -9,6 +9,7 @@
   {{ $plural := .Data.Plural | default "items" }}
   {{ $secondURL := "/blog/" }}
   {{ $secondLabel := "Articles" }}
+  {{ $seenTerms := dict }}
   {{ if eq $taxonomy "tags" }}
     {{ $secondURL = "/works/" }}
     {{ $secondLabel = "Works" }}
@@ -50,7 +51,15 @@
 
   <section class="card-container taxonomy-card-container">
     {{ range $sortedTerms }}
+      {{ $canonicalName := printf "%s" (partial "normalize-taxonomy-term.html" .Name) }}
+      {{ if not (isset $seenTerms $canonicalName) }}
+      {{ $seenTerms = merge $seenTerms (dict (printf "%s" $canonicalName) true) }}
       {{ $termPage := .Page }}
+      {{ $canonicalPath := printf "/%s/%s" $taxonomy (urlize $canonicalName) }}
+      {{ $canonicalTermPage := site.GetPage $canonicalPath }}
+      {{ if $canonicalTermPage }}
+        {{ $termPage = $canonicalTermPage }}
+      {{ end }}
       {{ $link := "" }}
       {{ $description := "" }}
       {{ $headerColor := "" }}
@@ -61,8 +70,14 @@
         {{ $headerColor = $termPage.Params.header_color | default "" }}
         {{ $headerImage = $termPage.Params.header_image | default "" }}
       {{ end }}
-      {{ $label := partial "tag-label.html" .Name }}
+      {{ $label := partial "tag-label.html" $canonicalName }}
       {{ $pages := .Pages }}
+      {{ $count := 0 }}
+      {{ range $sortedTerms }}
+        {{ if eq (printf "%s" (partial "normalize-taxonomy-term.html" .Name)) $canonicalName }}
+          {{ $count = add $count .Count }}
+        {{ end }}
+      {{ end }}
       {{ $itemSingular := "entry" }}
       {{ $itemPlural := "entries" }}
       {{ if gt (len $pages) 0 }}
@@ -75,7 +90,7 @@
           {{ $itemPlural = "projects" }}
         {{ end }}
       {{ end }}
-      {{ $itemLabel := cond (eq .Count 1) $itemSingular $itemPlural }}
+      {{ $itemLabel := cond (eq $count 1) $itemSingular $itemPlural }}
 
       <div class="card20 taxonomy-card" {{ if $headerColor }}style="border-top: 6px solid {{ $headerColor }};"{{ end }}>
         {{ if $headerImage }}
@@ -89,9 +104,10 @@
           <span class="card20-category">{{ $itemLabel }}</span>
           <h3><a href="{{ $link }}">{{ $label }}</a></h3>
           {{ with $description }}<p>{{ . }}</p>{{ end }}
-          <div class="card20-meta">{{ .Count }} {{ $itemLabel }}</div>
+          <div class="card20-meta">{{ $count }} {{ $itemLabel }}</div>
         </div>
       </div>
+      {{ end }}
     {{ end }}
   </section>
 

@@ -2,7 +2,7 @@
 title: "The Mouse: The Most Universal Peripheral Controller (and Why It Won’t Disappear)"
 description: "From Engelbart’s wooden prototype to wireless esports shapes and ergonomic “handshake” designs. How the mouse evolved, why companies disagree on it, and which types fit which work."
 date: 2026-02-26
-tags: ["hardware", "history", "product-design", "graphic-design"]
+tags: ["hardware", "history", "product design", "graphic design"]
 author: "Jakub"
 draft: false
 preview_image: /images/articles/mouse-universal-peripheral-controller/mouse-universal-peripheral-controller-10.jpg

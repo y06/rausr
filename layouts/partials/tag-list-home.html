@@ -18,7 +18,7 @@
                     {{/* Safely get first tag if any; avoid indexing nil */}}
                     {{ $tags := .Params.tags | default (slice) }}
                     {{ if gt (len $tags) 0 }}
-                        {{ $first := index $tags 0 }}
+                        {{ $first := partial "normalize-taxonomy-term.html" (index $tags 0) }}
                         <li><a href="/topics/{{ urlize $first }}" class="tag-link">← {{ partial "tag-label.html" $first }}</a></li>
                     {{ end }}
                 {{ end }}

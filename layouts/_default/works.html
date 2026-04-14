@@ -55,7 +55,7 @@
                 {{ $tags := slice }}
                 {{ range where .Site.RegularPages "Section" "works" }}
                     {{ range .Params.tags }}
-                        {{ $tags = $tags | append . }}
+                        {{ $tags = $tags | append (partial "normalize-taxonomy-term.html" .) }}
                     {{ end }}
                 {{ end }}
                 {{ $tags = $tags | uniq | sort }}

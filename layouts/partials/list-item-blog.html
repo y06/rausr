@@ -68,8 +68,9 @@
       </a>
       <div class="card20-text">
           {{ with index $page.Params.tags 0 }}
+          {{ $topic := partial "normalize-taxonomy-term.html" . }}
           <span class="card20-category">
-              <a href="{{ "/topics/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+              <a href="{{ "/topics/" | relLangURL }}{{ $topic | urlize }}">{{ partial "tag-label.html" $topic }}</a>
           </span>
           {{ end }}
           <h3><a href="{{ $link }}">{{ $page.Title }}</a></h3>
@@ -115,8 +116,9 @@
   </a>
   <div class="card20-text">
       {{ with index $page.Params.tags 0 }}
+      {{ $topic := partial "normalize-taxonomy-term.html" . }}
       <span class="card20-category">
-          <a href="{{ "/topics/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+          <a href="{{ "/topics/" | relLangURL }}{{ $topic | urlize }}">{{ partial "tag-label.html" $topic }}</a>
       </span>
       {{ end }}
       <h3><a href="{{ $link }}">{{ $page.Title }}</a></h3>
