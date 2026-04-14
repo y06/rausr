@@ -28,7 +28,7 @@ source:
   - "Official: Saint Laurent and Musée Yves Saint Laurent Paris heritage materials."
   - "Official: Prada — brand and triangle logo product heritage."
   - "Official: Versace — Medusa and House materials."
-  - "Text: Vogue Runway, Business of Fashion, and design-history references on creative direction and identity shifts."
+  - "Text: Vogue Runway, Business of Fashion, and design-history references"
 internal_links:
   - label: "Branding Codes That Stick"
     url: "/blog/branding-codes-that-stick/"
