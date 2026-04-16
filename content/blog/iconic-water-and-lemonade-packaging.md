@@ -21,16 +21,16 @@ draft: false
 header_image: /images/articles/iconic-water-and-lemonade-packaging/iconic-water-and-lemonade-packaging-1.jpg
 preview_image: /images/articles/iconic-water-and-lemonade-packaging/iconic-water-and-lemonade-packaging-12.jpg
 source:
-  - "Official: The Coca-Cola Company - The History of the Coca-Cola Contour Bottle: https://www.coca-colacompany.com/about-us/history/the-history-of-the-coca-cola-contour-bottle"
-  - "Official: PepsiCo - Pepsi unveils a new logo and visual identity (Mar 28, 2023): https://www.pepsico.com/newsroom/press-releases/2023/pepsi-unveils-a-new-logo-and-visual-identity-marking-the-iconic-brands-next-era"
+  - "The Coca-Cola Company (Official) - The History of the Coca-Cola Contour Bottle: https://www.coca-colacompany.com/about-us/history/the-history-of-the-coca-cola-contour-bottle"
+  - "PepsiCo (Official) - Pepsi unveils a new logo and visual identity (Mar 28, 2023): https://www.pepsico.com/newsroom/press-releases/2023/pepsi-unveils-a-new-logo-and-visual-identity-marking-the-iconic-brands-next-era"
   - "Creative Bloq - Fanta rebrands and drops the orange (Apr 4, 2023): https://www.creativebloq.com/news/fanta-rebrand"
   - "Food & Wine - Sprite moves from green to clear bottles (Jul 27, 2022): https://www.foodandwine.com/news/sprite-bottle-color-green-clear"
-  - "Official: Suntory Beverage & Food Europe - Orangina brand facts: https://suntorybeverageandfood-europe.com/fr-FR/eecm-benelux/marques/orangina/"
+  - "Suntory Beverage & Food Europe (Official) - Orangina brand facts: https://suntorybeverageandfood-europe.com/fr-FR/eecm-benelux/marques/orangina/"
   - "Remarkable - Perrier and Philippe Starck bottle collaboration: https://www.remarkable.eu/en/insights/a-sparkling-collaboration-perrier-and-starck"
-  - "Official: evian - The evian story: https://www.evian.com/en_us/the-evian-story/"
-  - "Official: evian - Limited edition bottle collaborations: https://www.evian.com/en_us/natural-spring-water/limited-edition-bottles/"
-  - "Official: S.Pellegrino - Portrait of an icon: https://www.sanpellegrino.com/news/sanpellegrino-mineral-water-bottle-labels-845"
-  - "Official: S.Pellegrino - Journey of Water design special edition: https://www.sanpellegrino.com/news/milan-design-week-new-limited-edition-3124"
+  - "evian - The evian story (Official): https://www.evian.com/en_us/the-evian-story/"
+  - "evian - Limited edition bottle collaborations (Official): https://www.evian.com/en_us/natural-spring-water/limited-edition-bottles/"
+  - "S.Pellegrino (Official) - Portrait of an icon: https://www.sanpellegrino.com/news/sanpellegrino-mineral-water-bottle-labels-845"
+  - "S.Pellegrino (Official) - Journey of Water design special edition: https://www.sanpellegrino.com/news/milan-design-week-new-limited-edition-3124"
 ---
 
 ## Introduction

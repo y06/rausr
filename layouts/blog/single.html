@@ -104,7 +104,11 @@
           {{ $urls := findRE `https?://[^\s]+` $item }}
           {{ $hasUrl := gt (len $urls) 0 }}
           {{ $hasAuthorDash := gt (len (findRE `\s—\s` $item)) 0 }}
-          {{ if and $hasUrl $hasAuthorDash }}
+          {{ if gt (len (findRE `^\[[^\]]+\]\([^)]+\)$` $item)) 0 }}
+            {{ $label := replaceRE `^\[([^\]]+)\]\(([^)]+)\)$` "$1" $item }}
+            {{ $url := replaceRE `^\[([^\]]+)\]\(([^)]+)\)$` "$2" $item }}
+            <a class="tag sources" href="{{ $url }}" target="_blank" rel="noopener noreferrer">🌐 {{ $label }}</a>
+          {{ else if and $hasUrl $hasAuthorDash }}
             {{ $url := index $urls 0 }}
             {{ $parts := split $item " — " }}
             {{ $author := index $parts 0 }}
@@ -128,21 +132,21 @@
           {{ else if hasPrefix (lower $item) "text:" }}
             {{ $title := replaceRE `(?i)^text:\s*` "" $item }}
             <span class="tag sources sources-text">📓 {{ $title }}</span>
+          {{ else if $hasUrl }}
+            {{ $url := index $urls 0 }}
+            {{ $label := replaceRE `\s*:?\s*https?://[^\s]+` "" $item }}
+            {{ $label = replaceRE `\s+[-–—]\s*$` "" $label }}
+            {{ $label = trim $label " " }}
+            {{ if eq $label "" }}
+              {{ $parsed := urls.Parse $url }}
+              {{ $label = $url }}
+              {{ if $parsed }}
+                {{ $label = replace (replace $parsed.Host "www." "" ) ":" "" }}
+              {{ end }}
+            {{ end }}
+            <a class="tag sources" href="{{ $url }}" target="_blank" rel="noopener noreferrer">🌐 {{ $label | truncate 96 }}</a>
           {{ else }}
-            {{ if gt (len (findRE `^\[[^\]]+\]\([^)]+\)$` $item)) 0 }}
-              {{ $label := replaceRE `^\[([^\]]+)\]\(([^)]+)\)$` "$1" $item }}
-              {{ $url := replaceRE `^\[([^\]]+)\]\(([^)]+)\)$` "$2" $item }}
-              <a class="tag sources" href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $label }}</a>
-            {{ else if or (hasPrefix (lower (trim $item " ")) "http://") (hasPrefix (lower (trim $item " ")) "https://") }}
-            {{ $parsed := urls.Parse $item }}
-            {{ $host := $item }}
-            {{ if $parsed }}
-              {{ $host = replace (replace $parsed.Host "www." "" ) ":" "" }}
-            {{ end }}
-            <a class="tag sources" href="{{ $item }}" target="_blank" rel="noopener noreferrer">{{ $host }}</a>
-            {{ else }}
             <span class="tag sources">{{ $item }}</span>
-            {{ end }}
           {{ end }}
         {{ end }}
       </div>

@@ -18,9 +18,9 @@ draft: false
 header_image: "/images/articles/hiring-graphic-designer-or-visual-designer/hiring-graphic-designer-or-visual-designer-1.jpg"
 preview_image: "/images/articles/hiring-graphic-designer-or-visual-designer/hiring-graphic-designer-or-visual-designer-9.jpg"
 source:
-  - "Official: BLS — Graphic Designers Outlook Handbook: https://www.bls.gov/ooh/arts-and-design/graphic-designers.htm"
-  - "Official: O*NET — Graphic Designers: https://www.onetonline.org/link/summary/27-1024.00"
-  - "Official: O*NET — Art Directors: https://www.onetonline.org/link/summary/27-1011.00"
+  - "BLS — Graphic Designers Outlook Handbook: https://www.bls.gov/ooh/arts-and-design/graphic-designers.htm"
+  - "O*NET — Graphic Designers: https://www.onetonline.org/link/summary/27-1024.00"
+  - "O*NET — Art Directors: https://www.onetonline.org/link/summary/27-1011.00"
   - "Text: AIGA and design-career guidance on portfolios, internships, and hiring."
   - "Text: Nielsen Norman Group on portfolio review and design hiring signals."
 internal_links:
