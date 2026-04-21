@@ -4,22 +4,22 @@ date: 2026-04-21
 description: "Open-from-three-sides 4x4 m exhibition stand for Madness Advertising, designed as an airy, reusable, cost-optimized presentation system."
 tags: ["exhibition stands design", "branding", "print design", "3d-modeling"]
 draft: false
-preview_image: "/images/opened-exhibition-stand-design-eventfest26/Screenshot 2026-04-21 at 10.45.27.jpg"
-header_image: "/images/opened-exhibition-stand-design-eventfest26/Screenshot 2026-04-21 at 10.45.27.jpg"
+preview_image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-1.jpg"
+header_image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-1.jpg"
 seotags: ["2026", "exhibition stand", "modular exhibition stand", "presentation systems", "lightbox", "backlight", "plexiglass", "modular floor", "reusable stand design"]
 sections:
-  - image: "/images/opened-exhibition-stand-design-eventfest26/Screenshot 2026-04-21 at 10.45.27.jpg"
+  - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-1.jpg"
     label: "3D visual - open 4x4 m stand"
-  - image: "/images/opened-exhibition-stand-design-eventfest26/Screenshot 2026-04-21 at 10.31.59.jpg"
+  - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-2.jpg"
     label: "2D graphic system - panels and print elements"
-  - image: "/images/opened-exhibition-stand-design-eventfest26/IMG_5945 copy.jpg"
+  - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-3.jpg"
     label: "Real photo - full stand view"
-  - image: "/images/opened-exhibition-stand-design-eventfest26/IMG_5947 copy.jpg"
+  - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-4.jpg"
     label: "Real photo - open floor and product zones"
     subimages:
-      - image: "/images/opened-exhibition-stand-design-eventfest26/IMG_5949 copy.jpg"
+      - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-6.jpg"
         label: "Real photo - side lightbox and printed panels"
-      - image: "/images/opened-exhibition-stand-design-eventfest26/IMG_5950 copy.jpg"
+      - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-5.jpg"
         label: "Real photo - mirror foil and backlit frame detail"
 ---
 
