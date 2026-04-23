@@ -16,7 +16,7 @@ seotags:
   - beverage packaging trends
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
-draft: false
+draft: true
 header_image: /images/articles/packaging-design-of-successful-energy-drinks/packaging-design-of-successful-energy-drinks-1.jpg
 preview_image: /images/articles/packaging-design-of-successful-energy-drinks/packaging-design-of-successful-energy-drinks-12.jpg
 source:
