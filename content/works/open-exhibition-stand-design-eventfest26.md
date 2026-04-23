@@ -3,7 +3,7 @@ title: "Open 4x4m Exhibition Stand for Eventfest 2026"
 date: 2026-04-21
 description: "Open-from-three-sides 4x4 m exhibition stand for Madness Advertising, designed as an airy, reusable, cost-optimized presentation system."
 tags: ["exhibition stands design", "branding", "print design", "3d-modeling"]
-draft: false
+draft: true
 preview_image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-7.jpg"
 header_image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-8.jpg"
 seotags: ["2026", "exhibition stand", "modular exhibition stand", "presentation systems", "lightbox", "backlight", "plexiglass", "modular floor", "reusable stand design"]
