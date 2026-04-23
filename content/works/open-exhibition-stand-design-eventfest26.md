@@ -9,7 +9,7 @@ header_image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-
 seotags: ["2026", "exhibition stand", "modular exhibition stand", "presentation systems", "lightbox", "backlight", "plexiglass", "modular floor", "reusable stand design"]
 sections:
   - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-1.jpg"
-    label: "3D visual - open 4x4 m stand"
+    label: "Quick 3D render shot from Twinmotion"
   - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-2.jpg"
     label: "2D graphic system - panels and print elements"
   - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-3.jpg"
@@ -18,9 +18,9 @@ sections:
     label: "Real photo - open floor and product zones"
     subimages:
       - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-6.jpg"
-        label: "Real photo - side lightbox and printed panels"
+        label: "Real photo - side plexi panel with plotted foil"
       - image: "/images/open-exhibition-stand-design-eventfest26/open-exhibition-stand-design-eventfest26-5.jpg"
-        label: "Real photo - mirror foil and backlit frame detail"
+        label: "Real photo - mirror foil and plexi backside detail"
 ---
 
 ### Project Overview
