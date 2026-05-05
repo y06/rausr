@@ -59,9 +59,9 @@ Design sense is abstract only from far away. Up close, it is a mix of trainable 
 {{< /quote >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-2.jpg" alt="Design sense can look mysterious until it is broken into perception, judgment, memory, taste, and problem-solving." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-2.jpg" alt="Design sense can look mysterious until it is broken into perception, judgment, memory, taste, and problem-solving." >}}
+
 
 ### What people mean when they say "design sense"
 #### They usually mean several things at once
@@ -88,9 +88,9 @@ One hidden trap in design education is that students often compare their weakest
 {{< /interest >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-3.jpg" alt="What people call design sense is usually a cluster of perception, judgment, spacing, taste, and decision-making skills." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-3.jpg" alt="What people call design sense is usually a cluster of perception, judgment, spacing, taste, and decision-making skills." >}}
+
 
 ### What seems inherited or unusually natural
 #### Predisposition is real, even if it is not destiny
@@ -143,9 +143,9 @@ Hard drill is not magic. It is just one of the few things that reliably moves we
 {{< /quote >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-5.jpg" alt="Practice changes speed, consistency, and judgment, but it does not erase all natural differences between designers." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-5.jpg" alt="Practice changes speed, consistency, and judgment, but it does not erase all natural differences between designers." >}}
+
 
 ### Talent without drill is unstable
 #### It starts impressive, then often slows down
@@ -175,9 +175,9 @@ But drill adds:
 Professional design is not judged only on flashes of instinct. It is judged on whether the designer can solve the tenth brief too, not only the first beautiful one.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-6.jpg" alt="Talent without disciplined repetition can impress early but often struggles to become range, precision, and professional consistency." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-6.jpg" alt="Talent without disciplined repetition can impress early but often struggles to become range, precision, and professional consistency." >}}
+
 
 ### Who wins: medium talent with hard drill, or high talent with medium drill?
 #### In real careers, the answer is often less romantic than people want
@@ -239,9 +239,9 @@ A person with weak early drawing or weak early style can still become a strong b
 The mistake is assuming that weak early instinct means permanent inability. Often it simply means slower ignition.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-8.jpg" alt="A designer without obvious early talent can still become excellent through observation, iteration, strategy, and disciplined visual training." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-8.jpg" alt="A designer without obvious early talent can still become excellent through observation, iteration, strategy, and disciplined visual training." >}}
+
 
 ### Why design talent is so hard to measure
 #### Because we are scoring several moving targets at once
@@ -328,9 +328,9 @@ There is also a more emotional test. Do you see more than you saw last year? Can
 <p class="article-prelink">For the training side of that growth, continue with <a href="/blog/creativity-is-a-paintless-process/">Creativity Is a Paintless Process</a> and <a href="/blog/where-do-designers-find-inspiration/">Where Do Designers Find Inspiration?</a>.</p>
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-11.jpg" alt="Improvement in design sense is better tracked through judgment, clarity, critique response, and visual decisions than through vague feelings about talent." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/is-design-sense-learned-or-born/is-design-sense-learned-or-born-11.jpg" alt="Improvement in design sense is better tracked through judgment, clarity, critique response, and visual decisions than through vague feelings about talent." >}}
+
 
 ### What actually wins in the long run
 #### The strongest careers usually combine enough talent with enough drill
