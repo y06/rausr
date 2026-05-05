@@ -118,9 +118,9 @@ The better approach is to say this clearly: some people start with more favorabl
 ### What training actually changes
 #### Practice matters, but not in the simple motivational-poster way
 
-One of the most useful findings in expertise research is also one of the most inconvenient. Practice matters a lot, but it does not explain everything.
+One of the most useful findings in expertise research is also one of the least comforting. Practice matters, but the popular version of the story is usually too neat.
 
-Macnamara, Hambrick, and Oswald’s widely cited meta-analysis found that deliberate practice explained meaningful but limited portions of performance variance, depending on the domain. The numbers were much lower than the most extreme “10,000 hours explains everything” version of the story.
+Macnamara, Hambrick, and Oswald’s meta-analysis pushed back against the oversimplified “10,000 hours” idea. Their conclusion was not that practice is weak or irrelevant. It was that deliberate practice explains only part of why people become excellent, and the size of that effect changes across domains. In other words, hours help, but they do not fully account for differences in performance.
 
 That fits design well. Practice can dramatically improve:
 
@@ -357,4 +357,3 @@ That is exactly why the profession stays so interesting. It is one of the few se
 {{< quote >}}
 The best designers are not always the ones who looked gifted first. They are often the ones who kept learning long enough for their eye to become reliable.
 {{< /quote >}}
-
