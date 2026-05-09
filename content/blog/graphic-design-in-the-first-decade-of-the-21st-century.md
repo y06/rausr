@@ -1,7 +1,7 @@
 ---
 title: "Graphic Design in the First Decade of the 21st Century"
 description: "How graphic design looked between 2000 and 2009: the dominant visual elements and how print and digital split into two very different futures."
-date: 2026-05-07
+date: 2026-05-09
 tags: ["graphic design", "history", "series", "reports"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
