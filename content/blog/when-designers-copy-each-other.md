@@ -54,9 +54,8 @@ Looking at references is normal. Letting references make your decisions for you 
 {{< /quote >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-2.jpg" alt="Moodboards, saved pins, Behance grids, and Dribbble shots creating a dense visual reference stream for designers." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-2.jpg" alt="Moodboards, saved pins, Behance grids, and Dribbble shots creating a dense visual reference stream for designers." >}}
+
 
 
 ### Why copying became easier than ever
@@ -116,9 +115,9 @@ In interfaces, originality is expensive when it interrupts comprehension. The us
 {{< /quote >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-4.jpg" alt="Rows of similar brand identities, startup landing pages, and design system components beginning to blur into one generic visual language." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-4.jpg" alt="Rows of similar brand identities, startup landing pages, and design system components beginning to blur into one generic visual language." >}}
+
 
 
 ### When copying becomes flattening
@@ -148,9 +147,9 @@ The most copied things in design are often not the strongest solutions. They are
 {{< /interest >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-5.jpg" alt="Examples of print systems like signage, forms, editorial grids, packaging rules, and transit graphics where standardization helps people read and navigate faster." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-5.jpg" alt="Examples of print systems like signage, forms, editorial grids, packaging rules, and transit graphics where standardization helps people read and navigate faster." >}}
+
 
 
 ### What print design still teaches this debate
@@ -177,9 +176,9 @@ That distinction matters in digital too. Navigation does not need to be original
 <p class="article-prelink">For a parallel argument about durability, this pairs well with <a href="/blog/stay-normal-dont-chase-design-trends/">Stay Normal: Why Consistency Beats Trends in Graphic Design</a> and <a href="/blog/when-being-trendy-backfires/">When Being Trendy Backfires</a>.</p>
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-6.jpg" alt="A contrast between familiar interface patterns and bold brand moments where a product can safely become more expressive and memorable." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-6.jpg" alt="A contrast between familiar interface patterns and bold brand moments where a product can safely become more expressive and memorable." >}}
+
 
 
 ### Where standing out actually matters
@@ -217,9 +216,9 @@ The mature question is not “Should design be original?” The mature question 
 {{< /quote >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-7.jpg" alt="Designer sorting references into categories such as function, tone, typography, layout, and brand cues instead of copying one source too literally." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-7.jpg" alt="Designer sorting references into categories such as function, tone, typography, layout, and brand cues instead of copying one source too literally." >}}
+
 
 
 ### How to think about copying without becoming naive
@@ -275,9 +274,9 @@ One more quiet fact sits underneath all of this: the more public design becomes,
 That is why the conversation is not really about whether copying exists. It always has. The real question is whether designers still know how to metabolize influence instead of merely forwarding it.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-9.jpg" alt="Distinctive design breaking from category sameness while preserving clear usability and readable structure." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/when-designers-copy-each-other/when-designers-copy-each-other-9.jpg" alt="Distinctive design breaking from category sameness while preserving clear usability and readable structure." >}}
+
 
 
 ### Summary
