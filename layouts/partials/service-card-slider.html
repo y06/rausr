@@ -1,0 +1,68 @@
+{{ $section := .section }}
+{{ $variant := .variant | default "benefits" }}
+{{ if and $section $section.cards }}
+<section
+    class="service-slider service-slider--{{ $variant }}"
+    id="{{ or $section.anchor (printf "service-%s" $variant) }}"
+>
+    <div class="service-slider__content">
+        {{ with $section.title }}
+        <h2>{{ . }}</h2>
+        {{ end }}
+        {{ with $section.description }}
+        <p class="service-slider__lede">{{ . }}</p>
+        {{ end }}
+
+        <div class="service-slider__frame" data-service-slider>
+            <button
+                class="service-slider__arrow service-slider__arrow--prev"
+                type="button"
+                data-service-slider-prev
+                aria-label="Show previous cards"
+            >
+                &#8592;
+            </button>
+
+            <div class="service-slider__viewport" data-service-slider-viewport>
+                <div class="service-slider__track" data-service-slider-track>
+                    {{ range $index, $card := $section.cards }}
+                    <article class="service-slider__card" data-service-slider-card>
+                        <div class="service-slider__card-top">
+                            <span class="service-slider__card-number">{{ add $index 1 }}</span>
+                            {{ with $card.emoji }}
+                            <span class="service-slider__card-emoji" aria-hidden="true">{{ . }}</span>
+                            {{ end }}
+                        </div>
+
+                        {{ with $card.heading }}
+                        <h3 class="service-slider__card-heading">{{ . }}</h3>
+                        {{ end }}
+
+                        {{ with $card.subheading }}
+                        <p class="service-slider__card-subheading">{{ . }}</p>
+                        {{ end }}
+
+                        {{ with $card.text }}
+                        <p class="service-slider__card-text">{{ . }}</p>
+                        {{ end }}
+                    </article>
+                    {{ end }}
+                </div>
+            </div>
+
+            <button
+                class="service-slider__arrow service-slider__arrow--next"
+                type="button"
+                data-service-slider-next
+                aria-label="Show next cards"
+            >
+                &#8594;
+            </button>
+        </div>
+
+        <div class="service-slider__progress" aria-hidden="true">
+            <span class="service-slider__progress-fill" data-service-slider-progress></span>
+        </div>
+    </div>
+</section>
+{{ end }}

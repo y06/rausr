@@ -36,23 +36,826 @@
         <meta name="robots" content="noindex" /> 
         {{ end }}
 
+        <style id="rausr-menu-critical">
+          @property --rausr-search-color-a {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: #5DFFF1;
+          }
+
+          @property --rausr-search-color-b {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: #E1FFD8;
+          }
+
+          @property --rausr-search-color-c {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: #FFE57A;
+          }
+
+          @property --rausr-search-color-d {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: #FF9CE8;
+          }
+
+          @property --rausr-search-color-e {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: #886BFF;
+          }
+
+          @property --rausr-search-color-f {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: #8EEFFF;
+          }
+
+          .rausr-menu-wrap {
+            width: 100%;
+            padding: 3rem;
+            background: #fff;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1200;
+          }
+
+          .rausr-menu-wrap::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            background: rgba(28, 24, 42, 0.22);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 180ms ease;
+          }
+
+          .rausr-menu-wrap.is-dimmed::after {
+            opacity: 1;
+          }
+
+          .rausr-menu {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 90px 390px 1fr;
+            align-items: center;
+            column-gap: 48px;
+            font-family: Satoshi, sans-serif;
+          }
+
+          .rausr-menu a,
+          .rausr-menu button,
+          .rausr-menu input {
+            letter-spacing: 0;
+          }
+
+          .rausr-menu__brand {
+            display: inline-flex;
+            align-items: center;
+            justify-self: start;
+            text-decoration: none;
+          }
+
+          .rausr-menu__brand img {
+            width: 76px;
+            height: auto;
+            display: block;
+          }
+
+          .rausr-menu__search {
+            position: relative;
+            width: 100%;
+            max-width: 390px;
+          }
+
+          .rausr-menu__search-form {
+            position: relative;
+            min-height: 46px;
+            display: flex;
+            align-items: center;
+            padding: 2px;
+            border-radius: 6px;
+            background: #5DFFF1;
+            overflow: hidden;
+            isolation: isolate;
+            --rausr-search-color-a: #5DFFF1;
+            --rausr-search-color-b: #E1FFD8;
+            --rausr-search-color-c: #FFE57A;
+            --rausr-search-color-d: #FF9CE8;
+            --rausr-search-color-e: #886BFF;
+            --rausr-search-color-f: #8EEFFF;
+            transition:
+              --rausr-search-color-a 900ms ease,
+              --rausr-search-color-b 900ms ease,
+              --rausr-search-color-c 900ms ease,
+              --rausr-search-color-d 900ms ease,
+              --rausr-search-color-e 900ms ease,
+              --rausr-search-color-f 900ms ease,
+              background-color 900ms ease;
+          }
+
+          .rausr-menu__search-form::before {
+            content: "";
+            position: absolute;
+            inset: -130%;
+            z-index: 0;
+            background:
+              conic-gradient(
+                from 0deg,
+                var(--rausr-search-color-a) 0deg,
+                var(--rausr-search-color-b) 58deg,
+                var(--rausr-search-color-c) 118deg,
+                var(--rausr-search-color-d) 178deg,
+                var(--rausr-search-color-e) 238deg,
+                var(--rausr-search-color-f) 302deg,
+                var(--rausr-search-color-a) 360deg
+              );
+            animation: rausr-search-rainbow 6s linear infinite;
+          }
+
+          @keyframes rausr-search-rainbow {
+            to {
+              transform: rotate(1turn);
+            }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .rausr-menu__search-form::before {
+              animation: none;
+            }
+
+            .rausr-menu__item--dropdown:hover .rausr-menu__chevron,
+            .rausr-menu__item--dropdown:focus-within .rausr-menu__chevron {
+              animation: none;
+            }
+          }
+
+          .rausr-menu__search-label {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+          }
+
+          .rausr-menu__search-input {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            min-height: 44px;
+            border: 0;
+            border-radius: 5px;
+            background: #F7F6FB;
+            padding: 0 50px 0 14px;
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+            color: #3A3746;
+            box-sizing: border-box;
+          }
+
+          .rausr-menu__search-input::placeholder {
+            color: #3A3746;
+            opacity: 1;
+          }
+
+          .rausr-menu__search-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            right: 52px;
+            z-index: 2;
+            display: block;
+            overflow: hidden;
+            color: #3A3746;
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.2;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(-50%);
+            transition: opacity 120ms ease;
+          }
+
+          .rausr-menu__search-placeholder.is-visible {
+            opacity: 1;
+          }
+
+          .rausr-menu__search-placeholder::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 42px;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(247, 246, 251, 0), #F7F6FB 78%);
+            pointer-events: none;
+          }
+
+          .rausr-menu__search-input:focus {
+            outline: none;
+            background: #fff;
+          }
+
+          .rausr-menu__search-submit {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 1;
+          }
+
+          .rausr-menu__search-icon {
+            position: relative;
+            display: block;
+            font-size: 20px;
+            line-height: 1;
+          }
+
+          .rausr-menu__search-popover {
+            position: absolute;
+            top: calc(100% + 12px);
+            left: 0;
+            right: 0;
+            z-index: 1500;
+            padding: 1rem 1rem 0.5rem;
+            border: 1px solid #DBD9E5;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 18px 44px rgba(43, 34, 83, 0.16);
+          }
+
+          .rausr-menu__search-popover[hidden] {
+            display: none;
+          }
+
+          .rausr-menu__toggle {
+            display: none;
+            border: 0;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+          }
+
+          .rausr-menu__toggle img {
+            width: 36px;
+            height: 36px;
+            display: block;
+          }
+
+          .rausr-menu__panel {
+            justify-self: end;
+          }
+
+          .rausr-menu__list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 34px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+
+          .rausr-menu__item {
+            position: relative;
+            margin: 0;
+            padding: 0;
+          }
+
+          .rausr-menu__link,
+          .rausr-menu__trigger,
+          .rausr-menu__contact {
+            appearance: none;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            min-height: 40px;
+            border: 0;
+            border-radius: 999px;
+            background: transparent;
+            color: #3A3746;
+            font-family: Satoshi, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+            white-space: nowrap;
+            text-decoration: none;
+            cursor: pointer;
+            box-sizing: border-box;
+          }
+
+          .rausr-menu__link::after,
+          .rausr-menu__trigger--services::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 6px;
+            width: 100%;
+            height: 2px;
+            border-radius: 999px;
+            background: #7355FF;
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 220ms ease;
+          }
+
+          .rausr-menu__link:hover::after,
+          .rausr-menu__link:focus-visible::after,
+          .rausr-menu__trigger--services:hover::after,
+          .rausr-menu__trigger--services:focus-visible::after,
+          .rausr-menu__item--dropdown:hover .rausr-menu__trigger--services::after,
+          .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--services::after,
+          .rausr-menu__item.is-open .rausr-menu__trigger--services::after {
+            transform: scaleX(1);
+          }
+
+          .rausr-menu__link:hover,
+          .rausr-menu__link:focus-visible,
+          .rausr-menu__trigger--services:hover,
+          .rausr-menu__trigger--services:focus-visible,
+          .rausr-menu__item--dropdown:hover .rausr-menu__trigger--services,
+          .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--services,
+          .rausr-menu__item.is-open .rausr-menu__trigger--services {
+            color: #7355FF;
+            text-decoration: none;
+          }
+
+          .rausr-menu__trigger {
+            padding: 0;
+          }
+
+          .rausr-menu__trigger--articles {
+            min-width: 101px;
+            padding: 0 17px;
+            border: 2px solid #7355FF;
+            color: #7355FF !important;
+            background:
+              linear-gradient(90deg, color(display-p3 0.964 1.000 0.247) 0 50%, transparent 50% 100%),
+              #fff;
+            background-size: 200% 100%, 100% 100%;
+            background-position: 100% 0, 0 0;
+            transition: background-position 240ms ease, color 180ms ease;
+          }
+
+          .rausr-menu__trigger--articles,
+          .rausr-menu__trigger--articles:visited,
+          .rausr-menu__trigger--articles:hover,
+          .rausr-menu__trigger--articles:focus-visible,
+          .rausr-menu__item--articles:hover .rausr-menu__trigger--articles,
+          .rausr-menu__item--articles:focus-within .rausr-menu__trigger--articles {
+            color: #7355FF !important;
+          }
+
+          .rausr-menu__trigger--articles:hover,
+          .rausr-menu__trigger--articles:focus-visible {
+            background-position: 0 0, 0 0;
+          }
+
+          .rausr-menu__contact {
+            min-width: 111px;
+            padding: 0 18px;
+            color: #D4FFCE !important;
+            color: color(display-p3 0.831 1.000 0.807) !important;
+            background: linear-gradient(90deg, #43414C 0 50%, #7355FF 50% 100%);
+            background-size: 200% 100%;
+            background-position: 100% 0;
+            overflow: hidden;
+            transition: background-position 240ms ease, color 180ms ease;
+          }
+
+          .rausr-menu__contact:hover,
+          .rausr-menu__contact:focus-visible,
+          .rausr-menu__contact:visited {
+            color: #D4FFCE !important;
+            color: color(display-p3 0.831 1.000 0.807) !important;
+            background-position: 0 0;
+            text-decoration: none;
+          }
+
+          .rausr-menu__chevron {
+            display: inline-flex;
+            line-height: 1;
+            transition: transform 160ms ease;
+          }
+
+          .rausr-menu__item.is-open .rausr-menu__chevron {
+            transform: translateY(2px);
+          }
+
+          @keyframes rausr-menu-arrow-hop {
+            0%,
+            100% {
+              transform: translateY(0);
+            }
+
+            50% {
+              transform: translateY(4px);
+            }
+          }
+
+          .rausr-menu__dropdown {
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 50%;
+            z-index: 1600;
+            min-width: 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 10px;
+            border: 1px solid #DBD9E5;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 18px 44px rgba(43, 34, 83, 0.16);
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(-50%) translateY(6px);
+            transition: opacity 160ms ease, transform 160ms ease;
+          }
+
+          .rausr-menu__item.is-open .rausr-menu__dropdown {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+          }
+
+          @media (min-width: 992px) {
+            .rausr-menu__item--dropdown::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: -18px;
+              right: -18px;
+              height: 12px;
+              display: none;
+            }
+
+            .rausr-menu__item--dropdown:hover::after,
+            .rausr-menu__item--dropdown:focus-within::after,
+            .rausr-menu__item.is-open::after {
+              display: block;
+            }
+
+            .rausr-menu__item--dropdown:hover .rausr-menu__dropdown,
+            .rausr-menu__item--dropdown:focus-within .rausr-menu__dropdown {
+              opacity: 1;
+              pointer-events: auto;
+              transform: translateX(-50%) translateY(0);
+            }
+
+            .rausr-menu__item--dropdown:hover .rausr-menu__chevron,
+            .rausr-menu__item--dropdown:focus-within .rausr-menu__chevron {
+              animation: rausr-menu-arrow-hop 700ms ease-in-out infinite;
+            }
+          }
+
+          .rausr-menu__dropdown-link {
+            display: block;
+            padding: 12px 14px;
+            border-radius: 8px;
+            color: #43414C;
+            font-family: Satoshi, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.15;
+            white-space: nowrap;
+            text-decoration: none;
+          }
+
+          .rausr-menu__dropdown-link:hover,
+          .rausr-menu__dropdown-link:focus-visible {
+            color: #7355FF;
+            background: #F2EEFF;
+            text-decoration: none;
+          }
+
+          .rausr-menu__dropdown-link--all {
+            font-weight: 700;
+          }
+
+          .rausr-menu__item--dropdown:hover,
+          .rausr-menu__item--dropdown:focus-within,
+          .rausr-menu__item.is-open {
+            z-index: 2;
+          }
+
+          @media (max-width: 1280px) {
+            .rausr-menu-wrap {
+              padding: 3rem;
+            }
+
+            .rausr-menu {
+              grid-template-columns: 90px 390px 1fr;
+              column-gap: 48px;
+            }
+
+            .rausr-menu__brand img {
+              width: 76px;
+            }
+
+            .rausr-menu__search {
+              max-width: 390px;
+            }
+
+            .rausr-menu__search-form {
+              min-height: 46px;
+              padding: 2px;
+              border-radius: 6px;
+            }
+
+            .rausr-menu__search-input {
+              min-height: 44px;
+              border-radius: 5px;
+              padding: 0 50px 0 14px;
+              font-size: 16px;
+            }
+
+            .rausr-menu__search-placeholder {
+              left: 16px;
+              right: 52px;
+              font-size: 16px;
+            }
+
+            .rausr-menu__search-placeholder::after {
+              width: 42px;
+            }
+
+            .rausr-menu__search-submit {
+              right: 14px;
+              width: 24px;
+              height: 24px;
+            }
+
+            .rausr-menu__search-icon {
+              font-size: 20px;
+            }
+
+            .rausr-menu__list {
+              gap: 34px;
+            }
+
+            .rausr-menu__link,
+            .rausr-menu__trigger,
+            .rausr-menu__contact {
+              gap: 7px;
+              min-height: 40px;
+              font-size: 16px;
+            }
+
+            .rausr-menu__trigger--articles {
+              min-width: 101px;
+              padding: 0 17px;
+              border-width: 2px;
+            }
+
+            .rausr-menu__contact {
+              min-width: 111px;
+              padding: 0 18px;
+            }
+
+            .rausr-menu__dropdown {
+              min-width: 220px;
+            }
+
+            .rausr-menu__dropdown-link {
+              padding: 12px 14px;
+              font-size: 15px;
+            }
+          }
+
+          @media (max-width: 1240px) {
+            .rausr-menu-wrap {
+              padding-left: 2rem;
+              padding-right: 2rem;
+            }
+
+            .rausr-menu {
+              grid-template-columns: 82px minmax(300px, 340px) 1fr;
+              column-gap: 24px;
+            }
+
+            .rausr-menu__list {
+              gap: 18px;
+            }
+
+            .rausr-menu__link,
+            .rausr-menu__trigger,
+            .rausr-menu__contact {
+              font-size: 15px;
+            }
+
+            .rausr-menu__trigger--articles {
+              min-width: 96px;
+              border-width: 2px;
+            }
+
+            .rausr-menu__contact {
+              min-width: 106px;
+            }
+
+            .rausr-menu__search-form {
+              min-height: 46px;
+            }
+
+            .rausr-menu__search-input {
+              min-height: 44px;
+            }
+          }
+
+          @media (max-width: 991px) {
+            .rausr-menu-wrap {
+              position: sticky;
+              top: 0;
+              padding: 18px 18px 20px;
+            }
+
+            .rausr-menu {
+              display: grid;
+              grid-template-columns: 1fr auto;
+              column-gap: 16px;
+              row-gap: 16px;
+            }
+
+            .rausr-menu__brand img {
+              width: 76px;
+            }
+
+            .rausr-menu__search {
+              grid-column: 1 / -1;
+              grid-row: 2;
+              max-width: none;
+            }
+
+            .rausr-menu__search-form {
+              min-height: 58px;
+            }
+
+            .rausr-menu__search-input {
+              min-height: 52px;
+              padding: 0 58px 0 16px;
+              font-size: 17px;
+            }
+
+            .rausr-menu__search-placeholder {
+              left: 18px;
+              right: 62px;
+              font-size: 17px;
+            }
+
+            .rausr-menu__search-submit {
+              right: 15px;
+              width: 30px;
+              height: 30px;
+            }
+
+            .rausr-menu__search-icon {
+              font-size: 22px;
+            }
+
+            .rausr-menu__toggle {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              justify-self: end;
+            }
+
+            .rausr-menu__panel {
+              grid-column: 1 / -1;
+              grid-row: 3;
+              justify-self: stretch;
+              display: none;
+            }
+
+            .rausr-menu__panel.is-open {
+              display: block;
+            }
+
+            .rausr-menu__list {
+              flex-direction: column;
+              align-items: stretch;
+              gap: 8px;
+              padding: 12px;
+              border: 1px solid #DBD9E5;
+              border-radius: 14px;
+              background: #fff;
+              box-shadow: 0 18px 44px rgba(43, 34, 83, 0.12);
+            }
+
+            .rausr-menu__link,
+            .rausr-menu__trigger,
+            .rausr-menu__contact {
+              width: 100%;
+              min-height: 52px;
+              justify-content: space-between;
+              padding: 0 16px;
+              border-radius: 10px;
+              font-size: 18px;
+            }
+
+            .rausr-menu__contact {
+              justify-content: center;
+            }
+
+            .rausr-menu__trigger--articles {
+              min-width: 0;
+              border-width: 2px;
+            }
+
+            .rausr-menu__dropdown {
+              position: static;
+              min-width: 0;
+              display: none;
+              margin-top: 8px;
+              padding: 6px;
+              opacity: 1;
+              pointer-events: auto;
+              transform: none;
+              box-shadow: none;
+              border-radius: 10px;
+              background: #F8F7FF;
+            }
+
+            .rausr-menu__item.is-open .rausr-menu__dropdown {
+              display: flex;
+              transform: none;
+            }
+
+            .rausr-menu__dropdown-link {
+              white-space: normal;
+              font-size: 16px;
+            }
+          }
+        </style>
+
     </head>
 
     <body>
         {{ partial "body-open" . }}
 
-    <div class="container-fluid">
+    {{ $services := where .Site.RegularPages "Type" "service" }}
+    {{ $services = sort $services "Weight" "asc" }}
+    {{ $firstServiceURL := "/event-design/" }}
+    {{ range first 1 $services }}
+        {{ $firstServiceURL = .RelPermalink }}
+    {{ end }}
+    {{ $currentPath := .RelPermalink }}
+    {{ $isWorks := hasPrefix $currentPath "/works/" }}
+    {{ $isServices := eq .Type "service" }}
+    {{ $isAbout := or (eq $currentPath "/about/") (hasPrefix $currentPath "/about/") }}
+    {{ $isArticles := or (hasPrefix $currentPath "/blog/") (hasPrefix $currentPath "/topics/") (hasPrefix $currentPath "/tags/") }}
+    {{ $isContact := eq $currentPath "/contact/" }}
+    {{ $latestArticles := first 5 (sort (where .Site.RegularPages "Section" "blog") "Date" "desc") }}
+    {{ $searchPlaceholders := slice }}
+    {{ range $services }}
+        {{ $searchPlaceholders = $searchPlaceholders | append .Title }}
+    {{ end }}
+    {{ range $latestArticles }}
+        {{ $searchPlaceholders = $searchPlaceholders | append .Title }}
+    {{ end }}
+    {{ $articleTopics := slice
+        (dict "label" "All Articles" "url" "/blog/")
+        (dict "label" "Graphic Design" "url" "/topics/graphic-design/")
+        (dict "label" "Creativity" "url" "/topics/creativity/")
+        (dict "label" "UX & UI" "url" "/topics/ux-ui/")
+        (dict "label" "Trends" "url" "/topics/trends/")
+    }}
 
-        <nav class="navbar navbar-expand-lg">
-            
-            <a class="navbar-brand" href="/"><img src="/svg/logo-solo.svg" width="80px" height="23px" alt=""></a>
+    <header class="rausr-menu-wrap">
+        <nav class="rausr-menu" data-rausr-menu>
+            <a class="rausr-menu__brand" href="/" aria-label="rausr home">
+                <img src="/svg/logo-solo.svg" alt="rausr">
+            </a>
 
-            <div class="navbar-search" role="search">
-                <form class="navbar-search__form" action="{{ "/search/" | relURL }}" method="get">
-                    <label class="navbar-search__label" for="navbar-search-input">Search</label>
+            <div class="rausr-menu__search" role="search">
+                <form class="rausr-menu__search-form" action="{{ "/search/" | relURL }}" method="get">
+                    <label class="rausr-menu__search-label" for="navbar-search-input">Search</label>
                     <input
                         id="navbar-search-input"
-                        class="navbar-search__input"
+                        class="rausr-menu__search-input"
                         type="search"
                         role="combobox"
                         name="q"
@@ -63,10 +866,14 @@
                         aria-haspopup="listbox"
                         aria-expanded="false"
                         data-index-path="{{ "/" | relURL }}index.json"
+                        data-placeholder-phrases-base64="{{ $searchPlaceholders | jsonify | base64Encode }}"
                     >
-                    <button class="navbar-search__submit" type="submit" aria-label="Submit search">🔍</button>
+                    <span class="rausr-menu__search-placeholder" id="navbar-search-placeholder" aria-hidden="true"></span>
+                    <button class="rausr-menu__search-submit" type="submit" aria-label="Submit search">
+                        <span class="rausr-menu__search-icon" aria-hidden="true">🔍</span>
+                    </button>
                 </form>
-                <div class="navbar-search__dropdown" id="navbar-search-dropdown" hidden>
+                <div class="rausr-menu__search-popover navbar-search__dropdown" id="navbar-search-dropdown" hidden>
                     <ul class="navbar-search__results" id="navbar-search-results" role="listbox"></ul>
                     <a
                         id="navbar-search-see-all"
@@ -77,61 +884,67 @@
                 </div>
             </div>
 
-            <button class="navbar-toggler" type="button" id="menuToggle" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img id="menuIcon" src="/svg/hamb.svg" alt="menu icon">
+            <button
+                class="rausr-menu__toggle"
+                type="button"
+                id="rausrMenuToggle"
+                aria-controls="rausrMenuPanel"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <img id="rausrMenuIcon" src="/svg/hamb.svg" alt="menu icon">
             </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                {{ if .Site.Menus.main }}
-                {{/* Compute cutoff for "this week" = last 7 days */}}
-                {{ $weekCutoff := sub (now.Unix) (mul 7 86400) }}
 
-                {{/* Articles this week: prefer Section "blog", fallback to Type "articles" */}}
-                {{ $articlesPages := where $.Site.RegularPages "Section" "blog" }}
-                {{ if eq (len $articlesPages) 0 }}
-                  {{ $articlesPages = where $.Site.RegularPages "Type" "articles" }}
-                {{ end }}
-                {{ $articlesRecent := where $articlesPages "Date.Unix" "ge" $weekCutoff }}
-                {{ $articlesCount := len $articlesRecent }}
-
-                {{/* Works this week: prefer Section "works", fallback to Type "works" */}}
-                {{ $worksPages := where $.Site.RegularPages "Section" "works" }}
-                {{ if eq (len $worksPages) 0 }}
-                  {{ $worksPages = where $.Site.RegularPages "Type" "works" }}
-                {{ end }}
-                {{ $worksRecent := where $worksPages "Date.Unix" "ge" $weekCutoff }}
-                {{ $worksCount := len $worksRecent }}
-
-                <ul class="navbar-nav">
-                  {{ range sort .Site.Menus.main }}
-                    {{ $id := lower .Identifier }}
-                    {{ $name := lower .Name }}
-                    {{ $isArticles := or (eq $id "articles") (eq $name "articles") (in .URL "/blog") }}
-                    {{ $isWorks := or (eq $id "works") (eq $name "works") (in .URL "/works") }}
-                    <li class="nav-item{{ if $isArticles }} nav-item--articles{{ end }}{{ if $isWorks }} nav-item--works{{ end }}">
-                      <a href="{{ .URL }}">{{ .Name }}
-                        {{ if and $isArticles (gt $articlesCount 0) }}
-                          <span class="menu-badge menu-badge" aria-label="{{ $articlesCount }} articles this week">{{ $articlesCount }}</span>
-                        {{ end }}
-                        {{ if and $isWorks (gt $worksCount 0) }}
-                          <span class="menu-badge menu-badge-works" aria-label="{{ $worksCount }} works this week">{{ $worksCount }}</span>
-                        {{ end }}
-                      </a>
+            <div class="rausr-menu__panel" id="rausrMenuPanel">
+                <ul class="rausr-menu__list">
+                    <li class="rausr-menu__item">
+                        <a href="/works/" class="rausr-menu__link{{ if $isWorks }} is-active{{ end }}">Works</a>
                     </li>
-                  {{ end }}
-                </ul>
-                {{ end }}
 
-                {{ if .Site.Menus.icon }}
-                <ul class="nav-socials">
-                {{ range sort .Site.Menus.icon }}
-                    <li class="nav-icon"><a href="{{ .URL }}" target="_blank"><i class="fab {{ .Name }}"></i></a></li>
-                    {{ end }}
+                    <li class="rausr-menu__item rausr-menu__item--dropdown{{ if $isServices }} is-current{{ end }}" data-rausr-dropdown>
+                        <a
+                            href="{{ $firstServiceURL }}"
+                            class="rausr-menu__trigger rausr-menu__trigger--services{{ if $isServices }} is-active{{ end }}"
+                            data-rausr-trigger
+                            aria-expanded="false"
+                        >
+                            <span>Services</span>
+                            <span class="rausr-menu__chevron" aria-hidden="true">↓</span>
+                        </a>
+                        <div class="rausr-menu__dropdown">
+                            {{ range $services }}
+                            <a href="{{ .RelPermalink }}" class="rausr-menu__dropdown-link{{ if eq .RelPermalink $currentPath }} is-active{{ end }}">{{ .Title }}</a>
+                            {{ end }}
+                        </div>
+                    </li>
+
+                    <li class="rausr-menu__item">
+                        <a href="/about/" class="rausr-menu__link{{ if $isAbout }} is-active{{ end }}">About</a>
+                    </li>
+
+                    <li class="rausr-menu__item rausr-menu__item--dropdown rausr-menu__item--articles{{ if $isArticles }} is-current{{ end }}" data-rausr-dropdown>
+                        <a
+                            href="{{ "/blog/" | relURL }}"
+                            class="rausr-menu__trigger rausr-menu__trigger--articles{{ if $isArticles }} is-active{{ end }}"
+                            data-rausr-trigger
+                            aria-expanded="false"
+                        >
+                            <span>Articles</span>
+                            <span class="rausr-menu__chevron" aria-hidden="true">↓</span>
+                        </a>
+                        <div class="rausr-menu__dropdown rausr-menu__dropdown--articles">
+                            {{ range $articleTopics }}
+                            <a href="{{ .url | relURL }}" class="rausr-menu__dropdown-link{{ if eq .label "All Articles" }} rausr-menu__dropdown-link--all{{ end }}{{ if eq (relURL .url) $currentPath }} is-active{{ end }}">{{ .label }}</a>
+                            {{ end }}
+                        </div>
+                    </li>
+
+                    <li class="rausr-menu__item rausr-menu__item--contact">
+                        <a href="/contact/" class="rausr-menu__contact{{ if $isContact }} is-active{{ end }}">Contact →</a>
+                    </li>
                 </ul>
-                {{ end }}                
             </div>
         </nav>
-
-    </div>
+    </header>
 
 <div id="page-blur">

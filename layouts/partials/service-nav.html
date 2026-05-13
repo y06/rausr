@@ -1,0 +1,22 @@
+{{ $services := where .Site.RegularPages "Type" "service" }}
+{{ $services = sort $services "Weight" "asc" }}
+{{ if gt (len $services) 0 }}
+<div class="container-tag-list service-tag-list">
+    <button class="tag-scroll left" aria-label="Scroll services left">←</button>
+    <div class="tag-list-wrapper">
+        <ul class="tag-list">
+            <li><a href="/" class="tag-link">← Home</a></li>
+            {{ range $services }}
+                <li>
+                    {{ if eq .RelPermalink $.RelPermalink }}
+                        <span class="tag-link active">{{ .Title }}</span>
+                    {{ else }}
+                        <a href="{{ .RelPermalink }}" class="tag-link">{{ .Title }}</a>
+                    {{ end }}
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+    <button class="tag-scroll right" aria-label="Scroll services right">→</button>
+</div>
+{{ end }}

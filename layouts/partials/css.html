@@ -13,13 +13,11 @@
     {{ with readFile (printf "static/%s" $mainCssPath) }}
         <style id="inline-main-css">{{ . | safeCSS }}</style>
     {{ end }}
-    {{ $mainCss := $mainCssPath | absURL }}
-    <link rel="preload" href="{{ $mainCss }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ $mainCss }}"></noscript>
+    {{ $mainCss := $mainCssPath | relURL }}
+    <link rel="stylesheet" href="{{ $mainCss }}">
 {{ else }}
-    {{ $mainCss := $mainCssPath | absURL }}
-    <link rel="preload" href="{{ $mainCss }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ $mainCss }}"></noscript>
+    {{ $mainCss := $mainCssPath | relURL }}
+    <link rel="stylesheet" href="{{ $mainCss }}">
 {{ end }}
 
 <!-- critical fonts -->

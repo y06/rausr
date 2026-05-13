@@ -1,0 +1,37 @@
+{{ partial "header" . }}
+
+<main>
+
+    <section class="header header-contact header-service">
+        <div class="header-content header-contact header-service__content">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            <button
+                class="header-cta-button header-cta-button-contact"
+                data-scroll-target="#service-benefits"
+                data-scroll-fallback=".service-slider--benefits,.service-slider"
+            >
+                {{ or .Params.header_cta_label "See the menu ↓" }}
+            </button>
+        </div>
+        <div class="header-illustration">
+            {{ with .Params.header_image }}
+            <img src="{{ . }}" alt="{{ $.Title }} header image" />
+            {{ end }}
+        </div>
+    </section>
+
+    {{ partial "service-nav.html" . }}
+
+    {{ partial "service-card-slider.html" (dict "section" .Params.benefits "variant" "benefits") }}
+    {{ partial "service-card-slider.html" (dict "section" .Params.process "variant" "process") }}
+
+</main>
+
+{{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
+
+{{ partial "footer" . }}
