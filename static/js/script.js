@@ -93,6 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        let isDragging = false;
+        let hasDragged = false;
+        let dragStartX = 0;
+        let dragStartScrollLeft = 0;
+        let activePointerId = null;
+
         const getCardStep = () => {
             if (cards.length < 2) {
                 return viewport.clientWidth;
@@ -103,23 +109,86 @@ document.addEventListener("DOMContentLoaded", function () {
         const updateSliderState = () => {
             const maxScrollLeft = Math.max(viewport.scrollWidth - viewport.clientWidth, 0);
             const currentScroll = Math.min(Math.max(viewport.scrollLeft, 0), maxScrollLeft);
-            const progress = maxScrollLeft === 0
-                ? 1
-                : (currentScroll + viewport.clientWidth) / viewport.scrollWidth;
+            const progress = maxScrollLeft <= 0 ? 1 : currentScroll / maxScrollLeft;
 
-            progressFill.style.width = `${Math.min(progress * 100, 100)}%`;
+            progressFill.style.transform = `scaleX(${Math.max(0, Math.min(progress, 1))})`;
             prevButton.disabled = currentScroll <= 1;
             nextButton.disabled = currentScroll >= maxScrollLeft - 1;
             slider.classList.toggle("is-static", maxScrollLeft <= 0);
         };
 
         const scrollByCard = (direction) => {
-            const amount = getCardStep() * direction;
-            viewport.scrollBy({ left: amount, behavior: "smooth" });
+            const maxScrollLeft = Math.max(viewport.scrollWidth - viewport.clientWidth, 0);
+            const step = getCardStep();
+            const currentIndex = Math.round(viewport.scrollLeft / step);
+            const targetIndex = Math.max(0, Math.min(currentIndex + direction, cards.length - 1));
+            const target = Math.max(0, Math.min(cards[targetIndex].offsetLeft, maxScrollLeft));
+
+            slider.classList.add("is-settling");
+            viewport.scrollTo({ left: target, behavior: "smooth" });
+            window.setTimeout(() => slider.classList.remove("is-settling"), 520);
+        };
+
+        const finishDrag = () => {
+            if (!isDragging) {
+                return;
+            }
+
+            isDragging = false;
+            activePointerId = null;
+            slider.classList.remove("is-dragging");
+            viewport.style.scrollSnapType = "";
+
+            const maxScrollLeft = Math.max(viewport.scrollWidth - viewport.clientWidth, 0);
+            const step = getCardStep();
+            const targetIndex = Math.max(0, Math.min(Math.round(viewport.scrollLeft / step), cards.length - 1));
+            const target = Math.max(0, Math.min(cards[targetIndex].offsetLeft, maxScrollLeft));
+            viewport.scrollTo({ left: target, behavior: "smooth" });
+            window.setTimeout(() => {
+                hasDragged = false;
+            }, 0);
         };
 
         prevButton.addEventListener("click", () => scrollByCard(-1));
         nextButton.addEventListener("click", () => scrollByCard(1));
+
+        viewport.addEventListener("pointerdown", (event) => {
+            if (event.button !== undefined && event.button !== 0) {
+                return;
+            }
+
+            isDragging = true;
+            hasDragged = false;
+            activePointerId = event.pointerId;
+            dragStartX = event.clientX;
+            dragStartScrollLeft = viewport.scrollLeft;
+            viewport.style.scrollSnapType = "none";
+            slider.classList.add("is-dragging");
+            viewport.setPointerCapture(event.pointerId);
+        });
+
+        viewport.addEventListener("pointermove", (event) => {
+            if (!isDragging || event.pointerId !== activePointerId) {
+                return;
+            }
+
+            const delta = event.clientX - dragStartX;
+            if (Math.abs(delta) > 3) {
+                hasDragged = true;
+            }
+            viewport.scrollLeft = dragStartScrollLeft - delta;
+        });
+
+        viewport.addEventListener("pointerup", finishDrag);
+        viewport.addEventListener("pointercancel", finishDrag);
+        viewport.addEventListener("lostpointercapture", finishDrag);
+
+        viewport.addEventListener("click", (event) => {
+            if (hasDragged) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+        }, true);
 
         viewport.addEventListener("scroll", () => window.requestAnimationFrame(updateSliderState));
         window.addEventListener("resize", updateSliderState);

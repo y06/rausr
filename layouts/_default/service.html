@@ -1,15 +1,16 @@
 {{ partial "header" . }}
+{{ partial "service-styles.html" . }}
 
-<main>
+<main class="service-page">
 
-    <section class="header header-contact header-service">
-        <div class="header-content header-contact header-service__content">
+    <section class="header header-service">
+        <div class="header-content header-service__content">
             <h1>{{ .Title }}</h1>
             {{ with .Params.description }}
             <p>{{ . }}</p>
             {{ end }}
             <button
-                class="header-cta-button header-cta-button-contact"
+                class="header-cta-button header-cta-button-about"
                 data-scroll-target="#service-benefits"
                 data-scroll-fallback=".service-slider--benefits,.service-slider"
             >

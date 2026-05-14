@@ -17,8 +17,8 @@
     {{ end }}
     {{ $paginator := .Paginate $filteredPages 8 }}
 
-    <section class="header" style="background-color: {{ .Params.header_color }}">
-        <div class="header-content header-contact header-topic">
+    <section class="header header-blog">
+        <div class="header-content">
             <div class="h1container">
             {{ $pageNum := $paginator.PageNumber }}
             {{ $totalPages := $paginator.TotalPages }}
@@ -30,18 +30,18 @@
             {{ $totalArticles := $paginator.TotalNumberOfElements }}
             {{ $endIndex := cond (gt $proposedEnd $totalArticles) $totalArticles $proposedEnd }}
             <div class="counter">
-                <span class="word showinglist showinglisttag">showing</span>
-                <div class="number total showinglisttag" aria-label="Showing articles {{ $startIndex }} to {{ $endIndex }}">{{ $startIndex }}–{{ $endIndex }}</div>
+                <span class="word showinglist">showing</span>
+                <div class="number total showinglist" aria-label="Showing articles {{ $startIndex }} to {{ $endIndex }}">{{ $startIndex }}–{{ $endIndex }}</div>
             </div>
             <div class="counter">
-                <span class="word showinglisttag">total</span>
-                <div class="number total showinglisttag" aria-label="{{ $totalArticles }} articles">{{ $totalArticles }}</div>
+                <span class="word">total</span>
+                <div class="number total" aria-label="{{ $totalArticles }} articles">{{ $totalArticles }}</div>
             </div>
         </div>
             {{ with .Params.description }}
             <p>{{ . }}</p>
             {{ end }}
-            <button class="header-cta-button header-cta-button-contact" data-scroll-target=".container-tag-list">Show me something ↓</button>
+            <button class="header-cta-button" data-scroll-target=".container-tag-list">Show me something ↓</button>
         </div>
         <div class="header-illustration">
             {{ with .Params.header_image }}

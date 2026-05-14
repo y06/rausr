@@ -75,7 +75,7 @@
 
           .rausr-menu-wrap {
             width: 100%;
-            padding: 3rem;
+            padding: 3rem 2.25rem;
             background: #fff;
             box-sizing: border-box;
             position: relative;
@@ -99,12 +99,12 @@
 
           .rausr-menu {
             width: 100%;
-            max-width: 1280px;
+            max-width: none;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 90px 390px 1fr;
+            grid-template-columns: 90px 480px 1fr;
             align-items: center;
-            column-gap: 48px;
+            column-gap: 52px;
             font-family: Satoshi, sans-serif;
           }
 
@@ -130,7 +130,7 @@
           .rausr-menu__search {
             position: relative;
             width: 100%;
-            max-width: 390px;
+            max-width: 480px;
           }
 
           .rausr-menu__search-form {
@@ -214,9 +214,9 @@
             border: 0;
             border-radius: 5px;
             background: #F7F6FB;
-            padding: 0 50px 0 14px;
+            padding: 0 58px 0 16px;
             font-family: Inter, sans-serif;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 400;
             line-height: 1;
             color: #3A3746;
@@ -231,8 +231,8 @@
           .rausr-menu__search-placeholder {
             position: absolute;
             top: 50%;
-            left: 16px;
-            right: 52px;
+            left: 18px;
+            right: 60px;
             z-index: 2;
             display: block;
             overflow: hidden;
@@ -271,10 +271,10 @@
 
           .rausr-menu__search-submit {
             position: absolute;
-            right: 14px;
+            right: 16px;
             top: 50%;
-            width: 24px;
-            height: 24px;
+            width: 26px;
+            height: 26px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -289,7 +289,7 @@
           .rausr-menu__search-icon {
             position: relative;
             display: block;
-            font-size: 20px;
+            font-size: 22px;
             line-height: 1;
           }
 
@@ -332,7 +332,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            gap: 34px;
+            gap: 48px;
             margin: 0;
             padding: 0;
             list-style: none;
@@ -342,6 +342,10 @@
             position: relative;
             margin: 0;
             padding: 0;
+          }
+
+          .rausr-menu__item--contact {
+            margin-left: -26px;
           }
 
           .rausr-menu__link,
@@ -565,12 +569,12 @@
 
           @media (max-width: 1280px) {
             .rausr-menu-wrap {
-              padding: 3rem;
+              padding: 3rem 2.25rem;
             }
 
             .rausr-menu {
-              grid-template-columns: 90px 390px 1fr;
-              column-gap: 48px;
+              grid-template-columns: 90px 450px 1fr;
+              column-gap: 40px;
             }
 
             .rausr-menu__brand img {
@@ -578,7 +582,7 @@
             }
 
             .rausr-menu__search {
-              max-width: 390px;
+              max-width: 450px;
             }
 
             .rausr-menu__search-form {
@@ -590,32 +594,32 @@
             .rausr-menu__search-input {
               min-height: 44px;
               border-radius: 5px;
-              padding: 0 50px 0 14px;
-              font-size: 16px;
+              padding: 0 58px 0 16px;
+              font-size: 15px;
             }
 
             .rausr-menu__search-placeholder {
-              left: 16px;
-              right: 52px;
+              left: 18px;
+              right: 60px;
               font-size: 16px;
             }
 
             .rausr-menu__search-placeholder::after {
-              width: 42px;
+              width: 48px;
             }
 
             .rausr-menu__search-submit {
-              right: 14px;
-              width: 24px;
-              height: 24px;
+              right: 16px;
+              width: 26px;
+              height: 26px;
             }
 
             .rausr-menu__search-icon {
-              font-size: 20px;
+              font-size: 22px;
             }
 
             .rausr-menu__list {
-              gap: 34px;
+              gap: 42px;
             }
 
             .rausr-menu__link,
@@ -649,8 +653,8 @@
 
           @media (max-width: 1240px) {
             .rausr-menu-wrap {
-              padding-left: 2rem;
-              padding-right: 2rem;
+              padding-left: 1.5rem;
+              padding-right: 1.5rem;
             }
 
             .rausr-menu {
@@ -660,6 +664,10 @@
 
             .rausr-menu__list {
               gap: 18px;
+            }
+
+            .rausr-menu__item--contact {
+              margin-left: -8px;
             }
 
             .rausr-menu__link,
@@ -678,11 +686,11 @@
             }
 
             .rausr-menu__search-form {
-              min-height: 46px;
+              min-height: 48px;
             }
 
             .rausr-menu__search-input {
-              min-height: 44px;
+              min-height: 46px;
             }
           }
 
@@ -717,7 +725,7 @@
             .rausr-menu__search-input {
               min-height: 52px;
               padding: 0 58px 0 16px;
-              font-size: 17px;
+              font-size: 16px;
             }
 
             .rausr-menu__search-placeholder {

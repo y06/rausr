@@ -1,0 +1,361 @@
+<style id="rausr-service-page-css">
+  .service-page {
+    --service-purple: color(display-p3 0.4078 0.2824 1);
+    --service-about-text: color(display-p3 0.831 1.000 0.807);
+    --service-dark: #34313F;
+    --service-muted: #595769;
+    --service-body: #43414C;
+    --service-lavender: #DBD9E5;
+    --service-benefit-number: #A8A9D5;
+    --service-slider-width: min(1040px, calc(100vw - 96px));
+    --service-card-width: 305px;
+    --service-card-gap: 46px;
+    --service-arrow-offset: 50px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .service-page .header-service {
+    background: var(--service-purple) !important;
+    color: var(--service-about-text) !important;
+  }
+
+  .service-page .header-service h1,
+  .service-page .header-service .header-content p {
+    color: var(--service-about-text) !important;
+  }
+
+  .service-page .header-service .header-content p {
+    max-width: 780px;
+  }
+
+  .service-page .header-service .header-illustration img {
+    max-width: min(280px, 100%);
+  }
+
+  .service-page .service-tag-list {
+    margin-bottom: 3.6rem;
+  }
+
+  .service-page .service-slider {
+    display: block !important;
+    width: 100%;
+    margin: 0 0 6.25rem;
+    padding: 0 48px;
+    box-sizing: border-box;
+  }
+
+  .service-page .service-slider--process {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-top: 6.1rem;
+    padding-bottom: 6.4rem;
+    padding-left: 48px;
+    padding-right: 48px;
+    background: linear-gradient(135deg, #EAEAEA 0%, #DBD9E5 100%) !important;
+  }
+
+  .service-page .service-slider__content {
+    width: 100%;
+    max-width: 1138px;
+    margin: 0 auto;
+  }
+
+  .service-page .service-slider h2 {
+    margin: 0 0 3.55rem !important;
+    padding: 0 !important;
+    text-align: center !important;
+    font-family: Inter, sans-serif !important;
+    font-size: 2rem !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    letter-spacing: normal !important;
+    color: var(--service-purple) !important;
+  }
+
+  .service-page .service-slider__lede {
+    max-width: 760px;
+    margin: -2rem auto 3.55rem !important;
+    text-align: center !important;
+    font-family: Satoshi, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+    color: var(--service-body) !important;
+  }
+
+  .service-page .service-slider__frame {
+    position: relative !important;
+    display: block !important;
+  }
+
+  .service-page .service-slider__viewport {
+    display: block !important;
+    width: var(--service-slider-width) !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 0;
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+    touch-action: pan-y;
+    user-select: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .service-page .service-slider.is-dragging .service-slider__viewport {
+    cursor: grabbing;
+    scroll-behavior: auto;
+  }
+
+  .service-page .service-slider__viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-page .service-slider__track {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: var(--service-card-width) !important;
+    gap: var(--service-card-gap) !important;
+    align-items: stretch !important;
+    width: max-content;
+    min-width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .service-page .service-slider__card {
+    display: block !important;
+    width: var(--service-card-width) !important;
+    min-height: 338px !important;
+    margin: 0 !important;
+    padding: 25px 28px 30px !important;
+    border-radius: 24px !important;
+    scroll-snap-align: start;
+    box-sizing: border-box !important;
+    overflow: hidden;
+    transition:
+      box-shadow 420ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 300ms ease !important;
+  }
+
+  .service-page .service-slider--benefits .service-slider__card {
+    border: 1px solid rgba(219, 217, 229, 0.72) !important;
+    background: linear-gradient(135deg, #F8F8F8 0%, #EAEAEA 100%) !important;
+  }
+
+  .service-page .service-slider--process .service-slider__card {
+    border: 1px solid #FFFFFF !important;
+    background: #F8F8F8 !important;
+  }
+
+  .service-page .service-slider__card-top {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+    margin: 0 0 1.55rem !important;
+  }
+
+  .service-page .service-slider__card-number,
+  .service-page .service-slider__card-emoji {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    font-family: Satoshi, sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+  }
+
+  .service-page .service-slider__card-emoji {
+    font-weight: 500 !important;
+  }
+
+  .service-page .service-slider--benefits .service-slider__card-number {
+    color: var(--service-benefit-number) !important;
+  }
+
+  .service-page .service-slider--process .service-slider__card-number {
+    color: var(--service-lavender) !important;
+  }
+
+  .service-page .service-slider__card-heading {
+    margin: 0 0 1.45rem !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: Inter, sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.035em !important;
+    color: var(--service-purple) !important;
+  }
+
+  .service-page .service-slider__card-subheading {
+    margin: 0 0 1.05rem !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: Inter, sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    line-height: 1.45 !important;
+    letter-spacing: -0.025em !important;
+    color: var(--service-muted) !important;
+  }
+
+  .service-page .service-slider__card-text {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: Satoshi, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.55 !important;
+    color: var(--service-body) !important;
+  }
+
+  .service-page .service-slider__arrow {
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 3 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 56px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    transform: translateY(-50%) !important;
+    cursor: pointer !important;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .service-page .service-slider__arrow img {
+    display: block !important;
+    width: 18px !important;
+    height: auto !important;
+    pointer-events: none !important;
+  }
+
+  .service-page .service-slider__arrow:hover,
+  .service-page .service-slider__arrow:focus-visible {
+    opacity: 0.72;
+    transform: translateY(-50%) scale(1.04) !important;
+  }
+
+  .service-page .service-slider__arrow:disabled {
+    opacity: 0.28;
+    cursor: default !important;
+  }
+
+  .service-page .service-slider__arrow--prev {
+    left: calc((100% - var(--service-slider-width)) / 2 - var(--service-arrow-offset)) !important;
+  }
+
+  .service-page .service-slider__arrow--next {
+    right: calc((100% - var(--service-slider-width)) / 2 - var(--service-arrow-offset)) !important;
+  }
+
+  .service-page .service-slider__progress {
+    display: block !important;
+    width: min(100px, 28vw) !important;
+    height: 8px !important;
+    margin: 3.35rem auto 0 !important;
+    padding: 0 !important;
+    border-radius: 999px !important;
+    background: rgba(219, 217, 229, 0.72) !important;
+    overflow: hidden !important;
+  }
+
+  .service-page .service-slider__progress-fill {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: inherit !important;
+    background: var(--service-purple) !important;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 560ms cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+
+  .service-page .service-slider--process .service-slider__progress {
+    background: rgba(255, 255, 255, 0.72) !important;
+  }
+
+  @media (max-width: 1180px) {
+    .service-page {
+      --service-slider-width: min(657px, calc(100vw - 96px));
+      --service-card-gap: 47px;
+      --service-arrow-offset: 42px;
+    }
+
+    .service-page .service-slider {
+      padding-inline: 36px;
+    }
+
+    .service-page .service-slider--process {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .service-page {
+      --service-slider-width: calc(100vw - 80px);
+      --service-card-width: min(305px, calc(100vw - 80px));
+      --service-card-gap: 20px;
+      --service-arrow-offset: 34px;
+    }
+
+    .service-page .service-tag-list {
+      margin-bottom: 4rem;
+    }
+
+    .service-page .service-slider {
+      padding-inline: 20px;
+      margin-bottom: 5rem;
+    }
+
+    .service-page .service-slider--process {
+      padding-top: 4rem;
+      padding-bottom: 4.5rem;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .service-page .service-slider h2 {
+      margin-bottom: 3rem !important;
+      font-size: 2rem !important;
+    }
+
+    .service-page .service-slider__card {
+      min-height: 28rem !important;
+      padding: 1.65rem !important;
+      border-radius: 26px !important;
+    }
+
+    .service-page .service-slider__card-heading {
+      font-size: 2rem !important;
+    }
+
+    .service-page .service-slider__card-subheading {
+      font-size: 1.45rem !important;
+    }
+
+    .service-page .service-slider__arrow {
+      width: 2rem !important;
+    }
+  }
+</style>
