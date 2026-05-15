@@ -887,6 +887,12 @@ h5 {
   pointer-events: none; /* don’t block clicks on the card */
 }
 
+.card-number-value {
+  font-size: 0.68rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
 .card-badge-series {
     background-color: #7043F7;
 }

@@ -6,13 +6,13 @@ tags: ["exhibition stands design", "branding", "marketing", "reports"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
 draft: false
-preview_image: "/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-10.jpg"
+preview_image: "/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-11.jpg"
 header_image: "/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-1.jpg"
 source:
   - "Freeman - Small Booth, Big Impact: Easy Visuals That Pop: https://www.freeman.com/resources/small-booth-big-impact-solutions-that-work/"
   - "Freeman - Optimizing Smaller Booth Spaces (2024): https://www.freeman.com/wp-content/uploads/2024/07/Freeman-Optimizing-Smaller-Booth-Spaces.pdf"
   - "GES - Small But Mighty: Trade Show Booth Design Ideas for 10x10 and 10x20 Spaces: https://insights.ges.com/exhibitor-resources/exhibit-booth-design-tips"
-  - "T3 Systems - Modular Exhibition Stands & Display Systems: https://t3systems.com/"
+  - "T3works - Modular Exhibition Stands & Display Systems: https://t3works.sk"
   - "OCTANORM - Exhibition Systems: https://www.octanorm.com/us/exhibition-systems/"
   - "Derse - bioMérieux modular rental case study: https://derse.com/work/biomerieux"
   - "Skyline Exhibits - Okuma America modular exhibit case study: https://skyline.com/case-studies/okuma-americas-case-study"
@@ -53,9 +53,9 @@ When the budget is small, clarity becomes your luxury material.
 {{< /quote >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-2.jpg" alt="Small inline exhibition stand with a simple back wall, open front, and disciplined graphic hierarchy." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-2.jpg" alt="Small inline exhibition stand with a simple back wall, open front, and disciplined graphic hierarchy." >}}
+
 
 ### Start with the right stand logic
 #### Do not design a mini-palace, design a strong small-format tool
@@ -75,7 +75,7 @@ That 2.5 m zone is often a smart middle ground. It gives presence without forcin
 
 This is also where many stands go wrong. They try to create spectacle with shape. But shape is expensive. Complexity eats money through cutting, joining, finishing, transport, labor time, and errors during setup. If the budget is tight, the geometry should become calmer while the communication becomes stronger.
 
-Small stands perform best when the visitor understands the category fast and sees a clear place to step in. GES’s advice on 10x10 and 10x20 booths makes this point well: a compact stand works when it supports how people naturally pause, enter, and talk.
+Small stands work best when people can understand them in one quick look. The visitor should immediately see what kind of company it is and where they can step in or stop to talk. GES company makes this point well in its advice for small booths around 3 x 3 m (10x10 ft) and 3 x 6 m (10x20 ft): a small stand succeeds when it feels open, easy to read, and easy to enter.
 
 
 {{< halves >}}
@@ -105,18 +105,18 @@ What usually wastes budget:
 - fake-luxury finishes that scratch quickly
 - decorative ceiling ideas for a stand that is too small to justify them
 
-Textile is especially useful in low-budget work because it gives a large clean surface, hides minor frame irregularities well, packs relatively efficiently, and photographs better than many cheap hard-panel solutions.
+Textile is especially useful in low-budget work because it gives a large clean surface, hides minor frame irregularities well, packs very (insted of UV technology roll prints) efficiently, and photographs better than many cheap hard-panel solutions.
 
-T3 positions its system as tool-free and endlessly reconfigurable. That matters for smaller exhibitors because labor cost is often where “cheap” stands stop being cheap. A system that can be assembled by your own team, or at least with minimal installer time, changes the economics immediately.
+[T3works](https://t3works.sk) for example its system as tool-free and endlessly reconfigurable. That matters for smaller exhibitors because labor cost is often where “cheap” stands stop being cheap. A system that can be assembled by your own team, or at least with minimal installer time, changes the economics immediately.
 
 {{< interest >}}
 Unknown but important detail: on crowded show floors, visitors often remember the cleanest large surface, not the most expensive material. Cheap but tidy usually beats premium but noisy.
 {{< /interest >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-4.jpg" alt="Graphic design concept for a compact booth using one hero message, one image, and strong contrast." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-4.jpg" alt="Graphic design concept for a compact booth using one hero message, one image, and strong contrast." >}}
+
 
 ### Excellent graphic design does most of the heavy lifting
 #### In a cheap stand, graphics are not decoration, they are the architecture
@@ -147,9 +147,9 @@ One of Freeman’s better practical points is simple but true: what people see f
 <p class="article-prelink">This sits well next to <a href="/blog/branding-codes-that-stick/">Branding Codes That Stick</a> and <a href="/blog/when-being-trendy-backfires/">When Being Trendy Backfires</a>.</p>
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-5.jpg" alt="Compact booth standing out through lighting, contrast, and one visible live interaction in a hall of larger stands." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-5.jpg" alt="Compact booth standing out through lighting, contrast, and one visible live interaction in a hall of larger stands." >}}
+
 
 ### How to become visible next to giant stands
 #### You probably cannot out-volume them, but you can out-clarify them
@@ -168,16 +168,16 @@ A giant stand can be visually impressive but socially distant. Some feel like co
 
 Lighting matters a lot here. Not expensive theatrical lighting, just intentional lighting. Even a modest spotlight or illuminated product shelf can create direction. Freeman’s small-booth guidance repeatedly emphasizes lighting because visibility is not only about size; it is about where the eye lands first.
 
-Counters are another underrated tool. GES points out that counters often remain visible even when the booth gets crowded and the back wall is partially blocked. In a small booth, the front of a counter can do more branding work than people expect.
+Counters are another underrated tool. GES company points out that counters often remain visible even when the booth gets crowded and the back wall is partially blocked. In a small booth, the front of a counter can do more branding work than people expect.
 
 {{< quote >}}
 Big stands often own more space. Small stands can still own the decision to step closer.
 {{< /quote >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-6.jpg" alt="Visitors comfortably talking inside a small booth that feels open, warm, and more approachable than a large corporate pavilion." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-6.jpg" alt="Visitors comfortably talking inside a small booth that feels open, warm, and more approachable than a large corporate pavilion." >}}
+
 
 ### Why a smaller stand can sometimes feel better than a giant one
 #### Human scale is a serious advantage, not a consolation prize
@@ -234,9 +234,9 @@ This kind of detail works because it rewards attention without turning the stand
 The Competitive Edge exhibitor guide makes a useful point here: attendees want a booth to feel like a destination worth their time. Interactive demos are often the preferred way to engage. The low-budget version of that insight is simple: one meaningful interaction beats five decorative distractions.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-8.jpg" alt="Modular rental exhibition stand parts packed efficiently for reuse, self-assembly, and lower logistics cost." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-8.jpg" alt="Modular rental exhibition stand parts packed efficiently for reuse, self-assembly, and lower logistics cost." >}}
+
 
 ### Rent, reuse, and assemble smart
 #### The budget often leaks in logistics, not in the render
@@ -264,9 +264,9 @@ Self-assembly is not always realistic, but it can be a real saving when:
 The dry run matters more than people think. A stand that looks “easy” in renders can still burn hours on site if parts are mislabeled, counters are overpacked, or cables were never tested before arrival.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-9.jpg" alt="Comparison of successful and unsuccessful low-budget exhibition stands through layout, graphics, and visitor response." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-9.jpg" alt="Comparison of successful and unsuccessful low-budget exhibition stands through layout, graphics, and visitor response." >}}
+
 
 ### Positive examples, sad stories, and the lessons behind them
 #### Budget stands fail predictably, and win predictably too
@@ -314,9 +314,9 @@ Booth-attractiveness research suggests that attractiveness is not just about pre
 {{< /interest >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-10.jpg" alt="Summary image for a compact exhibition stand strategy focused on clarity, modularity, and visitor comfort." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/low-budget-exhibition-stand/low-budget-exhibition-stand-10.jpg" alt="Summary image for a compact exhibition stand strategy focused on clarity, modularity, and visitor comfort." >}}
+
 
 ### Summary
 #### Yes, it is possible
