@@ -2,7 +2,7 @@
 title: "When Designers Copy Each Other and the Right Time to Break the Pattern"
 description: "Why online inspiration platforms make design look increasingly similar, why some uniformity is useful, and how to think clearly about copying, conventions, and standing out."
 date: 2026-05-11
-tags: ["graphic design", "ui ux", "philosophy", "reports"]
+tags: ["graphic design", "ux-ui", "philosophy", "reports"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
 draft: false
