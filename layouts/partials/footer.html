@@ -1,49 +1,97 @@
-<footer>
+<footer class="site-footer">
+  {{ $email := "hello@rausr.com" }}
+  {{ $phoneDigits := "421910160251" }}
+  {{ $whatsAppDisplay := "+421910160251" }}
+  {{ $iconSources := dict
+    "instagram" "/images/contact-svg/instagram-mini.svg"
+    "facebook" "/images/contact-svg/facebook-mini.svg"
+    "linkedin" "/svg/linkedin-icon.svg"
+    "pinterest" "/images/contact-svg/pinterest-mini.svg"
+    "whatsapp" "/images/contact-svg/whatsup-mini.svg"
+  }}
+  {{ $menuLinks := dict }}
+  {{ if .Site.Menus.icon }}
+    {{ range .Site.Menus.icon }}
+      {{ $titleKey := lower (cond (ne .Title "") .Title .Name) }}
+      {{ $menuLinks = merge $menuLinks (dict $titleKey .URL) }}
+    {{ end }}
+  {{ end }}
+  {{ $socials := slice
+    (dict "key" "instagram" "label" "Instagram" "url" (or (index $menuLinks "instagram") "https://instagram.com/rausr_com"))
+    (dict "key" "facebook" "label" "Facebook" "url" (or (index $menuLinks "facebook") "https://www.facebook.com/rausrdotcom/"))
+    (dict "key" "linkedin" "label" "LinkedIn" "url" "https://www.linkedin.com/company/rausr/")
+    (dict "key" "pinterest" "label" "Pinterest" "url" "https://www.pinterest.com/rausr_com/")
+    (dict "key" "whatsapp" "label" "WhatsApp" "url" (printf "https://wa.me/%s" $phoneDigits))
+  }}
 
-	<nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand navbar-brand-footer" href="/"><img src="/svg/logo-foot.svg" alt=""></a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                {{ if .Site.Menus.main }}
-                <ul class="navbar-nav navbar-nav-footer">
-                {{ range sort .Site.Menus.main }}
-                    <li class="nav-item">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
-                    </li>
-                    {{ end }}
-                </ul>
-                {{ end }}
-            </div>
-			<div class="navbar-text">
-                <a href="mailto:hello@rausr.com">
-                	<span class="foot-text">hello@rausr.com</span>
-                </a>
-                <!--googleoff: all-->
-                	<a href="tel:+421910160251" class="foot-text">+421 910 160 251</a>
-                <!--googleon: all-->
-                <a href="/privacy-policy" class="foot-text">Privacy Policy</a>
-			</div>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-                {{ if .Site.Menus.icon }}
-                <ul class="nav-socials">
-                {{ range sort .Site.Menus.icon }}
-                    <li class="nav-icon"><a href="{{ .URL }}" target="_blank"><i class="fab {{ .Name }}"></i></a></li>
-                    {{ end }}
-                </ul>
-                {{ end }}
-            </div>
-	</nav>
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__logo" href="/" aria-label="rausr home">
+        <img src="/svg/logo-solo.svg" alt="rausr">
+      </a>
+      <nav class="site-footer__socials" aria-label="Social links">
+        {{ range $socials }}
+          {{ $iconSrc := index $iconSources .key }}
+          {{ if $iconSrc }}
+            <a class="site-footer__social-link" href="{{ .url }}" target="_blank" rel="noopener"
+               aria-label="{{ if eq .key "whatsapp" }}WhatsApp {{ $whatsAppDisplay }}{{ else }}{{ .label }}{{ end }}"
+               {{ if eq .key "whatsapp" }}title="{{ $whatsAppDisplay }}"{{ end }}>
+              <img src="{{ $iconSrc }}" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            </a>
+          {{ end }}
+        {{ end }}
+      </nav>
+    </div>
 
+    <nav class="site-footer__column" aria-label="Company">
+      <h2>Company</h2>
+      <a href="/about/">About</a>
+      <a href="/digital-graphic-design/">Services</a>
+      <a href="/works/">Case Studies</a>
+      <a href="/works/">Works</a>
+      <a href="/about/jakub-capliar/">Authors</a>
+      <a href="/privacy-policy/">Privacy Policy &amp; Cookies</a>
+    </nav>
 
-<div class="footer-logo">
-    <a href="#" class="scroll-top"><img src="/svg/rugdgroup-1c.svg" width="54px" alt=""></a>
-</div>
+    <nav class="site-footer__column" aria-label="Learn">
+      <h2>Learn</h2>
+      <a href="/blog/">Graphic Journal Magazine</a>
+      <a href="/topics/graphic-design/">Learn Graphic Design</a>
+      <a href="/topics/reports/">Reports</a>
+      <a href="/topics/trends/">Trends</a>
+      <a href="/topics/philosophy/">Philosophy</a>
+    </nav>
 
-<div class="copyright">
-    <span>© {{ now.Year }} rausr.com</span>
-</div>
+    <div class="site-footer__column site-footer__contact">
+      <h2>Get in touch</h2>
+      <a href="/contact/">Contact Us</a>
+      <div class="site-footer__email-row" data-copy-wrapper>
+        <a class="site-footer__email" href="mailto:{{ $email }}">{{ $email }}</a>
+        <div class="contact-copy-group site-footer__copy-group">
+          <button class="contact-copy-button contact-copy-button--small site-footer__copy-button" type="button" data-copy-target="{{ $email }}" aria-label="Copy {{ $email }}">
+            <img src="/images/contact-svg/copy-before.svg" alt="" aria-hidden="true" class="copy-icon copy-icon--default" loading="lazy" decoding="async">
+            <img src="/images/contact-svg/copied.svg" alt="" aria-hidden="true" class="copy-icon copy-icon--copied" loading="lazy" decoding="async">
+          </button>
+          <div class="contact-copy-feedback" aria-live="polite" hidden>Copied to clipboard</div>
+        </div>
+      </div>
+      <p>Bratislava, Slovakia<br>(and virtually everywhere)</p>
+    </div>
 
-</div>
+    <div class="site-footer__divider" aria-hidden="true">
+      <span></span>
+      <a href="#" class="site-footer__down scroll-top" aria-label="Back to top">↓</a>
+      <span></span>
+    </div>
 
+    <div class="site-footer__mark">
+      <a href="#" class="scroll-top" aria-label="Back to top">
+        <img src="/svg/rugdgroup-1c.svg" alt="">
+      </a>
+    </div>
+
+    <div class="site-footer__copyright">©{{ now.Year }}, rausr s. r. o. All rights reserved.</div>
+  </div>
 </footer>
 
 <!-- Add script.js - smooth navigations transitions and so on -->
