@@ -58,9 +58,9 @@ In cosmetics, the package is often the first proof that the product knows what i
 {{< /quote >}}
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-2.jpg" alt="Chanel No 5 bottle photographed as a minimalist luxury object with clear glass and sharp geometry." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-2.jpg" alt="Collection of iconic beauty products showing how cosmetic packaging becomes a visual memory system." >}}
+
 
 ### 1. CHANEL N°5
 #### The bottle that made perfume packaging look modern
@@ -97,9 +97,9 @@ Its modernity became so durable that the bottle entered museum-level design conv
 If Chanel had followed the decorative perfume logic of its era, the fragrance might still have become famous, but the bottle would probably not have become timeless.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-3.jpg" alt="The iconic blue Nivea Creme tin shown as a simple circular aluminum package with white lettering." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-3.jpg" alt="Chanel No 5 bottle photographed as a minimalist luxury object with clear glass and sharp geometry." >}}
+
 
 ### 2. NIVEA Creme
 #### The blue tin that proved mass-market design can become sacred
@@ -140,9 +140,9 @@ Because it created emotional durability through consistency. The package stayed 
 The danger for a package like this is not chaos. It is over-protection. Once a pack becomes sacred, brand teams can become too afraid to evolve anything around it.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-4.jpg" alt="Maybelline Great Lash mascara tube in bright pink and green showing its highly recognizable color contrast." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-4.jpg" alt="The iconic blue Nivea Creme tin shown as a simple circular aluminum package with white lettering." >}}
+
 
 ### 3. Maybelline Great Lash Mascara
 #### Cheap, loud, unforgettable, and almost impossible to confuse
@@ -177,9 +177,9 @@ Its packaging became so iconic that later fashion-designer editions could sit on
 This kind of design can age into “cheap-looking” territory if the rest of the brand drifts upscale. Great Lash survived because it never pretended to be a luxury artifact.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-5.jpg" alt="Clinique Dramatically Different Moisturizing Lotion with pale yellow formula and clinical minimalist packaging." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-5.jpg" alt="Maybelline Great Lash mascara tube in bright pink and green showing its highly recognizable color contrast." >}}
+
 
 ### 4. Clinique Dramatically Different Moisturizing Lotion
 #### Clinical packaging turned into prestige language
@@ -219,9 +219,9 @@ Clinique says one Dramatically Different product is sold every 3.6 seconds. That
 The same clinical language that built trust can also make the brand feel emotionally cold or dated if not refreshed carefully.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-6.jpg" alt="Estée Lauder Advanced Night Repair shown in its iconic little brown bottle with pipette." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-6.jpg" alt="Clinique Dramatically Different Moisturizing Lotion with pale yellow formula and clinical minimalist packaging." >}}
+
 
 ### 5. Estée Lauder Advanced Night Repair
 #### The “little brown bottle” that made serum look serious
@@ -258,9 +258,9 @@ Because it translated science into an object ordinary consumers could trust visu
 Science-coded packaging can quickly become generic if too many brands copy the same brown-bottle, white-label formula without having a strong product reason behind it.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-7.jpg" alt="Aesop hand wash bottle in amber plastic or glass with pharmacy-style label and minimalist typography." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-7.jpg" alt="Estée Lauder Advanced Night Repair shown in its iconic little brown bottle with pipette." >}}
+
 
 ### 6. Aesop Resurrection Aromatique Hand Wash
 #### Pharmacy language turned into a lifestyle code
@@ -301,9 +301,9 @@ One of Aesop’s smartest moves is that its packaging works at product scale and
 The downside of such a strong code is imitation fatigue. Once the market fills with “Aesop-like” amber bottles, the original risks becoming a genre rather than a signature.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-8.jpg" alt="The Ordinary serum bottle with dropper and black-and-white label emphasizing ingredient transparency." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-8.jpg" alt="Aesop hand wash bottle in amber plastic or glass with pharmacy-style label and minimalist typography." >}}
+
 
 ### 7. The Ordinary Niacinamide 10% + Zinc 1%
 #### Ingredient-first labeling as anti-beauty branding
@@ -345,9 +345,9 @@ Because it made transparency feel rebellious. It offered a visual answer to beau
 The minimal pack also created a counterfeit problem. When a brand’s pack is simple, fakes can imitate the look more easily unless printing quality, retailers, and authentication systems stay tight.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-9.jpg" alt="Fenty Beauty Match Stix packaging with geometric form and magnetic or modular stick language." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-9.jpg" alt="The Ordinary serum bottle with dropper and black-and-white label emphasizing ingredient transparency." >}}
+
 
 ### 8. Fenty Beauty Match Stix
 #### Inclusive beauty packaged as a shape system
@@ -380,9 +380,9 @@ Because it understood that in beauty, shape can become branding. You do not alwa
 Magnetic cleverness is appealing, but it can become a sustainability problem, a cost problem, or both. Fenty’s later change is a useful reminder that seductive packaging features often get reconsidered once scale grows.
 
 
-{{< halves >}}
-{{< halfimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-10.jpg" alt="Summary board comparing iconic beauty packaging codes across luxury, pharmacy, mass market, and minimalist skincare products." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/cosmetic-packaging-story/cosmetic-packaging-story-10.jpg" alt="Fenty Beauty Match Stix packaging with geometric form and modular stick language." >}}
+
 
 ### What all eight products teach
 #### Success usually comes from one strong code, not ten weak ones
@@ -407,7 +407,7 @@ The wrong paths are also clear:
 - luxury signals that feel fake
 - science cues that become generic
 - minimalism that becomes anonymous
-- clever material features that later become environmental liabilities
+- Material features that later become environmental liabilities
 
 <p class="article-prelink">For the branding side of this logic, continue with <a href="/blog/branding-codes-that-stick/">Branding Codes That Stick</a> and <a href="/blog/the-icons-who-refused-to-chase-trends/">The Icons Who Refused to Chase Trends</a>.</p>
 
