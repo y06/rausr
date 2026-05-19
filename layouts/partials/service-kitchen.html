@@ -1,0 +1,37 @@
+{{ with . }}
+{{ if .items }}
+<section class="about-kitchen service-kitchen">
+  {{ with .title }}
+  <h2>{{ . }}</h2>
+  {{ end }}
+  <div class="about-kitchen-list">
+    {{ range .items }}
+    {{ $isOpen := false }}
+    {{ if isset . "expanded" }}
+      {{ $isOpen = .expanded }}
+    {{ end }}
+    <article class="about-kitchen-card{{ if $isOpen }} is-open{{ else }} is-collapsed{{ end }}" data-kitchen-card>
+      <div class="about-kitchen-card__head">
+        <h3>{{ .title }}</h3>
+        <button class="about-kitchen-toggle" type="button" data-kitchen-toggle aria-expanded="{{ if $isOpen }}true{{ else }}false{{ end }}" aria-label="{{ if $isOpen }}Collapse{{ else }}Expand{{ end }} {{ .title }}">
+          {{ partial "icons/kitchen-plus-minus.svg" . }}
+        </button>
+      </div>
+      <div class="about-kitchen-card__roller" data-kitchen-roller>
+        {{ with .text }}
+        <p class="about-kitchen-card__text" data-kitchen-preview>{{ . }}</p>
+        {{ end }}
+        {{ with .tags }}
+        <ul class="about-kitchen-tags">
+          {{ range . }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}

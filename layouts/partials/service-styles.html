@@ -11,6 +11,8 @@
     --service-card-width: 305px;
     --service-card-gap: 46px;
     --service-arrow-offset: 50px;
+    --service-progress-width: min(72px, 20vw);
+    --service-progress-height: 5px;
     display: block;
     width: 100%;
     overflow: hidden;
@@ -35,7 +37,7 @@
   }
 
   .service-page .service-tag-list {
-    margin-bottom: 3.6rem;
+    margin-bottom: 2.25rem;
   }
 
   .service-page .service-slider {
@@ -48,9 +50,10 @@
 
   .service-page .service-slider--process {
     width: 100vw;
+    margin-bottom: 0;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    padding-top: 6.1rem;
+    padding-top: 4.5rem;
     padding-bottom: 6.4rem;
     padding-left: 48px;
     padding-right: 48px;
@@ -64,7 +67,7 @@
   }
 
   .service-page .service-slider h2 {
-    margin: 0 0 3.55rem !important;
+    margin: 0 0 2.5rem !important;
     padding: 0 !important;
     text-align: center !important;
     font-family: Inter, sans-serif !important;
@@ -72,7 +75,7 @@
     font-weight: 500 !important;
     line-height: 1.2 !important;
     letter-spacing: normal !important;
-    color: var(--service-purple) !important;
+    color: var(--service-dark) !important;
   }
 
   .service-page .service-slider__lede {
@@ -118,20 +121,19 @@
   }
 
   .service-page .service-slider__track {
-    display: grid !important;
-    grid-auto-flow: column !important;
-    grid-auto-columns: var(--service-card-width) !important;
+    display: flex !important;
     gap: var(--service-card-gap) !important;
     align-items: stretch !important;
     width: max-content;
-    min-width: 100%;
-    margin: 0 !important;
+    min-width: max-content;
+    margin: 0 auto !important;
     padding: 0 !important;
     list-style: none !important;
   }
 
   .service-page .service-slider__card {
     display: block !important;
+    flex: 0 0 var(--service-card-width) !important;
     width: var(--service-card-width) !important;
     min-height: 338px !important;
     margin: 0 !important;
@@ -160,7 +162,7 @@
     align-items: flex-start !important;
     justify-content: space-between !important;
     gap: 1rem !important;
-    margin: 0 0 1.55rem !important;
+    margin: 0 0 2rem !important;
   }
 
   .service-page .service-slider__card-number,
@@ -171,7 +173,7 @@
     margin: 0 !important;
     font-family: Satoshi, sans-serif !important;
     font-size: 24px !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     line-height: 1 !important;
   }
 
@@ -193,9 +195,8 @@
     text-align: left !important;
     font-family: Inter, sans-serif !important;
     font-size: 28px !important;
-    font-weight: 600 !important;
-    line-height: 1.12 !important;
-    letter-spacing: -0.035em !important;
+    font-weight: 500 !important;
+    line-height: 0 !important;
     color: var(--service-purple) !important;
   }
 
@@ -205,9 +206,8 @@
     text-align: left !important;
     font-family: Inter, sans-serif !important;
     font-size: 22px !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     line-height: 1.45 !important;
-    letter-spacing: -0.025em !important;
     color: var(--service-muted) !important;
   }
 
@@ -269,9 +269,9 @@
 
   .service-page .service-slider__progress {
     display: block !important;
-    width: min(100px, 28vw) !important;
-    height: 8px !important;
-    margin: 3.35rem auto 0 !important;
+    width: var(--service-progress-width) !important;
+    height: var(--service-progress-height) !important;
+    margin: 2.75rem auto 0 !important;
     padding: 0 !important;
     border-radius: 999px !important;
     background: rgba(219, 217, 229, 0.72) !important;
@@ -294,6 +294,36 @@
     background: rgba(255, 255, 255, 0.72) !important;
   }
 
+  .service-page .service-slider--process h2 {
+    margin-bottom: 3rem !important;
+  }
+
+  .service-page .service-kitchen {
+    margin-top: 0;
+    margin-bottom: 6.25rem;
+  }
+
+  .service-page .service-related-works {
+    margin: 0 auto 6.5rem auto;
+    padding: 0 48px;
+  }
+
+  .service-page .service-related-works h2 {
+    margin: 0 0 2.5rem !important;
+    color: var(--service-dark) !important;
+    text-align: center !important;
+  }
+
+  .service-page .service-related-works__grid {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+
+  .service-page .service-related-works__card {
+    width: calc(20% - 0px) !important;
+  }
+
   @media (max-width: 1180px) {
     .service-page {
       --service-slider-width: min(657px, calc(100vw - 96px));
@@ -309,6 +339,10 @@
       padding-left: 36px;
       padding-right: 36px;
     }
+
+    .service-page .service-related-works {
+      padding-inline: 36px;
+    }
   }
 
   @media (max-width: 760px) {
@@ -317,6 +351,8 @@
       --service-card-width: min(305px, calc(100vw - 80px));
       --service-card-gap: 20px;
       --service-arrow-offset: 34px;
+      --service-progress-width: min(56px, 20vw);
+      --service-progress-height: 4px;
     }
 
     .service-page .service-tag-list {
@@ -329,14 +365,14 @@
     }
 
     .service-page .service-slider--process {
-      padding-top: 4rem;
+      padding-top: 4.5rem;
       padding-bottom: 4.5rem;
       padding-left: 20px;
       padding-right: 20px;
     }
 
     .service-page .service-slider h2 {
-      margin-bottom: 3rem !important;
+      margin-bottom: 1.8rem !important;
       font-size: 2rem !important;
     }
 
@@ -356,6 +392,15 @@
 
     .service-page .service-slider__arrow {
       width: 2rem !important;
+    }
+
+    .service-page .service-kitchen {
+      margin-bottom: 5rem;
+    }
+
+    .service-page .service-related-works {
+      margin-bottom: 5rem;
+      padding-inline: 20px;
     }
   }
 </style>

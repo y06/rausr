@@ -27,6 +27,8 @@
     {{ partial "service-nav.html" . }}
 
     {{ partial "service-card-slider.html" (dict "section" .Params.benefits "variant" "benefits") }}
+    {{ partial "service-kitchen.html" .Params.service_menu }}
+    {{ partial "service-related-works.html" (dict "page" . "section" .Params.related_works) }}
     {{ partial "service-card-slider.html" (dict "section" .Params.process "variant" "process") }}
 
 </main>
