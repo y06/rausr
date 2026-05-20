@@ -13,6 +13,7 @@
     --service-arrow-offset: 50px;
     --service-progress-width: min(72px, 20vw);
     --service-progress-height: 5px;
+    --service-slider-edge-padding: max(0px, calc((var(--service-slider-width) - ((var(--service-card-width) * 3) + (var(--service-card-gap) * 2))) / 2));
     display: block;
     width: 100%;
     overflow: hidden;
@@ -102,11 +103,13 @@
     overflow-x: auto !important;
     overflow-y: hidden !important;
     scroll-behavior: smooth;
-    scroll-padding-inline: 0;
+    scroll-padding-inline: var(--service-slider-edge-padding);
     scroll-snap-type: x mandatory;
     cursor: grab;
     touch-action: pan-y;
     user-select: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -127,7 +130,7 @@
     width: max-content;
     min-width: max-content;
     margin: 0 auto !important;
-    padding: 0 !important;
+    padding: 0 var(--service-slider-edge-padding) !important;
     list-style: none !important;
   }
 
@@ -140,6 +143,7 @@
     padding: 25px 28px 30px !important;
     border-radius: 24px !important;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     box-sizing: border-box !important;
     overflow: hidden;
     transition:

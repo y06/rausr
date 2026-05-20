@@ -98,6 +98,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let dragStartX = 0;
         let dragStartScrollLeft = 0;
         let activePointerId = null;
+        let lastPointerX = 0;
+        let lastPointerTime = 0;
+        let dragVelocity = 0;
 
         const getCardStep = () => {
             if (cards.length < 2) {
@@ -110,8 +113,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const maxScrollLeft = Math.max(viewport.scrollWidth - viewport.clientWidth, 0);
             const currentScroll = Math.min(Math.max(viewport.scrollLeft, 0), maxScrollLeft);
             const progress = maxScrollLeft <= 0 ? 1 : currentScroll / maxScrollLeft;
+            const minProgress = maxScrollLeft <= 0 ? 1 : 0.08;
+            const displayProgress = minProgress + (1 - minProgress) * Math.max(0, Math.min(progress, 1));
 
-            progressFill.style.transform = `scaleX(${Math.max(0, Math.min(progress, 1))})`;
+            progressFill.style.transform = `scaleX(${displayProgress})`;
             prevButton.disabled = currentScroll <= 1;
             nextButton.disabled = currentScroll >= maxScrollLeft - 1;
             slider.classList.toggle("is-static", maxScrollLeft <= 0);
@@ -141,11 +146,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const maxScrollLeft = Math.max(viewport.scrollWidth - viewport.clientWidth, 0);
             const step = getCardStep();
-            const targetIndex = Math.max(0, Math.min(Math.round(viewport.scrollLeft / step), cards.length - 1));
+            const projectedScrollLeft = viewport.scrollLeft - dragVelocity * 180;
+            const targetIndex = Math.max(0, Math.min(Math.round(projectedScrollLeft / step), cards.length - 1));
             const target = Math.max(0, Math.min(cards[targetIndex].offsetLeft, maxScrollLeft));
             viewport.scrollTo({ left: target, behavior: "smooth" });
             window.setTimeout(() => {
                 hasDragged = false;
+                dragVelocity = 0;
             }, 0);
         };
 
@@ -162,6 +169,9 @@ document.addEventListener("DOMContentLoaded", function () {
             activePointerId = event.pointerId;
             dragStartX = event.clientX;
             dragStartScrollLeft = viewport.scrollLeft;
+            lastPointerX = event.clientX;
+            lastPointerTime = performance.now();
+            dragVelocity = 0;
             viewport.style.scrollSnapType = "none";
             slider.classList.add("is-dragging");
             viewport.setPointerCapture(event.pointerId);
@@ -173,10 +183,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             const delta = event.clientX - dragStartX;
+            const now = performance.now();
+            const elapsed = Math.max(now - lastPointerTime, 1);
+            const pointerDelta = event.clientX - lastPointerX;
             if (Math.abs(delta) > 3) {
                 hasDragged = true;
             }
-            viewport.scrollLeft = dragStartScrollLeft - delta;
+            dragVelocity = pointerDelta / elapsed;
+            lastPointerX = event.clientX;
+            lastPointerTime = now;
+            viewport.scrollLeft = dragStartScrollLeft - delta * 1.05;
         });
 
         viewport.addEventListener("pointerup", finishDrag);
