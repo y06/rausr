@@ -9,17 +9,15 @@
 
 <!-- main -->
 {{ $mainCssPath := "css/main.css" }}
+{{ $mainCssSource := readFile (printf "static/%s" $mainCssPath) }}
+{{ $mainCssHref := printf "%s?v=%s" ($mainCssPath | relURL) ($mainCssSource | md5) }}
 {{ if .IsHome }}
-    {{ with readFile (printf "static/%s" $mainCssPath) }}
+    {{ with $mainCssSource }}
         <style id="inline-main-css">{{ . | safeCSS }}</style>
     {{ end }}
-    {{ $mainCss := $mainCssPath | absURL }}
-    <link rel="preload" href="{{ $mainCss }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ $mainCss }}"></noscript>
+    <link rel="stylesheet" href="{{ $mainCssHref }}">
 {{ else }}
-    {{ $mainCss := $mainCssPath | absURL }}
-    <link rel="preload" href="{{ $mainCss }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ $mainCss }}"></noscript>
+    <link rel="stylesheet" href="{{ $mainCssHref }}">
 {{ end }}
 
 <!-- critical fonts -->

@@ -2,13 +2,13 @@
 
 <main>
 
-    <section class="header" style="background-color: {{ .Params.header_color }}">
+    <section class="header header-work">
         <div class="header-content">
             <h1>{{ .Title }}</h1>
             {{ with .Params.description }}
             <p>{{ . }}</p>
             {{ end }}
-            <button class="header-cta-button" data-scroll-target=".container-tag-list">Show me something ↓</button>
+            <button class="header-cta-button header-cta-button-work" data-scroll-target=".container-tag-list">Show me something ↓</button>
         </div>
         <div class="header-illustration">
             {{ with .Params.header_image }}

@@ -15,13 +15,13 @@
     {{ $secondLabel = "Works" }}
   {{ end }}
 
-  <section class="header header-contact header-topic">
-    <div class="header-content header-contact header-topic">
+  <section class="header{{ if eq $taxonomy "topics" }} header-blog{{ else }} header-contact header-topic{{ end }}">
+    <div class="header-content{{ if ne $taxonomy "topics" }} header-contact header-topic{{ end }}">
       <div class="h1container">
         <h1>{{ .Title }}</h1>
         <div class="counter">
-          <span class="word showinglist showinglisttag">total</span>
-          <div class="number total showinglisttag" aria-label="{{ $totalTerms }} {{ $plural }}">{{ $totalTerms }}</div>
+          <span class="word{{ if eq $taxonomy "topics" }} showinglist{{ else }} showinglist showinglisttag{{ end }}">total</span>
+          <div class="number total{{ if eq $taxonomy "topics" }} showinglist{{ else }} showinglisttag{{ end }}" aria-label="{{ $totalTerms }} {{ $plural }}">{{ $totalTerms }}</div>
         </div>
       </div>
       {{ if .Content }}

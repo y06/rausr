@@ -1,0 +1,97 @@
+---
+title: "Event Design"
+description: "We design exhibitions, congresses, launches, presentations, and other live environments where every visual decision has to work fast, clearly, and in the real world."
+header_image: "/svg/header/event-design.svg"
+header_cta_label: "See event workflow ↓"
+draft: false
+weight: 1
+type: "service"
+layout: "service"
+benefits:
+  title: "Benefits of Doing Event Design with Us?"
+  anchor: "service-benefits"
+  cards:
+    - emoji: "🎖️"
+      heading: "Experience"
+      subheading: "Real Market Experience"
+      text: "We know how trade fairs, congresses, and brand activations behave once the doors open. That helps us design with realistic dimensions, pacing, and visitor attention from the start."
+    - emoji: "🥁"
+      heading: "Workflow"
+      subheading: "Structured Delivery"
+      text: "Large event graphics need order, not chaos. We prepare the concept, formats, production data, and revisions in a sequence that keeps the whole job readable for everyone involved."
+    - emoji: "🔬"
+      heading: "Transparency"
+      subheading: "Clear Scope and Decisions"
+      text: "You always know what is being designed, approved, prepared, or sent to production. That keeps budget, timing, and expectations aligned across the full event package."
+    - emoji: "🛰️"
+      heading: "Wide Spectrum"
+      subheading: "Wide spectrum of operation types"
+      text: "From compact presentations to large-scale exhibition environments, we adapt the visual system to different event formats, spaces, and production requirements without losing clarity or consistency."
+service_menu:
+  title: "What We Can Serve You?"
+  items:
+    - title: "3D Visualisation"
+      expanded: true
+      text: "We prepare quick spatial previews, stand views, and visual mockups so everyone can understand the size, placement, and overall direction before the real production starts. It helps turn abstract ideas into something visible and easier to discuss, approve, or improve before money and time are spent on the physical build."
+      tags:
+        - "3D Visualisation"
+        - "Exhibition Stands Design"
+    - title: "Typography"
+      text: "We shape headings, supporting copy, and the full information hierarchy so the message stays readable, visible, and strong even in noisy event spaces full of distractions. Good typography at events is not only about style. It is about speed of understanding, clear emphasis, and helping people catch the right information from a distance."
+      tags:
+        - "Typography"
+        - "Print Design"
+    - title: "DTP"
+      text: "Large-format artwork, panel layouts, print-ready exports, and all technical preparation are handled with proper production discipline, because event graphics need accuracy, not improvisation. We think about dimensions, bleed, scaling, material logic, and practical output details so the final files are easier to produce without unnecessary confusion or risk."
+      tags:
+        - "DTP"
+        - "Print Design"
+    - title: "Exhibition Stands Design"
+      text: "From smaller presentation kits to more complex exhibition systems, we design stand concepts that connect brand logic with real visitor movement, orientation, and practical use on site. The goal is not only to make the stand look attractive, but to create a space that supports communication, movement, visibility, and a stronger event presence."
+      tags:
+        - "Exhibition Stands Design"
+        - "3D Visualisation"
+    - title: "Print Design"
+      text: "Brochures, boards, invites, signage, handouts, and other supporting prints can be prepared in the same visual language as the main event setup, so the whole package feels coherent. This helps the event look more complete, more trusted, and more unified across every point where visitors meet the brand."
+      tags:
+        - "Print Design"
+        - "DTP"
+process:
+  title: "How We Cook Tasty Event Graphics?"
+  cards:
+    - emoji: "📡"
+      heading: "First Contact"
+      subheading: "Goals and Context"
+      text: "You send us the basic situation, the event type, and what the job should achieve. Even a rough idea is enough for the first step. We just need the first ingredients on the table."
+    - emoji: "🧘"
+      heading: "Brief"
+      subheading: "Content and Boundaries"
+      text: "Here we sort out the important things: formats, venue specifics, deadlines, references, and practical limits. It is the moment when the recipe stops being vague and starts getting real shape."
+    - emoji: "🤲"
+      heading: "Quote"
+      subheading: "Scope and Timing"
+      text: "Then comes a clear proposal with scope, timing, and the expected outputs. No fog, no mystery. Just a readable setup for how the cooking will continue."
+    - emoji: "🥗"
+      heading: "Appetiser"
+      subheading: "First Project Contours"
+      text: "The first visual version arrives on the table. This is where the project starts showing its contours, and where first comments, small corrections, and direction checks help us season it properly."
+    - emoji: "🍕"
+      heading: "Main Dish"
+      subheading: "Shaped Project Version"
+      text: "Now the project looks much fuller and closer to the final form. The main idea is stronger, the visual system is clearer, and the whole event package starts feeling properly cooked."
+    - emoji: "🍰"
+      heading: "Desert"
+      subheading: "Project Delivery"
+      text: "Final delivery includes the prepared files, outputs, and everything needed for handoff or production. At this point, the dish is ready to leave the kitchen and go into the real event world."
+    - emoji: "🍷"
+      heading: "Wine"
+      subheading: "Archiving Project"
+      text: "After delivery, the whole project stays archived with us for later updates, support, or follow-up materials. So if something needs to be reopened in the future, the bottle is still waiting in the cellar."
+related_works:
+  title: "Check out our work menu in this category"
+  tags:
+    - "exhibition stands design"
+    - "3d-modeling"
+    - "dtp"
+    - "print design"
+---

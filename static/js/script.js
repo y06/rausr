@@ -80,6 +80,138 @@ document.addEventListener("DOMContentLoaded", function () {
         updateButtons();
     });
 
+    const serviceSliders = document.querySelectorAll("[data-service-slider]");
+
+    serviceSliders.forEach((slider) => {
+        const viewport = slider.querySelector("[data-service-slider-viewport]");
+        const cards = Array.from(slider.querySelectorAll("[data-service-slider-card]"));
+        const prevButton = slider.querySelector("[data-service-slider-prev]");
+        const nextButton = slider.querySelector("[data-service-slider-next]");
+        const progressFill = slider.parentElement.querySelector("[data-service-slider-progress]");
+
+        if (!viewport || !cards.length || !prevButton || !nextButton || !progressFill) {
+            return;
+        }
+
+        let isDragging = false;
+        let hasDragged = false;
+        let dragStartX = 0;
+        let dragStartScrollLeft = 0;
+        let activePointerId = null;
+        let lastPointerX = 0;
+        let lastPointerTime = 0;
+        let dragVelocity = 0;
+
+        const getCardStep = () => {
+            if (cards.length < 2) {
+                return viewport.clientWidth;
+            }
+            return Math.max(cards[1].offsetLeft - cards[0].offsetLeft, cards[0].clientWidth);
+        };
+
+        const updateSliderState = () => {
+            const maxScrollLeft = Math.max(viewport.scrollWidth - viewport.clientWidth, 0);
+            const currentScroll = Math.min(Math.max(viewport.scrollLeft, 0), maxScrollLeft);
+            const progress = maxScrollLeft <= 0 ? 1 : currentScroll / maxScrollLeft;
+            const minProgress = maxScrollLeft <= 0 ? 1 : 0.08;
+            const displayProgress = minProgress + (1 - minProgress) * Math.max(0, Math.min(progress, 1));
+
+            progressFill.style.transform = `scaleX(${displayProgress})`;
+            prevButton.disabled = currentScroll <= 1;
+            nextButton.disabled = currentScroll >= maxScrollLeft - 1;
+            slider.classList.toggle("is-static", maxScrollLeft <= 0);
+        };
+
+        const scrollByCard = (direction) => {
+            const maxScrollLeft = Math.max(viewport.scrollWidth - viewport.clientWidth, 0);
+            const step = getCardStep();
+            const currentIndex = Math.round(viewport.scrollLeft / step);
+            const targetIndex = Math.max(0, Math.min(currentIndex + direction, cards.length - 1));
+            const target = Math.max(0, Math.min(cards[targetIndex].offsetLeft, maxScrollLeft));
+
+            slider.classList.add("is-settling");
+            viewport.scrollTo({ left: target, behavior: "smooth" });
+            window.setTimeout(() => slider.classList.remove("is-settling"), 520);
+        };
+
+        const finishDrag = () => {
+            if (!isDragging) {
+                return;
+            }
+
+            isDragging = false;
+            activePointerId = null;
+            slider.classList.remove("is-dragging");
+            viewport.style.scrollSnapType = "";
+
+            const maxScrollLeft = Math.max(viewport.scrollWidth - viewport.clientWidth, 0);
+            const step = getCardStep();
+            const projectedScrollLeft = viewport.scrollLeft - dragVelocity * 180;
+            const targetIndex = Math.max(0, Math.min(Math.round(projectedScrollLeft / step), cards.length - 1));
+            const target = Math.max(0, Math.min(cards[targetIndex].offsetLeft, maxScrollLeft));
+            viewport.scrollTo({ left: target, behavior: "smooth" });
+            window.setTimeout(() => {
+                hasDragged = false;
+                dragVelocity = 0;
+            }, 0);
+        };
+
+        prevButton.addEventListener("click", () => scrollByCard(-1));
+        nextButton.addEventListener("click", () => scrollByCard(1));
+
+        viewport.addEventListener("pointerdown", (event) => {
+            if (event.button !== undefined && event.button !== 0) {
+                return;
+            }
+
+            isDragging = true;
+            hasDragged = false;
+            activePointerId = event.pointerId;
+            dragStartX = event.clientX;
+            dragStartScrollLeft = viewport.scrollLeft;
+            lastPointerX = event.clientX;
+            lastPointerTime = performance.now();
+            dragVelocity = 0;
+            viewport.style.scrollSnapType = "none";
+            slider.classList.add("is-dragging");
+            viewport.setPointerCapture(event.pointerId);
+        });
+
+        viewport.addEventListener("pointermove", (event) => {
+            if (!isDragging || event.pointerId !== activePointerId) {
+                return;
+            }
+
+            const delta = event.clientX - dragStartX;
+            const now = performance.now();
+            const elapsed = Math.max(now - lastPointerTime, 1);
+            const pointerDelta = event.clientX - lastPointerX;
+            if (Math.abs(delta) > 3) {
+                hasDragged = true;
+            }
+            dragVelocity = pointerDelta / elapsed;
+            lastPointerX = event.clientX;
+            lastPointerTime = now;
+            viewport.scrollLeft = dragStartScrollLeft - delta * 1.05;
+        });
+
+        viewport.addEventListener("pointerup", finishDrag);
+        viewport.addEventListener("pointercancel", finishDrag);
+        viewport.addEventListener("lostpointercapture", finishDrag);
+
+        viewport.addEventListener("click", (event) => {
+            if (hasDragged) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+        }, true);
+
+        viewport.addEventListener("scroll", () => window.requestAnimationFrame(updateSliderState));
+        window.addEventListener("resize", updateSliderState);
+
+        updateSliderState();
+    });
+
     const findFirstMatchingElement = (selectors) => {
         for (const selector of selectors) {
             if (!selector) {
@@ -118,23 +250,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const navSearchInput = document.getElementById("navbar-search-input");
     if (navSearchInput) {
-        const placeholderPhrases = [
-            "Print design, yummy",
-            "Package design, yum yum!",
-            "Branding, mmm, delicious!",
-            "Editorial design, so fresh!",
-            "Creativity",
-            "Exhibition stands design",
-            "Illustrator",
-        ];
-        const TYPE_SPEED = 40;
-        const HOLD_DURATION = 5000;
-        let placeholderPhraseIndex = 0;
-        let placeholderCharIndex = 0;
-        let placeholderTypingTimeout = null;
-        let placeholderHoldTimeout = null;
-        let placeholderAnimating = false;
-
         const mergeTags = (primary, secondary) => {
             const merged = Array.isArray(primary) ? [...primary] : [];
             if (Array.isArray(secondary)) {
@@ -147,40 +262,150 @@ document.addEventListener("DOMContentLoaded", function () {
             return merged;
         };
 
-        const setPlaceholder = (value) => navSearchInput.setAttribute("placeholder", value);
+        const searchForm = navSearchInput.closest(".rausr-menu__search-form");
+        const searchPlaceholder = document.getElementById("navbar-search-placeholder");
+        const strokePalettes = [
+            ["#5DFFF1", "#E1FFD8", "#FFE57A", "#FF9CE8", "#886BFF", "#8EEFFF"],
+            ["#D4FFCE", "#70EBDD", "#A8A9D5", "#7355FF", "#FFD091", "#F8F8F8"],
+            ["#8EEFFF", "#C8FFF4", "#D4FFCE", "#FFF29C", "#B5A4FF", "#7355FF"],
+            ["#FFE57A", "#FFD091", "#FF9CE8", "#A8A9D5", "#70EBDD", "#E1FFD8"],
+        ];
+        const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        let strokePaletteIndex = 0;
+        let strokePaletteInterval = null;
+
+        const applySearchStrokePalette = (palette) => {
+            if (!searchForm || !Array.isArray(palette)) {
+                return;
+            }
+            palette.forEach((color, index) => {
+                searchForm.style.setProperty(`--rausr-search-color-${String.fromCharCode(97 + index)}`, color);
+            });
+            searchForm.style.backgroundColor = palette[0];
+        };
+
+        const startSearchStrokeAnimation = () => {
+            if (!searchForm) {
+                return;
+            }
+
+            applySearchStrokePalette(strokePalettes[strokePaletteIndex]);
+
+            if (reduceMotionQuery.matches || strokePaletteInterval) {
+                return;
+            }
+
+            strokePaletteInterval = window.setInterval(() => {
+                strokePaletteIndex = (strokePaletteIndex + 1) % strokePalettes.length;
+                applySearchStrokePalette(strokePalettes[strokePaletteIndex]);
+            }, 1800);
+        };
+
+        const syncSearchStrokeMotion = () => {
+            if (reduceMotionQuery.matches && strokePaletteInterval) {
+                window.clearInterval(strokePaletteInterval);
+                strokePaletteInterval = null;
+            } else {
+                startSearchStrokeAnimation();
+            }
+        };
+
+        startSearchStrokeAnimation();
+        if (typeof reduceMotionQuery.addEventListener === "function") {
+            reduceMotionQuery.addEventListener("change", syncSearchStrokeMotion);
+        } else if (typeof reduceMotionQuery.addListener === "function") {
+            reduceMotionQuery.addListener(syncSearchStrokeMotion);
+        }
+
+        const shortenPlaceholderPhrase = (phrase) => {
+            const cleanPhrase = String(phrase || "").replace(/\s+/g, " ").trim();
+            if (cleanPhrase.length <= 38) {
+                return cleanPhrase;
+            }
+            return `${cleanPhrase.slice(0, 35).trimEnd()}...`;
+        };
+
+        let placeholderPhrases = [];
+        try {
+            const encodedPhrases = navSearchInput.dataset.placeholderPhrasesBase64 || "";
+            const phraseJson = encodedPhrases
+                ? new TextDecoder("utf-8").decode(Uint8Array.from(window.atob(encodedPhrases), (char) => char.charCodeAt(0)))
+                : "[]";
+            const parsedPhrases = JSON.parse(phraseJson);
+            placeholderPhrases = Array.isArray(parsedPhrases)
+                ? parsedPhrases.map(shortenPlaceholderPhrase).filter(Boolean)
+                : [];
+        } catch (error) {
+            placeholderPhrases = [];
+        }
+
+        if (!placeholderPhrases.length) {
+            placeholderPhrases = ["Event Design", "Product Design", "Digital Graphic Design"];
+        }
+
+        const placeholderTypeSpeed = 40;
+        const placeholderHoldDuration = 5000;
+        let placeholderPhraseIndex = 0;
+        let placeholderCharIndex = 0;
+        let placeholderTypingTimeout = null;
+        let placeholderHoldTimeout = null;
+        let placeholderAnimating = false;
+
+        const getRandomPlaceholderIndex = () => {
+            if (placeholderPhrases.length <= 1) {
+                return 0;
+            }
+
+            let nextIndex = placeholderPhraseIndex;
+            while (nextIndex === placeholderPhraseIndex) {
+                nextIndex = Math.floor(Math.random() * placeholderPhrases.length);
+            }
+            return nextIndex;
+        };
+
+        const setSearchPlaceholder = (value) => {
+            if (!searchPlaceholder) {
+                navSearchInput.setAttribute("placeholder", value);
+                return;
+            }
+
+            navSearchInput.setAttribute("placeholder", "");
+            searchPlaceholder.textContent = value;
+            searchPlaceholder.classList.toggle("is-visible", Boolean(value));
+        };
 
         const stopPlaceholderAnimation = () => {
             placeholderAnimating = false;
-            window.clearTimeout(placeholderTypingTimeout);
-            window.clearTimeout(placeholderHoldTimeout);
-            placeholderTypingTimeout = null;
-            placeholderHoldTimeout = null;
-        };
-
-        const queuePlaceholderTyping = () => {
-            placeholderTypingTimeout = window.setTimeout(typePlaceholderChar, TYPE_SPEED);
+            if (placeholderTypingTimeout) {
+                window.clearTimeout(placeholderTypingTimeout);
+                placeholderTypingTimeout = null;
+            }
+            if (placeholderHoldTimeout) {
+                window.clearTimeout(placeholderHoldTimeout);
+                placeholderHoldTimeout = null;
+            }
         };
 
         const typePlaceholderChar = () => {
             if (!placeholderAnimating) {
                 return;
             }
-            const currentPhrase = placeholderPhrases[placeholderPhraseIndex];
-            if (placeholderCharIndex <= currentPhrase.length) {
-                setPlaceholder(currentPhrase.slice(0, placeholderCharIndex));
-                placeholderCharIndex += 1;
-                queuePlaceholderTyping();
-            } else {
-                placeholderHoldTimeout = window.setTimeout(() => {
-                    if (!placeholderAnimating) {
-                        return;
-                    }
-                    placeholderPhraseIndex = (placeholderPhraseIndex + 1) % placeholderPhrases.length;
-                    placeholderCharIndex = 0;
-                    setPlaceholder("");
-                    queuePlaceholderTyping();
-                }, HOLD_DURATION);
+
+            const phrase = placeholderPhrases[placeholderPhraseIndex];
+            placeholderCharIndex += 1;
+            setSearchPlaceholder(phrase.slice(0, placeholderCharIndex));
+
+            if (placeholderCharIndex < phrase.length) {
+                placeholderTypingTimeout = window.setTimeout(typePlaceholderChar, placeholderTypeSpeed);
+                return;
             }
+
+            placeholderHoldTimeout = window.setTimeout(() => {
+                placeholderPhraseIndex = getRandomPlaceholderIndex();
+                placeholderCharIndex = 0;
+                setSearchPlaceholder("");
+                placeholderTypingTimeout = window.setTimeout(typePlaceholderChar, placeholderTypeSpeed);
+            }, placeholderHoldDuration);
         };
 
         const startPlaceholderAnimation = () => {
@@ -188,26 +413,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
             if (document.activeElement === navSearchInput || navSearchInput.value.trim()) {
-                setPlaceholder("");
+                setSearchPlaceholder("");
                 return;
             }
             placeholderAnimating = true;
+            placeholderPhraseIndex = getRandomPlaceholderIndex();
             placeholderCharIndex = 0;
-            setPlaceholder("");
-            queuePlaceholderTyping();
+            setSearchPlaceholder("");
+            placeholderTypingTimeout = window.setTimeout(typePlaceholderChar, placeholderTypeSpeed);
         };
 
         navSearchInput.addEventListener("focus", () => {
             stopPlaceholderAnimation();
-            setPlaceholder("");
+            setSearchPlaceholder("");
         });
 
         navSearchInput.addEventListener("blur", () => {
-            if (!navSearchInput.value.trim()) {
-                startPlaceholderAnimation();
-            } else {
-                setPlaceholder("");
+            if (navSearchInput.value.trim()) {
+                setSearchPlaceholder("");
+                return;
             }
+            startPlaceholderAnimation();
         });
 
         startPlaceholderAnimation();
@@ -438,12 +664,143 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    const rausrMenu = document.querySelector("[data-rausr-menu]");
+    const rausrMenuPanel = document.getElementById("rausrMenuPanel");
+    const rausrMenuToggle = document.getElementById("rausrMenuToggle");
+    const rausrMenuIcon = document.getElementById("rausrMenuIcon");
+    const pageBlur = document.getElementById("page-blur");
+    const rausrMenuWrap = rausrMenu ? rausrMenu.closest(".rausr-menu-wrap") : null;
+
+    if (rausrMenu && rausrMenuPanel && rausrMenuToggle && rausrMenuIcon && pageBlur && rausrMenuWrap) {
+        const closedIcon = "/svg/hamb.svg";
+        const openIcon = "/svg/hamb-open.svg";
+        const mobileQuery = window.matchMedia("(max-width: 991px)");
+        const dropdownItems = Array.from(rausrMenu.querySelectorAll("[data-rausr-dropdown]"));
+
+        [closedIcon, openIcon].forEach((src) => {
+            const preload = new Image();
+            preload.src = src;
+        });
+
+        const hasActiveDesktopDropdown = () => dropdownItems.some((item) => (
+            item.classList.contains("is-open")
+            || item.matches(":hover")
+            || item.contains(document.activeElement)
+        ));
+
+        const syncDropdownDimState = () => {
+            rausrMenuWrap.classList.toggle("is-dimmed", !mobileQuery.matches && hasActiveDesktopDropdown());
+        };
+
+        const setPanelState = (isOpen) => {
+            rausrMenuPanel.classList.toggle("is-open", isOpen);
+            rausrMenuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            rausrMenuIcon.src = isOpen ? openIcon : closedIcon;
+            pageBlur.classList.toggle("blur-active", isOpen && mobileQuery.matches);
+            if (mobileQuery.matches) {
+                rausrMenuWrap.classList.remove("is-dimmed");
+            }
+        };
+
+        const closeDropdowns = (exceptItem = null) => {
+            dropdownItems.forEach((item) => {
+                const trigger = item.querySelector("[data-rausr-trigger]");
+                if (exceptItem && item === exceptItem) {
+                    return;
+                }
+                item.classList.remove("is-open");
+                if (trigger) {
+                    trigger.setAttribute("aria-expanded", "false");
+                }
+            });
+            window.requestAnimationFrame(syncDropdownDimState);
+        };
+
+        const closePanel = () => {
+            setPanelState(false);
+            closeDropdowns();
+        };
+
+        rausrMenuToggle.addEventListener("click", (event) => {
+            event.preventDefault();
+            setPanelState(!rausrMenuPanel.classList.contains("is-open"));
+        });
+
+        dropdownItems.forEach((item) => {
+            const trigger = item.querySelector("[data-rausr-trigger]");
+            if (!trigger) {
+                return;
+            }
+            trigger.addEventListener("click", (event) => {
+                const isAnchorTrigger = trigger.tagName.toLowerCase() === "a";
+                if (isAnchorTrigger && !mobileQuery.matches) {
+                    return;
+                }
+                if (isAnchorTrigger || trigger.tagName.toLowerCase() === "button") {
+                    event.preventDefault();
+                    const shouldOpen = !item.classList.contains("is-open");
+                    closeDropdowns(shouldOpen ? item : null);
+                    item.classList.toggle("is-open", shouldOpen);
+                    trigger.setAttribute("aria-expanded", shouldOpen ? "true" : "false");
+                    syncDropdownDimState();
+                }
+            });
+
+            item.addEventListener("mouseenter", syncDropdownDimState);
+            item.addEventListener("mouseleave", () => window.requestAnimationFrame(syncDropdownDimState));
+            item.addEventListener("focusin", syncDropdownDimState);
+            item.addEventListener("focusout", () => window.requestAnimationFrame(syncDropdownDimState));
+        });
+
+        document.addEventListener("click", (event) => {
+            if (rausrMenu.contains(event.target)) {
+                return;
+            }
+            closeDropdowns();
+            if (mobileQuery.matches) {
+                closePanel();
+            }
+        });
+
+        document.addEventListener("keyup", (event) => {
+            if (event.key === "Escape") {
+                closePanel();
+            }
+        });
+
+        rausrMenuPanel.addEventListener("click", (event) => {
+            const link = event.target.closest("a");
+            if (link && link.hasAttribute("data-rausr-trigger")) {
+                return;
+            }
+            if (link && mobileQuery.matches) {
+                closePanel();
+            }
+        });
+
+        const resetForViewport = () => {
+            if (!mobileQuery.matches) {
+                setPanelState(false);
+            }
+            syncDropdownDimState();
+        };
+
+        window.addEventListener("resize", resetForViewport);
+        if (typeof mobileQuery.addEventListener === "function") {
+            mobileQuery.addEventListener("change", resetForViewport);
+        } else if (typeof mobileQuery.addListener === "function") {
+            mobileQuery.addListener(resetForViewport);
+        }
+
+        setPanelState(false);
+    }
+
     const navbarCollapse = document.getElementById("navbarSupportedContent");
     const navbarToggle = document.getElementById("menuToggle");
     const navbarIcon = document.getElementById("menuIcon");
-    const pageBlur = document.getElementById("page-blur");
+    const legacyPageBlur = document.getElementById("page-blur");
 
-    if (navbarCollapse && navbarToggle && navbarIcon && pageBlur) {
+    if (navbarCollapse && navbarToggle && navbarIcon && legacyPageBlur) {
         const closedIcon = "/svg/hamb.svg";
         const openIcon = "/svg/hamb-open.svg";
 
@@ -454,7 +811,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const setUiState = (isOpen) => {
             navbarIcon.src = isOpen ? openIcon : closedIcon;
-            pageBlur.classList.toggle("blur-active", isOpen);
+            legacyPageBlur.classList.toggle("blur-active", isOpen);
             navbarToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
         };
 

@@ -1,0 +1,47 @@
+{{ $section := .section }}
+{{ $page := .page }}
+{{ if and $section $section.tags }}
+  {{ $matches := slice }}
+  {{ $allWorks := where $page.Site.RegularPages "Type" "works" }}
+  {{ range $allWorks }}
+    {{ if gt (len (intersect .Params.tags $section.tags)) 0 }}
+      {{ $matches = $matches | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $matches = sort $matches "Date" "desc" }}
+  {{ if gt (len $matches) 0 }}
+  <section class="service-related-works">
+    <h2>{{ or $section.title "Check out our work menu in this category" }}</h2>
+    <div class="card-container service-related-works__grid">
+      {{ range first 4 $matches }}
+        {{ $link := .RelPermalink }}
+        {{ $title := .Title }}
+        <div class="card1 service-related-works__card">
+          <a href="{{ $link }}">
+            {{ with .Params.preview_image }}
+            <div class="card1-top">
+              {{ partial "components/responsive-image.html" (dict
+                  "src" .
+                  "alt" $title
+                  "width" 360
+                  "sizes" "(max-width: 991px) 50vw, 360px"
+              ) }}
+            </div>
+            {{ end }}
+          </a>
+          <div class="card1-bottom">
+            {{ with index .Params.tags 0 }}
+            {{ $tag := partial "normalize-taxonomy-term.html" . }}
+            <span class="card1-category">
+              <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ partial "tag-label.html" $tag }}</a>
+            </span>
+            {{ end }}
+            <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
+            <a href="{{ $link }}" class="card1-cta">SHOW WORK →</a>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+{{ end }}
