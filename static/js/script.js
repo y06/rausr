@@ -731,16 +731,20 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!trigger) {
                 return;
             }
-            if (trigger.tagName.toLowerCase() === "button") {
-                trigger.addEventListener("click", (event) => {
+            trigger.addEventListener("click", (event) => {
+                const isAnchorTrigger = trigger.tagName.toLowerCase() === "a";
+                if (isAnchorTrigger && !mobileQuery.matches) {
+                    return;
+                }
+                if (isAnchorTrigger || trigger.tagName.toLowerCase() === "button") {
                     event.preventDefault();
                     const shouldOpen = !item.classList.contains("is-open");
                     closeDropdowns(shouldOpen ? item : null);
                     item.classList.toggle("is-open", shouldOpen);
                     trigger.setAttribute("aria-expanded", shouldOpen ? "true" : "false");
                     syncDropdownDimState();
-                });
-            }
+                }
+            });
 
             item.addEventListener("mouseenter", syncDropdownDimState);
             item.addEventListener("mouseleave", () => window.requestAnimationFrame(syncDropdownDimState));
@@ -766,6 +770,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         rausrMenuPanel.addEventListener("click", (event) => {
             const link = event.target.closest("a");
+            if (link && link.hasAttribute("data-rausr-trigger")) {
+                return;
+            }
             if (link && mobileQuery.matches) {
                 closePanel();
             }

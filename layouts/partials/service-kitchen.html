@@ -24,7 +24,12 @@
         {{ with .tags }}
         <ul class="about-kitchen-tags">
           {{ range . }}
-          <li>{{ . }}</li>
+          {{ $tagLabel := . }}
+          {{ $tagTarget := . }}
+          {{ if eq (lower $tagLabel) "3d visualisation" }}
+            {{ $tagTarget = "3d-modeling" }}
+          {{ end }}
+          <li><a href="/tags/{{ urlize $tagTarget }}">{{ $tagLabel }}</a></li>
           {{ end }}
         </ul>
         {{ end }}

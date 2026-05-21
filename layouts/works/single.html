@@ -3,12 +3,12 @@
 <main>
 
     <section class="header header-work" id="page-blur">
-        <div class="header-content header-contact header-work">
+        <div class="header-content header-work">
             <h1>{{ .Title }}</h1>
             {{ with .Params.description }}
             <p>{{ . }}</p>
             {{ end }}
-            <button class="header-cta-button header-cta-button-contact header-cta-button-work" data-scroll-target=".container-tag-list">Let’s take a look ↓</button>
+            <button class="header-cta-button header-cta-button-work" data-scroll-target=".container-tag-list">Let’s take a look ↓</button>
         </div>
         <div class="header-illustration header-image">
             {{ with .Params.header_image }}
