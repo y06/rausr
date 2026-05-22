@@ -1,7 +1,7 @@
 ---
 title: "How to Choose an Optimal Computer for Graphic Design"
 description: "What matters most in a design computer today: RAM, CPU, GPU, storage, laptops vs desktops, Mac vs Windows, and what students or professionals should actually buy."
-date: 2026-05-21
+date: 2026-05-22
 tags: ["graphic design", "software", "hardware", "reports"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
