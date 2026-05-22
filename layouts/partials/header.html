@@ -138,11 +138,23 @@
             min-height: 46px;
             display: flex;
             align-items: center;
-            padding: 2px;
-            border-radius: 6px;
-            background: #5DFFF1;
+            padding: 0;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            background:
+              linear-gradient(#F7F6FB, #F7F6FB) padding-box,
+              linear-gradient(
+                90deg,
+                var(--rausr-search-color-f) 0%,
+                var(--rausr-search-color-a) 18%,
+                var(--rausr-search-color-b) 42%,
+                var(--rausr-search-color-c) 62%,
+                var(--rausr-search-color-d) 80%,
+                var(--rausr-search-color-e) 100%
+              ) border-box;
             overflow: hidden;
             isolation: isolate;
+            box-sizing: border-box;
             --rausr-search-color-a: #5DFFF1;
             --rausr-search-color-b: #E1FFD8;
             --rausr-search-color-c: #FFE57A;
@@ -160,22 +172,7 @@
           }
 
           .rausr-menu__search-form::before {
-            content: "";
-            position: absolute;
-            inset: -130%;
-            z-index: 0;
-            background:
-              conic-gradient(
-                from 0deg,
-                var(--rausr-search-color-a) 0deg,
-                var(--rausr-search-color-b) 58deg,
-                var(--rausr-search-color-c) 118deg,
-                var(--rausr-search-color-d) 178deg,
-                var(--rausr-search-color-e) 238deg,
-                var(--rausr-search-color-f) 302deg,
-                var(--rausr-search-color-a) 360deg
-              );
-            animation: rausr-search-rainbow 6s linear infinite;
+            content: none;
           }
 
           @keyframes rausr-search-rainbow {
@@ -212,7 +209,7 @@
             width: 100%;
             min-height: 44px;
             border: 0;
-            border-radius: 5px;
+            border-radius: 6px;
             background: #F7F6FB;
             padding: 0 58px 0 16px;
             font-family: Inter, sans-serif;
@@ -221,6 +218,7 @@
             line-height: 1;
             color: #3A3746;
             box-sizing: border-box;
+            flex: 1 1 auto;
           }
 
           .rausr-menu__search-input::placeholder {
@@ -586,14 +584,11 @@
             }
 
             .rausr-menu__search-form {
-              min-height: 46px;
-              padding: 2px;
-              border-radius: 6px;
+              min-height: 48px;
             }
 
             .rausr-menu__search-input {
               min-height: 44px;
-              border-radius: 5px;
               padding: 0 58px 0 16px;
               font-size: 15px;
             }
@@ -719,7 +714,7 @@
             }
 
             .rausr-menu__search-form {
-              min-height: 58px;
+              min-height: 56px;
             }
 
             .rausr-menu__search-input {

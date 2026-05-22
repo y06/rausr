@@ -231,8 +231,8 @@ h5 {
 }
 
 .header-article {
-    background-color: color(display-p3 0.341 0.470 0.604);
-    color: color(display-p3 0.831 1.000 0.808);
+    background-color: color(display-p3 0.055 0.604 0.447);
+    color: #fff;
 }
 
 .header-topic {
@@ -286,6 +286,12 @@ h5 {
     color: color(display-p3 0.4078 0.2824 1);
     background-color: color(display-p3 0.831 1.000 0.807);
     border: none;
+}
+
+.header-article .header-cta-button {
+    background: transparent;
+    color: color(display-p3 0.964 1.000 0.247);
+    border: 1px solid color(display-p3 0.964 1.000 0.247);
 }
 
 .header-cta-button:hover, .article-nav-button:hover {
@@ -856,6 +862,26 @@ h5 {
 
 .header-meta .card20-meta__author {
   color: color(display-p3 0.831 1.000 0.808);
+}
+
+.header-article .header-meta .card20-meta__date,
+.header-article .header-meta .card20-meta__author {
+  color: color(display-p3 0.964 1.000 0.247);
+  font-weight: 500;
+}
+
+.header-article .header-meta .card20-meta__date {
+  font-weight: 400;
+}
+
+.header-article .header-meta .card20-meta__photo-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.header-article .header-meta .card20-meta__photo {
+  border: 0 !important;
 }
 
 .header-meta .card20-meta__photo {
@@ -2747,7 +2773,7 @@ a:hover {
 .author-bio__intro h1 {
     font-size: 2.375rem;
     margin: 0;
-    color: #43414C;
+    color: rgba(15, 9, 51, 0.95) !important;
     font-weight: 500;
     text-align: left;
 }
