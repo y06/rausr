@@ -1,7 +1,7 @@
 ---
 title: "Graphic Design as the Key to Visual Orientation at Festivals and Events"
 description: "How strong graphic design turns festivals and events into more organized places. Better signage, better paths it means less confusion, and a stronger brand experience."
-date: 2026-05-25
+date: 2026-05-26
 tags: ["graphic design", "branding", "reports", "typography"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
