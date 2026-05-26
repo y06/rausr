@@ -2,7 +2,7 @@
 title: "Workflow for Complex Branding Design Across Print and Digital"
 description: "How complex branding projects usually move from sketches and moodboards into logos, print systems, web design, mockups, templates, and final delivery"
 date: 2026-04-28
-tags: ["branding", "graphic design", "software", "ux-ui", "print design", "illustrator"]
+tags: ["branding", "graphic design", "software", "ux-ui", "illustrator"]
 seotags:
   - branding workflow print and digital
   - complex brand identity process

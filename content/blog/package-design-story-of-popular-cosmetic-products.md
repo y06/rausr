@@ -2,7 +2,7 @@
 title: "Package Design Story of Popular Cosmetic Products"
 description: "8 Beauty Icons That Built Their Own Shelf Language. Who shaped them, why they look the way they do, which materials they use, and more."
 date: 2026-05-18
-tags: ["packaging design", "graphic design", "branding", "series", "beauty"]
+tags: ["packaging design", "graphic design", "branding", "series"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
 draft: false
