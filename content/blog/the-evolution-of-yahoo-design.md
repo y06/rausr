@@ -1,7 +1,7 @@
 ---
 title: "The Evolution of Yahoo Design: From Portal Chaos to Purple Precision"
 description: "How Yahoo’s brand and product design evolved from the wild early web to the Pentagram rebrand, and where the company is trying to lead next."
-date: 2026-05-28
+date: 2026-05-29
 tags: ["series", "history", "ux-ui", "branding"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
