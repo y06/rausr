@@ -62,7 +62,7 @@ Graphic design is not a gender test. It is a field where perception, access, tas
 
 
 ### What the numbers actually say
-#### In many places, women are not a minority in graphic design at all
+#### In many places, men are not a minority in graphic design at all
 
 One of the most surprising facts for people outside the industry is that graphic design is often **not** male-dominated at the participation level. In the United States, Data USA currently shows the graphic-designer workforce as slightly majority female. AIGA’s recent Design POV reporting also points in a similar direction, with women representing a very large share of design respondents.
 
@@ -133,7 +133,7 @@ The more realistic explanation is usually this:
 - portfolios develop where opportunity exists
 - and over time those patterns get mistaken for “natural fit”
 
-A 2024 paper on gender differences in design creativity found no clean, stable conclusion that one gender is simply more creative in design overall. Inference from that literature: when differences appear, they are often context-specific, small, or strongly shaped by the task, the evaluation method, and the surrounding culture.
+A 2024 study on gender differences in design creativity found no clean, stable conclusion that one gender is simply more creative in design overall. Inference from that literature: when differences appear, they are often context-specific, small, or strongly shaped by the task, the evaluation method, and the surrounding culture.
 
 So yes, you can find clusters.
 No, you should not turn those clusters into destiny.
@@ -204,7 +204,7 @@ The opposite of bad design is not male design or female design. It is design tha
 
 
 ### The history problem
-#### The canon of design was never as neutral as it looked
+#### The world of design was never as neutral as it looked
 
 Another reason this topic keeps returning is that design history was long written as if the most important work mostly came from men. That story was never fully true. It was partly a credit-assignment problem.
 
