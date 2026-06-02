@@ -1,7 +1,7 @@
 ---
 title: "Women vs Men in Graphic Design: Talent, Bias, and the Myths That Refuse to Die"
 description: "Are women or men better in graphic design? What the research suggests about talent, public perception, leadership, audience fit, and the myths the industry still repeats."
-date: 2026-06-01
+date: 2026-06-02
 tags: ["graphic design", "reports", "history", "branding"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
