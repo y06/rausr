@@ -1,7 +1,7 @@
 ---
 title: "Choosing the Optimal Monitor Setup for Graphic Design"
 description: "What size actually works best, when one display is enough, why EIZO still matters, and where ergonomics and color trust start to change the setup."
-date: 2026-06-08
+date: 2026-06-09
 tags: ["hardware", "graphic design", "reports"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
