@@ -1,7 +1,7 @@
 ---
 title: "Most Successful Chocobars Packaging Design"
 description: "Eight iconic chocolate bars, their wrappers, shapes, typography, visual codes, and the packaging stories that made them unforgettable."
-date: 2026-06-10
+date: 2026-06-12
 tags: ["packaging design", "graphic design", "branding", "series"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
