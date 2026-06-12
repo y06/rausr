@@ -66,9 +66,9 @@ The best chocobar wrapper does not only say what the product is. It says what ki
 ### 1. KitKat
 #### The red wrapper became bigger than the bar’s shape dispute
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-3.jpg" alt="Toblerone triangular package using mountain form and Swiss cues to turn structure into identity." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-3.jpg" alt="Toblerone triangular package using mountain form and Swiss cues to turn structure into identity." >}}
+
 
 
 KitKat is one of the cleanest demonstrations of packaging consistency in confectionery.
@@ -99,9 +99,9 @@ A system this strong can become too dependent on extension culture. Too many fla
 ### 2. Toblerone
 #### The package shape is the brand before the graphics even begin
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-4.jpg" alt="Snickers wrapper using blue, white, and red coding to express energy, fullness, and mass-market confidence." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-4.jpg" alt="Snickers wrapper using blue, white, and red coding to express energy, fullness, and mass-market confidence." >}}
+
 
 
 Toblerone is one of the clearest examples in all packaging design of structure becoming memory.
@@ -136,9 +136,9 @@ Interesting fact: very few mainstream chocobars have a package shape so strong t
 ### 3. Snickers
 #### The wrapper sells fullness, not delicacy
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-5.jpg" alt="Twix packaging built around gold wrapper language, twin-bar logic, and red logo impact." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-5.jpg" alt="Twix packaging built around gold wrapper language, twin-bar logic, and red logo impact." >}}
+
 
 Snickers packaging does not pretend to be refined.
 
@@ -169,9 +169,9 @@ The risk of a package like this is heaviness. If every extension, protein versio
 ### 4. Twix
 #### The wrapper has to explain two bars, not one
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-6.jpg" alt="Cadbury Dairy Milk packaging with iconic purple wrapper and milk-based brand signaling." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-6.jpg" alt="Cadbury Dairy Milk packaging with iconic purple wrapper and milk-based brand signaling." >}}
+
 
 Twix packaging is interesting because the product proposition is more structural than many people realize.
 
@@ -200,9 +200,9 @@ The danger with humor-driven packaging is that the joke can outlive its freshnes
 ### 5. Cadbury Dairy Milk
 #### Purple did more work here than many logos ever could
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-7.jpg" alt="Mars bar wrapper using dark field and red-gold wordmark to signal richness and classic confectionery heritage." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-7.jpg" alt="Mars bar wrapper using dark field and red-gold wordmark to signal richness and classic confectionery heritage." >}}
+
 
 Cadbury Dairy Milk is one of the greatest color-ownership stories in consumer packaging.
 
@@ -237,9 +237,9 @@ Some wrappers sell excitement. Dairy Milk sells reassurance.
 ### 6. Mars Bar
 #### Dark wrapper, warm lettering, maximum directness
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-8.jpg" alt="Reese's packaging with bright orange wrapper and peanut-butter-led color system built for instant recognition." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-8.jpg" alt="Reese's packaging with bright orange wrapper and peanut-butter-led color system built for instant recognition." >}}
+
 
 The Mars bar package is one of the simplest in the category, which is exactly why it lasts.
 
@@ -270,9 +270,9 @@ Its very simplicity can also become a limitation. In a newer wellness-coded snac
 ### 7. Reese’s
 #### Orange became a flavor before people even bit the cup
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-9.jpg" alt="Kinder Bueno wrapper combining white, red, and appetite-focused photography to feel lighter and more modern than older chocobar systems." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-9.jpg" alt="Kinder Bueno wrapper combining white, red, and appetite-focused photography to feel lighter and more modern than older chocobar systems." >}}
+
 
 Reese’s is one of the strongest examples of a package making the flavor feel inevitable.
 
@@ -305,9 +305,9 @@ One useful packaging lesson from Reese’s: if a color is strong enough, it can 
 ### 8. Kinder Bueno
 #### The package sells lightness inside an indulgent category
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-10.jpg" alt="Current chocobar packaging trends under pressure from healthier snacking, rising cocoa costs, and more selective consumers." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-successful-chocobars-packaging-design/most-successful-chocobars-packaging-design-10.jpg" alt="Current chocobar packaging trends under pressure from healthier snacking, rising cocoa costs, and more selective consumers." >}}
+
 
 Kinder Bueno is one of the most contemporary success stories in the category because it balances indulgence with a lighter visual feel.
 
