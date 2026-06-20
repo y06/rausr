@@ -1,7 +1,7 @@
 ---
 title: "Most Popular Logo Fonts and Logotype Typefaces"
 description: "The most popular logo fonts and logotype typefaces, from Helvetica and Futura to Gotham and Avant Garde, plus what today’s startup logo trends reveal."
-date: 2026-06-19
+date: 2026-06-20
 tags: ["typography", "graphic design", "branding", "series"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
