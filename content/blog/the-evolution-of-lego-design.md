@@ -1,7 +1,7 @@
 ---
 title: "LEGO Brand Design Evolution: From Wooden Toys to a Global System of Play"
 description: "How LEGO evolved its logo, packaging, minifigures, retail spaces, and wider brand design from a small Danish workshop into one of the world’s clearest visual systems."
-date: 2026-07-02
+date: 2026-07-03
 tags: ["series", "history", "branding", "graphic design"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
@@ -65,9 +65,9 @@ This is one hidden truth behind LEGO’s later success. The famous modern visual
 ### The system of play
 #### The biggest innovation was not the brick alone, but the logic that every new piece should belong to the others
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-3.jpg" alt="LEGO brick evolution showing how the interlocking system became the foundation of the brand’s design language." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-3.jpg" alt="LEGO brick evolution showing how the interlocking system became the foundation of the brand’s design language." >}}
+
 
 The decisive leap came when LEGO moved from making separate toys to building a connected system. Official company history still highlights the 1958 version of the brick and its interlocking tube principle as the foundation that remained stable for decades.
 
@@ -84,9 +84,9 @@ There was also a risk in this strength. A system this successful can become cons
 ### The logo and the visual identity
 #### LEGO’s mark became stronger by becoming simpler, louder, and easier to read at speed
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-4.jpg" alt="LEGO logo evolution from earlier wordmarks to the bold red, yellow, white, and black identity used globally today." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-4.jpg" alt="LEGO logo evolution from earlier wordmarks to the bold red, yellow, white, and black identity used globally today." >}}
+
 
 The LEGO logo passed through several versions before arriving at the familiar red field with white letters, yellow outline, and black shadow. That final logic works because it is extremely direct. It does not whisper. It performs.
 
@@ -103,9 +103,9 @@ The wrong path here would have been trend-chasing. If LEGO had repeatedly flatte
 ### Packaging and instruction graphics
 #### LEGO boxes do not only sell sets, they teach people how to read the brand
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-5.jpg" alt="LEGO packaging evolution showing how box design taught play possibilities, age logic, and set hierarchy." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-5.jpg" alt="LEGO packaging evolution showing how box design taught play possibilities, age logic, and set hierarchy." >}}
+
 
 Packaging is one of LEGO’s most underrated design disciplines.
 
@@ -119,7 +119,7 @@ Its packaging evolution brought several things into balance:
 - cinematic excitement
 - enough order that the buyer still knows where to look
 
-Instruction manuals matter just as much. This is where LEGO’s graphic design discipline becomes very visible. The manuals had to make building feel possible, not intimidating. They are one of the company’s best examples of information design serving emotion. If the steps feel clear, the set feels smarter.
+Instruction manuals matter just as much. This is where LEGO’s graphic design discipline becomes very visible. The manuals had to make building feel possible, not hard and scary complicated. They are one of the company’s best examples of information design serving emotion. If the steps feel clear, the set feels smarter.
 
 #### A small but important blind path
 At times, very franchise-heavy packaging can make the external entertainment property louder than the LEGO system itself. That may help a short-term sale, but it can weaken the brand’s own design grammar if pushed too far.
@@ -148,9 +148,9 @@ One hidden reason this mattered so much: the minifigure allowed LEGO to move mor
 ### The people behind the evolution
 #### LEGO’s design story was built more by internal culture than by one star agency
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-7.jpg" alt="Key LEGO designers and creative leaders who shaped products, play systems, and the wider brand culture." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-7.jpg" alt="Key LEGO designers and creative leaders who shaped products, play systems, and the wider brand culture." >}}
+
 
 Some brands can explain their design history through one famous external creative director. LEGO is not really one of them.
 
@@ -169,9 +169,9 @@ This is one reason LEGO still feels coherent across so many product families. Th
 ### From product to place
 #### LEGO stores and LEGO House turned branding into a physical environment you can walk through
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-8.jpg" alt="LEGO retail and LEGO House design showing how architecture became part of the brand experience." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-8.jpg" alt="LEGO retail and LEGO House design showing how architecture became part of the brand experience." >}}
+
 
 LEGO became far stronger once its environments started behaving like enlarged versions of the product itself.
 
@@ -192,9 +192,9 @@ The obvious idea behind LEGO House, making a building feel like stacked bricks, 
 ### Successes, mistakes, and the tension inside growth
 #### LEGO’s strongest transformations happened when expansion stayed loyal to the core system
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-9.jpg" alt="LEGO design wins and mistakes shown through logo stability, packaging clarity, franchise growth, and the tension between system purity and expansion." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-9.jpg" alt="LEGO design wins and mistakes shown through logo stability, packaging clarity, franchise growth, and the tension between system purity and expansion." >}}
+
 
 Not every chapter in LEGO’s growth was equally clean. The brand has had enormous successes, but also recurring tensions.
 
@@ -213,9 +213,9 @@ That is also the best simple way to read its design history.
 ### Where LEGO is now and where it is going
 #### The future will be more digital, more adult-facing, and more hybrid, but it still has to feel physically LEGO
 
-{{< halves >}}
-{{< halfimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-10.jpg" alt="Future-facing LEGO design direction combining physical bricks, digital layers, sustainability, adult fans, and long-term brand continuity." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/the-evolution-of-lego-design/the-evolution-of-lego-design-10.jpg" alt="Future-facing LEGO design direction combining physical bricks, digital layers, sustainability, adult fans, and long-term brand continuity." >}}
+
 
 Today LEGO operates across children’s sets, collector editions, films, digital experiences, education, fan communities, and branded spaces. That range is a strength, but it also raises the design challenge.
 
