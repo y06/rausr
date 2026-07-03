@@ -4340,6 +4340,75 @@ a:hover {
 
 
 @media (min-width: 992px) {
+    .header.header-work:has(> .header-image),
+    .header.header-article {
+        position: relative;
+        min-height: 320px;
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+    .header.header-work:has(> .header-image) > .header-content,
+    .header.header-article > .header-content {
+        position: relative;
+        z-index: 2;
+        width: 58%;
+    }
+
+    .header.header-work:has(> .header-image) > .header-image,
+    .header.header-article > .header-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        z-index: 1;
+        width: 54%;
+        height: auto;
+        max-height: none;
+        border-radius: 0 12px 12px 0;
+        overflow: hidden;
+    }
+
+    .header.header-work:has(> .header-image) > .header-image img,
+    .header.header-article > .header-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .header.header-work:has(> .header-image) > .header-image::before,
+    .header.header-article > .header-image::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .header.header-work:has(> .header-image) > .header-image::before {
+        background: linear-gradient(
+            90deg,
+            color(display-p3 0.129 0.561 1.000) 0%,
+            color(display-p3 0.129 0.561 1.000 / 0.9) 18%,
+            color(display-p3 0.129 0.561 1.000 / 0.45) 42%,
+            transparent 72%
+        );
+    }
+
+    .header.header-article > .header-image::before {
+        background: linear-gradient(
+            90deg,
+            color(display-p3 0.055 0.604 0.447) 0%,
+            color(display-p3 0.055 0.604 0.447 / 0.9) 18%,
+            color(display-p3 0.055 0.604 0.447 / 0.45) 42%,
+            transparent 72%
+        );
+    }
+
     .card1 {
         width: calc(25% - 20px); /* 4 karty v rade s odstupom */
         margin: 10px;
@@ -5762,5 +5831,190 @@ a:hover {
 
   .navbar-collapse {
     width: 80%;
+  }
+}
+
+/* Responsive image treatment for work and article detail headers */
+@media (min-width: 576px) and (max-width: 991px) {
+  .header.header-work:has(> .header-image),
+  .header.header-article {
+    position: relative;
+    min-height: 360px;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0 !important;
+    padding: 2.5rem 3rem !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .header.header-work:has(> .header-image) > .header-content,
+  .header.header-article > .header-content {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    max-width: 560px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .header.header-work:has(> .header-image) > .header-image,
+  .header.header-article > .header-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    z-index: 1;
+    width: 58%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+  }
+
+  .header.header-work:has(> .header-image) > .header-image img,
+  .header.header-article > .header-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .header.header-work:has(> .header-image) > .header-image::before,
+  .header.header-article > .header-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .header.header-work:has(> .header-image) > .header-image::before {
+    background: linear-gradient(
+      90deg,
+      color(display-p3 0.129 0.561 1.000) 0%,
+      color(display-p3 0.129 0.561 1.000 / 0.9) 20%,
+      color(display-p3 0.129 0.561 1.000 / 0.38) 46%,
+      transparent 76%
+    );
+  }
+
+  .header.header-article > .header-image::before {
+    background: linear-gradient(
+      90deg,
+      color(display-p3 0.055 0.604 0.447) 0%,
+      color(display-p3 0.055 0.604 0.447 / 0.9) 20%,
+      color(display-p3 0.055 0.604 0.447 / 0.38) 46%,
+      transparent 76%
+    );
+  }
+}
+
+/* Mobile detail header: natural content height with a full-width image below */
+@media (max-width: 575px) {
+  .header.header-work#page-blur,
+  .header.header-article {
+    position: relative;
+    display: flex;
+    min-height: clamp(760px, 205vw, 1120px);
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 2rem 2rem 0 !important;
+    margin: 0 1rem 2rem !important;
+    border-radius: 18px !important;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .header.header-work#page-blur > .header-content,
+  .header.header-article > .header-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: none;
+    padding-bottom: clamp(260px, 72vw, 390px);
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .header.header-work#page-blur > .header-content .header-cta-button,
+  .header.header-article > .header-content .header-cta-button,
+  .header.header-article > .header-content .header-meta__cta {
+    width: 100% !important;
+  }
+
+  .header.header-article > .header-content .header-meta {
+    width: 100%;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .header.header-article > .header-content .header-meta__author {
+    justify-content: space-between;
+  }
+
+  .header.header-work#page-blur > .header-image,
+  .header.header-article > .header-image {
+    position: absolute;
+    right: -2rem;
+    bottom: 0;
+    left: -2rem;
+    z-index: 1;
+    display: block;
+    width: auto !important;
+    height: clamp(250px, 70vw, 360px);
+    max-width: none;
+    max-height: none;
+    margin: 0 !important;
+    border-radius: 1.5rem 1.5rem 0 0;
+    overflow: hidden;
+  }
+
+  .header.header-work#page-blur > .header-image img,
+  .header.header-article > .header-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .header.header-work#page-blur > .header-image::before,
+  .header.header-article > .header-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .header.header-work#page-blur > .header-image::before {
+    background: linear-gradient(
+      180deg,
+      color(display-p3 0.129 0.561 1.000) 0%,
+      color(display-p3 0.129 0.561 1.000 / 0.94) 10%,
+      color(display-p3 0.129 0.561 1.000 / 0.6) 24%,
+      color(display-p3 0.129 0.561 1.000 / 0.18) 42%,
+      transparent 66%
+    );
+  }
+
+  .header.header-article > .header-image::before {
+    background: linear-gradient(
+      180deg,
+      color(display-p3 0.055 0.604 0.447) 0%,
+      color(display-p3 0.055 0.604 0.447 / 0.94) 10%,
+      color(display-p3 0.055 0.604 0.447 / 0.6) 24%,
+      color(display-p3 0.055 0.604 0.447 / 0.18) 42%,
+      transparent 66%
+    );
   }
 }
