@@ -1,7 +1,7 @@
 ---
 title: "FIFA World Cup Branding and Visual Evolution"
 description: "How FIFA World Cup visual identity evolved from early posters and simple emblems into full branding systems with logos, mascots, campaigns, and global event design."
-date: 2026-07-20
+date: 2026-07-21
 tags: ["branding", "history", "marketing", "graphic design", "series"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
@@ -48,9 +48,8 @@ World Cup branding is not only a logo project. It is a temporary country-scale d
 ### The early years
 #### At first the tournament was promoted more like a poster event than a modern brand system
 
-{{< halves >}}
-{{< halfimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-2.jpg" alt="Early FIFA World Cup visual culture showing poster-led promotion, simple emblems, and pre-system tournament graphics." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-2.jpg" alt="Early FIFA World Cup visual culture showing poster-led promotion, simple emblems, and pre-system tournament graphics." >}}
+
 
 In the early decades, the World Cup did not yet behave like a full identity machine.
 
@@ -68,9 +67,9 @@ These early identities were important, but they were not yet operating at the sc
 ### 1966 was a major threshold
 #### England’s tournament helped show how a World Cup identity could become bigger than a poster
 
-{{< halves >}}
-{{< halfimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-3.jpg" alt="1966 FIFA World Cup visual identity period featuring World Cup Willie and the shift toward more marketable tournament branding." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-3.jpg" alt="1966 FIFA World Cup visual identity period featuring World Cup Willie and the shift toward more marketable tournament branding." >}}
+
 
 One of the biggest early turning points came in 1966 with **World Cup Willie**, the tournament’s first official mascot.
 
@@ -85,15 +84,15 @@ Because the tournament identity was no longer only something you looked at. It b
 ### 1970 gave the World Cup a modern graphic-design moment
 #### Mexico’s tournament showed what happens when a major event meets a strong visual mind
 
-{{< halves >}}
-{{< halfimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-4.jpg" alt="1970 FIFA World Cup poster by Lance Wyman showing minimalist football geometry and Mexico’s modern design influence." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-4.jpg" alt="1970 FIFA World Cup poster by Lance Wyman showing minimalist football geometry and Mexico’s modern design influence." >}}
+
 
 The 1970 tournament in Mexico remains one of the clearest graphic-design highlights in World Cup history because the official poster was designed by [Lance Wyman](/search/?q=Lance+Wyman).
 
 That matters for two reasons.
 
-First, Wyman was already deeply associated with the visual power of Mexico 1968. Second, his World Cup work showed how a football tournament could borrow from a more modern design language without losing clarity.
+First, Wyman was already deeply associated with the visual power of Mexico 1968 (olympic games). Second, his World Cup work showed how a football tournament could borrow from a more modern design language without losing clarity.
 
 The 1970 poster is memorable because it is:
 
@@ -112,9 +111,9 @@ One hidden reason 1970 still feels important is that it sits close to the Mexico
 ### 1978 to the 1990s
 #### The identity became more symbolic, more political, and slowly more systemized
 
-{{< halves >}}
-{{< halfimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-5.jpg" alt="1978 to 1990s FIFA World Cup branding showing symbolic emblems, stronger host-country codes, and growing event-system complexity." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-5.jpg" alt="1978 to 1990s FIFA World Cup branding showing symbolic emblems, stronger host-country codes, and growing event-system complexity." >}}
+
 
 As the World Cup moved through Argentina 1978, Spain 1982, Mexico 1986, Italy 1990, and USA 1994, the visual identities became more recognizable and more tied to host narratives.
 
@@ -136,9 +135,9 @@ This is the stage where the World Cup became harder to design because it became 
 ### 1998 and 2002
 #### The World Cup began to behave more like a global entertainment brand than only a football championship
 
-{{< halves >}}
-{{< halfimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-6.jpg" alt="Late 1990s and early 2000s FIFA World Cup branding with broader merchandising, broadcast identity, mascot systems, and entertainment logic." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-6.jpg" alt="Late 1990s and early 2000s FIFA World Cup branding with broader merchandising, broadcast identity, mascot systems, and entertainment logic." >}}
+
 
 By France 1998 and Korea/Japan 2002, the World Cup had fully entered the era of larger global event branding.
 
@@ -159,9 +158,9 @@ As FIFA grew commercially, visual identities gained more consistency but sometim
 ### 2010 was a major professionalization point
 #### South Africa’s tournament showed how a World Cup identity could be built through a long formal process
 
-{{< halves >}}
-{{< halfimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-7.jpg" alt="2010 FIFA World Cup branding in South Africa showing a more formal event identity process and broader branded environment." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-7.jpg" alt="2010 FIFA World Cup branding in South Africa showing a more formal event identity process and broader branded environment." >}}
+
 
 The 2010 FIFA World Cup in South Africa is important not only for its look, but for what the design process revealed.
 
@@ -184,9 +183,9 @@ Exact identity-design budgets are rarely public in a clean way. But the process 
 ### 2014, 2018, and 2022
 #### FIFA identities became more centralized, more polished, and more symbolic in a controlled way
 
-{{< halves >}}
-{{< halfimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-8.jpg" alt="2014, 2018, and 2022 FIFA World Cup identities showing polished emblems, stronger system control, and host culture translated into global branding." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-8.jpg" alt="2014, 2018, and 2022 FIFA World Cup identities showing polished emblems, stronger system control, and host culture translated into global branding." >}}
+
 
 The 2010s made the pattern obvious. FIFA and host organizers were now delivering visual systems that had to feel globally deployable and locally meaningful at the same time.
 
@@ -209,9 +208,9 @@ Modern World Cup branding often has to do two jobs at once: satisfy a global cor
 ### 2026 shows the newest logic
 #### The brand is now modular enough to scale across three host nations and many local versions
 
-{{< halves >}}
-{{< halfimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-9.jpg" alt="2026 FIFA World Cup identity with trophy-based emblem, modular host-city brand language, and collaborative poster strategy across three countries." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-9.jpg" alt="2026 FIFA World Cup identity with trophy-based emblem, modular host-city brand language, and collaborative poster strategy across three countries." >}}
+
 
 The FIFA World Cup 2026 identity made one thing very clear: FIFA now wants a system that can scale almost infinitely.
 
@@ -235,9 +234,9 @@ Some designers and fans felt the 2026 emblem was too generic compared with older
 ### What a World Cup identity must contain now
 #### Today the job is much bigger than logo design
 
-{{< halves >}}
-{{< halfimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-10.jpg" alt="Components of a modern FIFA World Cup visual system including emblem, mascot, posters, signage, tickets, broadcast, uniforms, and sponsor integration." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-10.jpg" alt="Components of a modern FIFA World Cup visual system including emblem, mascot, posters, signage, tickets, broadcast, uniforms, and sponsor integration." >}}
+
 
 If a studio, internal team, or organizing committee is building a World Cup identity today, the brief is enormous.
 
@@ -260,9 +259,9 @@ That is why the project takes years and why exact authorship can become blurry. 
 ### A quick comparison
 #### Different eras solved different branding problems
 
-{{< halves >}}
-{{< halfimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-11.jpg" alt="Comparison of FIFA World Cup branding eras from poster-led identities to modular modern systems spanning cities, media, and merchandise." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/fifa-world-cup-branding-and-visual-evolution/fifa-world-cup-branding-and-visual-evolution-11.jpg" alt="Comparison of FIFA World Cup branding eras from poster-led identities to modular modern systems spanning cities, media, and merchandise." >}}
+
 
 | Era | Main visual logic | Main challenge |
 | --- | --- | --- |
