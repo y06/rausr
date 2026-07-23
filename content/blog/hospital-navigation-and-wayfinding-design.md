@@ -57,9 +57,9 @@ In a hospital, a wayfinding system is successful when people notice it only beca
 ### Why hospital navigation is different
 #### Normal wayfinding becomes more fragile when people are stressed, ill, rushed, or emotionally overloaded
 
-{{< halves >}}
-{{< halfimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-2.jpg" alt="Hospital wayfinding overview showing entrances, reception, elevators, corridors, and critical departments organized into a clear navigation system." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-2.jpg" alt="Hospital wayfinding overview showing entrances, reception, elevators, corridors, and critical departments organized into a clear navigation system." >}}
+
 
 Hospitals are not like shopping centers and not like airports, even if they share some spatial complexity.
 
@@ -83,9 +83,9 @@ That means the signage system must be clearer, earlier, calmer, and more forgivi
 ### Panic moments change the design rules
 #### A navigation system that works in a calm moment may still fail in an emergency or high-stress situation
 
-{{< halves >}}
-{{< halfimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-3.jpg" alt="Hospital emergency navigation with high-priority routes, clear arrows, critical destinations, and easy recognition under stress." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-3.jpg" alt="Hospital emergency navigation with high-priority routes, clear arrows, critical destinations, and easy recognition under stress." >}}
+
 
 Hospitals need at least two layers of navigation logic.
 
@@ -110,11 +110,11 @@ One hidden professional truth is that hospital wayfinding is not only about show
 {{< /interest >}}
 
 ### What the system must contain
-#### Excellent hospital navigation is a language, not a random set of signs
+#### Excellent hospital navigation is a language, not some pictogram collection
 
-{{< halves >}}
-{{< halfimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-4.jpg" alt="Hospital navigation components including directories, zone colors, room numbers, maps, elevator signs, and emergency routes." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-4.jpg" alt="Hospital navigation components including directories, zone colors, room numbers, maps, elevator signs, and emergency routes." >}}
+
 
 A proper hospital system usually includes far more than overhead arrows.
 
@@ -136,9 +136,9 @@ The hidden challenge is naming. A sign can be visually excellent and still fail 
 ### Color, type, and symbols
 #### They help a lot, but only when they work together instead of fighting each other
 
-{{< halves >}}
-{{< halfimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-5.jpg" alt="Hospital signage using color zones, readable typography, icons, and confirmation markers to reduce confusion for diverse users." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-5.jpg" alt="Hospital signage using color zones, readable typography, icons, and confirmation markers to reduce confusion for diverse users." >}}
+
 
 Color-coding is common in hospitals because it can simplify large campuses or buildings with many wings. But color alone is never enough.
 
@@ -159,9 +159,9 @@ Symbols matter too, but they are strongest when they reinforce simple words rath
 ### How the process usually works
 #### A serious hospital wayfinding project is long, phased, and much more research-driven than many clients expect
 
-{{< halves >}}
-{{< halfimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-6.jpg" alt="Hospital wayfinding design process using audits, flow studies, zoning plans, prototype signage, and user testing." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-6.jpg" alt="Hospital wayfinding design process using audits, flow studies, zoning plans, prototype signage, and user testing." >}}
+
 
 The process is rarely fast if the project is done properly.
 
@@ -179,14 +179,29 @@ A full hospital process often includes:
 On a very large hospital campus, this can take many months and sometimes stretch across years, especially if construction, renovation, or phased opening is involved. The harder part is not drawing the signs. The harder part is aligning architecture, operations, medical departments, accessibility rules, and public understanding.
 
 #### Cost question
-Public project budgets are often not cleanly published. In practice, cost depends on site size, number of buildings, fabrication quality, multilingual requirements, digital components, and whether the system is integrated early with architecture or added later as a rescue job.
+Public project budgets are often not published cleanly, but the market ranges are still possible to estimate with reasonable confidence.
+
+For a smaller clinic or one limited hospital-zone refresh, the cost can sit roughly in the **$25,000 to $100,000** range if the system is mostly static signage and modest planning.
+
+For a serious full-building hospital wayfinding program, a more realistic bracket is usually around **$150,000 to $500,000+** once strategy, naming, ADA-compliant fabrication, installation, and phased rollout are included.
+
+For a large multi-building hospital campus, the investment can rise into the **high six figures or even low seven figures**, especially when the scope includes:
+
+- exterior campus signage
+- interior directories and room IDs
+- multilingual layers
+- digital kiosks or screens
+- phased renovations
+- and post-occupancy updates
+
+That sounds expensive, but it matches the operational scale. SEGD has cited healthcare research showing that confusing navigation can waste hundreds of thousands of dollars per year in lost staff time and missed appointments, so the real comparison is not only sign cost versus no sign cost. It is system cost versus ongoing confusion cost.
 
 ### Successful examples
 #### The best healthcare systems reduce stress in measurable or clearly visible ways
 
-{{< halves >}}
-{{< halfimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-7.jpg" alt="Successful hospital wayfinding examples with simplified zoning, calmer visual language, and better patient confidence." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-7.jpg" alt="Successful hospital wayfinding examples with simplified zoning, calmer visual language, and better patient confidence." >}}
+
 
 Several healthcare projects are useful reference points.
 
@@ -199,9 +214,9 @@ Several healthcare projects are useful reference points.
 ### What bad systems usually get wrong
 #### Failure often comes from late decisions, bad naming, weak hierarchy, or signs treated as isolated objects
 
-{{< halves >}}
-{{< halfimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-8.jpg" alt="Problematic hospital signage with inconsistent naming, unclear hierarchy, confusing arrows, and poor integration with the building." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-8.jpg" alt="Problematic hospital signage with inconsistent naming, unclear hierarchy, confusing arrows, and poor integration with the building." >}}
+
 
 Hospital navigation fails in familiar ways.
 
@@ -239,9 +254,9 @@ Lankenau’s use of pre-arrival destination cards is useful precisely because it
 ### Systems in past, now, and the future
 #### Hospital wayfinding has moved from static sign posting toward integrated physical and digital guidance
 
-{{< halves >}}
-{{< halfimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-9.jpg" alt="Evolution of hospital navigation from older static directories to integrated physical, digital, and accessible wayfinding systems." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/hospital-navigation-and-wayfinding-design/hospital-navigation-and-wayfinding-design-9.jpg" alt="Evolution of hospital navigation from older static directories to integrated physical, digital, and accessible wayfinding systems." >}}
+
 
 In the past, many hospitals relied on a simpler logic:
 department boards, long corridor signs, and verbal help from staff.
