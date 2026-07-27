@@ -1,7 +1,7 @@
 ---
 title: "Hospital Navigation and Wayfinding Design System"
 description: "How hospital navigation systems are designed for clarity, stress, panic moments, accessibility, and trust, from research and zoning to signage, digital layers, and future healthcare wayfinding."
-date: 2026-07-23
+date: 2026-07-27
 tags: ["graphic design", "typography", "branding"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
