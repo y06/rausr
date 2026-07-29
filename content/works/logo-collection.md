@@ -2,7 +2,7 @@
 title: "Collection of Various Logo Designs"
 date: 2020-12-06
 description: "A collection of various logos, created for the various brands and contests."
-tags: ["branding", "typography"]
+tags: ["collection", "branding", "typography"]
 draft: false
 preview_image: "/images/preview/preview-20.png"
 header_image: "/images/preview/preview-20.png"

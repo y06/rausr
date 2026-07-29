@@ -2,40 +2,91 @@
     <h2>Featured Content</h2>
     <div class="featured-grid">
         {{ $featured := .Site.Params.featuredContent }}
-        {{ range .Site.RegularPages }}
-            {{ .Scratch.Set "link" .RelPermalink }}
-            {{ if in $featured .File.BaseFileName }}
-            <div class="card1">
-                <a href="{{ .Scratch.Get "link" }}" class="">
-                    {{ with .Params.preview_image }}
-                    <div class="card1-top">
-                        {{ partial "components/responsive-image.html" (dict
-                            "src" .
-                            "alt" $.Title
-                            "width" 360
-                            "sizes" "(max-width: 991px) 50vw, 360px"
-                        ) }}
-                    </div>
-                    {{ end }}
-                </a>
-                
-                <div class="card2-bottom">
-                    {{ with index .Params.tags 0 }}
-                    {{ $tag := partial "normalize-taxonomy-term.html" . }}
-                    <span class="card1-category">
-                        <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ partial "tag-label.html" $tag }}</a>
-                    </span>
-                    {{ end }}
+        {{ $collectionPage := site.GetPage "/collection" }}
+        {{ $collectionWorks := slice }}
 
-                    {{ $link := .Scratch.Get "link" }}
-                    <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
-                </div>
-                {{ if eq .Type "works" }}
-                  <a href="{{ $link }}" class="card2-cta">show work →</a>
-                {{ else }}
-                  <a href="{{ $link }}" class="card2-cta">read article →</a>
+        {{ range $work := where .Site.RegularPages "Section" "works" }}
+            {{ $isCollection := false }}
+            {{ range ($work.Params.tags | default (slice)) }}
+                {{ if eq (lower (partial "normalize-taxonomy-term.html" .)) "collection" }}
+                    {{ $isCollection = true }}
                 {{ end }}
-            </div>
+            {{ end }}
+
+            {{ if $isCollection }}
+                {{ $collectionWorks = $collectionWorks | append $work }}
+            {{ end }}
+        {{ end }}
+
+        {{ $collectionWorks = sort $collectionWorks "Date" "desc" }}
+        {{ $collectionImage := "" }}
+        {{ with index $collectionWorks 0 }}
+            {{ with .Params.preview_image }}
+                {{ $collectionImage = . }}
+            {{ end }}
+        {{ end }}
+
+        {{ range $featured }}
+            {{ if eq . "collection" }}
+                {{ $collectionHref := "/collection/" }}
+                {{ with $collectionPage }}{{ $collectionHref = .RelPermalink }}{{ end }}
+                <div class="card1">
+                    <a href="{{ $collectionHref }}" class="">
+                        {{ if $collectionImage }}
+                            <div class="card1-top">
+                                {{ partial "components/responsive-image.html" (dict
+                                    "src" $collectionImage
+                                    "alt" (or $collectionPage.Title "Collection")
+                                    "width" 360
+                                    "sizes" "(max-width: 991px) 50vw, 360px"
+                                ) }}
+                            </div>
+                        {{ end }}
+                    </a>
+                    <div class="card2-bottom">
+                        <span class="card1-category">
+                            <a href="{{ $collectionHref }}">{{ partial "tag-label.html" "collection" }}</a>
+                        </span>
+                        <h3><a href="{{ $collectionHref }}">{{ with $collectionPage }}{{ .Title }}{{ else }}Collection{{ end }}</a></h3>
+                    </div>
+                    <a href="{{ $collectionHref }}" class="card2-cta">show collection →</a>
+                </div>
+            {{ else }}
+                {{ $page := index (where $.Site.RegularPages "File.BaseFileName" .) 0 }}
+                {{ with $page }}
+                    {{ .Scratch.Set "link" .RelPermalink }}
+                    <div class="card1">
+                        <a href="{{ .Scratch.Get "link" }}" class="">
+                            {{ with .Params.preview_image }}
+                            <div class="card1-top">
+                                {{ partial "components/responsive-image.html" (dict
+                                    "src" .
+                                    "alt" $.Title
+                                    "width" 360
+                                    "sizes" "(max-width: 991px) 50vw, 360px"
+                                ) }}
+                            </div>
+                            {{ end }}
+                        </a>
+
+                        <div class="card2-bottom">
+                            {{ with index .Params.tags 0 }}
+                            {{ $tag := partial "normalize-taxonomy-term.html" . }}
+                            <span class="card1-category">
+                                <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ partial "tag-label.html" $tag }}</a>
+                            </span>
+                            {{ end }}
+
+                            {{ $link := .Scratch.Get "link" }}
+                            <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
+                        </div>
+                        {{ if eq .Type "works" }}
+                          <a href="{{ $link }}" class="card2-cta">show work →</a>
+                        {{ else }}
+                          <a href="{{ $link }}" class="card2-cta">read article →</a>
+                        {{ end }}
+                    </div>
+                {{ end }}
             {{ end }}
         {{ end }}
     </div>

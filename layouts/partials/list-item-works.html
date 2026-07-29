@@ -1,34 +1,35 @@
+{{ $isCollection := false }}
+{{ range (.Params.tags | default (slice)) }}
+  {{ if eq (lower (partial "normalize-taxonomy-term.html" .)) "collection" }}
+    {{ $isCollection = true }}
+  {{ end }}
+{{ end }}
+{{ $ctaLabel := cond $isCollection "SHOW COLLECTION →" "SHOW WORK →" }}
 
-    <div class="card1">
-        <a href="{{ .Scratch.Get "link" }}" class="">
-            {{ with .Params.preview_image }}
-            <div class="card1-top">
+<div class="card1">
+    <a href="{{ .Scratch.Get "link" }}" class="">
+        {{ with .Params.preview_image }}
+        <div class="card1-top">
+            {{ partial "components/responsive-image.html" (dict
+                "src" .
+                "alt" $.Title
+                "width" 360
+                "sizes" "(max-width: 991px) 50vw, 360px"
+            ) }}
+        </div>
+        {{ end }}
+    </a>
 
-                    {{ partial "components/responsive-image.html" (dict
-                        "src" .
-                        "alt" $.Title
-                        "width" 360
-                        "sizes" "(max-width: 991px) 50vw, 360px"
-                    ) }}
+    <div class="card1-bottom">
+        {{ with index .Params.tags 0 }}
+        {{ $tag := partial "normalize-taxonomy-term.html" . }}
+        <span class="card1-category">
+            <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ partial "tag-label.html" $tag }}</a>
+        </span>
+        {{ end }}
 
-            </div>
-            {{ end }}
-        </a>
-        
-            <div class="card1-bottom">
-                {{ with index .Params.tags 0 }}
-                {{ $tag := partial "normalize-taxonomy-term.html" . }}
-                <span class="card1-category">
-                    <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ partial "tag-label.html" $tag }}</a>
-                </span>
-                {{ end }}
-
-                {{ $link := $.Scratch.Get "link" }}
-                <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
-
-                {{ with index .Params.tags 0 }}
-                <a href="{{ $link }}" class="card1-cta">SHOW WORK →</a>
-            </div>
-                {{ end }}
-            
+        {{ $link := $.Scratch.Get "link" }}
+        <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
+        <a href="{{ $link }}" class="card1-cta">{{ $ctaLabel }}</a>
     </div>
+</div>

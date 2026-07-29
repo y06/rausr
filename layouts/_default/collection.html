@@ -1,0 +1,78 @@
+{{ partial "header" . }}
+
+<main>
+  {{ $allWorks := where .Site.RegularPages "Section" "works" }}
+  {{ $allWorks = where $allWorks "Type" "ne" "singles" }}
+
+  {{ $collectionWorks := slice }}
+  {{ range $allWorks }}
+    {{ $isCollection := false }}
+    {{ range (.Params.tags | default (slice)) }}
+      {{ if eq (lower (partial "normalize-taxonomy-term.html" .)) "collection" }}
+        {{ $isCollection = true }}
+      {{ end }}
+    {{ end }}
+    {{ if $isCollection }}
+      {{ $collectionWorks = $collectionWorks | append . }}
+    {{ end }}
+  {{ end }}
+
+  {{ $collectionWorks = sort $collectionWorks "Date" "desc" }}
+  {{ $collectionTotal := len $collectionWorks }}
+  {{ $paginator := .Paginate $collectionWorks 8 }}
+
+  <section class="header">
+    <div class="header-content">
+      <div class="h1container">
+        <h1>
+          {{ .Title }}
+          {{ if gt $collectionTotal 0 }}
+        </h1>
+        {{ with $paginator }}
+          {{ $pageSize := 8 }}
+          {{ $startIndex := add 1 (mul (sub .PageNumber 1) $pageSize) }}
+          {{ $proposedEnd := add $startIndex (sub $pageSize 1) }}
+          {{ $endIndex := cond (gt $proposedEnd $collectionTotal) $collectionTotal $proposedEnd }}
+          <div class="counter">
+            <span class="word showinglist">showing</span>
+            <div class="number total showinglist" aria-label="Showing collection works {{ $startIndex }} to {{ $endIndex }}">{{ $startIndex }}-{{ $endIndex }}</div>
+          </div>
+        {{ end }}
+        <div class="counter">
+          <span class="word">total</span>
+          <div class="number total" aria-label="{{ $collectionTotal }} collection works">{{ $collectionTotal }}</div>
+        </div>
+        {{ end }}
+      </div>
+
+      <p>Collections are the graphic design experiments, freestyle illustrations, series, and self-contained design studies from the rausr receipe book.</p>
+      <button class="header-cta-button" data-scroll-target=".container-tag-list">Show me something ↓</button>
+    </div>
+    <div class="header-illustration">
+      <img src="{{ "svg/header/header-works.svg" | relURL }}" alt="Collection Illustration">
+    </div>
+  </section>
+
+  <div class="container-tag-list">
+    <button class="tag-scroll left">←</button>
+    <div class="tag-list-wrapper">
+      <ul class="tag-list">
+        <li><a href="/works/" class="tag-link">← Client Works</a></li>
+        <li><span class="tag-link active">{{ partial "tag-label.html" "collection" }}</span></li>
+      </ul>
+    </div>
+    <button class="tag-scroll right">→</button>
+  </div>
+
+  <section class="card-container">
+    {{ range $paginator.Pages }}
+      {{ partial "list-item-works" . }}
+    {{ end }}
+  </section>
+</main>
+
+{{ partial "paginator" . }}
+{{ partial "subscribe.html" . }}
+{{ partial "featured-content.html" . }}
+{{ partial "cta-contact" . }}
+{{ partial "footer" . }}
