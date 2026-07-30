@@ -3,45 +3,17 @@
     <div class="featured-grid">
         {{ $featured := .Site.Params.featuredContent }}
         {{ $collectionPage := site.GetPage "/collection" }}
-        {{ $collectionWorks := slice }}
-
-        {{ range $work := where .Site.RegularPages "Section" "works" }}
-            {{ $isCollection := false }}
-            {{ range ($work.Params.tags | default (slice)) }}
-                {{ if eq (lower (partial "normalize-taxonomy-term.html" .)) "collection" }}
-                    {{ $isCollection = true }}
-                {{ end }}
-            {{ end }}
-
-            {{ if $isCollection }}
-                {{ $collectionWorks = $collectionWorks | append $work }}
-            {{ end }}
-        {{ end }}
-
-        {{ $collectionWorks = sort $collectionWorks "Date" "desc" }}
-        {{ $collectionImage := "" }}
-        {{ with index $collectionWorks 0 }}
-            {{ with .Params.preview_image }}
-                {{ $collectionImage = . }}
-            {{ end }}
-        {{ end }}
+        {{ $collectionImage := "/images/collection/collection-intro.jpg" }}
 
         {{ range $featured }}
             {{ if eq . "collection" }}
                 {{ $collectionHref := "/collection/" }}
                 {{ with $collectionPage }}{{ $collectionHref = .RelPermalink }}{{ end }}
-                <div class="card1">
+                <div class="card1 card1--collection">
                     <a href="{{ $collectionHref }}" class="">
-                        {{ if $collectionImage }}
-                            <div class="card1-top">
-                                {{ partial "components/responsive-image.html" (dict
-                                    "src" $collectionImage
-                                    "alt" (or $collectionPage.Title "Collection")
-                                    "width" 360
-                                    "sizes" "(max-width: 991px) 50vw, 360px"
-                                ) }}
-                            </div>
-                        {{ end }}
+                        <div class="card1-top">
+                            <img src="{{ $collectionImage }}" alt="Collection intro" loading="eager" decoding="async" width="360" height="360">
+                        </div>
                     </a>
                     <div class="card2-bottom">
                         <span class="card1-category">

@@ -620,6 +620,43 @@ h5 {
     overflow: hidden;
 }
 
+.card1--collection .card1-bottom,
+.card2-bottom--collection {
+    background: linear-gradient(135deg, #F8F8F8 0%, #EAEAEA 100%);
+}
+
+.card1--collection .card1-category,
+.card1--collection .card1-category a,
+.card2-bottom--collection .card1-category,
+.card2-bottom--collection .card1-category a {
+    color: color(display-p3 0.4078 0.2824 1) !important;
+}
+
+.featured-content .card1--collection .card1-category,
+.featured-content .card1--collection .card1-category a {
+    color: color(display-p3 0.305 0.901 0.886) !important;
+}
+
+.card1--collection h3 a,
+.card2-bottom--collection h3 a {
+    color: #34313F !important;
+}
+
+.card1--collection .card1-cta,
+.card2-bottom--collection .card2-cta {
+    color: color(display-p3 0.305 0.901 0.886) !important;
+}
+
+.card1--collection .card1-cta:hover,
+.card2-bottom--collection .card2-cta:hover {
+    color: color(display-p3 0.964 1.000 0.247) !important;
+}
+
+.card1--collection .card1-top,
+.card2-bottom--collection .card1-top {
+    background: linear-gradient(135deg, #f6ff3e 0%, #4ee6e2 52%, #7a6be7 100%);
+}
+
 
 .card100-bottom {
     text-align: center;
@@ -681,6 +718,18 @@ h5 {
 
 .card2-cta {
     margin: 1.25rem 1.25rem 0 1.25rem;
+}
+
+.card-container .card1--collection .card1-cta {
+    color: color(display-p3 0.4078 0.2824 1) !important;
+}
+
+.card-container .card1--collection .card1-cta:hover {
+    color: color(display-p3 0.305 0.901 0.886) !important;
+}
+
+.card-container .card1--collection h3 a:hover {
+    color: color(display-p3 0.305 0.901 0.886) !important;
 }
 
 .card1-row {
@@ -1898,6 +1947,14 @@ a:hover {
     font-weight: 500;
     text-align: center;
     margin: 1rem auto 2.4rem auto;
+}
+
+.featured-content .card1 h3 a:hover {
+    color: color(display-p3 0.964 1.000 0.247) !important;
+}
+
+.featured-content .card1 h3 a {
+    color: #fff !important;
 }
 
 .featured-grid {

@@ -63,12 +63,12 @@
         {{ end }}
         <div class="counter">
           <span class="word">total</span>
-          <div class="number total" aria-label="{{ $worksTotal }} client works">{{ $worksTotal }}</div>
+          <div class="number total" aria-label="{{ $worksTotal }} all works">{{ $worksTotal }}</div>
         </div>
         {{ end }}
       </div>
 
-      <p>Modern design goes beyond just aesthetics. Client works stay here, while selected collection pieces live in their own section.</p>
+      <p>Modern design goes beyond just aesthetics—it blends user experience, good vibes, and an indescribable spark.</p>
       <button class="header-cta-button" data-scroll-target=".container-tag-list">Show me something ↓</button>
     </div>
     <div class="header-illustration">
@@ -103,19 +103,11 @@
 
   <section class="card-container">
     {{ if and (eq $currentPage 1) (gt (len $collectionWorks) 0) }}
-      {{ $featuredCollection := index $collectionWorks 0 }}
       <div class="card1 card1--collection">
         <a href="{{ with $collectionPage }}{{ .RelPermalink }}{{ else }}/collection/{{ end }}" class="">
-          {{ with $featuredCollection.Params.preview_image }}
-            <div class="card1-top">
-              {{ partial "components/responsive-image.html" (dict
-                "src" .
-                "alt" (or $collectionPage.Title "Collection")
-                "width" 360
-                "sizes" "(max-width: 991px) 50vw, 360px"
-              ) }}
-            </div>
-          {{ end }}
+          <div class="card1-top">
+            <img src="/images/collection/collection-intro.jpg" alt="Collection intro" loading="eager" decoding="async" width="360" height="360">
+          </div>
         </a>
         <div class="card1-bottom">
           <span class="card1-category">

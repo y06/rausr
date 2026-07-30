@@ -2,7 +2,7 @@
 title: "Collection of Various Poster Designs"
 date: 2021-03-28
 description: "A collection of various poster designs in different styles and techniques."
-tags: ["print design", "illustration", "typography"]
+tags: ["collection", "print design", "illustration", "typography"]
 draft: false
 preview_image: "/images/poster-collection/poster-collection-preview.png"
 header_image: "/images/poster-collection/poster-collection-preview.png"
