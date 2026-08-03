@@ -4,8 +4,8 @@ date: 2026-07-31
 description: "A collection of typographic poster illustrations exploring bold color palettes, cropped face forms, and playful vertical compositions for the Fam, Madam and Pompa motif series."
 tags: ["collection", "illustration", "poster design", "typography"]
 draft: false
-preview_image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-1.jpg"
-header_image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-1.jpg"
+preview_image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-6.jpg"
+header_image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-5.jpg"
 seotags: ["2026", "Poster Design", "Illustration", "Typography", "Collection"]
 sections:
   - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-1.jpg"
@@ -18,12 +18,13 @@ sections:
     label: "4. Poster Variant 04"
   - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-5.jpg"
     label: "5. Poster Variant 05"
-  - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-6.jpg"
-    label: "6. Poster Variant 06"
-  - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-7.jpg"
-    label: "7. Poster Variant 07"
-  - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-8.jpg"
-    label: "8. Poster Variant 08"
+    subimages:
+        - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-6.jpg"
+          label: "6. Poster Variant 06"
+        - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-7.jpg"
+          label: "7. Poster Variant 07"
+        - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-8.jpg"
+          label: "8. Poster Variant 08"
 ---
 
 ### Project Overview
