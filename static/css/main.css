@@ -215,6 +215,44 @@ h5 {
     color: #fff;
 }
 
+.header-collection {
+    background:
+        radial-gradient(circle at 16% 10%, color(display-p3 0.976 0.380 0.620 / 0.78) 0%, rgba(249, 97, 158, 0) 22%),
+        radial-gradient(circle at 84% 90%, color(display-p3 0.780 1.000 0.000 / 0.98) 0%, rgba(199, 255, 0, 0) 42%),
+        linear-gradient(135deg,
+            color(display-p3 0.965 0.427 0.454) 0%,
+            color(display-p3 0.978 0.505 0.360) 20%,
+            color(display-p3 0.973 0.640 0.220) 44%,
+            color(display-p3 0.910 0.845 0.000) 68%,
+            color(display-p3 0.816 1.000 0.000) 100%
+        );
+    color: #34313F;
+}
+
+.header-collection h1,
+.header-collection p,
+.header-collection .word,
+.header-collection .number,
+.header-collection .total,
+.header-collection .showinglist {
+    color: #34313F !important;
+}
+
+.header-collection .number {
+    background-color: rgba(255, 255, 255, 0.34);
+}
+
+.header-collection .header-cta-button {
+    color: color(display-p3 0.4078 0.2824 1);
+    border-color: color(display-p3 0.4078 0.2824 1);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.header-collection .header-cta-button:hover {
+    background: color(display-p3 0.4078 0.2824 1);
+    color: #fff;
+}
+
 .header-work h1,
 .header-work p {
     color: #fff !important;

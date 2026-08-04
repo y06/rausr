@@ -21,7 +21,7 @@
   {{ $collectionTotal := len $collectionWorks }}
   {{ $paginator := .Paginate $collectionWorks 8 }}
 
-  <section class="header">
+  <section class="header header-collection">
     <div class="header-content">
       <div class="h1container">
         <h1>
@@ -49,7 +49,7 @@
       <button class="header-cta-button" data-scroll-target=".container-tag-list">Show me something ↓</button>
     </div>
     <div class="header-illustration">
-      <img src="{{ "svg/header/header-works.svg" | relURL }}" alt="Collection Illustration">
+      <img src="{{ "svg/header/header-collection.svg" | relURL }}" alt="Collection Illustration">
     </div>
   </section>
 

@@ -1,7 +1,7 @@
 ---
 title: "Collection of Poster Madam Fam Pompa"
 date: 2026-07-31
-description: "A collection of typographic poster illustrations exploring bold color palettes, cropped face forms, and playful vertical compositions for the Fam, Madam and Pompa motif series."
+description: "An experimental poster collection combining bold typography with simple vector line illustration, exploring feminine body shape, beauty, vulnerability, and contrasting color palettes."
 tags: ["collection", "illustration", "poster design", "typography"]
 draft: false
 preview_image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-6.jpg"
@@ -29,23 +29,23 @@ sections:
 
 ### Project Overview
 
-A compact collection of poster illustrations built around a shared visual system: cropped facial silhouettes, condensed letterforms, and bold vertical compositions. Each variation reworks the same core motif through color shifts, masking bars, and subtle changes in balance, turning one idea into a broader poster family.
+A collection of experimental posters built from expressive typography and minimal vector line drawing. The central motif reduces the female figure into simple contours, cropped forms, and bold letter shapes, placing attention on body rhythm, elegance, and the visual tension between beauty and modesty.
 
 ### Poster System
-#### One motif, multiple moods
+#### Typography and figure in one composition
 
-The series explores how a restrained graphic structure can stay recognizable while still feeling fresh across multiple outputs. The composition relies on oversized letter fragments, simplified profile lines, and stacked rhythm, giving each poster a strong identity even from a distance.
+The series treats typography and illustration as one continuous structure. Letter fragments, facial profile, and body lines are composed together so the poster reads both as text and as figure. The drawing stays deliberately simple, almost sign-like, which gives more weight to silhouette, posture, and proportion.
 
 {{< quote >}}
-The intention was to keep the shape language consistent, then let color and cropping create the variation.
+The goal was to say as much as possible with the fewest lines and shapes, then let color completely change the emotional tone.
 {{< /quote >}}
 
 ### Color and Contrast
-#### Bright surfaces with dark anchors
+#### Different tones, different emotional readings
 
-Vivid backgrounds drive the emotional tone of each poster, while the black typographic and figurative elements act as the visual anchor. This contrast keeps the compositions readable and punchy, especially in larger-format print applications where simple forms often perform best.
+Each version of the poster was tested in a different color atmosphere, from sharper high-contrast treatments to softer or warmer palette shifts. The dark figure and typographic structure remain the anchor, while the surrounding tones change how the same body form is perceived: more intimate, more direct, more graphic, or more playful.
 
 ### Collection Use
-#### For series presentation and visual experiments
+#### Beauty, form, and a slight tension of exposure
 
-Rather than functioning as a single isolated artwork, the set is designed as a small collection that works best when presented together. The repeated structure helps the differences stand out, making the series useful both as a visual experiment and as a flexible poster family for exhibition, editorial, or self-initiated presentation.
+The posters are centered on the beauty of body shape and the way nudity can feel both confident and restrained at the same time. Rather than presenting the figure literally, the composition abstracts it through typography and vector linework, creating a balance between sensuality, shame, concealment, and visual clarity. Shown together, the variations function as a compact study in how one motif can shift through color, contrast, and composition while preserving the same core idea.
