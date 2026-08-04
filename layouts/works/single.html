@@ -1,14 +1,20 @@
 {{ partial "header" . }}
 
 <main>
+    {{ $isCollection := false }}
+    {{ range (.Params.tags | default (slice)) }}
+        {{ if eq (lower (partial "normalize-taxonomy-term.html" .)) "collection" }}
+            {{ $isCollection = true }}
+        {{ end }}
+    {{ end }}
 
-    <section class="header header-work" id="page-blur">
-        <div class="header-content header-work">
+    <section class="header header-work{{ if $isCollection }} header-collection{{ end }}" id="page-blur">
+        <div class="header-content{{ if not $isCollection }} header-work{{ end }}">
             <h1>{{ .Title }}</h1>
             {{ with .Params.description }}
             <p>{{ . }}</p>
             {{ end }}
-            <button class="header-cta-button header-cta-button-work" data-scroll-target=".container-tag-list">Let’s take a look ↓</button>
+            <button class="header-cta-button{{ if not $isCollection }} header-cta-button-work{{ end }}" data-scroll-target=".container-tag-list">Let’s take a look ↓</button>
         </div>
         <div class="header-illustration header-image">
             {{ with .Params.header_image }}
@@ -25,7 +31,11 @@
                 <li><a href="/works/" class="tag-link">← Works</a></li>
                 {{ with index .Params.tags 0 }}
                     {{ $tag := partial "normalize-taxonomy-term.html" . }}
+                    {{ if eq (lower $tag) "collection" }}
+                    <li><a href="/collection/" class="tag-link">← {{ partial "tag-label.html" $tag }}</a></li>
+                    {{ else }}
                     <li><a href="/tags/{{ urlize $tag }}" class="tag-link">← {{ partial "tag-label.html" $tag }}</a></li>
+                    {{ end }}
                 {{ end }}
                 <li><span class="tag-link active">{{ .Title }}</span></li>
             </ul>

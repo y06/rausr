@@ -253,6 +253,38 @@ h5 {
     color: #fff;
 }
 
+.header.header-work.header-collection h1,
+.header.header-work.header-collection p,
+.header.header-work.header-collection .word,
+.header.header-work.header-collection .number,
+.header.header-work.header-collection .total,
+.header.header-work.header-collection .showinglist {
+    color: #34313F !important;
+}
+
+.header.header-work.header-collection > .header-content .header-cta-button {
+    color: color(display-p3 0.4078 0.2824 1);
+    border-color: color(display-p3 0.4078 0.2824 1);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.header.header-work.header-collection > .header-content .header-cta-button:hover {
+    background: color(display-p3 0.4078 0.2824 1);
+    color: #fff;
+}
+
+/* The image overlay begins at the orange stop, keeping the detail header as one palette. */
+.header.header-work.header-collection:has(> .header-image) {
+    background: linear-gradient(
+        90deg,
+        color(display-p3 0.976 0.380 0.620) 0%,
+        color(display-p3 0.978 0.505 0.360) 20%,
+        color(display-p3 0.973 0.640 0.220) 44%,
+        color(display-p3 0.910 0.845 0.000) 68%,
+        color(display-p3 0.816 1.000 0.000) 100%
+    );
+}
+
 .header-work h1,
 .header-work p {
     color: #fff !important;
@@ -4597,6 +4629,11 @@ a:hover {
         overflow: hidden;
     }
 
+    .header.header-work.header-collection:has(> .header-image) > .header-image {
+        right: 0;
+        width: 56%;
+    }
+
     .header.header-work:has(> .header-image) > .header-image img,
     .header.header-article > .header-image img {
         display: block;
@@ -4623,6 +4660,23 @@ a:hover {
             color(display-p3 0.129 0.561 1.000 / 0.9) 18%,
             color(display-p3 0.129 0.561 1.000 / 0.45) 42%,
             transparent 72%
+        );
+    }
+
+    .header.header-work.header-collection:has(> .header-image) > .header-image::before {
+        background: linear-gradient(
+            90deg,
+            color(display-p3 0.973 0.640 0.220) 0%,
+            color(display-p3 0.973 0.640 0.220) 10%,
+            color(display-p3 0.968 0.700 0.160 / 0.98) 14%,
+            color(display-p3 0.952 0.802 0.090 / 0.90) 22%,
+            color(display-p3 0.925 0.900 0.030 / 0.78) 30%,
+            color(display-p3 0.884 0.965 0.000 / 0.63) 39%,
+            color(display-p3 0.852 0.997 0.000 / 0.46) 48%,
+            color(display-p3 0.832 1.000 0.000 / 0.30) 57%,
+            color(display-p3 0.824 1.000 0.000 / 0.16) 65%,
+            color(display-p3 0.820 1.000 0.000 / 0.06) 72%,
+            transparent 80%
         );
     }
 
@@ -6247,6 +6301,20 @@ a:hover {
       color(display-p3 0.129 0.561 1.000 / 0.6) 24%,
       color(display-p3 0.129 0.561 1.000 / 0.18) 42%,
       transparent 66%
+    );
+  }
+
+  .header.header-work.header-collection#page-blur > .header-image::before {
+    background: linear-gradient(
+      180deg,
+      color(display-p3 0.973 0.640 0.220) 0%,
+      color(display-p3 0.973 0.640 0.220) 10%,
+      color(display-p3 0.962 0.740 0.130 / 0.92) 18%,
+      color(display-p3 0.930 0.900 0.030 / 0.74) 30%,
+      color(display-p3 0.874 0.987 0.000 / 0.52) 42%,
+      color(display-p3 0.838 1.000 0.000 / 0.28) 54%,
+      color(display-p3 0.824 1.000 0.000 / 0.10) 64%,
+      transparent 74%
     );
   }
 
