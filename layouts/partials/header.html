@@ -371,7 +371,8 @@
           }
 
           .rausr-menu__link::after,
-          .rausr-menu__trigger--services::after {
+          .rausr-menu__trigger--services::after,
+          .rausr-menu__trigger--works::after {
             content: "";
             position: absolute;
             left: 0;
@@ -389,9 +390,14 @@
           .rausr-menu__link:focus-visible::after,
           .rausr-menu__trigger--services:hover::after,
           .rausr-menu__trigger--services:focus-visible::after,
+          .rausr-menu__trigger--works:hover::after,
+          .rausr-menu__trigger--works:focus-visible::after,
           .rausr-menu__item--dropdown:hover .rausr-menu__trigger--services::after,
           .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--services::after,
-          .rausr-menu__item.is-open .rausr-menu__trigger--services::after {
+          .rausr-menu__item--dropdown:hover .rausr-menu__trigger--works::after,
+          .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--works::after,
+          .rausr-menu__item.is-open .rausr-menu__trigger--services::after,
+          .rausr-menu__item.is-open .rausr-menu__trigger--works::after {
             transform: scaleX(1);
           }
 
@@ -399,9 +405,14 @@
           .rausr-menu__link:focus-visible,
           .rausr-menu__trigger--services:hover,
           .rausr-menu__trigger--services:focus-visible,
+          .rausr-menu__trigger--works:hover,
+          .rausr-menu__trigger--works:focus-visible,
           .rausr-menu__item--dropdown:hover .rausr-menu__trigger--services,
           .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--services,
-          .rausr-menu__item.is-open .rausr-menu__trigger--services {
+          .rausr-menu__item--dropdown:hover .rausr-menu__trigger--works,
+          .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--works,
+          .rausr-menu__item.is-open .rausr-menu__trigger--services,
+          .rausr-menu__item.is-open .rausr-menu__trigger--works {
             color: #7355FF;
             text-decoration: none;
           }
@@ -497,6 +508,10 @@
             pointer-events: none;
             transform: translateX(-50%) translateY(6px);
             transition: opacity 160ms ease, transform 160ms ease;
+          }
+
+          .rausr-menu__dropdown--works {
+            min-width: 190px;
           }
 
           .rausr-menu__item.is-open .rausr-menu__dropdown {
@@ -829,7 +844,7 @@
         {{ $firstServiceURL = .RelPermalink }}
     {{ end }}
     {{ $currentPath := .RelPermalink }}
-    {{ $isWorks := hasPrefix $currentPath "/works/" }}
+    {{ $isWorks := or (hasPrefix $currentPath "/works/") (hasPrefix $currentPath "/collection/") }}
     {{ $isServices := eq .Type "service" }}
     {{ $isAbout := or (eq $currentPath "/about/") (hasPrefix $currentPath "/about/") }}
     {{ $isArticles := or (hasPrefix $currentPath "/blog/") (hasPrefix $currentPath "/topics/") (hasPrefix $currentPath "/tags/") }}
@@ -903,8 +918,20 @@
 
             <div class="rausr-menu__panel" id="rausrMenuPanel">
                 <ul class="rausr-menu__list">
-                    <li class="rausr-menu__item">
-                        <a href="/works/" class="rausr-menu__link{{ if $isWorks }} is-active{{ end }}">Works</a>
+                    <li class="rausr-menu__item rausr-menu__item--dropdown{{ if $isWorks }} is-current{{ end }}" data-rausr-dropdown>
+                        <a
+                            href="{{ "/works/" | relURL }}"
+                            class="rausr-menu__trigger rausr-menu__trigger--works{{ if $isWorks }} is-active{{ end }}"
+                            data-rausr-trigger
+                            aria-expanded="false"
+                        >
+                            <span>Works</span>
+                            <span class="rausr-menu__chevron" aria-hidden="true">↓</span>
+                        </a>
+                        <div class="rausr-menu__dropdown rausr-menu__dropdown--works">
+                            <a href="/works/" class="rausr-menu__dropdown-link{{ if eq $currentPath "/works/" }} is-active{{ end }}">All Works</a>
+                            <a href="/collection/" class="rausr-menu__dropdown-link{{ if hasPrefix $currentPath "/collection/" }} is-active{{ end }}">Collection</a>
+                        </div>
                     </li>
 
                     <li class="rausr-menu__item rausr-menu__item--dropdown{{ if $isServices }} is-current{{ end }}" data-rausr-dropdown>
