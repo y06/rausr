@@ -57,9 +57,9 @@ Professionals are not only faster because their hands move faster. They are fast
 ### Beginners often see everything as equally urgent
 #### That is why they can spend an hour fixing a footer while the main message is still weak
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-2.jpg" alt="Beginner graphic design process with many competing details, uncertainty, and difficulty identifying the main visual problem." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-2.jpg" alt="Beginner graphic design process with many competing details, uncertainty, and difficulty identifying the main visual problem." >}}
+
 
 One of the most recognizable beginner habits is misplaced urgency.
 
@@ -88,9 +88,9 @@ The reason is simple. Many weak designs are not failing because of one corner, o
 ### Professionals look for the controlling problem first
 #### They do not ignore details, but they know details make sense only after the main decision is right
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-3.jpg" alt="Professional design review focused on hierarchy, message, audience, and the main controlling visual decision before details." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-3.jpg" alt="Professional design review focused on hierarchy, message, audience, and the main controlling visual decision before details." >}}
+
 
 Experienced designers usually start with a different question:
 
@@ -116,9 +116,9 @@ One hidden truth of professional practice is that many good designers are not ca
 ### Speed is mostly a judgment skill
 #### Professionals are faster not only because they know shortcuts, but because they eliminate dead-end thinking earlier
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-4.jpg" alt="Comparison of beginner and professional design speed showing how better prioritization reduces wasted iterations." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-4.jpg" alt="Comparison of beginner and professional design speed showing how better prioritization reduces wasted iterations." >}}
+
 
 Software fluency matters, of course. A designer who knows the tools well can move faster.
 
@@ -161,9 +161,9 @@ This is also why a beginner can sometimes produce a beautiful image that fails a
 ### Style is not the same thing as control
 #### Many beginners chase visible personality before they can hold hierarchy together
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-5.jpg" alt="Graphic design style versus control showing the difference between decorative surface and disciplined visual hierarchy." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-5.jpg" alt="Graphic design style versus control showing the difference between decorative surface and disciplined visual hierarchy." >}}
+
 
 At the beginning of a career, style feels very important.
 
@@ -217,9 +217,9 @@ The 2026 visual communication expertise study also highlighted structured reflec
 ### Wrong paths in a design career
 #### Some habits can make a designer look busy for years without making them much better
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-6.jpg" alt="Common career mistakes in graphic design including trend chasing, over-detailing, weak prioritization, and learning software without strategy." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-6.jpg" alt="Common career mistakes in graphic design including trend chasing, over-detailing, weak prioritization, and learning software without strategy." >}}
+
 
 There are several very common bad paths:
 
@@ -253,9 +253,9 @@ The table is simple, but it captures a lot. The difference is rarely that one pe
 ### How to become better faster
 #### The real practice is not only making more work, but learning to identify what matters sooner
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-7.jpg" alt="Improving as a designer through focused review, prioritization, repeated critique, and deliberate problem-solving practice." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-7.jpg" alt="Improving as a designer through focused review, prioritization, repeated critique, and deliberate problem-solving practice." >}}
+
 
 If someone wants to move from beginner habits toward professional judgment, the most useful training is often surprisingly plain:
 
@@ -272,9 +272,9 @@ That is also why career growth can suddenly accelerate. The moment a designer st
 ### Where the difference is heading now
 #### AI and new tools may change execution speed, but they do not remove the need for prioritization
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-8.jpg" alt="Future of graphic design expertise with AI tools, faster execution, and continued need for judgment and prioritization." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-designers-pro-vs-beginners/graphic-designers-pro-vs-beginners-8.jpg" alt="Future of graphic design expertise with AI tools, faster execution, and continued need for judgment and prioritization." >}}
+
 
 The current tool landscape makes this topic even sharper.
 
