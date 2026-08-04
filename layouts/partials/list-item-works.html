@@ -5,9 +5,10 @@
   {{ end }}
 {{ end }}
 {{ $ctaLabel := cond $isCollection "SHOW COLLECTION →" "SHOW WORK →" }}
+{{ $link := or (.Scratch.Get "link") .RelPermalink }}
 
 <div class="card1{{ if $isCollection }} card1--collection{{ end }}">
-    <a href="{{ .Scratch.Get "link" }}" class="">
+    <a href="{{ $link }}" class="">
         {{ with .Params.preview_image }}
         <div class="card1-top">
             {{ partial "components/responsive-image.html" (dict
@@ -28,7 +29,6 @@
         </span>
         {{ end }}
 
-        {{ $link := $.Scratch.Get "link" }}
         <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
         <a href="{{ $link }}" class="card1-cta">{{ $ctaLabel }}</a>
     </div>
