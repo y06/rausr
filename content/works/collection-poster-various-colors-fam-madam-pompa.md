@@ -1,5 +1,5 @@
 ---
-title: "Collection of Poster Variations for Fam, Madam and Pompa"
+title: "Collection of Poster Madam Fam Pompa"
 date: 2026-07-31
 description: "A collection of typographic poster illustrations exploring bold color palettes, cropped face forms, and playful vertical compositions for the Fam, Madam and Pompa motif series."
 tags: ["collection", "illustration", "poster design", "typography"]
@@ -9,22 +9,22 @@ header_image: "/images/collection-poster-various-colors-fam-madam-pompa/collecti
 seotags: ["2026", "Poster Design", "Illustration", "Typography", "Collection"]
 sections:
   - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-1.jpg"
-    label: "1. Yellow Variant"
-  - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-2.jpg"
-    label: "2. Poster Variant 02"
+    label: "1. Blue Variant"
   - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-3.jpg"
-    label: "3. Poster Variant 03"
-  - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-4.jpg"
-    label: "4. Poster Variant 04"
+    label: "2. Black&White Variant"
   - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-5.jpg"
-    label: "5. Poster Variant 05"
+    label: "3. Aquamarine Variant"
+  - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-7.jpg"
+    label: "4. Yellow Variant"
     subimages:
+        - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-2.jpg"
+          label: "1. Blue Variant"
+        - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-4.jpg"
+          label: "2. Black&White Variant"
         - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-6.jpg"
-          label: "6. Poster Variant 06"
-        - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-7.jpg"
-          label: "7. Poster Variant 07"
+          label: "3. Aquamarine Variant"
         - image: "/images/collection-poster-various-colors-fam-madam-pompa/collection-poster-various-colors-fam-madam-pompa-8.jpg"
-          label: "8. Poster Variant 08"
+          label: "4. Yellow Variant"
 ---
 
 ### Project Overview

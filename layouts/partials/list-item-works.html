@@ -6,7 +6,7 @@
 {{ end }}
 {{ $ctaLabel := cond $isCollection "SHOW COLLECTION →" "SHOW WORK →" }}
 
-<div class="card1">
+<div class="card1{{ if $isCollection }} card1--collection{{ end }}">
     <a href="{{ .Scratch.Get "link" }}" class="">
         {{ with .Params.preview_image }}
         <div class="card1-top">
