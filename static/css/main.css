@@ -217,14 +217,16 @@ h5 {
 
 .header-collection {
     background:
-        radial-gradient(circle at 16% 10%, color(display-p3 0.976 0.380 0.620 / 0.78) 0%, rgba(249, 97, 158, 0) 22%),
-        radial-gradient(circle at 84% 90%, color(display-p3 0.780 1.000 0.000 / 0.98) 0%, rgba(199, 255, 0, 0) 42%),
-        linear-gradient(135deg,
-            color(display-p3 0.965 0.427 0.454) 0%,
-            color(display-p3 0.978 0.505 0.360) 20%,
-            color(display-p3 0.973 0.640 0.220) 44%,
-            color(display-p3 0.910 0.845 0.000) 68%,
-            color(display-p3 0.816 1.000 0.000) 100%
+        radial-gradient(ellipse 58% 42% at 50% 12%, color(display-p3 1.000 0.286 0.630 / 0.58) 0%, color(display-p3 1.000 0.286 0.630 / 0) 70%),
+        radial-gradient(ellipse 64% 38% at 50% 58%, color(display-p3 0.980 0.560 0.250 / 0.54) 0%, color(display-p3 0.980 0.560 0.250 / 0) 72%),
+        radial-gradient(ellipse 78% 44% at 50% 100%, color(display-p3 0.755 1.000 0.000 / 0.84) 0%, color(display-p3 0.755 1.000 0.000 / 0) 74%),
+        linear-gradient(
+            180deg,
+            color(display-p3 0.965 0.365 0.410) 0%,
+            color(display-p3 0.988 0.325 0.575) 22%,
+            color(display-p3 0.955 0.475 0.400) 45%,
+            color(display-p3 0.885 0.660 0.050) 67%,
+            color(display-p3 0.710 1.000 0.000) 100%
         );
     color: #34313F;
 }
@@ -273,14 +275,16 @@ h5 {
     color: #fff;
 }
 
-/* The image overlay begins at the orange stop, keeping the detail header as one palette. */
+/* Match the full-width gradient to the image overlay at the image's 44% start. */
 .header.header-work.header-collection:has(> .header-image) {
+    --collection-gradient-join: color(display-p3 0.938 0.800 0.035);
     background: linear-gradient(
         90deg,
         color(display-p3 0.976 0.380 0.620) 0%,
-        color(display-p3 0.978 0.505 0.360) 20%,
-        color(display-p3 0.973 0.640 0.220) 44%,
-        color(display-p3 0.910 0.845 0.000) 68%,
+        color(display-p3 0.978 0.505 0.360) 14%,
+        color(display-p3 0.973 0.640 0.220) 30%,
+        var(--collection-gradient-join) 44%,
+        color(display-p3 0.880 0.930 0.000) 62%,
         color(display-p3 0.816 1.000 0.000) 100%
     );
 }
@@ -663,10 +667,18 @@ h5 {
     padding-bottom: 5rem;
     transition: transform 0.3s ease;
     border-radius: 12px;
+    color: color(display-p3 0.408 0.282 1.000);
 }
 
 .card100-top:hover {
     transform: translateY(+0.625rem);
+}
+
+.card100-top span,
+.card100-bottom,
+.card100-bottom a,
+.card100-bottom span {
+    color: color(display-p3 0.408 0.282 1.000) !important;
 }
 
 .card1-top img {
@@ -775,6 +787,9 @@ h5 {
     text-align: center;
     overflow: auto;
     padding: 2rem;
+    position: relative;
+    background-image: radial-gradient(circle, color(display-p3 0.408 0.282 1.000 / 0.18) 1px, transparent 1px);
+    background-size: 22px 22px;
 }
 
 .card2-bottom {
@@ -4479,6 +4494,24 @@ a:hover {
     color: color(display-p3 0.408 0.282 1.000);
 }
 
+.highlight-design-gradient {
+    background-image:
+        radial-gradient(ellipse 78% 112% at 78% 70%, color(display-p3 0.710 1.000 0.000 / 0.94) 0%, color(display-p3 0.710 1.000 0.000 / 0) 72%),
+        radial-gradient(ellipse 64% 92% at 58% 88%, color(display-p3 0.885 0.660 0.050 / 0.54) 0%, color(display-p3 0.885 0.660 0.050 / 0) 72%),
+        linear-gradient(
+            100deg,
+            color(display-p3 0.965 0.365 0.410) 0%,
+            color(display-p3 0.988 0.325 0.575) 18%,
+            color(display-p3 0.955 0.475 0.400) 34%,
+            color(display-p3 0.885 0.660 0.050) 52%,
+            color(display-p3 0.710 1.000 0.000) 100%
+        );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
 .home-cta-buttons {
     display: flex;
     gap: 3.125rem;
@@ -4502,10 +4535,76 @@ a:hover {
     background-color: color(display-p3 0.305 0.901 0.886);
 }
 
+.cta-section-home .home-button-recipes {
+    background-image:
+        radial-gradient(ellipse 78% 112% at 78% 70%, color(display-p3 0.710 1.000 0.000 / 0.94) 0%, color(display-p3 0.710 1.000 0.000 / 0) 72%),
+        radial-gradient(ellipse 64% 92% at 58% 88%, color(display-p3 0.885 0.660 0.050 / 0.54) 0%, color(display-p3 0.885 0.660 0.050 / 0) 72%),
+        linear-gradient(
+            100deg,
+            color(display-p3 0.965 0.365 0.410) 0%,
+            color(display-p3 0.988 0.325 0.575) 18%,
+            color(display-p3 0.955 0.475 0.400) 34%,
+            color(display-p3 0.885 0.660 0.050) 52%,
+            color(display-p3 0.710 1.000 0.000) 100%
+        );
+    background-color: color(display-p3 0.965 0.365 0.410);
+    color: #34313F !important;
+    transition: background-color 180ms ease;
+}
+
+.cta-section-home .home-button-recipes:hover {
+    background-image: none;
+    background-color: color(display-p3 0.964 1.000 0.247);
+}
+
 .cta-section-works {
     color: color(display-p3 0.408 0.282 1.000) !important;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background-color: color(display-p3 0.831 1 0.808);
     padding: 2rem 2rem 0rem 2rem;
+}
+
+.works-bubbles {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cta-section-works > :not(.works-bubbles) {
+    position: relative;
+    z-index: 1;
+}
+
+.works-bubbles span {
+    position: absolute;
+    top: var(--bubble-y);
+    left: var(--bubble-x);
+    width: calc(var(--bubble-size) + 42px);
+    height: calc(var(--bubble-size) + 10px);
+    border-radius: 999px;
+    border: 2px solid color(display-p3 0.660 0.590 1.000 / 0.34);
+    background: transparent;
+    opacity: 0.56;
+    will-change: transform;
+    animation: works-bubble-wander var(--bubble-duration) ease-in-out var(--bubble-delay) infinite alternate;
+}
+
+@keyframes works-bubble-wander {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    38% {
+        transform: translate3d(var(--bubble-drift-x), var(--bubble-drift-y), 0) rotate(145deg) scale(1.08);
+    }
+    72% {
+        transform: translate3d(var(--bubble-drift-x-two), var(--bubble-drift-y-two), 0) rotate(-105deg) scale(0.94);
+    }
+    100% {
+        transform: translate3d(var(--bubble-drift-x-three), var(--bubble-drift-y-three), 0) rotate(240deg) scale(1.03);
+    }
 }
 
 .cta-section-blog {
@@ -4534,7 +4633,7 @@ a:hover {
 }
 
 .cta-section-works p {
-    color: color(display-p3 0.408 0.282 1.000) !important;
+    color: #34313F !important;
     margin-bottom: 3rem;
 }
 
@@ -4666,17 +4765,16 @@ a:hover {
     .header.header-work.header-collection:has(> .header-image) > .header-image::before {
         background: linear-gradient(
             90deg,
-            color(display-p3 0.973 0.640 0.220) 0%,
-            color(display-p3 0.973 0.640 0.220) 10%,
-            color(display-p3 0.968 0.700 0.160 / 0.98) 14%,
-            color(display-p3 0.952 0.802 0.090 / 0.90) 22%,
-            color(display-p3 0.925 0.900 0.030 / 0.78) 30%,
-            color(display-p3 0.884 0.965 0.000 / 0.63) 39%,
-            color(display-p3 0.852 0.997 0.000 / 0.46) 48%,
-            color(display-p3 0.832 1.000 0.000 / 0.30) 57%,
-            color(display-p3 0.824 1.000 0.000 / 0.16) 65%,
-            color(display-p3 0.820 1.000 0.000 / 0.06) 72%,
-            transparent 80%
+            var(--collection-gradient-join) 0%,
+            var(--collection-gradient-join) 10%,
+            color(display-p3 0.918 0.875 0.010 / 0.96) 19%,
+            color(display-p3 0.880 0.945 0.000 / 0.84) 31%,
+            color(display-p3 0.850 0.985 0.000 / 0.68) 44%,
+            color(display-p3 0.830 1.000 0.000 / 0.50) 58%,
+            color(display-p3 0.820 1.000 0.000 / 0.33) 70%,
+            color(display-p3 0.816 1.000 0.000 / 0.17) 79%,
+            color(display-p3 0.816 1.000 0.000 / 0.06) 86%,
+            transparent 93%
         );
     }
 
@@ -6307,14 +6405,15 @@ a:hover {
   .header.header-work.header-collection#page-blur > .header-image::before {
     background: linear-gradient(
       180deg,
-      color(display-p3 0.973 0.640 0.220) 0%,
-      color(display-p3 0.973 0.640 0.220) 10%,
-      color(display-p3 0.962 0.740 0.130 / 0.92) 18%,
-      color(display-p3 0.930 0.900 0.030 / 0.74) 30%,
-      color(display-p3 0.874 0.987 0.000 / 0.52) 42%,
-      color(display-p3 0.838 1.000 0.000 / 0.28) 54%,
-      color(display-p3 0.824 1.000 0.000 / 0.10) 64%,
-      transparent 74%
+      var(--collection-gradient-join) 0%,
+      var(--collection-gradient-join) 10%,
+      color(display-p3 0.918 0.875 0.010 / 0.94) 19%,
+      color(display-p3 0.880 0.945 0.000 / 0.80) 32%,
+      color(display-p3 0.850 0.985 0.000 / 0.62) 46%,
+      color(display-p3 0.830 1.000 0.000 / 0.42) 60%,
+      color(display-p3 0.828 1.000 0.000 / 0.22) 70%,
+      color(display-p3 0.820 1.000 0.000 / 0.07) 82%,
+      transparent 92%
     );
   }
 

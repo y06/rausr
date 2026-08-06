@@ -6,21 +6,26 @@
   <section class="cta-section cta-section-home">
     
       <h1>
-        We <span class="highlight-strike">design</span> cook<br />
+        We <span class="highlight-strike highlight-design-gradient">design</span> cook<br />
         <span class="highlight-purple">ra</span>ndom <span class="highlight-purple">us</span>er <span class="highlight-purple">r</span>ecipes
       </h1>
       <p>
         Graphic design <span class="highlight-strike">studio</span> kitchen that cooks clearly and practically. That’s what helps us create results even your grumpy neighbor Helena 👵 can appreciate.
       </p>
       <div class="home-cta-buttons">
-        <a class="home-button primary" onclick="document.querySelector('.cta-section-works')?.scrollIntoView({ behavior: 'smooth' });">Explore Recipes ↓</a>
+        <a class="home-button primary home-button-recipes" href="#cta-section-works">Explore Recipes ↓</a>
         <a class="home-button secondary" href="/contact">Talk to the Chef →</a>
       </div>
     
   </section>
 
   <!-- Featured Works Section -->
-  <section class="cta-section cta-section-works">
+  <section class="cta-section cta-section-works" id="cta-section-works">
+    <div class="works-bubbles" aria-hidden="true">
+      {{ range $bubble := seq 1 48 }}
+        <span style="--bubble-size: {{ add 6 (mod (mul $bubble 13) 19) }}px; --bubble-x: {{ mod (mul $bubble 37) 101 }}%; --bubble-y: {{ mod (mul $bubble 61) 101 }}%; --bubble-duration: {{ add 18 (mod (mul $bubble 7) 23) }}s; --bubble-delay: -{{ mod (mul $bubble 11) 31 }}s; --bubble-drift-x: {{ sub (mod (mul $bubble 29) 161) 80 }}px; --bubble-drift-y: -{{ add 50 (mod (mul $bubble 17) 111) }}px; --bubble-drift-x-two: {{ sub (mod (mul $bubble 43) 181) 90 }}px; --bubble-drift-y-two: {{ sub (mod (mul $bubble 31) 141) 70 }}px; --bubble-drift-x-three: {{ sub (mod (mul $bubble 19) 121) 60 }}px; --bubble-drift-y-three: {{ sub (mod (mul $bubble 47) 161) 80 }}px;"></span>
+      {{ end }}
+    </div>
     <h2>Featured Works</h2>
     <p>Selected recipes from our design kitchen. Each project cooked up with care, curiosity, and a dash of boldness. Personally picked by the chef. 👨‍🍳</p>
     
