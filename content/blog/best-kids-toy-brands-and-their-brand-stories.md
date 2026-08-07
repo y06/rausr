@@ -80,9 +80,9 @@ One hidden truth in this field is that many famous toy brands were not shaped th
 ### 1. LEGO
 #### The logo became powerful because the whole company learned to behave like one coherent play language
 
-{{< halves >}}
-{{< halfimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-3.jpg" alt="LEGO branding with bold red logo, brick identity, and a global system of play built around coherence." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-3.jpg" alt="LEGO branding with bold red logo, brick identity, and a global system of play built around coherence." >}}
+
 
 [LEGO](/search/?q=LEGO) is still one of the clearest examples of long-term toy branding done correctly.
 
@@ -109,9 +109,9 @@ At times, heavy franchise dependence risks making licensed worlds louder than LE
 ### 2. Barbie
 #### Barbie’s logo stayed powerful because the brand kept returning to a very clear promise of possibility
 
-{{< halves >}}
-{{< halfimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-4.jpg" alt="Barbie branding with pink script logo, lifestyle storytelling, and long-term identity built around aspiration and reinvention." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-4.jpg" alt="Barbie branding with pink script logo, lifestyle storytelling, and long-term identity built around aspiration and reinvention." >}}
+
 
 [Barbie](/search/?q=Barbie) is one of the most successful branding systems in toy history because it grew far beyond a doll.
 
@@ -135,9 +135,9 @@ Barbie has also had very public pain points around unrealistic beauty standards 
 ### 3. Hot Wheels
 #### This brand won by making speed, attitude, and orange-track energy feel unmistakable
 
-{{< halves >}}
-{{< halfimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-5.jpg" alt="Hot Wheels branding with flame logo, orange track identity, and challenger-spirit marketing around die-cast cars." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-5.jpg" alt="Hot Wheels branding with flame logo, orange track identity, and challenger-spirit marketing around die-cast cars." >}}
+
 
 [Hot Wheels](/search/?q=Hot+Wheels) is one of the smartest examples of toy branding built around motion.
 
@@ -164,9 +164,9 @@ The brand can become too boy-coded or too adrenaline-coded if it narrows its own
 ### 4. Fisher-Price
 #### Fisher-Price built trust by making developmental value part of the visual and emotional identity
 
-{{< halves >}}
-{{< halfimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-6.jpg" alt="Fisher-Price branding with friendly wordmark, early-childhood trust, and durable educational play cues." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-6.jpg" alt="Fisher-Price branding with friendly wordmark, early-childhood trust, and durable educational play cues." >}}
+
 
 [Fisher-Price](/search/?q=Fisher-Price) represents a very different branding model from Barbie or Hot Wheels.
 
@@ -190,9 +190,9 @@ The same trust-heavy tone can sometimes make the brand feel less exciting than m
 ### 5. Play-Doh
 #### Few toy brands are so strong that even the smell becomes part of the trademark story
 
-{{< halves >}}
-{{< halfimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-7.jpg" alt="Play-Doh branding with colorful tubs, playful wordmark, tactile creativity, and the famous scent as part of brand memory." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-7.jpg" alt="Play-Doh branding with colorful tubs, playful wordmark, tactile creativity, and the famous scent as part of brand memory." >}}
+
 
 [Play-Doh](/search/?q=Play-Doh) is one of the best examples of a sensory toy brand.
 
@@ -218,9 +218,9 @@ The biggest risk is visual stagnation. A tactile classic can start to look too e
 ### 6. Nerf
 #### Nerf built one of the strongest action-play identities by making foam feel competitive instead of soft
 
-{{< halves >}}
-{{< halfimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-8.jpg" alt="Nerf branding with high-energy logo, foam-blaster attitude, and action-focused marketing aimed at play battles." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-8.jpg" alt="Nerf branding with high-energy logo, foam-blaster attitude, and action-focused marketing aimed at play battles." >}}
+
 
 [Nerf](/search/?q=Nerf) is branding inversion at its best.
 
@@ -244,9 +244,9 @@ Nerf sometimes risks becoming too noisy, too line-extended, or too dependent on 
 ### 7. Playmobil
 #### Playmobil created one of the world’s strongest miniature-world brands through figure logic and calm consistency
 
-{{< halves >}}
-{{< halfimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-9.jpg" alt="Playmobil branding with smiling figures, blue logo, and miniature world-building across historical and everyday themes." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-9.jpg" alt="Playmobil branding with smiling figures, blue logo, and miniature world-building across historical and everyday themes." >}}
+
 
 [Playmobil](/search/?q=Playmobil) is one of LEGO’s most interesting toy-brand contrasts.
 
@@ -270,9 +270,9 @@ Its quieter visual tone can look less urgent on today’s hyper-stimulated shelv
 ### 8. American Girl
 #### This brand became powerful by making story, retail, and identity development part of the toy itself
 
-{{< halves >}}
-{{< halfimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-10.jpg" alt="American Girl branding with story-led dolls, aspirational retail experience, and identity-focused marketing around confidence and character." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/best-kids-toy-brands-and-their-brand-stories/best-kids-toy-brands-and-their-brand-stories-10.jpg" alt="American Girl branding with story-led dolls, aspirational retail experience, and identity-focused marketing around confidence and character." >}}
+
 
 [American Girl](/search/?q=American+Girl) followed one of the smartest premium toy-brand paths in the category.
 
