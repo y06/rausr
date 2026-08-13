@@ -1,5 +1,5 @@
 ---
-title: "Collection of Poster Rogoznica Šepurina Beach"
+title: "Poster from Rogoznica Šepurina Beach"
 date: 2026-08-13
 description: "A minimalist beach poster inspired by Rogoznica Šepurina in Croatia, built from basic oval and rectangular shapes, clear water tones, and the quiet rhythm of summer memory."
 tags: ["collection", "illustration", "poster design", "travel"]
