@@ -8,17 +8,17 @@ preview_image: "/images/collection-poster-rogoznica-sepurine-beach/collection-po
 header_image: "/images/collection-poster-rogoznica-sepurine-beach/collection-poster-rogoznica-sepurine-beach-2.jpg"
 seotags: ["2026", "Poster Design", "Illustration", "Croatia", "Beach", "Collection", "Šepurina"]
 sections:
-  - image: "/images/collection-poster-rogoznica-sepurine-beach/collection-poster-rogoznica-sepurine-beach-1.jpg"
-    label: "1. Rogoznica Sepurine Beach Poster"
+  - image: "/images/collection-poster-rogoznica-sepurine-beach/collection-poster-rogoznica-sepurine-beach-5.jpg"
+    label: "5. Sepurine Beach Detail Variant"
   - image: "/images/collection-poster-rogoznica-sepurine-beach/collection-poster-rogoznica-sepurine-beach-2.jpg"
     label: "2. Calm Coast Variant"
-  - image: "/images/collection-poster-rogoznica-sepurine-beach/collection-poster-rogoznica-sepurine-beach-3.jpg"
-    label: "3. Blue Blanket Composition"
   - image: "/images/collection-poster-rogoznica-sepurine-beach/collection-poster-rogoznica-sepurine-beach-4.jpg"
     label: "4. Minimal Summer Geometry"
     subimages:
-      - image: "/images/collection-poster-rogoznica-sepurine-beach/collection-poster-rogoznica-sepurine-beach-5.jpg"
-        label: "5. Sepurine Beach Detail Variant"
+    - image: "/images/collection-poster-rogoznica-sepurine-beach/collection-poster-rogoznica-sepurine-beach-1.jpg"
+      label: "1. Rogoznica Sepurine Beach Poster"
+    - image: "/images/collection-poster-rogoznica-sepurine-beach/collection-poster-rogoznica-sepurine-beach-3.jpg"
+      label: "3. Blue Blanket Composition"
 ---
 
 ### Project Overview
@@ -35,7 +35,7 @@ The goal was to keep the scene minimal and geometric, while still holding the fe
 {{< /quote >}}
 
 ### Place and Memory
-#### A personal beach, revisited over time
+#### Beach well balanced, revisited over time
 
 Rather than describing the beach literally, the poster focuses on the parts that stay in memory: the clean horizon, deep water color, soft sand tone, and the stillness of a familiar coast. Rogoznica Sepurine becomes less a documentary image and more a distilled visual memory built from only a few forms and color fields.
 
