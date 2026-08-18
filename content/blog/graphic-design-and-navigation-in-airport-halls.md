@@ -58,9 +58,9 @@ The best airport wayfinding system does not make passengers admire the signs. It
 ### Why airport halls are so difficult
 #### They combine stress, movement, multilingual reading, and irreversible mistakes
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-2.jpg" alt="Airport hall wayfinding overview showing check-in, security, departures, arrivals, and transfer navigation under time pressure." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-2.jpg" alt="Airport hall wayfinding overview showing check-in, security, departures, arrivals, and transfer navigation under time pressure." >}}
+
 
 Airports are harder than many other wayfinding environments because mistakes are expensive.
 
@@ -87,9 +87,9 @@ Entro’s airport-wayfinding explanation captures this well. Unfamiliarity is un
 ### What a strong airport system must contain
 #### It is not one sign family, but a full decision architecture
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-3.jpg" alt="Airport signage system components including curbside signs, terminal IDs, check-in, security, gates, maps, and digital displays." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-3.jpg" alt="Airport signage system components including curbside signs, terminal IDs, check-in, security, gates, maps, and digital displays." >}}
+
 
 A serious airport wayfinding system usually includes all of these layers:
 
@@ -111,9 +111,9 @@ Good airport wayfinding is really about sequencing information. People must see 
 ### Who usually makes these systems
 #### It is rarely only architects and rarely only graphic designers
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-4.jpg" alt="Airport wayfinding creation process showing collaboration between graphic designers, wayfinding agencies, architects, operators, and accessibility specialists." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-4.jpg" alt="Airport wayfinding creation process showing collaboration between graphic designers, wayfinding agencies, architects, operators, and accessibility specialists." >}}
+
 
 Airport wayfinding is normally built by a mixed team.
 
@@ -138,9 +138,9 @@ yes, architects matter, but the best airport systems usually need specialist way
 ### The process behind airport orientation systems
 #### A serious airport project usually takes months or years, not weeks
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-5.jpg" alt="Airport wayfinding design process with audits, passenger-flow research, hierarchy planning, sign prototypes, and phased rollout." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-5.jpg" alt="Airport wayfinding design process with audits, passenger-flow research, hierarchy planning, sign prototypes, and phased rollout." >}}
+
 
 The process is usually long because the environment is always moving:
 
@@ -170,9 +170,9 @@ A major airport-wide program can easily stretch across **1 to 3 years** or more,
 ### The toughest parts
 #### The hardest problem is usually not the sign itself, but the constantly changing operational reality behind it
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-6.jpg" alt="Tough airport wayfinding problems including transfers, multilingual information, security transitions, gate changes, and complex decision points." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-6.jpg" alt="Tough airport wayfinding problems including transfers, multilingual information, security transitions, gate changes, and complex decision points." >}}
+
 
 Airport wayfinding has several unusually difficult pressure points:
 
@@ -200,9 +200,9 @@ One less-discussed airport fact is that many wayfinding failures happen before t
 ### Successful patterns and scenarios
 #### The best systems reduce visual noise while increasing confidence
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-7.jpg" alt="Successful airport wayfinding patterns with strong hierarchy, large type, pictograms, walk times, and consistent sign placement." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-7.jpg" alt="Successful airport wayfinding patterns with strong hierarchy, large type, pictograms, walk times, and consistent sign placement." >}}
+
 
 Several patterns keep appearing in strong airport work:
 
@@ -223,9 +223,9 @@ At San Francisco International Airport, the SEGD project description frames the 
 ### Wrong paths and bad solutions
 #### Airports fail when signage becomes fragmented, late, or too dependent on local knowledge
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-8.jpg" alt="Weak airport wayfinding with inconsistent sign hierarchy, poor placement, cluttered messages, and fragmented terminal logic." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-8.jpg" alt="Weak airport wayfinding with inconsistent sign hierarchy, poor placement, cluttered messages, and fragmented terminal logic." >}}
+
 
 Bad airport systems usually fail in predictable ways:
 
@@ -242,9 +242,9 @@ This is where some terminals feel unintentionally elitist. They work well for st
 ### Hidden information most people never notice
 #### Airport typography and pictograms often matter more than logo design in the actual travel experience
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-9.jpg" alt="Airport typography and pictograms showing how readable letterforms and symbols shape navigation more than decorative branding." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-9.jpg" alt="Airport typography and pictograms showing how readable letterforms and symbols shape navigation more than decorative branding." >}}
+
 
 One of the most interesting hidden facts in airport design is how persistent certain type traditions are.
 
@@ -253,14 +253,14 @@ The SEGD project about the Moniteurs airport-wayfinding book points out that **F
 Another hidden layer is accessibility research. The ACRP report on aging travelers and passengers with disabilities shows how much airport navigation has to account for sensory, cognitive, and mobility differences. This is not a niche concern. It changes the whole design brief.
 
 #### Cost clue
-Even research around airport wayfinding can be substantial. The ACRP accessibility wayfinding project highlighted by SEGD carried a budget of **$389,792**, and that was for research and guidance, not a whole airport implementation.
+Even research around airport wayfinding can be substantial. The ACRP accessibility wayfinding project highlighted by SEGD carried a budget of **$390,000** (approx), and that was for research and guidance, not a whole airport implementation.
 
 ### Past and the future of airport navigation
 #### The field has moved from static sign posting toward hybrid, operationally connected guidance systems
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-10.jpg" alt="Evolution of airport navigation from older static signage to hybrid physical and digital wayfinding systems with real-time updates." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-10.jpg" alt="Evolution of airport navigation from older static signage to hybrid physical and digital wayfinding systems with real-time updates." >}}
+
 
 In the past, airport orientation relied more heavily on fixed signs, desk staff, and repeated public announcements.
 
@@ -281,9 +281,9 @@ It is “connect signs, screens, architecture, and operations more intelligently
 ### A quick comparison
 #### Different eras solved different navigation problems
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-11.jpg" alt="Comparison of airport wayfinding eras from static signage to integrated service-oriented navigation systems." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/graphic-design-and-navigation-in-airport-halls/graphic-design-and-navigation-in-airport-halls-11.jpg" alt="Comparison of airport wayfinding eras from static signage to integrated service-oriented navigation systems." >}}
+
 
 | Era | Main navigation logic | Main weakness |
 | --- | --- | --- |
