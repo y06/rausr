@@ -64,9 +64,9 @@ Creative freedom usually arrives after business discipline, not before it.
 ### Design career is usually mixed, not pure
 #### Very few designers live from one clean income stream for long
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-2.jpg" alt="Graphic designer income built from multiple streams including client work, retainers, production jobs, and recurring design services." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-2.jpg" alt="Graphic designer income built from multiple streams including client work, retainers, production jobs, and recurring design services." >}}
+
 
 One of the most useful truths to accept early is that most graphic designers do not earn in one elegant way.
 
@@ -89,9 +89,9 @@ The deeper point is this: making a living in design is less about one perfect cl
 ### Where clients usually come from
 #### The romantic answer is referrals, but the practical answer is referrals plus visible proof plus consistent follow-up
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-3.jpg" alt="Freelance graphic designer finding clients through referrals, portfolio website, outreach, local networks, and marketplaces." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-3.jpg" alt="Freelance graphic designer finding clients through referrals, portfolio website, outreach, local networks, and marketplaces." >}}
+
 
 Most designers want a magical source of clients.
 
@@ -116,9 +116,9 @@ One hidden career advantage is being known for something slightly boring but com
 ### Pricing starts with scope, not courage
 #### Many underpricing problems begin because the project was not defined tightly enough
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-4.jpg" alt="Graphic design pricing based on project scope, revisions, deliverables, timeline, and usage rather than guesswork." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-4.jpg" alt="Graphic design pricing based on project scope, revisions, deliverables, timeline, and usage rather than guesswork." >}}
+
 
 Designers often think pricing is mainly about confidence.
 
@@ -150,9 +150,9 @@ The more useful rule is simpler: price in a way that covers the real time, the r
 ### The best proposals quietly prevent chaos
 #### Good designers do not only present nice work, they define what will happen before the work begins
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-5.jpg" alt="Graphic design proposal with deliverables, timeline, payment terms, revisions, and approval structure." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-5.jpg" alt="Graphic design proposal with deliverables, timeline, payment terms, revisions, and approval structure." >}}
+
 
 Many freelance pain stories begin before the first layout is opened.
 
@@ -178,9 +178,9 @@ Some of the most experienced freelancers are not the ones with the most stylish 
 ### Invoices, reminders, and client records are part of the job
 #### If you hate admin, you still need a system, because memory is not a system
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-6.jpg" alt="Graphic design business admin workflow with invoices, reminders, client records, deposits, and payment tracking." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-6.jpg" alt="Graphic design business admin workflow with invoices, reminders, client records, deposits, and payment tracking." >}}
+
 
 This is the part many creatives postpone.
 
@@ -206,9 +206,9 @@ One hidden quality marker of a professional freelancer is calm follow-up. Not an
 ### Your equipment stack is a business decision
 #### The hardware is not there to look impressive, it is there to reduce interruption risk
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-7.jpg" alt="Graphic designer equipment stack including computer, monitor, tablet, storage, backup drives, and calibrated workspace setup." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-7.jpg" alt="Graphic designer equipment stack including computer, monitor, tablet, storage, backup drives, and calibrated workspace setup." >}}
+
 
 Many new freelancers either overspend too early or underspend too long.
 
@@ -231,9 +231,9 @@ This is why some freelancers appear expensive to clients but are not especially 
 ### NAS, cloud backup, and versioning are not luxury items anymore
 #### The more client work you carry, the more dangerous informal storage becomes
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-8.jpg" alt="Designer backup system using NAS, external drives, cloud backup, and versioning for project safety." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-8.jpg" alt="Designer backup system using NAS, external drives, cloud backup, and versioning for project safety." >}}
+
 
 There is an old freelancer mistake that keeps repeating:
 
@@ -255,9 +255,9 @@ Many freelancers do not really become disciplined about backup after reading bes
 ### Graphic design income sits in an interesting middle zone
 #### It can outperform some nearby creative roles, but it is often outpaced by more technical or more managerial paths
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-9.jpg" alt="Comparison of graphic design income with digital design, art direction, and adjacent creative career paths." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-9.jpg" alt="Comparison of graphic design income with digital design, art direction, and adjacent creative career paths." >}}
+
 
 This is where the profession gets more sober.
 
@@ -283,9 +283,9 @@ A very good independent graphic designer can still outperform salaried medians, 
 ### What is hard, what is easier, and what nobody tells you
 #### The hardest part is usually not making good visuals, but staying commercially clear while doing it
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-10.jpg" alt="Real-life freelance graphic design challenges including revisions, pricing pressure, client management, and sustainable career growth." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-to-make-a-living-as-a-graphic-designer/how-to-make-a-living-as-a-graphic-designer-10.jpg" alt="Real-life freelance graphic design challenges including revisions, pricing pressure, client management, and sustainable career growth." >}}
+
 
 Some parts of the career are genuinely hard:
 
