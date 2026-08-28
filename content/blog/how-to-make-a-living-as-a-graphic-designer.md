@@ -2,7 +2,7 @@
 title: "How to Make a Living as a Graphic Designer"
 description: "Finding clients, pricing work, handling invoices, building a reliable tool stack, and surviving the economics behind the creative career."
 date: 2026-08-25
-tags: ["graphic design", "reports", "series"]
+tags: ["graphic design", "reports"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
 draft: false
