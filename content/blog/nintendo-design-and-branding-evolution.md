@@ -61,9 +61,9 @@ Nintendo's design magic is not that everything looks futuristic. It is that the 
 ### The Kyoto beginning
 #### Before video games, Nintendo already understood small objects, rituals, and repeatable entertainment
 
-{{< halves >}}
-{{< halfimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-2.jpg" alt="Early Nintendo Hanafuda playing cards, Kyoto craft culture, packaging marks, and the beginning of Nintendo as an entertainment brand." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-2.jpg" alt="Early Nintendo Hanafuda playing cards, Kyoto craft culture, packaging marks, and the beginning of Nintendo as an entertainment brand." >}}
+
 
 Nintendo was founded in September 1889 by [Fusajiro Yamauchi](/search/?q=Fusajiro+Yamauchi), who began manufacturing and selling Japanese Hanafuda playing cards in Kyoto.
 
@@ -87,9 +87,9 @@ Nintendo did not start as a technology company. It started as a company selling 
 ### From cards to toys to electronics
 #### The brand became experimental before it became globally famous
 
-{{< halves >}}
-{{< halfimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-3.jpg" alt="Nintendo transition from playing cards to toys, light gun systems, arcade machines, and early electronic entertainment experiments." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-3.jpg" alt="Nintendo transition from playing cards to toys, light gun systems, arcade machines, and early electronic entertainment experiments." >}}
+
 
 The middle Nintendo story is messy in a good way.
 
@@ -113,9 +113,9 @@ Nintendo's official history includes the 1973 Laser Clay Shooting System, a larg
 ### The Famicom and NES era
 #### Nintendo rebuilt trust in home video games through hardware, packaging, and control
 
-{{< halves >}}
-{{< halfimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-4.jpg" alt="Nintendo Famicom and NES design era with red-and-white Japanese console, grey western console, cartridges, packaging, and seal of quality." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-4.jpg" alt="Nintendo Famicom and NES design era with red-and-white Japanese console, grey western console, cartridges, packaging, and seal of quality." >}}
+
 
 The 1983 Family Computer, known as Famicom in Japan, changed Nintendo's scale.
 
@@ -141,15 +141,15 @@ Nintendo could have presented the NES as another generic game console. Instead, 
 ### Characters became the real branding system
 #### Mario, Zelda, Donkey Kong, Kirby, and Pokemon made Nintendo bigger than console cycles
 
-{{< halves >}}
-{{< halfimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-5.jpg" alt="Nintendo character branding system with Mario, Zelda, Donkey Kong, Kirby, Pokemon, colorful worlds, and long-running game identity." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-5.jpg" alt="Nintendo character branding system with Mario, Zelda, Donkey Kong, Kirby, Pokemon, colorful worlds, and long-running game identity." >}}
+
 
 Nintendo's strongest brand assets are not only hardware.
 
 They are characters and worlds.
 
-[Shigeru Miyamoto](/search/?q=Shigeru+Miyamoto) is the unavoidable figure here. Donkey Kong, Mario, The Legend of Zelda, and Nintendo's broader design culture around character-first play all carry his influence. He studied industrial design, and that background matters because his games often feel like designed objects before they feel like stories.
+[Shigeru Miyamoto](/search/?q=Shigeru+Miyamoto) is the very important figure here. Donkey Kong, Mario, The Legend of Zelda, and Nintendo's broader design culture around character-first play all carry his influence. He studied industrial design, and that background matters because his games often feel like designed objects before they feel like stories.
 
 Mario is not only a mascot. He is a flexible interface for play. He can race, jump, play tennis, appear in a board game, teach a new controller, sell a console, enter a theme park, and still feel like Mario.
 
@@ -173,9 +173,9 @@ One hidden Nintendo strength is that many of its characters do not age like film
 ### Game Boy proved that good design is not always technical power
 #### A limited screen, durable body, and perfect use case beat more advanced competitors
 
-{{< halves >}}
-{{< halfimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-6.jpg" alt="Nintendo Game Boy design story with grey handheld body, green monochrome screen, simple controls, cartridges, and portable play culture." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-6.jpg" alt="Nintendo Game Boy design story with grey handheld body, green monochrome screen, simple controls, cartridges, and portable play culture." >}}
+
 
 The Game Boy is one of Nintendo's clearest design lessons.
 
@@ -201,9 +201,9 @@ The Game Boy's visual plainness became part of its charm. It looked more like a 
 ### Wii made the console disappear into the living room
 #### The design aimed for everyone, not only players who already understood games
 
-{{< halves >}}
+
 {{< halfimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-7.jpg" alt="Nintendo Wii design with white console, vertical stand, Wii Remote, clean packaging, living-room accessibility, and family play." >}}
-{{< /halves >}}
+
 
 The Wii is one of the best examples of Nintendo design culture because it rejected the obvious competition.
 
@@ -231,9 +231,9 @@ Wii did not only redesign a controller. It redesigned who felt invited to touch 
 ### Wii U showed the danger of unclear naming and unclear concept
 #### A brand can be friendly and still fail if people do not understand what is being sold
 
-{{< halves >}}
-{{< halfimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-8.jpg" alt="Nintendo Wii U branding problem with tablet controller, confusing naming, unclear product hierarchy, and weaker console identity." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-8.jpg" alt="Nintendo Wii U branding problem with tablet controller, confusing naming, unclear product hierarchy, and weaker console identity." >}}
+
 
 Nintendo's wrong paths are just as useful as its successes.
 
@@ -253,9 +253,9 @@ Wii U is proof that friendly branding is not enough. The concept must be underst
 ### Switch rebuilt the bridge between home and handheld
 #### The best Nintendo design often starts with a play behavior, then builds the object around it
 
-{{< halves >}}
-{{< halfimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-9.jpg" alt="Nintendo Switch design with hybrid console, detachable Joy-Con controllers, dock, red and blue color coding, and flexible play modes." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-9.jpg" alt="Nintendo Switch design with hybrid console, detachable Joy-Con controllers, dock, red and blue color coding, and flexible play modes." >}}
+
 
 Nintendo Switch worked because the core idea could be understood quickly:
 
@@ -281,9 +281,9 @@ The Switch name is unusually good because it describes the product behavior dire
 ### Nintendo today and next
 #### The brand is becoming a wider entertainment world, but it still has to protect the feeling of play
 
-{{< halves >}}
-{{< halfimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-10.jpg" alt="Future Nintendo brand direction with Switch 2, Nintendo Museum, Super Nintendo World, film, characters, retail spaces, and hybrid entertainment design." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-10.jpg" alt="Future Nintendo brand direction with Switch 2, Nintendo Museum, Super Nintendo World, film, characters, retail spaces, and hybrid entertainment design." >}}
+
 
 Nintendo today is no longer only a console company in the narrow sense.
 
@@ -327,9 +327,9 @@ One hidden Nintendo advantage is patience. The company often waits until an idea
 ### A quick design timeline
 #### Nintendo's strongest design moves usually turned limitations into personality
 
-{{< halves >}}
-{{< halfimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-11.jpg" alt="Nintendo design timeline from Hanafuda cards and Famicom to Game Boy, Wii, Wii U, Switch, Switch 2, movies, parks, and museum experiences." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/nintendo-design-and-branding-evolution/nintendo-design-and-branding-evolution-11.jpg" alt="Nintendo design timeline from Hanafuda cards and Famicom to Game Boy, Wii, Wii U, Switch, Switch 2, movies, parks, and museum experiences." >}}
+
 
 | Era | Design move | Result |
 | --- | --- | --- |
