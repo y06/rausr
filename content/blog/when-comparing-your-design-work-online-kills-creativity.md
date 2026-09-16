@@ -1,12 +1,12 @@
 ---
 title: "When Comparing Your Design Work Online Kills Creativity: How to Escape the Loop"
 description: "Why nonstop comparison with other designers can damage confidence and originality, when it can still help, and how to build a healthier creative practice."
-date: 2026-09-14
+date: 2026-09-16
 tags: ["philosophy", "creativity", "graphic design", "reports"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
 draft: false
-preview_image: "/images/articles/design-comparison-creativity-loop/design-comparison-creativity-loop-12.jpg"
+preview_image: "/images/articles/design-comparison-creativity-loop/design-comparison-creativity-loop-13.jpg"
 header_image: "/images/articles/design-comparison-creativity-loop/design-comparison-creativity-loop-1.jpg"
 source:
   - "Leon Festinger, A Theory of Social Comparison Processes, 1954: https://doi.org/10.1177/001872675400700202"
