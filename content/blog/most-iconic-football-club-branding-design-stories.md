@@ -61,9 +61,9 @@ A corporate logo asks to be recognized. A football crest asks to be recognized, 
 ### From local badge to global media system
 #### The old crest identified a team; the modern identity must organize an international entertainment business
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-2.jpg" alt="A tactile embroidered football shield transforming into a luminous digital badge beside a small glass screen." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-2.jpg" alt="A tactile embroidered football shield transforming into a luminous digital badge beside a small glass screen." >}}
+
 
 For much of the twentieth century, clubs did not manage identity with the consistency expected today. A crest could change between a programme, letterhead, blazer, match shirt, and souvenir. Colours varied with printing and embroidery. Some teams wore a civic coat of arms only for important matches, while ordinary kits carried no badge at all.
 
@@ -83,9 +83,9 @@ The visual system has become larger while the emotional permission to change it 
 ### 1. Real Madrid: the monogram that survived political change
 #### Its strength comes from controlled evolution, not repeated reinvention
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-3.jpg" alt="A crowned circular sculpture of intertwined ivory and gold ribbons crossed by a diagonal blue band." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-3.jpg" alt="A crowned circular sculpture of intertwined ivory and gold ribbons crossed by a diagonal blue band." >}}
+
 
 [Real Madrid](/search/?q=Real+Madrid) began with a decorative interlocking MCF monogram in 1902. A circle was added in 1908, giving the initials a stable container. In 1920, King Alfonso XIII granted the club the title "Real," and the crown entered both its name and crest.
 
@@ -111,9 +111,9 @@ Real Madrid demonstrates that modernization does not always require visible rede
 ### 2. FC Barcelona: a player designed the crest, and members still guard it
 #### The club's identity is a rare combination of sport, city, Catalonia, and democratic ownership
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-4.jpg" alt="A woven red, blue, and gold football shield with a vintage leather ball and folded supporter scarf." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-4.jpg" alt="A woven red, blue, and gold football shield with a vintage leather ball and folded supporter scarf." >}}
+
 
 One of football design's best facts is that Barça's crest was designed by a footballer.
 
@@ -134,9 +134,8 @@ The hidden design asset is not only the crest. “Més que un club,” first spo
 ### 3. Liverpool: one club, two levels of emblem
 #### The detailed official crest and the simple Liver Bird solve different design problems
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-5.jpg" alt="A polished red Liver Bird-inspired sculpture standing above two subtle memorial flames." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-5.jpg" alt="A polished red Liver Bird-inspired sculpture standing above two subtle memorial flames." >}}
+
 
 Liverpool's central symbol did not begin as a modern football logo. The Liver Bird came from the city's heraldry and appeared in club material long before it became a regular shirt badge.
 
@@ -156,9 +155,9 @@ Liverpool treated simplification as a hierarchy of use, not as an excuse to eras
 ### 4. Arsenal: the cannon became stronger than the shield
 #### Industrial origin, legal ownership, and modern typography all shaped the identity
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-6.jpg" alt="A historic brass cannon in side profile with a restrained red fabric band around its barrel." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-6.jpg" alt="A historic brass cannon in side profile with a restrained red fabric band around its barrel." >}}
+
 
 Arsenal's visual identity begins with place and labour. The club was formed by workers connected to the Royal Arsenal in Woolwich, so cannons were not invented by a branding workshop. They were local reality.
 
@@ -175,9 +174,9 @@ The lesson is sharp: a club may contain one symbol more powerful than its offici
 ### 5. Manchester City: consultation repaired a break with history
 #### Supporters helped replace the eagle with a modern version of the older circular badge
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-7.jpg" alt="A round sky-blue enamel medallion bearing a golden sailing ship, flowing waves, and a small red rose." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-7.jpg" alt="A round sky-blue enamel medallion bearing a golden sailing ship, flowing waves, and a small red rose." >}}
+
 
 Manchester City's 1997 eagle badge became attached to an extraordinary era of sporting growth, but it was a departure from the circular identities many supporters remembered.
 
@@ -195,9 +194,9 @@ Fan consultation does not mean asking supporters to draw the final crest. It mea
 ### 6. Juventus: the moment a football crest deliberately became a logo
 #### Interbrand replaced heraldry with a letter that could enter fashion, hospitality, and entertainment
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-8.jpg" alt="Two tall black-and-white striped ribbons bending into a minimal sculptural football identity." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-8.jpg" alt="Two tall black-and-white striped ribbons bending into a minimal sculptural football identity." >}}
+
 
 No major European club redesign created a cleaner break with football tradition than Juventus in 2017.
 
@@ -216,9 +215,9 @@ The risk remains equally clear. A club can become more useful as a lifestyle bra
 ### 7. Inter: a difficult monogram edited for a digital generation
 #### Bureau Borsche kept the circular logic but reduced the name to I and M
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-9.jpg" alt="A circular medallion made from two broad intertwined blue and black bands with a fine gold rim." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-9.jpg" alt="A circular medallion made from two broad intertwined blue and black bands with a fine gold rim." >}}
+
 
 Inter began with design authorship that is unusually clear. In 1908, painter and founding member [Giorgio Muggiani](/search/?q=Giorgio+Muggiani) created the circular FCIM monogram and selected the black-and-blue colours.
 
@@ -236,9 +235,9 @@ Inter's black and blue were not simply fashionable colours chosen by a later age
 ### 8. Ajax: the rare club that moved from minimal back to detailed
 #### After 34 years, supporter memory defeated the usual direction of logo modernization
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-10.jpg" alt="A classical Greek hero profile medallion combining detailed stone relief with eleven clean red lines." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-10.jpg" alt="A classical Greek hero profile medallion combining detailed stone relief with eleven clean red lines." >}}
+
 
 Ajax offers one of the most interesting reversals in contemporary identity design.
 
@@ -308,9 +307,9 @@ There is also a less obvious danger in nostalgia. Returning to an old badge cann
 ### Where football branding is pointing next
 #### Flexible heritage, motion, direct-to-fan media, and secondary symbols will matter more than another universal redesign trend
 
-{{< halves >}}
-{{< halfimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-13.jpg" alt="A single football shield transitioning from embroidered cloth to a translucent digital surface above sustainable fabric ribbon." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/most-iconic-football-club-branding-design-stories/most-iconic-football-club-branding-design-stories-13.jpg" alt="A single football shield transitioning from embroidered cloth to a translucent digital surface above sustainable fabric ribbon." >}}
+
 
 Football identity is moving away from the idea that one crest must carry every message.
 
