@@ -7,3 +7,4 @@ github.com.pub
 static/.DS_Store
 static/images/.DS_Store
 resources/_gen/
+/ai-instructions-md/
