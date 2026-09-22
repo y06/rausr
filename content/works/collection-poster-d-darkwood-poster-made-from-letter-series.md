@@ -21,6 +21,8 @@ sections:
         label: "5. Darkwood Poster Green Light"
       - image: "/images/collection-poster-d-darkwood-poster-made-from-letter-series/darkwood-d-letter-poster-series-mockup-6.jpg"
         label: "6. Darkwood Green Light Interior 2"
+      - video: "/images/collection-poster-d-darkwood-poster-made-from-letter-series/darkwood-d-letter-poster-series-video-green-to-yellow-interior.mp4"
+        label: "Darkwood Green-to-Yellow Interior Transition"
 ---
 
 ### Project Overview
