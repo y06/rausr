@@ -162,9 +162,6 @@ Apple's 2025 accounts make another distinction visible. Product gross margin was
 
 <p class="article-prelink">The craft inside this kind of coordinated system is explored further in <a href="/blog/the-design-process-inside-big-tech/">The Design Process Inside Big Tech</a>.</p>
 
-
-
-
 ### Nike: a small symbol supported by a giant cultural machine
 
 
@@ -199,9 +196,9 @@ This is mature branding: the name, lettering, package, recipe, distribution and 
 
 ### MUJI proves that even no-brand is a brand position
 
-
-{{< fullimg src="/images/articles/the-power-of-branding-from-idea-to-production/the-power-of-branding-from-idea-to-production-9.jpg" alt="MUJI no-brand quality goods with kraft packaging, restrained typography, simple materials and quiet Japanese retail design." >}}
-
+{{< halves >}}
+{{< halfimg src="/images/articles/the-power-of-branding-from-idea-to-production/the-power-of-branding-from-idea-to-production-9.jpg" alt="MUJI no-brand quality goods with kraft packaging, restrained typography, simple materials and quiet Japanese retail design." >}}
+{{< /halves >}}
 
 #### Refusing visible status can become a highly recognizable form of status
 
@@ -243,9 +240,9 @@ The curve is still useful, but companies and countries can move along it.
 
 ### Branding cannot rescue a product with no defensible value
 
-
-{{< fullimg src="/images/articles/the-power-of-branding-from-idea-to-production/the-power-of-branding-from-idea-to-production-11.jpg" alt="A polished premium product launch collapsing when customers discover that the branded machine solves no meaningful problem." >}}
-
+{{< halves >}}
+{{< halfimg src="/images/articles/the-power-of-branding-from-idea-to-production/the-power-of-branding-from-idea-to-production-11.jpg" alt="A polished premium product launch collapsing when customers discover that the branded machine solves no meaningful problem." >}}
+{{< /halves >}}
 
 #### Perception can accelerate reality, but it cannot replace reality forever
 
@@ -267,6 +264,10 @@ Without one of those foundations, premium design may increase the speed of the f
 
 ### How to build value from idea to craft
 
+{{< halves >}}
+{{< halfimg src="/images/articles/the-power-of-branding-from-idea-to-production/the-power-of-branding-from-idea-to-production-12.jpg" alt="Practical branding workshop moving from customer problem and product proof to naming, visual identity, copy, prototype, production test and launch." >}}
+{{< /halves >}}
+
 #### Start with proof, then make the proof easy to recognize
 
 The useful process is less magical than the final result appears.
@@ -287,9 +288,9 @@ The premium is not created when the designer exports the logo. It is created whe
 
 ### AI will make visible craft cheaper and invisible judgment dearer
 
-
-{{< fullimg src="/images/articles/the-power-of-branding-from-idea-to-production/the-power-of-branding-from-idea-to-production-13.jpg" alt="Future branding workflow where AI generates many logos, illustrations and copy options while human teams choose, own and consistently operate the system." >}}
-
+{{< halves >}}
+{{< halfimg src="/images/articles/the-power-of-branding-from-idea-to-production/the-power-of-branding-from-idea-to-production-13.jpg" alt="Future branding workflow where AI generates many logos, illustrations and copy options while human teams choose, own and consistently operate the system." >}}
+{{< /halves >}}
 
 #### Abundant output increases the value of selection, ownership and trust
 
@@ -309,6 +310,10 @@ The effect may be uncomfortable for production-focused creatives. A client can g
 This returns us to ownership. If AI reduces the fee for isolated execution, designers and writers may need to move toward strategy, systems, long-term stewardship and shared commercial upside. The valuable contribution will be less "I made this file" and more "I helped this business create and protect a choice people understand."
 
 ### Conclusion
+
+{{< halves >}}
+{{< halfimg src="/images/articles/the-power-of-branding-from-idea-to-production/the-power-of-branding-from-idea-to-production-14.jpg" alt="Complete brand value ecosystem connecting an intangible idea to design, language, production, distribution, customer memory and repeat purchase." >}}
+{{< /halves >}}
 
 #### The greatest premium comes from alignment, not decoration
 
