@@ -2,7 +2,7 @@
 title: "IKEA Branding and Visual Design Story: Logo, Catalogue and Global Identity"
 description: "The story behind IKEA branding and visual design, from its hand-drawn logos and famous catalogue to global identity rules, in-house designers, collaborations, mistakes and future direction."
 date: 2026-09-28
-tags: ["branding", "graphic design", "retail", "furniture"]
+tags: ["branding", "graphic design", "series", "product design"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
 draft: false
