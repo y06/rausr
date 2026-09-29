@@ -28,6 +28,8 @@
   {{ $paginator := .Paginate $clientWorks 8 }}
   {{ $currentPage := $paginator.PageNumber }}
   {{ $collectionPage := site.GetPage "/collection" }}
+  {{ $collectionCardCount := cond (gt (len $collectionWorks) 0) 1 0 }}
+  {{ $displayTotal := add $worksTotal $collectionCardCount }}
   {{ $pageStart := 0 }}
   {{ $pageCount := 0 }}
 
@@ -54,16 +56,17 @@
           {{ if gt $worksTotal 0 }}
         </h1>
         {{ with $paginator }}
-          {{ $startIndex := add $pageStart 1 }}
-          {{ $endIndex := add $pageStart $pageCount }}
+          {{ $startIndex := cond (eq $currentPage 1) 1 (add $pageStart $collectionCardCount 1) }}
+          {{ $visibleCount := add $pageCount (cond (eq $currentPage 1) $collectionCardCount 0) }}
+          {{ $endIndex := sub (add $startIndex $visibleCount) 1 }}
           <div class="counter">
             <span class="word showinglist">showing</span>
-            <div class="number total showinglist" aria-label="Showing works {{ $startIndex }} to {{ $endIndex }}">{{ $startIndex }}-{{ $endIndex }}</div>
+            <div class="number total showinglist" aria-label="Showing items {{ $startIndex }} to {{ $endIndex }}">{{ $startIndex }}-{{ $endIndex }}</div>
           </div>
         {{ end }}
         <div class="counter">
           <span class="word">total</span>
-          <div class="number total" aria-label="{{ $worksTotal }} all works">{{ $worksTotal }}</div>
+          <div class="number total" aria-label="{{ $displayTotal }} items">{{ $displayTotal }}</div>
         </div>
         {{ end }}
       </div>

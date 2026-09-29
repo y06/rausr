@@ -12,7 +12,7 @@ seotags:
   - divergent vs convergent thinking
   - default mode network creativity
 draft: false
-preview_image: /images/articles/is-creativity-endless-or-can-it-run-out/is-creativity-endless-or-can-it-run-out-10.jpg
+preview_image: /images/articles/is-creativity-endless-or-can-it-run-out/is-creativity-endless-or-can-it-run-out-9.jpg
 header_image: /images/articles/is-creativity-endless-or-can-it-run-out/is-creativity-endless-or-can-it-run-out-1.jpg
 source: [
   
