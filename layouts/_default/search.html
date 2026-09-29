@@ -200,6 +200,28 @@
     resultsEl.appendChild(empty);
   };
 
+  const renderNoResults = (query) => {
+    resultsEl.innerHTML = '';
+    hidePagination();
+    updateShowingRange(0, 0, 0);
+
+    const queryHtml = htmlEscape(query);
+    const empty = document.createElement('div');
+    empty.className = 'search-empty search-empty--no-results';
+    empty.innerHTML = `
+      <div class="search-empty__message" role="status">
+        <span class="search-empty__eyebrow">Nothing on the menu yet</span>
+        <h2>We couldn’t find “${queryHtml}”</h2>
+        <p>Try another keyword, or browse everything we’ve cooked in our work and article archives.<br /><br /> If you expected to find something here, we’d be very happy if you <a href="/contact/">told our chef what went wrong</a> so we can improve the recipe.</p>
+      </div>
+      <div class="home-cta-buttons search-empty__actions" aria-label="Explore other options">
+        <a class="home-button search-empty__button--works" href="/works/">List All Works →</a>
+        <a class="home-button search-empty__button--articles" href="/blog/">List All Articles →</a>
+      </div>
+    `;
+    resultsEl.appendChild(empty);
+  };
+
   function render(results) {
     currentResults = results;
     currentPage = 1;
@@ -233,9 +255,9 @@
     }
 
     if (!results.length) {
-      setDescription(`We couldn't find any matches for <span class="search-query">"${queryHtml}"</span>. Try a different keyword or adjust the filters.`);
+      setDescription(`That search didn’t make it onto today’s menu. Try another keyword or choose a path below.`);
       setMetaDescription(`No matches for "${currentQuery}" on Rausr. Try another keyword or adjust the filters.`);
-      renderEmpty(`No results for "${currentQuery}"`);
+      renderNoResults(currentQuery);
       return;
     }
 
@@ -247,7 +269,7 @@
   function renderPage(pageNumber) {
     const total = currentResults.length;
     if (!total) {
-      renderEmpty(`No results for "${currentQuery}"`);
+      renderNoResults(currentQuery);
       return;
     }
 
@@ -645,6 +667,74 @@
   font-size: 0.95rem;
   color: rgba(15, 9, 51, 0.55);
   padding: 3rem 1rem;
+}
+
+.search-empty--no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 5vw, 4rem);
+  color: color(display-p3 0.263 0.251 0.298);
+}
+
+.search-empty__message {
+  max-width: 680px;
+}
+
+.search-empty__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: color(display-p3 0.408 0.282 1.000);
+  font-family: Satoshi, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.search-empty h2 {
+  margin: 0 0 2rem;
+  color: color(display-p3 0.263 0.251 0.298);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.search-empty p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(15, 9, 51, 0.68);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.search-empty p a {
+  color: color(display-p3 0.408 0.282 1.000);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.18em;
+}
+
+.search-empty p a:hover {
+  color: color(display-p3 0.129 0.561 1.000);
+}
+
+.search-empty__actions {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.search-empty__button--works {
+  background-color: color(display-p3 0.129 0.561 1.000);
+}
+
+.search-empty__button--articles {
+  background-color: color(display-p3 0.055 0.604 0.447);
 }
 
 .card1--works .card1-bottom {
