@@ -1,7 +1,7 @@
 ---
 title: "How Graphic Designers Can Handle Feedback Without Taking It Personally"
 description: "A practical guide to processing client feedback, separating useful criticism from personal judgment, managing vague comments, and building a calmer graphic design review process."
-date: 2026-10-01
+date: 2026-10-03
 tags: ["graphic design", "philosophy", "creativity", "reports"]
 author: "Jakub"
 author_image: "/images/authors-pic-jakub.jpg"
@@ -48,9 +48,8 @@ The client owns the business problem. The designer owns the design process. Stro
 
 ### Why design feedback feels unusually personal
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-2.jpg" alt="Graphic designer receiving difficult client feedback while viewing a carefully developed visual identity presentation." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-2.jpg" alt="Graphic designer receiving difficult client feedback while viewing a carefully developed visual identity presentation." >}}
+
 
 #### Creative work combines professional judgment with personal taste
 
@@ -64,9 +63,9 @@ That finding explains why "You are a talented designer, but this is disappointin
 
 ### Not every comment has the same value
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-3.jpg" alt="Designer sorting client comments into objective problems, audience reactions, personal preferences and production requirements." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-3.jpg" alt="Designer sorting client comments into objective problems, audience reactions, personal preferences and production requirements." >}}
+
 
 #### Listen widely, but weigh comments according to their evidence
 
@@ -85,9 +84,8 @@ All four can be discussed, but they should not carry equal authority. Objective 
 
 ### Translate solutions back into problems
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-4.jpg" alt="Design feedback translation process changing vague client prescriptions into clear communication problems and testable revisions." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-4.jpg" alt="Design feedback translation process changing vague client prescriptions into clear communication problems and testable revisions." >}}
+
 
 #### The first requested change is often only a clue
 
@@ -111,9 +109,9 @@ The reviewer may still insist on the original request, but the conversation is n
 
 ### Use a pause before defending the work
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-5.jpg" alt="Calm graphic designer recording feedback before responding, with notes organized by importance and project objective." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-5.jpg" alt="Calm graphic designer recording feedback before responding, with notes organized by importance and project objective." >}}
+
 
 #### A short delay prevents an emotional reaction from becoming a project decision
 
@@ -133,9 +131,9 @@ The sentence accepts the concern, explains the consequence and offers a directio
 
 ### Build the feedback system before showing the design
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-6.jpg" alt="Structured graphic design review with an agreed brief, named decision maker, consolidated comments and revision rounds." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-6.jpg" alt="Structured graphic design review with an agreed brief, named decision maker, consolidated comments and revision rounds." >}}
+
 
 #### Many feedback problems are project-management problems in disguise
 
@@ -151,9 +149,9 @@ Presenting the work with context also changes the quality of the response. Remin
 
 ### Is handling feedback a personality trait or a learned skill?
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-7.jpg" alt="Junior and experienced graphic designers processing the same critique with different levels of confidence and professional distance." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-7.jpg" alt="Junior and experienced graphic designers processing the same critique with different levels of confidence and professional distance." >}}
+
 
 #### Personality changes the starting point, but experience changes the response
 
@@ -172,9 +170,9 @@ Senior designers can still take comments personally, especially after exhaustion
 
 ### Difficult feedback still needs boundaries
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-8.jpg" alt="Graphic designer setting professional boundaries during contradictory, disrespectful or endless client feedback." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-8.jpg" alt="Graphic designer setting professional boundaries during contradictory, disrespectful or endless client feedback." >}}
+
 
 #### Professionalism does not require accepting disrespect or infinite revisions
 
@@ -197,9 +195,9 @@ Do not confuse having a thick skin with having no boundaries. One protects the w
 
 ### Better reviewers discuss effects, not authors
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-9.jpg" alt="Constructive design critique focused on audience response, hierarchy and project goals rather than the designer's personality." >}}
-{{< /halves >}}
+
+{{< fullimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-9.jpg" alt="Constructive design critique focused on audience response, hierarchy and project goals rather than the designer's personality." >}}
+
 
 #### Clients and creative directors also have a responsibility
 
@@ -213,9 +211,7 @@ One recent design-research project even examined the room used for critique. Its
 
 ### Conclusion: feedback should improve the object, not reduce the person
 
-{{< halves >}}
-{{< halfimg src="/images/articles/how-graphic-designers-handle-feedback-without-taking-it-personally/how-graphic-designers-handle-feedback-without-taking-it-personally-10.jpg" alt="Confident graphic designer turning organized client feedback into a clearer and more effective final design." >}}
-{{< /halves >}}
+
 
 Processing feedback becomes easier with time, but time alone is not enough. Designers improve when they learn to classify comments, uncover the concern behind a requested solution, pause before defending themselves and connect every revision to an agreed objective.
 
