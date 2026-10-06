@@ -151,9 +151,9 @@ The University of Bolton's public 2025 case study offers a useful scale referenc
 
 ### Graphic design must work at three distances
 
-
-{{< fullimg src="/images/articles/university-exhibition-stand-design-student-recruitment/university-exhibition-stand-design-student-recruitment-7.jpg" alt="University stand graphic hierarchy showing readable identity from across the hall, course information nearby and QR details up close." >}}
-
+{{< halves >}}
+{{< halfimg src="/images/articles/university-exhibition-stand-design-student-recruitment/university-exhibition-stand-design-student-recruitment-7.jpg" alt="University stand graphic hierarchy showing readable identity from across the hall, course information nearby and QR details up close." >}}
+{{< /halves >}}
 
 #### A wall of information is not helpful simply because the information is correct
 
@@ -169,8 +169,9 @@ Accessibility is part of recruitment, not a later compliance check. Counters nee
 
 ### Three useful success paths
 
-{{< fullimg src="/images/articles/university-exhibition-stand-design-student-recruitment/university-exhibition-stand-design-student-recruitment-8.jpg" alt="Comparison of successful university recruitment stands using creative participation, campus-life simulation and strong local identity." >}}
-
+{{< halves >}}
+{{< halfimg src="/images/articles/university-exhibition-stand-design-student-recruitment/university-exhibition-stand-design-student-recruitment-8.jpg" alt="Comparison of successful university recruitment stands using creative participation, campus-life simulation and strong local identity." >}}
+{{< /halves >}}
 
 #### The best examples translate a real institutional strength into space
 
@@ -191,9 +192,9 @@ The stand is not asked to perform magic. It makes one important part of the univ
 
 ### Wrong turns that produce traffic but not recruitment
 
-
-{{< fullimg src="/images/articles/university-exhibition-stand-design-student-recruitment/university-exhibition-stand-design-student-recruitment-9.jpg" alt="Problematic university fair stand with generic slogans, blocked entrance, excessive giveaways and an aggressive data-capture queue." >}}
-
+{{< halves >}}
+{{< halfimg src="/images/articles/university-exhibition-stand-design-student-recruitment/university-exhibition-stand-design-student-recruitment-9.jpg" alt="Problematic university fair stand with generic slogans, blocked entrance, excessive giveaways and an aggressive data-capture queue." >}}
+{{< /halves >}}
 
 #### Attention is easy to misread when success is measured only by visitor count
 
@@ -213,9 +214,9 @@ There is also a quieter failure: looking expensive but unapproachable. A polishe
 
 ### From prospectus tables to connected roadshows
 
-
-{{< fullimg src="/images/articles/university-exhibition-stand-design-student-recruitment/university-exhibition-stand-design-student-recruitment-10.jpg" alt="Evolution of university recruitment stands from brochure tables to modular interactive roadshows with personalized digital follow-up." >}}
-
+{{< halves >}}
+{{< halfimg src="/images/articles/university-exhibition-stand-design-student-recruitment/university-exhibition-stand-design-student-recruitment-10.jpg" alt="Evolution of university recruitment stands from brochure tables to modular interactive roadshows with personalized digital follow-up." >}}
+{{< /halves >}}
 
 #### The near future will combine physical trust with better continuity
 
