@@ -1,0 +1,44 @@
+{{- $isWikiPage := and (eq .Section "wiki") .IsPage -}}
+{{- $breadcrumbs := slice
+  (dict "@type" "ListItem" "position" 1 "name" "Home" "item" .Site.BaseURL)
+  (dict "@type" "ListItem" "position" 2 "name" "Graphic Design Wiki" "item" ("/wiki/" | absURL))
+-}}
+{{- if .Params.wiki_category -}}
+  {{- $categoryTitle := .Params.wiki_category_title | default (humanize .Params.wiki_category) -}}
+  {{- $breadcrumbs = $breadcrumbs | append (dict "@type" "ListItem" "position" 3 "name" $categoryTitle "item" ((printf "/wiki/%s/" .Params.wiki_category) | absURL)) -}}
+  {{- if $isWikiPage -}}
+    {{- $breadcrumbs = $breadcrumbs | append (dict "@type" "ListItem" "position" 4 "name" .Title "item" .Permalink) -}}
+  {{- end -}}
+{{- else if ne .RelPermalink "/wiki/" -}}
+  {{- $breadcrumbs = $breadcrumbs | append (dict "@type" "ListItem" "position" 3 "name" .Title "item" .Permalink) -}}
+{{- end -}}
+{{- $pageType := cond $isWikiPage "Article" "CollectionPage" -}}
+{{- $pageNode := dict
+  "@type" $pageType
+  "@id" (printf "%s#webpage" .Permalink)
+  "url" .Permalink
+  "name" .Title
+  "headline" .Title
+  "description" (.Description | default .Site.Params.description)
+  "inLanguage" .Site.LanguageCode
+  "isPartOf" (dict "@id" (printf "%s#website" .Site.BaseURL))
+  "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
+-}}
+{{- if $isWikiPage -}}
+  {{- $pageNode = merge $pageNode (dict
+    "datePublished" (.Date.Format "2006-01-02")
+    "dateModified" (.Lastmod.Format "2006-01-02")
+    "articleSection" (.Params.wiki_category_title | default "Graphic Design")
+    "keywords" (.Params.seotags | default (slice))
+    "author" (dict "@type" "Organization" "name" "rausr" "url" .Site.BaseURL)
+    "publisher" (dict "@type" "Organization" "name" "rausr" "url" .Site.BaseURL)
+  ) -}}
+{{- end -}}
+{{- $graph := slice
+  (dict "@type" "WebSite" "@id" (printf "%s#website" .Site.BaseURL) "url" .Site.BaseURL "name" .Site.Title "inLanguage" .Site.LanguageCode)
+  (dict "@type" "BreadcrumbList" "@id" (printf "%s#breadcrumb" .Permalink) "itemListElement" $breadcrumbs)
+  $pageNode
+-}}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ with .Params.seotags }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>

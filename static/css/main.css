@@ -1550,6 +1550,10 @@ a:hover {
     background: linear-gradient(135deg, color(display-p3 0.055 0.604 0.447), color(display-p3 0.129 0.561 1.000));
 }
 
+.navbar-search__thumb--wiki {
+    background: linear-gradient(135deg, color(display-p3 0.408 0.282 1.000), color(display-p3 0.305 0.901 0.886));
+}
+
 .navbar-search__link {
     flex: 1;
     display: flex;
@@ -1598,6 +1602,10 @@ a:hover {
 
 .navbar-search__category--blog {
     color: color(display-p3 0.055 0.604 0.447);
+}
+
+.navbar-search__category--wiki {
+    color: color(display-p3 0.408 0.282 1.000);
 }
 
 .navbar-search__category:hover {

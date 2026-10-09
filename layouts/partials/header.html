@@ -7,6 +7,10 @@
         <title>{{ .Title }} | rausr</title>
 
         {{ partial "opengraph.html" . }}
+
+        {{ if eq .Section "wiki" }}
+        {{ partial "wiki-schema.html" . }}
+        {{ end }}
         
         {{ partial "favicon" . }}
         
@@ -372,7 +376,8 @@
 
           .rausr-menu__link::after,
           .rausr-menu__trigger--services::after,
-          .rausr-menu__trigger--works::after {
+          .rausr-menu__trigger--works::after,
+          .rausr-menu__trigger--wiki::after {
             content: "";
             position: absolute;
             left: 0;
@@ -392,12 +397,17 @@
           .rausr-menu__trigger--services:focus-visible::after,
           .rausr-menu__trigger--works:hover::after,
           .rausr-menu__trigger--works:focus-visible::after,
+          .rausr-menu__trigger--wiki:hover::after,
+          .rausr-menu__trigger--wiki:focus-visible::after,
           .rausr-menu__item--dropdown:hover .rausr-menu__trigger--services::after,
           .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--services::after,
           .rausr-menu__item--dropdown:hover .rausr-menu__trigger--works::after,
           .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--works::after,
+          .rausr-menu__item--dropdown:hover .rausr-menu__trigger--wiki::after,
+          .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--wiki::after,
           .rausr-menu__item.is-open .rausr-menu__trigger--services::after,
-          .rausr-menu__item.is-open .rausr-menu__trigger--works::after {
+          .rausr-menu__item.is-open .rausr-menu__trigger--works::after,
+          .rausr-menu__item.is-open .rausr-menu__trigger--wiki::after {
             transform: scaleX(1);
           }
 
@@ -407,12 +417,17 @@
           .rausr-menu__trigger--services:focus-visible,
           .rausr-menu__trigger--works:hover,
           .rausr-menu__trigger--works:focus-visible,
+          .rausr-menu__trigger--wiki:hover,
+          .rausr-menu__trigger--wiki:focus-visible,
           .rausr-menu__item--dropdown:hover .rausr-menu__trigger--services,
           .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--services,
           .rausr-menu__item--dropdown:hover .rausr-menu__trigger--works,
           .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--works,
+          .rausr-menu__item--dropdown:hover .rausr-menu__trigger--wiki,
+          .rausr-menu__item--dropdown:focus-within .rausr-menu__trigger--wiki,
           .rausr-menu__item.is-open .rausr-menu__trigger--services,
-          .rausr-menu__item.is-open .rausr-menu__trigger--works {
+          .rausr-menu__item.is-open .rausr-menu__trigger--works,
+          .rausr-menu__item.is-open .rausr-menu__trigger--wiki {
             color: #7355FF;
             text-decoration: none;
           }
@@ -514,6 +529,14 @@
             min-width: 190px;
           }
 
+          .rausr-menu__dropdown--contact {
+            min-width: 190px;
+          }
+
+          .rausr-menu__dropdown--wiki {
+            min-width: 270px;
+          }
+
           .rausr-menu__item.is-open .rausr-menu__dropdown {
             opacity: 1;
             pointer-events: auto;
@@ -586,8 +609,8 @@
             }
 
             .rausr-menu {
-              grid-template-columns: 90px 450px 1fr;
-              column-gap: 40px;
+              grid-template-columns: 82px minmax(320px, 380px) 1fr;
+              column-gap: 28px;
             }
 
             .rausr-menu__brand img {
@@ -595,7 +618,7 @@
             }
 
             .rausr-menu__search {
-              max-width: 450px;
+              max-width: 380px;
             }
 
             .rausr-menu__search-form {
@@ -629,7 +652,7 @@
             }
 
             .rausr-menu__list {
-              gap: 42px;
+              gap: 22px;
             }
 
             .rausr-menu__link,
@@ -848,6 +871,7 @@
     {{ $isServices := eq .Type "service" }}
     {{ $isAbout := or (eq $currentPath "/about/") (hasPrefix $currentPath "/about/") }}
     {{ $isArticles := or (hasPrefix $currentPath "/blog/") (hasPrefix $currentPath "/topics/") (hasPrefix $currentPath "/tags/") }}
+    {{ $isWiki := hasPrefix $currentPath "/wiki/" }}
     {{ $isContact := eq $currentPath "/contact/" }}
     {{ $latestArticles := first 5 (sort (where .Site.RegularPages "Section" "blog") "Date" "desc") }}
     {{ $searchPlaceholders := slice }}
@@ -864,6 +888,7 @@
         (dict "label" "UX & UI" "url" "/topics/ux-ui/")
         (dict "label" "Trends" "url" "/topics/trends/")
     }}
+    {{ $wikiCategories := first 4 .Site.Data.wiki_taxonomy.categories }}
 
     <header class="rausr-menu-wrap">
         <nav class="rausr-menu" data-rausr-menu>
@@ -951,8 +976,22 @@
                         </div>
                     </li>
 
-                    <li class="rausr-menu__item">
-                        <a href="/about/" class="rausr-menu__link{{ if $isAbout }} is-active{{ end }}">About</a>
+                    <li class="rausr-menu__item rausr-menu__item--dropdown{{ if $isWiki }} is-current{{ end }}" data-rausr-dropdown>
+                        <a
+                            href="{{ "/wiki/" | relURL }}"
+                            class="rausr-menu__trigger rausr-menu__trigger--wiki{{ if $isWiki }} is-active{{ end }}"
+                            data-rausr-trigger
+                            aria-expanded="false"
+                        >
+                            <span>Wiki</span>
+                            <span class="rausr-menu__chevron" aria-hidden="true">↓</span>
+                        </a>
+                        <div class="rausr-menu__dropdown rausr-menu__dropdown--wiki">
+                            <a href="/wiki/" class="rausr-menu__dropdown-link rausr-menu__dropdown-link--all{{ if eq $currentPath "/wiki/" }} is-active{{ end }}">Show Complete Wiki</a>
+                            {{ range $wikiCategories }}
+                            <a href="/wiki/{{ .slug }}/" class="rausr-menu__dropdown-link{{ if hasPrefix $currentPath (printf "/wiki/%s/" .slug) }} is-active{{ end }}">{{ .title }}</a>
+                            {{ end }}
+                        </div>
                     </li>
 
                     <li class="rausr-menu__item rausr-menu__item--dropdown rausr-menu__item--articles{{ if $isArticles }} is-current{{ end }}" data-rausr-dropdown>
@@ -972,8 +1011,20 @@
                         </div>
                     </li>
 
-                    <li class="rausr-menu__item rausr-menu__item--contact">
-                        <a href="/contact/" class="rausr-menu__contact{{ if $isContact }} is-active{{ end }}">Contact →</a>
+                    <li class="rausr-menu__item rausr-menu__item--dropdown rausr-menu__item--contact{{ if or $isContact $isAbout }} is-current{{ end }}" data-rausr-dropdown>
+                        <a
+                            href="{{ "/contact/" | relURL }}"
+                            class="rausr-menu__contact rausr-menu__trigger--contact{{ if or $isContact $isAbout }} is-active{{ end }}"
+                            data-rausr-trigger
+                            aria-expanded="false"
+                        >
+                            <span>Contact</span>
+                            <span class="rausr-menu__chevron" aria-hidden="true">↓</span>
+                        </a>
+                        <div class="rausr-menu__dropdown rausr-menu__dropdown--contact">
+                            <a href="/contact/" class="rausr-menu__dropdown-link rausr-menu__dropdown-link--all{{ if $isContact }} is-active{{ end }}">Contact Us</a>
+                            <a href="/about/" class="rausr-menu__dropdown-link{{ if $isAbout }} is-active{{ end }}">About Us</a>
+                        </div>
                     </li>
                 </ul>
             </div>

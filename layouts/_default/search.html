@@ -1,7 +1,7 @@
 {{ partial "header" . }}
 <main>
   <section class="header header-about header-search">
-    {{ $intro := default "Type a keyword to explore works and articles, then refine the results with filters." .Params.intro }}
+    {{ $intro := default "Type a keyword to explore works, articles, and the graphic design wiki, then refine the results with filters." .Params.intro }}
     <div class="header-content">
       <div class="h1container">
         <h1 id="search-title">Show Search</h1>
@@ -50,6 +50,14 @@
               <input type="radio" name="section" value="blog">
               <span class="tag-filter__body">
                 <div class="tag-filter__text">Articles</div>
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="tag-filter tag-filter--wiki">
+              <input type="radio" name="section" value="wiki">
+              <span class="tag-filter__body">
+                <div class="tag-filter__text">Wiki</div>
               </span>
             </label>
           </li>
@@ -212,11 +220,12 @@
       <div class="search-empty__message" role="status">
         <span class="search-empty__eyebrow">Nothing on the menu yet</span>
         <h2>We couldn’t find “${queryHtml}”</h2>
-        <p>Try another keyword, or browse everything we’ve cooked in our work and article archives.<br /><br /> If you expected to find something here, we’d be very happy if you <a href="/contact/">told our chef what went wrong</a> so we can improve the recipe.</p>
+        <p>Try another keyword, or browse everything we’ve cooked in our work, article, and wiki archives.<br /><br /> If you expected to find something here, we’d be very happy if you <a href="/contact/">told our chef what went wrong</a> so we can improve the recipe.</p>
       </div>
       <div class="home-cta-buttons search-empty__actions" aria-label="Explore other options">
         <a class="home-button search-empty__button--works" href="/works/">List All Works →</a>
         <a class="home-button search-empty__button--articles" href="/blog/">List All Articles →</a>
+        <a class="home-button search-empty__button--wiki" href="/wiki/">Open the Wiki →</a>
       </div>
     `;
     resultsEl.appendChild(empty);
@@ -261,7 +270,7 @@
       return;
     }
 
-    setDescription(`Exploring <span class="search-query">"${queryHtml}"</span> across works and articles. Use the filters to focus on what you need.`);
+    setDescription(`Exploring <span class="search-query">"${queryHtml}"</span> across works, articles, and wiki guides. Use the filters to focus on what you need.`);
     setMetaDescription(`Viewing ${results.length} result${results.length === 1 ? '' : 's'} for "${currentQuery}" across Rausr.`);
     renderPage(1);
   }
@@ -291,9 +300,10 @@
     pageSlice.forEach((entry) => {
       const item = entry.item || entry; // Fuse returns {item, score}; fallback if not searched yet
       const isWork = item.section === 'works';
-      const sectionLabel = isWork ? 'Work' : 'Article';
+      const isWiki = item.section === 'wiki';
+      const sectionLabel = isWork ? 'Work' : (isWiki ? 'Wiki' : 'Article');
       const card = document.createElement('div');
-      const cardVariant = isWork ? 'card1--works' : 'card1--blog';
+      const cardVariant = isWork ? 'card1--works' : (isWiki ? 'card1--wiki' : 'card1--blog');
       card.className = `card1 ${cardVariant}`;
       card.setAttribute('role', 'listitem');
 
@@ -313,9 +323,9 @@
       const thumbSource2x = item.image_thumb_2x || '';
       const thumbWebpSource = item.image_thumb_webp || '';
       const thumbWebpSource2x = item.image_thumb_webp_2x || '';
-      const authorRaw = !isWork ? (item.author || '') : '';
+      const authorRaw = !isWork && !isWiki ? (item.author || '') : '';
       const authorName = authorRaw ? htmlEscape(authorRaw) : '';
-      const authorPhotoRaw = !isWork ? (item.author_image || '') : '';
+      const authorPhotoRaw = !isWork && !isWiki ? (item.author_image || '') : '';
       const authorPhoto = authorPhotoRaw ? htmlEscape(authorPhotoRaw) : '';
       const hasImage = Boolean(thumbSource || thumbWebpSource || previewSource);
       const titleHtml = htmlEscape(item.title);
@@ -351,10 +361,13 @@
         `;
       }
 
+      const primaryTagHref = isWiki && item.wiki_category
+        ? `/wiki/${htmlEscape(item.wiki_category)}/`
+        : (tagSlug ? `/tags/${tagSlug}/` : '');
       const primaryTagMarkup = primaryTag
-        ? `<span class="card1-category">${tagSlug ? `<a href="/tags/${tagSlug}/">${safePrimaryTag}</a>` : safePrimaryTag}</span>`
+        ? `<span class="card1-category">${primaryTagHref ? `<a href="${primaryTagHref}">${safePrimaryTag}</a>` : safePrimaryTag}</span>`
         : '';
-      const ctaText = isWork ? 'SHOW WORK →' : 'READ ARTICLE →';
+      const ctaText = isWork ? 'SHOW WORK →' : (isWiki ? 'READ GUIDE →' : 'READ ARTICLE →');
       let authorPhotoMarkup = '';
       if (authorPhoto) {
         const img = `<img class="card20-meta__photo" src="${authorPhoto}" alt="Portrait of ${authorName || 'Author'}" loading="lazy" decoding="async">`;
@@ -516,6 +529,7 @@
           { name: 'tags', weight: 0.15 },
           { name: 'seotags', weight: 0.1 },
           { name: 'author', weight: 0.2 },
+          { name: 'wiki_category', weight: 0.2 },
           { name: 'article_number', weight: 0.55 }
         ],
         threshold: 0.35,
@@ -618,6 +632,13 @@
   --filter-color: color(display-p3 0.055 0.604 0.447);
   --filter-border-active: color(display-p3 0.055 0.604 0.447);
   --filter-bg-active: color(display-p3 0.055 0.604 0.447 / 0.20);
+}
+
+.tag-filter--wiki .tag-filter__body {
+  --filter-border: color(display-p3 0.408 0.282 1.000);
+  --filter-color: color(display-p3 0.408 0.282 1.000);
+  --filter-border-active: color(display-p3 0.408 0.282 1.000);
+  --filter-bg-active: color(display-p3 0.408 0.282 1.000 / 0.16);
 }
 
 .tag-filter--all .tag-filter__body {
@@ -737,6 +758,10 @@
   background-color: color(display-p3 0.055 0.604 0.447);
 }
 
+.search-empty__button--wiki {
+  background-color: color(display-p3 0.408 0.282 1.000);
+}
+
 .card1--works .card1-bottom {
   background: color(display-p3 0.129 0.561 1.000);
 }
@@ -745,12 +770,18 @@
   background: color(display-p3 0.055 0.604 0.447);
 }
 
+.card1--wiki .card1-bottom {
+  background: color(display-p3 0.408 0.282 1.000);
+}
+
 .card1--works .card1-cta,
-.card1--blog .card1-cta {
+.card1--blog .card1-cta,
+.card1--wiki .card1-cta {
   color: color(display-p3 0.964 1.000 0.247) !important;
 }
 
 .card1--blog .card1-cta:hover,
+.card1--wiki .card1-cta:hover,
 .card1--works .card1-cta:hover {
   color: #fff !important;
 }

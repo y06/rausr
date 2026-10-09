@@ -1,0 +1,154 @@
+{{ partial "header" . }}
+
+{{ $taxonomy := .Site.Data.wiki_taxonomy }}
+{{ $isRoot := eq .RelPermalink "/wiki/" }}
+{{ $topicTotal := 0 }}
+{{ range $taxonomy.categories }}{{ $topicTotal = add $topicTotal (len .topics) }}{{ end }}
+
+<main class="wiki-main">
+  <section class="header wiki-hero{{ if not $isRoot }} wiki-hero--category{{ end }}">
+    <div class="header-content wiki-hero__copy">
+      <p class="wiki-eyebrow">{{ if $isRoot }}Graphic design knowledge base{{ else }}Graphic Design Wiki / Domain{{ end }}</p>
+      <h1>{{ .Title }}</h1>
+      <div class="wiki-hero__intro">{{ .Content }}</div>
+      {{ if $isRoot }}
+        <div class="wiki-stats" aria-label="Wiki coverage">
+          <span><strong>{{ len $taxonomy.categories }}</strong> domains</span>
+          <span><strong>{{ $topicTotal }}</strong> mapped topics</span>
+          <span><strong>{{ len (where .Site.RegularPages "Section" "wiki") }}</strong> published guides</span>
+        </div>
+      {{ else }}
+        <a class="header-cta-button wiki-header-link" href="#published-guides">Read published guides ↓</a>
+      {{ end }}
+    </div>
+    <div class="wiki-hero__index" aria-hidden="true">
+      <span>W</span><span>I</span><span>K</span><span>I</span>
+    </div>
+  </section>
+
+  <div class="container-tag-list wiki-breadcrumbs" aria-label="Breadcrumb">
+    <button class="tag-scroll left">←</button>
+    <div class="tag-list-wrapper">
+      <ul class="tag-list">
+        {{ if $isRoot }}
+          <li><a href="/" class="tag-link">← Home</a></li>
+          <li><span class="tag-link active" aria-current="page">Wiki</span></li>
+        {{ else }}
+          <li><a href="/wiki/" class="tag-link">← Wiki</a></li>
+          <li><span class="tag-link active" aria-current="page">{{ .Title }}</span></li>
+        {{ end }}
+      </ul>
+    </div>
+    <button class="tag-scroll right">→</button>
+  </div>
+
+  <div class="wiki-shell">
+
+  {{ if $isRoot }}
+    <section class="wiki-foundations" aria-labelledby="wiki-foundations-title">
+      <div>
+        <p class="wiki-eyebrow">Shared across every branch</p>
+        <h2 id="wiki-foundations-title">Foundations and methods</h2>
+      </div>
+      <div class="wiki-capsules">
+        {{ range $taxonomy.foundations }}
+          <a class="wiki-capsule wiki-capsule--foundation" href="/search/?q={{ . | urlquery }}">{{ . }}</a>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="wiki-tree" aria-labelledby="wiki-tree-title">
+      <div class="wiki-section-heading">
+        <p class="wiki-eyebrow">Complete category tree</p>
+        <h2 id="wiki-tree-title">Explore graphic design by domain</h2>
+        <p>Numbered branches establish the hierarchy. Filled topic capsules already have a reference guide; outlined topics mark the next parts of the wiki to be expanded.</p>
+      </div>
+
+      <div class="wiki-tree__grid">
+        {{ range $taxonomy.categories }}
+          {{ $category := . }}
+          <article class="wiki-domain wiki-domain--{{ .accent }}">
+            <a class="wiki-domain__heading" href="/wiki/{{ .slug }}/">
+              <span class="wiki-domain__number">{{ .number }}</span>
+              <span>
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+              </span>
+              <span class="wiki-domain__arrow" aria-hidden="true">→</span>
+            </a>
+            <div class="wiki-capsules wiki-capsules--topics">
+              {{ range .topics }}
+                {{ $topicPath := printf "/wiki/%s/%s" $category.slug (. | urlize) }}
+                {{ with site.GetPage $topicPath }}
+                  <a class="wiki-capsule is-published" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ else }}
+                  <span class="wiki-capsule" title="Reference guide planned">{{ . }}</span>
+                {{ end }}
+              {{ end }}
+            </div>
+            <a class="wiki-domain__footer" href="/wiki/{{ .slug }}/">Open {{ .title }} <span aria-hidden="true">→</span></a>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ else }}
+    {{ $categorySlug := .Params.wiki_category }}
+    {{ $currentCategory := false }}
+    {{ range $taxonomy.categories }}
+      {{ if eq .slug $categorySlug }}{{ $currentCategory = . }}{{ end }}
+    {{ end }}
+
+    {{ with $currentCategory }}
+      <section class="wiki-category-map" aria-labelledby="category-map-title">
+        <div class="wiki-section-heading">
+          <p class="wiki-eyebrow">{{ .number }} / Category map</p>
+          <h2 id="category-map-title">Topics in {{ .title }}</h2>
+        </div>
+        <div class="wiki-capsules wiki-capsules--large">
+          {{ $category := . }}
+          {{ range .topics }}
+            {{ $topicPath := printf "/wiki/%s/%s" $category.slug (. | urlize) }}
+            {{ with site.GetPage $topicPath }}
+              <a class="wiki-capsule is-published" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ else }}
+              <span class="wiki-capsule">{{ . }}</span>
+            {{ end }}
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    {{ $guides := sort .RegularPages "Params.order" }}
+    <section class="wiki-guides" id="published-guides" aria-labelledby="published-guides-title">
+      <div class="wiki-section-heading wiki-section-heading--row">
+        <div>
+          <p class="wiki-eyebrow">Published now</p>
+          <h2 id="published-guides-title">Reference guides</h2>
+        </div>
+        <span class="wiki-count">{{ len $guides }} {{ cond (eq (len $guides) 1) "guide" "guides" }}</span>
+      </div>
+      <div class="wiki-guide-grid">
+        {{ range $guides }}
+          <article class="wiki-guide-card">
+            <p class="wiki-guide-card__category">{{ .Params.wiki_category_title }}</p>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>{{ .Description }}</p>
+            <a class="wiki-guide-card__link" href="{{ .RelPermalink }}">Read guide <span aria-hidden="true">→</span></a>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
+    <nav class="wiki-domain-nav" aria-label="Other wiki domains">
+      <p class="wiki-eyebrow">Continue through the wiki</p>
+      <div class="wiki-capsules">
+        {{ range $taxonomy.categories }}
+          <a class="wiki-capsule{{ if eq .slug $categorySlug }} is-current{{ end }}" href="/wiki/{{ .slug }}/"{{ if eq .slug $categorySlug }} aria-current="page"{{ end }}>{{ .number }} {{ .title }}</a>
+        {{ end }}
+      </div>
+    </nav>
+  {{ end }}
+  </div>
+</main>
+
+{{ partial "footer" . }}

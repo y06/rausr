@@ -1,0 +1,184 @@
+title: Graphic Design
+description: A practical map of graphic design domains, shared methods, and production contexts.
+categories:
+  - title: Identity and Branding
+    slug: identity-and-branding
+    number: "01"
+    description: Systems that give organisations, products, places, and initiatives a recognisable character.
+    accent: violet
+    topics:
+      - Brand strategy and positioning
+      - Naming and verbal identity
+      - Logo and symbol design
+      - Visual identity systems
+      - Brand architecture
+      - Colour and type systems
+      - Brand guidelines
+      - Art direction
+      - Rebranding and brand evolution
+      - Employer and internal branding
+      - Place, city, and destination branding
+      - Personal branding
+
+  - title: Editorial and Publication
+    slug: editorial-and-publication
+    number: "02"
+    description: Design that structures extended reading, browsing, and sequential content.
+    accent: green
+    topics:
+      - Books and book series
+      - Magazines and newspapers
+      - Reports and annual reports
+      - Catalogues
+      - Brochures and leaflets
+      - Zines and independent publishing
+      - Editorial systems
+      - Covers and jackets
+      - Information hierarchy
+      - Long-form typography
+      - Digital publications and PDFs
+
+  - title: Marketing and Advertising
+    slug: marketing-and-advertising
+    number: "03"
+    description: Communication designed to attract attention, build preference, or motivate action.
+    accent: yellow
+    topics:
+      - Campaign concepts
+      - Advertising systems
+      - Posters and outdoor advertising
+      - Print advertisements
+      - Social media campaigns
+      - Email and content marketing
+      - Direct mail
+      - Point-of-sale communication
+      - Promotional materials
+      - Event campaigns
+      - Recruitment and employer campaigns
+      - Fundraising and public-awareness campaigns
+
+  - title: Packaging and Product Graphics
+    slug: packaging-and-product-graphics
+    number: "04"
+    description: Graphics for products, containers, labels, retail ranges, and physical product information.
+    accent: pink
+    topics:
+      - Consumer packaging
+      - Food and beverage packaging
+      - Beauty and cosmetics packaging
+      - Pharmaceutical and healthcare packaging
+      - Industrial packaging
+      - Labels and sleeves
+      - Structural packaging graphics
+      - Product naming and information
+      - Packaging families and range systems
+      - Retail display graphics
+      - Merchandise and promotional objects
+      - Unboxing experience
+
+  - title: Environmental and Spatial Design
+    slug: environmental-and-spatial-design
+    number: "05"
+    description: Graphic systems experienced across physical places rather than on a single page or screen.
+    accent: cyan
+    topics:
+      - Exhibition stands and trade shows
+      - Museums and cultural exhibitions
+      - Event and conference graphics
+      - Retail environments
+      - Interior branding
+      - Signage systems
+      - Wayfinding
+      - Architectural graphics
+      - Public information systems
+      - Transit and airport graphics
+      - Temporary installations
+      - Environmental campaigns
+
+  - title: Digital and Interface Design
+    slug: digital-and-interface-design
+    number: "06"
+    description: Design that organises information, interaction, identity, and feedback in digital products.
+    accent: blue
+    topics:
+      - Websites
+      - Landing pages
+      - E-commerce
+      - Mobile applications
+      - SaaS and digital products
+      - User interface design
+      - User experience design
+      - Interaction design
+      - Design systems
+      - Dashboards
+      - Accessibility and inclusive interface design
+      - Digital content systems
+      - Conversational and voice interfaces
+
+  - title: Motion and Time-based Design
+    slug: motion-and-time-based-design
+    number: "07"
+    description: Design that depends on movement, sound, duration, sequencing, or animation.
+    accent: orange
+    topics:
+      - Motion identity
+      - Film titles and credits
+      - Broadcast graphics
+      - Kinetic typography
+      - Explainer animation
+      - Social video graphics
+      - Product and interface animation
+      - Character animation
+      - 3D motion graphics
+      - Live visuals and stage content
+      - Film and television graphics
+      - Sound-responsive graphics
+
+  - title: Information and Data Design
+    slug: information-and-data-design
+    number: "08"
+    description: Visual systems that make complex, abstract, technical, or quantitative information usable.
+    accent: mint
+    topics:
+      - Infographics
+      - Data visualisation
+      - Charts and graphs
+      - Diagrams
+      - Maps and cartography
+      - Timelines
+      - Process visualisation
+      - Instructional graphics
+      - Technical illustration
+      - Scientific communication
+      - Emergency and public-safety information
+      - Educational graphics
+
+  - title: Illustration and Image-making
+    slug: illustration-and-image-making
+    number: "09"
+    description: Visual authorship based on created, directed, manipulated, or systematised imagery.
+    accent: lilac
+    topics:
+      - Editorial illustration
+      - Advertising illustration
+      - Conceptual illustration
+      - Character design
+      - Iconography
+      - Pictograms
+      - Pattern and surface graphics
+      - Art direction for photography
+      - Image retouching and compositing
+      - 3D imagery
+      - Generative imagery
+
+foundations:
+  - Typography
+  - Colour
+  - Layout and composition
+  - Grids
+  - Visual hierarchy
+  - Accessibility
+  - Research
+  - Concept development
+  - Art direction
+  - Production and prepress

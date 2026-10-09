@@ -20,6 +20,12 @@
     <link rel="stylesheet" href="{{ $mainCssHref }}">
 {{ end }}
 
+{{ if eq .Section "wiki" }}
+    {{ $wikiCssPath := "css/wiki.css" }}
+    {{ $wikiCssSource := readFile (printf "static/%s" $wikiCssPath) }}
+    <link rel="stylesheet" href="{{ printf "%s?v=%s" ($wikiCssPath | relURL) ($wikiCssSource | md5) }}">
+{{ end }}
+
 <!-- critical fonts -->
 <link rel="preload" href="{{ "fonts/Satoshi-Variable.ttf" | absURL }}" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="{{ "fonts/Satoshi-VariableItalic.ttf" | absURL }}" as="font" type="font/ttf" crossorigin>

@@ -497,7 +497,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     link.className = "navbar-search__link";
                     link.href = item.url;
 
-                    const sectionClass = item.section === "works" ? "works" : "blog";
+                    const sectionClass = item.section === "works" ? "works" : (item.section === "wiki" ? "wiki" : "blog");
                     const thumb = document.createElement("span");
                     thumb.className = "navbar-search__thumb";
 
@@ -536,7 +536,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         thumb.appendChild(picture);
                     } else {
                         thumb.classList.add("navbar-search__thumb--placeholder", "navbar-search__thumb--" + sectionClass);
-                        thumb.textContent = sectionClass === "works" ? "W" : "A";
+                        thumb.textContent = sectionClass === "works" ? "W" : (sectionClass === "wiki" ? "K" : "A");
                     }
 
                     const meta = document.createElement("span");
@@ -548,8 +548,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     const category = document.createElement("span");
                     category.className = "navbar-search__category navbar-search__category--" + sectionClass;
-                    category.textContent = "in " + (item.section === "blog" ? "Articles" : "Works");
-                    const categoryHref = item.section === "blog" ? "/blog/" : "/works/";
+                    const categoryLabel = item.section === "blog" ? "Articles" : (item.section === "wiki" ? "Wiki" : "Works");
+                    category.textContent = "in " + categoryLabel;
+                    const categoryHref = item.section === "blog" ? "/blog/" : (item.section === "wiki" ? "/wiki/" : "/works/");
                     category.tabIndex = 0;
                     category.setAttribute("role", "link");
                     const navigateToCategory = (event) => {

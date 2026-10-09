@@ -1,4 +1,4 @@
-{{- $pages := where .Site.RegularPages "Section" "in" (slice "blog" "works") -}}
+{{- $pages := where .Site.RegularPages "Section" "in" (slice "blog" "works" "wiki") -}}
 {{- $blogAsc := sort (where .Site.RegularPages "Section" "blog") "Date" "asc" -}}
 {{- $articleNumberByURL := dict -}}
 {{- range $i, $pg := $blogAsc -}}
@@ -82,6 +82,9 @@
   {{- with .Params.tags -}}
     {{- $scratch.Add "tags" . -}}
   {{- end -}}
+  {{- with .Params.wiki_category -}}
+    {{- $scratch.Add "tags" (slice .) -}}
+  {{- end -}}
   {{- with $seoTags -}}
     {{- $scratch.Add "tags" . -}}
   {{- end -}}
@@ -91,7 +94,8 @@
   {{- $allTags := $scratch.Get "tags" | uniq -}}
   {{- $tags := $allTags | jsonify -}}
   {{- $seoTagsJSON := $seoTags | jsonify -}}
-  {{- printf "%s{\"title\":%s,\"url\":%q,\"section\":%q,\"date\":%q,\"article_number\":%d,\"description\":%s,\"tags\":%s,\"seotags\":%s,\"author\":%s,\"author_image\":%s,\"image\":%s,\"image_thumb\":%s,\"image_thumb_2x\":%s,\"image_thumb_webp\":%s,\"image_thumb_webp_2x\":%s}" $comma $title .RelPermalink .Section (.Date.Format "2006-01-02") $articleNumber $desc $tags $seoTagsJSON $authorJSON $authorPhotoJSON $img $thumbJSON $thumb2JSON $thumbWebpJSON $thumbWebp2JSON -}}
+  {{- $wikiCategory := default "" .Params.wiki_category | jsonify -}}
+  {{- printf "%s{\"title\":%s,\"url\":%q,\"section\":%q,\"date\":%q,\"article_number\":%d,\"description\":%s,\"tags\":%s,\"seotags\":%s,\"wiki_category\":%s,\"author\":%s,\"author_image\":%s,\"image\":%s,\"image_thumb\":%s,\"image_thumb_2x\":%s,\"image_thumb_webp\":%s,\"image_thumb_webp_2x\":%s}" $comma $title .RelPermalink .Section (.Date.Format "2006-01-02") $articleNumber $desc $tags $seoTagsJSON $wikiCategory $authorJSON $authorPhotoJSON $img $thumbJSON $thumb2JSON $thumbWebpJSON $thumbWebp2JSON -}}
   {{- $comma = ",\n" -}}
 {{- end -}}
 ]

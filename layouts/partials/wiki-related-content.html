@@ -1,0 +1,21 @@
+{{ with .Params.related_content }}
+  {{ $resolved := slice }}
+  {{ range . }}
+    {{ with site.GetPage .path }}{{ $resolved = $resolved | append . }}{{ end }}
+  {{ end }}
+  {{ if gt (len $resolved) 0 }}
+    <section class="wiki-related" aria-labelledby="wiki-related-title">
+      <p class="wiki-eyebrow">From the rausr archive</p>
+      <h2 id="wiki-related-title">Related articles and case studies</h2>
+      <div class="wiki-related__grid">
+        {{ range $resolved }}
+          <article>
+            <span>{{ if eq .Section "blog" }}Article{{ else }}Case study{{ end }}</span>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <a href="{{ .RelPermalink }}">{{ if eq .Section "blog" }}Read article{{ else }}View work{{ end }} →</a>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,118 @@
+{{ partial "header" . }}
+
+{{ $taxonomy := .Site.Data.wiki_taxonomy }}
+{{ $categorySlug := .Params.wiki_category }}
+{{ $categoryTitle := .Params.wiki_category_title | default (humanize $categorySlug) }}
+{{ $currentCategory := false }}
+{{ range $taxonomy.categories }}
+  {{ if eq .slug $categorySlug }}{{ $currentCategory = . }}{{ end }}
+{{ end }}
+{{ $siblings := sort (where .Site.RegularPages "Params.wiki_category" $categorySlug) "Params.order" }}
+{{ $currentIndex := 0 }}
+{{ range $i, $page := $siblings }}
+  {{ if eq $page.RelPermalink $.RelPermalink }}{{ $currentIndex = $i }}{{ end }}
+{{ end }}
+
+<main class="wiki-main">
+  <section class="header wiki-article-hero">
+    <div class="header-content wiki-hero__copy">
+      <p class="wiki-eyebrow">{{ $categoryTitle }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="wiki-article-hero__description">{{ .Description }}</p>
+      <div class="wiki-article-meta">
+        <span>Reference guide</span>
+        <span>Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2 January 2006" }}</time></span>
+      </div>
+      <a class="header-cta-button wiki-header-link" href="/wiki/{{ $categorySlug }}/">← Back to {{ $categoryTitle }}</a>
+    </div>
+    <div class="wiki-hero__index" aria-hidden="true">
+      <span>W</span><span>I</span><span>K</span><span>I</span>
+    </div>
+  </section>
+
+  <div class="container-tag-list wiki-breadcrumbs" aria-label="Breadcrumb">
+    <button class="tag-scroll left">←</button>
+    <div class="tag-list-wrapper">
+      <ul class="tag-list">
+        <li><a href="/wiki/" class="tag-link">← Wiki</a></li>
+        <li><a href="/wiki/{{ $categorySlug }}/" class="tag-link">← {{ $categoryTitle }}</a></li>
+        <li><span class="tag-link active" aria-current="page">{{ .Title }}</span></li>
+      </ul>
+    </div>
+    <button class="tag-scroll right">→</button>
+  </div>
+
+  <div class="wiki-shell wiki-shell--article">
+
+  <div class="wiki-article-layout">
+    <aside class="wiki-article-sidebar" aria-label="On this page">
+      <div class="wiki-article-sidebar__inner">
+        <p class="wiki-sidebar-title">On this page</p>
+        {{ .TableOfContents }}
+        <a class="wiki-sidebar-back" href="/wiki/{{ $categorySlug }}/">← Category overview</a>
+      </div>
+    </aside>
+
+    <article class="wiki-article">
+      {{ with .Params.summary }}
+        <section class="wiki-answer" aria-labelledby="wiki-answer-title">
+          <p class="wiki-eyebrow" id="wiki-answer-title">In brief</p>
+          <p>{{ . }}</p>
+        </section>
+      {{ end }}
+
+      <div class="wiki-prose">
+        {{ .Content }}
+      </div>
+
+      {{ with .Params.sources }}
+        <section class="wiki-sources" aria-labelledby="wiki-sources-title">
+          <h2 id="wiki-sources-title">Reference</h2>
+          <ul>
+            {{ range . }}
+              <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a></li>
+            {{ end }}
+          </ul>
+        </section>
+      {{ end }}
+
+      {{ partial "wiki-related-content.html" . }}
+
+      {{ with $currentCategory }}
+        <section class="wiki-sisters" aria-labelledby="wiki-sisters-title">
+          <p class="wiki-eyebrow">Sister pages</p>
+          <h2 id="wiki-sisters-title">Explore {{ $categoryTitle }}</h2>
+          <div class="wiki-capsules">
+            {{ $category := . }}
+            {{ range .topics }}
+              {{ $topicPath := printf "/wiki/%s/%s" $category.slug (. | urlize) }}
+              {{ with site.GetPage $topicPath }}
+                <a class="wiki-capsule{{ if eq .RelPermalink $.RelPermalink }} is-current{{ else }} is-published{{ end }}" href="{{ .RelPermalink }}"{{ if eq .RelPermalink $.RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a>
+              {{ else }}
+                <a class="wiki-capsule" href="/search/?q={{ . | urlquery }}" title="Search the rausr archive for this topic">{{ . }}</a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
+    </article>
+  </div>
+
+  <nav class="wiki-article-pagination" aria-label="Wiki page navigation">
+    {{ if gt $currentIndex 0 }}
+      {{ $previous := index $siblings (sub $currentIndex 1) }}
+      <a href="{{ $previous.RelPermalink }}"><span>← Previous in category</span><strong>{{ $previous.Title }}</strong></a>
+    {{ else }}
+      <a href="/wiki/{{ $categorySlug }}/"><span>← Category</span><strong>{{ $categoryTitle }}</strong></a>
+    {{ end }}
+    {{ if lt (add $currentIndex 1) (len $siblings) }}
+      {{ $next := index $siblings (add $currentIndex 1) }}
+      <a class="is-next" href="{{ $next.RelPermalink }}"><span>Next in category →</span><strong>{{ $next.Title }}</strong></a>
+    {{ else }}
+      <a class="is-next" href="/wiki/"><span>Complete index →</span><strong>Graphic Design Wiki</strong></a>
+    {{ end }}
+  </nav>
+  </div>
+</main>
+
+{{ partial "footer" . }}

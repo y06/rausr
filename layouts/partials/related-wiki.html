@@ -1,0 +1,19 @@
+{{ $currentURL := .RelPermalink }}
+{{ $matches := slice }}
+{{ range where .Site.RegularPages "Section" "wiki" }}
+  {{ $wikiPage := . }}
+  {{ range (.Params.related_content | default (slice)) }}
+    {{ if eq .path $currentURL }}{{ $matches = $matches | append $wikiPage }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if gt (len $matches) 0 }}
+  <section class="related-wiki">
+    <div>
+      <span>Graphic Design Wiki</span>
+      <strong>Continue with the reference guide</strong>
+    </div>
+    <nav aria-label="Related wiki pages">
+      {{ range $matches }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+    </nav>
+  </section>
+{{ end }}
