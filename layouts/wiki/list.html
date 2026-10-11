@@ -21,8 +21,8 @@
         <a class="header-cta-button wiki-header-link" href="#published-guides">Read published guides ↓</a>
       {{ end }}
     </div>
-    <div class="wiki-hero__index" aria-hidden="true">
-      <span>W</span><span>I</span><span>K</span><span>I</span>
+    <div class="header-illustration wiki-hero__illustration">
+      <img src="{{ "svg/header/header-wiki.svg" | relURL }}" alt="Graphic Design Wiki illustration">
     </div>
   </section>
 
@@ -150,5 +150,7 @@
   {{ end }}
   </div>
 </main>
+
+{{ partial "featured-content.html" . }}
 
 {{ partial "footer" . }}

@@ -11,4 +11,4 @@ seotags:
   - visual communication guide
 ---
 
-Graphic design is easier to understand when it is organised by the kind of communication or experience being designed. Explore the complete map below, then move between connected topics without losing your place in the hierarchy.
+Explore graphic design through the different kinds of communication and experiences it shapes. Use the map below to discover each domain, understand the wider structure, and move easily between connected topics.

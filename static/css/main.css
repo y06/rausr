@@ -1551,7 +1551,9 @@ a:hover {
 }
 
 .navbar-search__thumb--wiki {
-    background: linear-gradient(135deg, color(display-p3 0.408 0.282 1.000), color(display-p3 0.305 0.901 0.886));
+    background: #bff7c9;
+    background: color(display-p3 0.794 0.9624 0.8024);
+    color: color(display-p3 0.408 0.282 1.000);
 }
 
 .navbar-search__link {
@@ -1605,6 +1607,7 @@ a:hover {
 }
 
 .navbar-search__category--wiki {
+    color: #6848ff;
     color: color(display-p3 0.408 0.282 1.000);
 }
 
