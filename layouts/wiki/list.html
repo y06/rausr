@@ -102,10 +102,10 @@
     {{ end }}
 
     {{ with $currentCategory }}
-      <section class="wiki-category-map" aria-labelledby="category-map-title">
+      <section class="wiki-category-map wiki-domain--{{ .accent }}" aria-labelledby="category-map-title">
         <div class="wiki-section-heading">
           <p class="wiki-eyebrow">{{ .number }} / Category map</p>
-          <h2 id="category-map-title">Topics in {{ .title }}</h2>
+          <h2 id="category-map-title">Explore topics in {{ .title }}</h2>
         </div>
         <div class="wiki-capsules wiki-capsules--large">
           {{ $category := . }}
@@ -122,7 +122,7 @@
     {{ end }}
 
     {{ $guides := sort .RegularPages "Params.order" }}
-    <section class="wiki-guides" id="published-guides" aria-labelledby="published-guides-title">
+    <section class="wiki-guides{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" id="published-guides" aria-labelledby="published-guides-title">
       <div class="wiki-section-heading wiki-section-heading--row">
         <div>
           <p class="wiki-eyebrow">Published now</p>
@@ -141,19 +141,27 @@
         {{ end }}
       </div>
     </section>
+  </div>
 
-    <nav class="wiki-domain-nav" aria-label="Other wiki domains">
-      <p class="wiki-eyebrow">Continue through the wiki</p>
+  <nav class="wiki-domain-nav{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" aria-label="Other wiki domains">
+    <div class="wiki-domain-nav__inner">
+      <p class="wiki-eyebrow">Main knowledge base</p>
+      <h2 class="wiki-domain-nav__title">Continue through the Wiki</h2>
       <div class="wiki-capsules">
         {{ range $taxonomy.categories }}
-          <a class="wiki-capsule{{ if eq .slug $categorySlug }} is-current{{ end }}" href="/wiki/{{ .slug }}/"{{ if eq .slug $categorySlug }} aria-current="page"{{ end }}>{{ .number }} {{ .title }}</a>
+          <a class="wiki-capsule wiki-capsule-domain wiki-domain--{{ .accent }}{{ if eq .slug $categorySlug }} is-current{{ end }}" href="/wiki/{{ .slug }}/"{{ if eq .slug $categorySlug }} aria-current="page"{{ end }}>
+            {{ .number }} {{ .title }}
+            {{ if eq .slug $categorySlug }}<span class="wiki-capsule-domain__tooltip" aria-hidden="true">Current topic</span>{{ end }}
+          </a>
         {{ end }}
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
   {{ end }}
 </main>
 
 {{ partial "featured-content.html" . }}
+
+{{ partial "cta-contact" . }}
 
 {{ partial "footer" . }}
