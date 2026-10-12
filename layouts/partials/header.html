@@ -530,7 +530,10 @@
           }
 
           .rausr-menu__dropdown--contact {
+            right: 0;
+            left: auto;
             min-width: 190px;
+            transform: translateY(6px);
           }
 
           .rausr-menu__dropdown--wiki {
@@ -541,6 +544,10 @@
             opacity: 1;
             pointer-events: auto;
             transform: translateX(-50%) translateY(0);
+          }
+
+          .rausr-menu__item.is-open .rausr-menu__dropdown--contact {
+            transform: translateY(0);
           }
 
           @media (min-width: 992px) {
@@ -565,6 +572,11 @@
               opacity: 1;
               pointer-events: auto;
               transform: translateX(-50%) translateY(0);
+            }
+
+            .rausr-menu__item--dropdown:hover .rausr-menu__dropdown--contact,
+            .rausr-menu__item--dropdown:focus-within .rausr-menu__dropdown--contact {
+              transform: translateY(0);
             }
 
             .rausr-menu__item--dropdown:hover .rausr-menu__chevron,
