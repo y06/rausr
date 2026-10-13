@@ -61,9 +61,7 @@ Touch succeeded when designers stopped treating the finger as an inaccurate mous
 
 ### The cursor taught computers to be precise
 
-{{< halves >}}
-{{< halfimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-2.jpg" alt="Evolution from a mouse cursor and desktop windows to stylus input and direct finger interaction on a touchscreen." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-2.jpg" alt="Evolution from a mouse cursor and desktop windows to stylus input and direct finger interaction on a touchscreen." >}}
 
 #### Mouse interfaces were powerful because the pointer was separate from the hand
 
@@ -77,9 +75,7 @@ Direct finger input required a more radical question: what if the interface were
 
 ### The first touchscreen arrived decades before the iPhone
 
-{{< halves >}}
-{{< halfimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-3.jpg" alt="Early touchscreen history with E A Johnson's capacitive display, the PLATO IV terminal and the HP-150 touchscreen computer." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-3.jpg" alt="Early touchscreen history with E A Johnson's capacitive display, the PLATO IV terminal and the HP-150 touchscreen computer." >}}
 
 #### Research, education and industrial systems solved touch before consumer products did
 
@@ -102,9 +98,7 @@ The answer to "what was first?" therefore depends on the category. Johnson produ
 
 ### The stylus era was necessary, not a failed detour
 
-{{< halves >}}
-{{< halfimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-4.jpg" alt="Stylus interface era represented by the GRiDPad, IBM Simon, Palm handheld, Windows Tablet PC and Nintendo DS." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-4.jpg" alt="Stylus interface era represented by the GRiDPad, IBM Simon, Palm handheld, Windows Tablet PC and Nintendo DS." >}}
 
 #### Pens made small screens usable before finger-sized software was practical
 
@@ -122,9 +116,7 @@ The Nintendo DS offered a smarter compromise in 2004. It kept buttons for fast g
 
 ### Apple did not arrive first, but it changed the design target
 
-{{< halves >}}
-{{< halfimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-5.jpg" alt="The LG Prada and original Apple iPhone compared as early capacitive touchscreen phones with different interface approaches." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-5.jpg" alt="The LG Prada and original Apple iPhone compared as early capacitive touchscreen phones with different interface approaches." >}}
 
 #### The iPhone was designed around fingers instead of merely accepting them
 
@@ -146,9 +138,7 @@ This consistency made the first iPhone feel simpler than many devices with fewer
 
 ### Why the iPhone succeeded when earlier touch devices did not
 
-{{< halves >}}
-{{< halfimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-6.jpg" alt="Original iPhone interface showing large targets, kinetic scrolling, pinch zoom, software keyboard and direct manipulation." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-6.jpg" alt="Original iPhone interface showing large targets, kinetic scrolling, pinch zoom, software keyboard and direct manipulation." >}}
 
 #### Timing mattered as much as the idea
 
@@ -166,9 +156,7 @@ The first iPhone still had blind spots. It launched without native third-party a
 
 ### Touch created a new visual grammar
 
-{{< halves >}}
-{{< halfimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-7.jpg" alt="Touch UI design principles showing large tap targets, direct manipulation, gesture feedback, thumb reach and the absence of hover." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-7.jpg" alt="Touch UI design principles showing large tap targets, direct manipulation, gesture feedback, thumb reach and the absence of hover." >}}
 
 #### Designers had to replace cursor assumptions with visible behavior
 
@@ -189,9 +177,7 @@ Early skeuomorphism helped communicate these rules. Buttons looked pressable, sw
 
 ### Touch solved old problems and created new ones
 
-{{< halves >}}
-{{< halfimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-8.jpg" alt="Touchscreen usability problems including hidden gestures, accidental taps, inaccessible kiosks, thumb reach and on-screen keyboard limitations." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-8.jpg" alt="Touchscreen usability problems including hidden gestures, accidental taps, inaccessible kiosks, thumb reach and on-screen keyboard limitations." >}}
 
 #### Direct manipulation is intuitive only when the possible action is understandable
 
@@ -211,9 +197,7 @@ The strongest modern systems are therefore hybrid. They accept touch, keyboard, 
 
 ### Touch is now one input inside a larger system
 
-{{< halves >}}
-{{< halfimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-9.jpg" alt="Future interface combining touch, stylus, voice, eye tracking, hand gestures, haptics, foldable displays and spatial computing." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/from-cursor-to-touchscreen-how-touch-interface-design-was-born/from-cursor-to-touchscreen-how-touch-interface-design-was-born-9.jpg" alt="Future interface combining touch, stylus, voice, eye tracking, hand gestures, haptics, foldable displays and spatial computing." >}}
 
 #### The future is multimodal, adaptive and less visibly controlled
 
