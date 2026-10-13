@@ -76,6 +76,21 @@
 
     </article>
   </div>
+
+  <nav class="article-navigation wiki-article-pagination{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" aria-label="Wiki page navigation">
+    {{ if gt $currentIndex 0 }}
+      {{ $previous := index $siblings (sub $currentIndex 1) }}
+      <a class="article-nav-button" href="{{ $previous.RelPermalink }}"><span>← Previous in category</span><strong>{{ $previous.Title }}</strong></a>
+    {{ else }}
+      <a class="article-nav-button" href="/wiki/{{ $categorySlug }}/"><span>← Category</span><strong>{{ $categoryTitle }}</strong></a>
+    {{ end }}
+    {{ if lt (add $currentIndex 1) (len $siblings) }}
+      {{ $next := index $siblings (add $currentIndex 1) }}
+      <a class="article-nav-button is-next" href="{{ $next.RelPermalink }}"><span>Next in category →</span><strong>{{ $next.Title }}</strong></a>
+    {{ else }}
+      <a class="article-nav-button is-next" href="/wiki/"><span>Complete index →</span><strong>Graphic Design Wiki</strong></a>
+    {{ end }}
+  </nav>
   </div>
 
   {{ partial "wiki-related-content.html" . }}
@@ -105,22 +120,10 @@
     </section>
   {{ end }}
 
-  <nav class="wiki-article-pagination" aria-label="Wiki page navigation">
-    {{ if gt $currentIndex 0 }}
-      {{ $previous := index $siblings (sub $currentIndex 1) }}
-      <a href="{{ $previous.RelPermalink }}"><span>← Previous in category</span><strong>{{ $previous.Title }}</strong></a>
-    {{ else }}
-      <a href="/wiki/{{ $categorySlug }}/"><span>← Category</span><strong>{{ $categoryTitle }}</strong></a>
-    {{ end }}
-    {{ if lt (add $currentIndex 1) (len $siblings) }}
-      {{ $next := index $siblings (add $currentIndex 1) }}
-      <a class="is-next" href="{{ $next.RelPermalink }}"><span>Next in category →</span><strong>{{ $next.Title }}</strong></a>
-    {{ else }}
-      <a class="is-next" href="/wiki/"><span>Complete index →</span><strong>Graphic Design Wiki</strong></a>
-    {{ end }}
-  </nav>
   </div>
 </main>
+
+{{ partial "subscribe.html" . }}
 
 {{ partial "featured-content.html" . }}
 

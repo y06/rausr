@@ -265,13 +265,21 @@ a.wiki-capsule:hover,
 .wiki-tree {
   width: 100%;
   margin: 2rem 0 0;
-  padding: 4rem 0 8rem;
+  padding: 4rem 0 0;
   background: linear-gradient(135deg, #f8f8f8 0%, #eaeaea 100%);
 }
 
 .wiki-tree__inner {
   width: min(1440px, calc(100% - 64px));
   margin: 0 auto;
+}
+
+.wiki-tree__subscribe {
+  padding: 8rem 2rem 5rem;
+}
+
+.wiki-tree__subscribe .subscribe-container {
+  margin: 0;
 }
 
 .wiki-domain-nav {
@@ -1033,6 +1041,7 @@ a.wiki-capsule:hover,
   width: auto;
   max-width: none;
   margin: 0;
+  padding-bottom: 3rem;
 }
 
 .wiki-related .wiki-section-heading {
@@ -1049,6 +1058,17 @@ a.wiki-capsule:hover,
   line-height: 1.2 !important;
   letter-spacing: normal !important;
   text-align: center !important;
+}
+
+.wiki-related .more-works-back {
+  background:
+    radial-gradient(circle, var(--domain-accent) 1px, transparent 1px),
+    var(--wiki-lime);
+  background:
+    radial-gradient(circle, var(--domain-accent) 1px, transparent 1px),
+    color-mix(in display-p3, var(--domain-accent) 18%, white);
+  background-size: 22px 22px, cover;
+  background-repeat: repeat;
 }
 
 .wiki-related__grid > .card1--collection {
@@ -1091,6 +1111,10 @@ a.wiki-capsule:hover,
   color: var(--domain-on-accent, #fff) !important;
 }
 
+.wiki-article-followup .wiki-sisters {
+  margin-top: 0;
+}
+
 .wiki-sisters.wiki-category-map .wiki-capsule.is-current:hover,
 .wiki-sisters.wiki-category-map .wiki-capsule.is-current:focus-visible {
   border-color: transparent;
@@ -1105,44 +1129,36 @@ a.wiki-capsule:hover,
   transform: translate(-50%, 2px);
 }
 
-.wiki-article-pagination {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  max-width: 1180px;
-  margin: 0 auto clamp(4rem, 9vw, 8rem);
-}
-
-.wiki-article-pagination a {
+.wiki-article-pagination .article-nav-button {
   display: flex;
-  min-height: 120px;
+  min-width: min(360px, calc(50% - 3.5rem));
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1.4rem;
-  border: 1px solid var(--wiki-line);
-  border-radius: 14px;
-  color: var(--wiki-ink);
-  text-decoration: none;
+  gap: 0.65rem;
+  background: var(--domain-accent);
+  color: var(--domain-on-accent, #fff) !important;
+  transition: opacity 220ms ease;
 }
 
-.wiki-article-pagination a:hover {
-  border-color: var(--wiki-violet);
-  background: var(--wiki-soft);
+.wiki-article-pagination .article-nav-button:hover,
+.wiki-article-pagination .article-nav-button:focus-visible {
+  background: var(--domain-accent);
+  color: var(--domain-on-accent, #fff) !important;
+  opacity: 0.82;
+}
+
+.wiki-article-pagination .article-nav-button span {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.wiki-article-pagination .article-nav-button strong {
+  font-size: 1.1rem;
+  line-height: 1.25;
+  text-transform: none;
 }
 
 .wiki-article-pagination .is-next {
   text-align: right;
-}
-
-.wiki-article-pagination span {
-  color: var(--wiki-muted);
-  font: 600 0.72rem/1 Inter, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.wiki-article-pagination strong {
-  font: 600 1.1rem/1.2 Satoshi, sans-serif;
 }
 
 .related-wiki {
@@ -1257,6 +1273,10 @@ a.wiki-capsule:hover,
     margin-bottom: 4rem;
   }
 
+  .wiki-tree__subscribe {
+    padding: 6rem 1.25rem 5rem;
+  }
+
   .wiki-foundations,
   .wiki-category-map {
     padding-inline: 20px;
@@ -1298,14 +1318,19 @@ a.wiki-capsule:hover,
     flex-direction: column;
   }
 
+  .wiki-article-pagination .article-nav-button {
+    width: 100%;
+    min-width: 0;
+    padding: 1.5rem 2rem;
+  }
+
   .wiki-foundations,
   .wiki-category-map {
     padding: 0 20px;
   }
 
   .wiki-tree__grid,
-  .wiki-guide-grid,
-  .wiki-article-pagination {
+  .wiki-guide-grid {
     grid-template-columns: 1fr;
   }
 

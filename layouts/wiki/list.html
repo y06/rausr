@@ -104,6 +104,10 @@
         {{ end }}
       </div>
     </div>
+
+    <div class="wiki-tree__subscribe">
+      {{ partial "subscribe.html" . }}
+    </div>
   </section>
   {{ else }}
     {{ with $currentCategory }}
@@ -164,6 +168,10 @@
   </nav>
   {{ end }}
 </main>
+
+{{ if not $isRoot }}
+  {{ partial "subscribe.html" . }}
+{{ end }}
 
 {{ partial "featured-content.html" . }}
 
