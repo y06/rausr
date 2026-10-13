@@ -28,7 +28,7 @@
     </div>
   </section>
 
-  <div class="container-tag-list wiki-breadcrumbs" aria-label="Breadcrumb">
+  <div class="container-tag-list wiki-breadcrumbs{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" aria-label="Breadcrumb">
     <button class="tag-scroll left">←</button>
     <div class="tag-list-wrapper">
       <ul class="tag-list">
@@ -76,9 +76,11 @@
 
     </article>
   </div>
+  </div>
 
   {{ partial "wiki-related-content.html" . }}
 
+  <div class="wiki-shell wiki-shell--article wiki-shell--article-followup">
   {{ with $currentCategory }}
     <section class="wiki-sisters wiki-category-map wiki-domain--{{ .accent }}" aria-labelledby="wiki-sisters-title">
       <div class="wiki-section-heading">

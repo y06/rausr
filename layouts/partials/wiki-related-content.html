@@ -1,20 +1,59 @@
 {{ with .Params.related_content }}
+  {{ $page := $ }}
   {{ $resolved := slice }}
   {{ range . }}
     {{ with site.GetPage .path }}{{ $resolved = $resolved | append . }}{{ end }}
   {{ end }}
   {{ if gt (len $resolved) 0 }}
-    <section class="wiki-related" aria-labelledby="wiki-related-title">
-      <p class="wiki-eyebrow">From the rausr archive</p>
-      <h2 id="wiki-related-title">Related articles and case studies</h2>
-      <div class="wiki-related__grid">
-        {{ range $resolved }}
-          <article>
-            <span>{{ if eq .Section "blog" }}Article{{ else }}Case study{{ end }}</span>
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <a href="{{ .RelPermalink }}">{{ if eq .Section "blog" }}Read article{{ else }}View work{{ end }} →</a>
-          </article>
-        {{ end }}
+    {{ $accent := "" }}
+    {{ range $page.Site.Data.wiki_taxonomy.categories }}
+      {{ if eq .slug $page.Params.wiki_category }}{{ $accent = .accent }}{{ end }}
+    {{ end }}
+    <section class="more-works wiki-related{{ with $accent }} wiki-domain--{{ . }}{{ end }}" aria-labelledby="wiki-related-title">
+      <div class="wiki-section-heading">
+        <p class="wiki-eyebrow">From the rausr archive</p>
+        <h2 id="wiki-related-title">Related articles and case studies</h2>
+      </div>
+      <div class="wiki-related__stage more-works-front">
+        <div class="wiki-related__grid featured-grid more-works-grid">
+          {{ range first 3 $resolved }}
+            {{ $item := . }}
+            {{ $isArticle := eq .Section "blog" }}
+            {{ $isCollection := false }}
+            {{ if not $isArticle }}
+              {{ range (.Params.tags | default (slice)) }}
+                {{ if eq (lower (partial "normalize-taxonomy-term.html" .)) "collection" }}
+                  {{ $isCollection = true }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            <div class="card1 {{ if $isArticle }}card1--blog{{ else }}card1--works{{ if $isCollection }} card1--collection{{ end }}{{ end }}">
+              <a href="{{ .RelPermalink }}">
+                {{ with .Params.preview_image }}
+                  <div class="card1-top">
+                    {{ partial "components/responsive-image.html" (dict
+                      "src" .
+                      "alt" $item.Title
+                      "width" 360
+                      "sizes" "(max-width: 991px) 50vw, 360px"
+                    ) }}
+                  </div>
+                {{ end }}
+              </a>
+              <div class="card1-bottom">
+                {{ with index .Params.tags 0 }}
+                  {{ $tag := partial "normalize-taxonomy-term.html" . }}
+                  <span class="card1-category">
+                    <a href="{{ if $isArticle }}{{ "/topics/" | relLangURL }}{{ else }}{{ "/tags/" | relLangURL }}{{ end }}{{ $tag | urlize }}">{{ partial "tag-label.html" $tag }}</a>
+                  </span>
+                {{ end }}
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <a href="{{ .RelPermalink }}" class="card1-cta">{{ if $isArticle }}Read article{{ else if $isCollection }}Show collection{{ else }}Show work{{ end }} →</a>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+        <div class="more-works-back" aria-hidden="true"></div>
       </div>
     </section>
   {{ end }}
