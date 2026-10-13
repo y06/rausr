@@ -22,7 +22,6 @@
         <span>Reference guide</span>
         <span>Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2 January 2006" }}</time></span>
       </div>
-      <a class="header-cta-button wiki-header-link" href="/wiki/{{ $categorySlug }}/">← Back to {{ $categoryTitle }}</a>
     </div>
     <div class="header-illustration wiki-hero__illustration">
       <img src="{{ "svg/header/header-wiki.svg" | relURL }}" alt="Graphic Design Wiki illustration">
@@ -75,27 +74,34 @@
         </section>
       {{ end }}
 
-      {{ partial "wiki-related-content.html" . }}
-
-      {{ with $currentCategory }}
-        <section class="wiki-sisters" aria-labelledby="wiki-sisters-title">
-          <p class="wiki-eyebrow">Sister pages</p>
-          <h2 id="wiki-sisters-title">Explore {{ $categoryTitle }}</h2>
-          <div class="wiki-capsules">
-            {{ $category := . }}
-            {{ range .topics }}
-              {{ $topicPath := printf "/wiki/%s/%s" $category.slug (. | urlize) }}
-              {{ with site.GetPage $topicPath }}
-                <a class="wiki-capsule{{ if eq .RelPermalink $.RelPermalink }} is-current{{ else }} is-published{{ end }}" href="{{ .RelPermalink }}"{{ if eq .RelPermalink $.RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a>
-              {{ else }}
-                <a class="wiki-capsule" href="/search/?q={{ . | urlquery }}" title="Search the rausr archive for this topic">{{ . }}</a>
-              {{ end }}
-            {{ end }}
-          </div>
-        </section>
-      {{ end }}
     </article>
   </div>
+
+  {{ partial "wiki-related-content.html" . }}
+
+  {{ with $currentCategory }}
+    <section class="wiki-sisters wiki-category-map wiki-domain--{{ .accent }}" aria-labelledby="wiki-sisters-title">
+      <div class="wiki-section-heading">
+        <p class="wiki-eyebrow">Sister pages</p>
+        <h2 id="wiki-sisters-title">Explore {{ $categoryTitle }}</h2>
+      </div>
+      <div class="wiki-capsules wiki-capsules--large">
+        {{ $category := . }}
+        {{ range .topics }}
+          {{ $topicPath := printf "/wiki/%s/%s" $category.slug (. | urlize) }}
+          {{ with site.GetPage $topicPath }}
+            {{ $isCurrent := eq .RelPermalink $.RelPermalink }}
+            <a class="wiki-capsule{{ if $isCurrent }} is-current{{ else }} is-published{{ end }}" href="{{ .RelPermalink }}"{{ if $isCurrent }} aria-current="page"{{ end }}>
+              {{ .Title }}
+              {{ if $isCurrent }}<span class="wiki-capsule-domain__tooltip" aria-hidden="true">Current guide</span>{{ end }}
+            </a>
+          {{ else }}
+            <a class="wiki-capsule" href="/search/?q={{ . | urlquery }}" title="Search the rausr archive for this topic">{{ . }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
 
   <nav class="wiki-article-pagination" aria-label="Wiki page navigation">
     {{ if gt $currentIndex 0 }}

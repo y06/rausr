@@ -16,7 +16,7 @@
       {{ range first 4 $matches }}
         {{ $link := .RelPermalink }}
         {{ $title := .Title }}
-        <div class="card1 service-related-works__card">
+        <div class="card1 card1--works service-related-works__card">
           <a href="{{ $link }}">
             {{ with .Params.preview_image }}
             <div class="card1-top">

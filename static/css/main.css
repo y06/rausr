@@ -697,7 +697,7 @@ h5 {
 }
 
 .card1-bottom {
-    background: color(display-p3 0.420 0.270 1.000);
+    background: color(display-p3 0.129 0.561 1.000);
     padding: 1.25rem;
     color: white;
     text-align: left;
@@ -844,6 +844,33 @@ h5 {
     display: inline-block;
     margin: 1.25rem 1.25rem 0 0;
     text-transform: uppercase;
+}
+
+.card1--works:not(.card1--collection) .card1-category,
+.card1--works:not(.card1--collection) .card1-category a {
+    color: color(display-p3 0.964 1.000 0.247) !important;
+}
+
+.card1--works:not(.card1--collection) .card1-cta {
+    color: color(display-p3 0.964 1.000 0.247) !important;
+}
+
+.card1--works:not(.card1--collection) .card1-cta:hover,
+.card1--works:not(.card1--collection) .card1-cta:focus-visible {
+    color: #fff !important;
+}
+
+.card1--blog .card1-bottom {
+    background: color(display-p3 0.055 0.604 0.447);
+}
+
+.card1--blog .card1-cta {
+    color: color(display-p3 0.964 1.000 0.247) !important;
+}
+
+.card1--blog .card1-cta:hover,
+.card1--blog .card1-cta:focus-visible {
+    color: #fff !important;
 }
 
 .card2-cta {

@@ -7,7 +7,7 @@
                     {{ $sortedWorks := sort $filteredWorks "Date" "desc" }}
                     {{ range first 4 (shuffle (first 12 $sortedWorks)) }}
                         {{ .Scratch.Set "link" .RelPermalink }}
-                        <div class="card1 card3">
+                        <div class="card1 card1--works">
                             <a href="{{ .Scratch.Get "link" }}" class="">
                                 {{ with .Params.preview_image }}
                                 <div class="card1-top">
@@ -21,7 +21,7 @@
                                 {{ end }}
                             </a>
                             
-                            <div class="card2-bottom card3-bottom">
+                            <div class="card1-bottom">
                                 {{ with index .Params.tags 0 }}
                                 {{ $tag := partial "normalize-taxonomy-term.html" . }}
                                 <span class="card1-category">
@@ -32,7 +32,7 @@
                                 {{ $link := .Scratch.Get "link" }}
                                 <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
                                 {{ with index .Params.tags 0 }}
-                                <a href="{{ $link }}" class="card2-cta card3-cta">SHOW WORK →</a>
+                                <a href="{{ $link }}" class="card1-cta">SHOW WORK →</a>
                                 {{ end }}
                             </div>
                         </div>

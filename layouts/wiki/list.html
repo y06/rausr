@@ -4,6 +4,11 @@
 {{ $isRoot := eq .RelPermalink "/wiki/" }}
 {{ $topicTotal := 0 }}
 {{ range $taxonomy.categories }}{{ $topicTotal = add $topicTotal (len .topics) }}{{ end }}
+{{ $categorySlug := .Params.wiki_category }}
+{{ $currentCategory := false }}
+{{ range $taxonomy.categories }}
+  {{ if eq .slug $categorySlug }}{{ $currentCategory = . }}{{ end }}
+{{ end }}
 
 <main class="wiki-main">
   <section class="header wiki-hero{{ if not $isRoot }} wiki-hero--category{{ end }}">
@@ -17,7 +22,13 @@
           <span><strong>{{ len (where .Site.RegularPages "Section" "wiki") }}</strong> published guides</span>
         </div>
       {{ else }}
-        <a class="header-cta-button wiki-header-link" href="#published-guides">Read published guides ↓</a>
+        {{ with $currentCategory }}
+          <div class="wiki-stats" aria-label="Category coverage">
+            <span><strong>{{ .number }}</strong> category</span>
+            <span><strong>{{ len .topics }}</strong> mapped topics</span>
+            <span><strong>{{ len $.RegularPages }}</strong> published guides</span>
+          </div>
+        {{ end }}
       {{ end }}
     </div>
     <div class="header-illustration wiki-hero__illustration">
@@ -95,12 +106,6 @@
     </div>
   </section>
   {{ else }}
-    {{ $categorySlug := .Params.wiki_category }}
-    {{ $currentCategory := false }}
-    {{ range $taxonomy.categories }}
-      {{ if eq .slug $categorySlug }}{{ $currentCategory = . }}{{ end }}
-    {{ end }}
-
     {{ with $currentCategory }}
       <section class="wiki-category-map wiki-domain--{{ .accent }}" aria-labelledby="category-map-title">
         <div class="wiki-section-heading">
