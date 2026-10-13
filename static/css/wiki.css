@@ -444,6 +444,7 @@ a.wiki-capsule:hover,
 .wiki-domain--violet {
   --domain-accent: #1c8c9b;
   --domain-accent: color(display-p3 0.2627 0.5410 0.5992);
+  --domain-on-accent: #fff;
 }
 
 .wiki-domain--green {
@@ -473,11 +474,13 @@ a.wiki-capsule:hover,
 .wiki-domain--blue {
   --domain-accent: #a3645d;
   --domain-accent: color(display-p3 0.6046 0.4035 0.3736);
+  --domain-on-accent: #fff;
 }
 
 .wiki-domain--orange {
   --domain-accent: #d10050;
   --domain-accent: color(display-p3 0.7513 0.1567 0.3207);
+  --domain-on-accent: #fff;
 }
 
 .wiki-domain--mint {
@@ -489,6 +492,7 @@ a.wiki-capsule:hover,
 .wiki-domain--lilac {
   --domain-accent: #b54385;
   --domain-accent: color(display-p3 0.6577 0.2926 0.5122);
+  --domain-on-accent: #fff;
 }
 
 .wiki-domain__heading {
@@ -639,7 +643,7 @@ a.wiki-capsule:hover,
 .wiki-category-map .wiki-capsule.is-published:hover {
   border-color: transparent;
   background: var(--domain-accent, var(--wiki-yellow-p3));
-  color: var(--domain-on-accent, #43414c);
+  color: var(--domain-on-accent, #43414c) !important;
 }
 
 .wiki-tree .wiki-capsule.is-published,
