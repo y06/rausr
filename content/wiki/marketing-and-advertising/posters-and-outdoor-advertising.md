@@ -4,6 +4,10 @@ description: "How posters and out-of-home advertising use hierarchy, scale, dist
 summary: "Poster and outdoor design compresses a message into a format people often see briefly, from a distance, and in competition with the surrounding environment."
 wiki_category: "marketing-and-advertising"
 wiki_category_title: "Marketing and Advertising"
+preview_image: "/images/poster-collection/poster-collection-preview.png"
+header_image: "/images/poster-collection/poster-collection-4.jpg"
+article_image: "/images/poster-collection/poster-collection-1.jpg"
+article_image_alt: "Poster design shown in an outdoor context"
 order: 30
 date: 2026-10-07
 lastmod: 2026-10-07

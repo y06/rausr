@@ -4,6 +4,10 @@ description: "What wayfinding design is, how decision points shape a sign system
 summary: "Wayfinding is the coordinated system of information and environmental cues that helps people understand where they are, decide where to go, and recognise when they have arrived."
 wiki_category: "environmental-and-spatial-design"
 wiki_category_title: "Environmental and Spatial Design"
+preview_image: "/images/articles/metro-orientation-design/metro-orientation-design-9.jpg"
+header_image: "/images/articles/metro-orientation-design/metro-orientation-design-1.jpg"
+article_image: "/images/articles/metro-orientation-design/metro-orientation-design-2.jpg"
+article_image_alt: "Wayfinding information and navigation system"
 order: 70
 date: 2026-10-07
 lastmod: 2026-10-07

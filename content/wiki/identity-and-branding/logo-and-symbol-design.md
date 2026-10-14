@@ -4,6 +4,10 @@ description: "What logo and symbol design does, how strong marks are developed, 
 summary: "Logo design creates a compact identifier for an organisation, product, place, or initiative. A logo does not contain the whole brand; it gives the wider identity system a consistent point of recognition."
 wiki_category: "identity-and-branding"
 wiki_category_title: "Identity and Branding"
+preview_image: "/images/articles/logo-design-process/logo-design-process-10.jpg"
+header_image: "/images/articles/logo-design-process/logo-design-process-1.jpg"
+article_image: "/images/articles/logo-design-process/logo-design-process-2.jpg"
+article_image_alt: "Logo concepts and symbol design development"
 order: 30
 date: 2026-10-07
 lastmod: 2026-10-07

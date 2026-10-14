@@ -4,6 +4,10 @@ description: "A practical introduction to accessible and inclusive interface des
 summary: "Accessible interface design removes barriers that prevent people from perceiving, understanding, navigating, or operating a digital product. Inclusive design also considers temporary, situational, cultural, and technological differences."
 wiki_category: "digital-and-interface-design"
 wiki_category_title: "Digital and Interface Design"
+preview_image: "/images/articles/european-accessibility-inclusive-design/eaa-section-preview.jpg"
+header_image: "/images/articles/european-accessibility-inclusive-design/eaa-section-header.jpg"
+article_image: "/images/articles/european-accessibility-inclusive-design/eaa-section-2.jpg"
+article_image_alt: "Accessible interface design across devices"
 order: 110
 date: 2026-10-07
 lastmod: 2026-10-07

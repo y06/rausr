@@ -14,7 +14,7 @@
 {{ end }}
 
 <main class="wiki-main">
-  <section class="header wiki-article-hero">
+  <section class="header header-article wiki-article-hero{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}">
     <div class="header-content wiki-hero__copy">
       <h1>{{ .Title }}</h1>
       <p class="wiki-article-hero__description">{{ .Description }}</p>
@@ -23,8 +23,12 @@
         <span>Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2 January 2006" }}</time></span>
       </div>
     </div>
-    <div class="header-illustration wiki-hero__illustration">
-      <img src="{{ "svg/header/header-wiki.svg" | relURL }}" alt="Graphic Design Wiki illustration">
+    <div class="header-illustration header-image wiki-hero__illustration wiki-article-hero__media">
+      {{ with .Params.header_image }}
+        <img src="{{ . }}" alt="{{ $.Title }}" loading="eager" decoding="async">
+      {{ else }}
+        <img src="{{ "svg/header/header-wiki.svg" | relURL }}" alt="Graphic Design Wiki illustration">
+      {{ end }}
     </div>
   </section>
 
@@ -42,10 +46,13 @@
 
   <div class="wiki-shell wiki-shell--article">
 
-  <div class="wiki-article-layout">
+  <div class="wiki-article-layout{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}">
     <aside class="wiki-article-sidebar" aria-label="On this page">
       <div class="wiki-article-sidebar__inner">
-        <p class="wiki-sidebar-title">On this page</p>
+        <div class="wiki-sidebar-heading">
+          <p class="wiki-sidebar-title">On this page</p>
+          <span class="wiki-sidebar-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">0%</span>
+        </div>
         {{ .TableOfContents }}
         <a class="wiki-sidebar-back" href="/wiki/{{ $categorySlug }}/">← Category overview</a>
       </div>
@@ -53,10 +60,14 @@
 
     <article class="wiki-article">
       {{ with .Params.summary }}
-        <section class="wiki-answer" aria-labelledby="wiki-answer-title">
+        <section class="wiki-answer{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" aria-labelledby="wiki-answer-title">
           <p class="wiki-eyebrow" id="wiki-answer-title">In brief</p>
           <p>{{ . }}</p>
         </section>
+      {{ end }}
+
+      {{ with .Params.article_image }}
+        <img class="wiki-article-image article-full-width-image" src="{{ . }}" alt="{{ $.Params.article_image_alt | default $.Title }}" loading="lazy" decoding="async">
       {{ end }}
 
       <div class="wiki-prose">
@@ -88,7 +99,7 @@
       {{ $next := index $siblings (add $currentIndex 1) }}
       <a class="article-nav-button is-next" href="{{ $next.RelPermalink }}"><span>Next in category →</span><strong>{{ $next.Title }}</strong></a>
     {{ else }}
-      <a class="article-nav-button is-next" href="/wiki/"><span>Complete index →</span><strong>Graphic Design Wiki</strong></a>
+      <a class="article-nav-button is-next is-complete-index" href="/wiki/"><span>Complete index →</span><strong>Graphic Design Wiki</strong></a>
     {{ end }}
   </nav>
   </div>
@@ -122,6 +133,8 @@
 
   </div>
 </main>
+
+<script src="{{ "js/wiki-article.js" | relURL }}" defer></script>
 
 {{ partial "subscribe.html" . }}
 

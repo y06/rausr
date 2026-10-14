@@ -4,6 +4,10 @@ description: "How brand identity behaves over time through transitions, pacing, 
 summary: "Motion identity defines how a visual identity moves. Instead of relying on one logo animation, it creates repeatable behaviour for transitions, type, imagery, symbols, interfaces, and audiovisual sequences."
 wiki_category: "motion-and-time-based-design"
 wiki_category_title: "Motion and Time-based Design"
+preview_image: "/images/articles/spotify-design-evolution/spotify-design-evolution-10.jpg"
+header_image: "/images/articles/spotify-design-evolution/spotify-design-evolution-1.jpg"
+article_image: "/images/articles/spotify-design-evolution/spotify-design-evolution-2.jpg"
+article_image_alt: "Motion identity applied across a digital brand system"
 order: 10
 date: 2026-10-07
 lastmod: 2026-10-07

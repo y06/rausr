@@ -4,6 +4,10 @@ description: "How to design coherent icon systems using consistent metaphor, geo
 summary: "Iconography is the design of a related set of compact visual signs. Icons can identify actions, objects, states, categories, or destinations, but their meaning depends on convention and context."
 wiki_category: "illustration-and-image-making"
 wiki_category_title: "Illustration and Image-making"
+preview_image: "/images/articles/illustration-and-vector-elements-vs-bitmaps/illustration-and-vector-elements-vs-bitmaps-9.jpg"
+header_image: "/images/articles/illustration-and-vector-elements-vs-bitmaps/illustration-and-vector-elements-vs-bitmaps-1.jpg"
+article_image: "/images/articles/illustration-and-vector-elements-vs-bitmaps/illustration-and-vector-elements-vs-bitmaps-2.jpg"
+article_image_alt: "Vector illustration and icon construction"
 order: 50
 date: 2026-10-07
 lastmod: 2026-10-07

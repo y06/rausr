@@ -4,6 +4,10 @@ description: "A practical guide to turning data into accurate, readable charts a
 summary: "Data visualisation maps values and relationships to visual properties such as position, length, angle, area, colour, or connection so that patterns can be inspected and communicated."
 wiki_category: "information-and-data-design"
 wiki_category_title: "Information and Data Design"
+preview_image: "/images/articles/how-ux-ui-is-tested/how-ux-ui-is-tested-13.jpg"
+header_image: "/images/articles/how-ux-ui-is-tested/how-ux-ui-is-tested-1.jpg"
+article_image: "/images/articles/how-ux-ui-is-tested/how-ux-ui-is-tested-2.jpg"
+article_image_alt: "Interface testing data and visual analysis"
 order: 20
 date: 2026-10-07
 lastmod: 2026-10-07

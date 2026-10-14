@@ -4,6 +4,10 @@ description: "A practical reference for typography in books, reports, magazines,
 summary: "Long-form typography organises sustained reading. It balances type choice, measure, leading, hierarchy, rhythm, navigation, and production so that readers can move through substantial content without unnecessary effort."
 wiki_category: "editorial-and-publication"
 wiki_category_title: "Editorial and Publication"
+preview_image: "/images/articles/most-popular-logotype-fonts/most-popular-logotype-fonts-13.jpg"
+header_image: "/images/articles/most-popular-logotype-fonts/most-popular-logotype-fonts-1.jpg"
+article_image: "/images/articles/most-popular-logotype-fonts/most-popular-logotype-fonts-2.jpg"
+article_image_alt: "Typography specimens arranged for comparison"
 order: 100
 date: 2026-10-07
 lastmod: 2026-10-07
