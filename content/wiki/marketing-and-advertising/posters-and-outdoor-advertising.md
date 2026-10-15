@@ -4,9 +4,9 @@ description: "How posters and out-of-home advertising use hierarchy, scale, dist
 summary: "Poster and outdoor design compresses a message into a format people often see briefly, from a distance, and in competition with the surrounding environment."
 wiki_category: "marketing-and-advertising"
 wiki_category_title: "Marketing and Advertising"
-preview_image: "/images/bgr-article-source/wiki-guides/posters-and-outdoor-advertising/preview.webp"
-header_image: "/images/bgr-article-source/wiki-guides/posters-and-outdoor-advertising/header.webp"
-article_image: "/images/bgr-article-source/wiki-guides/posters-and-outdoor-advertising/article.webp"
+preview_image: "/images/wiki-guides/posters-and-outdoor-advertising/preview.webp"
+header_image: "/images/wiki-guides/posters-and-outdoor-advertising/header.webp"
+article_image: "/images/wiki-guides/posters-and-outdoor-advertising/article.webp"
 article_image_alt: "Blank outdoor poster planes tested across different viewing distances"
 order: 30
 date: 2026-10-07

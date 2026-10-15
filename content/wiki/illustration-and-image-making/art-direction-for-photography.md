@@ -4,9 +4,9 @@ description: "How to shape a photographic visual language through concept, casti
 summary: "Photographic art direction turns a communication goal into decisions about subject, setting, light, framing, colour, and image use. It gives a shoot a coherent point of view rather than relying on attractive individual photographs."
 wiki_category: "illustration-and-image-making"
 wiki_category_title: "Illustration and Image-making"
-preview_image: "/images/bgr-article-source/wiki-guides/art-direction-for-photography/preview-v3.webp"
-header_image: "/images/bgr-article-source/wiki-guides/art-direction-for-photography/header-v3.webp"
-article_image: "/images/bgr-article-source/wiki-guides/art-direction-for-photography/article-v2.webp"
+preview_image: "/images/wiki-guides/art-direction-for-photography/preview-v3.webp"
+header_image: "/images/wiki-guides/art-direction-for-photography/header-v3.webp"
+article_image: "/images/wiki-guides/art-direction-for-photography/article-v2.webp"
 article_image_alt: "Directed photography set with controlled lighting, backdrop, subject, and framing"
 order: 80
 date: 2026-10-15

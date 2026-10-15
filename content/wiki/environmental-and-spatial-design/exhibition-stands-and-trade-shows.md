@@ -4,9 +4,9 @@ description: "How to design an exhibition stand around visitor journeys, spatial
 summary: "An exhibition stand is a temporary branded environment. It must help people notice, enter, understand, and engage with an offer while remaining practical to build, staff, and maintain."
 wiki_category: "environmental-and-spatial-design"
 wiki_category_title: "Environmental and Spatial Design"
-preview_image: "/images/bgr-article-source/wiki-guides/exhibition-stands-and-trade-shows/preview-v2.webp"
-header_image: "/images/bgr-article-source/wiki-guides/exhibition-stands-and-trade-shows/header-v2.webp"
-article_image: "/images/bgr-article-source/wiki-guides/exhibition-stands-and-trade-shows/article-v2.webp"
+preview_image: "/images/wiki-guides/exhibition-stands-and-trade-shows/preview-v2.webp"
+header_image: "/images/wiki-guides/exhibition-stands-and-trade-shows/header-v2.webp"
+article_image: "/images/wiki-guides/exhibition-stands-and-trade-shows/article-v2.webp"
 article_image_alt: "Open exhibition stand with clear arrival, display, and conversation zones"
 order: 10
 date: 2026-10-15

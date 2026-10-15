@@ -4,9 +4,9 @@ description: "A guide to the hierarchy, range logic, information, materials, and
 summary: "Food and beverage packaging must identify the brand and product, distinguish variants, communicate required information, protect the contents, and remain convincing in a crowded retail context."
 wiki_category: "packaging-and-product-graphics"
 wiki_category_title: "Packaging and Product Graphics"
-preview_image: "/images/bgr-article-source/wiki-guides/food-and-beverage-packaging/preview.webp"
-header_image: "/images/bgr-article-source/wiki-guides/food-and-beverage-packaging/header.webp"
-article_image: "/images/bgr-article-source/wiki-guides/food-and-beverage-packaging/article.webp"
+preview_image: "/images/wiki-guides/food-and-beverage-packaging/preview.webp"
+header_image: "/images/wiki-guides/food-and-beverage-packaging/header.webp"
+article_image: "/images/wiki-guides/food-and-beverage-packaging/article.webp"
 article_image_alt: "Blank food and beverage packs arranged as a coherent product range"
 order: 20
 date: 2026-10-07

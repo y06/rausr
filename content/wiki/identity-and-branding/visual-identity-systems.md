@@ -4,9 +4,9 @@ description: "How to build a flexible visual language that stays recognisable ac
 summary: "A visual identity system is a set of connected decisions about type, colour, imagery, composition, and behaviour. It helps different teams make new work that feels like one brand without repeating the same layout everywhere."
 wiki_category: "identity-and-branding"
 wiki_category_title: "Identity and Branding"
-preview_image: "/images/bgr-article-source/wiki-guides/visual-identity-systems/preview-v2.webp"
-header_image: "/images/bgr-article-source/wiki-guides/visual-identity-systems/header-v2.webp"
-article_image: "/images/bgr-article-source/wiki-guides/visual-identity-systems/article-v2.webp"
+preview_image: "/images/wiki-guides/visual-identity-systems/preview-v2.webp"
+header_image: "/images/wiki-guides/visual-identity-systems/header-v2.webp"
+article_image: "/images/wiki-guides/visual-identity-systems/article-v2.webp"
 article_image_alt: "Modular visual identity elements assembled into a consistent family of applications"
 order: 40
 date: 2026-10-15

@@ -4,9 +4,9 @@ description: "A practical reference for typography in books, reports, magazines,
 summary: "Long-form typography organises sustained reading. It balances type choice, measure, leading, hierarchy, rhythm, navigation, and production so that readers can move through substantial content without unnecessary effort."
 wiki_category: "editorial-and-publication"
 wiki_category_title: "Editorial and Publication"
-preview_image: "/images/bgr-article-source/wiki-guides/long-form-typography/preview.webp"
-header_image: "/images/bgr-article-source/wiki-guides/long-form-typography/header.webp"
-article_image: "/images/bgr-article-source/wiki-guides/long-form-typography/article.webp"
+preview_image: "/images/wiki-guides/long-form-typography/preview.webp"
+header_image: "/images/wiki-guides/long-form-typography/header.webp"
+article_image: "/images/wiki-guides/long-form-typography/article.webp"
 article_image_alt: "Abstract facing pages showing columns, hierarchy, margins, and reading rhythm"
 order: 100
 date: 2026-10-07

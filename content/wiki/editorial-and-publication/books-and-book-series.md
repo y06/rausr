@@ -4,9 +4,9 @@ description: "How to design a readable, durable book and a recognisable series a
 summary: "Book design is the coordination of content, typography, sequence, format, and physical production into a sustained reading experience. A series adds a shared logic that makes different volumes recognisably related."
 wiki_category: "editorial-and-publication"
 wiki_category_title: "Editorial and Publication"
-preview_image: "/images/bgr-article-source/wiki-guides/books-and-book-series/preview-v2.webp"
-header_image: "/images/bgr-article-source/wiki-guides/books-and-book-series/header-v2.webp"
-article_image: "/images/bgr-article-source/wiki-guides/books-and-book-series/article-v2.webp"
+preview_image: "/images/wiki-guides/books-and-book-series/preview-v2.webp"
+header_image: "/images/wiki-guides/books-and-book-series/header-v2.webp"
+article_image: "/images/wiki-guides/books-and-book-series/article-v2.webp"
 article_image_alt: "Coordinated book volumes and an open page spread showing a shared editorial system"
 order: 10
 date: 2026-10-15

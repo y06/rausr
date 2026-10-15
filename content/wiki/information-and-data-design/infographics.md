@@ -4,9 +4,9 @@ description: "How to plan, design, and verify visual explanations that combine d
 summary: "An infographic is a designed visual explanation. It combines information, structure, and graphic form to help a specific audience understand a subject or follow a story."
 wiki_category: "information-and-data-design"
 wiki_category_title: "Information and Data Design"
-preview_image: "/images/bgr-article-source/wiki-guides/infographics/preview-v2.webp"
-header_image: "/images/bgr-article-source/wiki-guides/infographics/header-v2.webp"
-article_image: "/images/bgr-article-source/wiki-guides/infographics/article-v2.webp"
+preview_image: "/images/wiki-guides/infographics/preview-v2.webp"
+header_image: "/images/wiki-guides/infographics/header-v2.webp"
+article_image: "/images/wiki-guides/infographics/article-v2.webp"
 article_image_alt: "Unstructured information resolving into a clear visual explanation"
 order: 10
 date: 2026-10-15

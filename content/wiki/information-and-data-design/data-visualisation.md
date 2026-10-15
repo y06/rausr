@@ -4,9 +4,9 @@ description: "A practical guide to turning data into accurate, readable charts a
 summary: "Data visualisation maps values and relationships to visual properties such as position, length, angle, area, colour, or connection so that patterns can be inspected and communicated."
 wiki_category: "information-and-data-design"
 wiki_category_title: "Information and Data Design"
-preview_image: "/images/bgr-article-source/wiki-guides/data-visualisation/preview.webp"
-header_image: "/images/bgr-article-source/wiki-guides/data-visualisation/header.webp"
-article_image: "/images/bgr-article-source/wiki-guides/data-visualisation/article.webp"
+preview_image: "/images/wiki-guides/data-visualisation/preview.webp"
+header_image: "/images/wiki-guides/data-visualisation/header.webp"
+article_image: "/images/wiki-guides/data-visualisation/article.webp"
 article_image_alt: "Abstract dataset compared through bars, a line, and plotted points"
 order: 20
 date: 2026-10-07

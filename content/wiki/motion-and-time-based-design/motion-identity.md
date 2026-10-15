@@ -4,9 +4,9 @@ description: "How brand identity behaves over time through transitions, pacing, 
 summary: "Motion identity defines how a visual identity moves. Instead of relying on one logo animation, it creates repeatable behaviour for transitions, type, imagery, symbols, interfaces, and audiovisual sequences."
 wiki_category: "motion-and-time-based-design"
 wiki_category_title: "Motion and Time-based Design"
-preview_image: "/images/bgr-article-source/wiki-guides/motion-identity/preview.webp"
-header_image: "/images/bgr-article-source/wiki-guides/motion-identity/header.webp"
-article_image: "/images/bgr-article-source/wiki-guides/motion-identity/article.webp"
+preview_image: "/images/wiki-guides/motion-identity/preview.webp"
+header_image: "/images/wiki-guides/motion-identity/header.webp"
+article_image: "/images/wiki-guides/motion-identity/article.webp"
 article_image_alt: "Abstract form moving through a sequence of timing and easing states"
 order: 10
 date: 2026-10-07

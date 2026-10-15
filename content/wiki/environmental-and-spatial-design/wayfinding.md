@@ -4,9 +4,9 @@ description: "What wayfinding design is, how decision points shape a sign system
 summary: "Wayfinding is the coordinated system of information and environmental cues that helps people understand where they are, decide where to go, and recognise when they have arrived."
 wiki_category: "environmental-and-spatial-design"
 wiki_category_title: "Environmental and Spatial Design"
-preview_image: "/images/bgr-article-source/wiki-guides/wayfinding/preview.webp"
-header_image: "/images/bgr-article-source/wiki-guides/wayfinding/header.webp"
-article_image: "/images/bgr-article-source/wiki-guides/wayfinding/article.webp"
+preview_image: "/images/wiki-guides/wayfinding/preview.webp"
+header_image: "/images/wiki-guides/wayfinding/header.webp"
+article_image: "/images/wiki-guides/wayfinding/article.webp"
 article_image_alt: "Abstract wayfinding routes meeting at a spatial decision point"
 order: 70
 date: 2026-10-07

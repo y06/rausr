@@ -4,9 +4,9 @@ description: "How to design coherent icon systems using consistent metaphor, geo
 summary: "Iconography is the design of a related set of compact visual signs. Icons can identify actions, objects, states, categories, or destinations, but their meaning depends on convention and context."
 wiki_category: "illustration-and-image-making"
 wiki_category_title: "Illustration and Image-making"
-preview_image: "/images/bgr-article-source/wiki-guides/iconography/preview.webp"
-header_image: "/images/bgr-article-source/wiki-guides/iconography/header.webp"
-article_image: "/images/bgr-article-source/wiki-guides/iconography/article.webp"
+preview_image: "/images/wiki-guides/iconography/preview.webp"
+header_image: "/images/wiki-guides/iconography/header.webp"
+article_image: "/images/wiki-guides/iconography/article.webp"
 article_image_alt: "Abstract icon family developed on a consistent construction grid"
 order: 50
 date: 2026-10-07

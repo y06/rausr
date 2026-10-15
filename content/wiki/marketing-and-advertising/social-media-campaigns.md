@@ -4,9 +4,9 @@ description: "A guide to designing coherent social campaigns across formats, seq
 summary: "A social media campaign is a connected set of messages designed for people who encounter them at different moments and in different formats. The visual system must carry recognition while each post communicates a useful idea on its own."
 wiki_category: "marketing-and-advertising"
 wiki_category_title: "Marketing and Advertising"
-preview_image: "/images/bgr-article-source/wiki-guides/social-media-campaigns/preview-v3.webp"
-header_image: "/images/bgr-article-source/wiki-guides/social-media-campaigns/header-v3.webp"
-article_image: "/images/bgr-article-source/wiki-guides/social-media-campaigns/article-v2.webp"
+preview_image: "/images/wiki-guides/social-media-campaigns/preview-v3.webp"
+header_image: "/images/wiki-guides/social-media-campaigns/header-v3.webp"
+article_image: "/images/wiki-guides/social-media-campaigns/article-v2.webp"
 article_image_alt: "One campaign motif adapted into square, vertical, and wide social placements"
 order: 50
 date: 2026-10-15

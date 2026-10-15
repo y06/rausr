@@ -4,9 +4,9 @@ description: "How to use moving type to shape meaning, pace, emphasis, and readi
 summary: "Kinetic typography gives written language a timed visual performance. Motion can clarify sequence and tone, but the words still need enough time, contrast, and structure to be read."
 wiki_category: "motion-and-time-based-design"
 wiki_category_title: "Motion and Time-based Design"
-preview_image: "/images/bgr-article-source/wiki-guides/kinetic-typography/preview-v2.webp"
-header_image: "/images/bgr-article-source/wiki-guides/kinetic-typography/header-v2.webp"
-article_image: "/images/bgr-article-source/wiki-guides/kinetic-typography/article-v2.webp"
+preview_image: "/images/wiki-guides/kinetic-typography/preview-v2.webp"
+header_image: "/images/wiki-guides/kinetic-typography/header-v2.webp"
+article_image: "/images/wiki-guides/kinetic-typography/article-v2.webp"
 article_image_alt: "Abstract typographic forms progressing through a timed sequence of frames"
 order: 40
 date: 2026-10-15

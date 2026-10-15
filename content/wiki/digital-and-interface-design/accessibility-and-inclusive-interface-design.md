@@ -4,9 +4,9 @@ description: "A practical introduction to accessible and inclusive interface des
 summary: "Accessible interface design removes barriers that prevent people from perceiving, understanding, navigating, or operating a digital product. Inclusive design also considers temporary, situational, cultural, and technological differences."
 wiki_category: "digital-and-interface-design"
 wiki_category_title: "Digital and Interface Design"
-preview_image: "/images/bgr-article-source/wiki-guides/accessibility-and-inclusive-interface-design/preview.webp"
-header_image: "/images/bgr-article-source/wiki-guides/accessibility-and-inclusive-interface-design/header.webp"
-article_image: "/images/bgr-article-source/wiki-guides/accessibility-and-inclusive-interface-design/article.webp"
+preview_image: "/images/wiki-guides/accessibility-and-inclusive-interface-design/preview.webp"
+header_image: "/images/wiki-guides/accessibility-and-inclusive-interface-design/header.webp"
+article_image: "/images/wiki-guides/accessibility-and-inclusive-interface-design/article.webp"
 article_image_alt: "Multiple accessible interaction paths reaching the same interface outcome"
 order: 110
 date: 2026-10-07

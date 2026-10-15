@@ -4,9 +4,9 @@ description: "A practical guide to building and maintaining reusable digital pro
 summary: "A design system connects shared design decisions to reusable interface parts and guidance. It helps teams create consistent, accessible experiences while making product changes easier to understand and maintain."
 wiki_category: "digital-and-interface-design"
 wiki_category_title: "Digital and Interface Design"
-preview_image: "/images/bgr-article-source/wiki-guides/design-systems/preview-v2.webp"
-header_image: "/images/bgr-article-source/wiki-guides/design-systems/header-v2.webp"
-article_image: "/images/bgr-article-source/wiki-guides/design-systems/article-v2.webp"
+preview_image: "/images/wiki-guides/design-systems/preview-v2.webp"
+header_image: "/images/wiki-guides/design-systems/header-v2.webp"
+article_image: "/images/wiki-guides/design-systems/article-v2.webp"
 article_image_alt: "Reusable interface components connected through shared design foundations"
 order: 90
 date: 2026-10-15
