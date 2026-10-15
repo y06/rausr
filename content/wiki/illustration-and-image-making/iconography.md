@@ -10,7 +10,9 @@ article_image: "/images/bgr-article-source/wiki-guides/iconography/article.webp"
 article_image_alt: "Abstract icon family developed on a consistent construction grid"
 order: 50
 date: 2026-10-07
-lastmod: 2026-10-14
+lastmod: 2026-10-15
+wiki_tools: [illustrator, figma]
+wiki_skills: [concept, systems, accessibility]
 seotags: ["iconography", "icon design", "icon system", "pictograms", "interface icons"]
 sources:
   - label: "W3C Web Accessibility Initiative: Functional images"
@@ -53,6 +55,12 @@ Check the smallest intended rendering, high-density screens, low-contrast enviro
 ## Maintain the library
 
 Provide names, intended meanings, usage examples, sizes, and editable source files. A shared library prevents near-duplicate symbols from entering the system through separate projects. When a new icon is requested, first ask whether an existing symbol or a text label already solves the problem.
+
+## Test an icon in its interface
+
+Place a candidate icon beside its label, neighbouring controls, and real content before approving it. Then try the design without the label. If the action becomes ambiguous, retain visible text or another cue rather than trying to make the pictogram more intricate. A tooltip can help explain a control but does not replace a clear name or a usable touch target.
+
+For a set, test the hardest pair of meanings together: save versus download, share versus send, or favourite versus bookmark. Include empty, active, disabled, and error states in the library. Supply a naming convention and an owner for additions so that new icons inherit the same geometry and semantics.
 
 ## Practical checks
 

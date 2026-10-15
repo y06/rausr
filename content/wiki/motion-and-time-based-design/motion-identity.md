@@ -10,7 +10,9 @@ article_image: "/images/bgr-article-source/wiki-guides/motion-identity/article.w
 article_image_alt: "Abstract form moving through a sequence of timing and easing states"
 order: 10
 date: 2026-10-07
-lastmod: 2026-10-14
+lastmod: 2026-10-15
+wiki_tools: [after_effects, illustrator]
+wiki_skills: [motion, systems, accessibility]
 seotags: ["motion identity", "brand motion", "logo animation", "motion design system", "kinetic branding"]
 related_content:
   - path: "/blog/the-evolution-of-spotify-design/"
@@ -54,6 +56,12 @@ Document templates, editable files, timing ranges, easing curves, safe areas, au
 Movement can guide attention, explain cause and effect, show continuity, or add character. Ask which of these jobs each animation performs. If removing it improves understanding or speed, it may be decoration rather than communication.
 
 For interfaces, define how the system behaves when animations are reduced or disabled. Functional state changes must remain visible. For campaigns, review the first and final frames, the silent version, and the moment a viewer might join halfway through.
+
+## Test the system in ordinary production
+
+Ask a motion designer who did not create the original sequence to make a short social clip, an interface transition, and a presentation opener from the toolkit. If they can reproduce the character without copying one exact animation, the principles are doing useful work. If every new piece requires the original designer, the system needs clearer timing ranges, examples, and asset rules.
+
+Document where motion carries meaning and where it is optional. Provide static or reduced-motion alternatives, and check that sound-off viewing still communicates the message. Hand over editable source files, export settings, and examples at common ratios so the identity survives different teams and channels.
 
 ## Practical checks
 

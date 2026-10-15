@@ -10,7 +10,9 @@ article_image: "/images/bgr-article-source/wiki-guides/wayfinding/article.webp"
 article_image_alt: "Abstract wayfinding routes meeting at a spatial decision point"
 order: 70
 date: 2026-10-07
-lastmod: 2026-10-14
+lastmod: 2026-10-15
+wiki_tools: [illustrator, sketchup]
+wiki_skills: [spatial, research, testing]
 seotags: ["wayfinding design", "signage system", "environmental graphic design", "navigation design", "directional signs"]
 related_content:
   - path: "/blog/graphic-design-as-the-key-to-visual-orientation-at-festivals-and-events/"
@@ -57,6 +59,12 @@ Prototype representative signs at full size and in their planned locations. Walk
 ## Maintenance and change
 
 Places change. Departments move, entrances close, temporary events appear, and construction disrupts familiar paths. The design system needs an owner, an inventory of sign locations, rules for temporary notices, and a way to retire outdated information. Improvised updates can quickly undo an otherwise coherent system.
+
+## Prototype on the route
+
+Before fabrication, place temporary signs or marked-up printouts at real decision points. Ask first-time visitors to reach several destinations without hints. Observe where they stop, turn back, or ignore a sign. A map that seems obvious at a desk may be unreadable when someone is moving, carrying luggage, or approaching from an unexpected direction.
+
+Record the route as a sequence: arrival, orientation, decisions, confirmation, and recovery after a wrong turn. Note sight lines, glare, crowding, and competing messages. The final handoff should include a location schedule, sign family, content owner, and process for changing destinations—not only artwork files.
 
 ## Practical checks
 

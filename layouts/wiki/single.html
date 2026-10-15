@@ -70,22 +70,27 @@
         <img class="wiki-article-image article-full-width-image" src="{{ . }}" alt="{{ $.Params.article_image_alt | default $.Title }}" loading="lazy" decoding="async">
       {{ end }}
 
+      {{ partial "wiki-guide-badges.html" . }}
+
       <div class="wiki-prose">
         {{ .Content }}
       </div>
 
       {{ with .Params.sources }}
-        <section class="wiki-sources" aria-labelledby="wiki-sources-title">
-          <h2 id="wiki-sources-title">{{ if gt (len .) 1 }}References{{ else }}Reference{{ end }}</h2>
-          <ul>
-            {{ range . }}
-              <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a></li>
-            {{ end }}
-          </ul>
+        <section class="wiki-sources section-tags" aria-labelledby="wiki-sources-title">
+          <h2 class="card20-meta card20-thanks" id="wiki-sources-title">Sources:</h2>
+          {{ range . }}
+            <a class="tag sources" href="{{ .url }}" target="_blank" rel="noopener noreferrer">🌐 {{ .label }}</a>
+          {{ end }}
         </section>
       {{ end }}
 
     </article>
+  </div>
+
+  <div class="article-mobile-progress wiki-mobile-progress{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-hidden="true">
+    <span class="article-mobile-progress__value">0%</span>
+    <span class="article-mobile-progress__track" aria-hidden="true"><span class="article-mobile-progress__fill"></span></span>
   </div>
 
   <nav class="article-navigation wiki-article-pagination{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" aria-label="Wiki page navigation">
@@ -134,7 +139,8 @@
   </div>
 </main>
 
-<script src="{{ "js/wiki-article.js" | relURL }}" defer></script>
+{{ $wikiScriptVersion := readFile "static/js/wiki-article.js" | md5 }}
+<script src="{{ printf "js/wiki-article.js?v=%s" $wikiScriptVersion | relURL }}" defer></script>
 
 {{ partial "subscribe.html" . }}
 

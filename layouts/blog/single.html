@@ -72,18 +72,20 @@
   <div class="article-left-column">
     <div class="article-left-column-top">
       {{ if gt (len $h2matches) 0 }}
-      <h2>{{ replaceRE `(?m)^## ` "" (index $h2matches 0) }}</h2>
+      {{ $firstH2 := replaceRE `(?m)^## ` "" (index $h2matches 0) }}
+      <h2 id="{{ anchorize $firstH2 }}">{{ $firstH2 }}</h2>
       {{ end }}
     </div>
       <div class="content-section-column content-section-column-right">
-      {{ if gt (len $h3matches) 0 }}
-        <div class="section-tags section-tags-article">
-          {{ range $h3matches }}
-            {{ $clean := replaceRE `(?m)^### ` "" . }}
-            {{ $anchor := anchorize $clean }}
-            <a class="tag" href="#{{ $anchor }}">{{ $clean }} ↓</a>
-          {{ end }}
-        </div>
+      {{ if or (gt (len $h3matches) 0) (gt (len $h2matches) 1) }}
+        <details class="article-inline-toc" open>
+          <summary class="article-toc-toggle">
+            <span>Explore this article</span>
+            <span class="article-toc-toggle__action" aria-hidden="true"></span>
+            <span class="article-toc-toggle__arrow" aria-hidden="true"></span>
+          </summary>
+          {{ replace .TableOfContents `id="TableOfContents"` `id="ArticleInlineTableOfContents"` | safeHTML }}
+        </details>
       {{ end }}
       {{ if gt (len $h2matches) 0 }}
         {{ $firstH2 := index $h2matches 0 | replaceRE `(?m)^## ` "" }}
@@ -167,22 +169,25 @@
       <div class="article-right-featured">
         {{ partial "featured-articles.html" . }}
       </div>
-      {{ if gt (len $h3matches) 0 }}
-      <div class="article-right-toc">
-        <div class="article-right-toc__title">Sections in this article</div>
-        <div class="section-tags section-tags-article section-toc">
-          {{ range $h3matches }}
-            {{ $clean := replaceRE `(?m)^### ` "" . }}
-            {{ $anchor := anchorize $clean }}
-            <a class="tag" href="#{{ $anchor }}">{{ $clean }}</a>
-          {{ end }}
-        </div>
-      </div>
+      {{ if or (gt (len $h3matches) 0) (gt (len $h2matches) 1) }}
+      <details class="article-right-toc" open>
+        <summary class="article-toc-toggle">
+          <span class="article-right-toc__title">On this page</span>
+          <span class="article-toc-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">0%</span>
+          <span class="article-toc-toggle__arrow" aria-hidden="true"></span>
+        </summary>
+        {{ .TableOfContents }}
+      </details>
       {{ end }}
     </div>
   </div>
 
 </section>
+
+<div class="article-mobile-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-hidden="true">
+  <span class="article-mobile-progress__value">0%</span>
+  <span class="article-mobile-progress__track" aria-hidden="true"><span class="article-mobile-progress__fill"></span></span>
+</div>
 
 {{ partial "related-wiki.html" . }}
 
@@ -193,5 +198,8 @@
 {{ partial "featured-content.html" . }}
 
 {{ partial "cta-contact" . }}
+
+{{ $tocScriptVersion := readFile "static/js/article-toc.js" | md5 }}
+<script src="{{ printf "js/article-toc.js?v=%s" $tocScriptVersion | relURL }}" defer></script>
 
 {{ partial "footer" . }}

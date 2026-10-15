@@ -212,6 +212,53 @@ document.addEventListener("DOMContentLoaded", function () {
         updateSliderState();
     });
 
+    const sectionLinks = document.querySelectorAll('.article-inline-toc nav a[href^="#"], .article-right-toc nav a[href^="#"], .wiki-article-sidebar nav a[href^="#"]');
+    let sectionScrollFrame = null;
+    const cancelSectionScroll = () => {
+        if (sectionScrollFrame !== null) cancelAnimationFrame(sectionScrollFrame);
+        sectionScrollFrame = null;
+    };
+    const scrollToSection = (heading) => {
+        cancelSectionScroll();
+        const start = window.scrollY;
+        const offset = parseFloat(getComputedStyle(heading).scrollMarginTop) || 0;
+        const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        const target = Math.max(0, Math.min(start + heading.getBoundingClientRect().top - offset, maxScroll));
+        const distance = target - start;
+        if (Math.abs(distance) < 1) return;
+
+        // A short animation also works when the browser disables native smooth scrolling.
+        const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? 350
+            : Math.min(800, Math.max(450, Math.abs(distance) * 0.2));
+        const started = performance.now();
+        const step = (now) => {
+            const progress = Math.min((now - started) / duration, 1);
+            const eased = progress < 0.5 ? 4 * progress ** 3 : 1 - (-2 * progress + 2) ** 3 / 2;
+            window.scrollTo({ top: start + distance * eased, behavior: "instant" });
+            sectionScrollFrame = progress < 1 ? requestAnimationFrame(step) : null;
+        };
+        sectionScrollFrame = requestAnimationFrame(step);
+    };
+    if (sectionLinks.length) {
+        window.addEventListener("wheel", cancelSectionScroll, { passive: true });
+        window.addEventListener("touchstart", cancelSectionScroll, { passive: true });
+        window.addEventListener("keydown", cancelSectionScroll);
+    }
+    sectionLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+            const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+            if (!heading) return;
+
+            event.preventDefault();
+            if (window.location.hash !== link.hash) history.pushState(null, "", link.hash);
+            heading.setAttribute("tabindex", "-1");
+            heading.focus({ preventScroll: true });
+            scrollToSection(heading);
+        });
+    });
+
     const findFirstMatchingElement = (selectors) => {
         for (const selector of selectors) {
             if (!selector) {

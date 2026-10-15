@@ -10,7 +10,9 @@ article_image: "/images/bgr-article-source/wiki-guides/posters-and-outdoor-adver
 article_image_alt: "Blank outdoor poster planes tested across different viewing distances"
 order: 30
 date: 2026-10-07
-lastmod: 2026-10-14
+lastmod: 2026-10-15
+wiki_tools: [photoshop, illustrator]
+wiki_skills: [concept, typography, technical]
 seotags: ["poster design", "outdoor advertising", "billboard design", "out-of-home design", "advertising hierarchy"]
 related_content:
   - path: "/works/various-posters/"
@@ -52,6 +54,12 @@ Motion or digital screens add time as another constraint. The key message must r
 Work from the supplier's actual specification, including bleed, safe areas, colour profile, resolution, and finishing requirements. Panel joints, frames, crops, and obstructions can cut through important content. A street photograph or scaled placement mock-up is more informative than a clean artboard alone.
 
 Check who controls updates and removal. A beautiful event poster with an outdated date damages clarity quickly; a campaign system should make replacement and adaptation straightforward.
+
+## Simulate the real encounter
+
+Put a draft into a photograph of the actual location at believable size. Review it from the approach angle, at the likely speed and distance, in daylight and at night if relevant. Show it for only a few seconds to someone unfamiliar with the project. Ask what they noticed, who it came from, and what action they understood. Their answer matters more than how impressive the artwork looks at full zoom.
+
+Prepare a hierarchy that can survive different ratios and placements. The core message may stay fixed while supporting detail moves to a closer-view format or a landing page. Check final copy, dates, permissions, bleed, and safe areas against the production specification before release.
 
 ## Practical checks
 

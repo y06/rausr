@@ -10,7 +10,9 @@ article_image: "/images/bgr-article-source/wiki-guides/data-visualisation/articl
 article_image_alt: "Abstract dataset compared through bars, a line, and plotted points"
 order: 20
 date: 2026-10-07
-lastmod: 2026-10-14
+lastmod: 2026-10-15
+wiki_tools: [spreadsheet, illustrator]
+wiki_skills: [research, technical, storytelling]
 seotags: ["data visualisation", "data visualization", "chart design", "information design", "visual data"]
 sources:
   - label: "Office for National Statistics: Choosing a chart type"
@@ -54,6 +56,12 @@ Build a simple version before adding detail. If a chart needs a long instruction
 ## Review the interpretation
 
 Ask a colleague who has not seen the source data to describe what the chart says. Compare their reading with the actual numbers and any caveats. Review the figure at publication size and, where possible, in the context of the page or dashboard around it. This catches both visual problems and stories that the data cannot support.
+
+## Audit the published chart
+
+Trace every plotted value back to a source row and inspect any transformation between the source and the final graphic. Check units, date ranges, denominators, missing observations, and whether the chosen scale changes the apparent story. A visual can be beautifully drawn and still support an invalid comparison.
+
+Ask a new reader to describe the takeaway without hearing the intended message first. If they infer a stronger claim than the evidence supports, adjust the headline, annotation, or visual encoding. Keep the source data and an editable chart file so updates do not rely on tracing an old image. For a dense interactive view, offer a concise explanation of the key pattern and an accessible route to the underlying values.
 
 ## Practical checks
 

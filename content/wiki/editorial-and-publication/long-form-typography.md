@@ -10,7 +10,9 @@ article_image: "/images/bgr-article-source/wiki-guides/long-form-typography/arti
 article_image_alt: "Abstract facing pages showing columns, hierarchy, margins, and reading rhythm"
 order: 100
 date: 2026-10-07
-lastmod: 2026-10-14
+lastmod: 2026-10-15
+wiki_tools: [indesign, illustrator]
+wiki_skills: [typography, systems, technical]
 seotags: ["long-form typography", "editorial typography", "book typography", "reading measure", "publication design"]
 related_content:
   - path: "/works/editorial-design-book-cover-ernest-hemingway-ghoa/"
@@ -54,6 +56,12 @@ Captions and footnotes deserve the same care as body text. They can be smaller, 
 Create representative pages early: a dense spread, a sparse spread, an image-heavy page, a table, and a page with awkward language or long words. Proof them in the final medium. Paper stock, ink spread, screen rendering, and export settings can all change the apparent weight and spacing of type.
 
 Record the styles and rules in a template so the system survives editing. A good typographic design is still good when another person adds a paragraph, changes a heading, or translates the text.
+
+## Build a proofing loop
+
+Test a complete representative chapter or article before committing to the system. Include a quiet page, a dense page, a spread with images, notes, captions, lists, and the longest heading you expect. A short specimen can hide problems with pacing and navigation that appear only after sustained reading.
+
+Review proofs in the final medium. For print, check actual paper, binding, margins near the gutter, and how ink affects fine strokes. For digital reading, check text reflow, zoom, and the transition between article body and supporting material. Keep a short log of recurring fixes so they become rules in the publication system rather than manual repairs on every page.
 
 ## Practical checks
 

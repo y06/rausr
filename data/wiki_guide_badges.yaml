@@ -1,0 +1,20 @@
+tools:
+  illustrator: {label: "Adobe Illustrator", mark: "Ai"}
+  indesign: {label: "Adobe InDesign", mark: "Id"}
+  photoshop: {label: "Adobe Photoshop", mark: "Ps"}
+  figma: {label: "Figma", mark: "Fg"}
+  after_effects: {label: "Adobe After Effects", mark: "Ae"}
+  sketchup: {label: "SketchUp", mark: "Su"}
+  spreadsheet: {label: "Spreadsheet", mark: "Σ"}
+  browser: {label: "Browser tools", mark: "Br"}
+skills:
+  research: "Research"
+  concept: "Concept development"
+  typography: "Typography"
+  systems: "Systems thinking"
+  accessibility: "Accessibility"
+  technical: "Technical accuracy"
+  storytelling: "Visual storytelling"
+  spatial: "Spatial reasoning"
+  motion: "Motion design"
+  testing: "User testing"

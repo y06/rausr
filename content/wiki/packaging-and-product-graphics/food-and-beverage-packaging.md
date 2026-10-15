@@ -10,7 +10,9 @@ article_image: "/images/bgr-article-source/wiki-guides/food-and-beverage-packagi
 article_image_alt: "Blank food and beverage packs arranged as a coherent product range"
 order: 20
 date: 2026-10-07
-lastmod: 2026-10-14
+lastmod: 2026-10-15
+wiki_tools: [illustrator, photoshop]
+wiki_skills: [typography, systems, technical]
 seotags: ["food packaging design", "beverage packaging", "packaging hierarchy", "packaging range", "label design"]
 related_content:
   - path: "/blog/iconic-water-and-lemonade-packaging/"
@@ -51,6 +53,12 @@ Marketing claims should be specific and supportable. A prominent benefit can att
 ## Production handover
 
 Deliver artwork against the final approved dieline, with a clear version name, print specification, and sign-off trail. Confirm barcodes and variable-data areas with production partners rather than relying on a screen mock-up. If the pack has multiple suppliers or languages, document which elements are fixed and which can change without breaking the hierarchy.
+
+## Run a shelf and production test
+
+Print the pack at actual size and place it beside realistic competitors. Test whether people can identify the product, variant, and most important claim at a glance, then turn the pack and look for ingredients, instructions, and other essential information. A large mock-up on a presentation slide cannot reveal every problem at shelf distance.
+
+Review proofs on the intended material and finish. Transparent film, uncoated board, metallic ink, and curved surfaces can change contrast and legibility. Keep a versioned content sheet for claims and mandatory information, with named owners for approval. This helps the visual system remain accurate when sizes, recipes, or markets change.
 
 ## Practical checks
 

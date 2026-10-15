@@ -1,0 +1,31 @@
+{{- $badges := site.Data.wiki_guide_badges -}}
+{{- if or .Params.wiki_tools .Params.wiki_skills -}}
+<section class="wiki-guide-profile" aria-label="Tools and skills for this guide">
+  {{- with .Params.wiki_tools }}
+  <div class="wiki-guide-profile__group">
+    <h2 class="wiki-eyebrow">Common tools</h2>
+    <ul class="wiki-guide-profile__list">
+      {{- range . }}{{- with index $badges.tools . }}
+      <li class="wiki-guide-profile__badge wiki-guide-profile__badge--tool">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1" y="1" width="30" height="30" rx="7"/><text x="16" y="21" text-anchor="middle">{{ .mark }}</text></svg>
+        <span>{{ .label }}</span>
+      </li>
+      {{- end }}{{- end }}
+    </ul>
+  </div>
+  {{- end }}
+  {{- with .Params.wiki_skills }}
+  <div class="wiki-guide-profile__group">
+    <h2 class="wiki-eyebrow">Skills in play</h2>
+    <ul class="wiki-guide-profile__list">
+      {{- range . }}{{- with index $badges.skills . }}
+      <li class="wiki-guide-profile__badge wiki-guide-profile__badge--skill">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="perk-star" d="M16 3.5 19.1 12.9 28.5 16l-9.4 3.1L16 28.5l-3.1-9.4L3.5 16l9.4-3.1L16 3.5Z"/><path class="perk-spark" d="M25.5 3.5v5M23 6h5M6 24v4M4 26h4"/></svg>
+        <span>{{ . }}</span>
+      </li>
+      {{- end }}{{- end }}
+    </ul>
+  </div>
+  {{- end }}
+</section>
+{{- end -}}

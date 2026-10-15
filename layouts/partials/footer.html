@@ -96,7 +96,8 @@
 </footer>
 
 <!-- Add script.js - smooth navigations transitions and so on -->
-<script defer src="{{ "js/script.js" | relURL }}"></script>
+{{ $scriptVersion := readFile "static/js/script.js" | md5 }}
+<script defer src="{{ printf "js/script.js?v=%s" $scriptVersion | relURL }}"></script>
 
 </body>
 

@@ -10,7 +10,9 @@ article_image: "/images/bgr-article-source/wiki-guides/accessibility-and-inclusi
 article_image_alt: "Multiple accessible interaction paths reaching the same interface outcome"
 order: 110
 date: 2026-10-07
-lastmod: 2026-10-14
+lastmod: 2026-10-15
+wiki_tools: [figma, browser]
+wiki_skills: [accessibility, testing, systems]
 seotags: ["accessible interface design", "inclusive design", "WCAG", "digital accessibility", "accessible UX"]
 sources:
   - label: "W3C Web Content Accessibility Guidelines (WCAG)"
@@ -63,6 +65,12 @@ Document accessible states in the design system: default, hover, focus, selected
 Automated checks can find some missing names, structural problems, and contrast failures. They cannot judge whether wording makes sense, whether a journey is exhausting, or whether an interaction behaves naturally with assistive technology. Combine automated checks with keyboard, zoom, screen-reader, and user testing.
 
 When testing reveals a barrier, fix the design pattern rather than only the one page. A repeated mistake in a shared component can affect an entire product.
+
+## Review a real task
+
+Choose one important journey, such as finding a service and submitting a form, and follow it from entry to confirmation. Try keyboard-only navigation, zoomed text, a narrow viewport, and a screen reader. Record where focus moves, what each control is called, whether instructions remain available, and how a person recovers from an error. Testing an isolated component cannot reveal every barrier in the journey between components.
+
+Invite people who use different assistive strategies into the review, compensate them for their time, and treat their observations as product evidence rather than a checklist result. Prioritise barriers by the task they block, then retest after changes. Keep accessibility acceptance criteria with the ordinary design and engineering work so that future revisions do not reintroduce the same issue.
 
 ## Practical checks
 
