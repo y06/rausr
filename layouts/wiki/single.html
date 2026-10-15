@@ -76,7 +76,7 @@
 
       {{ with .Params.sources }}
         <section class="wiki-sources" aria-labelledby="wiki-sources-title">
-          <h2 id="wiki-sources-title">Reference</h2>
+          <h2 id="wiki-sources-title">{{ if gt (len .) 1 }}References{{ else }}Reference{{ end }}</h2>
           <ul>
             {{ range . }}
               <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a></li>

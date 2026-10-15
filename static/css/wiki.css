@@ -473,12 +473,15 @@ a.wiki-capsule:hover,
   --domain-accent: #1c8c9b;
   --domain-accent: color(display-p3 0.2627 0.5410 0.5992);
   --domain-on-accent: #fff;
+  --domain-capsule-accent: color-mix(in display-p3, var(--domain-accent) 85%, black);
 }
 
 .wiki-domain--green {
   --domain-accent: #35a86e;
   --domain-accent: color(display-p3 0.3472 0.6498 0.4503);
   --domain-on-accent: #2b2932;
+  --domain-capsule-accent: color-mix(in display-p3, var(--domain-accent) 75%, black);
+  --domain-capsule-on-accent: #fff;
 }
 
 .wiki-domain--yellow {
@@ -665,13 +668,16 @@ a.wiki-capsule:hover,
 }
 
 .wiki-foundations a.wiki-capsule:hover,
+.wiki-foundations a.wiki-capsule:focus-visible,
 .wiki-tree a.wiki-capsule:hover,
+.wiki-tree a.wiki-capsule:focus-visible,
 .wiki-tree .wiki-capsule.is-published:hover,
 .wiki-category-map a.wiki-capsule:hover,
+.wiki-category-map a.wiki-capsule:focus-visible,
 .wiki-category-map .wiki-capsule.is-published:hover {
   border-color: transparent;
-  background: var(--domain-accent, var(--wiki-yellow-p3));
-  color: var(--domain-on-accent, #43414c) !important;
+  background: var(--domain-capsule-accent, var(--domain-accent, var(--wiki-yellow-p3)));
+  color: var(--domain-capsule-on-accent, var(--domain-on-accent, #43414c)) !important;
 }
 
 .wiki-tree .wiki-capsule.is-published,
@@ -693,21 +699,22 @@ a.wiki-capsule:hover,
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 .wiki-domain-nav .wiki-capsule-domain:not(.is-current):hover,
 .wiki-domain-nav .wiki-capsule-domain:not(.is-current):focus-visible,
 .wiki-domain-nav .wiki-capsule-domain.is-current {
   border-color: transparent;
-  background: var(--domain-accent);
-  color: var(--domain-on-accent, #fff);
+  background: var(--domain-capsule-accent, var(--domain-accent));
+  color: var(--domain-capsule-on-accent, var(--domain-on-accent, #fff)) !important;
   text-decoration: none;
 }
 
 .wiki-domain-nav .wiki-capsule-domain.is-current:hover,
 .wiki-domain-nav .wiki-capsule-domain.is-current:focus-visible {
-  background: var(--domain-accent);
-  color: var(--domain-on-accent, #fff) !important;
+  background: var(--domain-capsule-accent, var(--domain-accent));
+  color: var(--domain-capsule-on-accent, var(--domain-on-accent, #fff)) !important;
   text-decoration: none;
 }
 
@@ -759,8 +766,8 @@ a.wiki-capsule:hover,
   margin: auto calc(0px - var(--domain-padding-x)) calc(0px - var(--domain-padding-bottom));
   padding: 1rem var(--domain-padding-x);
   border: 0;
-  background: var(--domain-accent);
-  color: var(--domain-on-accent) !important;
+  background: var(--domain-capsule-accent, var(--domain-accent));
+  color: var(--domain-capsule-on-accent, var(--domain-on-accent)) !important;
   font-family: Satoshi, sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -773,7 +780,7 @@ a.wiki-capsule:hover,
 
 .wiki-domain__footer:hover,
 .wiki-domain__footer:focus-visible {
-  color: var(--domain-on-accent) !important;
+  color: var(--domain-capsule-on-accent, var(--domain-on-accent)) !important;
   opacity: 0.82;
   text-decoration: none;
 }
@@ -827,7 +834,6 @@ a.wiki-capsule:hover,
   display: block;
   width: 100%;
   aspect-ratio: 2 / 1;
-  border-bottom: 6px solid var(--domain-accent);
   background: color-mix(in display-p3, var(--domain-accent) 12%, white);
   overflow: hidden;
 }
@@ -1419,19 +1425,19 @@ a.wiki-capsule:hover,
 .wiki-sisters.wiki-category-map .wiki-capsule.is-current {
   position: relative;
   border-color: transparent;
-  background: var(--domain-accent);
-  color: var(--domain-on-accent, #fff) !important;
+  background: var(--domain-capsule-accent, var(--domain-accent));
+  color: var(--domain-capsule-on-accent, var(--domain-on-accent, #fff)) !important;
 }
 
 .wiki-shell--article-followup .wiki-sisters {
-  margin-top: 3.5rem;
+  margin-top: 4.25rem;
 }
 
 .wiki-sisters.wiki-category-map .wiki-capsule.is-current:hover,
 .wiki-sisters.wiki-category-map .wiki-capsule.is-current:focus-visible {
   border-color: transparent;
-  background: var(--domain-accent);
-  color: var(--domain-on-accent, #fff) !important;
+  background: var(--domain-capsule-accent, var(--domain-accent));
+  color: var(--domain-capsule-on-accent, var(--domain-on-accent, #fff)) !important;
   text-decoration: none;
 }
 
