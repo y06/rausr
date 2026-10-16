@@ -63,9 +63,7 @@ The defining object of 2010s design was not the poster or the logo. It was the s
 
 ### The decade began by deleting the 2000s
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-2.jpg" alt="Transition from glossy 2000s interface design to flat, responsive and mobile-first graphic design in the 2010s." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-2.jpg" alt="Transition from glossy 2000s interface design to flat, responsive and mobile-first graphic design in the 2010s." >}}
 
 #### Flatness was a practical response before it became a visual fashion
 
@@ -85,9 +83,7 @@ The transition was not simply from "bad decoration" to "good minimalism." Skeuom
 
 ### Seven milestones that changed the working rules
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-3.jpg" alt="Timeline of responsive web design, Creative Cloud, iOS 7, Material Design, Figma and variable fonts during the 2010s." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-3.jpg" alt="Timeline of responsive web design, Creative Cloud, iOS 7, Material Design, Figma and variable fonts during the 2010s." >}}
 
 #### The visual changes followed changes in platforms and production
 
@@ -111,9 +107,7 @@ Ethan Marcotte's 2010 article did more than name responsive web design. It conne
 
 ### Flat design became the shared visual language
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-4.jpg" alt="Flat design language with geometric icons, cards, bold color fields, large typography, gradients and modular interface components." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-4.jpg" alt="Flat design language with geometric icons, cards, bold color fields, large typography, gradients and modular interface components." >}}
 
 #### Simplicity made design scalable, then became a style of its own
 
@@ -138,9 +132,7 @@ At the edges, designers resisted this smoothness. Brutalist websites, rough coll
 
 ### Branding became flexible, generative and alive
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-5.jpg" alt="Flexible identity examples inspired by Airbnb, Mastercard, Dropbox, MIT Media Lab and London 2012 branding." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-5.jpg" alt="Flexible identity examples inspired by Airbnb, Mastercard, Dropbox, MIT Media Lab and London 2012 branding." >}}
 
 #### The logo remained important, but it stopped carrying the whole brand alone
 
@@ -162,9 +154,7 @@ Even controversial work could age well. [Wolff Olins](/search/?q=Wolff+Olins) de
 
 ### UI and web design became product infrastructure
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-6.jpg" alt="Responsive websites and mobile interfaces built from reusable design-system components across phones, tablets and desktop screens." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-6.jpg" alt="Responsive websites and mobile interfaces built from reusable design-system components across phones, tablets and desktop screens." >}}
 
 #### Designers moved from pages to components, states and journeys
 
@@ -186,9 +176,7 @@ The screen also changed from a destination to a continuous feed. Instagram, Pint
 
 ### Print became more selective and more physical
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-7.jpg" alt="2010s print design with independent magazines, risograph posters, tactile papers, bold editorial type and screen-to-print campaign systems." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-7.jpg" alt="2010s print design with independent magazines, risograph posters, tactile papers, bold editorial type and screen-to-print campaign systems." >}}
 
 #### As screens became ordinary, paper had to offer what screens could not
 
@@ -206,9 +194,7 @@ This created a productive reversal. In the 2000s, websites often imitated printe
 
 ### Technology changed who could design and how teams worked
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-8.jpg" alt="Graphic design tools of the 2010s including Creative Cloud, Sketch, Figma multiplayer, Canva templates, web fonts and variable type." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-8.jpg" alt="Graphic design tools of the 2010s including Creative Cloud, Sketch, Figma multiplayer, Canva templates, web fonts and variable type." >}}
 
 #### The file moved into the cloud and the solitary expert lost exclusive control
 
@@ -226,9 +212,7 @@ HTML5, CSS, SVG, faster JavaScript and modern browser graphics also reduced depe
 
 ### The decade's big players were networks, not lone stars
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-9.jpg" alt="Major design studios and in-house teams shaping 2010s identities, digital products, typography and visual culture." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-9.jpg" alt="Major design studios and in-house teams shaping 2010s identities, digital products, typography and visual culture." >}}
 
 #### Agencies remained influential, but product companies built design power inside
 
@@ -246,9 +230,7 @@ The 2010s did not remove individual authorship. They made authorship harder to l
 
 ### The wrong paths: flat confusion, blanding and redesign theater
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-10.jpg" alt="Problematic 2010s design trends including invisible controls, generic sans serif logos, hidden navigation and controversial brand redesigns." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-10.jpg" alt="Problematic 2010s design trends including invisible controls, generic sans serif logos, hidden navigation and controversial brand redesigns." >}}
 
 #### Useful simplification became damaging when teams removed meaning too
 
@@ -273,9 +255,7 @@ Late in the decade, "blanding" became shorthand for another problem: direct-to-c
 
 ### What the 2010s got right and what remains
 
-{{< halves >}}
-{{< halfimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-11.jpg" alt="Legacy of 2010s graphic design combining responsive identities, accessible interfaces, motion, custom typography and collaborative systems." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/graphic-design-in-the-2010s-second-decade-21st-century/graphic-design-in-the-2010s-second-decade-21st-century-11.jpg" alt="Legacy of 2010s graphic design combining responsive identities, accessible interfaces, motion, custom typography and collaborative systems." >}}
 
 #### The lasting success was not flat design but adaptive thinking
 
