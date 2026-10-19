@@ -1,0 +1,138 @@
+{{ partial "header" . }}
+{{ $data := .Site.Data.wiki_designers }}
+{{ $taxonomy := .Site.Data.wiki_taxonomy }}
+{{ $guides := where (where .Site.RegularPages "Section" "wiki") "Params.wiki_directory" "ne" true }}
+
+<main class="wiki-main wiki-designers-main">
+  <section class="header wiki-hero">
+    <div class="header-content wiki-hero__copy">
+      <h1>{{ .Title }}</h1>
+      <div class="wiki-hero__intro">{{ .Content }}</div>
+      <div class="wiki-stats" aria-label="Designer directory coverage">
+        <span><strong>{{ len $data.people }}</strong> short profiles</span>
+        <span><strong>{{ len $taxonomy.categories }}</strong> connected disciplines</span>
+        <span><strong>{{ len $guides }}</strong> related guides</span>
+      </div>
+    </div>
+    <div class="header-illustration wiki-hero__illustration">
+      <img src="{{ "svg/header/header-wiki.svg" | relURL }}" alt="Graphic Design Wiki illustration">
+    </div>
+  </section>
+
+  <div class="container-tag-list wiki-breadcrumbs" aria-label="Breadcrumb">
+    <button class="tag-scroll left" aria-label="Scroll breadcrumbs left">←</button>
+    <div class="tag-list-wrapper">
+      <ul class="tag-list">
+        <li><a href="/wiki/" class="tag-link">← Wiki</a></li>
+        <li><span class="tag-link active" aria-current="page">Designers to know</span></li>
+      </ul>
+    </div>
+    <button class="tag-scroll right" aria-label="Scroll breadcrumbs right">→</button>
+  </div>
+
+  <div class="wiki-shell wiki-designers-shell">
+    <section class="wiki-designer-tree" aria-labelledby="wiki-designer-tree-title">
+      <div class="wiki-section-heading">
+        <p class="wiki-eyebrow">Another branch of the knowledge base</p>
+        <h2 id="wiki-designer-tree-title">Explore people by discipline</h2>
+        <p>Start with a field, follow a name, and look at the work. These are selected references, with room for many more voices.</p>
+      </div>
+      <div class="wiki-designer-tree__grid">
+        {{ range $taxonomy.categories }}
+          <details class="wiki-designer-branch wiki-domain--{{ .accent }}" open>
+            <summary><span class="wiki-designer-branch__number">{{ .number }}</span><h3>{{ .title }}</h3><span class="wiki-designer-plus-minus" aria-hidden="true">{{ partial "icons/kitchen-plus-minus.svg" . }}</span></summary>
+            <div class="wiki-designer-branch__roller">
+              <ul class="wiki-designer-branch__authors">
+                {{ range index $data.categories .slug }}
+                  <li><a href="#{{ . }}">{{ (index $data.people .).name }}</a></li>
+                {{ end }}
+              </ul>
+            </div>
+          </details>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="wiki-designer-directory" aria-labelledby="wiki-designer-directory-title">
+      <div class="wiki-section-heading">
+        <p class="wiki-eyebrow">A useful starting point</p>
+        <h2 id="wiki-designer-directory-title">Small profiles. Big ideas.</h2>
+        <p>Open a profile for defining work, a study prompt, and links into the Wiki and archive.</p>
+      </div>
+      <form class="wiki-designer-search" role="search" aria-label="Find a designer" hidden>
+        <label class="wiki-eyebrow" for="wiki-designer-search">Find a designer or area of practice</label>
+        <div class="wiki-designer-search__field">
+          <input type="search" id="wiki-designer-search" placeholder="Try “Scher”, “typography”, or “wayfinding”" autocomplete="off" aria-controls="wiki-designer-profiles">
+          <button type="reset">Clear</button>
+        </div>
+        <p class="wiki-designer-search__status wiki-count" role="status" aria-live="polite"></p>
+      </form>
+      <div class="wiki-designer-profiles" id="wiki-designer-profiles">
+        {{ $people := slice }}
+        {{ range $id, $person := $data.people }}
+          {{ $people = $people | append (merge $person (dict "id" $id)) }}
+        {{ end }}
+        {{ range sort $people "name" }}
+          {{ $person := . }}
+          {{ $firstDomain := index .domains 0 }}
+          {{ $accent := "violet" }}
+          {{ $domainTitles := slice }}
+          {{ range $taxonomy.categories }}
+            {{ if eq .slug $firstDomain }}{{ $accent = .accent }}{{ end }}
+            {{ if in $person.domains .slug }}{{ $domainTitles = $domainTitles | append .title }}{{ end }}
+          {{ end }}
+          {{ $relatedGuides := slice }}
+          {{ $guideTitles := slice }}
+          {{ range $guides }}
+            {{ $ids := partialCached "wiki-designers/selection.html" . .RelPermalink }}
+            {{ if in $ids $person.id }}
+              {{ $relatedGuides = $relatedGuides | append . }}
+              {{ $guideTitles = $guideTitles | append .Title }}
+            {{ end }}
+          {{ end }}
+          <details class="wiki-designer-profile wiki-domain--{{ $accent }}" id="{{ .id }}" data-wiki-designer data-search="{{ .name }} {{ .focus }} {{ .summary }} {{ delimit .highlights " " }} {{ delimit $domainTitles " " }} {{ delimit $guideTitles " " }}">
+            <summary>
+              <span><h3>{{ .name }}</h3><span class="wiki-designer-profile__focus">{{ .focus }}</span></span>
+              <span class="wiki-designer-plus-minus" aria-hidden="true">{{ partial "icons/kitchen-plus-minus.svg" . }}</span>
+            </summary>
+            <div class="wiki-designer-profile__roller">
+            <div class="wiki-designer-profile__body">
+              <p>{{ .summary }}</p>
+              <h4 class="wiki-eyebrow wiki-designer-profile__eyebrow">Selected work and contributions</h4>
+              <ul class="wiki-designer-profile__highlights">{{ range .highlights }}<li>{{ . }}</li>{{ end }}</ul>
+              <p class="wiki-designer-profile__lesson"><strong class="wiki-eyebrow wiki-designer-profile__eyebrow">What to study</strong>{{ .lesson }}</p>
+              <ul class="wiki-capsules wiki-capsules--large wiki-designer-profile__domains" aria-label="Related disciplines">
+                {{ range $taxonomy.categories }}
+                  {{ if in $person.domains .slug }}<li><a class="wiki-capsule wiki-domain--{{ .accent }}" href="/wiki/{{ .slug }}/">{{ .title }}</a></li>{{ end }}
+                {{ end }}
+              </ul>
+              {{ with first 4 (sort $relatedGuides "Title") }}
+                <h4 class="wiki-eyebrow wiki-designer-profile__eyebrow">Study the related practice</h4>
+                <ul class="wiki-capsules wiki-designer-profile__reading">{{ range . }}<li><a class="wiki-capsule" href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+              {{ end }}
+              {{ with .articles }}
+                <h4 class="wiki-eyebrow wiki-designer-profile__eyebrow">In the rausr archive</h4>
+                <ul class="wiki-designer-profile__archive">
+                  {{ range . }}{{ with site.GetPage . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}
+                </ul>
+              {{ end }}
+              <div class="wiki-designer-profile__sources">
+                <h4 class="wiki-eyebrow wiki-designer-profile__eyebrow">Sources and original work</h4>
+                {{ range .sources }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>{{ end }}
+              </div>
+            </div>
+            </div>
+          </details>
+        {{ end }}
+      </div>
+      <p class="wiki-designer-search__empty" hidden>No profiles match that search. Try a name or a broader discipline.</p>
+    </section>
+    <nav class="wiki-designers-return" aria-label="Continue through the Wiki"><a class="wiki-capsule" href="/wiki/">← Back to the complete Wiki tree</a></nav>
+  </div>
+</main>
+{{ $scriptVersion := readFile "static/js/wiki-designers.js" | md5 }}
+<script src="{{ printf "js/wiki-designers.js?v=%s" $scriptVersion | relURL }}" defer></script>
+{{ partial "subscribe.html" . }}
+{{ partial "featured-content.html" . }}
+{{ partial "cta-contact" . }}
+{{ partial "footer" . }}

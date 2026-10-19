@@ -10,7 +10,7 @@
 <!-- Open Graph -->
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $desc }}">
-<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:type" content="{{ if and .IsPage (not .Params.wiki_directory) }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ $url }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:image" content="{{ $image }}">

@@ -1003,6 +1003,7 @@
                             {{ range $wikiCategories }}
                             <a href="/wiki/{{ .slug }}/" class="rausr-menu__dropdown-link{{ if hasPrefix $currentPath (printf "/wiki/%s/" .slug) }} is-active{{ end }}">{{ .title }}</a>
                             {{ end }}
+                            <a href="/wiki/designers/" class="rausr-menu__dropdown-link{{ if eq $currentPath "/wiki/designers/" }} is-active{{ end }}">Designers to Know</a>
                         </div>
                     </li>
 

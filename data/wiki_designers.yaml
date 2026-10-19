@@ -1,0 +1,350 @@
+# People are reference subjects, not the credited authors of the Wiki guides.
+# Keep selections to four; a guide can override them with wiki_designers in front matter.
+categories:
+  identity-and-branding: [paul-rand, paula-scher, massimo-vignelli, michael-bierut]
+  editorial-and-publication: [jan-tschichold, cipe-pineles, josef-muller-brockmann, peter-saville]
+  marketing-and-advertising: [paula-scher, milton-glaser, paul-rand]
+  packaging-and-product-graphics: [peter-saville, stefan-sagmeister, massimo-vignelli]
+  environmental-and-spatial-design: [otl-aicher, lance-wyman, margaret-calvert, paula-scher]
+  digital-and-interface-design: [susan-kare, don-norman, april-greiman]
+  motion-and-time-based-design: [saul-bass, kyle-cooper, april-greiman]
+  information-and-data-design: [edward-tufte, otl-aicher, margaret-calvert, massimo-vignelli]
+  illustration-and-image-making: [milton-glaser, susan-kare, cipe-pineles]
+
+# Topic selections are deliberate references to a relevant practice, not project credits.
+topics:
+  brand-strategy-and-positioning: [michael-bierut, paula-scher, paul-rand]
+  naming-and-verbal-identity: [michael-bierut, paul-rand]
+  logo-and-symbol-design: [paul-rand, paula-scher, saul-bass, milton-glaser]
+  visual-identity-systems: [massimo-vignelli, otl-aicher, paula-scher, michael-bierut]
+  brand-architecture: [michael-bierut, paula-scher, massimo-vignelli]
+  brand-guidelines: [otl-aicher, massimo-vignelli, paul-rand]
+  books-and-book-series: [jan-tschichold, massimo-vignelli, cipe-pineles]
+  magazines-and-newspapers: [cipe-pineles, milton-glaser, april-greiman]
+  reports-and-annual-reports: [edward-tufte, massimo-vignelli, josef-muller-brockmann]
+  catalogues: [massimo-vignelli, jan-tschichold, josef-muller-brockmann]
+  brochures-and-leaflets: [jan-tschichold, josef-muller-brockmann, massimo-vignelli]
+  covers-and-jackets: [jan-tschichold, peter-saville, milton-glaser, stefan-sagmeister]
+  long-form-typography: [jan-tschichold, josef-muller-brockmann, massimo-vignelli]
+  campaign-concepts: [milton-glaser, paula-scher, paul-rand]
+  advertising-systems: [paula-scher, paul-rand, michael-bierut]
+  posters-and-outdoor-advertising: [josef-muller-brockmann, milton-glaser, saul-bass, paula-scher]
+  social-media-campaigns: [paula-scher, michael-bierut]
+  email-and-content-marketing: [michael-bierut, jan-tschichold]
+  point-of-sale-communication: [paula-scher, massimo-vignelli]
+  consumer-packaging: [peter-saville, stefan-sagmeister, massimo-vignelli]
+  food-and-beverage-packaging: [massimo-vignelli, paula-scher]
+  beauty-and-cosmetics-packaging: [peter-saville, paula-scher]
+  labels-and-sleeves: [peter-saville, stefan-sagmeister]
+  packaging-families-and-range-systems: [massimo-vignelli, michael-bierut, paula-scher]
+  structural-packaging-graphics: [stefan-sagmeister, massimo-vignelli]
+  exhibition-stands-and-trade-shows: [otl-aicher, paula-scher, massimo-vignelli]
+  museums-and-cultural-exhibitions: [lance-wyman, paula-scher, massimo-vignelli]
+  event-and-conference-graphics: [otl-aicher, lance-wyman, paula-scher]
+  retail-environments: [paula-scher, michael-bierut, massimo-vignelli]
+  signage-systems: [margaret-calvert, otl-aicher, lance-wyman]
+  wayfinding: [lance-wyman, margaret-calvert, massimo-vignelli, otl-aicher]
+  websites: [don-norman, susan-kare, april-greiman]
+  landing-pages: [don-norman, michael-bierut]
+  e-commerce: [don-norman, susan-kare]
+  mobile-applications: [don-norman, susan-kare]
+  user-experience-design: [don-norman, susan-kare]
+  design-systems: [susan-kare, otl-aicher, massimo-vignelli]
+  dashboards: [edward-tufte, don-norman, susan-kare]
+  accessibility-and-inclusive-interface-design: [don-norman, susan-kare, margaret-calvert]
+  motion-identity: [saul-bass, kyle-cooper]
+  film-titles-and-credits: [saul-bass, kyle-cooper]
+  broadcast-graphics: [saul-bass, kyle-cooper]
+  kinetic-typography: [saul-bass, kyle-cooper, april-greiman]
+  explainer-animation: [saul-bass, don-norman]
+  product-and-interface-animation: [don-norman, susan-kare]
+  infographics: [edward-tufte, otl-aicher, massimo-vignelli]
+  data-visualisation: [edward-tufte, massimo-vignelli]
+  charts-and-graphs: [edward-tufte, josef-muller-brockmann]
+  diagrams: [edward-tufte, otl-aicher, massimo-vignelli]
+  maps-and-cartography: [massimo-vignelli, lance-wyman, paula-scher]
+  instructional-graphics: [don-norman, otl-aicher, margaret-calvert]
+  editorial-illustration: [milton-glaser, cipe-pineles]
+  advertising-illustration: [milton-glaser, paul-rand, saul-bass]
+  conceptual-illustration: [milton-glaser, paul-rand, stefan-sagmeister]
+  character-design: [milton-glaser, susan-kare]
+  iconography: [susan-kare, otl-aicher, lance-wyman]
+  pictograms: [otl-aicher, lance-wyman, margaret-calvert, susan-kare]
+  art-direction-for-photography: [cipe-pineles, peter-saville, stefan-sagmeister]
+
+people:
+  paul-rand:
+    name: Paul Rand
+    focus: Ideas, symbols, and corporate identity
+    summary: Rand connected a clear visual idea with a repeatable identity, often using wit, geometry, and unexpected combinations.
+    highlights:
+      - Identity work for IBM, ABC, and NeXT.
+      - His NeXT presentation booklet shows how a mark can be explained as a coherent design argument.
+    lesson: Study how a small visual device becomes memorable through its idea and consistent use.
+    domains: [identity-and-branding, marketing-and-advertising, illustration-and-image-making]
+    articles: [/blog/the-process-behind-iconic-logo-design/, /blog/stay-normal-dont-chase-design-trends/]
+    sources:
+      - label: Paul Rand archive — logos
+        url: https://www.paulrand.design/work/Logos.html
+      - label: Paul Rand archive — NeXT
+        url: https://www.paulrand.design/work/NeXT-Computers.html
+
+  paula-scher:
+    name: Paula Scher
+    focus: Expressive type and identity at every scale
+    summary: Scher uses typography as image, building identities that travel between posters, institutions, publications, and physical spaces.
+    highlights:
+      - The Public Theater identity and its evolving campaign language.
+      - Identity systems for Citibank and Tiffany & Co., developed with her teams.
+    lesson: Look at how a strong typographic voice can stay recognisable while individual applications change.
+    domains: [identity-and-branding, marketing-and-advertising, environmental-and-spatial-design]
+    articles: [/blog/exhibition-and-event-graphic-design-in-2026/, /blog/the-evolution-of-microsoft-windows-design/]
+    sources:
+      - label: Pentagram — Paula Scher
+        url: https://www.pentagram.com/about/paula-scher
+
+  massimo-vignelli:
+    name: Massimo Vignelli
+    focus: Grids, identity systems, and information hierarchy
+    summary: Vignelli applied a disciplined visual language across identity, publications, maps, and environments, often in collaboration with Lella Vignelli and their teams.
+    highlights:
+      - New York subway mapping and signage work through Unimark.
+      - A cross-disciplinary practice documented in the Lella and Massimo Vignelli archives at RIT.
+    lesson: Study the relationship between a stable grid and the very different content it must support.
+    domains: [identity-and-branding, editorial-and-publication, environmental-and-spatial-design, information-and-data-design]
+    articles: [/blog/metro-orientation-design/, /blog/stay-normal-dont-chase-design-trends/]
+    sources:
+      - label: RIT — Vignelli archives
+        url: https://www.rit.edu/vignellicenter/vignelli-archives
+
+  saul-bass:
+    name: Saul Bass
+    focus: Graphic reduction and storytelling in time
+    summary: Bass brought a concise graphic language to film posters and titles, using shape, movement, and sequence to set the mood of a story.
+    highlights:
+      - Title design for Spartacus.
+      - Poster designs for The Shining, developed through an extensive dialogue with Stanley Kubrick.
+    lesson: Watch how a reduced form gains meaning through timing and its relationship to the film.
+    domains: [motion-and-time-based-design, marketing-and-advertising, identity-and-branding]
+    articles: [/blog/graphic-design-in-the-20th-century/, /blog/typography-in-lights/]
+    sources:
+      - label: Design Museum — Kubrick’s design collaborations
+        url: https://designmuseum.org/exhibitions/stanley-kubrick-the-exhibition/kubricks-design-collaborations
+
+  milton-glaser:
+    name: Milton Glaser
+    focus: Illustration, visual ideas, and cultural communication
+    summary: Glaser combined drawing, art direction, and graphic wit in work that made a complex feeling understandable through a memorable image.
+    highlights:
+      - The I Love NY identity and the Bob Dylan poster.
+      - Co-founded New York magazine with Clay Felker and Walter Bernard.
+    lesson: Look for the conceptual link between the picture and the message before borrowing the surface style.
+    domains: [illustration-and-image-making, marketing-and-advertising, identity-and-branding, editorial-and-publication]
+    articles: [/blog/the-icons-who-refused-to-chase-trends/, /blog/creativity-is-a-paintless-process/]
+    sources:
+      - label: Cooper Hewitt — Milton Glaser
+        url: https://www.cooperhewitt.org/2020/06/29/milton-glaser-1929-2020/
+
+  otl-aicher:
+    name: Otl Aicher
+    focus: Pictograms and coordinated visual systems
+    summary: Aicher treated communication as a system of relationships, making typography, symbols, colour, and placement work together.
+    highlights:
+      - Directed the visual design programme for the Munich 1972 Olympics.
+      - The sports pictograms, developed with collaborators including Gerhard Joksch, used a consistent geometric grammar.
+    lesson: Compare the individual symbol with the rules that make the whole family coherent.
+    domains: [environmental-and-spatial-design, information-and-data-design, identity-and-branding, illustration-and-image-making]
+    articles: [/blog/exhibition-and-event-graphic-design-in-2026/, /blog/metro-orientation-design/]
+    sources:
+      - label: Olympic Studies Centre — sports pictograms
+        url: https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=185454&parentDocumentId=161824&skipCopyright=true&skipWatermark=true
+
+  lance-wyman:
+    name: Lance Wyman
+    focus: Place identity and visual wayfinding
+    summary: Wyman connects the character of a place with practical signs and symbols, helping identity and orientation become one experience.
+    highlights:
+      - Mexico 1968 identity work with collaborators.
+      - Mexico City Metro identity, icons, and wayfinding developed with the project team.
+    lesson: Study how symbols help someone recognise both a destination and its place within a larger network.
+    domains: [environmental-and-spatial-design, information-and-data-design, illustration-and-image-making, identity-and-branding]
+    articles: [/blog/metro-orientation-design/, /blog/exhibition-and-event-graphic-design-in-2026/]
+    sources:
+      - label: Lance Wyman — practice and projects
+        url: https://lancewyman.com/about/
+      - label: Lance Wyman — Mexico City Metro
+        url: https://lancewyman.com/brand-project/mexico-city-metro-system-graphics/
+
+  margaret-calvert:
+    name: Margaret Calvert
+    focus: Public information and legible signs
+    summary: Calvert’s work shows how lettering, symbols, scale, and context combine to make public information dependable.
+    highlights:
+      - Co-designed Britain’s road signage system with Jock Kinneir.
+      - Designed Rail Alphabet 2 with Henrik Kubel for Network Rail.
+    lesson: Test communication at the speed, distance, and viewing conditions in which people need it.
+    domains: [environmental-and-spatial-design, information-and-data-design, illustration-and-image-making]
+    articles: [/blog/graphic-design-and-traffic-signs/, /blog/how-graphic-design-shapes-our-lives/]
+    sources:
+      - label: Design Museum — Margaret Calvert
+        url: https://designmuseum.org/exhibitions/margaret-calvert-woman-at-work
+
+  susan-kare:
+    name: Susan Kare
+    focus: Interface icons with human character
+    summary: Kare made early computer interfaces more approachable through economical pixel drawings, symbols, and type.
+    highlights:
+      - Icons, typefaces, and screen graphics for the original Macintosh.
+      - A wider practice in software iconography, including work for Microsoft and other technology companies.
+    lesson: Examine how a tiny image communicates a function without losing warmth or distinctiveness.
+    domains: [digital-and-interface-design, illustration-and-image-making]
+    articles: [/blog/the-evolution-of-microsoft-windows-design/, /blog/design-ups-and-downs-of-apple-macos/]
+    sources:
+      - label: Susan Kare — biography and practice
+        url: https://kareprints.com/pages/about
+
+  april-greiman:
+    name: April Greiman
+    focus: Digital image-making and layered composition
+    summary: Greiman explored the computer as a creative medium, combining type, photography, and digital imagery into a distinctive spatial language.
+    highlights:
+      - The large-format Does It Make Sense? composition for Design Quarterly 133.
+      - Early use of Macintosh tools in an experimental editorial project published by the Walker Art Center.
+    lesson: Study how tools can change the construction of an image, rather than only speed up an existing process.
+    domains: [digital-and-interface-design, editorial-and-publication, illustration-and-image-making]
+    articles: [/blog/the-icons-who-refused-to-chase-trends/, /blog/ux-and-webdesign-in-early-days/]
+    sources:
+      - label: April Greiman — Does It Make Sense?
+        url: https://www.aprilgreiman.com/does-it-make-sense
+
+  jan-tschichold:
+    name: Jan Tschichold
+    focus: Typography and publication systems
+    summary: Tschichold’s career connects experimental modern typography with the patient work of making books consistent and comfortable to read.
+    highlights:
+      - A central figure in the New Typography movement.
+      - Standardised Penguin’s typography through the Penguin Composition Rules and designed Sabon.
+    lesson: Compare expressive typographic experiments with the quieter rules that support extended reading.
+    domains: [editorial-and-publication, identity-and-branding]
+    articles: [/blog/graphic-design-in-the-20th-century/, /blog/stay-normal-dont-chase-design-trends/]
+    sources:
+      - label: MoMA — The New Typography
+        url: https://www.moma.org/calendar/exhibitions/1013
+      - label: Penguin — typography and Modern Classics
+        url: https://www.penguin.co.uk/discover/articles/penguin-modern-classics-design
+
+  josef-muller-brockmann:
+    name: Josef Müller-Brockmann
+    focus: Structured typography and visual rhythm
+    summary: Müller-Brockmann’s posters show how a disciplined arrangement of type and abstract form can create clarity and energy together.
+    highlights:
+      - Musica Viva concert posters for Zürich.
+      - A substantial collection of concert, exhibition, and public-information posters held by MoMA.
+    lesson: Look at alignment, scale, intervals, and empty space as active parts of the message.
+    domains: [editorial-and-publication, marketing-and-advertising, information-and-data-design]
+    articles: [/blog/graphic-design-in-the-20th-century/, /blog/how-to-train-and-get-better-at-graphic-design/]
+    sources:
+      - label: MoMA — Musica Viva
+        url: https://www.moma.org/collection/works/7233
+      - label: MoMA — Josef Müller-Brockmann collection
+        url: https://www.moma.org/artists/4154
+
+  stefan-sagmeister:
+    name: Stefan Sagmeister
+    focus: Conceptual imagery and tactile storytelling
+    summary: Sagmeister uses physical interventions, image-making, and typography to give an idea an emotional and material presence.
+    highlights:
+      - Music artwork for Lou Reed and Talking Heads.
+      - A practice spanning album packaging, publications, exhibitions, and self-initiated visual experiments.
+    lesson: Ask what the material or production method contributes to the idea, beyond its novelty.
+    domains: [packaging-and-product-graphics, illustration-and-image-making, editorial-and-publication]
+    articles: [/blog/the-art-of-the-album-cover/, /blog/the-icons-who-refused-to-chase-trends/]
+    sources:
+      - label: Stefan Sagmeister — selected work
+        url: https://sagmeister.com/work/
+
+  peter-saville:
+    name: Peter Saville
+    focus: Music packaging and cultural art direction
+    summary: Saville builds a visual world around music and culture, often using unexpected references and a deliberately restrained presentation.
+    highlights:
+      - Record sleeves for Joy Division and New Order through Factory Records.
+      - Art direction and identity work extending from music into fashion and cultural communication.
+    lesson: Study how the choice of image and its context can carry an identity even when the brand is quiet.
+    domains: [packaging-and-product-graphics, editorial-and-publication, identity-and-branding]
+    articles: [/blog/the-art-of-the-album-cover/, /blog/most-famous-fashion-brands-brand-design-stories/]
+    sources:
+      - label: Design Museum — Peter Saville
+        url: https://designmuseum.org/designers/peter-saville
+
+  cipe-pineles:
+    name: Cipe Pineles
+    focus: Editorial art direction and illustration
+    summary: Pineles helped shape magazine design through a practice that brought visual authorship and editorial content into close conversation.
+    highlights:
+      - Art director at Glamour, Seventeen, and Charm.
+      - The first woman admitted to the Art Directors Club, with her archive preserved at RIT.
+    lesson: Look at how images, typography, and editorial intent can strengthen one another across a publication.
+    domains: [editorial-and-publication, illustration-and-image-making]
+    articles: [/blog/women-vs-men-in-graphic-design/]
+    sources:
+      - label: RIT — Cipe Pineles archive
+        url: https://www.rit.edu/carycollection/cipe-pineles
+
+  kyle-cooper:
+    name: Kyle Cooper
+    focus: Title sequences and cinematic atmosphere
+    summary: Cooper uses editing, typography, texture, and sound relationships to make a title sequence part of the film’s storytelling.
+    highlights:
+      - The title sequence for Se7en, directed by David Fincher.
+      - Title work for Nixon following the Se7en collaboration.
+    lesson: Watch how rhythm and image detail establish a world before the main narrative begins.
+    domains: [motion-and-time-based-design]
+    articles: [/blog/typography-in-lights/]
+    sources:
+      - label: Prologue — Se7en
+        url: https://prologue.com/portfolio-item/se7en/
+      - label: Prologue — Nixon
+        url: https://prologue.com/portfolio-item/nixon/
+
+  michael-bierut:
+    name: Michael Bierut
+    focus: Identity systems across many touchpoints
+    summary: Bierut connects a clear identity idea with the many practical formats in which an organisation needs to communicate.
+    highlights:
+      - Identity projects for MIT Media Lab, Saks Fifth Avenue, and Mastercard with his teams.
+      - The books How To and Now You See It connect design practice with reflection and criticism.
+    lesson: Follow an idea from the first mark into its everyday applications and operational rules.
+    domains: [identity-and-branding, marketing-and-advertising, environmental-and-spatial-design]
+    articles: [/blog/workflow-for-complex-branding-design-print-and-digital/, /blog/the-evolution-of-yahoo-design/]
+    sources:
+      - label: Pentagram — Michael Bierut
+        url: https://www.pentagram.com/about/michael-bierut
+
+  don-norman:
+    name: Don Norman
+    focus: Human-centred design and understandable interaction
+    summary: Norman is a design researcher and writer whose work helps explain how people understand actions, feedback, and the behaviour of products.
+    highlights:
+      - Author of The Design of Everyday Things.
+      - His writing connects observation, psychology, and practical design decisions.
+    lesson: Ask whether someone can discover the next action and understand what happened afterward.
+    domains: [digital-and-interface-design, information-and-data-design]
+    articles: [/blog/designing-on-ipad-new-era-or-experiment/]
+    sources:
+      - label: Don Norman — The Design of Everyday Things
+        url: https://jnd.org/preface-design-of-everyday-things-revised-edition/
+
+  edward-tufte:
+    name: Edward Tufte
+    focus: Evidence and quantitative information
+    summary: Tufte is a writer and information-design reference whose work examines how visual choices reveal or distort evidence.
+    highlights:
+      - Author of The Visual Display of Quantitative Information.
+      - Analyses chart construction, small multiples, and misleading visual variation.
+    lesson: Compare what a graphic makes visually prominent with what the underlying evidence actually supports.
+    domains: [information-and-data-design]
+    articles: []
+    sources:
+      - label: Edward Tufte — The Visual Display of Quantitative Information
+        url: https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/

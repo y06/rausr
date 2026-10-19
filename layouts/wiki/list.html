@@ -19,7 +19,7 @@
         <div class="wiki-stats" aria-label="Wiki coverage">
           <span><strong>{{ len $taxonomy.categories }}</strong> domains</span>
           <span><strong>{{ $topicTotal }}</strong> mapped topics</span>
-          <span><strong>{{ len (where .Site.RegularPages "Section" "wiki") }}</strong> published guides</span>
+          <span><strong>{{ len (where (where .Site.RegularPages "Section" "wiki") "Params.wiki_directory" "ne" true) }}</strong> published guides</span>
         </div>
       {{ else }}
         {{ with $currentCategory }}
@@ -103,6 +103,7 @@
           </article>
         {{ end }}
       </div>
+      {{ partial "wiki-designers/teaser.html" . }}
     </div>
 
     <div class="wiki-tree__subscribe">
@@ -130,14 +131,20 @@
       </section>
     {{ end }}
 
+    {{ partial "wiki-designers/links.html" . }}
+
     {{ $guides := sort .RegularPages "Params.order" }}
+    {{ $designerCount := len (index .Site.Data.wiki_designers.categories $categorySlug) }}
     <section class="wiki-guides{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" id="published-guides" aria-labelledby="published-guides-title">
       <div class="wiki-section-heading wiki-section-heading--row">
         <div>
           <p class="wiki-eyebrow">Published now</p>
           <h2 id="published-guides-title">Reference guides</h2>
         </div>
-        <span class="wiki-count">{{ len $guides }} {{ cond (eq (len $guides) 1) "guide" "guides" }}</span>
+        <div class="wiki-guides__counts">
+          <span class="wiki-count">{{ len $guides }} {{ cond (eq (len $guides) 1) "guide" "guides" }}</span>
+          <span class="wiki-count">{{ $designerCount }} {{ cond (eq $designerCount 1) "designer" "designers" }} to know</span>
+        </div>
       </div>
       <div class="wiki-guide-grid">
         {{ range $guides }}

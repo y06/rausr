@@ -76,6 +76,8 @@
         {{ .Content }}
       </div>
 
+      {{ partial "wiki-designers/links.html" . }}
+
       {{ with .Params.sources }}
         <section class="wiki-sources section-tags" aria-labelledby="wiki-sources-title">
           <h2 class="card20-meta card20-thanks" id="wiki-sources-title">Sources:</h2>

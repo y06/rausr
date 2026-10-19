@@ -1,0 +1,24 @@
+{{- $page := . -}}
+{{- $ids := partialCached "wiki-designers/selection.html" . .RelPermalink -}}
+{{- with $ids -}}
+  {{- $accent := "" -}}
+  {{- range $page.Site.Data.wiki_taxonomy.categories -}}
+    {{- if eq .slug $page.Params.wiki_category }}{{ $accent = .accent }}{{ end -}}
+  {{- end -}}
+  <section class="wiki-designer-links{{ with $accent }} wiki-domain--{{ . }}{{ end }}" aria-labelledby="wiki-designer-links-title">
+    <div class="wiki-designer-links__heading">
+      <p class="wiki-eyebrow">People and practice</p>
+      <h2 id="wiki-designer-links-title">Designers to know</h2>
+      <a class="wiki-designers-index-link" href="/wiki/designers/">Explore the designer tree <span aria-hidden="true">→</span></a>
+    </div>
+    <div>
+      <p class="wiki-designer-links__note">References for related ideas and craft.</p>
+      <ul class="wiki-designer-names" aria-label="Selected designers">
+        {{ range . }}
+          {{ $person := index $page.Site.Data.wiki_designers.people . }}
+          <li><a href="/wiki/designers/#{{ . }}" title="{{ $person.focus }}">{{ $person.name }} <span aria-hidden="true">↗</span></a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+{{- end -}}

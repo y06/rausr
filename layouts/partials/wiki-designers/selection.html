@@ -1,0 +1,21 @@
+{{- $data := .Site.Data.wiki_designers -}}
+{{- $ids := slice -}}
+{{- if isset .Params "wiki_designers" -}}
+  {{- $ids = .Params.wiki_designers -}}
+{{- else -}}
+  {{- with .File -}}
+    {{- $ids = index $data.topics .ContentBaseName | default (slice) -}}
+  {{- end -}}
+  {{- if not $ids -}}
+    {{- $ids = index $data.categories (.Params.wiki_category | default "") | default (slice) -}}
+  {{- end -}}
+{{- end -}}
+{{- $selected := slice -}}
+{{- range first 4 ($ids | uniq) -}}
+  {{- if index $data.people . -}}
+    {{- $selected = $selected | append . -}}
+  {{- else -}}
+    {{- errorf "Unknown Wiki designer %q on %s" . $.RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+{{- return $selected -}}

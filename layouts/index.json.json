@@ -44,6 +44,17 @@
   {{- end -}}
 
   {{- $seoTags := .Params.seotags | default (slice) -}}
+  {{- if eq .Section "wiki" -}}
+    {{- if .Params.wiki_directory -}}
+      {{- range $id, $person := .Site.Data.wiki_designers.people -}}
+        {{- $seoTags = $seoTags | append $person.name $person.focus (replace $id "-" " ") -}}
+      {{- end -}}
+    {{- else -}}
+      {{- range partialCached "wiki-designers/selection.html" . .RelPermalink -}}
+        {{- $seoTags = $seoTags | append (index site.Data.wiki_designers.people .).name (replace . "-" " ") -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
   {{- if not (gt (len $seoTags) 0) -}}
     {{- $seoScratch := newScratch -}}
     {{- $seoScratch.Set "items" (slice) -}}
