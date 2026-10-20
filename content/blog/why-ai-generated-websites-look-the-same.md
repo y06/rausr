@@ -37,9 +37,7 @@ That familiarity has value. People can find the menu and understand the next ste
 
 ### Why the pages converge
 
-{{< halves >}}
-{{< halfimg src="/images/articles/why-ai-generated-websites-look-the-same/why-ai-generated-websites-look-the-same-2.jpg" alt="Several AI-generated website mockups repeating the same hero, feature cards, rounded buttons and testimonial layout." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/why-ai-generated-websites-look-the-same/why-ai-generated-websites-look-the-same-2.jpg" alt="Several AI-generated website mockups repeating the same hero, feature cards, rounded buttons and testimonial layout." >}}
 
 #### The request often describes a function but leaves the visual decisions open
 
@@ -57,9 +55,7 @@ Researchers [Donghoon Shin](/search/?q=Donghoon+Shin) and colleagues call attent
 
 ### Familiarity helps until it erases the brand
 
-{{< halves >}}
-{{< halfimg src="/images/articles/why-ai-generated-websites-look-the-same/why-ai-generated-websites-look-the-same-3.jpg" alt="Familiar website navigation beside a distinctive brand page that keeps controls clear but uses its own type, imagery and visual rhythm." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/why-ai-generated-websites-look-the-same/why-ai-generated-websites-look-the-same-3.jpg" alt="Familiar website navigation beside a distinctive brand page that keeps controls clear but uses its own type, imagery and visual rhythm." >}}
 
 #### Keep the directions clear; give the place its own character
 
@@ -75,9 +71,7 @@ Let people recognize how to use the page. Give them a reason to recognize whose 
 
 ### What to tell the AI before asking for a layout
 
-{{< halves >}}
-{{< halfimg src="/images/articles/why-ai-generated-websites-look-the-same/why-ai-generated-websites-look-the-same-4.jpg" alt="Designer preparing an AI website brief with audience notes, brand typography, original photography, layout sketches and accessibility rules." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/why-ai-generated-websites-look-the-same/why-ai-generated-websites-look-the-same-4.jpg" alt="Designer preparing an AI website brief with audience notes, brand typography, original photography, layout sketches and accessibility rules." >}}
 
 #### A useful brief has constraints, references and a point of view
 
@@ -97,9 +91,7 @@ This brief gives the AI a job and a visual direction. It also tells a designer w
 
 ### Different should earn its place
 
-{{< halves >}}
-{{< halfimg src="/images/articles/why-ai-generated-websites-look-the-same/why-ai-generated-websites-look-the-same-5.jpg" alt="Three distinct website concepts for different audiences, each with clear navigation and a visible main action." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/why-ai-generated-websites-look-the-same/why-ai-generated-websites-look-the-same-5.jpg" alt="Three distinct website concepts for different audiences, each with clear navigation and a visible main action." >}}
 
 #### Novelty is useful when it strengthens a particular message
 
@@ -115,9 +107,7 @@ Try two directions rather than endlessly polishing the first AI draft. Give the 
 
 ### The useful future is more specific
 
-{{< halves >}}
-{{< halfimg src="/images/articles/why-ai-generated-websites-look-the-same/why-ai-generated-websites-look-the-same-6.jpg" alt="Designer refining an AI-generated website into a distinctive brand experience while preserving clear navigation and accessible content." >}}
-{{< /halves >}}
+{{< fullimg src="/images/articles/why-ai-generated-websites-look-the-same/why-ai-generated-websites-look-the-same-6.jpg" alt="Designer refining an AI-generated website into a distinctive brand experience while preserving clear navigation and accessible content." >}}
 
 #### Speed creates the first draft; judgment creates the website
 
