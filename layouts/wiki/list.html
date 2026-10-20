@@ -103,11 +103,14 @@
           </article>
         {{ end }}
       </div>
-      {{ partial "wiki-designers/teaser.html" . }}
     </div>
 
-    <div class="wiki-tree__subscribe">
-      {{ partial "subscribe.html" . }}
+    <div class="wiki-tree__people-followup">
+      {{ partial "wiki-designers/teaser.html" . }}
+
+      <div class="wiki-tree__subscribe">
+        {{ partial "subscribe.html" . }}
+      </div>
     </div>
   </section>
   {{ else }}
@@ -130,8 +133,6 @@
         </div>
       </section>
     {{ end }}
-
-    {{ partial "wiki-designers/links.html" . }}
 
     {{ $guides := sort .RegularPages "Params.order" }}
     {{ $designerCount := len (index .Site.Data.wiki_designers.categories $categorySlug) }}
@@ -167,6 +168,8 @@
       </div>
     </section>
   </div>
+
+  {{ partial "wiki-designers/links.html" . }}
 
   <nav class="wiki-domain-nav{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" aria-label="Other wiki domains">
     <div class="wiki-domain-nav__inner">

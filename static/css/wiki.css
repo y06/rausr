@@ -50,6 +50,97 @@ html:has(.wiki-main) {
   border-top: 3px solid var(--domain-accent, var(--wiki-violet));
 }
 
+.wiki-designer-links--category {
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  margin: 0;
+  padding: 5rem 48px;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: linear-gradient(120deg, #cbb9ff 0%, #a6e4c7 55%, #a4deea 100%);
+  background: linear-gradient(120deg,
+    color(display-p3 0.79 0.72 1) 0%,
+    color(display-p3 0.64 0.89 0.77) 55%,
+    color(display-p3 0.63 0.86 0.92) 100%);
+  text-align: center;
+}
+
+.wiki-tree__people-followup {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  margin-top: 5rem;
+  overflow: hidden;
+  background: linear-gradient(120deg, #cbb9ff 0%, #a6e4c7 55%, #a4deea 100%);
+  background: linear-gradient(120deg,
+    color(display-p3 0.79 0.72 1) 0%,
+    color(display-p3 0.64 0.89 0.77) 55%,
+    color(display-p3 0.63 0.86 0.92) 100%);
+}
+
+.wiki-designer-links--category::before,
+.wiki-designer-links--category::after,
+.wiki-tree__people-followup::before,
+.wiki-tree__people-followup::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-size: 100% 100%, 22px 22px;
+  background-repeat: no-repeat, repeat;
+  animation: wiki-designer-panel-breathe 10s ease-in-out infinite;
+  content: "";
+}
+
+.wiki-designer-links--category::before,
+.wiki-tree__people-followup::before {
+  background-image:
+    radial-gradient(circle at 18% 25%, color(display-p3 0.408 0.282 1 / 0.12), transparent 52%),
+    radial-gradient(circle, color(display-p3 0.408 0.282 1 / 0.28) 1px, transparent 1.5px);
+}
+
+.wiki-designer-links--category::after,
+.wiki-tree__people-followup::after {
+  background-image:
+    radial-gradient(circle at 82% 72%, color-mix(in display-p3, var(--domain-accent, var(--wiki-cyan-p3)) 13%, transparent), transparent 54%),
+    radial-gradient(circle, color-mix(in display-p3, var(--domain-accent, var(--wiki-cyan-p3)) 28%, transparent) 1px, transparent 1.5px);
+  animation-delay: -5s;
+}
+
+.wiki-designer-links--category > *,
+.wiki-tree__people-followup > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes wiki-designer-panel-breathe {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.7; }
+}
+
+.wiki-designer-links--category .wiki-section-heading {
+  max-width: 800px;
+  margin: 0;
+}
+
+.wiki-designer-links--category .wiki-eyebrow,
+.wiki-tree .wiki-designers-teaser .wiki-eyebrow {
+  color: #4c318f;
+  color: color-mix(in display-p3, var(--wiki-violet-p3) 62%, #20182e);
+  text-align: center !important;
+}
+
+.wiki-designer-links--category .wiki-designer-links__people {
+  width: 100%;
+}
+
 .wiki-designer-links h2,
 .wiki-designers-teaser h2 {
   margin: 0 0 0.75rem;
@@ -117,17 +208,88 @@ html:has(.wiki-main) {
 }
 
 .wiki-designers-teaser {
-  max-width: 1200px;
-  margin: 5rem auto 0;
-  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  background: transparent;
   border: 0;
-  padding: 2rem;
+  padding: 5rem 48px 3rem;
+  text-align: center;
 }
 
-.wiki-designers-teaser p:not(.wiki-eyebrow) {
-  margin: 0 0 1rem;
-  color: var(--wiki-muted);
-  font: 400 1rem/1.65 Inter, sans-serif;
+.wiki-designers-teaser .wiki-section-heading {
+  margin: 0;
+}
+
+.wiki-designers-teaser .wiki-designer-names,
+.wiki-designer-links--category .wiki-designer-names {
+  justify-content: center;
+  gap: 0.9375rem;
+  width: 100%;
+  max-width: 1104px;
+  margin: 0 auto;
+}
+
+.wiki-designers-teaser .wiki-designer-names a,
+.wiki-designer-links--category .wiki-designer-names a {
+  min-height: 0;
+  padding: 0.85rem 1.5rem;
+  border: 0;
+  background: #fff;
+  color: #43414c;
+  font: 500 1rem/1.2 Satoshi, sans-serif;
+}
+
+.wiki-designers-teaser .wiki-designer-names a:is(:hover, :focus-visible),
+.wiki-designer-links--category .wiki-designer-names a:is(:hover, :focus-visible) {
+  border-color: transparent;
+  background: var(--wiki-yellow);
+  background: var(--wiki-yellow-p3);
+  color: #43414c !important;
+}
+
+.wiki-designer-links--category .wiki-designers-teaser__cta,
+.wiki-designers-teaser .wiki-designers-teaser__cta {
+  border: 1px solid var(--wiki-violet-p3);
+}
+
+.wiki-designers-teaser__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  background: var(--wiki-violet);
+  background: var(--wiki-violet-p3);
+  color: var(--wiki-lime) !important;
+  color: var(--wiki-lime-p3) !important;
+  font: 500 1rem/1.2 Satoshi, sans-serif;
+  text-decoration: none;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.wiki-designers-teaser__cta span {
+  transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wiki-designers-teaser__cta:is(:hover, :focus-visible) {
+  background: var(--wiki-lime);
+  background: var(--wiki-lime-p3);
+  color: var(--wiki-violet) !important;
+  color: var(--wiki-violet-p3) !important;
+  text-decoration: none;
+}
+
+.wiki-designers-teaser__cta:is(:hover, :focus-visible) span {
+  transform: translateX(4px);
 }
 
 .wiki-designers-shell {
@@ -460,15 +622,16 @@ html:has(.wiki-main) {
 }
 
 @media (max-width: 700px) {
-  .wiki-designer-links,
-  .wiki-designers-teaser { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.25rem; }
+  .wiki-designer-links { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.25rem; }
+  .wiki-designer-links--category { gap: 1.5rem; padding: 4rem 20px; }
+  .wiki-designers-teaser { gap: 1.5rem; padding: 4rem 20px 3rem; }
   .wiki-designer-tree__grid,
   .wiki-designer-profiles { grid-template-columns: 1fr; }
   .wiki-designer-profile summary { min-height: 96px; padding: 1.25rem; }
   .wiki-designer-profile__body { padding-inline: 1.25rem; }
   .wiki-designer-profile { scroll-margin-top: 10.5rem; }
   .wiki-designer-tree { margin: 2.5rem 0 5rem; }
-  .wiki-designer-names a { font-size: 0.85rem; }
+  .wiki-designer-links .wiki-designer-names a { font-size: 0.85rem; }
   .wiki-designer-plus-minus { width: 1.75rem; height: 1.75rem; }
   .wiki-designer-branch .wiki-designer-plus-minus { width: 1.375rem; height: 1.375rem; }
 }
@@ -476,6 +639,12 @@ html:has(.wiki-main) {
 @media (prefers-reduced-motion: reduce) {
   html:has(.wiki-designers-main) { scroll-behavior: auto; }
   .wiki-designer-names a { transition: none; }
+  .wiki-designers-teaser__cta,
+  .wiki-designers-teaser__cta span { transition: none; }
+  .wiki-designer-links--category::before,
+  .wiki-designer-links--category::after,
+  .wiki-tree__people-followup::before,
+  .wiki-tree__people-followup::after { animation: none; opacity: 0.45; }
 }
 
 .wiki-breadcrumbs .tag-list {
@@ -750,7 +919,8 @@ a.wiki-capsule:hover,
 }
 
 .wiki-tree__subscribe {
-  padding: 8rem 2rem 5rem;
+  padding: 3.5rem 2rem 5rem;
+  background: transparent;
 }
 
 .wiki-tree__subscribe .subscribe-container {
@@ -810,7 +980,8 @@ a.wiki-capsule:hover,
 .wiki-foundations h2,
 .wiki-tree .wiki-section-heading h2,
 .wiki-designer-tree .wiki-section-heading h2,
-.wiki-designer-directory .wiki-section-heading h2 {
+.wiki-designer-directory .wiki-section-heading h2,
+.wiki-designer-links--category .wiki-section-heading h2 {
   margin: 0 !important;
   color: var(--wiki-ink) !important;
   font-family: Inter, sans-serif !important;
@@ -2180,7 +2351,7 @@ a.wiki-capsule:hover,
   }
 
   .wiki-tree__subscribe {
-    padding: 6rem 1.25rem 5rem;
+    padding: 2.5rem 1.25rem 5rem;
   }
 
   .wiki-article-image,
