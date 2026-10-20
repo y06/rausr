@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rausr Publisher</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="popup-body">
+  <main class="popup-shell">
+    <div class="popup-brand">
+      <img src="assets/logo-solo.svg" alt="Rausr">
+      <span>Publisher</span>
+    </div>
+    <section class="popup-card">
+      <span class="eyebrow eyebrow--lime">Hugo → Blogger + Medium + Social</span>
+      <h1>Ready when<br>your article is.</h1>
+      <p>Choose, review and publish without leaving Safari.</p>
+      <button class="button button--lime button--wide" id="openPublisher">Open publisher <span>↗</span></button>
+    </section>
+    <div class="popup-status">
+      <span class="status-dot" id="statusDot"></span>
+      <span id="statusText">Checking companion…</span>
+    </div>
+  </main>
+  <script src="compat.js"></script>
+  <script src="native.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		815139B73087667000636D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815139B63087667000636D8A /* AppDelegate.swift */; };
+		815139BB3087667000636D8A /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 815139B93087667000636D8A /* Main.html */; };
+		815139BD3087667000636D8A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 815139BC3087667000636D8A /* Icon.png */; };
+		815139BF3087667000636D8A /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 815139BE3087667000636D8A /* Style.css */; };
+		815139C13087667000636D8A /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 815139C03087667000636D8A /* Script.js */; };
+		815139C33087667000636D8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815139C23087667000636D8A /* ViewController.swift */; };
+		815139C63087667000636D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815139C43087667000636D8A /* Main.storyboard */; };
+		815139C83087667100636D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815139C73087667100636D8A /* Assets.xcassets */; };
+		815139CF3087667200636D8A /* Rausr Publisher Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 815139CE3087667200636D8A /* Rausr Publisher Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		815139D43087667200636D8A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815139D33087667200636D8A /* SafariWebExtensionHandler.swift */; };
+		815139EA3087667600636D8A /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 815139E03087667600636D8A /* popup.js */; };
+		815139EB3087667600636D8A /* native.js in Resources */ = {isa = PBXBuildFile; fileRef = 815139E13087667600636D8A /* native.js */; };
+		815139EC3087667600636D8A /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 815139E23087667600636D8A /* background.js */; };
+		815139ED3087667600636D8A /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 815139E33087667600636D8A /* popup.html */; };
+		815139EE3087667600636D8A /* compat.js in Resources */ = {isa = PBXBuildFile; fileRef = 815139E43087667600636D8A /* compat.js */; };
+		815139EF3087667600636D8A /* publisher.js in Resources */ = {isa = PBXBuildFile; fileRef = 815139E53087667600636D8A /* publisher.js */; };
+		815139F03087667600636D8A /* ui.css in Resources */ = {isa = PBXBuildFile; fileRef = 815139E63087667600636D8A /* ui.css */; };
+		815139F13087667600636D8A /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 815139E73087667600636D8A /* manifest.json */; };
+		815139F23087667600636D8A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 815139E83087667600636D8A /* assets */; };
+		815139F33087667600636D8A /* publisher.html in Resources */ = {isa = PBXBuildFile; fileRef = 815139E93087667600636D8A /* publisher.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		815139D03087667200636D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 815139AB3087667000636D8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 815139CD3087667200636D8A;
+			remoteInfo = "Rausr Publisher Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		815139DB3087667200636D8A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				815139CF3087667200636D8A /* Rausr Publisher Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		815139B33087667000636D8A /* Rausr Publisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rausr Publisher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		815139B63087667000636D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		815139BA3087667000636D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		815139BC3087667000636D8A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		815139BE3087667000636D8A /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		815139C03087667000636D8A /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		815139C23087667000636D8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		815139C53087667000636D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		815139C73087667100636D8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		815139C93087667100636D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815139CE3087667200636D8A /* Rausr Publisher Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Rausr Publisher Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		815139D33087667200636D8A /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		815139D53087667200636D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815139E03087667600636D8A /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = Resources/popup.js; sourceTree = "<group>"; };
+		815139E13087667600636D8A /* native.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = native.js; path = Resources/native.js; sourceTree = "<group>"; };
+		815139E23087667600636D8A /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = Resources/background.js; sourceTree = "<group>"; };
+		815139E33087667600636D8A /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = Resources/popup.html; sourceTree = "<group>"; };
+		815139E43087667600636D8A /* compat.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = compat.js; path = Resources/compat.js; sourceTree = "<group>"; };
+		815139E53087667600636D8A /* publisher.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = publisher.js; path = Resources/publisher.js; sourceTree = "<group>"; };
+		815139E63087667600636D8A /* ui.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = ui.css; path = Resources/ui.css; sourceTree = "<group>"; };
+		815139E73087667600636D8A /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		815139E83087667600636D8A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = Resources/assets; sourceTree = "<group>"; };
+		815139E93087667600636D8A /* publisher.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = publisher.html; path = Resources/publisher.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		815139B03087667000636D8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		815139CB3087667200636D8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		815139AA3087667000636D8A = {
+			isa = PBXGroup;
+			children = (
+				815139B53087667000636D8A /* Rausr Publisher */,
+				815139D23087667200636D8A /* Rausr Publisher Extension */,
+				815139B43087667000636D8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		815139B43087667000636D8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				815139B33087667000636D8A /* Rausr Publisher.app */,
+				815139CE3087667200636D8A /* Rausr Publisher Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		815139B53087667000636D8A /* Rausr Publisher */ = {
+			isa = PBXGroup;
+			children = (
+				815139B63087667000636D8A /* AppDelegate.swift */,
+				815139C23087667000636D8A /* ViewController.swift */,
+				815139C43087667000636D8A /* Main.storyboard */,
+				815139C73087667100636D8A /* Assets.xcassets */,
+				815139C93087667100636D8A /* Info.plist */,
+				815139B83087667000636D8A /* Resources */,
+			);
+			path = "Rausr Publisher";
+			sourceTree = "<group>";
+		};
+		815139B83087667000636D8A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				815139B93087667000636D8A /* Main.html */,
+				815139BC3087667000636D8A /* Icon.png */,
+				815139BE3087667000636D8A /* Style.css */,
+				815139C03087667000636D8A /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		815139D23087667200636D8A /* Rausr Publisher Extension */ = {
+			isa = PBXGroup;
+			children = (
+				815139DF3087667600636D8A /* Resources */,
+				815139D33087667200636D8A /* SafariWebExtensionHandler.swift */,
+				815139D53087667200636D8A /* Info.plist */,
+			);
+			path = "Rausr Publisher Extension";
+			sourceTree = "<group>";
+		};
+		815139DF3087667600636D8A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				815139E03087667600636D8A /* popup.js */,
+				815139E13087667600636D8A /* native.js */,
+				815139E23087667600636D8A /* background.js */,
+				815139E33087667600636D8A /* popup.html */,
+				815139E43087667600636D8A /* compat.js */,
+				815139E53087667600636D8A /* publisher.js */,
+				815139E63087667600636D8A /* ui.css */,
+				815139E73087667600636D8A /* manifest.json */,
+				815139E83087667600636D8A /* assets */,
+				815139E93087667600636D8A /* publisher.html */,
+			);
+			name = Resources;
+			path = "Rausr Publisher Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		815139B23087667000636D8A /* Rausr Publisher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 815139DC3087667200636D8A /* Build configuration list for PBXNativeTarget "Rausr Publisher" */;
+			buildPhases = (
+				815139AF3087667000636D8A /* Sources */,
+				815139B03087667000636D8A /* Frameworks */,
+				815139B13087667000636D8A /* Resources */,
+				815139DB3087667200636D8A /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				815139D13087667200636D8A /* PBXTargetDependency */,
+			);
+			name = "Rausr Publisher";
+			packageProductDependencies = (
+			);
+			productName = "Rausr Publisher";
+			productReference = 815139B33087667000636D8A /* Rausr Publisher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		815139CD3087667200636D8A /* Rausr Publisher Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 815139D83087667200636D8A /* Build configuration list for PBXNativeTarget "Rausr Publisher Extension" */;
+			buildPhases = (
+				815139CA3087667200636D8A /* Sources */,
+				815139CB3087667200636D8A /* Frameworks */,
+				815139CC3087667200636D8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rausr Publisher Extension";
+			packageProductDependencies = (
+			);
+			productName = "Rausr Publisher Extension";
+			productReference = 815139CE3087667200636D8A /* Rausr Publisher Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		815139AB3087667000636D8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					815139B23087667000636D8A = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					815139CD3087667200636D8A = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = 815139AE3087667000636D8A /* Build configuration list for PBXProject "Rausr Publisher" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 815139AA3087667000636D8A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 815139B43087667000636D8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				815139B23087667000636D8A /* Rausr Publisher */,
+				815139CD3087667200636D8A /* Rausr Publisher Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		815139B13087667000636D8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				815139BD3087667000636D8A /* Icon.png in Resources */,
+				815139C63087667000636D8A /* Main.storyboard in Resources */,
+				815139C13087667000636D8A /* Script.js in Resources */,
+				815139BB3087667000636D8A /* Main.html in Resources */,
+				815139C83087667100636D8A /* Assets.xcassets in Resources */,
+				815139BF3087667000636D8A /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		815139CC3087667200636D8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				815139EA3087667600636D8A /* popup.js in Resources */,
+				815139EE3087667600636D8A /* compat.js in Resources */,
+				815139ED3087667600636D8A /* popup.html in Resources */,
+				815139F23087667600636D8A /* assets in Resources */,
+				815139EC3087667600636D8A /* background.js in Resources */,
+				815139F33087667600636D8A /* publisher.html in Resources */,
+				815139F13087667600636D8A /* manifest.json in Resources */,
+				815139EB3087667600636D8A /* native.js in Resources */,
+				815139F03087667600636D8A /* ui.css in Resources */,
+				815139EF3087667600636D8A /* publisher.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		815139AF3087667000636D8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				815139C33087667000636D8A /* ViewController.swift in Sources */,
+				815139B73087667000636D8A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		815139CA3087667200636D8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				815139D43087667200636D8A /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		815139D13087667200636D8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 815139CD3087667200636D8A /* Rausr Publisher Extension */;
+			targetProxy = 815139D03087667200636D8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		815139B93087667000636D8A /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				815139BA3087667000636D8A /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		815139C43087667000636D8A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				815139C53087667000636D8A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		815139D63087667200636D8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		815139D73087667200636D8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		815139D93087667200636D8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Rausr Publisher Extension/RausrPublisherExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2PV6Q35MRU;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Rausr Publisher Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rausr Publisher Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rausr.publisher.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		815139DA3087667200636D8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Rausr Publisher Extension/RausrPublisherExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2PV6Q35MRU;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Rausr Publisher Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rausr Publisher Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rausr.publisher.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		815139DD3087667200636D8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2PV6Q35MRU;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Rausr Publisher/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rausr Publisher";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rausr.publisher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		815139DE3087667200636D8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2PV6Q35MRU;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Rausr Publisher/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rausr Publisher";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rausr.publisher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		815139AE3087667000636D8A /* Build configuration list for PBXProject "Rausr Publisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				815139D63087667200636D8A /* Debug */,
+				815139D73087667200636D8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		815139D83087667200636D8A /* Build configuration list for PBXNativeTarget "Rausr Publisher Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				815139D93087667200636D8A /* Debug */,
+				815139DA3087667200636D8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		815139DC3087667200636D8A /* Build configuration list for PBXNativeTarget "Rausr Publisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				815139DD3087667200636D8A /* Debug */,
+				815139DE3087667200636D8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 815139AB3087667000636D8A /* Project object */;
+}

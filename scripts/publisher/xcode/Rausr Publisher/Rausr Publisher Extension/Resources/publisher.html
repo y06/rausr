@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rausr Publisher</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="app-body">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#articles" aria-label="Rausr Publisher home">
+        <img src="assets/logo-solo.svg" alt="Rausr">
+        <span class="brand-divider"></span>
+        <span>Publisher</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Publisher navigation">
+        <button class="nav-item is-active" data-view="articles">
+          <span class="nav-icon">⌁</span><span>Articles</span><span class="nav-count" id="articleCount">—</span>
+        </button>
+        <button class="nav-item" data-view="activity">
+          <span class="nav-icon">↗</span><span>Activity</span>
+        </button>
+        <button class="nav-item" data-view="settings">
+          <span class="nav-icon">⚙</span><span>Settings</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="connection-card" id="connectionCard">
+        <span class="connection-orb"></span>
+        <div>
+          <strong id="connectionTitle">Local companion</strong>
+          <span id="connectionText">Checking connection…</span>
+        </div>
+      </div>
+      <button class="profile-chip" id="profileButton">
+        <span class="profile-avatar">R</span>
+          <span><strong>rausr.com</strong><small id="profileBlog">No destinations connected</small></span>
+        <span class="profile-chevron">›</span>
+      </button>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Rausr</span><b>›</b><strong id="viewTitle">Articles</strong></div>
+        <div class="top-actions">
+          <button class="icon-button" id="refreshButton" aria-label="Refresh articles" title="Refresh articles">↻</button>
+          <button class="button button--ink" id="quickPublishButton">New publication <span>＋</span></button>
+        </div>
+      </header>
+
+      <section class="view is-active" id="articlesView" data-view-panel="articles">
+        <div class="hero-panel">
+          <div class="hero-copy">
+            <span class="eyebrow eyebrow--mint" id="heroDestinationLabel">Hugo → Blogger</span>
+            <h1>Publish clearly.<br><em>Keep the craft.</em></h1>
+            <p>Your Markdown, shortcodes, labels and dates—reviewed in one calm place before they go live.</p>
+            <button class="button button--lime" id="heroChooseButton">Choose articles <span>↓</span></button>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orbit orbit--one"></div>
+            <div class="orbit orbit--two"></div>
+            <div class="hero-ticket">
+              <span>READY</span>
+              <strong id="readyCount">0</strong>
+              <small>ARTICLES</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-rail" aria-label="Publishing steps">
+          <button class="step is-complete" data-step="connect"><span>1</span><strong>Connect</strong><small>Folder + destinations</small></button>
+          <i></i>
+          <button class="step is-current" data-step="choose"><span>2</span><strong>Choose</strong><small>Select articles</small></button>
+          <i></i>
+          <button class="step" data-step="review"><span>3</span><strong>Review</strong><small>Check content</small></button>
+          <i></i>
+          <button class="step" data-step="publish"><span>4</span><strong>Publish</strong><small>Draft or live</small></button>
+        </div>
+
+        <div class="destination-bar" aria-label="Publishing destination">
+          <div><span class="eyebrow eyebrow--gray">Destination</span><strong>Where should this selection go?</strong></div>
+          <div class="provider-switch" role="radiogroup" aria-label="Active publisher">
+            <button class="provider-option is-active" data-provider="blogger" role="radio" aria-checked="true"><i>B</i><span><strong>Blogger</strong><small>Google publishing</small></span></button>
+            <button class="provider-option" data-provider="medium" role="radio" aria-checked="false"><i>M</i><span><strong>Medium</strong><small>Official import or token</small></span></button>
+            <button class="provider-option" data-provider="linkedin" role="radio" aria-checked="false"><i>in</i><span><strong>LinkedIn</strong><small>Rausr company page</small></span></button>
+            <button class="provider-option" data-provider="facebook" role="radio" aria-checked="false"><i>f</i><span><strong>Facebook</strong><small>Rausr Page</small></span></button>
+          </div>
+        </div>
+
+        <div class="section-heading" id="articleSection">
+          <div>
+            <span class="eyebrow eyebrow--purple">Content library</span>
+            <h2>Choose what moves next</h2>
+          </div>
+          <div class="heading-actions">
+            <label class="search-field">
+              <span>⌕</span>
+              <input id="searchInput" type="search" placeholder="Search articles" autocomplete="off">
+            </label>
+            <button class="filter-button is-active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="ready">Ready</button>
+            <button class="filter-button" data-filter="published">Published</button>
+            <button class="filter-button" data-filter="draft">Drafts</button>
+          </div>
+        </div>
+
+        <div class="content-grid">
+          <section class="article-panel">
+            <div class="selection-bar">
+              <label class="check-control"><input type="checkbox" id="selectAll"><span></span></label>
+              <span><strong id="selectedCount">0</strong> selected</span>
+              <button class="text-button" id="clearSelection">Clear</button>
+            </div>
+            <div class="article-list" id="articleList" aria-live="polite"></div>
+            <div class="empty-state" id="emptyState" hidden>
+              <span>⌕</span><h3>No articles found</h3><p>Try another search or filter.</p>
+            </div>
+          </section>
+
+          <aside class="preview-panel" id="previewPanel">
+            <div class="preview-toolbar">
+              <span class="eyebrow eyebrow--gray">Preview</span>
+              <div>
+                <button class="icon-button icon-button--small" id="openPreviewButton" title="Open larger preview">↗</button>
+                <button class="icon-button icon-button--small" id="closePreviewButton" title="Close preview">×</button>
+              </div>
+            </div>
+            <div class="preview-cover" id="previewCover">
+              <span class="preview-state">Select an article</span>
+            </div>
+            <div class="preview-content">
+              <div class="preview-labels" id="previewLabels"></div>
+              <h2 id="previewTitle">Your rendered article appears here.</h2>
+              <div class="preview-meta" id="previewMeta">Title, date, labels and publication state are checked before anything is sent.</div>
+              <div class="preview-excerpt" id="previewExcerpt"></div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="sticky-actions" id="stickyActions">
+          <div>
+            <span class="selection-bubbles" id="selectionBubbles"></span>
+            <span><strong id="stickyCount">0 articles</strong><small>Nothing will publish without review</small></span>
+          </div>
+          <button class="button button--soft" id="saveDraftButton" disabled>Save as drafts</button>
+          <button class="button button--purple" id="reviewButton" disabled>Review selection <span>→</span></button>
+        </div>
+      </section>
+
+      <section class="view" id="activityView" data-view-panel="activity">
+        <div class="plain-header"><span class="eyebrow eyebrow--purple">Publication log</span><h1>Activity</h1><p>Every draft, schedule, publish and update in one readable history.</p></div>
+        <div class="activity-list" id="activityList"></div>
+      </section>
+
+      <section class="view" id="settingsView" data-view-panel="settings">
+        <div class="plain-header"><span class="eyebrow eyebrow--purple">Configuration</span><h1>Settings</h1><p>Manage local content, Google access and your publication defaults.</p></div>
+        <div class="settings-grid">
+          <section class="settings-card">
+            <span class="settings-number">01</span><h2>Hugo project</h2><p>The folder containing config.toml and content/blog.</p>
+            <div class="path-field"><input id="projectPath" type="text" placeholder="/absolute/path/to/your/hugo/site" spellcheck="false"><button id="chooseFolderButton">Check folder</button></div>
+            <div class="field-note"><span class="status-dot"></span><span id="hugoStatus">Hugo will be checked after choosing a folder.</span></div>
+          </section>
+          <section class="settings-card">
+            <span class="settings-number">02</span><h2>Google & Blogger</h2><p>Sign in securely, then choose the destination blog.</p>
+            <button class="connect-button" id="googleConnectButton"><span class="google-mark">G</span><span><strong>Connect Google account</strong><small>OAuth—your password is never stored</small></span><b>→</b></button>
+            <label class="field"><span>OAuth desktop client JSON</span><div class="credential-field"><input id="oauthClientInput" type="text" placeholder="Choose or paste a client_secret.json path" spellcheck="false"><label for="oauthClientFileInput">Choose JSON</label><input id="oauthClientFileInput" type="file" accept="application/json,.json" hidden></div></label>
+            <label class="field"><span>Destination blog</span><select id="blogSelect"><option value="">Connect Google first</option></select></label>
+          </section>
+          <section class="settings-card">
+            <span class="settings-number">03</span><h2>Medium</h2><p>Prepare a formatted partial edition without a token, or connect a legacy token if you already own one.</p>
+            <div class="medium-mode-switch" role="radiogroup" aria-label="Medium publishing method">
+              <button class="medium-mode-option is-active" id="mediumModeImport" type="button" role="radio" aria-checked="true"><strong>Assisted excerpt</strong><small>Recommended · no token</small></button>
+              <button class="medium-mode-option" id="mediumModeToken" type="button" role="radio" aria-checked="false"><strong>API token</strong><small>Legacy accounts only</small></button>
+            </div>
+            <div class="provider-warning provider-warning--positive"><strong>SEO-focused</strong><span>Both modes publish about 70% of the article, then send readers to the complete original on rausr.com. API mode sets canonical automatically; assisted mode guides you to set it.</span></div>
+            <div class="medium-token-fields" id="mediumTokenFields" hidden>
+              <div class="provider-warning"><strong>Legacy API</strong><span>Medium no longer issues new integration tokens. Existing tokens continue to work.</span></div>
+              <label class="field"><span>Integration token</span><div class="credential-field"><input id="mediumTokenInput" type="password" placeholder="Paste an existing Medium token" autocomplete="off" spellcheck="false"><button class="credential-button" id="mediumConnectButton" type="button">Connect Medium</button></div></label>
+              <label class="field"><span>Medium destination</span><select id="mediumTargetSelect"><option value="">Connect Medium first</option></select></label>
+            </div>
+          </section>
+          <section class="settings-card">
+            <span class="settings-number">04</span><h2>LinkedIn Page</h2><p>Prepare short editorial posts for the Rausr company page without requiring restricted API access.</p>
+            <div class="provider-warning provider-warning--linkedin"><strong>Assisted</strong><span>Rausr distils the article, adds its link and focused hashtags, then opens the Page for your final review.</span></div>
+            <label class="field"><span>Company page</span><input id="linkedinCompanyURL" type="url" value="https://www.linkedin.com/company/rausr/" spellcheck="false"></label>
+            <div class="field-note"><span class="status-dot is-online"></span><span>The public article link supplies LinkedIn’s link preview; the header image is also available separately.</span></div>
+          </section>
+          <section class="settings-card">
+            <span class="settings-number">05</span><h2>Facebook Page</h2><p>Use the guided Page composer now, or connect Meta’s Graph API for direct publishing.</p>
+            <div class="medium-mode-switch" role="radiogroup" aria-label="Facebook publishing method">
+              <button class="medium-mode-option is-active" id="facebookModeAssisted" type="button" role="radio" aria-checked="true"><strong>Assisted</strong><small>Works now · final review</small></button>
+              <button class="medium-mode-option" id="facebookModeAPI" type="button" role="radio" aria-checked="false"><strong>Graph API</strong><small>Direct Page publishing</small></button>
+            </div>
+            <label class="field"><span>Facebook Page</span><input id="facebookPageURL" type="url" value="https://www.facebook.com/rausrdotcom/" spellcheck="false"></label>
+            <div class="provider-warning provider-warning--facebook"><strong>Prepared for Facebook</strong><span>Rausr condenses the article, keeps the original link prominent, selects focused hashtags, and makes the header image available.</span></div>
+            <div class="medium-token-fields" id="facebookAPIFields" hidden>
+              <div class="provider-warning"><strong>Meta setup required</strong><span>Create a Meta app and use a Page access token with permission to manage Page posts. Tokens stay on this Mac.</span></div>
+              <label class="field"><span>Facebook Page ID</span><input id="facebookPageId" type="text" inputmode="numeric" placeholder="Numeric Page ID" spellcheck="false"></label>
+              <label class="field"><span>Page access token</span><div class="credential-field"><input id="facebookTokenInput" type="password" placeholder="Paste a Page access token" autocomplete="off" spellcheck="false"><button class="credential-button" id="facebookConnectButton" type="button">Connect Page</button></div></label>
+            </div>
+          </section>
+          <section class="settings-card settings-card--wide">
+            <span class="settings-number">06</span><h2>Publishing defaults</h2><p>These choices can still be changed during review.</p>
+            <div class="field-row">
+              <label class="field"><span>Timezone</span><select id="timezoneSelect"><option>Europe/Bratislava</option><option>UTC</option></select></label>
+              <label class="field"><span>Date-only time</span><input id="publishTimeInput" type="time" value="09:00"></label>
+            </div>
+            <label class="toggle-row"><span><strong>Include header image</strong><small>Place the Hugo header_image above the article</small></span><input id="headerImageToggle" type="checkbox" checked><i></i></label>
+            <label class="toggle-row"><span><strong>Confirm before publishing</strong><small>Always show the final review step</small></span><input id="confirmationToggle" type="checkbox" checked><i></i></label>
+          </section>
+        </div>
+        <div class="settings-footer"><span id="settingsMessage">Changes are kept on this Mac.</span><button class="button button--purple" id="saveSettingsButton">Save settings</button></div>
+      </section>
+    </main>
+  </div>
+
+  <dialog class="review-dialog" id="reviewDialog">
+    <form method="dialog" class="dialog-shell" id="reviewForm">
+      <header class="dialog-header">
+        <div><span class="eyebrow eyebrow--mint">Step 3 of 4</span><h2>Review publication</h2><p id="reviewDestinationText">One last calm check before Blogger changes.</p></div>
+        <button class="dialog-close" value="cancel" aria-label="Close">×</button>
+      </header>
+      <div class="dialog-body">
+        <section class="review-summary" id="reviewSummary"></section>
+        <aside class="publish-options">
+          <h3>Publication behavior</h3>
+          <label class="radio-card is-selected"><input type="radio" name="publishMode" value="frontmatter" checked><span><strong>Follow Hugo</strong><small>Respect each article’s draft and date</small></span><i>✓</i></label>
+          <label class="radio-card"><input type="radio" name="publishMode" value="draft"><span><strong>Draft everything</strong><small>Safest for a first transfer</small></span><i>✓</i></label>
+          <label class="radio-card"><input type="radio" name="publishMode" value="publish"><span><strong id="publishModeTitle">Publish or schedule</strong><small id="publishModeDescription">Use article dates immediately</small></span><i>✓</i></label>
+          <div class="safety-note"><span>◎</span><p id="reviewSafetyText"><strong>Duplicate protection is on.</strong> Existing mapped Blogger posts will be updated.</p></div>
+        </aside>
+      </div>
+      <footer class="dialog-footer"><button class="button button--soft" value="cancel">Back to articles</button><button class="button button--purple" id="publishButton" value="default">Publish selection <span>→</span></button></footer>
+    </form>
+  </dialog>
+
+  <dialog class="review-dialog medium-import-dialog" id="mediumImportDialog">
+    <form method="dialog" class="dialog-shell dialog-shell--compact">
+      <header class="dialog-header">
+        <div><span class="eyebrow eyebrow--mint">Medium partial edition</span><h2>Finish this excerpt on Medium</h2><p>The formatted 70% edition is copied and a new Medium story is open.</p></div>
+        <button class="dialog-close" value="cancel" aria-label="Close">×</button>
+      </header>
+      <div class="medium-import-body">
+        <div class="import-article"><span>M</span><div><small>Current article</small><strong id="mediumImportTitle">Article title</strong></div></div>
+        <ol class="import-steps"><li>Paste into the new Medium story. The title, image, excerpt and continuation link are included.</li><li>Open <strong>⋯ → More settings → Advanced Settings</strong>, select “This story was originally published elsewhere,” and paste the canonical URL below.</li><li>Publish or keep the draft, then return here to record the result.</li></ol>
+        <button class="button button--soft button--wide" id="copyMediumExcerptButton" type="button">Copy formatted excerpt again <span>⌘C</span></button>
+        <label class="field"><span>Original canonical URL</span><div class="credential-field"><input id="mediumImportSource" type="url" readonly><button class="credential-button" id="copyMediumSourceButton" type="button">Copy</button></div></label>
+        <label class="field"><span>Medium story URL <small>Optional, but enables direct links</small></span><input id="mediumStoryURL" type="url" placeholder="https://medium.com/@you/story…" spellcheck="false"></label>
+        <div class="provider-warning provider-warning--positive"><strong>Canonical required</strong><span>Save this exact rausr.com URL in Medium’s Advanced Settings before publishing. The visible continuation link is already included.</span></div>
+      </div>
+      <footer class="dialog-footer"><button class="button button--soft" value="cancel">Finish later</button><button class="button button--soft" id="markMediumDraft" type="button">Mark as draft</button><button class="button button--purple" id="markMediumPublished" type="button">Mark published <span>→</span></button></footer>
+    </form>
+  </dialog>
+
+  <dialog class="review-dialog linkedin-post-dialog" id="linkedinPostDialog">
+    <form method="dialog" class="dialog-shell">
+      <header class="dialog-header">
+        <div><span class="eyebrow eyebrow--mint">LinkedIn Page assistant</span><h2>Review the distilled post</h2><p>The copy is ready on your clipboard and the Rausr company page is open.</p></div>
+        <button class="dialog-close" value="cancel" aria-label="Close">×</button>
+      </header>
+      <div class="linkedin-post-body">
+        <section>
+          <div class="import-article import-article--linkedin"><span>in</span><div><small>Source article</small><strong id="linkedinPostTitle">Article title</strong></div></div>
+          <label class="field"><span>Prepared LinkedIn copy</span><textarea class="linkedin-copy" id="linkedinPostCopy" rows="12" spellcheck="true"></textarea></label>
+          <button class="button button--soft button--wide" id="copyLinkedInPostButton" type="button">Copy post again <span>⌘C</span></button>
+        </section>
+        <aside class="linkedin-media-panel">
+          <span class="eyebrow eyebrow--gray">Header image</span>
+          <div class="linkedin-image-frame"><img id="linkedinHeaderPreview" alt="Article header image preview"></div>
+          <button class="button button--soft button--wide" id="openLinkedInImageButton" type="button">Open full-size image <span>↗</span></button>
+          <p>LinkedIn normally creates a preview from the rausr.com link. If you prefer an image post, open this image and save or drag it into LinkedIn.</p>
+          <label class="field"><span>Published LinkedIn post URL <small>Optional</small></span><input id="linkedinPostURL" type="url" placeholder="https://www.linkedin.com/feed/update/…" spellcheck="false"></label>
+        </aside>
+      </div>
+      <footer class="dialog-footer"><button class="button button--soft" value="cancel">Finish later</button><button class="button button--soft" id="markLinkedInDraft" type="button">Mark as draft</button><button class="button button--purple" id="markLinkedInPublished" type="button">Mark published <span>→</span></button></footer>
+    </form>
+  </dialog>
+
+  <dialog class="review-dialog linkedin-post-dialog" id="facebookPostDialog">
+    <form method="dialog" class="dialog-shell">
+      <header class="dialog-header">
+        <div><span class="eyebrow eyebrow--mint">Facebook Page assistant</span><h2>Review the distilled post</h2><p>The copy is ready on your clipboard and the Rausr Facebook Page is open.</p></div>
+        <button class="dialog-close" value="cancel" aria-label="Close">×</button>
+      </header>
+      <div class="linkedin-post-body">
+        <section>
+          <div class="import-article import-article--facebook"><span>f</span><div><small>Source article</small><strong id="facebookPostTitle">Article title</strong></div></div>
+          <label class="field"><span>Prepared Facebook copy</span><textarea class="linkedin-copy" id="facebookPostCopy" rows="12" spellcheck="true"></textarea></label>
+          <button class="button button--soft button--wide" id="copyFacebookPostButton" type="button">Copy post again <span>⌘C</span></button>
+        </section>
+        <aside class="linkedin-media-panel">
+          <span class="eyebrow eyebrow--gray">Header image</span>
+          <div class="linkedin-image-frame"><img id="facebookHeaderPreview" alt="Article header image preview"></div>
+          <button class="button button--soft button--wide" id="openFacebookImageButton" type="button">Open full-size image <span>↗</span></button>
+          <p>Facebook normally creates a preview from the rausr.com link. You can also open and attach the full-size header image.</p>
+          <label class="field"><span>Published Facebook post URL <small>Optional</small></span><input id="facebookPostURL" type="url" placeholder="https://www.facebook.com/rausrdotcom/posts/…" spellcheck="false"></label>
+        </aside>
+      </div>
+      <footer class="dialog-footer"><button class="button button--soft" value="cancel">Finish later</button><button class="button button--soft" id="markFacebookDraft" type="button">Mark as draft</button><button class="button button--purple" id="markFacebookPublished" type="button">Mark published <span>→</span></button></footer>
+    </form>
+  </dialog>
+
+  <dialog class="onboarding-dialog" id="onboardingDialog">
+    <div class="onboarding-shell">
+      <button class="dialog-close onboarding-close" id="onboardingClose" aria-label="Close">×</button>
+      <div class="onboarding-art"><img src="assets/logo-solo.svg" alt="Rausr"><div class="onboarding-rings"></div><span>HUGO</span><b>→</b><span>MULTI-PUBLISHER</span></div>
+      <div class="onboarding-copy">
+        <span class="eyebrow eyebrow--purple">Welcome to Rausr Publisher</span>
+        <h1>Your publishing desk,<br>without the desk mess.</h1>
+        <p>Connect the local Hugo project and your publishing destinations once. After that, every article is a few clear clicks away.</p>
+        <div class="onboarding-steps">
+          <div><span>1</span><p><strong>Choose project</strong><small>Grant access to the Rausr Hugo folder</small></p></div>
+          <div><span>2</span><p><strong>Connect destinations</strong><small>Google OAuth plus Medium, LinkedIn and Facebook workflows</small></p></div>
+          <div><span>3</span><p><strong>Set your defaults</strong><small>Timezone, images and review behavior</small></p></div>
+        </div>
+        <button class="button button--purple button--wide" id="startSetupButton">Start setup <span>→</span></button>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span>✓</span><p id="toastText">Saved.</p></div>
+
+  <script src="compat.js"></script>
+  <script src="native.js"></script>
+  <script src="publisher.js"></script>
+</body>
+</html>

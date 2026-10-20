@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Rausr Publisher",
+  "description": "Review and publish Rausr Hugo articles to Blogger, Medium, LinkedIn and Facebook.",
+  "version": "0.6.0",
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "96": "assets/icon-96.png",
+    "128": "assets/icon-128.png"
+  },
+  "action": {
+    "default_title": "Rausr Publisher",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "nativeMessaging",
+    "storage",
+    "tabs",
+    "clipboardWrite"
+  ]
+}
