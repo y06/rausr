@@ -16,7 +16,7 @@
 {{ $total := 0 }}
 {{ if $p }}
   {{ $total = $p.TotalNumberOfElements }}
-  {{ $index = add (mul (sub $p.PageNumber 1) $p.PageSize) $index }}
+  {{ $index = add (mul (sub $p.PageNumber 1) (len $p.First.Pages)) $index }}
 {{ else }}
   {{/* Fallback: compute global index by sorting all blog posts desc and finding this page */}}
   {{ $allBlog := sort (where $page.Site.RegularPages "Section" "blog") "Date" "desc" }}

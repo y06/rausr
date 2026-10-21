@@ -1,12 +1,13 @@
 {{ with .Params.related_content }}
   {{ $page := $ }}
+  {{ $siteData := partial "site-data.html" $page }}
   {{ $resolved := slice }}
   {{ range . }}
     {{ with site.GetPage .path }}{{ $resolved = $resolved | append . }}{{ end }}
   {{ end }}
   {{ if gt (len $resolved) 0 }}
     {{ $accent := "" }}
-    {{ range $page.Site.Data.wiki_taxonomy.categories }}
+    {{ range $siteData.wiki_taxonomy.categories }}
       {{ if eq .slug $page.Params.wiki_category }}{{ $accent = .accent }}{{ end }}
     {{ end }}
     <section class="more-works wiki-related{{ with $accent }} wiki-domain--{{ . }}{{ end }}" aria-labelledby="wiki-related-title">

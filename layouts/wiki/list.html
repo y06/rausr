@@ -1,6 +1,7 @@
 {{ partial "header" . }}
 
-{{ $taxonomy := .Site.Data.wiki_taxonomy }}
+{{ $siteData := partial "site-data.html" . }}
+{{ $taxonomy := $siteData.wiki_taxonomy }}
 {{ $isRoot := eq .RelPermalink "/wiki/" }}
 {{ $topicTotal := 0 }}
 {{ range $taxonomy.categories }}{{ $topicTotal = add $topicTotal (len .topics) }}{{ end }}
@@ -135,7 +136,7 @@
     {{ end }}
 
     {{ $guides := sort .RegularPages "Params.order" }}
-    {{ $designerCount := len (index .Site.Data.wiki_designers.categories $categorySlug) }}
+    {{ $designerCount := len (index $siteData.wiki_designers.categories $categorySlug) }}
     <section class="wiki-guides{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" id="published-guides" aria-labelledby="published-guides-title">
       <div class="wiki-section-heading wiki-section-heading--row">
         <div>

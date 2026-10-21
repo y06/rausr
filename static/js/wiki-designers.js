@@ -14,6 +14,53 @@ document.addEventListener("DOMContentLoaded", () => {
     text: normalise(profile.dataset.search),
   }));
 
+  const placeholderPhrases = ["Paula Scher", "Massimo Vignelli", "Susan Kare", "Wayfinding", "Typography", "Logo and Symbol Design"];
+  let placeholderIndex = -1;
+  let placeholderPosition = 0;
+  let placeholderTimer = null;
+  let placeholderAnimating = false;
+
+  const setPlaceholder = (text) => {
+    input.placeholder = text;
+  };
+
+  const stopPlaceholder = () => {
+    placeholderAnimating = false;
+    window.clearTimeout(placeholderTimer);
+    placeholderTimer = null;
+    setPlaceholder("Search designers or topics");
+  };
+
+  const typePlaceholder = () => {
+    if (!placeholderAnimating) return;
+    const phrase = placeholderPhrases[placeholderIndex];
+    placeholderPosition++;
+    setPlaceholder(phrase.slice(0, placeholderPosition));
+    if (placeholderPosition < phrase.length) {
+      placeholderTimer = window.setTimeout(typePlaceholder, 40);
+      return;
+    }
+    placeholderTimer = window.setTimeout(() => {
+      if (!placeholderAnimating) return;
+      let nextIndex;
+      do { nextIndex = Math.floor(Math.random() * placeholderPhrases.length); }
+      while (nextIndex === placeholderIndex);
+      placeholderIndex = nextIndex;
+      placeholderPosition = 0;
+      setPlaceholder("");
+      placeholderTimer = window.setTimeout(typePlaceholder, 40);
+    }, 5000);
+  };
+
+  const startPlaceholder = () => {
+    if (placeholderAnimating || document.activeElement === input || input.value.trim()) return;
+    placeholderAnimating = true;
+    placeholderIndex = Math.floor(Math.random() * placeholderPhrases.length);
+    placeholderPosition = 0;
+    setPlaceholder("");
+    placeholderTimer = window.setTimeout(typePlaceholder, 40);
+  };
+
   const filter = () => {
     const terms = normalise(input.value).trim().split(/\s+/).filter(Boolean);
     let count = 0;
@@ -90,6 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
   form.hidden = false;
   form.addEventListener("submit", (event) => event.preventDefault());
   input.addEventListener("input", filter);
+  input.addEventListener("focus", stopPlaceholder);
+  input.addEventListener("blur", startPlaceholder);
   form.addEventListener("reset", () => {
     input.value = "";
     filter();
@@ -101,6 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   filter();
   openLinkedProfile();
+  startPlaceholder();
   window.addEventListener("hashchange", openLinkedProfile);
   document.addEventListener("click", (event) => {
     const link = event.target.closest('a[href^="#"]');

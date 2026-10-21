@@ -1,4 +1,5 @@
-{{- $badges := site.Data.wiki_guide_badges -}}
+{{- $siteData := partial "site-data.html" . -}}
+{{- $badges := $siteData.wiki_guide_badges -}}
 {{- if or .Params.wiki_tools .Params.wiki_skills -}}
 <section class="wiki-guide-profile" aria-label="Tools and skills for this guide">
   {{- with .Params.wiki_tools }}

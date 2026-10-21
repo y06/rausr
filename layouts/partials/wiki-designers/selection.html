@@ -1,4 +1,5 @@
-{{- $data := .Site.Data.wiki_designers -}}
+{{- $siteData := partial "site-data.html" . -}}
+{{- $data := $siteData.wiki_designers -}}
 {{- $ids := slice -}}
 {{- if isset .Params "wiki_designers" -}}
   {{- $ids = .Params.wiki_designers -}}

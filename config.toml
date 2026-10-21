@@ -1,10 +1,11 @@
 baseURL = "https://rausr.com/"
 enableRobotsTXT = true
-languageCode = "en-us"
+locale = "en-us"
 title = "We Design/Cook Random User Recipes, Yummy!"
 
 [params]
     author = "rausr"
+    legacy_locale = "en-us" # Used by Hugo 0.133.1 until the local upgrade.
     description = "A graphic design studio and creative blog exploring trends, techniques, case studies, and marketing insights."
     accent = "#43414C"
     showBorder = false

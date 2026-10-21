@@ -1,6 +1,7 @@
 {{ partial "header" . }}
 
-{{ $taxonomy := .Site.Data.wiki_taxonomy }}
+{{ $siteData := partial "site-data.html" . }}
+{{ $taxonomy := $siteData.wiki_taxonomy }}
 {{ $categorySlug := .Params.wiki_category }}
 {{ $categoryTitle := .Params.wiki_category_title | default (humanize $categorySlug) }}
 {{ $currentCategory := false }}

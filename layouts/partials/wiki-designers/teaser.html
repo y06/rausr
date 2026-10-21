@@ -1,3 +1,4 @@
+{{- $siteData := partial "site-data.html" . -}}
 <section class="wiki-designers-teaser" aria-labelledby="wiki-designers-teaser-title">
   <div class="wiki-section-heading wiki-designers-teaser__intro">
     <p class="wiki-eyebrow">People behind the practice</p>
@@ -6,9 +7,9 @@
   </div>
   <ul class="wiki-designer-names" aria-label="Selected designers">
     {{ range slice "paula-scher" "susan-kare" "paul-rand" "otl-aicher" "milton-glaser" "margaret-calvert" "cipe-pineles" "saul-bass" "jan-tschichold" "edward-tufte" "peter-saville" "april-greiman" }}
-      {{ $person := index site.Data.wiki_designers.people . }}
+      {{ $person := index $siteData.wiki_designers.people . }}
       <li><a href="/wiki/designers/#{{ . }}">{{ $person.name }}</a></li>
     {{ end }}
   </ul>
-  <a class="wiki-designers-teaser__cta" href="/wiki/designers/">Explore {{ len .Site.Data.wiki_designers.people }} designers <span aria-hidden="true">→</span></a>
+  <a class="wiki-designers-teaser__cta" href="/wiki/designers/">Explore {{ len $siteData.wiki_designers.people }} designers <span aria-hidden="true">→</span></a>
 </section>

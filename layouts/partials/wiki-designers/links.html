@@ -1,12 +1,13 @@
 {{- $page := . -}}
+{{- $siteData := partial "site-data.html" . -}}
 {{- $ids := partialCached "wiki-designers/selection.html" . .RelPermalink -}}
 {{- with $ids -}}
   {{- $accent := "" -}}
-  {{- range $page.Site.Data.wiki_taxonomy.categories -}}
+  {{- range $siteData.wiki_taxonomy.categories -}}
     {{- if eq .slug $page.Params.wiki_category }}{{ $accent = .accent }}{{ end -}}
   {{- end -}}
-  <section class="wiki-designer-links{{ if $page.IsSection }} wiki-designer-links--category{{ end }}{{ with $accent }} wiki-domain--{{ . }}{{ end }}" aria-labelledby="wiki-designer-links-title">
-    <div class="wiki-designer-links__heading{{ if $page.IsSection }} wiki-section-heading{{ end }}">
+  <section class="wiki-designer-links{{ if $page.IsSection }} wiki-designer-links--category{{ else }} wiki-designer-links--guide{{ end }}{{ with $accent }} wiki-domain--{{ . }}{{ end }}" aria-labelledby="wiki-designer-links-title">
+    <div class="wiki-designer-links__heading wiki-section-heading">
       <p class="wiki-eyebrow">People and practice</p>
       <h2 id="wiki-designer-links-title">Designers to know</h2>
       {{ if $page.IsSection }}
@@ -19,11 +20,16 @@
       {{ if not $page.IsSection }}<p class="wiki-designer-links__note">References for related ideas and craft.</p>{{ end }}
       <ul class="wiki-designer-names" aria-label="Selected designers">
         {{ range . }}
-          {{ $person := index $page.Site.Data.wiki_designers.people . }}
-          <li><a href="/wiki/designers/#{{ . }}" title="{{ $person.focus }}">{{ $person.name }}{{ if not $page.IsSection }} <span aria-hidden="true">↗</span>{{ end }}</a></li>
+          {{ $person := index $siteData.wiki_designers.people . }}
+          <li><a href="/wiki/designers/#{{ . }}" title="{{ $person.focus }}">{{ $person.name }}</a></li>
         {{ end }}
       </ul>
     </div>
-    {{ if $page.IsSection }}<a class="wiki-designers-teaser__cta" href="/wiki/designers/">Explore all {{ len $page.Site.Data.wiki_designers.people }} designers <span aria-hidden="true">→</span></a>{{ end }}
+    {{ if $page.IsSection }}
+      <a class="wiki-designers-teaser__cta" href="/wiki/designers/">
+        Explore all {{ len $siteData.wiki_designers.people }} designers
+        <span aria-hidden="true">→</span>
+      </a>
+    {{ end }}
   </section>
 {{- end -}}

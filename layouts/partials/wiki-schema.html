@@ -1,3 +1,5 @@
+{{- $siteData := partial "site-data.html" . -}}
+{{- $locale := partial "site-locale.html" . -}}
 {{- $isDirectory := .Params.wiki_directory | default false -}}
 {{- $isWikiPage := and (eq .Section "wiki") .IsPage (not $isDirectory) -}}
 {{- $breadcrumbs := slice
@@ -21,7 +23,7 @@
   "name" .Title
   "headline" .Title
   "description" (.Description | default .Site.Params.description)
-  "inLanguage" .Site.LanguageCode
+  "inLanguage" $locale
   "isPartOf" (dict "@id" (printf "%s#website" .Site.BaseURL))
   "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
 -}}
@@ -37,14 +39,14 @@
   {{- $mentions := slice -}}
   {{- range partialCached "wiki-designers/selection.html" . .RelPermalink -}}
     {{- $profileURL := printf "%s#%s" ("/wiki/designers/" | absURL) . -}}
-    {{- $mentions = $mentions | append (dict "@type" "Person" "@id" $profileURL "url" $profileURL "name" (index site.Data.wiki_designers.people .).name) -}}
+    {{- $mentions = $mentions | append (dict "@type" "Person" "@id" $profileURL "url" $profileURL "name" (index $siteData.wiki_designers.people .).name) -}}
   {{- end -}}
   {{- with $mentions }}{{ $pageNode = merge $pageNode (dict "mentions" .) }}{{ end -}}
 {{- end -}}
 {{- $personNodes := slice -}}
 {{- if $isDirectory -}}
   {{- $people := slice -}}
-  {{- range $id, $person := .Site.Data.wiki_designers.people -}}
+  {{- range $id, $person := $siteData.wiki_designers.people -}}
     {{- $people = $people | append (merge $person (dict "id" $id)) -}}
   {{- end -}}
   {{- $items := slice -}}
@@ -60,7 +62,7 @@
   {{- $pageNode = merge $pageNode (dict "mainEntity" (dict "@type" "ItemList" "numberOfItems" (len $items) "itemListElement" $items)) -}}
 {{- end -}}
 {{- $graph := slice
-  (dict "@type" "WebSite" "@id" (printf "%s#website" .Site.BaseURL) "url" .Site.BaseURL "name" .Site.Title "inLanguage" .Site.LanguageCode)
+  (dict "@type" "WebSite" "@id" (printf "%s#website" .Site.BaseURL) "url" .Site.BaseURL "name" .Site.Title "inLanguage" $locale)
   (dict "@type" "BreadcrumbList" "@id" (printf "%s#breadcrumb" .Permalink) "itemListElement" $breadcrumbs)
   $pageNode
 -}}

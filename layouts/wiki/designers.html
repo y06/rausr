@@ -1,6 +1,7 @@
 {{ partial "header" . }}
-{{ $data := .Site.Data.wiki_designers }}
-{{ $taxonomy := .Site.Data.wiki_taxonomy }}
+{{ $siteData := partial "site-data.html" . }}
+{{ $data := $siteData.wiki_designers }}
+{{ $taxonomy := $siteData.wiki_taxonomy }}
 {{ $guides := where (where .Site.RegularPages "Section" "wiki") "Params.wiki_directory" "ne" true }}
 
 <main class="wiki-main wiki-designers-main">
@@ -57,15 +58,14 @@
       <div class="wiki-section-heading">
         <p class="wiki-eyebrow">A useful starting point</p>
         <h2 id="wiki-designer-directory-title">Small profiles. Big ideas.</h2>
-        <p>Open a profile for defining work, a study prompt, and links into the Wiki and archive.</p>
+        <p>Search by designer or area of practice, then open a profile for defining work, a study prompt, and links into the Wiki and archive.</p>
       </div>
       <form class="wiki-designer-search" role="search" aria-label="Find a designer" hidden>
-        <label class="wiki-eyebrow" for="wiki-designer-search">Find a designer or area of practice</label>
         <div class="wiki-designer-search__field">
-          <input type="search" id="wiki-designer-search" placeholder="Try “Scher”, “typography”, or “wayfinding”" autocomplete="off" aria-controls="wiki-designer-profiles">
+          <input type="search" id="wiki-designer-search" placeholder="Search designers or topics" aria-label="Find a designer or area of practice" autocomplete="off" aria-controls="wiki-designer-profiles">
           <button type="reset">Clear</button>
         </div>
-        <p class="wiki-designer-search__status wiki-count" role="status" aria-live="polite"></p>
+        <p class="wiki-designer-search__status" role="status" aria-live="polite"></p>
       </form>
       <div class="wiki-designer-profiles" id="wiki-designer-profiles">
         {{ $people := slice }}
@@ -127,7 +127,10 @@
       </div>
       <p class="wiki-designer-search__empty" hidden>No profiles match that search. Try a name or a broader discipline.</p>
     </section>
-    <nav class="wiki-designers-return" aria-label="Continue through the Wiki"><a class="wiki-capsule" href="/wiki/">← Back to the complete Wiki tree</a></nav>
+    <nav class="wiki-designers-return article-navigation" aria-label="Continue exploring graphic design">
+      <a class="article-nav-button" href="/wiki/"><span>← Complete index</span><strong>Graphic Design Wiki</strong></a>
+      <a class="article-nav-button is-next" href="/blog/"><span>Explore the archive →</span><strong>Graphic Journal Articles</strong></a>
+    </nav>
   </div>
 </main>
 {{ $scriptVersion := readFile "static/js/wiki-designers.js" | md5 }}

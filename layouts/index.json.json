@@ -1,4 +1,5 @@
 {{- $pages := where .Site.RegularPages "Section" "in" (slice "blog" "works" "wiki") -}}
+{{- $siteData := partial "site-data.html" . -}}
 {{- $blogAsc := sort (where .Site.RegularPages "Section" "blog") "Date" "asc" -}}
 {{- $articleNumberByURL := dict -}}
 {{- range $i, $pg := $blogAsc -}}
@@ -46,12 +47,12 @@
   {{- $seoTags := .Params.seotags | default (slice) -}}
   {{- if eq .Section "wiki" -}}
     {{- if .Params.wiki_directory -}}
-      {{- range $id, $person := .Site.Data.wiki_designers.people -}}
+      {{- range $id, $person := $siteData.wiki_designers.people -}}
         {{- $seoTags = $seoTags | append $person.name $person.focus (replace $id "-" " ") -}}
       {{- end -}}
     {{- else -}}
       {{- range partialCached "wiki-designers/selection.html" . .RelPermalink -}}
-        {{- $seoTags = $seoTags | append (index site.Data.wiki_designers.people .).name (replace . "-" " ") -}}
+        {{- $seoTags = $seoTags | append (index $siteData.wiki_designers.people .).name (replace . "-" " ") -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}

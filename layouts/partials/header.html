@@ -1,5 +1,6 @@
+{{- $siteData := partial "site-data.html" . -}}
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ partial "site-locale.html" . }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -900,7 +901,7 @@
         (dict "label" "UX & UI" "url" "/topics/ux-ui/")
         (dict "label" "Trends" "url" "/topics/trends/")
     }}
-    {{ $wikiCategories := first 4 .Site.Data.wiki_taxonomy.categories }}
+    {{ $wikiCategories := first 4 $siteData.wiki_taxonomy.categories }}
 
     <header class="rausr-menu-wrap">
         <nav class="rausr-menu" data-rausr-menu>
