@@ -1,5 +1,5 @@
 # People are reference subjects, not the credited authors of the Wiki guides.
-# Keep selections to four; a guide can override them with wiki_designers in front matter.
+# Guides can show up to five designers; category selections stay at four.
 categories:
   identity-and-branding: [paul-rand, paula-scher, massimo-vignelli, michael-bierut]
   editorial-and-publication: [jan-tschichold, cipe-pineles, josef-muller-brockmann, peter-saville]

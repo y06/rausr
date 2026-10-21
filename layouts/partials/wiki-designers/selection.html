@@ -12,7 +12,9 @@
   {{- end -}}
 {{- end -}}
 {{- $selected := slice -}}
-{{- range first 4 ($ids | uniq) -}}
+{{- $limit := 5 -}}
+{{- if .IsSection }}{{ $limit = 4 }}{{ end -}}
+{{- range first $limit ($ids | uniq) -}}
   {{- if index $data.people . -}}
     {{- $selected = $selected | append . -}}
   {{- else -}}

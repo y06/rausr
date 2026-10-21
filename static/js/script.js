@@ -212,18 +212,27 @@ document.addEventListener("DOMContentLoaded", function () {
         updateSliderState();
     });
 
-    const sectionLinks = document.querySelectorAll('.article-inline-toc nav a[href^="#"], .article-right-toc nav a[href^="#"], .wiki-article-sidebar nav a[href^="#"]');
+    const sectionLinks = document.querySelectorAll('.article-inline-toc nav a[href^="#"], .article-right-toc nav a[href^="#"], .wiki-article-sidebar nav a[href^="#"], .home-cta-buttons a[href^="#"]');
+    const scrollButtons = document.querySelectorAll("[data-scroll-target]");
     let sectionScrollFrame = null;
     const cancelSectionScroll = () => {
         if (sectionScrollFrame !== null) cancelAnimationFrame(sectionScrollFrame);
         sectionScrollFrame = null;
     };
-    const scrollToSection = (heading) => {
+    const scrollToSection = (element, block = "start") => {
         cancelSectionScroll();
         const start = window.scrollY;
-        const offset = parseFloat(getComputedStyle(heading).scrollMarginTop) || 0;
+        const bounds = element.getBoundingClientRect();
+        const offset = parseFloat(getComputedStyle(element).scrollMarginTop) || 0;
         const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-        const target = Math.max(0, Math.min(start + heading.getBoundingClientRect().top - offset, maxScroll));
+        let destination = start + bounds.top - offset;
+        if (block === "center") destination = start + bounds.top - (window.innerHeight - bounds.height) / 2;
+        if (block === "end") destination = start + bounds.bottom - window.innerHeight;
+        if (block === "nearest") {
+            destination = bounds.top < offset ? start + bounds.top - offset
+                : bounds.bottom > window.innerHeight ? start + bounds.bottom - window.innerHeight : start;
+        }
+        const target = Math.max(0, Math.min(destination, maxScroll));
         const distance = target - start;
         if (Math.abs(distance) < 1) return;
 
@@ -240,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         sectionScrollFrame = requestAnimationFrame(step);
     };
-    if (sectionLinks.length) {
+    if (sectionLinks.length || scrollButtons.length) {
         window.addEventListener("wheel", cancelSectionScroll, { passive: true });
         window.addEventListener("touchstart", cancelSectionScroll, { passive: true });
         window.addEventListener("keydown", cancelSectionScroll);
@@ -272,7 +281,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return null;
     };
 
-    const scrollButtons = document.querySelectorAll("[data-scroll-target]");
     scrollButtons.forEach((button) => {
         button.addEventListener("click", (event) => {
             const fallbackList = button.dataset.scrollFallback
@@ -291,7 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             event.preventDefault();
             const block = button.dataset.scrollBlock || "start";
-            targetElement.scrollIntoView({ behavior: "smooth", block });
+            scrollToSection(targetElement, block);
         });
     });
 

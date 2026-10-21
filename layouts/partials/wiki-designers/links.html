@@ -12,18 +12,18 @@
       <h2 id="wiki-designer-links-title">Designers to know</h2>
       {{ if $page.IsSection }}
         <p class="wiki-section-lede">Explore the people and ideas connected to this part of graphic design.</p>
-      {{ else }}
-        <a class="wiki-designers-index-link" href="/wiki/designers/">Explore the designer tree <span aria-hidden="true">→</span></a>
       {{ end }}
     </div>
     <div class="wiki-designer-links__people">
-      {{ if not $page.IsSection }}<p class="wiki-designer-links__note">References for related ideas and craft.</p>{{ end }}
       <ul class="wiki-designer-names" aria-label="Selected designers">
         {{ range . }}
           {{ $person := index $siteData.wiki_designers.people . }}
           <li><a href="/wiki/designers/#{{ . }}" title="{{ $person.focus }}">{{ $person.name }}</a></li>
         {{ end }}
       </ul>
+      {{ if not $page.IsSection }}
+        <a class="wiki-designer-links__more" href="/wiki/designers/"><span class="wiki-designer-links__more-label">Explore more designers</span><span class="wiki-designer-links__more-arrow" aria-hidden="true">→</span></a>
+      {{ end }}
     </div>
     {{ if $page.IsSection }}
       <a class="wiki-designers-teaser__cta" href="/wiki/designers/">
