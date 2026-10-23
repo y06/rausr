@@ -672,7 +672,7 @@ h5 {
     color: color(display-p3 0.408 0.282 1.000);
 }
 
-.card100-top:hover {
+.card100:is(:hover, :focus-within) .card100-top {
     transform: translateY(+0.625rem);
 }
 
@@ -1031,7 +1031,7 @@ h5 {
     justify-content: center;
 }
 
-.card200-top:hover {
+.card200:is(:hover, :focus-within) .card200-top {
     transform: translateX(+0.625rem);
 }
 
@@ -4748,12 +4748,58 @@ html:has(.article-container) { scroll-behavior: smooth; }
 }
 
 .cta-section-works {
-    color: color(display-p3 0.408 0.282 1.000) !important;
+    color: #143e65 !important;
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    background-color: color(display-p3 0.831 1 0.808);
+    background: linear-gradient(125deg, #d2e8ff 0%, #9cc8fa 55%, #d9edff 100%);
+    background: linear-gradient(125deg,
+      color(display-p3 0.81 0.9 1) 0%,
+      color(display-p3 0.61 0.79 0.98) 55%,
+      color(display-p3 0.84 0.93 1) 100%);
     padding: 2rem 2rem 0rem 2rem;
+}
+
+.cta-section-works::before,
+.cta-section-blog::before {
+    position: absolute;
+    inset: -8%;
+    z-index: 0;
+    pointer-events: none;
+    content: "";
+    animation: home-section-breathe 12s ease-in-out infinite alternate;
+}
+
+.cta-section-works::before {
+    background:
+      radial-gradient(circle at 18% 26%, color(display-p3 0.129 0.561 1 / 0.2), transparent 44%),
+      radial-gradient(circle at 85% 74%, color(display-p3 1 1 1 / 0.62), transparent 46%);
+}
+
+@keyframes home-section-breathe {
+    from { opacity: 0.2; }
+    to { opacity: 0.72; }
+}
+
+.cta-section-works h2 { color: #123d66 !important; }
+
+.cta-section-works .card-container { margin-bottom: 4.375rem; }
+
+.cta-section-works .card100 {
+    background: color(display-p3 0.420 0.270 1 / 0.3);
+}
+
+.cta-section-works .card100-top {
+    background: color(display-p3 0.420 0.270 1) !important;
+}
+
+.cta-section-works .card100-top span,
+.cta-section-works .card100-bottom span {
+    color: color(display-p3 0.831 1 0.808) !important;
+}
+
+.cta-section-works .card100-bottom {
+    background: color(display-p3 0.420 0.270 1 / 0.3);
 }
 
 .works-bubbles {
@@ -4775,7 +4821,7 @@ html:has(.article-container) { scroll-behavior: smooth; }
     width: calc(var(--bubble-size) + 42px);
     height: calc(var(--bubble-size) + 10px);
     border-radius: 999px;
-    border: 2px solid color(display-p3 0.660 0.590 1.000 / 0.34);
+    border: 2px solid color(display-p3 0.129 0.561 1 / 0.24);
     background: transparent;
     opacity: 0.56;
     will-change: transform;
@@ -4798,12 +4844,50 @@ html:has(.article-container) { scroll-behavior: smooth; }
 }
 
 .cta-section-blog {
-    background-color: color(display-p3 0.7686 0.6588 0.8353);
-    background-image: radial-gradient(circle, color(display-p3 0.6941 0.5020 0.8157) 1px, transparent 1px);
-    background-size: 22px 22px; /* 2px dot + 20px spacing = 22px */
-    background-repeat: repeat;
-    color: color(display-p3 0.831 1 0.808);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #d8f5e3;
+    background-image:
+      radial-gradient(circle, rgba(104, 72, 255, 0.18) 1.1px, transparent 1.5px),
+      radial-gradient(ellipse 65% 85% at 5% 15%, rgba(255, 211, 190, 0.6), transparent 72%),
+      radial-gradient(ellipse 72% 90% at 90% 85%, rgba(166, 235, 239, 0.75), transparent 72%),
+      linear-gradient(118deg, #d8f5e3 0%, #baf0b5 46%, #b4e7e6 74%, #ecf6d7 100%);
+    background-image:
+      radial-gradient(circle, color(display-p3 0.408 0.282 1 / 0.18) 1.1px, transparent 1.5px),
+      radial-gradient(ellipse 65% 85% at 5% 15%, color(display-p3 1 0.82 0.70 / 0.6), transparent 72%),
+      radial-gradient(ellipse 72% 90% at 90% 85%, color(display-p3 0.62 0.90 0.90 / 0.75), transparent 72%),
+      linear-gradient(118deg,
+        color(display-p3 0.84 0.96 0.86) 0%,
+        color(display-p3 0.68 0.93 0.66) 46%,
+        color(display-p3 0.68 0.90 0.90) 74%,
+        color(display-p3 0.91 0.96 0.80) 100%);
+    background-size: 22px 22px, auto, auto, auto;
+    color: #174934;
     padding: 2rem 2rem 0rem 2rem;
+}
+
+.cta-section-blog::before {
+    background:
+      radial-gradient(circle at 20% 72%, color(display-p3 1 0.66 0.74 / 0.17), transparent 46%),
+      radial-gradient(circle at 82% 18%, color(display-p3 0.408 0.282 1 / 0.1), transparent 45%);
+    animation-delay: -5s;
+}
+
+.cta-section-blog > * { position: relative; z-index: 1; }
+.cta-section-blog h2 {
+    margin-bottom: 1.25rem;
+    color: color(display-p3 0.408 0.282 1) !important;
+}
+
+.cta-section-blog > h2::after {
+    display: block;
+    width: 4rem;
+    height: 2px;
+    margin: 1.25rem auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, color(display-p3 0.408 0.282 1), color(display-p3 0.305 0.901 0.886));
+    content: "";
 }
 
 .cta-section-contact {
@@ -4823,17 +4907,34 @@ html:has(.article-container) { scroll-behavior: smooth; }
 }
 
 .cta-section-works p {
-    color: #34313F !important;
+    color: #234763 !important;
     margin-bottom: 3rem;
 }
 
 .cta-section-blog p {
     margin-bottom: 4.5rem;
-    color: #fff;
+    color: #22503d !important;
+}
+
+.cta-section-blog > p {
+    max-width: 700px;
+    color: #164c50 !important;
+    color: color(display-p3 0.08 0.28 0.29) !important;
+    font-size: clamp(1.0625rem, 1.45vw, 1.1875rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.6;
 }
 
 .cta-section-blog .card20-meta {
-    color: color(display-p3 0.831 1 0.808);
+    color: color(display-p3 0.408 0.282 1);
+}
+
+.cta-section-blog .card20-meta__date,
+.cta-section-blog .card20-meta__author { color: color(display-p3 0.408 0.282 1); }
+
+@media (prefers-reduced-motion: reduce) {
+    .cta-section-works::before,
+    .cta-section-blog::before { animation: none; opacity: 0.45; }
 }
 
 .cta-section-contact p {

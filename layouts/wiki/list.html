@@ -12,7 +12,7 @@
 {{ end }}
 
 <main class="wiki-main">
-  <section class="header wiki-hero{{ if not $isRoot }} wiki-hero--category{{ end }}">
+  <section class="header wiki-hero{{ if $isRoot }} wiki-hero--root{{ else }} wiki-hero--category{{ end }}">
     <div class="header-content wiki-hero__copy">
       <h1>{{ .Title }}</h1>
       <div class="wiki-hero__intro">{{ .Content }}</div>
@@ -170,9 +170,7 @@
     </section>
   </div>
 
-  {{ partial "wiki-designers/links.html" . }}
-
-  <nav class="wiki-domain-nav{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" aria-label="Other wiki domains">
+  <nav class="wiki-domain-nav wiki-domain-nav--before-people{{ with $currentCategory }} wiki-domain--{{ .accent }}{{ end }}" aria-label="Other wiki domains">
     <div class="wiki-domain-nav__inner">
       <p class="wiki-eyebrow">Main knowledge base</p>
       <h2 class="wiki-domain-nav__title">Continue through the Wiki</h2>
@@ -186,12 +184,16 @@
       </div>
     </div>
   </nav>
+
+  <div class="wiki-tree__people-followup">
+    {{ partial "wiki-designers/links.html" . }}
+
+    <div class="wiki-tree__subscribe">
+      {{ partial "subscribe.html" . }}
+    </div>
+  </div>
   {{ end }}
 </main>
-
-{{ if not $isRoot }}
-  {{ partial "subscribe.html" . }}
-{{ end }}
 
 {{ partial "featured-content.html" . }}
 

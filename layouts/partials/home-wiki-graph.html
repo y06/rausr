@@ -1,0 +1,125 @@
+{{- $siteData := partial "site-data.html" . -}}
+{{- $taxonomy := $siteData.wiki_taxonomy -}}
+{{- $nodes := slice (dict "id" "/wiki/" "title" "Graphic Design Wiki" "kind" "hub" "url" "/wiki/" "description" "The complete map of graphic design practice.") -}}
+{{- $edges := slice -}}
+{{- $guideCount := 0 -}}
+{{- $mappedCount := 0 -}}
+{{- range $taxonomy.categories -}}
+  {{- $category := . -}}
+  {{- $categoryURL := printf "/wiki/%s/" .slug -}}
+  {{- $nodes = $nodes | append (dict "id" $categoryURL "title" .title "kind" "category" "category" .slug "accent" .accent "number" .number "url" $categoryURL "description" .description) -}}
+  {{- $edges = $edges | append (dict "source" "/wiki/" "target" $categoryURL "kind" "branch") -}}
+  {{- range .topics -}}
+    {{- $mappedCount = add $mappedCount 1 -}}
+    {{- $topicURL := printf "/wiki/%s/%s/" $category.slug (. | urlize) -}}
+    {{- $title := . -}}
+    {{- $published := false -}}
+    {{- with site.GetPage $topicURL -}}
+      {{- $title = .Title -}}
+      {{- $published = true -}}
+      {{- $guideCount = add $guideCount 1 -}}
+    {{- end -}}
+    {{- $nodes = $nodes | append (dict "id" $topicURL "title" $title "kind" "topic" "category" $category.slug "categoryTitle" $category.title "accent" $category.accent "published" $published "url" (cond $published $topicURL "") "categoryURL" $categoryURL) -}}
+    {{- $edges = $edges | append (dict "source" $categoryURL "target" $topicURL "kind" "topic") -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* A guide-to-guide link in article copy becomes a real cross-branch connection. */}}
+{{- range where (where site.RegularPages "Section" "wiki") "Params.wiki_directory" "ne" true -}}
+  {{- $sourceURL := .RelPermalink -}}
+  {{- range findRE `href="/wiki/[^"#?]+/"` .Content -}}
+    {{- $targetURL := replaceRE `^href="([^"]+)"$` "$1" . -}}
+    {{- with site.GetPage $targetURL -}}
+      {{- if and (eq .Section "wiki") (eq .Kind "page") (ne .RelPermalink $sourceURL) -}}
+        {{- $edges = $edges | append (dict "source" $sourceURL "target" .RelPermalink "kind" "reference") -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<section class="home-wiki" id="graphic-design-wiki" aria-labelledby="home-wiki-title">
+  <div class="home-wiki__intro">
+    <div>
+      <p class="home-wiki__eyebrow">The Graphic Design Wiki</p>
+      <h2 id="home-wiki-title">Follow an idea. Find its place.</h2>
+      <p>Explore how {{ len $taxonomy.categories }} disciplines and {{ $guideCount }} published guides connect. Pull the map around, follow a thread, or start with a name you know.</p>
+    </div>
+    <a class="home-wiki__index" href="/wiki/">Open the complete Wiki <span aria-hidden="true">→</span></a>
+  </div>
+
+  <div class="home-wiki__experience" data-wiki-graph>
+    <div class="home-wiki__toolbar">
+      <label class="home-wiki__field home-wiki__field--search" for="home-wiki-search">
+        <span>Find a connection</span>
+        <input id="home-wiki-search" type="search" placeholder="Try typography, packaging, wayfinding…" autocomplete="off" data-graph-search>
+      </label>
+      <div class="home-wiki__field home-wiki__field--filter">
+        <span id="home-wiki-category-label">Discipline</span>
+        <div class="home-wiki__select">
+          <button type="button" class="home-wiki__select-trigger" aria-labelledby="home-wiki-category-label home-wiki-category-value" aria-expanded="false" aria-controls="home-wiki-category-options" data-graph-category-trigger>
+            <span id="home-wiki-category-value" data-graph-category-value>All disciplines</span>
+            <span class="home-wiki__select-arrow" aria-hidden="true">↓</span>
+          </button>
+          <div class="home-wiki__select-options" id="home-wiki-category-options" data-graph-category-options hidden>
+            <button type="button" class="is-current" data-graph-category-option="all" aria-current="true">All disciplines</button>
+            {{ range $taxonomy.categories }}
+              <button type="button" class="home-wiki__domain--{{ .accent }}" data-graph-category-option="{{ .slug }}"><span class="home-wiki__select-swatch" aria-hidden="true"></span>{{ .title }}</button>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      <label class="home-wiki__planned">
+        <input type="checkbox" data-graph-planned>
+        <span>Show planned topics</span>
+      </label>
+      <button class="home-wiki__expand" type="button" aria-pressed="false" data-graph-expand>Expand map <span aria-hidden="true">↗</span></button>
+    </div>
+
+    <div class="home-wiki__workspace">
+      <div class="home-wiki__stage" data-graph-stage>
+        <canvas class="home-wiki__canvas" aria-hidden="true" data-graph-canvas></canvas>
+        <div class="home-wiki__gesture-help" aria-label="Graph controls">
+          <span class="home-wiki__gesture-key" aria-hidden="true">⌘</span>
+          <span class="home-wiki__gesture-desktop">Hold Command or Ctrl + scroll to zoom</span>
+          <span class="home-wiki__gesture-touch">Use the + and − buttons to zoom</span>
+        </div>
+        <p class="home-wiki__hint">Drag to explore · select a node to pin its details</p>
+        <div class="home-wiki__tooltip" data-graph-tooltip hidden></div>
+        <div class="home-wiki__map-controls" aria-label="Map controls">
+          <button type="button" aria-label="Zoom in" data-graph-zoom-in>+</button>
+          <button type="button" aria-label="Zoom out" data-graph-zoom-out>−</button>
+          <button type="button" aria-label="Fit map" data-graph-fit>⌗</button>
+        </div>
+      </div>
+      <aside class="home-wiki__side" aria-label="Map details and search results">
+        <div class="home-wiki__detail" data-graph-detail aria-live="polite">
+          <p class="home-wiki__detail-kicker">Start anywhere</p>
+          <h3>A map made for wandering.</h3>
+          <p>Hover to preview a connection. Select a node to pin its details, then open its page from here.</p>
+          <a href="/wiki/">Browse the full index <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="home-wiki__results" data-graph-results aria-live="polite"></div>
+        <div class="home-wiki__legend" aria-label="Map legend">
+          <span><i class="home-wiki__legend-dot home-wiki__legend-dot--category" aria-hidden="true"></i> Discipline</span>
+          <span><i class="home-wiki__legend-dot home-wiki__legend-dot--guide" aria-hidden="true"></i> Published guide</span>
+          <span><i class="home-wiki__legend-dot home-wiki__legend-dot--planned" aria-hidden="true"></i> Planned topic</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <nav class="home-wiki__browse" aria-label="Browse Wiki disciplines">
+    <div class="home-wiki__browse-heading">
+      <p class="home-wiki__eyebrow">Or browse the tree</p>
+      <h3>Follow the main topics instead</h3>
+    </div>
+    <ul>
+      {{ range $taxonomy.categories }}
+        <li><a class="home-wiki__domain--{{ .accent }}" href="/wiki/{{ .slug }}/"><span>{{ .number }}</span>{{ .title }} <span aria-hidden="true">→</span></a></li>
+      {{ end }}
+    </ul>
+  </nav>
+
+  {{- $graph := dict "nodes" $nodes "edges" $edges "categoryCount" (len $taxonomy.categories) "guideCount" $guideCount "mappedCount" $mappedCount -}}
+  <script type="application/json" id="home-wiki-graph-data">{{ $graph | jsonify | safeJS }}</script>
+</section>

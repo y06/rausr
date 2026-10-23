@@ -104,6 +104,16 @@ html:has(.wiki-main) {
     color(display-p3 0.63 0.86 0.92) 100%);
 }
 
+.wiki-tree__people-followup > .wiki-designer-links--category {
+  padding: 5rem 48px 3rem;
+  background: transparent;
+}
+
+.wiki-tree__people-followup > .wiki-designer-links--category::before,
+.wiki-tree__people-followup > .wiki-designer-links--category::after {
+  display: none;
+}
+
 .wiki-designer-links--category::before,
 .wiki-designer-links--category::after,
 .wiki-designer-links--guide::before,
@@ -824,7 +834,8 @@ html:has(.wiki-main) {
 
 @media (max-width: 700px) {
   .wiki-designer-links { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.25rem; }
-  .wiki-designer-links--category { gap: 1.5rem; padding: 4rem 20px; }
+  .wiki-designer-links--category { gap: 1.5rem; padding: 4rem 20px 3rem; }
+  .wiki-tree__people-followup > .wiki-designer-links--category { padding: 4rem 20px 3rem; }
   .wiki-designer-links--guide {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: none;
@@ -1013,6 +1024,17 @@ html:has(.wiki-main) {
   font: 500 0.82rem/1 Inter, sans-serif;
 }
 
+.wiki-hero--root .wiki-stats {
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+.wiki-hero--root .wiki-stats span {
+  padding: 0.48rem 0.7rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
 .wiki-button {
   display: inline-flex;
   align-items: center;
@@ -1066,6 +1088,10 @@ html:has(.wiki-main) {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.wiki-guides {
+  margin-bottom: 4rem;
 }
 
 .wiki-category-map {
@@ -1155,6 +1181,11 @@ a.wiki-capsule:hover,
   margin: 0;
   padding: 4rem 0 8rem;
   background: transparent;
+}
+
+.wiki-domain-nav--before-people {
+  padding-top: 3rem;
+  padding-bottom: 0;
 }
 
 .wiki-domain-nav__inner {
@@ -2606,7 +2637,7 @@ a.wiki-capsule:hover,
 @media (max-width: 575px) {
   .header.wiki-article-hero {
     display: flex;
-    min-height: clamp(760px, 205vw, 1120px);
+    min-height: clamp(660px, 180vw, 960px);
     flex-direction: column;
     align-items: stretch !important;
     gap: 0 !important;
@@ -2620,7 +2651,7 @@ a.wiki-capsule:hover,
     z-index: 2;
     width: 100%;
     max-width: none;
-    padding-bottom: clamp(260px, 72vw, 390px);
+    padding-bottom: clamp(135px, 38vw, 220px);
     align-items: flex-start;
     text-align: left;
   }
@@ -2692,6 +2723,17 @@ a.wiki-capsule:hover,
   .wiki-stats {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .wiki-hero--root .wiki-stats {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(0.2rem, 1vw, 0.45rem);
+  }
+
+  .wiki-hero--root .wiki-stats span {
+    padding: 0.45rem clamp(0.32rem, 1.5vw, 0.6rem);
+    font-size: clamp(0.57rem, 2.3vw, 0.75rem);
   }
 
   .wiki-article-pagination .article-nav-button {

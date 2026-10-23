@@ -16,6 +16,9 @@
         <style id="inline-main-css">{{ . | safeCSS }}</style>
     {{ end }}
     <link rel="stylesheet" href="{{ $mainCssHref }}">
+    {{ $homeWikiCssPath := "css/home-wiki.css" }}
+    {{ $homeWikiCssSource := readFile (printf "static/%s" $homeWikiCssPath) }}
+    <link rel="stylesheet" href="{{ printf "%s?v=%s" ($homeWikiCssPath | relURL) ($homeWikiCssSource | md5) }}">
 {{ else }}
     <link rel="stylesheet" href="{{ $mainCssHref }}">
 {{ end }}

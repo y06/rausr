@@ -46,10 +46,13 @@
         <a href="/works">
             <div class="card100-bottom">
                 <span>→</span>
+            </div>
         </a>
         </div>
     </section>
   </section>
+
+{{ partial "home-wiki-graph.html" . }}
 
 <!-- Newest Blogs Section -->
 <section class="cta-section cta-section-blog">
@@ -92,6 +95,9 @@
 </section>
 
 </main>
+
+{{ $homeWikiScriptVersion := readFile "static/js/home-wiki-graph.js" | md5 }}
+<script defer src="{{ printf "js/home-wiki-graph.js?v=%s" $homeWikiScriptVersion | relURL }}"></script>
 
 {{ partial "cta-contact" . }}
 

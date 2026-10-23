@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   if (window.matchMedia("(max-width: 700px)").matches) {
-    document.querySelectorAll(".wiki-designer-branch").forEach((branch) => { branch.open = false; });
+    document.querySelectorAll(".wiki-designer-branch").forEach((branch, index) => { branch.open = index === 0; });
   }
   filter();
   openLinkedProfile();
